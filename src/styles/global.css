@@ -1,0 +1,100 @@
+/* ════════════════════════════��═════════════
+   RESET & FOUNDATIONS
+   ══════════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  /* Room & Shelf */
+  --room-bg: #0f0b07;
+  --room-wall: #1a1208;
+  --shelf-wood: #5c3a1e;
+  --shelf-dark: #3d2008;
+  --shelf-highlight: #7a5230;
+
+  /* Paper & Reading */
+  --paper: #f5efe0;
+  --paper-dark: #e8daba;
+  --paper-edge: #d4c9a8;
+  --ink: #2c1810;
+  --ink-light: #6b5744;
+  --ink-faded: #9a8b78;
+
+  /* Accent */
+  --gold: #b8860b;
+  --gold-bright: #d4a017;
+  --gold-dim: #8a6508;
+  --burgundy: #6b1c2a;
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--shelf-wood) var(--room-bg);
+}
+
+body {
+  font-family: 'Lora', 'Georgia', serif;
+  background: var(--room-bg);
+  color: var(--paper);
+  min-height: 100dvh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ═══════════���══════════════════════════════
+   AMBIENT LIGHTING & TEXTURE
+   ══════════════════════════════════════════ */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 90% 50% at 50% -5%, rgba(255,200,80,0.07) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 30% at 20% 10%, rgba(255,180,60,0.03) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 30% at 80% 10%, rgba(255,180,60,0.03) 0%, transparent 50%);
+  z-index: 100;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  z-index: 101;
+}
+
+/* ══════════════════════════════════════════
+   ENTRY ANIMATIONS
+   ══════════════════════════════════════════ */
+@keyframes shelf-fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes book-rise {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .library-header { padding: 14px 20px !important; }
+  .library-title { font-size: 1.15rem !important; }
+  .library-title span { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
