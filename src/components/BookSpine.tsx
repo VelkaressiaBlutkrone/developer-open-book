@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useRef } from 'react'
 import { getBookVisual } from '../data/books'
 import type { Book } from '../types'
 
@@ -9,7 +9,6 @@ interface Props {
 }
 
 function spineFontSize(title: string): string {
-  // Count visual length: Korean chars count as 1.6, others as 1
   const len = [...title].reduce((sum, ch) => sum + (/[가-힣]/.test(ch) ? 1.6 : 1), 0)
   if (len <= 14) return '10.5px'
   if (len <= 20) return '9px'
@@ -22,12 +21,31 @@ export default function BookSpine({ book, index, onClick }: Props) {
   const category = book.category === 'dart' ? 'Dart' : 'React'
   const fontSize = spineFontSize(book.title)
   const [touched, setTouched] = useState(false)
+  const [tooltipPos, setTooltipPos] = useState<{ x: number; y: number } | null>(null)
+  const bookRef = useRef<HTMLDivElement>(null)
+
+  const handleMouseEnter = useCallback(() => {
+    if (!bookRef.current) return
+    const rect = bookRef.current.getBoundingClientRect()
+    setTooltipPos({
+      x: rect.left + rect.width / 2,
+      y: rect.top - 12,
+    })
+  }, [])
+
+  const handleMouseLeave = useCallback(() => {
+    setTooltipPos(null)
+  }, [])
 
   const handleTouch = useCallback((e: React.TouchEvent) => {
     if (!touched) {
       e.preventDefault()
       setTouched(true)
-      setTimeout(() => setTouched(false), 2500)
+      if (bookRef.current) {
+        const rect = bookRef.current.getBoundingClientRect()
+        setTooltipPos({ x: rect.left + rect.width / 2, y: rect.top - 12 })
+      }
+      setTimeout(() => { setTouched(false); setTooltipPos(null) }, 2500)
     } else {
       onClick()
     }
@@ -35,8 +53,11 @@ export default function BookSpine({ book, index, onClick }: Props) {
 
   return (
     <div
+      ref={bookRef}
       className={`book${touched ? ' touched' : ''}`}
       onTouchEnd={handleTouch}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       style={{
         '--height': `${v.height}px`,
         '--thickness': `${v.thickness}px`,
@@ -88,12 +109,22 @@ export default function BookSpine({ book, index, onClick }: Props) {
         <span className="cover-category">{category}</span>
       </div>
 
-      {/* Floating tooltip */}
-      <div className="book-tooltip">
-        <span className="tooltip-step">{book.step}</span>
-        <span className="tooltip-title">{book.title}</span>
-        <span className="tooltip-category">{category}</span>
-      </div>
+      {/* Floating tooltip — fixed position to avoid overflow clipping */}
+      {tooltipPos && (
+        <div
+          className="book-tooltip visible"
+          style={{
+            position: 'fixed',
+            left: `${tooltipPos.x}px`,
+            top: `${tooltipPos.y}px`,
+            transform: 'translateX(-50%) translateY(-100%)',
+          }}
+        >
+          <span className="tooltip-step">{book.step}</span>
+          <span className="tooltip-title">{book.title}</span>
+          <span className="tooltip-category">{category}</span>
+        </div>
+      )}
     </div>
   )
 }

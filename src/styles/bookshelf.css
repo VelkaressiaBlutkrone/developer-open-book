@@ -342,10 +342,6 @@
    BOOK TOOLTIP
    ══════════════════════════════════════════ */
 .book-tooltip {
-  position: absolute;
-  bottom: calc(var(--height) + 16px);
-  left: 50%;
-  transform: translateX(-50%) translateY(8px);
   background: rgba(15,11,7,0.95);
   border: 1px solid rgba(184,134,11,0.3);
   border-radius: 8px;
@@ -355,8 +351,8 @@
   text-align: center;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.3s var(--ease-out-expo), transform 0.3s var(--ease-out-expo);
-  z-index: 30;
+  transition: opacity 0.2s var(--ease-out-expo);
+  z-index: 200;
   backdrop-filter: blur(12px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.5), 0 0 0 1px rgba(184,134,11,0.08);
   display: flex;
@@ -378,9 +374,8 @@
   border-bottom: 1px solid rgba(184,134,11,0.3);
 }
 
-.book:hover .book-tooltip {
+.book-tooltip.visible {
   opacity: 1;
-  transform: translateX(-50%) translateY(0);
 }
 
 .tooltip-step {
@@ -410,15 +405,8 @@
 
 @media (max-width: 768px) {
   .book-tooltip {
-    display: flex;
-    opacity: 0;
-    pointer-events: none;
     font-size: 0.85rem;
     min-width: 140px;
-  }
-  .book.touched .book-tooltip {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
   }
 }
 
