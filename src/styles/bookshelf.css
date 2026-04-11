@@ -194,7 +194,7 @@
   transform-style: preserve-3d;
   transition:
     transform 0.5s var(--ease-out-expo),
-    margin 0.4s var(--ease-out-expo),
+    padding 0.4s var(--ease-out-expo),
     z-index 0s 0.5s;
   z-index: 1;
   flex-shrink: 0;
@@ -203,11 +203,11 @@
 
 .book:hover {
   transform: rotateY(-28deg) translateZ(24px) translateY(-6px);
-  margin: 0 8px;
+  padding: 0 8px;
   z-index: 10;
   transition:
     transform 0.5s var(--ease-out-expo),
-    margin 0.4s var(--ease-out-expo),
+    padding 0.4s var(--ease-out-expo),
     z-index 0s 0s;
 }
 
