@@ -144,12 +144,13 @@
 }
 
 .shelf-row.dragging {
-  cursor: grabbing;
+  cursor: grabbing !important;
   user-select: none;
 }
 
-.shelf-row:not(.dragging) {
-  cursor: grab;
+.shelf-row.dragging .book {
+  cursor: grabbing !important;
+  pointer-events: none;
 }
 
 .shelf-row::after {
