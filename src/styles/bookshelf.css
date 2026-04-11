@@ -107,9 +107,12 @@
   position: relative;
   display: flex;
   align-items: flex-end;
+  flex-wrap: wrap;
   padding: 12px 60px 0;
   min-height: 260px;
   animation: shelf-fade-up 0.8s var(--ease-out-expo) both;
+  gap: 0;
+  row-gap: 40px;
 }
 
 .shelf-row::after {
