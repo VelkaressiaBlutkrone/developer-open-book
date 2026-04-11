@@ -2,7 +2,7 @@ export interface Book {
   id: string
   title: string
   step: string
-  category: 'dart' | 'react'
+  category: 'dart' | 'flutter' | 'react'
   contentFile: string
 }
 

@@ -69,7 +69,7 @@ export default function ReadingView({ book, onClose }: Props) {
           ) : null}
           <div className="book-page-footer">
             <span className="page-category">
-              {book.category === 'dart' ? 'Dart Programming' : 'React Development'}
+              {book.category === 'dart' ? 'Dart Programming' : book.category === 'flutter' ? 'Flutter Development' : 'React Development'}
             </span>
           </div>
         </div>

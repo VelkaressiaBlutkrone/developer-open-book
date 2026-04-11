@@ -4,16 +4,25 @@ import BookSpine from './BookSpine'
 import ReadingView from './ReadingView'
 import type { Book } from '../types'
 
-type Filter = 'all' | 'dart' | 'react'
+type Filter = 'all' | 'dart' | 'flutter' | 'react'
+
+const FILTER_LABELS: Record<Filter, string> = {
+  all: 'All',
+  dart: 'Dart',
+  flutter: 'Flutter',
+  react: 'React',
+}
 
 export default function Bookshelf() {
   const [filter, setFilter] = useState<Filter>('all')
   const [openBook, setOpenBook] = useState<Book | null>(null)
 
   const dartBooks = useMemo(() => BOOKS.filter(b => b.category === 'dart'), [])
+  const flutterBooks = useMemo(() => BOOKS.filter(b => b.category === 'flutter'), [])
   const reactBooks = useMemo(() => BOOKS.filter(b => b.category === 'react'), [])
 
   const showDart = filter === 'all' || filter === 'dart'
+  const showFlutter = filter === 'all' || filter === 'flutter'
   const showReact = filter === 'all' || filter === 'react'
 
   return (
@@ -23,13 +32,13 @@ export default function Bookshelf() {
           Developer Open Book <span>Archive</span>
         </a>
         <nav className="library-nav">
-          {(['all', 'dart', 'react'] as Filter[]).map((f) => (
+          {(Object.keys(FILTER_LABELS) as Filter[]).map((f) => (
             <button
               key={f}
               className={filter === f ? 'active' : ''}
               onClick={() => setFilter(f)}
             >
-              {f === 'all' ? 'All' : f === 'dart' ? 'Dart' : 'React'}
+              {FILTER_LABELS[f]}
             </button>
           ))}
         </nav>
@@ -52,11 +61,25 @@ export default function Bookshelf() {
           </section>
         )}
 
+        {showFlutter && (
+          <section>
+            <div className="shelf-label">Flutter Development</div>
+            <div className="shelf-row">
+              {flutterBooks.map((book, i) => (
+                <BookSpine
+                  key={book.id}
+                  book={book}
+                  index={i}
+                  onClick={() => setOpenBook(book)}
+                />
+              ))}
+            </div>
+          </section>
+        )}
+
         {showReact && (
           <section>
-            <div className="shelf-label" style={showDart ? undefined : { marginTop: 0 }}>
-              React Development
-            </div>
+            <div className="shelf-label">React Development</div>
             <div className="shelf-row">
               {reactBooks.map((book, i) => (
                 <BookSpine
