@@ -1,3 +1,4 @@
+import { useState, useCallback } from 'react'
 import { getBookVisual } from '../data/books'
 import type { Book } from '../types'
 
@@ -20,10 +21,22 @@ export default function BookSpine({ book, index, onClick }: Props) {
   const v = getBookVisual(book.id)
   const category = book.category === 'dart' ? 'Dart' : 'React'
   const fontSize = spineFontSize(book.title)
+  const [touched, setTouched] = useState(false)
+
+  const handleTouch = useCallback((e: React.TouchEvent) => {
+    if (!touched) {
+      e.preventDefault()
+      setTouched(true)
+      setTimeout(() => setTouched(false), 2500)
+    } else {
+      onClick()
+    }
+  }, [touched, onClick])
 
   return (
     <div
-      className="book"
+      className={`book${touched ? ' touched' : ''}`}
+      onTouchEnd={handleTouch}
       style={{
         '--height': `${v.height}px`,
         '--thickness': `${v.thickness}px`,

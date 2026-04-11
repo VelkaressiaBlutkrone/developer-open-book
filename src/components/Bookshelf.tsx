@@ -46,8 +46,11 @@ export default function Bookshelf() {
 
       <main className="bookshelf-view">
         {showDart && (
-          <section>
-            <div className="shelf-label">Dart Programming</div>
+          <section className="shelf-section" data-wood="oak">
+            <div className="shelf-label">
+              Dart Programming
+              <span className="shelf-meta">{dartBooks.length} volumes</span>
+            </div>
             <div className="shelf-row">
               {dartBooks.map((book, i) => (
                 <BookSpine
@@ -62,8 +65,11 @@ export default function Bookshelf() {
         )}
 
         {showFlutter && (
-          <section>
-            <div className="shelf-label">Flutter Development</div>
+          <section className="shelf-section" data-wood="walnut">
+            <div className="shelf-label">
+              Flutter Development
+              <span className="shelf-meta">{flutterBooks.length} volumes</span>
+            </div>
             <div className="shelf-row">
               {flutterBooks.map((book, i) => (
                 <BookSpine
@@ -78,8 +84,11 @@ export default function Bookshelf() {
         )}
 
         {showReact && (
-          <section>
-            <div className="shelf-label">React Development</div>
+          <section className="shelf-section" data-wood="cherry">
+            <div className="shelf-label">
+              React Development
+              <span className="shelf-meta">{reactBooks.length} volumes</span>
+            </div>
             <div className="shelf-row">
               {reactBooks.map((book, i) => (
                 <BookSpine
@@ -95,7 +104,11 @@ export default function Bookshelf() {
       </main>
 
       <footer className="library-floor">
-        <div className="library-credit">Developer Open Book &mdash; Library Archive</div>
+        <div className="library-credit">
+          <span className="credit-collection">{BOOKS.length} volumes across {new Set(BOOKS.map(b => b.category)).size} collections</span>
+          <span className="credit-divider">&mdash;</span>
+          <span>Developer Open Book</span>
+        </div>
       </footer>
 
       <ReadingView
