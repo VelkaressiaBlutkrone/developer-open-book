@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Developer Open Book — Library Preview</title>
+<meta name="description" content="도서관 컨셉 디자인 프리뷰">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Crimson+Pro:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════
+   RESET & FOUNDATIONS
+   ══════════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  /* Room & Shelf */
+  --room-bg: #0f0b07;
+  --room-wall: #1a1208;
+  --shelf-wood: #5c3a1e;
+  --shelf-dark: #3d2008;
+  --shelf-highlight: #7a5230;
+
+  /* Paper & Reading */
+  --paper: #f5efe0;
+  --paper-dark: #e8daba;
+  --paper-edge: #d4c9a8;
+  --ink: #2c1810;
+  --ink-light: #6b5744;
+  --ink-faded: #9a8b78;
+
+  /* Accent */
+  --gold: #b8860b;
+  --gold-bright: #d4a017;
+  --gold-dim: #8a6508;
+  --burgundy: #6b1c2a;
+  --deep-green: #1a3a2a;
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--shelf-wood) var(--room-bg);
+}
+
+body {
+  font-family: 'Lora', 'Georgia', serif;
+  background: var(--room-bg);
+  color: var(--paper);
+  min-height: 100dvh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ══════════════════════════════════════════
+   AMBIENT LIGHTING & TEXTURE
+   ══════════════════════════════════════════ */
+
+/* Warm overhead lamp glow */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 90% 50% at 50% -5%, rgba(255,200,80,0.07) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 30% at 20% 10%, rgba(255,180,60,0.03) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 30% at 80% 10%, rgba(255,180,60,0.03) 0%, transparent 50%);
+  z-index: 100;
+}
+
+/* Subtle dust/grain overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  z-index: 101;
+}
+
+/* ══════════════════════════════════════════
+   HEADER / LIBRARY SIGN
+   ══════════════════════════════════════════ */
+.library-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(180deg, rgba(15,11,7,0.95) 0%, rgba(15,11,7,0.7) 100%);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(184,134,11,0.15);
+}
+
+.library-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  text-shadow: 0 0 30px rgba(184,134,11,0.2);
+}
+
+.library-title span {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--paper-edge);
+  font-size: 0.85em;
+  margin-left: 12px;
+  letter-spacing: 0.02em;
+}
+
+.library-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.library-nav button {
+  background: none;
+  border: none;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.95rem;
+  color: var(--ink-faded);
+  cursor: pointer;
+  padding: 4px 0;
+  position: relative;
+  transition: color 0.3s var(--ease-out-expo);
+  letter-spacing: 0.03em;
+}
+
+.library-nav button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.4s var(--ease-out-expo);
+}
+
+.library-nav button:hover {
+  color: var(--gold);
+}
+
+.library-nav button:hover::after {
+  width: 100%;
+}
+
+.library-nav button.active {
+  color: var(--gold-bright);
+}
+
+.library-nav button.active::after {
+  width: 100%;
+  background: var(--gold-bright);
+}
+
+/* ══════════════════════════════════════════
+   BOOKSHELF VIEW
+   ══════════════════════════════════════════ */
+.bookshelf-view {
+  padding: 40px 0 80px;
+  min-height: calc(100dvh - 72px);
+  transition: opacity 0.5s var(--ease-out-expo), transform 0.5s var(--ease-out-expo);
+}
+
+.bookshelf-view.hidden {
+  opacity: 0;
+  transform: scale(0.97);
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+}
+
+/* Shelf Category Label */
+.shelf-label {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--gold-dim);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0 60px;
+  margin-bottom: 16px;
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.shelf-label:first-child {
+  margin-top: 0;
+}
+
+.shelf-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(184,134,11,0.2) 0%, transparent 80%);
+}
+
+/* Shelf Row */
+.shelf-row {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px 60px 0;
+  min-height: 260px;
+}
+
+/* Wooden shelf plank */
+.shelf-row::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+  right: 40px;
+  height: 18px;
+  background:
+    linear-gradient(180deg,
+      var(--shelf-highlight) 0%,
+      var(--shelf-wood) 30%,
+      var(--shelf-dark) 100%
+    );
+  background-size: 100% 100%;
+  border-radius: 0 0 2px 2px;
+  box-shadow:
+    0 4px 16px rgba(0,0,0,0.6),
+    0 8px 32px rgba(0,0,0,0.3),
+    inset 0 2px 3px rgba(255,200,100,0.08);
+  /* Wood grain */
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px, transparent 40px,
+      rgba(0,0,0,0.03) 40px, rgba(0,0,0,0.03) 41px
+    ),
+    linear-gradient(
+      160deg,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,0.03) 40%,
+      rgba(0,0,0,0.04) 60%,
+      rgba(0,0,0,0) 100%
+    );
+  z-index: 2;
+}
+
+/* Shelf shadow on wall behind */
+.shelf-row::before {
+  content: '';
+  position: absolute;
+  bottom: 18px;
+  left: 40px;
+  right: 40px;
+  height: 50px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, transparent 100%);
+  filter: blur(4px);
+  z-index: 0;
+}
+
+/* ══════════════════════════════════════════
+   BOOK SPINE
+   ══════════════════════════════════════════ */
+.book {
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition:
+    transform 0.5s var(--ease-out-expo),
+    margin 0.4s var(--ease-out-expo),
+    z-index 0s 0.5s;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.book:hover {
+  transform: rotateY(-28deg) translateZ(24px) translateY(-6px);
+  margin: 0 8px;
+  z-index: 10;
+  transition:
+    transform 0.5s var(--ease-out-expo),
+    margin 0.4s var(--ease-out-expo),
+    z-index 0s 0s;
+}
+
+/* Spine face */
+.book-spine {
+  width: var(--thickness);
+  height: var(--height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 3px;
+  position: relative;
+  border-radius: 2px 0 0 2px;
+  overflow: hidden;
+  /* Spine shading: rounded book illusion */
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.3) 0%,
+      rgba(0,0,0,0.05) 15%,
+      rgba(255,255,255,0.06) 35%,
+      rgba(255,255,255,0.08) 50%,
+      rgba(0,0,0,0.02) 65%,
+      rgba(0,0,0,0.15) 100%
+    );
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.1),
+    inset 0 -1px 0 rgba(0,0,0,0.2);
+}
+
+/* Gold line decorations on spine */
+.book-spine::before,
+.book-spine::after {
+  content: '';
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212,160,23,0.4), transparent);
+}
+
+.book-spine::before { top: 10%; }
+.book-spine::after { bottom: 10%; }
+
+/* Spine title */
+.spine-title {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: 'Crimson Pro', serif;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.88);
+  max-height: calc(var(--height) - 60px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+  line-height: 1.3;
+}
+
+/* Step number badge */
+.spine-badge {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 7.5px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.1em;
+  margin-top: 6px;
+}
+
+/* Top edge of book (depth illusion) */
+.book-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--thickness);
+  height: 10px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(0,0,0,0.08));
+  transform: rotateX(90deg);
+  transform-origin: top center;
+}
+
+/* Cover peek on hover (right side face) */
+.book-cover-peek {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: var(--height);
+  background: var(--cover-color, #2a1a0e);
+  transform: rotateY(90deg);
+  transform-origin: right center;
+  border-radius: 0 2px 2px 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 8px;
+}
+
+.book-cover-peek::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 50%),
+    linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+}
+
+.cover-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  text-align: center;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+}
+
+.cover-category {
+  font-family: 'Crimson Pro', serif;
+  font-size: 8px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Book shadow on shelf */
+.book::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  height: 12px;
+  background: radial-gradient(ellipse at center bottom, rgba(0,0,0,0.5) 0%, transparent 70%);
+  z-index: -1;
+  transition: opacity 0.3s;
+}
+
+.book:hover::after {
+  opacity: 0.3;
+}
+
+/* ══════════════════════════════════════════
+   READING VIEW
+   ══════════════════════════════════════════ */
+.reading-view {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s var(--ease-out-expo);
+}
+
+.reading-view.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Dark overlay behind the book */
+.reading-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,8,5,0.92);
+  backdrop-filter: blur(8px);
+}
+
+/* The open book */
+.open-book {
+  position: relative;
+  display: flex;
+  width: 1060px;
+  max-width: 95vw;
+  height: 720px;
+  max-height: 88vh;
+  transform: perspective(1400px) rotateY(-30deg) scale(0.4);
+  opacity: 0;
+  transition: transform 0.8s var(--ease-out-expo), opacity 0.6s var(--ease-out-expo);
+  filter: drop-shadow(0 24px 70px rgba(0,0,0,0.6));
+}
+
+.reading-view.visible .open-book {
+  transform: perspective(1400px) rotateY(0deg) scale(1);
+  opacity: 1;
+}
+
+/* ── Page flip overlay ── */
+.page-flip-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 20;
+  perspective: 2400px;
+}
+
+.page-flip {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: none;
+}
+
+.page-flip.flipping-forward {
+  right: 0;
+  left: auto;
+  transform-origin: left center;
+  animation: flip-forward 0.6s var(--ease-out-expo) forwards;
+}
+
+.page-flip.flipping-backward {
+  left: 0;
+  right: auto;
+  transform-origin: right center;
+  animation: flip-backward 0.6s var(--ease-out-expo) forwards;
+}
+
+@keyframes flip-forward {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(-180deg); }
+}
+
+@keyframes flip-backward {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(180deg); }
+}
+
+.page-flip-front,
+.page-flip-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.page-flip-front {
+  background: var(--paper);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  box-shadow: inset 0 0 40px rgba(100,70,30,0.04);
+}
+
+.page-flip-back {
+  background: var(--paper);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  transform: rotateY(180deg);
+  box-shadow: inset 0 0 40px rgba(100,70,30,0.04);
+}
+
+/* Shadow that follows the flipping page */
+.page-flip::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.page-flip.flipping-forward::after {
+  left: -40px;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.08));
+}
+
+.page-flip.flipping-backward::after {
+  right: -40px;
+  background: linear-gradient(-90deg, transparent, rgba(0,0,0,0.08));
+}
+
+/* Book spine (center) */
+.book-center-spine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 100%;
+  background:
+    linear-gradient(90deg,
+      rgba(0,0,0,0.15) 0%,
+      rgba(0,0,0,0.08) 20%,
+      rgba(255,255,255,0.03) 50%,
+      rgba(0,0,0,0.08) 80%,
+      rgba(0,0,0,0.15) 100%
+    );
+  z-index: 10;
+}
+
+/* Page (left and right) */
+.book-page {
+  flex: 1;
+  background: var(--paper);
+  padding: 48px 44px;
+  overflow-y: auto;
+  position: relative;
+  color: var(--ink);
+  line-height: 1.85;
+  font-size: 15px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--paper-dark) transparent;
+}
+
+.book-page::-webkit-scrollbar { width: 4px; }
+.book-page::-webkit-scrollbar-thumb { background: var(--paper-dark); border-radius: 2px; }
+
+/* Left page */
+.book-page.left {
+  border-radius: 4px 0 0 4px;
+  box-shadow:
+    inset -8px 0 16px rgba(0,0,0,0.04),
+    inset 0 0 60px rgba(100,70,30,0.03),
+    -3px 0 12px rgba(0,0,0,0.15);
+  /* Paper texture */
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse at 100% 50%, rgba(0,0,0,0.02) 0%, transparent 70%);
+  background-color: var(--paper);
+}
+
+/* Right page */
+.book-page.right {
+  border-radius: 0 4px 4px 0;
+  box-shadow:
+    inset 8px 0 16px rgba(0,0,0,0.04),
+    inset 0 0 60px rgba(100,70,30,0.03),
+    3px 0 12px rgba(0,0,0,0.15);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse at 0% 50%, rgba(0,0,0,0.02) 0%, transparent 70%);
+  background-color: var(--paper);
+}
+
+/* Page number */
+.page-number {
+  position: absolute;
+  bottom: 20px;
+  font-family: 'Crimson Pro', serif;
+  font-size: 12px;
+  color: var(--ink-faded);
+  letter-spacing: 0.05em;
+}
+
+.book-page.left .page-number { left: 44px; }
+.book-page.right .page-number { right: 44px; }
+
+/* Reading typography */
+.reading-chapter {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.reading-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+.reading-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+  margin-top: 16px;
+}
+
+.reading-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 28px 0 12px;
+  line-height: 1.35;
+}
+
+.reading-text {
+  color: var(--ink-light);
+  margin-bottom: 16px;
+  word-break: keep-all;
+  text-align: justify;
+}
+
+.reading-text:first-of-type::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2em;
+  float: left;
+  line-height: 0.8;
+  margin: 4px 10px 0 -2px;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* Code blocks in reading view */
+.reading-code {
+  background: #1e1a14;
+  color: #d4c9a8;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12.5px;
+  padding: 16px 20px;
+  border-radius: 4px;
+  margin: 16px 0;
+  overflow-x: auto;
+  line-height: 1.6;
+  border-left: 3px solid var(--gold-dim);
+}
+
+.reading-code .keyword { color: #c9a06c; }
+.reading-code .string { color: #8fac6e; }
+.reading-code .comment { color: #6b5f4f; font-style: italic; }
+.reading-code .type { color: #b08c5a; }
+
+/* Inline code */
+.reading-inline-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88em;
+  background: rgba(44,24,16,0.07);
+  color: var(--ink);
+  padding: 1px 6px;
+  border-radius: 3px;
+  border: 1px solid rgba(44,24,16,0.08);
+}
+
+/* Callout / Note */
+.reading-note {
+  background: rgba(184,134,11,0.06);
+  border-left: 3px solid var(--gold);
+  padding: 14px 18px;
+  border-radius: 0 6px 6px 0;
+  margin: 18px 0;
+  font-size: 0.92em;
+}
+
+.reading-note-label {
+  font-family: 'Crimson Pro', serif;
+  font-weight: 600;
+  color: var(--gold);
+  font-size: 0.85em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+/* Table of contents on left page */
+.toc-list {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.toc-item {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(44,24,16,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.95em;
+}
+
+.toc-item:last-child { border-bottom: none; }
+
+.toc-label {
+  color: var(--ink-light);
+  font-family: 'Lora', serif;
+}
+
+.toc-dots {
+  flex: 1;
+  margin: 0 8px;
+  border-bottom: 1px dotted var(--ink-faded);
+  min-width: 20px;
+  opacity: 0.4;
+}
+
+.toc-page {
+  font-family: 'Crimson Pro', serif;
+  color: var(--ink-faded);
+  font-size: 0.9em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Close button */
+.close-book {
+  position: absolute;
+  top: -48px;
+  right: 0;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--paper-edge);
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.85rem;
+  padding: 6px 18px;
+  cursor: pointer;
+  border-radius: 20px;
+  letter-spacing: 0.06em;
+  transition: all 0.3s var(--ease-out-expo);
+  z-index: 10;
+  backdrop-filter: blur(4px);
+}
+
+.close-book:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: var(--gold-dim);
+  color: var(--gold);
+}
+
+/* Page navigation */
+.page-nav {
+  position: absolute;
+  bottom: -52px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  z-index: 10;
+}
+
+.page-nav button {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--paper-edge);
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.8rem;
+  padding: 5px 14px;
+  cursor: pointer;
+  border-radius: 16px;
+  letter-spacing: 0.04em;
+  transition: all 0.3s var(--ease-out-expo);
+  backdrop-filter: blur(4px);
+}
+
+.page-nav button:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: var(--gold-dim);
+  color: var(--gold);
+}
+
+.page-nav .current-page {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.8rem;
+  color: var(--ink-faded);
+  letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ══════════════════════════════════════════
+   ENTRY ANIMATIONS
+   ══════════════════════════════════════════ */
+@keyframes shelf-fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.shelf-label {
+  animation: shelf-fade-up 0.7s var(--ease-out-expo) both;
+}
+
+.shelf-row {
+  animation: shelf-fade-up 0.8s var(--ease-out-expo) both;
+}
+
+.shelf-section:nth-child(1) .shelf-label { animation-delay: 0.1s; }
+.shelf-section:nth-child(1) .shelf-row { animation-delay: 0.2s; }
+.shelf-section:nth-child(2) .shelf-label { animation-delay: 0.4s; }
+.shelf-section:nth-child(2) .shelf-row { animation-delay: 0.5s; }
+
+@keyframes book-rise {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.book {
+  animation: book-rise 0.5s var(--ease-out-expo) both;
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .open-book {
+    flex-direction: column;
+    width: 95vw;
+    height: 90vh;
+  }
+  .book-center-spine {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    width: 100%;
+    height: 8px;
+  }
+  .book-page.left { border-radius: 4px 4px 0 0; }
+  .book-page.right { border-radius: 0 0 4px 4px; }
+  .book-page { padding: 32px 28px; }
+}
+
+@media (max-width: 768px) {
+  .library-header { padding: 14px 20px; }
+  .library-title { font-size: 1.15rem; }
+  .library-title span { display: none; }
+  .shelf-row { padding: 12px 20px 0; min-height: 200px; }
+  .shelf-row::after, .shelf-row::before { left: 12px; right: 12px; }
+  .shelf-label { padding: 0 20px; font-size: 0.95rem; }
+  .book-cover-peek { display: none; }
+  .reading-title { font-size: 1.3rem; }
+  .close-book { top: -40px; font-size: 0.8rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ══════════════════════════════════════════
+   FOOTER ATMOSPHERE
+   ══════════════════════════════════════════ */
+.library-floor {
+  height: 80px;
+  background: linear-gradient(180deg, var(--room-bg) 0%, #0a0704 100%);
+  position: relative;
+}
+
+.library-floor::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(184,134,11,0.1), transparent);
+}
+
+.library-credit {
+  text-align: center;
+  padding-top: 24px;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: rgba(184,134,11,0.25);
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header class="library-header">
+  <h1 class="library-title">Developer Open Book <span>Archive</span></h1>
+  <nav class="library-nav">
+    <button class="active" onclick="showShelf('all')">All</button>
+    <button onclick="showShelf('dart')">Dart</button>
+    <button onclick="showShelf('react')">React</button>
+  </nav>
+</header>
+
+<!-- ═══ BOOKSHELF VIEW ═══ -->
+<main class="bookshelf-view" id="bookshelfView">
+
+  <!-- DART SHELF -->
+  <section class="shelf-section" data-category="dart">
+    <div class="shelf-label">Dart Programming</div>
+    <div class="shelf-row" id="dartShelf"></div>
+  </section>
+
+  <!-- REACT SHELF -->
+  <section class="shelf-section" data-category="react">
+    <div class="shelf-label">React Development</div>
+    <div class="shelf-row" id="reactShelf"></div>
+  </section>
+
+</main>
+
+<footer class="library-floor">
+  <div class="library-credit">Developer Open Book &mdash; Design Preview</div>
+</footer>
+
+<!-- ═══ READING VIEW ═══ -->
+<div class="reading-view" id="readingView">
+  <div class="reading-overlay" onclick="closeBook()"></div>
+  <div class="open-book" id="openBook">
+    <button class="close-book" onclick="closeBook()">Close Book</button>
+
+    <!-- Left Page -->
+    <div class="book-page left" id="leftPage"></div>
+
+    <!-- Center Spine -->
+    <div class="book-center-spine"></div>
+
+    <!-- Right Page -->
+    <div class="book-page right" id="rightPage"></div>
+
+    <!-- Page Flip Overlay -->
+    <div class="page-flip-container" id="pageFlipContainer"></div>
+
+    <div class="page-nav">
+      <button onclick="prevPage()">&#8592; Prev</button>
+      <span class="current-page" id="pageIndicator">1 / 3</span>
+      <button onclick="nextPage()">Next &#8594;</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════════
+const BOOKS = {
+  dart: [
+    { id: 'dart-01', title: 'Dart 기초 문법', step: 'Step 01', pages: [
+      { type: 'toc', title: 'Dart 기초 문법', subtitle: '변수, 타입, 연산자의 세계로', items: [
+        '변수 선언과 타입 추론', '기본 데이터 타입', '연산자의 종류', 'Null Safety 이해하기', '상수와 final/const'
+      ]},
+      { type: 'content', chapter: 'Chapter 1', title: '변수 선언과 타입 추론', text: [
+        'Dart에서 변수를 선언하는 방법은 크게 두 가지입니다. 명시적으로 타입을 지정하거나, var 키워드를 사용하여 컴파일러가 타입을 추론하도록 할 수 있습니다. 타입 추론은 코드를 간결하게 만들어주지만, 가독성을 위해 적절히 섞어 사용하는 것이 좋습니다.',
+        '변수의 타입이 한번 결정되면, 해당 변수에는 같은 타입의 값만 할당할 수 있습니다. 이것이 Dart가 정적 타입 언어인 이유입니다. 하지만 dynamic 타입을 사용하면 이 제약을 풀 수 있습니다.'
+      ], code: '<span class="keyword">var</span> name = <span class="string">\'홍길동\'</span>;     <span class="comment">// String 타입 추론</span>\n<span class="type">int</span> age = 25;            <span class="comment">// 명시적 타입 선언</span>\n<span class="keyword">final</span> city = <span class="string">\'서울\'</span>;    <span class="comment">// 런타임 상수</span>\n<span class="keyword">const</span> pi = 3.14159;   <span class="comment">// 컴파일타임 상수</span>', note: 'final과 const의 차이: final은 런타임에 한 번 할당되고, const는 컴파일 타임에 결정됩니다.' },
+      { type: 'content', chapter: 'Chapter 2', title: 'Null Safety', text: [
+        'Dart 2.12부터 도입된 Null Safety는 null 참조 오류를 컴파일 타임에 방지합니다. 기본적으로 모든 변수는 non-nullable이며, null을 허용하려면 타입 뒤에 물음표(?)를 붙여야 합니다.',
+        '이 설계 철학은 "billion dollar mistake"라 불리는 null 참조 오류를 근본적으로 해결합니다. 코드를 작성할 때 null 가능성을 명시적으로 다루게 되므로, 런타임 에러가 극적으로 줄어듭니다.'
+      ], code: '<span class="type">String</span> name = <span class="string">\'Dart\'</span>;       <span class="comment">// null 불가</span>\n<span class="type">String</span>? nickname;          <span class="comment">// null 허용</span>\n\n<span class="comment">// Null-aware 연산자들</span>\n<span class="keyword">print</span>(nickname?.length);   <span class="comment">// 안전한 접근</span>\n<span class="keyword">print</span>(nickname ?? <span class="string">\'없음\'</span>); <span class="comment">// 기본값 제공</span>', note: null }
+    ]},
+    { id: 'dart-02', title: '컬렉션과 반복', step: 'Step 02' },
+    { id: 'dart-03', title: '함수와 클로저', step: 'Step 03' },
+    { id: 'dart-04', title: '클래스와 객체', step: 'Step 04' },
+    { id: 'dart-05', title: '상속과 Mixin', step: 'Step 05' },
+    { id: 'dart-06', title: '비동기 프로그래밍', step: 'Step 06' },
+    { id: 'dart-07', title: 'Stream과 Future', step: 'Step 07' },
+    { id: 'dart-08', title: '제네릭 심화', step: 'Step 08' },
+    { id: 'dart-09', title: '에러 핸들링', step: 'Step 09' },
+    { id: 'dart-10', title: '패키지와 라이브러리', step: 'Step 10' },
+    { id: 'dart-11', title: '테스트 작성법', step: 'Step 11' },
+    { id: 'dart-12', title: '메타프로그래밍', step: 'Step 12' },
+  ],
+  react: [
+    { id: 'react-00', title: 'React 시작하기', step: 'Step 00', pages: [
+      { type: 'toc', title: 'React 시작하기', subtitle: '모던 UI 개발의 첫걸음', items: [
+        'React란 무엇인가', 'JSX 문법 이해', '컴포넌트의 개념', '첫 번째 컴포넌트 만들기', '개발 환경 설정'
+      ]},
+      { type: 'content', chapter: 'Chapter 1', title: 'React란 무엇인가', text: [
+        'React는 사용자 인터페이스를 구축하기 위한 JavaScript 라이브러리입니다. Facebook(현 Meta)에서 개발했으며, 컴포넌트 기반 아키텍처를 통해 복잡한 UI를 효율적으로 관리할 수 있게 해줍니다.',
+        'Virtual DOM이라는 개념을 도입하여 실제 DOM 조작을 최소화하고, 선언적 프로그래밍 패러다임을 채택하여 UI 상태 관리를 직관적으로 만들었습니다. 이러한 설계 철학은 대규모 애플리케이션에서도 높은 성능과 유지보수성을 보장합니다.'
+      ], code: '<span class="keyword">function</span> <span class="type">Welcome</span>({ name }) {\n  <span class="keyword">return</span> (\n    <span class="string">&lt;div className="greeting"&gt;</span>\n      <span class="string">&lt;h1&gt;</span>안녕하세요, {name}님<span class="string">&lt;/h1&gt;</span>\n      <span class="string">&lt;p&gt;</span>React의 세계에 오신 것을 환영합니다<span class="string">&lt;/p&gt;</span>\n    <span class="string">&lt;/div&gt;</span>\n  );\n}', note: 'React 컴포넌트는 항상 대문자로 시작합니다. 소문자로 시작하면 HTML 태그로 인식됩니다.' },
+      { type: 'content', chapter: 'Chapter 2', title: 'JSX 문법 이해', text: [
+        'JSX는 JavaScript의 확장 문법으로, HTML과 유사한 구조를 JavaScript 코드 안에서 작성할 수 있게 해줍니다. Babel 트랜스파일러가 JSX를 React.createElement() 호출로 변환합니다.',
+        '중괄호 {} 안에 JavaScript 표현식을 넣을 수 있어, 동적인 값을 쉽게 렌더링할 수 있습니다. 조건부 렌더링, 리스트 렌더링 등 다양한 패턴이 가능합니다.'
+      ], code: '<span class="keyword">const</span> element = (\n  <span class="string">&lt;div&gt;</span>\n    <span class="string">&lt;h1&gt;</span>{<span class="keyword">formatName</span>(user)}<span class="string">&lt;/h1&gt;</span>\n    <span class="string">&lt;img src=</span>{user.avatarUrl} <span class="string">/&gt;</span>\n  <span class="string">&lt;/div&gt;</span>\n);', note: null }
+    ]},
+    { id: 'react-01', title: '컴포넌트와 Props', step: 'Step 01' },
+    { id: 'react-02', title: 'State와 생명주기', step: 'Step 02' },
+    { id: 'react-03', title: 'Hooks 기초', step: 'Step 03' },
+    { id: 'react-04', title: 'useEffect 심화', step: 'Step 04' },
+    { id: 'react-05', title: 'Context API', step: 'Step 05' },
+    { id: 'react-06', title: 'React Router', step: 'Step 06' },
+    { id: 'react-07', title: '상태 관리 패턴', step: 'Step 07' },
+    { id: 'react-08', title: '폼 처리와 검증', step: 'Step 08' },
+    { id: 'react-09', title: '성능 최적화', step: 'Step 09' },
+    { id: 'react-10', title: '커스텀 Hooks', step: 'Step 10' },
+  ]
+};
+
+const SPINE_COLORS = [
+  '#6b1c2a', '#1B4F72', '#1a3a2a', '#4a1942',
+  '#8B2635', '#2c5f2d', '#7D3C98', '#935116',
+  '#1A5276', '#6b3a2a', '#2d4a1e', '#4a2c5f',
+  '#703030', '#285f5c', '#5c3d6b', '#6b4f1a',
+];
+
+// ═══════════════════════════════════════════
+// SEED-BASED RANDOMIZATION
+// ═══════════════════════════════════════════
+function seedFromId(id) {
+  let h = 0;
+  for (let i = 0; i < id.length; i++) {
+    h = ((h << 5) - h + id.charCodeAt(i)) | 0;
+  }
+  return Math.abs(h);
+}
+
+// ═══════════════════════════════════════════
+// RENDER BOOKSHELF
+// ═══════════════════════════════════════════
+function renderShelf(containerId, books, category) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = '';
+
+  books.forEach((book, i) => {
+    const seed = seedFromId(book.id);
+    const height = 170 + (seed % 70);
+    const thickness = 26 + (seed % 22);
+    const colorIndex = seed % SPINE_COLORS.length;
+    const color = SPINE_COLORS[colorIndex];
+
+    // Slightly different cover color
+    const coverDark = darkenColor(color, 0.3);
+
+    const el = document.createElement('div');
+    el.className = 'book';
+    el.style.cssText = `--height:${height}px;--thickness:${thickness}px;--cover-color:${coverDark};animation-delay:${0.08 * i + 0.3}s`;
+    el.setAttribute('role', 'button');
+    el.setAttribute('tabindex', '0');
+    el.setAttribute('aria-label', `${book.title} 열기`);
+
+    el.innerHTML = `
+      <div class="book-spine" style="background-color:${color}">
+        <span class="spine-title">${book.title}</span>
+        <span class="spine-badge">${book.step}</span>
+      </div>
+      <div class="book-top"></div>
+      <div class="book-cover-peek">
+        <span class="cover-title">${book.title}</span>
+        <span class="cover-category">${category}</span>
+      </div>
+    `;
+
+    el.addEventListener('click', () => openBook(book, color));
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openBook(book, color);
+      }
+    });
+
+    container.appendChild(el);
+  });
+}
+
+function darkenColor(hex, factor) {
+  const r = parseInt(hex.slice(1,3), 16);
+  const g = parseInt(hex.slice(3,5), 16);
+  const b = parseInt(hex.slice(5,7), 16);
+  return `rgb(${Math.round(r*(1-factor))},${Math.round(g*(1-factor))},${Math.round(b*(1-factor))})`;
+}
+
+// ═══════════════════════════════════════════
+// READING VIEW
+// ═══════════════════════════════════════════
+let currentBook = null;
+let currentPageIndex = 0;
+
+function openBook(book, color) {
+  currentBook = book;
+  currentPageIndex = 0;
+
+  const view = document.getElementById('readingView');
+  view.classList.add('visible');
+  document.body.style.overflow = 'hidden';
+
+  if (book.pages && book.pages.length > 0) {
+    renderPages();
+  } else {
+    // Placeholder for books without full content
+    renderPlaceholderPages(book, color);
+  }
+}
+
+function closeBook() {
+  const view = document.getElementById('readingView');
+  const openBookEl = document.getElementById('openBook');
+
+  openBookEl.style.transform = 'perspective(1400px) rotateY(20deg) scale(0.5)';
+  openBookEl.style.opacity = '0';
+
+  setTimeout(() => {
+    view.classList.remove('visible');
+    document.body.style.overflow = '';
+    openBookEl.style.transform = '';
+    openBookEl.style.opacity = '';
+  }, 500);
+}
+
+function renderPages() {
+  const pages = currentBook.pages;
+  const pairIndex = currentPageIndex;
+  const leftData = pages[pairIndex * 2];
+  const rightData = pages[pairIndex * 2 + 1];
+  const totalPairs = Math.ceil(pages.length / 2);
+
+  document.getElementById('leftPage').innerHTML = renderPageContent(leftData, pairIndex * 2 + 1);
+  document.getElementById('rightPage').innerHTML = rightData
+    ? renderPageContent(rightData, pairIndex * 2 + 2)
+    : '<div style="display:flex;align-items:center;justify-content:center;height:100%;opacity:0.3;font-family:Playfair Display,serif;font-style:italic;color:var(--ink-faded)">End of Preview</div>';
+
+  document.getElementById('pageIndicator').textContent = `${pairIndex + 1} / ${totalPairs}`;
+}
+
+function renderPageContent(data, pageNum) {
+  if (!data) return '';
+
+  let html = '';
+
+  if (data.type === 'toc') {
+    html += `
+      <div class="reading-chapter">Table of Contents</div>
+      <div class="reading-title">${data.title}${data.subtitle ? `<br><span style="font-size:0.65em;font-weight:400;font-style:italic;color:var(--ink-light)">${data.subtitle}</span>` : ''}</div>
+      <ul class="toc-list">
+        ${data.items.map((item, i) => `
+          <li class="toc-item">
+            <span class="toc-label">${item}</span>
+            <span class="toc-dots"></span>
+            <span class="toc-page">${i * 2 + 3}</span>
+          </li>
+        `).join('')}
+      </ul>
+    `;
+  } else if (data.type === 'content') {
+    html += `<div class="reading-chapter">${data.chapter}</div>`;
+    html += `<div class="reading-subtitle">${data.title}</div>`;
+
+    data.text.forEach((p, i) => {
+      html += `<p class="reading-text">${p}</p>`;
+    });
+
+    if (data.code) {
+      html += `<pre class="reading-code">${data.code}</pre>`;
+    }
+
+    if (data.note) {
+      html += `
+        <div class="reading-note">
+          <div class="reading-note-label">Note</div>
+          ${data.note}
+        </div>
+      `;
+    }
+  }
+
+  html += `<span class="page-number">${pageNum}</span>`;
+  return html;
+}
+
+function renderPlaceholderPages(book, color) {
+  const leftPage = document.getElementById('leftPage');
+  const rightPage = document.getElementById('rightPage');
+
+  leftPage.innerHTML = `
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center">
+      <div style="width:60px;height:3px;background:var(--gold);margin-bottom:32px;opacity:0.5"></div>
+      <div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--ink);line-height:1.3;margin-bottom:12px">${book.title}</div>
+      <div style="font-family:'Crimson Pro',serif;font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:40px">${book.step}</div>
+      <div style="font-family:'Lora',serif;font-size:0.85rem;color:var(--ink-faded);font-style:italic;max-width:240px;line-height:1.7">Developer Open Book<br>Archive Collection</div>
+      <div style="width:60px;height:3px;background:var(--gold);margin-top:32px;opacity:0.5"></div>
+    </div>
+    <span class="page-number">i</span>
+  `;
+
+  rightPage.innerHTML = `
+    <div class="reading-chapter">Preview</div>
+    <div class="reading-title">콘텐츠 미리보기</div>
+    <p class="reading-text">이 책의 전체 내용은 Developer Open Book 사이트에서 확인할 수 있습니다. 현재 프리뷰에서는 Dart Step 01과 React Step 00의 샘플 콘텐츠를 제공합니다.</p>
+    <p class="reading-text">책장에서 해당 책들을 클릭하여 양면 펼침 읽기 뷰를 체험해보세요.</p>
+    <div class="reading-note">
+      <div class="reading-note-label">Tip</div>
+      전체 콘텐츠가 포함된 책: <strong>Dart 기초 문법</strong> (Step 01), <strong>React 시작하기</strong> (Step 00)
+    </div>
+    <span class="page-number">ii</span>
+  `;
+
+  document.getElementById('pageIndicator').textContent = '1 / 1';
+}
+
+let isFlipping = false;
+
+function prevPage() {
+  if (!currentBook?.pages || currentPageIndex <= 0 || isFlipping) return;
+  animatePageFlip('backward', () => {
+    currentPageIndex--;
+    renderPages();
+  });
+}
+
+function nextPage() {
+  if (!currentBook?.pages || isFlipping) return;
+  const totalPairs = Math.ceil(currentBook.pages.length / 2);
+  if (currentPageIndex >= totalPairs - 1) return;
+  animatePageFlip('forward', () => {
+    currentPageIndex++;
+    renderPages();
+  });
+}
+
+// ═══════════════════════════════════════════
+// PAGE FLIP ANIMATION
+// ═══════════════════════════════════════════
+function animatePageFlip(direction, onComplete) {
+  isFlipping = true;
+  const container = document.getElementById('pageFlipContainer');
+
+  // Create flip element
+  const flip = document.createElement('div');
+  flip.className = 'page-flip';
+
+  const front = document.createElement('div');
+  front.className = 'page-flip-front';
+
+  const back = document.createElement('div');
+  back.className = 'page-flip-back';
+
+  // Capture current page content as the visible face
+  if (direction === 'forward') {
+    // Flipping the right page over: front shows current right, back shows next left
+    front.innerHTML = document.getElementById('rightPage').innerHTML;
+    front.style.padding = '48px 44px';
+    front.style.color = 'var(--ink)';
+    front.style.fontSize = '15px';
+    front.style.lineHeight = '1.85';
+    front.style.fontFamily = "'Lora', 'Georgia', serif";
+
+    back.style.background = 'var(--paper-dark)';
+    back.style.opacity = '0.7';
+  } else {
+    // Flipping the left page back: front shows current left, back shows prev right
+    front.innerHTML = document.getElementById('leftPage').innerHTML;
+    front.style.padding = '48px 44px';
+    front.style.color = 'var(--ink)';
+    front.style.fontSize = '15px';
+    front.style.lineHeight = '1.85';
+    front.style.fontFamily = "'Lora', 'Georgia', serif";
+
+    back.style.background = 'var(--paper-dark)';
+    back.style.opacity = '0.7';
+  }
+
+  flip.appendChild(front);
+  flip.appendChild(back);
+  container.appendChild(flip);
+
+  // Trigger animation
+  requestAnimationFrame(() => {
+    flip.classList.add(direction === 'forward' ? 'flipping-forward' : 'flipping-backward');
+  });
+
+  // Clean up after animation
+  flip.addEventListener('animationend', () => {
+    container.innerHTML = '';
+    isFlipping = false;
+    onComplete();
+  }, { once: true });
+
+  // Safety timeout in case animationend doesn't fire
+  setTimeout(() => {
+    if (isFlipping) {
+      container.innerHTML = '';
+      isFlipping = false;
+      onComplete();
+    }
+  }, 800);
+}
+
+// ═══════════════════════════════════════════
+// SHELF FILTER
+// ═══════════════════════════════════════════
+function showShelf(category) {
+  document.querySelectorAll('.library-nav button').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+
+  document.querySelectorAll('.shelf-section').forEach(section => {
+    const cat = section.dataset.category;
+    if (category === 'all' || cat === category) {
+      section.style.display = '';
+    } else {
+      section.style.display = 'none';
+    }
+  });
+}
+
+// ═══════════════════════════════════════════
+// KEYBOARD
+// ═══════════════════════════════════════════
+document.addEventListener('keydown', (e) => {
+  if (!document.getElementById('readingView').classList.contains('visible')) return;
+
+  if (e.key === 'Escape') closeBook();
+  if (e.key === 'ArrowLeft') prevPage();
+  if (e.key === 'ArrowRight') nextPage();
+});
+
+// ═══════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════
+renderShelf('dartShelf', BOOKS.dart, 'Dart');
+renderShelf('reactShelf', BOOKS.react, 'React');
+</script>
+</body>
+</html>
