@@ -136,25 +136,20 @@
   min-height: 260px;
   animation: shelf-fade-up 0.8s var(--ease-out-expo) both;
   gap: 0;
-  scrollbar-width: thin;
-  scrollbar-color: var(--shelf-wood) transparent;
+  scrollbar-width: none;
 }
 
 .shelf-row::-webkit-scrollbar {
-  height: 4px;
+  display: none;
 }
 
-.shelf-row::-webkit-scrollbar-track {
-  background: transparent;
+.shelf-row.dragging {
+  cursor: grabbing;
+  user-select: none;
 }
 
-.shelf-row::-webkit-scrollbar-thumb {
-  background: var(--shelf-wood);
-  border-radius: 2px;
-}
-
-.shelf-row::-webkit-scrollbar-thumb:hover {
-  background: var(--shelf-highlight);
+.shelf-row:not(.dragging) {
+  cursor: grab;
 }
 
 .shelf-row::after {

@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect, useRef, useCallback } from 'react'
 import { BOOKS } from '../data/books'
 import BookSpine from './BookSpine'
 import ReadingView from './ReadingView'
@@ -20,6 +20,53 @@ export default function Bookshelf() {
   const dartBooks = useMemo(() => BOOKS.filter(b => b.category === 'dart'), [])
   const flutterBooks = useMemo(() => BOOKS.filter(b => b.category === 'flutter'), [])
   const reactBooks = useMemo(() => BOOKS.filter(b => b.category === 'react'), [])
+  const shelfRefs = useRef<(HTMLDivElement | null)[]>([])
+
+  const setShelfRef = useCallback((index: number) => (el: HTMLDivElement | null) => {
+    shelfRefs.current[index] = el
+  }, [])
+
+  useEffect(() => {
+    const rows = shelfRefs.current.filter(Boolean) as HTMLDivElement[]
+
+    const handleWheel = (e: WheelEvent) => {
+      const el = e.currentTarget as HTMLDivElement
+      if (el.scrollWidth <= el.clientWidth) return
+      e.preventDefault()
+      el.scrollLeft += e.deltaY
+    }
+
+    const handleMouseDown = (e: MouseEvent) => {
+      const el = e.currentTarget as HTMLDivElement
+      if (el.scrollWidth <= el.clientWidth) return
+      el.classList.add('dragging')
+      const startX = e.pageX
+      const startScroll = el.scrollLeft
+
+      const onMove = (ev: MouseEvent) => {
+        el.scrollLeft = startScroll - (ev.pageX - startX)
+      }
+      const onUp = () => {
+        el.classList.remove('dragging')
+        window.removeEventListener('mousemove', onMove)
+        window.removeEventListener('mouseup', onUp)
+      }
+      window.addEventListener('mousemove', onMove)
+      window.addEventListener('mouseup', onUp)
+    }
+
+    rows.forEach(row => {
+      row.addEventListener('wheel', handleWheel, { passive: false })
+      row.addEventListener('mousedown', handleMouseDown)
+    })
+
+    return () => {
+      rows.forEach(row => {
+        row.removeEventListener('wheel', handleWheel)
+        row.removeEventListener('mousedown', handleMouseDown)
+      })
+    }
+  }, [filter])
 
   const showDart = filter === 'all' || filter === 'dart'
   const showFlutter = filter === 'all' || filter === 'flutter'
@@ -51,7 +98,7 @@ export default function Bookshelf() {
               Dart Programming
               <span className="shelf-meta">{dartBooks.length} volumes</span>
             </div>
-            <div className="shelf-row">
+            <div className="shelf-row" ref={setShelfRef(0)}>
               {dartBooks.map((book, i) => (
                 <BookSpine
                   key={book.id}
@@ -70,7 +117,7 @@ export default function Bookshelf() {
               Flutter Development
               <span className="shelf-meta">{flutterBooks.length} volumes</span>
             </div>
-            <div className="shelf-row">
+            <div className="shelf-row" ref={setShelfRef(1)}>
               {flutterBooks.map((book, i) => (
                 <BookSpine
                   key={book.id}
@@ -89,7 +136,7 @@ export default function Bookshelf() {
               React Development
               <span className="shelf-meta">{reactBooks.length} volumes</span>
             </div>
-            <div className="shelf-row">
+            <div className="shelf-row" ref={setShelfRef(2)}>
               {reactBooks.map((book, i) => (
                 <BookSpine
                   key={book.id}
