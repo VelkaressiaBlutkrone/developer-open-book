@@ -22,7 +22,7 @@ export function getBookVisual(id: string) {
   const g = parseInt(color.slice(3, 5), 16)
   const b = parseInt(color.slice(5, 7), 16)
   return {
-    height: 170 + (seed % 70),
+    height: 200,
     thickness: 26 + (seed % 22),
     color,
     coverColor: `rgb(${Math.round(r * 0.7)},${Math.round(g * 0.7)},${Math.round(b * 0.7)})`,

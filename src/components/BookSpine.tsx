@@ -61,6 +61,13 @@ export default function BookSpine({ book, index, onClick }: Props) {
         <span className="cover-title">{book.title}</span>
         <span className="cover-category">{category}</span>
       </div>
+
+      {/* Floating tooltip */}
+      <div className="book-tooltip">
+        <span className="tooltip-step">{book.step}</span>
+        <span className="tooltip-title">{book.title}</span>
+        <span className="tooltip-category">{category}</span>
+      </div>
     </div>
   )
 }

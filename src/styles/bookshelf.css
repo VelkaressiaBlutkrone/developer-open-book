@@ -301,6 +301,80 @@
 .book:hover::after { opacity: 0.3; }
 
 /* ══════════════════════════════════════════
+   BOOK TOOLTIP
+   ══════════════════════════════════════════ */
+.book-tooltip {
+  position: absolute;
+  bottom: calc(var(--height) + 16px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: rgba(15,11,7,0.95);
+  border: 1px solid rgba(184,134,11,0.3);
+  border-radius: 8px;
+  padding: 10px 16px;
+  min-width: 160px;
+  max-width: 220px;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s var(--ease-out-expo), transform 0.3s var(--ease-out-expo);
+  z-index: 30;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5), 0 0 0 1px rgba(184,134,11,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Tooltip arrow */
+.book-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: rgba(15,11,7,0.95);
+  border-right: 1px solid rgba(184,134,11,0.3);
+  border-bottom: 1px solid rgba(184,134,11,0.3);
+}
+
+.book:hover .book-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.tooltip-step {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.tooltip-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--paper);
+  line-height: 1.3;
+  word-break: keep-all;
+}
+
+.tooltip-category {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-faded);
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .book-tooltip { display: none; }
+}
+
+/* ══════════════════════════════════════════
    FOOTER
    ══════════════════════════════════════════ */
 .library-floor {
