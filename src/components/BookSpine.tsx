@@ -7,9 +7,19 @@ interface Props {
   onClick: () => void
 }
 
+function spineFontSize(title: string): string {
+  // Count visual length: Korean chars count as 1.6, others as 1
+  const len = [...title].reduce((sum, ch) => sum + (/[가-힣]/.test(ch) ? 1.6 : 1), 0)
+  if (len <= 14) return '10.5px'
+  if (len <= 20) return '9px'
+  if (len <= 26) return '8px'
+  return '7px'
+}
+
 export default function BookSpine({ book, index, onClick }: Props) {
   const v = getBookVisual(book.id)
   const category = book.category === 'dart' ? 'Dart' : 'React'
+  const fontSize = spineFontSize(book.title)
 
   return (
     <div
@@ -41,7 +51,10 @@ export default function BookSpine({ book, index, onClick }: Props) {
       >
         <span
           className="spine-title"
-          style={{ maxHeight: `calc(var(--height) - 60px)` }}
+          style={{
+            maxHeight: `calc(var(--height) - 60px)`,
+            fontSize,
+          }}
         >
           {book.title}
         </span>
