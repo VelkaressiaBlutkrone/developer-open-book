@@ -1,4 +1,5 @@
 import { useState, useCallback, useRef } from 'react'
+import { createPortal } from 'react-dom'
 import { getBookVisual } from '../data/books'
 import type { Book } from '../types'
 
@@ -52,65 +53,66 @@ export default function BookSpine({ book, index, onClick }: Props) {
   }, [touched, onClick])
 
   return (
-    <div
-      ref={bookRef}
-      className={`book${touched ? ' touched' : ''}`}
-      onTouchEnd={handleTouch}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      style={{
-        '--height': `${v.height}px`,
-        '--thickness': `${v.thickness}px`,
-        '--cover-color': v.coverColor,
-        animationDelay: `${0.08 * index + 0.3}s`,
-      } as React.CSSProperties}
-      role="button"
-      tabIndex={0}
-      aria-label={`${book.title} 열기`}
-      onClick={onClick}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault()
-          onClick()
-        }
-      }}
-    >
+    <>
       <div
-        className="book-spine"
+        ref={bookRef}
+        className={`book${touched ? ' touched' : ''}`}
+        onTouchEnd={handleTouch}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         style={{
-          backgroundColor: v.color,
-          width: `var(--thickness)`,
-          height: `var(--height)`,
+          '--height': `${v.height}px`,
+          '--thickness': `${v.thickness}px`,
+          '--cover-color': v.coverColor,
+          animationDelay: `${0.08 * index + 0.3}s`,
+        } as React.CSSProperties}
+        role="button"
+        tabIndex={0}
+        aria-label={`${book.title} 열기`}
+        onClick={onClick}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            onClick()
+          }
         }}
       >
-        <span
-          className="spine-title"
+        <div
+          className="book-spine"
           style={{
-            maxHeight: `calc(var(--height) - 60px)`,
-            fontSize,
+            backgroundColor: v.color,
+            width: `var(--thickness)`,
+            height: `var(--height)`,
           }}
         >
-          {book.title}
-        </span>
-        <span className="spine-badge">{book.step}</span>
-      </div>
-      <div
-        className="book-top"
-        style={{ width: `var(--thickness)` }}
-      />
-      <div
-        className="book-cover-peek"
-        style={{
-          height: `var(--height)`,
-          backgroundColor: v.coverColor,
-        }}
-      >
-        <span className="cover-title">{book.title}</span>
-        <span className="cover-category">{category}</span>
+          <span
+            className="spine-title"
+            style={{
+              maxHeight: `calc(var(--height) - 60px)`,
+              fontSize,
+            }}
+          >
+            {book.title}
+          </span>
+          <span className="spine-badge">{book.step}</span>
+        </div>
+        <div
+          className="book-top"
+          style={{ width: `var(--thickness)` }}
+        />
+        <div
+          className="book-cover-peek"
+          style={{
+            height: `var(--height)`,
+            backgroundColor: v.coverColor,
+          }}
+        >
+          <span className="cover-title">{book.title}</span>
+          <span className="cover-category">{category}</span>
+        </div>
       </div>
 
-      {/* Floating tooltip — fixed position to avoid overflow clipping */}
-      {tooltipPos && (
+      {tooltipPos && createPortal(
         <div
           className="book-tooltip visible"
           style={{
@@ -123,8 +125,9 @@ export default function BookSpine({ book, index, onClick }: Props) {
           <span className="tooltip-step">{book.step}</span>
           <span className="tooltip-title">{book.title}</span>
           <span className="tooltip-category">{category}</span>
-        </div>
+        </div>,
+        document.body
       )}
-    </div>
+    </>
   )
 }
