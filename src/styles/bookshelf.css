@@ -458,7 +458,8 @@
 }
 
 @media (max-width: 768px) {
-  .shelf-row { padding: 12px 20px 0; min-height: 200px; }
+  .shelf-row { min-height: 200px; }
+  .shelf-row-inner { padding: 12px 20px 0; }
   .shelf-row::after, .shelf-row::before { left: 12px; right: 12px; }
   .shelf-label { padding: 0 20px; font-size: 0.95rem; }
   .book-cover-peek { display: none; }
