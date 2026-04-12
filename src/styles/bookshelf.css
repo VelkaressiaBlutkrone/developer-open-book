@@ -127,28 +127,32 @@
    ══════════════════════════════════════════ */
 .shelf-row {
   position: relative;
+  min-height: 260px;
+  animation: shelf-fade-up 0.8s var(--ease-out-expo) both;
+}
+
+.shelf-row-inner {
   display: flex;
   align-items: flex-end;
   flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: visible;
   padding: 12px 60px 0;
-  min-height: 260px;
-  animation: shelf-fade-up 0.8s var(--ease-out-expo) both;
+  min-height: 242px;
   gap: 0;
   scrollbar-width: none;
 }
 
-.shelf-row::-webkit-scrollbar {
+.shelf-row-inner::-webkit-scrollbar {
   display: none;
 }
 
-.shelf-row.dragging {
+.shelf-row-inner.dragging {
   cursor: grabbing !important;
   user-select: none;
 }
 
-.shelf-row.dragging .book {
+.shelf-row-inner.dragging .book {
   cursor: grabbing !important;
   pointer-events: none;
 }

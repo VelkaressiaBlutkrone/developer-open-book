@@ -98,15 +98,17 @@ export default function Bookshelf() {
               Dart Programming
               <span className="shelf-meta">{dartBooks.length} volumes</span>
             </div>
-            <div className="shelf-row" ref={setShelfRef(0)}>
-              {dartBooks.map((book, i) => (
-                <BookSpine
-                  key={book.id}
-                  book={book}
-                  index={i}
-                  onClick={() => setOpenBook(book)}
-                />
-              ))}
+            <div className="shelf-row">
+              <div className="shelf-row-inner" ref={setShelfRef(0)}>
+                {dartBooks.map((book, i) => (
+                  <BookSpine
+                    key={book.id}
+                    book={book}
+                    index={i}
+                    onClick={() => setOpenBook(book)}
+                  />
+                ))}
+              </div>
             </div>
           </section>
         )}
@@ -117,15 +119,17 @@ export default function Bookshelf() {
               Flutter Development
               <span className="shelf-meta">{flutterBooks.length} volumes</span>
             </div>
-            <div className="shelf-row" ref={setShelfRef(1)}>
-              {flutterBooks.map((book, i) => (
-                <BookSpine
-                  key={book.id}
-                  book={book}
-                  index={i}
-                  onClick={() => setOpenBook(book)}
-                />
-              ))}
+            <div className="shelf-row">
+              <div className="shelf-row-inner" ref={setShelfRef(1)}>
+                {flutterBooks.map((book, i) => (
+                  <BookSpine
+                    key={book.id}
+                    book={book}
+                    index={i}
+                    onClick={() => setOpenBook(book)}
+                  />
+                ))}
+              </div>
             </div>
           </section>
         )}
@@ -136,15 +140,17 @@ export default function Bookshelf() {
               React Development
               <span className="shelf-meta">{reactBooks.length} volumes</span>
             </div>
-            <div className="shelf-row" ref={setShelfRef(2)}>
-              {reactBooks.map((book, i) => (
-                <BookSpine
-                  key={book.id}
-                  book={book}
-                  index={i}
-                  onClick={() => setOpenBook(book)}
-                />
-              ))}
+            <div className="shelf-row">
+              <div className="shelf-row-inner" ref={setShelfRef(2)}>
+                {reactBooks.map((book, i) => (
+                  <BookSpine
+                    key={book.id}
+                    book={book}
+                    index={i}
+                    onClick={() => setOpenBook(book)}
+                  />
+                ))}
+              </div>
             </div>
           </section>
         )}
