@@ -84,15 +84,7 @@
 
 **테스트 피라미드**
 
-```
-         /▲\
-        / E2E \        ← 소수, 느림, 비용 큼
-       /───────\
-      /  통합   \      ← 중간, 실제 DB/API 연동
-     /───────────\
-    /   단위 테스트 \   ← 다수, 빠름, 격리됨
-   /───────────────\
-```
+![diagram](/developer-open-book/diagrams/step21-test-pyramid.svg)
 
 > **전제 지식**: Step 8~13 (클래스, OOP, 예외), Step 14 (비동기), Step 16~18 (제네릭, sealed class)
 

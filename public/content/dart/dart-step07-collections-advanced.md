@@ -293,12 +293,7 @@ void main() {
 
 `List`, `Set` 등 컬렉션의 상위 타입입니다. **요소를 순서대로 하나씩 꺼낼 수 있는** 모든 것을 나타냅니다.
 
-```
-Iterable<T>
-  ├── List<T>
-  ├── Set<T>
-  └── (map(), where() 등의 반환 타입도 Iterable)
-```
+![diagram](/developer-open-book/diagrams/step07-iterable-hierarchy.svg)
 
 ### 지연 평가 (Lazy Evaluation)
 
@@ -714,24 +709,7 @@ void main() {
 
 **체이닝 파이프라인 시각화**
 
-```
-원본 데이터 (5명)
-  │
-  ▼ where(dept == '개발')
-  [김철수, 박민준, 최수진] (3명)
-  │
-  ▼ where(years >= 3)
-  [김철수, 박민준] (2명)
-  │
-  ▼ sort(salary 내림차순)
-  [박민준(520만), 김철수(450만)]
-  │
-  ▼ take(2)
-  [박민준, 김철수]
-  │
-  ▼ map(이름+연봉 문자열)
-  ['박민준: 5200000원', '김철수: 4500000원']
-```
+![diagram](/developer-open-book/diagrams/step07-data-pipeline.svg)
 
 ---
 

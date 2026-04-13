@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="658.65" height="325" viewBox="70 -20 658.65 325">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="70" y="-20" width="658.65" height="325" rx="12" fill="#141414"/>
+  <text x="220" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">테스트 피라미드</text>
+  <rect x="250" y="60" width="200" height="65" rx="9.75" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="350" y="96.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">E2E 테스트</text>
+  <text x="480" y="89.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">소수, 느림, 비용 큼</text>
+  <rect x="180" y="135" width="340" height="65" rx="9.75" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="350" y="171.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">통합 테스트</text>
+  <text x="540" y="164.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">중간, 실제 DB/API</text>
+  <rect x="100" y="210" width="500" height="65" rx="9.75" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="350" y="246.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">단위 테스트</text>
+  <text x="620" y="239.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">다수, 빠름, 격리됨</text>
+</svg>

@@ -74,15 +74,7 @@
 
 기존의 수많은 런타임 오류 원인인 `Null Reference Error`를 컴파일 타임에 원천 차단합니다. Flutter 앱 안정성의 핵심 기반입니다.
 
-```
-[Dart 타입 시스템 목표]
-
-런타임 오류 ──────► 컴파일 타임 오류로 이동
-    │                        │
-    ▼                        ▼
-앱 배포 후 크래시           개발 중 즉시 발견
-사용자 경험 저하            개발자가 바로 수정 가능
-```
+![diagram](/developer-open-book/diagrams/step02-type-system-goal.svg)
 
 > **전제 지식**: Step 1 완료 (Dart 환경 구축, `dart run` 실행 가능)
 
@@ -200,21 +192,7 @@ const Text('Hello')
 
 ### 3.4 세 키워드 비교 정리
 
-```
-[변수 선언 키워드 결정 흐름도]
-
-변수를 선언한다
-       │
-       ▼
-  재할당이 필요한가?
-   ├─ YES ──► var (또는 명시적 타입)
-   └─ NO
-       │
-       ▼
-  컴파일 타임에 값이 결정되는가?
-   ├─ YES ──► const
-   └─ NO  ──► final
-```
+![diagram](/developer-open-book/diagrams/step02-variable-decision.svg)
 
 | 키워드  | 재할당  | 값 결정 시점    | 불변 깊이   | 주요 사용처           |
 | ------- | ------- | --------------- | ----------- | --------------------- |

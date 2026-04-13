@@ -515,11 +515,7 @@ void main() {
 
 **상태 전환 다이어그램**
 
-```
-pending ──► confirmed ──► shipped ──► delivered (종료)
-   │              │
-   └──────────────┴──────────────────► cancelled (종료)
-```
+![diagram](/developer-open-book/diagrams/step12-order-state-transition.svg)
 
 ---
 

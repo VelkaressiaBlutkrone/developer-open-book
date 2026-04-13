@@ -61,11 +61,7 @@
 
 클래스를 설계할 때 두 클래스 사이의 관계를 표현하는 방법은 세 가지입니다.
 
-```
-"A는 B이다"    (IS-A) → extends  (상속)
-"A는 B처럼 행동할 수 있다" → implements (인터페이스)
-"A는 반드시 B를 구현해야 한다" → abstract class (추상 클래스)
-```
+![diagram](/developer-open-book/diagrams/step10-isa-relation.svg)
 
 세 메커니즘은 목적이 다릅니다.
 
