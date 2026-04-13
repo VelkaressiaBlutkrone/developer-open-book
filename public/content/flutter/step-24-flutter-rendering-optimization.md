@@ -55,27 +55,7 @@
 
 ### 1.3 전체 개념 지도
 
-```
-Flutter 렌더링 최적화
-    │
-    ├── Rebuild 최소화
-    │     ├── const 위젯         ← identical 체크로 rebuild 건너뜀
-    │     ├── 위젯 분리          ← setState 범위를 최소화
-    │     └── ValueNotifier      ← setState 없이 특정 부분만 갱신
-    │
-    ├── Repaint 최소화
-    │     └── RepaintBoundary    ← 레이어 분리, 독립 repaint
-    │
-    ├── 목록 최적화
-    │     ├── ListView.builder   ← 화면에 보이는 것만 렌더링
-    │     ├── Sliver 위젯        ← 커스텀 스크롤 최적화
-    │     └── cacheExtent        ← 사전 렌더링 범위 조정
-    │
-    └── DevTools 진단
-          ├── Performance Overlay ← 프레임 시간 실시간 표시
-          ├── Widget Inspector    ← rebuild 횟수 추적
-          └── Timeline           ← 프레임별 상세 분석
-```
+![렌더링 최적화 전략 hierarchy](/developer-open-book/diagrams/step24-optimization-strategy.svg)
 
 ---
 

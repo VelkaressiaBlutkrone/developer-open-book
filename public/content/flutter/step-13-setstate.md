@@ -99,33 +99,7 @@ setState 심화
 
 ### 3.1 setState() 내부 동작 단계별 분석
 
-```
-setState(() { _count++; }) 호출 시 내부 흐름
-──────────────────────────────────────────────────────
-
-① 콜백 실행
-   _count가 변경됨
-
-② Element.markNeedsBuild() 호출
-   해당 StatefulElement가 dirty = true 로 표시됨
-
-③ WidgetsBinding.scheduleFrame() 호출
-   다음 vsync 신호(16.6ms 또는 8.3ms)에 프레임 예약
-
-④ 다음 프레임 — BuildOwner.buildScope() 실행
-   dirty 상태인 모든 Element의 build() 재호출
-
-⑤ 새 Widget Tree 생성
-   CounterWidget.build()가 새 Column, Text, Button 반환
-
-⑥ reconciliation (Element와 Widget 비교)
-   위치·타입 동일 → Element 재사용, Widget 참조 교체
-   변경 있는 경우만 → RenderObject 업데이트 예약
-
-⑦ Layout & Paint
-   변경된 RenderObject만 다시 레이아웃·페인트
-──────────────────────────────────────────────────────
-```
+![setState 내부 7단계 흐름](/developer-open-book/diagrams/step13-setstate-flow.svg)
 
 **핵심 포인트:** setState()는 호출한 **StatefulWidget부터 그 모든 자손**을 rebuild 대상으로 만든다. 단, Element 재사용과 const 최적화로 실제 RenderObject 업데이트는 최소화된다.
 
@@ -153,17 +127,7 @@ class _ParentWidgetState extends State<ParentWidget> {
 }
 ```
 
-```
-setState() 호출 시 rebuild 범위
-──────────────────────────────────────────────────────
-  ParentWidget (setState 호출 위치)
-    ├── Column              ✅ build() 재호출
-    ├── Text('$_count')     ✅ build() 재호출 + RenderObject 업데이트
-    ├── const Text(...)     ✅ build() 재호출되지만 identical → 건너뜀
-    ├── ChildWidget()       ✅ build() 재호출 (const 아니면 새 인스턴스)
-    └── const StaticWidget  ⬜ rebuild 완전 건너뜀
-──────────────────────────────────────────────────────
-```
+![rebuild 범위 시각화](/developer-open-book/diagrams/step13-rebuild-scope.svg)
 
 > ⚠️ **함정 주의:** `ChildWidget()`처럼 `const` 없이 자식 위젯을 생성하면 부모 setState()마다 `ChildWidget`의 `build()`도 재호출된다. 자식이 무거운 위젯이라면 성능 저하로 이어진다.
 

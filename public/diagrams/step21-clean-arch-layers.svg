@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="838" height="510" viewBox="20 -10 838 510">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-10" width="838" height="510" rx="12" fill="#141414"/>
+  <text x="100" y="45.2" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="28" opacity="1">Clean Architecture 4-Layer</text>
+  <rect x="50" y="90" width="600" height="80" rx="12" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="350" y="122.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Presentation Layer</text>
+  <text x="350" y="146.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Widget · Screen · ViewModel</text>
+  <rect x="50" y="190" width="600" height="80" rx="12" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="350" y="222.79999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Application Layer</text>
+  <text x="350" y="246.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">UseCase</text>
+  <rect x="50" y="290" width="600" height="80" rx="12" fill="#1a4d2e" stroke="#22c55e" stroke-width="4" opacity="1"/>
+  <text x="350" y="322.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Domain Layer</text>
+  <text x="350" y="346.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Entity · Repository 인터페이스</text>
+  <rect x="50" y="390" width="600" height="80" rx="12" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="350" y="422.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Data Layer</text>
+  <text x="350" y="446.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Repository 구현체 · DataSource · DTO</text>
+  <defs><marker id="arrow-arrow_p_d" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#4a9eed"/></marker></defs>
+  <path d="M680,130 L680,310" fill="none" stroke="#4a9eed" stroke-width="2" opacity="1" marker-end="url(#arrow-arrow_p_d)"/>
+  <defs><marker id="arrow-arrow_a_d" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#8b5cf6"/></marker></defs>
+  <path d="M700,230 L700,310" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="1" marker-end="url(#arrow-arrow_a_d)"/>
+  <defs><marker id="arrow-arrow_data_d" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/></marker></defs>
+  <path d="M720,430 L720,330" fill="none" stroke="#f59e0b" stroke-width="2" opacity="1" marker-end="url(#arrow-arrow_data_d)"/>
+  <text x="740" y="264.4" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="16" opacity="1">의존성 →</text>
+  <text x="740" y="286.79999999999995" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="16" opacity="1">안쪽(Domain)</text>
+</svg>

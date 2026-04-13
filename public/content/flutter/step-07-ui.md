@@ -26,56 +26,11 @@
 
 Flutter의 모든 복잡한 UI는 결국 소수의 기본 위젯 조합으로 만들어진다. 아무리 화려한 앱 화면도 분해하면 `Container`, `Text`, `Image`, `Icon`의 반복이다.
 
-```
-앱 화면 분해 예시 (상품 카드)
-──────────────────────────────────────────────
-  ┌──────────────────────────┐
-  │   [Image.network]        │
-  │                          │
-  ├──────────────────────────┤
-  │  [Text] 상품명           │  ← Padding + Text
-  │  [Text] ₩29,900          │  ← Padding + Text (다른 TextStyle)
-  │  [Row]                   │
-  │    [Icon] ★★★★☆         │  ← Icon + Text
-  │    [Text] 4.2 (128)      │
-  └──────────────────────────┘
-
-전체 구조:
-Container (카드 외곽선·그림자)
-  └── Column
-        ├── Image.network
-        └── Padding
-              └── Column
-                    ├── Text (상품명)
-                    ├── Text (가격)
-                    └── Row
-                          ├── Icon
-                          └── Text
-```
+![상품 카드 위젯 분해](/developer-open-book/diagrams/step07-product-card-breakdown.svg)
 
 ### 1.2 전체 개념 지도
 
-```
-기본 UI 위젯
-    │
-    ├── Container     ← 박스 모델의 모든 것 (크기·색상·테두리·그림자·변환)
-    │     └── BoxDecoration
-    │           ├── color / gradient
-    │           ├── border / borderRadius
-    │           └── boxShadow / image
-    │
-    ├── Text          ← 텍스트 표시 (스타일·overflow·최대줄수)
-    │     └── TextStyle (fontSize·fontWeight·color·letterSpacing...)
-    │
-    ├── Image         ← 이미지 표시 (network·asset·file·memory)
-    │     └── BoxFit (fill·contain·cover·fitWidth·fitHeight·none)
-    │
-    ├── Icon          ← 아이콘 표시 (Material·Cupertino·커스텀)
-    │
-    ├── Padding       ← 내부 여백 (EdgeInsets)
-    │
-    └── Align         ← 자식 정렬 (Alignment 좌표계)
-```
+![기본 UI 위젯 hierarchy tree](/developer-open-book/diagrams/step07-basic-ui-widgets.svg)
 
 ---
 

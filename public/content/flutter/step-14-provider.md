@@ -59,28 +59,7 @@ Flutter 상태관리 생태계에서 Provider의 위치
 
 ### 1.3 전체 개념 지도
 
-```
-Provider 패턴
-    │
-    ├── ChangeNotifier    ← 상태 + 변경 알림 담당
-    │     ├── 상태 데이터 (필드)
-    │     ├── 비즈니스 로직 (메서드)
-    │     └── notifyListeners() ← 변경 전파
-    │
-    ├── Provider 종류
-    │     ├── Provider           ← 읽기 전용 값 제공
-    │     ├── ChangeNotifierProvider ← ChangeNotifier 제공 ★
-    │     ├── FutureProvider     ← Future 결과 제공
-    │     ├── StreamProvider     ← Stream 데이터 제공
-    │     └── MultiProvider      ← 여러 Provider 동시 제공
-    │
-    └── 상태 읽기 방법
-          ├── context.watch<T>()  ← rebuild 구독 (읽기 + 감시)
-          ├── context.read<T>()   ← 단순 읽기 (감시 없음)
-          ├── context.select<T,R>()← 특정 값만 감시 (rebuild 최소화)
-          ├── Consumer<T>         ← 위젯 단위 구독
-          └── Selector<T,S>       ← 선택적 구독 (rebuild 최소화)
-```
+![Provider 패턴 hierarchy](/developer-open-book/diagrams/step14-provider-pattern.svg)
 
 ---
 
@@ -162,20 +141,7 @@ class CartNotifier extends ChangeNotifier {
 
 **notifyListeners()의 동작:**
 
-```
-cartNotifier.addItem(item) 호출
-      ↓
-_items에 아이템 추가
-      ↓
-notifyListeners() 호출
-      ↓
-ChangeNotifier가 등록된 모든 리스너 순회
-      ↓
-context.watch<CartNotifier>()를 사용한 위젯들의
-  Element.markNeedsBuild() 호출
-      ↓
-다음 프레임에서 해당 위젯들 rebuild
-```
+![notifyListeners 실행 흐름](/developer-open-book/diagrams/step14-notify-flow.svg)
 
 ---
 

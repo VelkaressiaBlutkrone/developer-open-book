@@ -52,27 +52,7 @@ AnimationController 직접 제어          상태 변경 → 자동 전환
 
 ### 1.3 전체 개념 지도
 
-```
-Flutter 애니메이션
-    │
-    ├── 명시적 애니메이션
-    │     ├── AnimationController  ← 시간 제어 (0.0 → 1.0)
-    │     ├── Tween               ← 값 범위 정의 (begin → end)
-    │     ├── Curve               ← 움직임 곡선 (easeIn, bounce 등)
-    │     ├── Animation<T>        ← 현재 값 제공
-    │     └── AnimatedBuilder     ← 값 변경 시 서브트리 rebuild
-    │
-    ├── 암시적 애니메이션
-    │     ├── AnimatedContainer   ← 크기·색상·패딩 자동 전환
-    │     ├── AnimatedOpacity     ← 투명도 자동 전환
-    │     ├── AnimatedPadding     ← 패딩 자동 전환
-    │     ├── AnimatedPositioned  ← Stack 내 위치 자동 전환
-    │     └── TweenAnimationBuilder ← 커스텀 암시적 애니메이션
-    │
-    └── 화면 전환 애니메이션
-          ├── Hero                ← 공유 요소 전환
-          └── PageRouteBuilder    ← 커스텀 페이지 전환
-```
+![애니메이션 시스템 hierarchy](/developer-open-book/diagrams/step19-animation-system.svg)
 
 ---
 
@@ -105,21 +85,7 @@ Flutter 애니메이션
 
 `AnimationController`는 지정한 `duration` 동안 **0.0에서 1.0**으로 선형 증가하는 값을 생성한다. 이 값을 Tween으로 원하는 범위로 변환하고, Curve로 가속·감속을 적용한다.
 
-```
-AnimationController 동작 원리
-──────────────────────────────────────────────────────
-  duration: 500ms
-
-  t=0ms   → value: 0.0
-  t=250ms → value: 0.5  (선형)
-  t=500ms → value: 1.0
-
-  forward()  : 0.0 → 1.0
-  reverse()  : 1.0 → 0.0
-  repeat()   : 0.0 → 1.0 → 0.0 → ... (반복)
-  reset()    : value = 0.0
-──────────────────────────────────────────────────────
-```
+![AnimationController 동작](/developer-open-book/diagrams/step19-animation-controller.svg)
 
 ```dart
 class _AnimationDemoState extends State<AnimationDemo>

@@ -48,54 +48,11 @@ Clean Architecture 핵심 질문
 
 Robert Martin의 원형을 Flutter 맥락에서 단순화하면:
 
-```
-       ┌─────────────────────────────────────────┐
-       │           Presentation Layer            │
-       │      Widget · Screen · ViewModel        │
-       └──────────────────┬──────────────────────┘
-                          │ 사용
-       ┌──────────────────▼──────────────────────┐
-       │           Application Layer             │
-       │              UseCase                    │
-       └──────────────────┬──────────────────────┘
-                          │ 사용 (인터페이스)
-       ┌──────────────────▼──────────────────────┐
-       │             Domain Layer                │ ← 핵심
-       │     Entity · Repository 인터페이스       │
-       └──────────────────▲──────────────────────┘
-                          │ 구현
-       ┌──────────────────┴──────────────────────┐
-       │              Data Layer                 │
-       │  Repository 구현체 · DataSource · DTO   │
-       └─────────────────────────────────────────┘
-
-  의존성 화살표: 안쪽(Domain)을 향함
-  Domain은 아무것도 의존하지 않음
-```
+![Clean Architecture 4-Layer](/developer-open-book/diagrams/step21-clean-arch-layers.svg)
 
 ### 1.3 전체 개념 지도
 
-```
-Clean Architecture in Flutter
-    │
-    ├── Domain Layer (핵심, 순수 Dart)
-    │     ├── Entity        ← 비즈니스 객체
-    │     ├── Repository    ← 데이터 접근 인터페이스
-    │     └── UseCase       ← 비즈니스 시나리오
-    │
-    ├── Data Layer (외부 데이터 구현)
-    │     ├── Repository Impl ← Repository 인터페이스 구현
-    │     ├── Remote DataSource ← API 통신
-    │     ├── Local DataSource  ← 로컬 저장
-    │     └── DTO              ← API 모델 → Domain 변환
-    │
-    ├── Application Layer (조정)
-    │     └── UseCase       ← Repository 조합 + 비즈니스 규칙
-    │
-    └── Presentation Layer (UI)
-          ├── Screen / Widget
-          └── ViewModel (Notifier / Cubit)
-```
+![Clean Architecture 트리](/developer-open-book/diagrams/step21-clean-arch-tree.svg)
 
 ---
 

@@ -63,30 +63,7 @@ Layout을 모르면 겪는 문제들
 
 ### 1.3 전체 개념 지도
 
-```
-Flutter Layout 시스템
-    │
-    ├── 3원칙
-    │     Constraints go down
-    │     Sizes go up
-    │     Parent sets position
-    │
-    ├── BoxConstraints
-    │     minWidth / maxWidth / minHeight / maxHeight
-    │     tight / loose / unbounded
-    │
-    ├── Flex 레이아웃
-    │     Row (가로) / Column (세로)
-    │       ├── Expanded   (남은 공간 강제 점유)
-    │       ├── Flexible   (남은 공간 비율 점유, 작아질 수 있음)
-    │       └── Spacer     (빈 공간 삽입)
-    │
-    ├── Single-child 레이아웃
-    │     SizedBox / Padding / Align / Center / FittedBox
-    │
-    └── Intrinsic Dimensions (성능 주의)
-          IntrinsicWidth / IntrinsicHeight
-```
+![Layout 3원칙 + 시스템 hierarchy tree](/developer-open-book/diagrams/step06-layout-principles.svg)
 
 ---
 
@@ -138,36 +115,13 @@ BoxConstraints(maxWidth: 300)
 // → minWidth=0, maxWidth=300, minHeight=0, maxHeight=∞
 ```
 
-```
-Constraints 전파 예시
-──────────────────────────────────────────────
-Screen (1080×1920 px 기준)
-  → "0~1080 너비, 0~1920 높이 안에 그려라"
-         ↓ 전달
-    Scaffold
-      → "너비 1080, 높이 1840 (AppBar 제외)"
-               ↓ 전달
-        Column
-          → "너비 1080, 높이 unbounded (스크롤 없으면 1840)"
-                   ↓ 전달
-            Text
-              → "너비 0~1080, 높이 0~1840"
-              → 텍스트 내용에 맞는 크기로 결정
-```
+![Constraints Down→Sizes Up flow](/developer-open-book/diagrams/step06-constraints-flow.svg)
 
 #### 원칙 2: Sizes go up (크기는 올라간다)
 
 자식은 전달받은 Constraints 안에서 **자신의 크기를 결정하고 부모에게 반환**한다. 부모는 자식의 크기를 바탕으로 자신의 크기를 결정한다.
 
-```
-크기 보고 과정
-──────────────────────────────────────────────
-Text → "내 텍스트 내용 기준으로 120×24 필요"
-         ↑ 보고
-Column → "자식들 합계 = 120+24+... = 480 높이 필요"
-         ↑ 보고
-Scaffold → "480 높이 사용"
-```
+![Constraints Down→Sizes Up flow](/developer-open-book/diagrams/step06-constraints-flow.svg)
 
 #### 원칙 3: Parent sets position (부모가 위치를 결정)
 

@@ -80,26 +80,7 @@ Flutter에서 DI를 구현하는 방법
 
 ### 1.3 전체 개념 지도
 
-```
-Dependency Injection
-    │
-    ├── GetIt
-    │     ├── registerSingleton()   ← 앱 시작 시 즉시 생성, 항상 같은 인스턴스
-    │     ├── registerLazySingleton() ← 처음 사용 시 생성, 이후 같은 인스턴스
-    │     ├── registerFactory()     ← 요청마다 새 인스턴스 생성
-    │     └── get<T>() / sl<T>()    ← 인스턴스 조회
-    │
-    ├── Injectable (코드 생성)
-    │     ├── @injectable           ← Factory 등록
-    │     ├── @singleton            ← Singleton 등록
-    │     ├── @lazySingleton        ← LazySingleton 등록
-    │     └── @module               ← 외부 라이브러리 등록
-    │
-    └── Riverpod as DI
-          ├── Provider              ← 읽기 전용 객체 제공
-          ├── ref.read(provider)    ← 의존성 주입
-          └── override              ← 테스트용 Mock 교체
-```
+![DI 패턴 hierarchy](/developer-open-book/diagrams/step22-di-system.svg)
 
 ---
 

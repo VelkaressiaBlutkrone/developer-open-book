@@ -26,50 +26,11 @@
 
 사용자가 화면을 탭하는 순간, Flutter 내부에서는 여러 단계를 거쳐 이벤트가 적절한 위젯에 전달된다.
 
-```
-[손가락이 화면에 닿음]
-        ↓
-Embedder Layer (iOS/Android)
-  → OS로부터 터치 포인터 이벤트 수신
-        ↓
-Engine Layer
-  → 포인터 좌표를 Flutter로 전달
-        ↓
-Framework Layer — Hit Testing
-  → 터치 좌표와 겹치는 RenderObject 탐색
-  → 가장 깊은(leaf) 노드부터 위로 hit 판정
-        ↓
-Gesture Arena (제스처 경쟁)
-  → 여러 GestureRecognizer가 동시에 경쟁
-  → 규칙에 따라 승자 하나가 제스처 처리
-        ↓
-GestureDetector / InkWell
-  → 해당 콜백 호출 (onTap, onPanUpdate 등)
-```
+![터치→Embedder→Engine→Framework→Gesture pipeline](/developer-open-book/diagrams/step09-touch-event-pipeline.svg)
 
 ### 1.2 전체 개념 지도
 
-```
-사용자 입력 처리
-    │
-    ├── 터치 제스처
-    │     ├── GestureDetector  ← 시각 효과 없음, 모든 제스처 처리
-    │     └── InkWell          ← Material 물결(Ripple) 효과 포함
-    │
-    ├── 제스처 종류
-    │     ├── Tap (탭)         onTap / onDoubleTap / onLongPress
-    │     ├── Pan (드래그)     onPanStart / onPanUpdate / onPanEnd
-    │     ├── Scale (확대/축소) onScaleStart / onScaleUpdate
-    │     └── 방향성 드래그   onHorizontalDrag / onVerticalDrag
-    │
-    ├── 포커스 & 키보드
-    │     ├── FocusNode        ← 포커스 관리 객체
-    │     ├── FocusScope       ← 포커스 그룹 관리
-    │     └── KeyboardListener ← 키보드 이벤트 직접 수신
-    │
-    └── 접근성
-          └── Semantics        ← 스크린 리더에 의미 정보 제공
-```
+![사용자 입력 처리 hierarchy](/developer-open-book/diagrams/step09-input-system.svg)
 
 ---
 

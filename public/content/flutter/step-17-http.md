@@ -56,30 +56,7 @@
 
 ### 1.3 전체 개념 지도
 
-```
-HTTP 통신
-    │
-    ├── REST API
-    │     ├── HTTP 메서드 (GET·POST·PUT·PATCH·DELETE)
-    │     ├── 상태 코드 (200·201·400·401·403·404·500)
-    │     └── 요청/응답 구조 (Header·Body·Query·Path)
-    │
-    ├── Dio
-    │     ├── 기본 설정 (baseUrl·timeout·headers)
-    │     ├── 요청 (get·post·put·delete)
-    │     ├── 인터셉터 (RequestInterceptor·ResponseInterceptor·ErrorInterceptor)
-    │     └── 에러 처리 (DioException 타입 분류)
-    │
-    ├── JSON ↔ Dart 모델
-    │     ├── fromJson() 팩토리 생성자
-    │     ├── toJson() 메서드
-    │     └── jsonDecode / jsonEncode
-    │
-    └── GraphQL 기초
-          ├── Query (데이터 조회)
-          ├── Mutation (데이터 변경)
-          └── ferry / gql 패키지
-```
+![HTTP 통신 hierarchy](/developer-open-book/diagrams/step17-http-system.svg)
 
 ---
 
@@ -337,24 +314,7 @@ class Order {
 
 인터셉터는 모든 요청·응답을 가로채 공통 로직을 처리한다.
 
-```
-요청 파이프라인
-──────────────────────────────────────────────────────
-  앱 코드
-    ↓ dio.get('/products')
-  RequestInterceptor (토큰 헤더 추가)
-    ↓
-  HTTP 요청 전송
-    ↓
-  서버 응답 수신
-    ↓
-  ResponseInterceptor (공통 응답 처리)
-    ↓
-  또는 ErrorInterceptor (에러 처리, 토큰 갱신)
-    ↓
-  앱 코드에 결과 반환
-──────────────────────────────────────────────────────
-```
+![Dio 인터셉터 파이프라인](/developer-open-book/diagrams/step17-interceptor-pipeline.svg)
 
 #### 인증 인터셉터 (토큰 자동 첨부)
 
@@ -524,27 +484,7 @@ Future<void> _loadProducts() async {
 
 GraphQL은 REST의 Over-fetching·Under-fetching 문제를 해결하는 API 기술이다.
 
-```
-REST vs GraphQL 비교
-──────────────────────────────────────────────────────
-REST
-  GET /users/1        → { id, name, email, phone, address, ... }
-  GET /users/1/posts  → 추가 요청 필요
-  → Over-fetching: 필요 없는 phone, address도 반환
-  → Under-fetching: 포스트를 위해 추가 요청 필요
-
-GraphQL
-  query {
-    user(id: 1) {
-      name          ← 필요한 필드만 지정
-      posts {
-        title       ← 중첩 데이터도 한 번에
-      }
-    }
-  }
-  → 필요한 데이터만 정확히 요청, 단일 요청으로 완료
-──────────────────────────────────────────────────────
-```
+![REST vs GraphQL comparison](/developer-open-book/diagrams/step17-rest-vs-graphql.svg)
 
 #### ferry 패키지로 GraphQL 사용
 

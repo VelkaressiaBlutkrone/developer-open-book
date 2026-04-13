@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="390" viewBox="10 -20 780 390">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="10" y="-20" width="780" height="390" rx="12" fill="#141414"/>
+  <text x="220" y="35.2" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="28" opacity="1">Flutter 애니메이션</text>
+  <rect x="300" y="60" width="200" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="400" y="89.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">애니메이션</text>
+  <defs><marker id="arrow-a1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a0a0a0"/></marker></defs>
+  <path d="M350,110 L150,150" fill="none" stroke="#a0a0a0" stroke-width="2" opacity="1" marker-end="url(#arrow-a1)"/>
+  <defs><marker id="arrow-a2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a0a0a0"/></marker></defs>
+  <path d="M400,110 L400,150" fill="none" stroke="#a0a0a0" stroke-width="2" opacity="1" marker-end="url(#arrow-a2)"/>
+  <defs><marker id="arrow-a3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a0a0a0"/></marker></defs>
+  <path d="M450,110 L650,150" fill="none" stroke="#a0a0a0" stroke-width="2" opacity="1" marker-end="url(#arrow-a3)"/>
+  <rect x="40" y="150" width="220" height="45" rx="6.75" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="150" y="176.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">명시적 애니메이션</text>
+  <rect x="40" y="205" width="220" height="30" rx="4.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="150" y="223.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">AnimationController</text>
+  <rect x="40" y="240" width="220" height="30" rx="4.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="150" y="258.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Tween (값 범위)</text>
+  <rect x="40" y="275" width="220" height="30" rx="4.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="150" y="293.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Curve (움직임 곡선)</text>
+  <rect x="40" y="310" width="220" height="30" rx="4.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="150" y="328.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">AnimatedBuilder</text>
+  <rect x="290" y="150" width="220" height="45" rx="6.75" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="400" y="176.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">암시적 애니메이션</text>
+  <rect x="290" y="205" width="220" height="30" rx="4.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="400" y="223.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">AnimatedContainer</text>
+  <rect x="290" y="240" width="220" height="30" rx="4.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="400" y="258.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">AnimatedOpacity</text>
+  <rect x="290" y="275" width="220" height="30" rx="4.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="400" y="293.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">AnimatedPositioned</text>
+  <rect x="290" y="310" width="220" height="30" rx="4.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="400" y="328.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">TweenAnimationBuilder</text>
+  <rect x="540" y="150" width="220" height="45" rx="6.75" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="650" y="176.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">화면 전환</text>
+  <rect x="540" y="205" width="220" height="30" rx="4.5" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="650" y="223.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Hero</text>
+  <rect x="540" y="240" width="220" height="30" rx="4.5" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="650" y="258.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">PageRouteBuilder</text>
+</svg>

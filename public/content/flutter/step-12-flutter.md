@@ -59,27 +59,7 @@ Flutter에서 **상태(State)**는 UI가 의존하는 모든 데이터를 말한
 
 ### 1.3 전체 개념 지도
 
-```
-Flutter 상태관리
-    │
-    ├── 상태 분류
-    │     ├── Local State   ← 단일 위젯 내부 상태
-    │     └── Global State  ← 여러 위젯이 공유하는 상태
-    │
-    ├── Reactive UI 원칙
-    │     상태 변경 → UI 자동 재구성
-    │
-    ├── 상태 끌어올리기 (State Lifting)
-    │     공유가 필요한 상태를 공통 조상 위젯으로 이동
-    │
-    └── 상태관리 솔루션 (복잡도 순)
-          setState       ← Local State 기본
-          InheritedWidget← Flutter 내장, 저수준
-          Provider       ← InheritedWidget 래퍼, 단순
-          Riverpod       ← Provider 개선, 타입 안전
-          Bloc/Cubit     ← 이벤트 기반, 대규모 앱
-          GetX           ← 경량, 빠른 개발
-```
+![상태관리 개념 hierarchy](/developer-open-book/diagrams/step12-state-management.svg)
 
 ---
 
@@ -194,21 +174,7 @@ Global State의 예시
 
 두 형제 위젯이 같은 상태를 공유해야 할 때, 상태를 두 위젯의 **공통 조상 위젯**으로 이동하고 자식들에게 콜백으로 전달하는 기법이다.
 
-```
-State Lifting 전 (문제 상황)
-────────────────────────────────────────────
-  ProductCard (자체 장바구니 수량 관리)
-  CartIcon    (장바구니 수량을 독립적으로 관리)
-  → 두 위젯의 수량이 불일치 가능
-
-State Lifting 후 (해결)
-────────────────────────────────────────────
-  ShopPage (공통 조상)
-    ├── cartCount 상태 관리
-    ├── ProductCard (cartCount 변경 콜백 수신)
-    └── CartIcon (cartCount 값 수신)
-  → 상태가 한 곳에만 있어 항상 일치
-```
+![State Lifting 전/후 비교](/developer-open-book/diagrams/step12-state-lifting.svg)
 
 ```dart
 // 공통 조상 위젯
@@ -286,33 +252,9 @@ class ProductList extends StatelessWidget {
 
 State Lifting은 위젯 계층이 깊어질수록 한계에 부딪힌다.
 
-```
-Prop Drilling 문제
-────────────────────────────────────────────
-  AppPage (상태 보유)
-    └── SectionWidget (사용 안 하지만 전달)
-          └── ListWidget (사용 안 하지만 전달)
-                └── ItemWidget (사용 안 하지만 전달)
-                      └── IconWidget ← 실제 사용 위젯
-
-  상태가 5단계를 거쳐 전달됨
-  중간 위젯들은 상태를 사용하지도 않으면서 전달만 함
-  위젯 인터페이스가 복잡해지고 유지보수가 어려워짐
-```
+![Prop Drilling vs Provider](/developer-open-book/diagrams/step12-prop-drilling.svg)
 
 이 문제를 해결하기 위해 `InheritedWidget`, `Provider`, `Riverpod` 같은 솔루션이 등장했다. 이들은 중간 위젯을 거치지 않고 **필요한 위젯이 직접 상태를 가져오는** 방식을 제공한다.
-
-```
-Provider/Riverpod 방식
-────────────────────────────────────────────
-  AppPage (Provider로 상태 제공)
-    └── SectionWidget (상태 무관)
-          └── ListWidget (상태 무관)
-                └── ItemWidget (상태 무관)
-                      └── IconWidget
-                            ← context.watch<CartState>()
-                               바로 여기서 직접 가져옴!
-```
 
 ---
 
@@ -413,24 +355,7 @@ BlocBuilder<CartCubit, int>(
 
 ### 3.6 상태관리 솔루션 선택 기준
 
-```
-선택 플로차트
-────────────────────────────────────────────────────
-  단일 위젯 내부 상태?
-    YES → setState()
-
-  여러 위젯이 공유하는 상태?
-    ↓
-  앱 규모가 소~중?
-    YES → Provider (입문·중급)
-    ↓
-  타입 안전·테스트·의존성 주입 중요?
-    YES → Riverpod (중~대규모 권장)
-    ↓
-  이벤트 기반 아키텍처 필요?
-    YES → Bloc/Cubit (대규모·팀 프로젝트)
-────────────────────────────────────────────────────
-```
+![상태관리 솔루션 선택 flowchart](/developer-open-book/diagrams/step12-solution-flowchart.svg)
 
 **2026년 Flutter 커뮤니티 트렌드:**
 

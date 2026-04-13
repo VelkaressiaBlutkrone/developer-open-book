@@ -52,29 +52,7 @@
 
 ### 1.3 전체 개념 지도
 
-```
-Flutter Navigation 시스템
-    │
-    ├── Navigator (스택 기반)
-    │     ├── push()             ← 화면 추가
-    │     ├── pop()              ← 화면 제거
-    │     ├── pushReplacement()  ← 현재 화면 교체
-    │     ├── pushAndRemoveUntil()← 스택 정리 후 이동
-    │     └── canPop()           ← 뒤로가기 가능 여부
-    │
-    ├── Route 종류
-    │     ├── MaterialPageRoute  ← 플랫폼별 기본 전환
-    │     ├── PageRouteBuilder   ← 커스텀 전환 애니메이션
-    │     └── Named Route        ← 문자열 이름으로 이동
-    │
-    ├── 데이터 전달
-    │     ├── 생성자 인수         ← push 시 직접 전달
-    │     ├── arguments          ← Named Route 데이터 전달
-    │     └── pop 반환값          ← 이전 화면에 결과 전달
-    │
-    └── Hero 애니메이션
-            └── 공유 태그로 두 화면 간 위젯 전환 효과
-```
+![Navigation 시스템 hierarchy](/developer-open-book/diagrams/step11-navigation-system.svg)
 
 ---
 
@@ -106,24 +84,7 @@ Flutter Navigation 시스템
 
 Navigator는 Route를 **스택(Stack)** 자료구조로 관리한다.
 
-```
-초기 상태:       [HomeScreen]   ← 화면에 보임
-
-push(DetailScreen):
-  [HomeScreen, DetailScreen]    ← DetailScreen이 화면에 보임
-
-push(CheckoutScreen):
-  [HomeScreen, DetailScreen, CheckoutScreen]
-
-pop():
-  [HomeScreen, DetailScreen]    ← DetailScreen으로 복귀
-
-pushReplacement(LoginScreen):
-  [HomeScreen, LoginScreen]     ← DetailScreen이 사라지고 Login으로 교체
-
-pushAndRemoveUntil(HomeScreen, (route) => false):
-  [HomeScreen]                  ← 스택 전부 제거 후 Home만 남김
-```
+![push/pop/replace stack operations](/developer-open-book/diagrams/step11-stack-operations.svg)
 
 이 스택 구조 덕분에 Android의 뒤로가기 버튼, iOS의 스와이프 제스처가 자동으로 `pop()`을 호출하여 이전 화면으로 돌아간다.
 
@@ -299,16 +260,7 @@ transitionsBuilder: (context, animation, secondaryAnimation, child) {
 
 Hero 애니메이션은 **두 화면에 동일한 `tag`를 가진 `Hero` 위젯**을 배치하면, 화면 전환 시 해당 위젯이 출발 위치에서 도착 위치로 **자연스럽게 이동하는 공유 요소 전환 효과**다.
 
-```
-화면 A (목록)                화면 B (상세)
-┌──────────────────┐         ┌──────────────────┐
-│ [작은 상품 이미지] │ →push→  │                  │
-│  상품명           │         │  [큰 상품 이미지] │
-│  가격             │  Hero   │  상품명           │
-└──────────────────┘ 전환     │  상세 설명        │
-                              └──────────────────┘
-  이미지가 작은 크기에서 큰 크기로 자연스럽게 이동
-```
+![Hero animation 화면 A→B transition](/developer-open-book/diagrams/step11-hero-animation.svg)
 
 ```dart
 // 화면 A: 목록에서 Hero 적용

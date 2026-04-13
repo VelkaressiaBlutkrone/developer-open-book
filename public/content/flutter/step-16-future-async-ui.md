@@ -57,23 +57,7 @@
 
 ### 1.3 전체 개념 지도
 
-```
-Async UI
-    │
-    ├── FutureBuilder
-    │     ├── future: Future<T>
-    │     ├── builder: (context, AsyncSnapshot<T>) → Widget
-    │     └── AsyncSnapshot
-    │           ├── .connectionState (none·waiting·active·done)
-    │           ├── .hasData / .data
-    │           └── .hasError / .error
-    │
-    └── StreamBuilder
-          ├── stream: Stream<T>
-          ├── initialData: T?
-          └── builder: (context, AsyncSnapshot<T>) → Widget
-                └── 스트림 이벤트마다 builder 재호출
-```
+![Async UI hierarchy](/developer-open-book/diagrams/step16-async-ui.svg)
 
 ---
 
@@ -104,18 +88,7 @@ Async UI
 
 `FutureBuilder`는 내부적으로 `StatefulWidget`이다. Future의 상태 변화를 감지해 `setState()`를 호출하여 builder를 재실행한다.
 
-```
-FutureBuilder 내부 동작
-──────────────────────────────────────────────────────
-① widget이 mount될 때 Future 구독 시작
-       ↓
-② ConnectionState.waiting 상태로 첫 build
-       ↓
-③ Future 완료 시 → setState() 호출
-       ↓
-④ ConnectionState.done + data 또는 error 상태로 재build
-──────────────────────────────────────────────────────
-```
+![FutureBuilder 내부 동작 flow](/developer-open-book/diagrams/step16-futurebuilder-flow.svg)
 
 ```dart
 FutureBuilder<User>(

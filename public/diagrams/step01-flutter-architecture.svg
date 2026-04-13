@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="343" viewBox="10 -15 780 342.8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="10" y="-15" width="780" height="342.8" rx="12" fill="#141414"/>
+  <text x="220" y="36.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">Flutter 3-Layer 아키텍처</text>
+  <rect x="290" y="60" width="220" height="55" rx="8.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="400" y="92" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Flutter 아키텍처</text>
+  <path d="M310,115 L310,160" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M400,115 L400,160" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M490,115 L490,160" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <rect x="40" y="160" width="220" height="55" rx="8.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="150" y="181.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Framework Layer</text>
+  <text x="150" y="201.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">(Dart)</text>
+  <rect x="290" y="160" width="220" height="55" rx="8.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="400" y="181.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Engine Layer</text>
+  <text x="400" y="201.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">(C++)</text>
+  <rect x="540" y="160" width="220" height="55" rx="8.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="650" y="181.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Embedder Layer</text>
+  <text x="650" y="201.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">(Platform)</text>
+  <text x="50" y="236.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• Material / Cupertino</text>
+  <text x="50" y="254.89999999999998" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• Widgets</text>
+  <text x="50" y="273.09999999999997" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• Rendering</text>
+  <text x="50" y="291.29999999999995" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• Animation / Painting</text>
+  <text x="300" y="236.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• Skia / Impeller</text>
+  <text x="300" y="254.89999999999998" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• Dart Runtime</text>
+  <text x="300" y="273.09999999999997" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• Text Layout</text>
+  <text x="300" y="291.29999999999995" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• dart:ui API</text>
+  <text x="550" y="236.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• Android (Java/Kotlin)</text>
+  <text x="550" y="254.89999999999998" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• iOS (Obj-C/Swift)</text>
+  <text x="550" y="273.09999999999997" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• Web (JavaScript)</text>
+  <text x="550" y="291.29999999999995" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• Desktop (C++)</text>
+</svg>

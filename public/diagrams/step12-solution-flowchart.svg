@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="675" height="600" viewBox="150 -20 675 600">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="150" y="-20" width="675" height="600" rx="12" fill="#141414"/>
+  <text x="180" y="35.2" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="28" opacity="1">상태관리 솔루션 선택</text>
+  <polygon points="360,70 470,120 360,170 250,120" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="360" y="113.60000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">단일 위젯</text>
+  <text x="360" y="134.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">내부?</text>
+  <defs><marker id="arrow-a1-yes" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M470,120 L550,120" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-a1-yes)"/>
+  <text x="485" y="110.8" fill="#22c55e" font-family="Nunito, sans-serif" font-size="12" opacity="1">YES</text>
+  <rect x="560" y="95" width="160" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="640" y="124.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">setState()</text>
+  <defs><marker id="arrow-a1-no" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M360,170 L360,220" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-a1-no)"/>
+  <text x="370" y="190.8" fill="#ef4444" font-family="Nunito, sans-serif" font-size="12" opacity="1">NO</text>
+  <polygon points="360,220 470,270 360,320 250,270" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="360" y="263.59999999999997" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">여러 위젯</text>
+  <text x="360" y="284.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">공유?</text>
+  <defs><marker id="arrow-a2-yes" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M360,320 L360,360" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-a2-yes)"/>
+  <text x="370" y="335.8" fill="#22c55e" font-family="Nunito, sans-serif" font-size="12" opacity="1">YES</text>
+  <polygon points="360,360 470,410 360,460 250,410" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="360" y="403.59999999999997" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">앱 규모</text>
+  <text x="360" y="424.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">소~중?</text>
+  <defs><marker id="arrow-a3-yes" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M470,410 L550,410" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-a3-yes)"/>
+  <text x="485" y="400.8" fill="#22c55e" font-family="Nunito, sans-serif" font-size="12" opacity="1">YES</text>
+  <rect x="560" y="385" width="160" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="640" y="414.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Provider</text>
+  <defs><marker id="arrow-a3-no" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M360,460 L360,500" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-a3-no)"/>
+  <text x="370" y="475.8" fill="#ef4444" font-family="Nunito, sans-serif" font-size="12" opacity="1">NO</text>
+  <rect x="290" y="500" width="160" height="50" rx="7.5" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="370" y="529.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Riverpod</text>
+  <defs><marker id="arrow-a2-side" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/></marker></defs>
+  <path d="M470,270 L550,270" fill="none" stroke="#f59e0b" stroke-width="2" opacity="1" marker-end="url(#arrow-a2-side)"/>
+  <polygon points="675,220 795,270 675,320 555,270" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="675" y="263.59999999999997" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">이벤트 기반</text>
+  <text x="675" y="284.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">필요?</text>
+  <defs><marker id="arrow-a4-yes" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M675,320 L675,360" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-a4-yes)"/>
+  <text x="685" y="335.8" fill="#22c55e" font-family="Nunito, sans-serif" font-size="12" opacity="1">YES</text>
+  <rect x="595" y="360" width="160" height="50" rx="7.5" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="675" y="389.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Bloc / Cubit</text>
+</svg>

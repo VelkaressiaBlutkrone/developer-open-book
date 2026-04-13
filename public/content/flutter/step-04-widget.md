@@ -61,18 +61,7 @@ Three Trees를 이해하지 못하면 아래 상황에서 막히게 된다.
 
 ### 1.3 전체 개념 지도
 
-```
-Flutter UI 시스템
-    │
-    ├── Widget Tree       ← 개발자가 작성, 불변, 자주 재생성됨
-    │   (설계도)
-    │       ↕  Widget Tree 변경 시 비교(diffing)
-    ├── Element Tree      ← Flutter가 관리, 가변, 재사용됨
-    │   (연결자·생명주기)
-    │       ↕  필요 시에만 업데이트
-    └── RenderObject Tree ← 실제 그리기·레이아웃 담당, 비용이 큼
-        (실제 그리기)
-```
+![Widget/Element/RenderObject Three Trees](/developer-open-book/diagrams/step04-three-trees.svg)
 
 ---
 
@@ -177,22 +166,7 @@ Element의 핵심 책임
 
 **Element의 핵심 특성: 재사용된다**
 
-```
-setState() 호출 전:
-  Element [Column]
-    ├── Element [Text] → "count: 0"
-    └── Element [Button]
-
-setState() 호출 후 — Widget은 새로 생성되지만:
-  새 Widget [Column]  ← 새 객체
-    ├── 새 Widget [Text] "count: 1"  ← 새 객체
-    └── 새 Widget [Button]           ← 새 객체
-
-Flutter의 reconciliation:
-  Element [Column]       ← 그대로 재사용! (같은 타입·위치)
-    ├── Element [Text]   ← 재사용! Widget만 교체
-    └── Element [Button] ← 재사용!
-```
+![setState Element 재사용 흐름](/developer-open-book/diagrams/step04-element-reuse.svg)
 
 Widget은 새로 만들어졌지만, Element는 재사용되고 내부의 Widget 참조만 새것으로 교체된다. 이것이 Flutter가 매 프레임마다 Widget을 재생성해도 성능을 유지하는 핵심 비결이다.
 
@@ -225,31 +199,7 @@ Widget 종류에 따른 Element·RenderObject 보유 여부
 
 ### 3.3 Three Trees 협력 과정: Build → Layout → Paint
 
-```
-① 개발자가 build() 실행
-         ↓
-   Widget Tree 생성 (불변 설계도)
-
-② Flutter가 reconciliation 수행
-         ↓
-   기존 Element Tree와 새 Widget Tree 비교
-   - 같은 위치·타입: Element 재사용, Widget 참조 교체
-   - 타입 변경:      기존 Element 제거, 새 Element 생성
-   - 새 위젯 추가:   새 Element·RenderObject 생성
-
-③ Layout Phase
-         ↓
-   RenderObject Tree에서 Constraints 전파 (부모→자식)
-   각 RenderObject가 자신의 크기 계산 (자식→부모)
-
-④ Paint Phase
-         ↓
-   RenderObject가 Canvas에 그리기 명령 생성
-
-⑤ Composite → Rasterize
-         ↓
-   GPU가 픽셀로 변환 → 화면 출력
-```
+![Build→Layout→Paint→Composite→Rasterize 5단계](/developer-open-book/diagrams/step04-build-layout-paint.svg)
 
 ---
 

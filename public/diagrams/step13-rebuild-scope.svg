@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="810" height="515" viewBox="0 -20 810 514.6">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="0" y="-20" width="810" height="514.6" rx="12" fill="#141414"/>
+  <text x="180" y="35.2" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="28" opacity="1">setState() rebuild 범위</text>
+  <rect x="250" y="70" width="300" height="55" rx="8.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="400" y="102" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">ParentWidget (setState)</text>
+  <defs><marker id="arrow-a1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a0a0a0"/></marker></defs>
+  <path d="M340,125 L340,155" fill="none" stroke="#a0a0a0" stroke-width="2" opacity="1" marker-end="url(#arrow-a1)"/>
+  <defs><marker id="arrow-a2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a0a0a0"/></marker></defs>
+  <path d="M400,125 L500,180" fill="none" stroke="#a0a0a0" stroke-width="2" opacity="1" marker-end="url(#arrow-a2)"/>
+  <defs><marker id="arrow-a3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a0a0a0"/></marker></defs>
+  <path d="M460,125 L630,320" fill="none" stroke="#a0a0a0" stroke-width="2" opacity="1" marker-end="url(#arrow-a3)"/>
+  <rect x="60" y="155" width="280" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="200" y="184" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Column  ✅ rebuild</text>
+  <defs><marker id="arrow-a1a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a0a0a0"/></marker></defs>
+  <path d="M140,205 L140,230" fill="none" stroke="#a0a0a0" stroke-width="2" opacity="1" marker-end="url(#arrow-a1a)"/>
+  <defs><marker id="arrow-a1b" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#a0a0a0"/></marker></defs>
+  <path d="M260,205 L260,230" fill="none" stroke="#a0a0a0" stroke-width="2" opacity="1" marker-end="url(#arrow-a1b)"/>
+  <rect x="30" y="230" width="220" height="65" rx="9.75" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="140" y="257.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">Text('$_count')</text>
+  <text x="140" y="273.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">✅ rebuild + RenderObject 업데이트</text>
+  <rect x="260" y="230" width="220" height="65" rx="9.75" fill="#555555" stroke="#a0a0a0" stroke-width="2" opacity="1"/>
+  <text x="370" y="257.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">const Text(...)</text>
+  <text x="370" y="273.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">✅ identical → 건너뜀</text>
+  <rect x="420" y="155" width="260" height="50" rx="7.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="550" y="184" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">ChildWidget()  ✅ rebuild</text>
+  <rect x="500" y="320" width="280" height="50" rx="7.5" fill="#555555" stroke="#a0a0a0" stroke-width="2" opacity="1"/>
+  <text x="640" y="348.5" text-anchor="middle" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14">const StaticWidget  ⬜ 완전 건너뜀</text>
+  <text x="60" y="432.6" fill="#22c55e" font-family="Nunito, sans-serif" font-size="14" opacity="1">✅ = rebuild 대상</text>
+  <text x="60" y="457.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">⬜ = const → 건너뜀</text>
+</svg>

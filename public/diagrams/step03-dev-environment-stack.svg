@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="581" viewBox="150 -15 563.1 545">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="150" y="-15" width="563.1" height="545" rx="12" fill="#141414"/>
+  <text x="180" y="36.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">Flutter 개발 환경 구성 요소</text>
+  <rect x="200" y="65" width="220" height="55" rx="8.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="310" y="97" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Flutter SDK</text>
+  <text x="440" y="89.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">Framework + Dart SDK + flutter CLI</text>
+  <defs><marker id="arrow-a1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#e5e5e5"/></marker></defs>
+  <path d="M310,120 L310,160" fill="none" stroke="#e5e5e5" stroke-width="2" opacity="1" marker-end="url(#arrow-a1)"/>
+  <rect x="200" y="160" width="220" height="55" rx="8.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="310" y="192" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">FVM</text>
+  <text x="440" y="184.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">프로젝트별 SDK 버전 독립 관리</text>
+  <defs><marker id="arrow-a2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#e5e5e5"/></marker></defs>
+  <path d="M310,215 L310,255" fill="none" stroke="#e5e5e5" stroke-width="2" opacity="1" marker-end="url(#arrow-a2)"/>
+  <rect x="200" y="255" width="220" height="55" rx="8.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="310" y="287" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">IDE</text>
+  <text x="440" y="279.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">Android Studio 또는 VSCode</text>
+  <defs><marker id="arrow-a3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#e5e5e5"/></marker></defs>
+  <path d="M310,310 L310,350" fill="none" stroke="#e5e5e5" stroke-width="2" opacity="1" marker-end="url(#arrow-a3)"/>
+  <rect x="200" y="350" width="220" height="55" rx="8.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="310" y="382" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Platform SDK</text>
+  <text x="440" y="374.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">Android SDK / Xcode</text>
+  <defs><marker id="arrow-a4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#e5e5e5"/></marker></defs>
+  <path d="M310,405 L310,445" fill="none" stroke="#e5e5e5" stroke-width="2" opacity="1" marker-end="url(#arrow-a4)"/>
+  <rect x="200" y="445" width="220" height="55" rx="8.25" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="310" y="477" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Emulator / Device</text>
+  <text x="440" y="469.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">AVD / iOS Simulator / 실기기</text>
+</svg>

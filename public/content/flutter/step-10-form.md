@@ -44,22 +44,7 @@ Flutter Form 시스템은 이 모든 것을 체계적으로 처리한다
 
 ### 1.2 전체 개념 지도
 
-```
-Flutter Form 시스템
-    │
-    ├── TextField          ← 단독 사용, 유연하지만 폼 연동 없음
-    │     ├── TextEditingController  ← 값 읽기·쓰기·리스닝
-    │     └── InputDecoration       ← 라벨·힌트·아이콘·에러 스타일
-    │
-    ├── TextFormField      ← Form과 연동, validator 내장
-    │
-    └── Form               ← 폼 컨테이너
-          ├── GlobalKey<FormState>  ← 폼 상태에 외부에서 접근
-          └── FormState 메서드
-                ├── validate()  → 모든 validator 실행
-                ├── save()      → 모든 onSaved 실행
-                └── reset()     → 모든 필드 초기화
-```
+![Form 시스템 hierarchy tree](/developer-open-book/diagrams/step10-form-system.svg)
 
 ---
 

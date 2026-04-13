@@ -62,28 +62,7 @@
 
 ### 1.3 전체 개념 지도
 
-```
-로컬 데이터 저장
-    │
-    ├── SharedPreferences
-    │     ├── 단순 Key-Value (String·int·bool·double·List<String>)
-    │     └── 비동기 API (async/await)
-    │
-    ├── Hive
-    │     ├── Box (파일 기반 NoSQL)
-    │     ├── 기본 타입 (String·int·bool·List·Map)
-    │     └── TypeAdapter (커스텀 객체 저장)
-    │
-    ├── SQLite (sqflite)
-    │     ├── 관계형 데이터베이스
-    │     ├── SQL 쿼리 (SELECT·INSERT·UPDATE·DELETE)
-    │     └── 복잡한 쿼리·JOIN 가능
-    │
-    └── Firebase Firestore
-          ├── 클라우드 NoSQL (실시간 동기화)
-          ├── Offline 캐싱 (enablePersistence)
-          └── 오프라인 → 온라인 자동 동기화
-```
+![로컬 저장소 hierarchy](/developer-open-book/diagrams/step18-local-storage.svg)
 
 ---
 
@@ -676,23 +655,7 @@ class SecureStorageService {
 
 네트워크가 불안정한 환경에서도 앱이 잘 동작하도록 하는 전략이다.
 
-```
-오프라인 우선 데이터 흐름
-──────────────────────────────────────────────────────
-  앱 시작
-    ↓
-  Hive 캐시에서 데이터 즉시 표시 (빠른 로딩)
-    ↓ 백그라운드에서 API 호출
-  서버 응답 수신
-    ↓
-  Hive 캐시 업데이트
-    ↓
-  UI 갱신 (최신 데이터로)
-
-  → 사용자는 항상 무언가를 볼 수 있음 (빈 화면 없음)
-  → 네트워크 없어도 캐시 데이터로 기능
-──────────────────────────────────────────────────────
-```
+![오프라인 우선 데이터 흐름](/developer-open-book/diagrams/step18-offline-first.svg)
 
 ```dart
 class ProductRepository {

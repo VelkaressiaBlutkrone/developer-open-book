@@ -37,21 +37,7 @@ Material Design 버전 역사
 
 ### 1.2 왜 Material 시스템을 배워야 하는가
 
-```
-Material 시스템 없이 만든다면
-──────────────────────────────────────────────────
-  버튼 색상 → 각 위젯마다 수동 지정
-  다크모드 → 모든 색상을 조건문으로 분기
-  타이포그래피 → fontSize를 모든 Text마다 하드코딩
-  내비게이션 → 직접 Stack·Positioned로 구현
-
-Material 시스템을 활용하면
-──────────────────────────────────────────────────
-  ThemeData 한 곳에서 전체 색상·타입 정의
-  → 모든 위젯에 자동 적용
-  → 다크모드도 ThemeData 두 벌로 해결
-  → 코드 중복 최소화, 일관성 보장
-```
+![Material 없이 vs 활용 comparison](/developer-open-book/diagrams/step08-material-system.svg)
 
 ### 1.3 전체 개념 지도
 
@@ -107,23 +93,7 @@ Material Design 시스템
 
 Scaffold는 Material Design 앱의 화면 **뼈대(skeleton)**다. 각 슬롯에 위젯을 끼우는 방식으로 앱의 기본 구조를 완성한다.
 
-```
-Scaffold 슬롯 구조
-──────────────────────────────────────────────────────
-  ┌──────────────────────────────────────┐
-  │            AppBar                    │ ← appBar:
-  ├──────────────────────────────────────┤
-  │                                      │
-  │             body                     │ ← body:
-  │                                      │
-  ├──────────────────────────────────────┤
-  │       BottomNavigationBar            │ ← bottomNavigationBar:
-  └──────────────────────────────────────┘
-       ↑                    ↑
-    Drawer              FloatingActionButton
-  (drawer:)            (floatingActionButton:)
-──────────────────────────────────────────────────────
-```
+![Scaffold 슬롯 구조](/developer-open-book/diagrams/step08-scaffold-layout.svg)
 
 ```dart
 Scaffold(

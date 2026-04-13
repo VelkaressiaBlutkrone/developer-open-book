@@ -45,46 +45,11 @@
 
 ### 1.2 테스트 피라미드
 
-```
-테스트 피라미드
-──────────────────────────────────────────────────────
-             /───────────────────\
-            /  Integration Test   \   ← 소수, 느림, 비용 큼
-           /─────────────────────── \
-          /      Widget Test         \  ← 중간, 중간 속도
-         /─────────────────────────────\
-        /          Unit Test            \ ← 다수, 빠름, 비용 적음
-       /─────────────────────────────────\
-
-  권장 비율: Unit 70% : Widget 20% : Integration 10%
-──────────────────────────────────────────────────────
-```
+![테스트 피라미드](/developer-open-book/diagrams/step23-test-pyramid.svg)
 
 ### 1.3 전체 개념 지도
 
-```
-Flutter 테스팅
-    │
-    ├── Unit Test           ← 비즈니스 로직 단위 검증
-    │     ├── 대상: UseCase, Repository, Notifier, Entity
-    │     ├── 도구: test, mockito, mocktail
-    │     └── 특징: 빠름, 의존성 격리 (Mock)
-    │
-    ├── Widget Test         ← UI 컴포넌트 단위 검증
-    │     ├── 대상: Widget, Screen
-    │     ├── 도구: flutter_test (WidgetTester)
-    │     └── 특징: 실제 위젯 렌더링, 상호작용 시뮬레이션
-    │
-    ├── Integration Test    ← 전체 시나리오 검증
-    │     ├── 대상: 앱 전체 흐름
-    │     ├── 도구: integration_test
-    │     └── 특징: 실제 기기/에뮬레이터에서 실행
-    │
-    └── Golden Test         ← UI 스냅샷 비교
-          ├── 대상: 위젯 픽셀 단위 렌더링
-          ├── 도구: flutter_test (matchesGoldenFile)
-          └── 특징: 시각적 회귀 방지
-```
+![Flutter 테스팅 hierarchy](/developer-open-book/diagrams/step23-testing-tree.svg)
 
 ---
 

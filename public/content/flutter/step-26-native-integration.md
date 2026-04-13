@@ -63,18 +63,7 @@ Flutter만으로 불가능한 것들 → Native 연동 필요
 
 ### 1.3 전체 개념 지도
 
-```
-Platform Channel 아키텍처
-    │
-    ├── MethodChannel      ← 단방향 요청-응답 (Dart → Native → 결과 반환)
-    │     사용: 배터리 레벨, 파일 열기, 생체인증 등 일회성 호출
-    │
-    ├── EventChannel       ← 지속 스트림 (Native → Dart, 연속 데이터)
-    │     사용: 센서 데이터, 위치 업데이트, 가속도계
-    │
-    └── BasicMessageChannel ← 양방향 메시지 (Dart ↔ Native)
-          사용: 커스텀 코덱, 단순 문자열 교환
-```
+![Platform Channel 선택 flowchart](/developer-open-book/diagrams/step26-platform-channel.svg)
 
 ---
 

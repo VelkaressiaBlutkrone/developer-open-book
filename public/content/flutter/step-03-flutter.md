@@ -26,21 +26,7 @@
 
 Flutter 개발 환경은 처음 세팅할 때 가장 많은 오류를 만나는 구간이다. Android SDK 경로 문제, Java 버전 충돌, Xcode 라이선스 미동의 등 수십 가지 변수가 얽혀 있다. 환경 설정의 **원리를 이해하고** 세팅하면 오류가 발생해도 스스로 진단하고 해결할 수 있다.
 
-```
-Flutter 개발 환경 구성 요소
-─────────────────────────────────────────────────────────
-  Flutter SDK       ← Flutter Framework + Dart SDK 포함
-       ↓
-  FVM               ← 프로젝트별 SDK 버전 독립 관리 (선택적)
-       ↓
-  IDE               ← Android Studio 또는 VSCode
-  (Flutter 플러그인)
-       ↓
-  Platform SDK      ← Android SDK (Android) / Xcode (iOS·macOS)
-       ↓
-  Emulator/Device   ← Android Emulator / iOS Simulator / 실기기
-─────────────────────────────────────────────────────────
-```
+![Flutter 개발 환경 구성 요소 스택](/developer-open-book/diagrams/step03-dev-environment-stack.svg)
 
 ### 1.2 플랫폼별 필요 도구 요약
 
@@ -57,31 +43,7 @@ Flutter 개발 환경 구성 요소
 
 ### 1.3 전체 개념 지도
 
-```
-Flutter 개발 환경
-    │
-    ├── Flutter SDK
-    │       ├── flutter (CLI 진입점)
-    │       ├── Dart SDK (내장)
-    │       └── Framework 소스
-    │
-    ├── FVM (버전 관리)
-    │       ├── 전역 버전 설정
-    │       └── 프로젝트별 버전 고정 (.fvm/fvm_config.json)
-    │
-    ├── IDE
-    │       ├── Android Studio (IntelliJ 기반, 공식 권장)
-    │       └── VSCode (경량, 확장성 우수)
-    │
-    ├── Platform SDK
-    │       ├── Android Studio → Android SDK 자동 포함
-    │       └── Xcode (macOS) → iOS·macOS 빌드
-    │
-    └── 실행 환경
-            ├── Android Virtual Device (AVD)
-            ├── iOS Simulator (macOS 전용)
-            └── 실기기 (USB / 무선 디버깅)
-```
+![Flutter 개발 환경 개념 트리](/developer-open-book/diagrams/step03-dev-environment-tree.svg)
 
 ---
 
@@ -125,15 +87,7 @@ flutter/
 
 **flutter CLI가 하는 일:**
 
-```
-flutter run
-  ↓
-① pubspec.yaml 의존성 확인 및 다운로드
-② Dart AOT/JIT 컴파일
-③ 플랫폼 빌드 도구 호출 (Gradle / Xcode / Web 빌드)
-④ 연결된 기기에 앱 설치 및 실행
-⑤ 디버그 연결 (Hot Reload 대기)
-```
+![flutter run 실행 파이프라인](/developer-open-book/diagrams/step03-flutter-run-pipeline.svg)
 
 ---
 

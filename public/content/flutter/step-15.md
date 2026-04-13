@@ -62,28 +62,7 @@ Riverpod과 Bloc은 각각 방대한 문서를 가진 독립적인 생태계다.
 
 ### 1.3 전체 개념 지도
 
-```
-고급 상태관리
-    │
-    ├── Riverpod
-    │     ├── Provider 종류
-    │     │     ├── Provider          ← 읽기 전용 값
-    │     │     ├── StateProvider      ← 단순 상태
-    │     │     ├── StateNotifierProvider ← 복잡한 상태 (구 방식)
-    │     │     ├── NotifierProvider   ← 복잡한 상태 (권장 방식)
-    │     │     └── AsyncNotifierProvider ← 비동기 상태
-    │     │
-    │     └── ref
-    │           ├── ref.watch()  ← 구독 + rebuild
-    │           ├── ref.read()   ← 단순 읽기
-    │           └── ref.listen() ← 사이드 이펙트
-    │
-    └── Bloc / Cubit
-          ├── Cubit
-          │     메서드 호출 → emit(새 상태)
-          └── Bloc
-                Event → Bloc → emit(새 상태)
-```
+![Riverpod/Bloc hierarchy](/developer-open-book/diagrams/step15-advanced-state.svg)
 
 ---
 
@@ -118,16 +97,7 @@ Riverpod과 Bloc은 각각 방대한 문서를 가진 독립적인 생태계다.
 
 #### Riverpod이 Provider와 다른 핵심 차이
 
-```
-Provider                          Riverpod
-──────────────────────────────    ──────────────────────────────
-BuildContext 의존                  context 불필요
-위젯 트리에 종속                   위젯 트리 독립적
-같은 타입 중복 어려움               같은 타입 여러 개 가능
-런타임 타입 오류 가능               컴파일 타임 안전성
-ChangeNotifier 필수                다양한 Provider 타입
-자동 dispose 제한                  자동 dispose 내장
-```
+![Provider vs Riverpod comparison](/developer-open-book/diagrams/step15-provider-vs-riverpod.svg)
 
 #### 설치 및 기본 설정
 
@@ -470,19 +440,7 @@ class CounterScreen extends StatelessWidget {
 
 #### Bloc: 이벤트 기반 상태 변환 (정석 버전)
 
-```
-Bloc 구조 (Cubit보다 엄격한 단방향 데이터 흐름)
-──────────────────────────────────────────────────────
-  UI
-  ↓ add(Event)
-  Bloc
-    on<IncrementEvent>() → emit(state + 1)
-    on<DecrementEvent>() → emit(state - 1)
-    on<ResetEvent>()     → emit(0)
-  ↓ Stream<State>
-  BlocBuilder → UI 재구성
-──────────────────────────────────────────────────────
-```
+![Bloc 단방향 데이터 흐름](/developer-open-book/diagrams/step15-bloc-architecture.svg)
 
 ```dart
 // 이벤트 정의 (sealed class로 타입 안전하게)

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="790" height="450" viewBox="20 -10 790 450">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-10" width="790" height="450" rx="12" fill="#141414"/>
+  <text x="100" y="45.2" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="28" opacity="1">Material Design 시스템 효과</text>
+  <rect x="50" y="80" width="350" height="50" rx="7.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="225" y="110" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20">Material 없이</text>
+  <rect x="430" y="80" width="350" height="50" rx="7.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="605" y="110" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20">Material 활용</text>
+  <rect x="50" y="150" width="350" height="50" rx="7.5" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="225" y="179.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">버튼 색상 수동 지정</text>
+  <rect x="430" y="150" width="350" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="605" y="179.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">ThemeData 한 곳 정의</text>
+  <rect x="50" y="220" width="350" height="50" rx="7.5" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="225" y="249.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">다크모드 조건문 분기</text>
+  <rect x="430" y="220" width="350" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="605" y="249.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">다크모드 ThemeData 두 벌</text>
+  <rect x="50" y="290" width="350" height="50" rx="7.5" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="225" y="319.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">fontSize 하드코딩</text>
+  <rect x="430" y="290" width="350" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="605" y="319.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">모든 위젯 자동 적용</text>
+  <rect x="50" y="360" width="350" height="50" rx="7.5" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="225" y="389.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">내비게이션 직접 구현</text>
+  <rect x="430" y="360" width="350" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="605" y="389.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">일관성 보장</text>
+</svg>

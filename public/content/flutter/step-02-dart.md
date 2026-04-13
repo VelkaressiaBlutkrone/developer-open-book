@@ -49,31 +49,7 @@ Flutter 코드 한 줄의 배경
 
 ### 1.3 전체 개념 지도
 
-```
-Dart 핵심 개념
-    │
-    ├── 타입 시스템
-    │       ├── Null Safety (?  !  ??  ?.  ??=)
-    │       └── 타입 추론 (var / final / const)
-    │
-    ├── 객체지향
-    │       ├── Class (생성자, Named Constructor, Factory)
-    │       └── Mixin (다중 기능 합성)
-    │
-    ├── 비동기
-    │       ├── Future (단일 결과, 단일 스레드 내)
-    │       ├── Stream (연속 결과, 단일 스레드 내)
-    │       └── Isolate (진정한 병렬, 별도 스레드)
-    │
-    ├── 컬렉션
-    │       └── List / Map / Set + Spread / Collection-if / Collection-for
-    │
-    ├── Records & Patterns (Dart 3.0+)
-    │       ├── Record 타입 (다중 반환값)
-    │       └── Pattern Matching (switch 강화)
-    │
-    └── Extension (기존 클래스에 메서드 추가)
-```
+![Dart 핵심 개념 계층 구조](/developer-open-book/diagrams/step02-dart-core-concepts.svg)
 
 ---
 
@@ -358,23 +334,7 @@ Future<void> printCountDown() async {
 
 async/await는 단일 스레드 내에서 **논블로킹 처리**를 가능하게 한다. 그러나 JSON 파싱, 이미지 처리 같은 **CPU 집약적 작업**은 메인 스레드를 직접 점유하여 UI를 멈추게 한다. 이때 **Isolate**를 사용한다.
 
-```
-async/await:
-  메인 Isolate (UI 스레드)
-  ─────────────────────────────────────────
-  [UI 렌더링] → [await I/O 대기] → [다시 UI 렌더링]
-                    ↕ I/O 완료 이벤트만 기다림
-                    (CPU는 사용하지 않음 → UI 정상)
-
-Isolate:
-  메인 Isolate (UI 스레드)
-  ─────────────────────────────────────────
-  [UI 렌더링] → [메시지 전송] → [결과 수신] → [UI 업데이트]
-                     ↕ 메시지 전달 (포트 기반)
-  백그라운드 Isolate (별도 스레드)
-  ─────────────────────────────────────────
-  [무거운 CPU 연산 처리] → [결과 반환]
-```
+![async/await vs Isolate 비교](/developer-open-book/diagrams/step02-isolate-async.svg)
 
 ```dart
 // compute(): Isolate를 간편하게 사용하는 Flutter 래퍼
