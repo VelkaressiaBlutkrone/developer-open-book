@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="670" height="350" viewBox="20 -20 670 350">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="670" height="350" rx="12" fill="#141414"/>
+  <text x="80" y="28" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="20" opacity="1">클래스 (설계도)</text>
+  <text x="450" y="28" fill="#22c55e" font-family="Nunito, sans-serif" font-size="20" opacity="1">인스턴스 (실제 객체)</text>
+  <rect x="50" y="50" width="260" height="200" rx="30" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="100" y="74.4" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16" opacity="1">class BankAccount</text>
+  <text x="70" y="107.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">─────────────</text>
+  <text x="70" y="127.19999999999999" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  잔액: int</text>
+  <text x="70" y="146.79999999999998" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  소유자: String</text>
+  <text x="70" y="187.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">─────────────</text>
+  <text x="70" y="207.2" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  입금()</text>
+  <text x="70" y="226.79999999999998" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  출금()</text>
+  <rect x="420" y="50" width="240" height="70" rx="10.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="540" y="79.39999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">account1</text>
+  <text x="540" y="97.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">잔액=50만, 홍길동</text>
+  <rect x="420" y="140" width="240" height="70" rx="10.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="540" y="169.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">account2</text>
+  <text x="540" y="187.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">잔액=120만, 김철수</text>
+  <rect x="420" y="230" width="240" height="70" rx="10.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="540" y="259.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">account3</text>
+  <text x="540" y="277.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">잔액=0, 이영희</text>
+  <defs><marker id="arrow-a1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/></marker></defs>
+  <path d="M310,100 L420,85" fill="none" stroke="#f59e0b" stroke-width="2" opacity="1" marker-end="url(#arrow-a1)"/>
+  <defs><marker id="arrow-a2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/></marker></defs>
+  <path d="M310,150 L420,175" fill="none" stroke="#f59e0b" stroke-width="2" opacity="1" marker-end="url(#arrow-a2)"/>
+  <defs><marker id="arrow-a3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/></marker></defs>
+  <path d="M310,200 L420,265" fill="none" stroke="#f59e0b" stroke-width="2" opacity="1" marker-end="url(#arrow-a3)"/>
+</svg>

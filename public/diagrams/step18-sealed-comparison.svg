@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="395" viewBox="20 -20 740 395">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="740" height="395" rx="12" fill="#141414"/>
+  <text x="100" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Sealed Class vs Abstract Class vs Enum</text>
+  <rect x="50" y="60" width="680" height="40" rx="0" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="60" y="81.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">특성</text>
+  <text x="200" y="81.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">sealed class</text>
+  <text x="370" y="81.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">abstract class</text>
+  <text x="560" y="81.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">enum</text>
+  <rect x="50" y="100" width="680" height="35" fill="#1e3a5f" opacity="0.6"/>
+  <text x="60" y="118.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">직접 인스턴스</text>
+  <text x="200" y="118.7" fill="#ef4444" font-family="Nunito, sans-serif" font-size="13" opacity="1">X</text>
+  <text x="370" y="118.7" fill="#ef4444" font-family="Nunito, sans-serif" font-size="13" opacity="1">X</text>
+  <text x="560" y="118.7" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">O (값 자체)</text>
+  <rect x="50" y="135" width="680" height="35" fill="transparent" opacity="1"/>
+  <text x="60" y="153.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">하위 타입 제한</text>
+  <text x="200" y="153.7" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">O (같은 파일)</text>
+  <text x="370" y="153.7" fill="#ef4444" font-family="Nunito, sans-serif" font-size="13" opacity="1">X (어디서든)</text>
+  <text x="560" y="153.7" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">O (선언 시)</text>
+  <rect x="50" y="170" width="680" height="35" fill="#1e3a5f" opacity="0.6"/>
+  <text x="60" y="188.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">Exhaustiveness</text>
+  <text x="200" y="188.7" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">O</text>
+  <text x="370" y="188.7" fill="#ef4444" font-family="Nunito, sans-serif" font-size="13" opacity="1">X (default 필요)</text>
+  <text x="560" y="188.7" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">O</text>
+  <rect x="50" y="205" width="680" height="35" fill="transparent" opacity="1"/>
+  <text x="60" y="223.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">상태 다양성</text>
+  <text x="200" y="223.7" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">O (각각 다른)</text>
+  <text x="370" y="223.7" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">O</text>
+  <text x="560" y="223.7" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="13" opacity="1">제한적</text>
+  <rect x="50" y="240" width="680" height="35" fill="#1e3a5f" opacity="0.6"/>
+  <text x="60" y="258.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">상속 계층</text>
+  <text x="200" y="258.7" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">O</text>
+  <text x="370" y="258.7" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">O</text>
+  <text x="560" y="258.7" fill="#ef4444" font-family="Nunito, sans-serif" font-size="13" opacity="1">X</text>
+  <rect x="50" y="275" width="680" height="35" fill="transparent" opacity="1"/>
+  <text x="60" y="293.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">값 순회</text>
+  <text x="200" y="293.7" fill="#ef4444" font-family="Nunito, sans-serif" font-size="13" opacity="1">X</text>
+  <text x="370" y="293.7" fill="#ef4444" font-family="Nunito, sans-serif" font-size="13" opacity="1">X</text>
+  <text x="560" y="293.7" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">O (.values)</text>
+  <rect x="50" y="310" width="680" height="35" fill="#1e3a5f" opacity="0.6"/>
+  <text x="60" y="328.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">주요 용도</text>
+  <text x="200" y="328.7" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="13" opacity="1">ADT, 상태</text>
+  <text x="370" y="328.7" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="13" opacity="1">공통 계약</text>
+  <text x="560" y="328.7" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="13" opacity="1">유한 상수</text>
+</svg>

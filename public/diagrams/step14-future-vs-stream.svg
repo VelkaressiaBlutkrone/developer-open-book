@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="670" height="262" viewBox="10 -20 670 262">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="10" y="-20" width="670" height="262" rx="12" fill="#141414"/>
+  <text x="250" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">Future vs Stream</text>
+  <rect x="50" y="80" width="240" height="70" rx="10.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="170" y="120.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22">Future</text>
+  <text x="40" y="183.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">미래 한 번 완료될 값</text>
+  <text x="40" y="204.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">(HTTP 응답, 파일 읽기)</text>
+  <text x="325" y="119.8" fill="#555555" font-family="Nunito, sans-serif" font-size="22" opacity="1">vs</text>
+  <rect x="410" y="80" width="240" height="70" rx="10.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="530" y="120.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22">Stream</text>
+  <text x="400" y="183.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">미래에 여러 번 전달되는 값들</text>
+  <text x="400" y="204.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">(WebSocket, 센서 데이터)</text>
+</svg>

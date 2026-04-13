@@ -197,19 +197,7 @@ class ErrorEvent        extends NetworkEvent { final String msg; ErrorEvent(this
 
 ### 3.3 Sealed Class vs abstract class vs Enum
 
-```
-┌─────────────────┬──────────────┬───────────────┬──────────────┐
-│ 특성            │ sealed class │ abstract class│ enum         │
-├─────────────────┼──────────────┼───────────────┼──────────────┤
-│ 직접 인스턴스   │ ❌           │ ❌            │ ✅ (값 자체) │
-│ 하위 타입 제한  │ ✅ 같은 파일 │ ❌ 어디서든   │ ✅ 선언 시   │
-│ Exhaustiveness  │ ✅           │ ❌ (default ↑)│ ✅           │
-│ 상태 다양성     │ ✅ 각각 다른 │ ✅ 각각 다른  │ 제한적       │
-│ 상속 계층       │ ✅           │ ✅            │ ❌           │
-│ 값 순회         │ ❌           │ ❌            │ ✅ .values   │
-│ 주요 용도       │ ADT, 상태    │ 공통 계약     │ 유한 상수    │
-└─────────────────┴──────────────┴───────────────┴──────────────┘
-```
+![diagram](/developer-open-book/diagrams/step18-sealed-comparison.svg)
 
 **선택 기준**
 

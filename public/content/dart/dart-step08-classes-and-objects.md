@@ -66,19 +66,7 @@
 
 객체지향 프로그래밍(OOP)은 이 직관을 코드로 옮깁니다. **클래스(Class)** 는 사물의 설계도이고, **인스턴스(Instance)** 는 그 설계도로 만들어진 실제 객체입니다.
 
-```
-[클래스와 인스턴스 관계]
-
-클래스 (설계도)           인스턴스 (실제 객체)
-──────────────────        ──────────────────────────────
-class BankAccount {  →    account1: 잔액=50만, 소유자=홍길동
-  잔액                →    account2: 잔액=120만, 소유자=김철수
-  소유자              →    account3: 잔액=0, 소유자=이영희
-  입금()
-  출금()
-  잔액조회()
-}
-```
+![diagram](/developer-open-book/diagrams/step08-class-instance.svg)
 
 OOP의 네 가지 핵심 원칙 중 이번 Step에서는 가장 기초인 **캡슐화(Encapsulation)** 를 집중적으로 다룹니다.
 
@@ -167,12 +155,7 @@ void main() {
 
 **인스턴스는 힙(Heap) 메모리에 저장됩니다.**
 
-```
-스택 메모리             힙 메모리
-──────────────         ──────────────────────────────
-account1 ──────────►  BankAccount { owner:'홍길동', balance:400000 }
-account2 ──────────►  BankAccount { owner:'김철수', balance:1200000 }
-```
+![diagram](/developer-open-book/diagrams/step08-memory-stack-heap.svg)
 
 ---
 

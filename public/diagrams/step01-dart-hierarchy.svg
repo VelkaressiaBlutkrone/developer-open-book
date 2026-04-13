@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="342" viewBox="-10 -20 780 341.6">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="780" height="341.6" rx="12" fill="#141414"/>
+  <text x="200" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">Dart 생태계 계층도</text>
+  <rect x="260" y="70" width="220" height="60" rx="9" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="370" y="105" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20">Dart 언어</text>
+  <path d="M370,130 L370,170" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M100,170 L640,170" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M100,170 L100,210" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <rect x="20" y="210" width="180" height="55" rx="8.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="110" y="242" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Flutter</text>
+  <text x="35" y="284.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">모바일 / 웹 / 데스크톱 UI</text>
+  <path d="M280,170 L280,210" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <rect x="200" y="210" width="180" height="55" rx="8.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="290" y="242" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">dart2js</text>
+  <text x="210" y="284.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">브라우저용 JS 변환</text>
+  <path d="M460,170 L460,210" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <rect x="380" y="210" width="180" height="55" rx="8.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="470" y="242" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Dart Native</text>
+  <text x="393" y="284.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">서버 / CLI 네이티브 실행</text>
+  <path d="M640,170 L640,210" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <rect x="560" y="210" width="180" height="55" rx="8.25" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="650" y="242" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">DartPad</text>
+  <text x="575" y="284.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">온라인 학습 환경</text>
+</svg>

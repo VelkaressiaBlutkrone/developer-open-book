@@ -506,20 +506,7 @@ void main() {
 
 **선형화 체인 시각화**
 
-```
-class MyClass with A, B, C
-
-→ 내부적으로 다음 계층 구조로 변환:
-
-Object
-  └── A
-       └── B
-            └── C
-                 └── MyClass  ← 최종 클래스
-
-메서드 검색 순서: MyClass → C → B → A → Object
-(왼쪽부터 검색, 먼저 발견된 것 사용)
-```
+![diagram](/developer-open-book/diagrams/step11-mixin-linearization.svg)
 
 **`super`로 체인 따라 호출**
 
@@ -631,43 +618,11 @@ void main() {
 
 세 메커니즘의 전체 비교를 정리합니다.
 
-```
-┌─────────────────┬──────────┬────────────┬────────────────┐
-│ 특성            │ extends  │ implements │ with (mixin)   │
-├─────────────────┼──────────┼────────────┼────────────────┤
-│ 구현 상속       │ ✅ 전체  │ ❌         │ ✅ 선택적      │
-│ 다중 사용       │ ❌ 단일  │ ✅ 여러 개 │ ✅ 여러 개     │
-│ 계약 강제       │ 선택적   │ ✅ 전체    │ 추상 멤버로    │
-│ 단독 인스턴스   │ ✅       │ ✅         │ ❌ (mixin class는 ✅) │
-│ 적용 대상 제한  │ —        │ —          │ on 키워드      │
-│ IS-A 관계       │ ✅ 강함  │ 약함       │ ❌             │
-│ 코드 주입       │ 수직     │ ❌         │ ✅ 수평        │
-│ 주요 목적       │ 계층 구조│ 계약 정의  │ 기능 조각 주입 │
-└─────────────────┴──────────┴────────────┴────────────────┘
-```
+![diagram](/developer-open-book/diagrams/step11-full-comparison.svg)
 
 **선택 흐름도**
 
-```
-코드를 재사용하고 싶다
-          │
-          ▼
-    IS-A 관계이며
-    계층 구조가 명확한가?
-     ├─ YES ──► extends (또는 abstract class)
-     └─ NO
-           │
-           ▼
-    여러 클래스에 공통 기능을
-    수평으로 주입하고 싶은가?
-     ├─ YES ──► mixin (with)
-     └─ NO
-           │
-           ▼
-    공통 구현 없이 API 계약만
-    강제하고 싶은가?
-     └─ YES ──► implements (또는 abstract class)
-```
+![diagram](/developer-open-book/diagrams/step11-reuse-decision-flow.svg)
 
 ---
 

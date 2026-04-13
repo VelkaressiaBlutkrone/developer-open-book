@@ -241,13 +241,7 @@ void main() {
 
 **`??`의 동작 원리**
 
-```
-expr1 ?? expr2
-
-  expr1이 null?
-   ├─ YES ──► expr2 반환
-   └─ NO  ──► expr1 반환
-```
+![diagram](/developer-open-book/diagrams/step03-null-coalescing.svg)
 
 ---
 
