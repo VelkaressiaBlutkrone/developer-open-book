@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
+import rehypeSlug from 'rehype-slug'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import type { Components } from 'react-markdown'
@@ -88,6 +89,25 @@ const components: Components = {
       </div>
     )
   },
+  a({ href, children, ...props }) {
+    if (href?.startsWith('#')) {
+      const handleClick = (e: React.MouseEvent) => {
+        e.preventDefault()
+        const id = decodeURIComponent(href.slice(1))
+        const target = document.getElementById(id)
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      }
+      return <a href={href} onClick={handleClick} {...props}>{children}</a>
+    }
+    const isExternal = href?.startsWith('http')
+    return (
+      <a href={href} {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})} {...props}>
+        {children}
+      </a>
+    )
+  },
   table({ children }) {
     return (
       <div className="table-wrapper">
@@ -128,7 +148,7 @@ function extractText(children: React.ReactNode): string {
 export default function MarkdownRenderer({ content }: { content: string }) {
   return (
     <div className="markdown-body">
-      <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} components={components}>
+      <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, rehypeSlug]} components={components}>
         {content}
       </ReactMarkdown>
     </div>

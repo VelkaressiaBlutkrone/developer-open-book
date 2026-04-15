@@ -55,6 +55,7 @@
   background: var(--paper);
   padding: 48px 56px 32px;
   overflow-y: auto;
+  scroll-behavior: smooth;
   position: relative;
   color: var(--ink);
   line-height: 1.85;
