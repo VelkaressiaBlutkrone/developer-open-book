@@ -1158,8 +1158,4 @@ Step 12에서는 Dart 2.17+의 강화된 Enum을 학습합니다. 단순 상수 
 
 ---
 
-> ⬅️ [Step 10 — OOP 확장](#) | ➡️ [Step 12 — 열거형(Enum) →](#)
-
----
-
 _참고: 이 문서는 dart.dev 공식 문서(Mixins, Class Modifiers) 및 Revised Bloom's Taxonomy(2001)를 기반으로 작성되었습니다._

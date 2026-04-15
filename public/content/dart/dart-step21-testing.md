@@ -1675,8 +1675,4 @@ Step 22에서는 Dart 패키지 시스템(pub.dev), `pubspec.yaml` 의존성 관
 
 ---
 
-> ⬅️ [Step 20 — Callable, Typedef, 함수형 심화](#) | ➡️ [Step 22 — 패키지와 pub.dev 생태계 →](#)
-
----
-
 _참고: 이 문서는 dart.dev 공식 문서(Testing), pub.dev(test, mockito 패키지) 및 Revised Bloom's Taxonomy(2001)를 기반으로 작성되었습니다._

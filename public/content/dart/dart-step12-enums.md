@@ -982,8 +982,4 @@ Step 13에서는 Dart의 예외 처리 메커니즘(`try`/`catch`/`on`/`finally`
 
 ---
 
-> ⬅️ [Step 11 — Mixins](#) | ➡️ [Step 13 — 예외 처리 →](#)
-
----
-
 _참고: 이 문서는 dart.dev 공식 문서(Enums, Patterns) 및 Revised Bloom's Taxonomy(2001)를 기반으로 작성되었습니다._

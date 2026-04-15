@@ -1127,8 +1127,4 @@ Step 14에서는 Dart의 비동기 핵심인 `Future` 생성과 조합 (`Future.
 
 ---
 
-> ⬅️ [Step 12 — 열거형(Enum)](#) | ➡️ [Step 14 — 비동기 프로그래밍 심화 →](#)
-
----
-
 _참고: 이 문서는 dart.dev 공식 문서(Error Handling, Effective Dart) 및 Revised Bloom's Taxonomy(2001)를 기반으로 작성되었습니다._

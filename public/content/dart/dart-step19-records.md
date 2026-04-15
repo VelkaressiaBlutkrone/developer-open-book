@@ -996,8 +996,4 @@ Step 20에서는 `call()` 메서드로 클래스를 함수처럼 사용하는 Ca
 
 ---
 
-> ⬅️ [Step 18 — 타입 패턴 매칭과 Sealed Class](#) | ➡️ [Step 20 — Callable, Typedef, 함수형 심화 →](#)
-
----
-
 _참고: 이 문서는 dart.dev 공식 문서(Records, Patterns) 및 Revised Bloom's Taxonomy(2001)를 기반으로 작성되었습니다._

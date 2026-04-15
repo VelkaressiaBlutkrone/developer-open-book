@@ -988,8 +988,4 @@ Step 10에서는 `extends`(상속), `implements`(인터페이스), `abstract cla
 
 ---
 
-> ⬅️ [Step 8 — 클래스와 객체 기본](#) | ➡️ [Step 10 — OOP 확장 →](#)
-
----
-
 _참고: 이 문서는 dart.dev 공식 문서(Constructors) 및 Revised Bloom's Taxonomy(2001)를 기반으로 작성되었습니다._

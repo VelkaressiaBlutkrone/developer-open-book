@@ -1221,8 +1221,4 @@ Step 18에서는 Dart 3.0의 강력한 패턴 매칭(`switch` expression, destru
 
 ---
 
-> ⬅️ [Step 16 — 제네릭](#) | ➡️ [Step 18 — 타입 패턴 매칭과 Sealed Class →](#)
-
----
-
 _참고: 이 문서는 dart.dev 공식 문서(Extension Methods) 및 Revised Bloom's Taxonomy(2001)를 기반으로 작성되었습니다._

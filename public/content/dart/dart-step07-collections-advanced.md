@@ -944,8 +944,4 @@ Step 8에서는 Dart OOP의 핵심인 `class` 정의, 인스턴스화, 필드와
 
 ---
 
-> ⬅️ [Step 6 — Collection 타입](#) | ➡️ [Step 8 — 클래스와 객체 기본 →](#)
-
----
-
 _참고: 이 문서는 dart.dev 공식 문서(Collections, Iterable) 및 Revised Bloom's Taxonomy(2001)를 기반으로 작성되었습니다._

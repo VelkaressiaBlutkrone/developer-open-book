@@ -1443,8 +1443,4 @@ Step 21에서는 Dart의 공식 테스트 패키지(`test`)를 사용한 단위 
 
 ---
 
-> ⬅️ [Step 19 — Records와 구조적 타입](#) | ➡️ [Step 21 — 테스트와 디버깅 →](#)
-
----
-
 _참고: 이 문서는 dart.dev 공식 문서(Functions, Callable Objects, Typedefs) 및 Revised Bloom's Taxonomy(2001)를 기반으로 작성되었습니다._

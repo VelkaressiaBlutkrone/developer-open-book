@@ -756,8 +756,4 @@ Step 5에서는 Dart 함수의 핵심인 Arrow function(`=>`), 이름 있는 매
 
 ---
 
-> ⬅️ [Step 3 — 연산자와 조건문](#) | ➡️ [Step 5 — 함수(Function) →](#)
-
----
-
 _참고: 이 문서는 dart.dev 공식 문서(Loops) 및 Revised Bloom's Taxonomy(2001)를 기반으로 작성되었습니다._

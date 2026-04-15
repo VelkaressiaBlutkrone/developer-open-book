@@ -780,8 +780,4 @@ Step 4에서는 `for`, `while`, `do-while`의 동작 원리 및 차이를 이해
 
 ---
 
-> ⬅️ [Step 2 — 변수와 데이터 타입](#) | ➡️ [Step 4 — 반복문 →](#)
-
----
-
 _참고: 이 문서는 dart.dev 공식 문서(Operators, Branches, Patterns) 및 Revised Bloom's Taxonomy(2001)를 기반으로 작성되었습니다._

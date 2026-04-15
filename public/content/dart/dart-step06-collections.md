@@ -767,8 +767,4 @@ Step 7에서는 Spread operator(`...`, `...?`), Collection if/for 문법, 그리
 
 ---
 
-> ⬅️ [Step 5 — 함수(Function)](#) | ➡️ [Step 7 — Collection 고급 및 함수형 프로그래밍 →](#)
-
----
-
 _참고: 이 문서는 dart.dev 공식 문서(Collections, dart:core) 및 Revised Bloom's Taxonomy(2001)를 기반으로 작성되었습니다._
