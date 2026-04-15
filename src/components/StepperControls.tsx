@@ -116,7 +116,10 @@ export function StepperControls({
 
       {/* Step label */}
       {stepLabel && (
-        <div className="stepper-label">{stepLabel}</div>
+        <div className="stepper-label">
+          <span className="stepper-label-num">Step {currentStep + 1}</span>
+          {stepLabel}
+        </div>
       )}
     </div>
   );

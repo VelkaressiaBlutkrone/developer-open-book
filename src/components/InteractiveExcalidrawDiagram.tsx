@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { useStepSimulator } from './useStepSimulator';
 import { StepperControls } from './StepperControls';
 
@@ -25,6 +25,24 @@ export function InteractiveExcalidrawDiagram({
 }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [loadedSteps, setLoadedSteps] = useState<Set<number>>(new Set([0]));
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const toggleFullscreen = useCallback(() => {
+    if (!containerRef.current) return;
+    if (!document.fullscreenElement) {
+      containerRef.current.requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
+  }, []);
+
+  useEffect(() => {
+    const handler = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+    document.addEventListener('fullscreenchange', handler);
+    return () => document.removeEventListener('fullscreenchange', handler);
+  }, []);
 
   const sim = useStepSimulator({
     totalSteps,
@@ -57,6 +75,13 @@ export function InteractiveExcalidrawDiagram({
   return (
     <div className="interactive-diagram" ref={containerRef} tabIndex={0}>
       <div className="interactive-excalidraw-canvas">
+        <button
+          className="diagram-fullscreen-btn"
+          onClick={toggleFullscreen}
+          aria-label="전체 화면"
+        >
+          {isFullscreen ? '\u229F' : '\u229E'}
+        </button>
         {/* Render all steps, show only current with fade */}
         {Array.from({ length: totalSteps }, (_, i) => (
           <img

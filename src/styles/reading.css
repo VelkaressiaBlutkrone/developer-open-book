@@ -445,13 +445,15 @@
   max-height: 500px;
   object-fit: contain;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transform: translateX(8px);
+  transition: opacity 0.5s ease, transform 0.4s ease;
   pointer-events: none;
 }
 
 .excalidraw-step-img.active {
   position: relative;
   opacity: 1;
+  transform: translateX(0);
   pointer-events: auto;
 }
 
@@ -469,6 +471,8 @@
   cursor: pointer;
   position: relative;
   margin-bottom: 10px;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .stepper-progress-fill {
@@ -594,6 +598,51 @@
   font-size: 0.85rem;
   color: #8a7a5a;
   line-height: 1.4;
+}
+
+.stepper-label-num {
+  display: inline-block;
+  background: #8a6508;
+  color: #1e1a14;
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+/* Fullscreen toggle button */
+.diagram-fullscreen-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(30, 26, 20, 0.7);
+  border: 1px solid rgba(138, 101, 8, 0.3);
+  color: #c4b78a;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 5;
+  transition: all 0.15s;
+}
+
+.diagram-fullscreen-btn:hover {
+  background: rgba(138, 101, 8, 0.3);
+  border-color: #8a6508;
+}
+
+/* Fullscreen mode */
+.interactive-diagram:fullscreen {
+  background: #0f0b07;
+}
+
+.interactive-diagram:fullscreen .interactive-excalidraw-canvas {
+  min-height: calc(100vh - 120px);
+}
+
+.interactive-diagram:fullscreen .excalidraw-step-img {
+  max-height: calc(100vh - 160px);
 }
 
 @media (max-width: 768px) {
