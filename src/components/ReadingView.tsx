@@ -42,11 +42,12 @@ export default function ReadingView({ book, onClose, onPrev, onNext, prevTitle, 
     const handler = (e: KeyboardEvent) => {
       if (e.key === 'Escape') handleClose()
 
-      if (e.altKey && e.key === 'ArrowLeft' && onPrev) {
+      // Ctrl+←/→ for prev/next (Alt conflicts with browser history)
+      if (e.ctrlKey && e.key === 'ArrowLeft' && onPrev) {
         e.preventDefault()
         onPrev()
       }
-      if (e.altKey && e.key === 'ArrowRight' && onNext) {
+      if (e.ctrlKey && e.key === 'ArrowRight' && onNext) {
         e.preventDefault()
         onNext()
       }
@@ -118,29 +119,33 @@ export default function ReadingView({ book, onClose, onPrev, onNext, prevTitle, 
             </>
           ) : null}
 
-          {(onPrev || onNext) && (
-            <div className="reading-nav">
-              {onPrev ? (
-                <button className="reading-nav-btn prev" onClick={onPrev}>
-                  <span className="reading-nav-arrow">&larr;</span>
-                  <span className="reading-nav-label">{prevTitle}</span>
-                </button>
-              ) : <div />}
-              {onNext ? (
-                <button className="reading-nav-btn next" onClick={onNext}>
-                  <span className="reading-nav-label">{nextTitle}</span>
-                  <span className="reading-nav-arrow">&rarr;</span>
-                </button>
-              ) : <div />}
-            </div>
-          )}
-
           <div className="book-page-footer">
             <span className="page-category">
               {book.category === 'dart' ? 'Dart Programming' : book.category === 'flutter' ? 'Flutter Development' : 'React Development'}
             </span>
           </div>
         </div>
+
+        {/* 네비게이션: 스크롤 영역 밖, 책 하단 고정 */}
+        {(onPrev || onNext) && (
+          <div className="reading-nav-bar">
+            {onPrev ? (
+              <button className="reading-nav-btn prev" onClick={onPrev} aria-label={`이전: ${prevTitle}`}>
+                <span className="reading-nav-arrow">&#8592;</span>
+                <span className="reading-nav-label">{prevTitle}</span>
+              </button>
+            ) : <div className="reading-nav-spacer" />}
+            <span className="reading-nav-indicator">
+              {book.step || ''}
+            </span>
+            {onNext ? (
+              <button className="reading-nav-btn next" onClick={onNext} aria-label={`다음: ${nextTitle}`}>
+                <span className="reading-nav-label">{nextTitle}</span>
+                <span className="reading-nav-arrow">&#8594;</span>
+              </button>
+            ) : <div className="reading-nav-spacer" />}
+          </div>
+        )}
       </div>
     </div>
   )
