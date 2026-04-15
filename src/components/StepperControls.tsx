@@ -39,11 +39,26 @@ export function StepperControls({
   return (
     <div className="stepper-controls">
       {/* Progress bar */}
-      <div className="stepper-progress-track" onClick={(e) => {
-        const rect = e.currentTarget.getBoundingClientRect();
-        const ratio = (e.clientX - rect.left) / rect.width;
-        onGoto(Math.round(ratio * (totalSteps - 1)));
-      }}>
+      <div
+        className="stepper-progress-track"
+        role="slider"
+        aria-label="다이어그램 진행"
+        aria-valuemin={1}
+        aria-valuemax={totalSteps}
+        aria-valuenow={currentStep + 1}
+        tabIndex={0}
+        onClick={(e) => {
+          const rect = e.currentTarget.getBoundingClientRect();
+          const ratio = (e.clientX - rect.left) / rect.width;
+          onGoto(Math.round(ratio * (totalSteps - 1)));
+        }}
+        onKeyDown={(e) => {
+          if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { e.preventDefault(); onNext(); }
+          if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { e.preventDefault(); onPrev(); }
+          if (e.key === 'Home') { e.preventDefault(); onReset(); }
+          if (e.key === 'End') { e.preventDefault(); onGoto(totalSteps - 1); }
+        }}
+      >
         <div className="stepper-progress-fill" style={{ width: `${progress}%` }} />
         <div className="stepper-progress-thumb" style={{ left: `${progress}%` }} />
       </div>
@@ -51,17 +66,17 @@ export function StepperControls({
       {/* Control buttons */}
       <div className="stepper-buttons">
         <div className="stepper-nav">
-          <button className="stepper-btn" onClick={onReset} title="처음으로 (Home)">
+          <button className="stepper-btn" onClick={onReset} title="처음으로 (Home)" aria-label="처음으로">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M19 20H5M19 20V4M5 20V4" strokeLinecap="round"/>
             </svg>
           </button>
-          <button className="stepper-btn" onClick={onPrev} disabled={currentStep === 0} title="이전">
+          <button className="stepper-btn" onClick={onPrev} disabled={currentStep === 0} title="이전" aria-label="이전 단계">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </button>
-          <button className="stepper-btn stepper-btn-play" onClick={isPlaying ? onPause : onPlay} title="재생/일시정지 (Space)">
+          <button className="stepper-btn stepper-btn-play" onClick={isPlaying ? onPause : onPlay} title="재생/일시정지 (Space)" aria-label={isPlaying ? '일시정지' : '재생'}>
             {isPlaying ? (
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                 <rect x="6" y="4" width="4" height="16" rx="1"/>
@@ -73,7 +88,7 @@ export function StepperControls({
               </svg>
             )}
           </button>
-          <button className="stepper-btn" onClick={onNext} disabled={currentStep === totalSteps - 1} title="다음">
+          <button className="stepper-btn" onClick={onNext} disabled={currentStep === totalSteps - 1} title="다음" aria-label="다음 단계">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -81,7 +96,7 @@ export function StepperControls({
         </div>
 
         {/* Step counter */}
-        <span className="stepper-counter">
+        <span className="stepper-counter" aria-live="polite">
           Step {currentStep + 1} / {totalSteps}
         </span>
 

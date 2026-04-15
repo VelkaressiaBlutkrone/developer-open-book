@@ -384,6 +384,14 @@
   color: var(--gold);
 }
 
+.close-book:focus-visible {
+  outline: 2px solid #d4a017;
+  outline-offset: 2px;
+  background: rgba(255,255,255,0.08);
+  border-color: var(--gold-dim);
+  color: var(--gold);
+}
+
 /* ══════════════════════════════════════════
    RESPONSIVE
    ══════════════════════════════════════════ */
@@ -518,6 +526,17 @@
   cursor: not-allowed;
 }
 
+.stepper-btn:focus-visible {
+  outline: 2px solid #d4a017;
+  outline-offset: 2px;
+}
+
+.stepper-progress-track:focus-visible {
+  outline: 2px solid #d4a017;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 .stepper-btn-play {
   background: #8a6508;
   border-color: #8a6508;
@@ -533,7 +552,7 @@
 
 .stepper-counter {
   font-size: 0.8rem;
-  color: #8a7a5a;
+  color: #b8a070;
   font-variant-numeric: tabular-nums;
   min-width: 80px;
   text-align: center;

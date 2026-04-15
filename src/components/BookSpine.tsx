@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from 'react'
+import { useState, useCallback, useRef, useId } from 'react'
 import { createPortal } from 'react-dom'
 import { getBookVisual } from '../data/books'
 import type { Book } from '../types'
@@ -24,6 +24,7 @@ export default function BookSpine({ book, index, onClick }: Props) {
   const [touched, setTouched] = useState(false)
   const [tooltipPos, setTooltipPos] = useState<{ x: number; y: number } | null>(null)
   const bookRef = useRef<HTMLDivElement>(null)
+  const tooltipId = useId()
 
   const handleMouseEnter = useCallback(() => {
     if (!bookRef.current) return
@@ -69,6 +70,7 @@ export default function BookSpine({ book, index, onClick }: Props) {
         role="button"
         tabIndex={0}
         aria-label={`${book.title} 열기`}
+        aria-describedby={tooltipPos ? tooltipId : undefined}
         onClick={onClick}
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
@@ -115,6 +117,8 @@ export default function BookSpine({ book, index, onClick }: Props) {
       {tooltipPos && createPortal(
         <div
           className="book-tooltip visible"
+          role="tooltip"
+          id={tooltipId}
           style={{
             position: 'fixed',
             left: `${tooltipPos.x}px`,

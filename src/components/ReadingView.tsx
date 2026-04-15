@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import type { Book } from '../types'
 import MarkdownRenderer from './MarkdownRenderer'
 
@@ -11,6 +11,8 @@ export default function ReadingView({ book, onClose }: Props) {
   const [content, setContent] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
   const visible = book !== null
+  const closeRef = useRef<HTMLButtonElement>(null)
+  const dialogRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (!book) { setContent(null); return }
@@ -25,8 +27,35 @@ export default function ReadingView({ book, onClose }: Props) {
 
   useEffect(() => {
     if (!visible) return
+    // Focus the close button when the dialog opens
+    setTimeout(() => closeRef.current?.focus(), 100)
+  }, [visible])
+
+  useEffect(() => {
+    if (!visible) return
     const handler = (e: KeyboardEvent) => {
       if (e.key === 'Escape') handleClose()
+
+      // Focus trap: keep Tab cycling inside the dialog
+      if (e.key === 'Tab' && dialogRef.current) {
+        const focusable = dialogRef.current.querySelectorAll<HTMLElement>(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        )
+        if (focusable.length === 0) return
+        const first = focusable[0]
+        const last = focusable[focusable.length - 1]
+        if (e.shiftKey) {
+          if (document.activeElement === first) {
+            e.preventDefault()
+            last.focus()
+          }
+        } else {
+          if (document.activeElement === last) {
+            e.preventDefault()
+            first.focus()
+          }
+        }
+      }
     }
     window.addEventListener('keydown', handler)
     return () => window.removeEventListener('keydown', handler)
@@ -47,10 +76,16 @@ export default function ReadingView({ book, onClose }: Props) {
   if (!book) return null
 
   return (
-    <div className={`reading-view ${visible ? 'visible' : ''}`}>
+    <div
+      className={`reading-view ${visible ? 'visible' : ''}`}
+      role="dialog"
+      aria-modal="true"
+      aria-label="독서 뷰"
+      ref={dialogRef}
+    >
       <div className="reading-overlay" onClick={handleClose} />
       <div className="open-book single-page" id="openBook">
-        <button className="close-book" onClick={handleClose}>Close Book</button>
+        <button className="close-book" onClick={handleClose} ref={closeRef} aria-label="닫기">Close Book</button>
 
         <div className="book-page full">
           {loading ? (
