@@ -68,6 +68,20 @@ export default function Bookshelf() {
     }
   }, [filter])
 
+  const navProps = useMemo(() => {
+    if (!openBook) return {}
+    const categoryBooks = BOOKS.filter(b => b.category === openBook.category)
+    const idx = categoryBooks.findIndex(b => b.id === openBook.id)
+    const prevBook = idx > 0 ? categoryBooks[idx - 1] : null
+    const nextBook = idx < categoryBooks.length - 1 ? categoryBooks[idx + 1] : null
+    return {
+      onPrev: prevBook ? () => setOpenBook(prevBook) : undefined,
+      onNext: nextBook ? () => setOpenBook(nextBook) : undefined,
+      prevTitle: prevBook?.title,
+      nextTitle: nextBook?.title,
+    }
+  }, [openBook])
+
   const showDart = filter === 'all' || filter === 'dart'
   const showFlutter = filter === 'all' || filter === 'flutter'
   const showReact = filter === 'all' || filter === 'react'
@@ -167,6 +181,7 @@ export default function Bookshelf() {
       <ReadingView
         book={openBook}
         onClose={() => setOpenBook(null)}
+        {...navProps}
       />
     </>
   )

@@ -5,18 +5,24 @@ import MarkdownRenderer from './MarkdownRenderer'
 interface Props {
   book: Book | null
   onClose: () => void
+  onPrev?: () => void
+  onNext?: () => void
+  prevTitle?: string
+  nextTitle?: string
 }
 
-export default function ReadingView({ book, onClose }: Props) {
+export default function ReadingView({ book, onClose, onPrev, onNext, prevTitle, nextTitle }: Props) {
   const [content, setContent] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
   const visible = book !== null
   const closeRef = useRef<HTMLButtonElement>(null)
   const dialogRef = useRef<HTMLDivElement>(null)
+  const pageRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (!book) { setContent(null); return }
     setLoading(true)
+    pageRef.current?.scrollTo(0, 0)
     fetch(book.contentFile)
       .then(res => res.ok ? res.text() : Promise.reject('fetch failed'))
       .then(text => { setContent(text); setLoading(false) })
@@ -35,6 +41,15 @@ export default function ReadingView({ book, onClose }: Props) {
     if (!visible) return
     const handler = (e: KeyboardEvent) => {
       if (e.key === 'Escape') handleClose()
+
+      if (e.altKey && e.key === 'ArrowLeft' && onPrev) {
+        e.preventDefault()
+        onPrev()
+      }
+      if (e.altKey && e.key === 'ArrowRight' && onNext) {
+        e.preventDefault()
+        onNext()
+      }
 
       // Focus trap: keep Tab cycling inside the dialog
       if (e.key === 'Tab' && dialogRef.current) {
@@ -87,7 +102,7 @@ export default function ReadingView({ book, onClose }: Props) {
       <div className="open-book single-page" id="openBook">
         <button className="close-book" onClick={handleClose} ref={closeRef} aria-label="닫기">Close Book</button>
 
-        <div className="book-page full">
+        <div className="book-page full" ref={pageRef}>
           {loading ? (
             <div className="loading-state">
               <div className="loading-spinner" />
@@ -102,6 +117,24 @@ export default function ReadingView({ book, onClose }: Props) {
               <MarkdownRenderer content={content} />
             </>
           ) : null}
+
+          {(onPrev || onNext) && (
+            <div className="reading-nav">
+              {onPrev ? (
+                <button className="reading-nav-btn prev" onClick={onPrev}>
+                  <span className="reading-nav-arrow">&larr;</span>
+                  <span className="reading-nav-label">{prevTitle}</span>
+                </button>
+              ) : <div />}
+              {onNext ? (
+                <button className="reading-nav-btn next" onClick={onNext}>
+                  <span className="reading-nav-label">{nextTitle}</span>
+                  <span className="reading-nav-arrow">&rarr;</span>
+                </button>
+              ) : <div />}
+            </div>
+          )}
+
           <div className="book-page-footer">
             <span className="page-category">
               {book.category === 'dart' ? 'Dart Programming' : book.category === 'flutter' ? 'Flutter Development' : 'React Development'}

@@ -362,8 +362,9 @@
    ══════════════════════════════════════════ */
 .close-book {
   position: absolute;
-  top: -48px;
-  right: 0;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
   background: none;
   border: 1px solid rgba(255,255,255,0.15);
   color: var(--paper-edge);
@@ -408,8 +409,14 @@
 
 @media (max-width: 768px) {
   .reading-title { font-size: 1.3rem; }
-  .close-book { top: -40px; font-size: 0.8rem; }
+  .close-book { top: 8px; right: 8px; padding: 8px; font-size: 0.8rem; }
   .book-page.full { padding: 24px 16px 20px; }
+  .reading-content {
+    padding: 32px 20px;
+  }
+  .reading-scroll {
+    max-height: calc(100vh - 120px);
+  }
   .markdown-body h1 { font-size: 1.4rem; }
   .markdown-body h2 { font-size: 1.2rem; }
 }
@@ -650,4 +657,80 @@
   .stepper-speed { order: 3; width: 100%; justify-content: center; }
   .stepper-counter { order: 2; }
   .stepper-nav { order: 1; }
+}
+
+@media (max-width: 480px) {
+  .stepper-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .stepper-nav {
+    justify-content: center;
+    width: 100%;
+  }
+  .stepper-counter {
+    text-align: center;
+  }
+  .stepper-speed {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* ══════════════════════════════════════════
+   READING NAV (PREV / NEXT)
+   ══════════════════════════════════════════ */
+.reading-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-top: 1px solid rgba(138, 101, 8, 0.2);
+  margin-top: 32px;
+}
+
+.reading-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 1px solid rgba(138, 101, 8, 0.3);
+  color: #c4b78a;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  max-width: 45%;
+  font-family: inherit;
+}
+
+.reading-nav-btn:hover {
+  background: rgba(138, 101, 8, 0.1);
+  border-color: #8a6508;
+}
+
+.reading-nav-arrow {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.reading-nav-label {
+  font-size: 0.85rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reading-nav-btn.next .reading-nav-label {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .reading-nav {
+    padding: 12px 16px;
+    gap: 8px;
+  }
+  .reading-nav-btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
 }
