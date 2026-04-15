@@ -93,7 +93,7 @@ sortMillion()는 I/O 없음 → await할 것이 없음
 
 Isolate는 Dart에서 **진정한 병렬 실행 단위**입니다.
 
-![diagram](/developer-open-book/diagrams/step15-isolate-architecture.svg)
+<div data-diagram="isolate-arch" data-steps="3" data-alt="Isolate 메모리 아키텍처" data-descriptions="메인 Isolate가 자체 힙 메모리와 Event Loop를 가지고 실행됩니다|워커 Isolate는 독립된 힙 메모리와 Event Loop를 가집니다|두 Isolate 간에는 메시지 패싱(값 복사)으로만 데이터를 교환합니다"></div>
 
 **Isolate의 핵심 특성**
 

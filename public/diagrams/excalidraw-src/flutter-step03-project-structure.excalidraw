@@ -1,0 +1,28 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":150,"y":10,"text":"Flutter 프로젝트 디렉토리 구조","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":400,"height":30,"opacity":100},
+    {"type":"rectangle","id":"root","x":80,"y":55,"width":160,"height":35,"backgroundColor":"#1e3a5f","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"root_label","x":100,"y":62,"width":120,"height":22,"text":"my_app/","fontSize":16,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"root","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"lib","x":60,"y":110,"width":160,"height":55,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"lib_label","x":70,"y":118,"width":140,"height":40,"text":"lib/ ★\nmain.dart (진입점)","fontSize":13,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"lib","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"android","x":240,"y":110,"width":160,"height":40,"backgroundColor":"#2d1b69","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"android_label","x":250,"y":118,"width":140,"height":25,"text":"android/","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"android","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"ios","x":420,"y":110,"width":160,"height":40,"backgroundColor":"#2d1b69","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"ios_label","x":430,"y":118,"width":140,"height":25,"text":"ios/","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"ios","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"web","x":600,"y":110,"width":120,"height":40,"backgroundColor":"#1a4d4d","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#06b6d4","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"web_label","x":610,"y":118,"width":100,"height":25,"text":"web/","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"web","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"test","x":60,"y":185,"width":160,"height":40,"backgroundColor":"#5c3d1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"test_label","x":70,"y":193,"width":140,"height":25,"text":"test/","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"test","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"assets","x":240,"y":185,"width":160,"height":40,"backgroundColor":"#5c3d1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"assets_label","x":250,"y":193,"width":140,"height":25,"text":"assets/ (직접 생성)","fontSize":13,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"assets","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"pubspec","x":60,"y":245,"width":300,"height":40,"backgroundColor":"#5c1a1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#ef4444","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"pubspec_label","x":70,"y":253,"width":280,"height":25,"text":"pubspec.yaml ★ (핵심 설정 파일)","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"pubspec","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"auto","x":380,"y":245,"width":340,"height":40,"backgroundColor":"#1a4d4d","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#06b6d4","strokeWidth":1,"roughness":1,"opacity":80},
+    {"type":"text","id":"auto_label","x":390,"y":253,"width":320,"height":25,"text":"pubspec.lock, .dart_tool/ (자동 생성)","fontSize":13,"strokeColor":"#a0a0a0","fontFamily":2,"containerId":"auto","textAlign":"center","verticalAlign":"middle","opacity":80}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

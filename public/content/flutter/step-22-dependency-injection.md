@@ -27,56 +27,11 @@
 
 Clean Architecture를 학습했으니 이제 계층들을 **어떻게 연결하는가**가 문제다.
 
-```
-DI 없는 코드의 문제
-──────────────────────────────────────────────────────
-class GetProductsUseCase {
-  // ← 직접 생성: 구현체를 알아버림!
-  final _repository = ProductRepositoryImpl(
-    remote: ProductRemoteDataSourceImpl(Dio()),
-    local:  ProductLocalDataSourceImpl(Hive.box('products')),
-  );
-}
-
-문제점:
-  ① UseCase가 구현 세부사항을 알게 됨 → Clean Arch 위반
-  ② 테스트 시 실제 Dio·Hive 필요 → Mock 교체 불가
-  ③ Dio 설정(baseUrl 등)이 여러 곳에 중복
-  ④ 객체 생성 순서를 수동으로 관리해야 함
-──────────────────────────────────────────────────────
-
-DI가 해결하는 방식
-──────────────────────────────────────────────────────
-class GetProductsUseCase {
-  // ← 외부에서 주입: 인터페이스만 알면 됨
-  final ProductRepository _repository;
-  GetProductsUseCase(this._repository);
-}
-
-// DI 컨테이너가 객체 생성·연결을 담당
-// 테스트 시: MockRepository 주입
-// 실제 앱: ProductRepositoryImpl 주입
-──────────────────────────────────────────────────────
-```
+![DI 없는 코드의 문제](/developer-open-book/diagrams/flutter-step22-without-di.svg)
 
 ### 1.2 Flutter DI 방식 3가지
 
-```
-Flutter에서 DI를 구현하는 방법
-──────────────────────────────────────────────────────
-  ① GetIt           Service Locator 패턴
-                    전역 레지스트리에서 필요할 때 꺼내 씀
-                    Flutter·Riverpod 독립적
-
-  ② GetIt + Injectable  GetIt + 코드 생성
-                    @injectable, @singleton 어노테이션으로
-                    보일러플레이트 자동 생성
-
-  ③ Riverpod Provider   상태관리 + DI 통합
-                    Provider가 DI 컨테이너 역할
-                    Riverpod 프로젝트에서 가장 자연스러움
-──────────────────────────────────────────────────────
-```
+![Flutter에서 DI를 구현하는 방법](/developer-open-book/diagrams/flutter-step22-di-methods.svg)
 
 ### 1.3 전체 개념 지도
 
@@ -176,21 +131,7 @@ void main() async {
 
 #### 등록 타입 비교
 
-```
-registerSingleton<T>()
-  → 즉시 인스턴스 생성
-  → 앱 전체에서 항상 같은 인스턴스
-  → 앱 시작 시 반드시 필요한 객체 (Box, Config 등)
-
-registerLazySingleton<T>()
-  → 처음 sl<T>() 호출 시 인스턴스 생성
-  → 이후 항상 같은 인스턴스
-  → 대부분의 Service, Repository에 적합
-
-registerFactory<T>()
-  → sl<T>() 호출마다 새 인스턴스 생성
-  → 상태를 가져서는 안 되는 UseCase, 화면별 ViewModel에 적합
-```
+![GetIt 등록 메서드 비교](/developer-open-book/diagrams/flutter-step22-getit-methods.svg)
 
 #### 사용 방법
 
@@ -433,31 +374,7 @@ void main() {
 
 ### 3.4 GetIt vs Riverpod DI 비교
 
-```
-GetIt 방식
-──────────────────────────────────────────────────────
-  장점:
-    • Flutter/Riverpod 의존성 없음 (순수 Dart)
-    • 기존 Bloc/Provider 앱에서도 사용 가능
-    • 코드 어디서나 sl<T>()로 접근 가능
-    • Injectable로 보일러플레이트 최소화
-  단점:
-    • Service Locator = 전역 상태 → 테스트 복잡
-    • 등록 순서 수동 관리 필요
-    • rebuild 연동 없음 (상태관리와 분리)
-
-Riverpod Provider 방식
-──────────────────────────────────────────────────────
-  장점:
-    • 상태관리 + DI 통합 (하나의 패키지)
-    • ProviderOverride로 테스트 교체 매우 쉬움
-    • 컴파일 타임 안전성
-    • ref.watch()로 의존성 변경 시 자동 rebuild
-  단점:
-    • Riverpod에 의존 (다른 상태관리 조합 어색)
-    • ProviderScope 밖에서 접근 불가
-    • 학습 곡선 존재
-```
+![GetIt 수동 등록 vs injectable 자동 등록](/developer-open-book/diagrams/flutter-step22-getit-vs-injectable.svg)
 
 **선택 기준:**
 

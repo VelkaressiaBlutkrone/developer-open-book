@@ -60,7 +60,7 @@
 
 반복문은 Dart에서 5가지 방식으로 작성할 수 있습니다. 어떤 반복문을 선택하느냐는 단순히 취향의 문제가 아닙니다. **반복 횟수를 미리 알고 있는가**, **컬렉션을 순회하는가**, **중간에 탈출이 필요한가**에 따라 가독성과 의도 전달력이 달라집니다.
 
-![diagram](/developer-open-book/diagrams/step04-loop-selection-flow.svg)
+<div data-diagram="loop-select" data-steps="6" data-alt="반복문 선택 흐름도" data-descriptions="먼저 반복 횟수를 미리 알고 있는지 판단합니다|횟수를 안다면 인덱스 필요 여부에 따라 for 문을 선택합니다|횟수를 모르면 컬렉션을 순회하는지 확인합니다|컬렉션 순회라면 for-in 또는 forEach를 사용합니다|컬렉션 순회가 아니라면 조건을 먼저 확인할지 결정합니다|조건 먼저라면 while, 실행 먼저라면 do-while을 선택합니다"></div>
 
 > **전제 지식**: Step 3 완료 (연산자, 조건문, `??` / `?.` 이해)
 

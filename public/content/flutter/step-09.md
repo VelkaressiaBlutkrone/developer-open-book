@@ -60,21 +60,7 @@
 
 ### 3.1 GestureDetector vs InkWell
 
-```
-GestureDetector
-  ─────────────────────────────────────────
-  • 시각적 피드백 없음
-  • 모든 제스처 이벤트 처리 가능 (pan·scale·drag 등)
-  • 어떤 위젯에도 적용 가능 (Material 위젯 아니어도 됨)
-  • 커스텀 게임, 그래픽, 지도 등에 적합
-
-InkWell
-  ─────────────────────────────────────────
-  • Material Ripple(물결) 시각 효과 제공
-  • 탭·롱프레스 등 기본 제스처만 처리
-  • 반드시 Material 위젯(Scaffold 등) 아래에 있어야 Ripple 동작
-  • 버튼·리스트 항목 등 표준 UI 컴포넌트에 적합
-```
+![GestureDetector vs InkWell](/developer-open-book/diagrams/flutter-step09-gesture-vs-inkwell.svg)
 
 ```dart
 // GestureDetector: 시각 효과 없음, 범용 제스처
@@ -124,25 +110,7 @@ Ink(
 
 화면을 드래그하면 수직 스크롤인지 수평 스크롤인지, 아니면 탭인지 Flutter는 어떻게 판단하는가?
 
-```
-Gesture Arena 동작 원리
-──────────────────────────────────────────────────────
-① 포인터 이벤트 발생 (손가락 닿음)
-② Hit Test → 겹치는 위젯들의 GestureRecognizer 모두 수집
-③ Arena에서 경쟁 시작
-    → 각 recognizer가 "내가 이 제스처를 처리하겠다" 선언 가능
-    → 또는 "포기" 선언 가능
-④ 승자 결정
-    → 마지막으로 남은 하나가 승자
-    → 또는 명시적으로 "승리" 선언한 recognizer가 승자
-⑤ 승자의 콜백만 호출됨
-──────────────────────────────────────────────────────
-
-실전 예시: ListView 내부의 GestureDetector
-  - 세로 드래그 → ListView의 ScrollGestureRecognizer 승리
-  - 수평 드래그 → GestureDetector의 HorizontalDragRecognizer 승리
-  → 방향에 따라 자동으로 승자가 결정됨
-```
+![Gesture Arena 동작 원리](/developer-open-book/diagrams/flutter-step09-gesture-arena.svg)
 
 **경쟁 충돌 해결: behavior 속성**
 
@@ -287,14 +255,7 @@ class _DraggableCardState extends State<DraggableCard> {
 
 #### FocusNode의 역할
 
-```
-FocusNode
-  ─────────────────────────────────────────────────
-  • 특정 위젯이 현재 포커스를 가지고 있는지 표시
-  • 프로그래밍 방식으로 포커스 이동 및 키보드 제어
-  • 포커스 변경 이벤트 구독 가능
-  • dispose() 필수 (리소스 누수 방지)
-```
+![FocusNode의 역할](/developer-open-book/diagrams/flutter-step09-focusnode.svg)
 
 ```dart
 class LoginForm extends StatefulWidget {

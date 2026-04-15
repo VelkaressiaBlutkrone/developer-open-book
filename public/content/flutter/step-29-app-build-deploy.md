@@ -24,23 +24,7 @@
 
 ### 1.1 배포 흐름 전체 그림
 
-```
-Flutter 앱 배포 파이프라인
-──────────────────────────────────────────────────────
-  코드 작성
-      ↓
-  릴리즈 빌드
-  (flutter build appbundle / ipa)
-      ↓
-  서명 (Keystore / Certificate)
-      ↓
-  스토어 업로드
-  Android: Play Console → 내부 테스트 → 프로덕션
-  iOS:     TestFlight  → App Store Review → 출시
-      ↓
-  사용자 다운로드
-──────────────────────────────────────────────────────
-```
+![Flutter 앱 배포 파이프라인](/developer-open-book/diagrams/flutter-step29-deploy-pipeline.svg)
 
 ### 1.2 빌드 산출물 비교
 
@@ -52,21 +36,7 @@ Flutter 앱 배포 파이프라인
 
 ### 1.3 전체 개념 지도
 
-```
-앱 빌드 및 배포
-    │
-    ├── Android 빌드·배포
-    │     ├── 릴리즈 빌드 (--release)
-    │     ├── 앱 서명 (Keystore)
-    │     ├── build.gradle 서명 설정
-    │     └── Play Console 업로드
-    │
-    └── iOS 빌드·배포
-          ├── 릴리즈 빌드 (Xcode Archive)
-          ├── 앱 서명 (Certificate + Provisioning Profile)
-          ├── TestFlight 업로드
-          └── App Store Connect 제출
-```
+![앱 빌드 및 배포 핵심 항목](/developer-open-book/diagrams/flutter-step29-build-deploy-overview.svg)
 
 ---
 
@@ -95,19 +65,7 @@ Flutter 앱 배포 파이프라인
 
 ### 3.1 릴리즈 빌드 vs 디버그 빌드
 
-```
-Debug 빌드               Release 빌드
-──────────────           ──────────────────────────
-JIT 컴파일               AOT 컴파일 (최고 성능)
-Hot Reload 지원          Hot Reload 없음
-디버그 정보 포함          코드 난독화 가능
-느린 실행                빠른 실행
-큰 파일 크기              최적화된 크기
-
-flutter run              flutter build appbundle --release
-flutter run --debug      flutter build apk --release
-                         flutter build ipa --release
-```
+![Debug 빌드 vs Release 빌드](/developer-open-book/diagrams/flutter-step29-debug-vs-release.svg)
 
 ---
 
@@ -237,24 +195,7 @@ flutter build appbundle --release \
 
 #### Play Console 배포 단계
 
-```
-내부 테스트 (Internal Testing)
-  → 팀원 100명까지, Google Play 심사 없음, 즉시 배포
-  → 앱 기능 검증
-
-비공개 테스트 (Closed Testing / Alpha)
-  → 초청된 테스터 그룹
-  → Play Store UI 미표시
-
-공개 테스트 (Open Testing / Beta)
-  → 누구나 참여 가능
-  → Play Store에 "얼리 액세스"로 표시
-
-프로덕션 (Production)
-  → 모든 사용자에게 공개
-  → 단계적 출시 (1% → 10% → 50% → 100%) 가능
-  → Google Play 심사 필요 (1~3일)
-```
+![Google Play 테스트 트랙](/developer-open-book/diagrams/flutter-step29-testing-tracks.svg)
 
 ---
 
@@ -279,12 +220,7 @@ iOS 배포는 macOS와 Apple Developer 계정($99/년)이 필요하다.
 
 #### 자동 서명 설정 (Xcode Automatic Signing)
 
-```
-Xcode → Runner 프로젝트 → Signing & Capabilities
-  ☑ Automatically manage signing
-  Team: [Apple Developer Team 선택]
-  Bundle Identifier: com.company.appname
-```
+![iOS 앱 서명 설정](/developer-open-book/diagrams/flutter-step29-ios-signing.svg)
 
 자동 서명을 사용하면 Xcode가 Certificate와 Provisioning Profile을 자동으로 관리한다.
 
@@ -307,20 +243,7 @@ flutter build ipa --release
 
 #### App Store Connect 심사 제출 절차
 
-```
-1. App Store Connect (appstoreconnect.apple.com) 로그인
-2. 앱 등록: Apps → + → New App
-3. 필수 정보 입력:
-   - 앱 이름, 카테고리, Bundle ID
-   - 스크린샷 (6.7", 5.5" 필수)
-   - 앱 설명, 키워드
-   - 개인정보 처리방침 URL (필수)
-   - 지원 URL
-4. TestFlight로 내부 테스트 (선택)
-5. 빌드 업로드 후 "심사를 위해 제출"
-6. 심사 기간: 보통 1~3일
-   (주말/연휴 전 제출 시 지연 가능)
-```
+![App Store 업로드 절차](/developer-open-book/diagrams/flutter-step29-appstore-upload.svg)
 
 ---
 
@@ -431,82 +354,19 @@ const apiUrl = String.fromEnvironment('API_URL',
 
 ### 4.1 첫 Play Store 출시 체크리스트
 
-```
-출시 전 최종 점검 (Android)
-──────────────────────────────────────────────────────
-  앱 품질
-  □ 크래시 없이 주요 흐름 완주 테스트
-  □ 다양한 화면 크기에서 UI 확인
-  □ 다크모드 지원 여부 확인
-  □ 네트워크 없을 때 동작 확인
-
-  기술적 요구사항
-  □ targetSdkVersion ≥ 34 (2024년 기준 Play Store 요구)
-  □ 64비트 지원 (arm64-v8a 포함)
-  □ AAB 파일 서명 확인
-  □ versionCode 증가 확인
-
-  스토어 페이지
-  □ 앱 아이콘 고화질 512x512
-  □ 스크린샷 고품질 (실제 앱 화면, 텍스트 오버레이 허용)
-  □ 설명 한국어/영어 작성 완료
-  □ 개인정보 처리방침 URL 유효
-
-  법적 요구사항
-  □ 개인정보 수집 항목 명시
-  □ 광고 포함 여부 표시
-  □ 인앱 결제 포함 여부 표시
-──────────────────────────────────────────────────────
-```
+![출시 전 최종 점검 Android](/developer-open-book/diagrams/flutter-step29-android-checklist.svg)
 
 ---
 
 ### 4.2 앱 서명 키 분실 시나리오 방지
 
-```
-Play App Signing (권장)
-──────────────────────────────────────────────────────
-  기존 방식 (Upload Key 관리):
-    개발자 Keystore → APK 서명 → Play Store
-
-  Play App Signing 방식 (권장):
-    개발자 Upload Key → AAB 서명 → Play Store
-    Play Store가 App Signing Key로 재서명 → 사용자에게 배포
-
-    장점:
-    - Upload Key를 잃어도 Play Store에서 새 Upload Key 교체 가능
-    - App Signing Key는 Google이 안전하게 보관
-    - 최종 앱 서명은 Google이 관리
-
-    설정:
-    Play Console → 앱 → 설정 → 앱 서명
-    → Play 앱 서명 등록
-──────────────────────────────────────────────────────
-```
+![Play App Signing](/developer-open-book/diagrams/flutter-step29-app-signing.svg)
 
 ---
 
 ### 4.3 버전 관리 전략
 
-```
-Semantic Versioning 적용
-──────────────────────────────────────────────────────
-  pubspec.yaml version: MAJOR.MINOR.PATCH+BUILD
-
-  MAJOR: 하위 호환 불가 변경 (1.0.0 → 2.0.0)
-  MINOR: 새 기능 추가 (1.0.0 → 1.1.0)
-  PATCH: 버그 수정 (1.0.0 → 1.0.1)
-  BUILD: 빌드 번호 (항상 증가, Play Store 기준)
-
-  예시:
-  버전  | pubspec      | 설명
-  ────────────────────────────────────
-  초기  | 1.0.0+1      | 최초 출시
-  버그  | 1.0.1+2      | 크래시 수정
-  기능  | 1.1.0+3      | 새 기능 추가
-  대형  | 2.0.0+4      | UI 전면 개편
-──────────────────────────────────────────────────────
-```
+![Semantic Versioning 적용](/developer-open-book/diagrams/flutter-step29-semantic-versioning.svg)
 
 ---
 

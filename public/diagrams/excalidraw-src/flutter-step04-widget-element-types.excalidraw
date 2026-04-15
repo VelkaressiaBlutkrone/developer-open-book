@@ -1,0 +1,28 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":100,"y":10,"text":"Widget 종류별 Element·RenderObject","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":440,"height":30,"opacity":100},
+    {"type":"rectangle","id":"ro_widget","x":80,"y":60,"width":200,"height":40,"backgroundColor":"#1e3a5f","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"ro_w_l","x":90,"y":68,"width":180,"height":25,"text":"RenderObjectWidget","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"ro_widget","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"a1","x":280,"y":80,"width":30,"height":0,"strokeColor":"#4a9eed","strokeWidth":2,"roughness":1,"opacity":80,"points":[[0,0],[30,0]],"lastCommittedPoint":[30,0],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"ro_elem","x":320,"y":60,"width":200,"height":40,"backgroundColor":"#2d1b69","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"ro_e_l","x":330,"y":68,"width":180,"height":25,"text":"RenderObjectElement","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"ro_elem","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"a2","x":520,"y":80,"width":30,"height":0,"strokeColor":"#8b5cf6","strokeWidth":2,"roughness":1,"opacity":80,"points":[[0,0],[30,0]],"lastCommittedPoint":[30,0],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"ro_obj","x":560,"y":60,"width":180,"height":40,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"ro_o_l","x":570,"y":68,"width":160,"height":25,"text":"RenderObject 생성","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"ro_obj","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"ex1","x":80,"y":108,"text":"(Text, Container 등 실제로 그려지는 Widget)","fontSize":12,"strokeColor":"#a0a0a0","fontFamily":2,"width":350,"height":18,"opacity":70},
+    {"type":"rectangle","id":"comp_widget","x":80,"y":145,"width":200,"height":40,"backgroundColor":"#5c3d1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"comp_w_l","x":90,"y":153,"width":180,"height":25,"text":"ComponentWidget","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"comp_widget","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"a3","x":280,"y":165,"width":30,"height":0,"strokeColor":"#f59e0b","strokeWidth":2,"roughness":1,"opacity":80,"points":[[0,0],[30,0]],"lastCommittedPoint":[30,0],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"comp_elem","x":320,"y":145,"width":200,"height":40,"backgroundColor":"#5c3d1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"comp_e_l","x":330,"y":153,"width":180,"height":25,"text":"ComponentElement","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"comp_elem","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"a4","x":520,"y":165,"width":30,"height":0,"strokeColor":"#a0a0a0","strokeWidth":2,"roughness":1,"opacity":40,"points":[[0,0],[30,0]],"lastCommittedPoint":[30,0]},
+    {"type":"rectangle","id":"no_ro","x":560,"y":145,"width":180,"height":40,"backgroundColor":"#1e1e2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#555555","strokeWidth":1,"roughness":1,"opacity":60},
+    {"type":"text","id":"no_ro_l","x":570,"y":153,"width":160,"height":25,"text":"RenderObject 없음","fontSize":14,"strokeColor":"#a0a0a0","fontFamily":2,"containerId":"no_ro","textAlign":"center","verticalAlign":"middle","opacity":60},
+    {"type":"text","id":"ex2","x":80,"y":193,"text":"(StatelessWidget, StatefulWidget 등 조합하는 Widget)","fontSize":12,"strokeColor":"#a0a0a0","fontFamily":2,"width":400,"height":18,"opacity":70}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

@@ -26,36 +26,13 @@
 
 Flutter에서 **상태(State)**는 UI가 의존하는 모든 데이터를 말한다. 상태가 변하면 UI가 변한다.
 
-```
-상태의 예시
-──────────────────────────────────────────────────
-  카운터 값         → 숫자가 바뀌면 Text 위젯이 바뀜
-  로그인 여부       → true/false에 따라 보이는 화면이 다름
-  서버에서 받은 목록 → 데이터가 오면 ListView가 채워짐
-  선택된 탭 인덱스  → 바뀌면 다른 화면을 보여줌
-  다크모드 설정     → 앱 전체 테마가 바뀜
-  장바구니 아이템   → 어디서든 추가/삭제 가능해야 함
-──────────────────────────────────────────────────
-```
+![상태의 예시](/developer-open-book/diagrams/flutter-step12-state-examples.svg)
 
 ### 1.2 왜 상태관리가 어려운가
 
 단일 위젯 안에서만 사용하는 상태는 `setState()`로 충분하다. 문제는 **여러 위젯이 같은 상태를 공유하거나 서로 다른 화면에서 상태를 변경해야 할 때**다.
 
-```
-상태 공유 문제 예시
-──────────────────────────────────────────────────
-  상품 상세 화면 ──→ [장바구니에 담기]
-                          ↓
-                  장바구니 아이콘의 뱃지 숫자 변경
-                          ↓
-  AppBar의 CartIcon도 알아야 함
-  BottomNavigationBar의 장바구니 탭도 알아야 함
-
-  이 세 위젯이 서로 다른 위치에 있을 때,
-  setState()만으로는 상태를 공유하기 어렵다
-──────────────────────────────────────────────────
-```
+![상태 공유 문제](/developer-open-book/diagrams/flutter-step12-state-sharing-problem.svg)
 
 ### 1.3 전체 개념 지도
 
@@ -91,19 +68,7 @@ Flutter에서 **상태(State)**는 UI가 의존하는 모든 데이터를 말한
 
 Flutter의 핵심 설계 철학은 **Reactive UI**다. 개발자가 직접 "이 텍스트를 새 값으로 바꿔라"고 명령하는 것이 아니라, 상태를 변경하면 Flutter가 알아서 영향받는 UI를 재구성한다.
 
-```
-명령형(Imperative) UI — 다른 프레임워크
-────────────────────────────────────────────
-  counter++
-  textView.setText("카운트: " + counter)   ← 개발자가 직접 변경
-  badge.setCount(counter)                   ← 연관 UI도 직접 업데이트
-
-Reactive UI — Flutter
-────────────────────────────────────────────
-  setState(() => counter++)   ← 상태만 변경
-  // Flutter가 관련 위젯을 자동으로 rebuild
-  // build()가 항상 최신 상태를 반영하는 UI를 반환
-```
+![명령형 UI vs Reactive UI](/developer-open-book/diagrams/flutter-step12-reactive-ui.svg)
 
 ```dart
 // build()는 현재 상태의 "스냅샷"을 반환한다
@@ -123,50 +88,7 @@ Widget build(BuildContext context) {
 
 #### Local State: 단일 위젯 내부
 
-```
-Local State의 특징
-────────────────────────────────────────────
-  • 해당 위젯과 직접 자식들만 사용
-  • 위젯이 트리에서 제거되면 상태도 사라짐
-  • setState()로 관리
-  • 다른 위젯과 공유 불필요
-
-Local State의 예시
-────────────────────────────────────────────
-  폼 입력 필드의 현재 값
-  버튼의 로딩 상태 (true/false)
-  탭 위젯의 현재 선택 인덱스
-  애니메이션 진행 상태
-  비밀번호 표시/숨기기 토글
-  펼침/접힘 상태 (ExpansionTile)
-```
-
-#### Global State: 앱 전체 공유
-
-```
-Global State의 특징
-────────────────────────────────────────────
-  • 여러 화면·위젯이 동시에 읽고 변경
-  • 앱이 실행되는 동안 지속
-  • 상태관리 솔루션 필요 (Provider, Riverpod 등)
-  • Single Source of Truth 원칙 적용
-
-Global State의 예시
-────────────────────────────────────────────
-  로그인한 사용자 정보 (어느 화면에서나 필요)
-  장바구니 목록 (상품 상세·장바구니·결제 화면 공유)
-  다크모드 설정 (앱 전체 영향)
-  알림 개수 (AppBar 뱃지·설정 화면 공유)
-  언어/지역 설정
-```
-
-**판단 기준:**
-
-```
-"이 상태를 다른 화면이나 위젯도 알아야 하는가?"
-    YES → Global State (상태관리 솔루션 사용)
-    NO  → Local State (setState() 충분)
-```
+![Local State vs Global State](/developer-open-book/diagrams/flutter-step12-local-vs-global.svg)
 
 ---
 
@@ -359,13 +281,7 @@ BlocBuilder<CartCubit, int>(
 
 **2026년 Flutter 커뮤니티 트렌드:**
 
-```
-인기 순위 (pub.dev 다운로드 기준)
-  1위: Riverpod     ← 신규 프로젝트 표준으로 자리잡음
-  2위: Provider     ← 레거시 프로젝트 유지·입문용
-  3위: Bloc/Cubit   ← 엔터프라이즈·금융·대규모 팀
-  4위: GetX         ← 빠른 프로토타이핑
-```
+![상태관리 인기 순위](/developer-open-book/diagrams/flutter-step12-popularity.svg)
 
 ---
 
@@ -463,26 +379,7 @@ class WidgetC extends StatelessWidget {
 
 대형 한국 앱의 상태 계층 구조 (참고용):
 
-```
-카카오톡 스타일 상태 구조
-──────────────────────────────────────────────────────
-  Global State (앱 전체)
-    ├── AuthState        (로그인 여부·토큰)
-    ├── UserProfileState (프로필 정보)
-    ├── ChatsState       (채팅 목록)
-    └── NotificationState(알림 뱃지)
-
-  Screen-Level State (화면 단위)
-    ├── ChatRoomState    (특정 채팅방 메시지)
-    ├── SearchState      (검색 결과)
-    └── MediaViewerState (미디어 뷰어 상태)
-
-  Local State (위젯 단위)
-    ├── MessageInputText (입력 중인 텍스트)
-    ├── EmojiKeyboardVisible (이모지 키보드 표시)
-    └── ScrollPosition   (스크롤 위치)
-──────────────────────────────────────────────────────
-```
+![카카오톡 스타일 상태 구조](/developer-open-book/diagrams/flutter-step12-kakao-state.svg)
 
 ---
 

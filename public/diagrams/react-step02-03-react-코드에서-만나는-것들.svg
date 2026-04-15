@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="297" viewBox="-10 -20 474 235">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="474" height="235" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">React 코드에서 만나는 것들</text>
+  <rect x="20" y="45" width="414" height="140" rx="21" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="227" y="82.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">const [count, setCount] = useState(0);</text>
+  <text x="227" y="100.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· const  → 변수 선언 (ES6)</text>
+  <text x="227" y="118.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· [count, setCount] → 배열 Destructuring (ES6)</text>
+  <text x="227" y="136.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· useState(0)  → 함수 호출 (JS 기본)</text>
+  <text x="227" y="154.89999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 이 중 React 고유 문법: 없음. 전부 JavaScript이다.</text>
+</svg>

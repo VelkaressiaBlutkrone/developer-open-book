@@ -74,16 +74,7 @@ Flutter 개발 환경은 처음 세팅할 때 가장 많은 오류를 만나는 
 
 Flutter SDK를 설치하면 아래 구조가 생성된다.
 
-```
-flutter/
-├── bin/
-│   ├── flutter          ← CLI 진입점 (flutter run, flutter build 등)
-│   └── dart             ← Dart SDK CLI (flutter에 내장)
-├── packages/
-│   └── flutter/         ← Flutter Framework 소스코드 (Dart)
-├── examples/            ← 공식 예제 프로젝트
-└── version              ← 현재 SDK 버전 정보
-```
+![Flutter SDK 구조](/developer-open-book/diagrams/flutter-step03-sdk-structure.svg)
 
 **flutter CLI가 하는 일:**
 
@@ -95,17 +86,7 @@ flutter/
 
 `flutter doctor`는 개발 환경 전체를 점검하는 자가진단 도구다. 각 항목의 의미를 알면 오류 발생 시 스스로 해결할 수 있다.
 
-```
-Doctor summary (출력 예시):
-[✓] Flutter (Channel stable, 3.x.x)
-[✓] Android toolchain (Android SDK version 34.x.x)
-[✓] Xcode - develop for iOS and macOS (Xcode 15.x)
-[✓] Chrome - develop for the web
-[✓] Android Studio (version 2023.x)
-[✓] VS Code (version 1.x.x)
-[✓] Connected device (2 available)
-[✓] Network resources
-```
+![flutter doctor 출력 예시 및 기호 의미](/developer-open-book/diagrams/flutter-step03-doctor-output.svg)
 
 | 항목                  | 점검 내용                          | 주요 오류 원인                              |
 | --------------------- | ---------------------------------- | ------------------------------------------- |
@@ -118,51 +99,17 @@ Doctor summary (출력 예시):
 | **Connected device**  | 연결된 기기·에뮬레이터 수          | USB 디버깅 미활성화                         |
 | **Network resources** | pub.dev 등 네트워크 접근 가능 여부 | 방화벽, 프록시 설정                         |
 
-**doctor 출력 기호 의미:**
-
-```
-[✓]  정상
-[!]  경고: 동작은 하지만 권장 설정 미완료
-[✗]  오류: 필수 설정 누락으로 일부 기능 불가
-```
-
 ---
 
 ### 3.3 FVM: 버전 관리가 필요한 이유
 
 실무에서는 여러 Flutter 프로젝트를 동시에 관리하는 상황이 자주 발생한다.
 
-```
-실무 시나리오 (FVM 없을 때의 문제)
-─────────────────────────────────────────────────────────
-  프로젝트 A (레거시): Flutter 3.3.x 필요
-  프로젝트 B (신규):   Flutter 3.22.x 필요
-
-  전역 SDK를 3.22.x로 업그레이드
-       ↓
-  프로젝트 A 빌드 오류 발생
-       ↓
-  다시 3.3.x로 다운그레이드 → 반복...
-─────────────────────────────────────────────────────────
-```
+![FVM 없을 때의 문제](/developer-open-book/diagrams/flutter-step03-fvm-problem.svg)
 
 FVM은 프로젝트 루트에 `.fvm/fvm_config.json`을 생성해 **해당 프로젝트가 사용할 SDK 버전을 고정**한다.
 
-```
-FVM 적용 후
-─────────────────────────────────────────────────────────
-  프로젝트 A/
-  ├── .fvm/fvm_config.json  ← { "flutterSdkVersion": "3.3.10" }
-  └── ...
-
-  프로젝트 B/
-  ├── .fvm/fvm_config.json  ← { "flutterSdkVersion": "3.22.0" }
-  └── ...
-
-  각 프로젝트에서 fvm flutter run 실행 시
-  → 해당 프로젝트의 지정 버전 자동 사용
-─────────────────────────────────────────────────────────
-```
+![FVM 적용 후](/developer-open-book/diagrams/flutter-step03-fvm-solution.svg)
 
 ---
 
@@ -170,34 +117,7 @@ FVM 적용 후
 
 `flutter create my_app` 실행 시 생성되는 구조와 각 폴더의 역할을 이해해야 한다.
 
-```
-my_app/
-├── lib/                   ← Dart 코드 작성 공간 (핵심)
-│   └── main.dart          ← 앱 진입점
-│
-├── android/               ← Android 네이티브 코드 및 빌드 설정
-│   ├── app/
-│   │   └── build.gradle   ← Android 앱 빌드 설정
-│   └── build.gradle
-│
-├── ios/                   ← iOS 네이티브 코드 및 빌드 설정
-│   ├── Runner/
-│   └── Podfile            ← CocoaPods 의존성 선언
-│
-├── web/                   ← 웹 빌드 관련 파일
-│   ├── index.html
-│   └── manifest.json
-│
-├── assets/                ← 이미지, 폰트, JSON 등 정적 에셋 (직접 생성)
-│
-├── test/                  ← 테스트 코드
-│   └── widget_test.dart
-│
-├── pubspec.yaml           ← 프로젝트 메타데이터, 의존성, 에셋 선언 ★
-├── pubspec.lock           ← 의존성 정확한 버전 잠금 (자동 생성)
-├── .dart_tool/            ← Dart 툴 캐시 (자동 생성, git 제외)
-└── .flutter-plugins-dependencies  ← 플러그인 정보 (자동 생성)
-```
+![Flutter 프로젝트 디렉토리 구조](/developer-open-book/diagrams/flutter-step03-project-structure.svg)
 
 **pubspec.yaml 구조:**
 
@@ -257,11 +177,7 @@ flutter:
 
 **Flutter Channel 이해:**
 
-```
-stable   ← 안정 버전 (프로덕션 권장)
-beta     ← 다음 stable 후보 (새 기능 미리 사용)
-main     ← 최신 커밋 (불안정, 실험적)
-```
+![Flutter Channel](/developer-open-book/diagrams/flutter-step03-channels.svg)
 
 ---
 
@@ -296,17 +212,7 @@ Error Lens      ← 인라인 오류 메시지 표시
 
 AVD(Android Virtual Device)는 QEMU 기반 가상화 기술로 Android 기기를 소프트웨어로 시뮬레이션한다.
 
-```
-AVD 실행 구조
-─────────────────────────────────────────────────────────
-  PC OS (macOS/Windows/Linux)
-    └── QEMU 가상화 레이어
-          └── 가상 Android OS
-                └── Flutter 앱 실행
-─────────────────────────────────────────────────────────
-  Intel HAXM 또는 AMD 가속 활성화 시 성능 대폭 향상
-  (하드웨어 가속 없으면 매우 느림)
-```
+![AVD 실행 구조](/developer-open-book/diagrams/flutter-step03-avd-structure.svg)
 
 **AVD 성능 개선 핵심 설정:**
 
@@ -321,18 +227,7 @@ AVD 실행 구조
 
 iOS Simulator는 QEMU 가상화가 아닌 **macOS 네이티브 코드**로 iOS 앱을 실행한다. 따라서 AVD보다 훨씬 빠르고 실기기에 가까운 성능을 보여준다.
 
-```
-iOS Simulator 구조
-─────────────────────────────────────────────────────────
-  macOS (x86_64 또는 Apple Silicon)
-    └── Simulator.app (Xcode 내장)
-          └── iOS 앱 (x86_64 또는 arm64 빌드)
-─────────────────────────────────────────────────────────
-  실기기와의 주요 차이:
-  - 카메라, Touch ID, Face ID, 특정 센서 미지원
-  - 네트워크 조건이 실기기와 다를 수 있음
-  - 메모리 제한이 실기기보다 관대함
-```
+![iOS Simulator 구조](/developer-open-book/diagrams/flutter-step03-ios-simulator.svg)
 
 ---
 

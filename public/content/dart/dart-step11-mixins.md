@@ -982,13 +982,7 @@ void main() {
 >
 > 선형화 순서: `MyClass → M2 → M1 → Base`
 >
-> ```
-> M2 전
-> M1 전
-> Base
-> M1 후
-> M2 후
-> ```
+> <div data-diagram="step11-mixin-linear" data-steps="5" data-alt="Mixin 선형화 실행 순서" data-descriptions="M2의 super.greet() 호출 전 코드가 먼저 실행됩니다|M1의 super.greet() 호출 전 코드가 실행됩니다|Base 클래스의 greet()가 실행됩니다|M1의 super.greet() 호출 후 코드가 실행됩니다|M2의 super.greet() 호출 후 코드가 실행됩니다"></div>
 >
 > `with M1, M2`에서 오른쪽(M2)이 먼저 실행되고, 각 `super.greet()`는 선형화 체인에서 다음 단계를 호출합니다.
 

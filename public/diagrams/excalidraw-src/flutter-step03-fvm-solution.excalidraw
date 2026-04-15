@@ -1,0 +1,18 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":150,"y":10,"text":"FVM 적용 후","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":180,"height":30,"opacity":100},
+    {"type":"rectangle","id":"projA","x":80,"y":60,"width":300,"height":90,"backgroundColor":"#1e3a5f","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"projA_label","x":100,"y":70,"width":260,"height":70,"text":"프로젝트 A/\n├── .fvm/fvm_config.json\n    { \"flutterSdkVersion\": \"3.3.10\" }","fontSize":13,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"projA","textAlign":"left","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"projB","x":400,"y":60,"width":300,"height":90,"backgroundColor":"#2d1b69","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"projB_label","x":420,"y":70,"width":260,"height":70,"text":"프로젝트 B/\n├── .fvm/fvm_config.json\n    { \"flutterSdkVersion\": \"3.22.0\" }","fontSize":13,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"projB","textAlign":"left","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"arrow1","x":230,"y":150,"width":0,"height":30,"strokeColor":"#22c55e","strokeWidth":2,"roughness":1,"opacity":80,"points":[[0,0],[0,30]],"lastCommittedPoint":[0,30],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"line","id":"arrow2","x":550,"y":150,"width":0,"height":30,"strokeColor":"#22c55e","strokeWidth":2,"roughness":1,"opacity":80,"points":[[0,0],[0,30]],"lastCommittedPoint":[0,30],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"result","x":120,"y":190,"width":500,"height":45,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"result_label","x":140,"y":200,"width":460,"height":25,"text":"fvm flutter run → 각 프로젝트의 지정 버전 자동 사용","fontSize":15,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"result","textAlign":"center","verticalAlign":"middle","opacity":100}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

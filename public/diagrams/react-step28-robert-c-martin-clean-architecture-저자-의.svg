@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="641.5" height="669" viewBox="-10 -15 641.5 669">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="641.5" height="669" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Robert C. Martin (Clean Architecture 저자)의 원칙</text>
+  <rect x="20" y="50" width="581.5" height="574" rx="86.1" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&quot;아키텍처는 앱이 무엇을 하는지 소리쳐야 한다&quot;</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">(Your architecture should scream what the application does)</text>
+  <text x="40" y="135.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">❌ Layer-based의 최상위 폴더:</text>
+  <text x="40" y="161.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">components/</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">hooks/</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">services/</text>
+  <text x="40" y="239.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">utils/</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ &quot;이 앱은... 컴포넌트와 훅을 가지고 있다?&quot; (무슨 앱인지 모름)</text>
+  <text x="40" y="291.5" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15" opacity="1">✅ Feature-based의 최상위 폴더:</text>
+  <text x="40" y="317.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">auth/</text>
+  <text x="40" y="343.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">products/</text>
+  <text x="40" y="369.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">cart/</text>
+  <text x="40" y="395.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">orders/</text>
+  <text x="40" y="421.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ &quot;이것은 이커머스 앱이다!&quot; (앱의 목적이 드러남) ★</text>
+  <text x="40" y="447.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">적용 방법:</text>
+  <text x="40" y="473.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· features/ 폴더의 하위를 비즈니스 도메인으로 명명</text>
+  <text x="40" y="499.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 기술적 이름(components, hooks)은 feature 내부에서만 사용</text>
+  <text x="40" y="525.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 최상위 폴더 이름만 봐도 앱의 도메인을 파악할 수 있어야 한다</text>
+</svg>

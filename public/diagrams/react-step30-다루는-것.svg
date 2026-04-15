@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="558" viewBox="-10 -15 560 521">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="560" height="521" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">다루는 것</text>
+  <rect x="20" y="55" width="500" height="268" rx="40.199999999999996" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="0.4"/>
+  <text x="35" y="81.2" fill="#22c55e" font-family="Nunito, sans-serif" font-size="18" opacity="1">다루는 것</text>
+  <text x="45" y="107.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Suspense의 내부 동작 메커니즘 (throw Promise)</text>
+  <text x="45" y="133.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 선언적 데이터 패칭: use() + Suspense + ErrorBoundary</text>
+  <text x="45" y="159.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Suspense 경계 배치 전략과 UX 설계</text>
+  <text x="45" y="185.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Streaming SSR에서 Suspense의 역할</text>
+  <text x="45" y="211.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Skeleton UI와 점진적 로딩 패턴</text>
+  <text x="45" y="237.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 중첩 Suspense와 SuspenseList (미래)</text>
+  <text x="45" y="263.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 명령적 → 선언적 패턴 전환의 의미</text>
+  <text x="45" y="289.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Phase 4 전체 통합 복습</text>
+  <rect x="20" y="338" width="500" height="138" rx="20.7" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="0.4"/>
+  <text x="35" y="364.2" fill="#ef4444" font-family="Nunito, sans-serif" font-size="18" opacity="1">다루지 않는 것</text>
+  <text x="45" y="390.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · TanStack Query의 Suspense 모드 상세</text>
+  <text x="45" y="416.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Next.js의 loading.js 상세 (Step 21에서 학습)</text>
+  <text x="45" y="442.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Offscreen/Activity API (실험적)</text>
+</svg>

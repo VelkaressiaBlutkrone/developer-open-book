@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="632" viewBox="20 -10 680 632">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-10" width="680" height="632" rx="12" fill="#141414"/>
+  <text x="210" y="39.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">React 프로덕션 기술 스택</text>
+  <rect x="50" y="60" width="620" height="94" rx="14.1" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="360" y="111.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">코어 + 라우팅</text>
+  <text x="70" y="112.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· React 19 + TypeScript</text>
+  <text x="70" y="134.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· React Router v6+ 또는 Next.js App Router</text>
+  <rect x="50" y="164" width="620" height="94" rx="14.1" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="360" y="215.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">데이터 + 상태</text>
+  <text x="70" y="216.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· TanStack Query + Axios/fetch</text>
+  <text x="70" y="238.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Zustand (빈번) + Context (드문 전역)</text>
+  <rect x="50" y="268" width="620" height="94" rx="14.1" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="360" y="319.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">폼 + 스타일</text>
+  <text x="70" y="320.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· React Hook Form + Zod</text>
+  <text x="70" y="342.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Tailwind CSS + shadcn/ui</text>
+  <rect x="50" y="372" width="620" height="94" rx="14.1" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="360" y="423.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">테스트 + 품질</text>
+  <text x="70" y="424.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Vitest + RTL + MSW + Playwright</text>
+  <text x="70" y="446.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· ESLint + Prettier + Husky</text>
+  <rect x="50" y="476" width="620" height="116" rx="17.4" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="360" y="538.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">빌드 + 배포 + 모니터링</text>
+  <text x="70" y="528.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Vite (CSR) / Next.js (SSR)</text>
+  <text x="70" y="550.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Vercel + GitHub Actions</text>
+  <text x="70" y="572.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Sentry + web-vitals + react-i18next</text>
+</svg>

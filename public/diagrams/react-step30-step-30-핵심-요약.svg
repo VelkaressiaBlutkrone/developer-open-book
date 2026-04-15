@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="1051" viewBox="-10 -20 528 925">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="528" height="925" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Step 30 핵심 요약</text>
+  <rect x="20" y="45" width="468" height="830" rx="70.2" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 30 핵심 요약</text>
+  <text x="40" y="105.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. Suspense = &quot;비동기 작업을 선언적으로 기다리는 메커니즘&quot;</text>
+  <text x="40" y="133.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ React.lazy(코드 분할), use()(데이터), Streaming SSR</text>
+  <text x="40" y="159.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ &quot;무엇을 기다리는가&quot;에 관심 없이 fallback만 선언</text>
+  <text x="40" y="185.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 내부: Promise를 throw하고 Suspense가 catch</text>
+  <text x="40" y="213.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. 선언적 데이터 패칭 = use() + Suspense + ErrorBoundary</text>
+  <text x="40" y="241.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 컴포넌트: 데이터가 있다고 가정하고 작성 (&quot;Happy Path&quot;)</text>
+  <text x="40" y="267.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 로딩: Suspense fallback이 처리</text>
+  <text x="40" y="293.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 에러: ErrorBoundary가 처리</text>
+  <text x="40" y="319.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 3가지 관심사가 완전히 분리됨</text>
+  <text x="40" y="347.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. Suspense 경계의 위치가 UX를 결정한다 ★</text>
+  <text x="40" y="375.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 전체 하나: 가장 느린 데이터가 모든 것을 차단</text>
+  <text x="40" y="401.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 개별 분리: 각 섹션이 독립적으로 로딩 → 빠른 체감</text>
+  <text x="40" y="427.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 기준: &quot;독립 로딩이 의미 있는가?&quot;, &quot;로딩 시간 차이가 큰가?&quot;</text>
+  <text x="40" y="455.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. Streaming SSR의 청크 단위 = Suspense 경계</text>
+  <text x="40" y="483.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 서버가 Suspense fallback을 먼저 전송</text>
+  <text x="40" y="509.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 데이터 준비되면 실제 HTML을 청크로 추가 전송</text>
+  <text x="40" y="535.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Selective Hydration: 준비된 영역부터 상호작용 활성화</text>
+  <text x="40" y="563.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">5. Skeleton UI가 스피너보다 나은 UX를 제공한다</text>
+  <text x="40" y="591.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 실제 레이아웃과 일치 → CLS 방지</text>
+  <text x="40" y="617.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ &quot;곧 콘텐츠가 나타날 것&quot;이라는 기대감 전달</text>
+  <text x="40" y="643.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ shimmer 애니메이션으로 로딩 중 신호</text>
+  <text x="40" y="671.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">6. AsyncBoundary 패턴으로 Suspense+ErrorBoundary를 통합</text>
+  <text x="40" y="699.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 재사용 가능한 래퍼 컴포넌트</text>
+  <text x="40" y="725.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 위젯별 독립 로딩/에러 → Graceful Degradation</text>
+  <text x="40" y="753.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">7. 명령적 → 선언적 전환은 React의 일관된 철학</text>
+  <text x="40" y="781.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ DOM → React Element (렌더링)</text>
+  <text x="40" y="807.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ if(isLoading) → &lt;Suspense fallback&gt; (로딩)</text>
+  <text x="40" y="833.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ try/catch → &lt;ErrorBoundary&gt; (에러)</text>
+  <text x="40" y="859.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 개발자는 &quot;무엇을&quot; 선언, React가 &quot;어떻게&quot;를 처리</text>
+</svg>

@@ -27,15 +27,7 @@
 
 Flutter Framework는 **전부 Dart로 작성**되어 있다. Widget 정의, 상태 관리, 비동기 처리 모두 Dart 문법에 직접 의존한다. Dart를 이해하지 못하면 Flutter 코드를 읽어도 "왜 이렇게 동작하는지"를 설명할 수 없다.
 
-```
-Flutter 코드 한 줄의 배경
-─────────────────────────────────────────────────────
- final result = await fetchUser();   ← async/await
-                                     ← Null Safety (result는 non-nullable)
- final (name, age) = result;         ← Records & Patterns (Dart 3.3+)
-─────────────────────────────────────────────────────
-이 세 줄을 이해하려면 Dart 핵심 개념 전부가 필요하다
-```
+![Flutter 코드 한 줄의 배경](/developer-open-book/diagrams/flutter-step02-dart-code-background.svg)
 
 ### 1.2 Dart 언어의 특징
 
@@ -193,10 +185,7 @@ class Dog extends Animal {
 
 Dart는 **단일 상속**만 지원하지만, `mixin`으로 여러 기능을 클래스에 합성할 수 있다.
 
-```
-상속 (IS-A):   Dog IS-A Animal
-Mixin (HAS-A 능력): Dog HAS-A Swimmable 능력, HAS-A Runnable 능력
-```
+![상속 vs Mixin 비교](/developer-open-book/diagrams/flutter-step02-inheritance-vs-mixin.svg)
 
 ```dart
 mixin Swimmable {
@@ -238,20 +227,7 @@ duck.run();   // 🏃 달리는 중...
 
 Dart는 기본적으로 **단일 스레드**에서 동작한다. 그러나 이벤트 루프(Event Loop)를 통해 I/O 대기 중에 다른 작업을 처리할 수 있어 UI가 멈추지 않는다.
 
-```
-Dart 이벤트 루프 구조
-─────────────────────────────────────────────
-[코드 실행] → [이벤트 큐 대기] → [이벤트 처리] → [반복]
-
-  동기 코드 먼저 실행
-       ↓
-  MicroTask 큐 처리 (Future.microtask, scheduleMicrotask)
-       ↓
-  Event 큐 처리 (타이머, I/O, 사용자 입력)
-       ↓
-  반복
-─────────────────────────────────────────────
-```
+![Dart 이벤트 루프 구조](/developer-open-book/diagrams/flutter-step02-event-loop.svg)
 
 #### Future: 단일 비동기 결과
 
@@ -535,31 +511,7 @@ context.theme.primaryColor
 
 채팅 앱에서 서버로부터 수천 건의 메시지 목록을 JSON으로 받아 파싱하는 상황을 생각해보자.
 
-**async/await만 사용할 때:**
-
-```
-메인 Isolate (UI + 연산)
-────────────────────────────────────────
-[UI 렌더링] → [HTTP 대기(await)] → [JSON 파싱 시작]
-                                         ↓
-                              CPU 100% 점유, UI 스레드 블로킹
-                                         ↓
-                              16ms 초과 → Jank 발생 → 화면 멈춤
-```
-
-**compute() 사용 시:**
-
-```
-메인 Isolate (UI 전담)
-────────────────────────────────────────────
-[UI 렌더링] → [HTTP 대기] → [compute 호출] → [결과 수신 → UI 업데이트]
-                                   ↓ 메시지 전달
-백그라운드 Isolate (파싱 전담)
-────────────────────────────────────────────
-               [JSON 파싱 CPU 점유] → [결과 반환]
-```
-
-UI는 파싱 중에도 60fps를 유지한다.
+![async/await vs compute() 비교](/developer-open-book/diagrams/flutter-step02-async-vs-compute.svg)
 
 ---
 

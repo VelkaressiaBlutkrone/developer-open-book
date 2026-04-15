@@ -26,14 +26,7 @@
 
 Material Design은 Google이 2014년 발표한 **디자인 언어(Design Language)**다. 버튼, 카드, 내비게이션 등 UI 컴포넌트의 모양·동작·접근성 기준을 정의한다. Flutter는 Material Design 3(M3)를 공식 지원하며, 수십 개의 Material 위젯을 제공한다.
 
-```
-Material Design 버전 역사
-──────────────────────────────────────────────────
-  Material 1 (2014): 기본 플랫(flat) + 그림자 중심 디자인
-  Material 2 (2018): 더 정교한 타입·색상·공간 시스템
-  Material 3 (2021): 개인화·접근성·동적 색상 강화 ← Flutter 현재 기본
-──────────────────────────────────────────────────
-```
+![Material Design 버전 역사](/developer-open-book/diagrams/flutter-step08-material-version-history.svg)
 
 ### 1.2 왜 Material 시스템을 배워야 하는가
 
@@ -41,27 +34,7 @@ Material Design 버전 역사
 
 ### 1.3 전체 개념 지도
 
-```
-Material Design 시스템
-    │
-    ├── Scaffold          ← 앱 화면 뼈대 (슬롯 기반 레이아웃)
-    │     ├── AppBar      ← 상단 툴바
-    │     ├── body        ← 메인 콘텐츠 영역
-    │     ├── drawer      ← 좌측 슬라이드 메뉴
-    │     ├── endDrawer   ← 우측 슬라이드 메뉴
-    │     ├── bottomNavigationBar ← 하단 탭 바
-    │     ├── floatingActionButton ← 우하단 플로팅 버튼
-    │     └── bottomSheet ← 하단 시트
-    │
-    ├── Theme 시스템
-    │     ├── ThemeData   ← 전체 스타일 정의
-    │     │     ├── ColorScheme (색상 팔레트)
-    │     │     ├── TextTheme   (타이포그래피)
-    │     │     └── 위젯별 테마 (AppBarTheme, CardTheme ...)
-    │     └── Theme.of(context) ← InheritedWidget으로 전파
-    │
-    └── AdaptiveTheme     ← 라이트/다크 전환 + 시스템 연동
-```
+![Material Design 시스템 개념 지도](/developer-open-book/diagrams/flutter-step08-concept-map.svg)
 
 ---
 
@@ -333,15 +306,7 @@ class _MainScreenState extends State<MainScreen> {
 
 `MaterialApp`이 `ThemeData`를 `InheritedWidget` 메커니즘으로 위젯 트리 전체에 전파한다. 모든 Material 위젯은 `Theme.of(context)`로 현재 테마를 가져와 자신의 스타일을 결정한다.
 
-```
-MaterialApp (ThemeData 보유)
-    │
-    └── InheritedWidget으로 ThemeData 전파
-          │
-          ├── Scaffold → AppBar 색상: theme.colorScheme.primary
-          ├── ElevatedButton → 색상: theme.colorScheme.primary
-          └── Text → 스타일: theme.textTheme.bodyMedium
-```
+![ThemeData 전파 원리](/developer-open-book/diagrams/flutter-step08-theme-propagation.svg)
 
 ```dart
 MaterialApp(
@@ -388,21 +353,7 @@ MaterialApp(
 
 Material 3의 핵심 기능으로, **씨앗 색상(seed color)** 하나를 지정하면 전체 색상 팔레트를 자동으로 생성한다.
 
-```
-ColorScheme.fromSeed(seedColor: Color(0xFF6C63FF))
-──────────────────────────────────────────────────────
-  primary          → 앱의 주 색상 (버튼, AppBar 등)
-  onPrimary        → primary 위의 텍스트/아이콘 색
-  primaryContainer → primary의 밝은 배경 버전
-  secondary        → 보조 색상
-  tertiary         → 세 번째 강조 색상
-  surface          → 카드·시트 배경
-  onSurface        → surface 위의 텍스트 색
-  error            → 오류 상태 색상
-  background       → 전체 배경색
-──────────────────────────────────────────────────────
-라이트·다크 모두 씨앗 하나로 일관된 팔레트 생성
-```
+![ColorScheme.fromSeed 자동 팔레트 생성](/developer-open-book/diagrams/flutter-step08-color-scheme-seed.svg)
 
 #### 테마 값 활용
 
@@ -431,21 +382,7 @@ Widget build(BuildContext context) {
 
 `MaterialApp`의 `themeMode`는 시스템 설정을 따르거나 light/dark로 고정할 수 있다. 그러나 **런타임에 사용자가 직접 테마를 전환**하거나, 선택한 테마를 **앱 재시작 후에도 기억**하려면 `adaptive_theme` 패키지가 필요하다.
 
-```
-기본 ThemeData의 한계
-──────────────────────────────────────────────────────
-  themeMode: ThemeMode.system   → 시스템 설정만 따름
-  themeMode: ThemeMode.light    → 고정 (런타임 변경 불가)
-  앱 재시작 후 선택 초기화       → SharedPreferences 직접 구현 필요
-
-AdaptiveTheme 장점
-──────────────────────────────────────────────────────
-  AdaptiveTheme.of(context).setLight()   → 라이트 전환
-  AdaptiveTheme.of(context).setDark()    → 다크 전환
-  AdaptiveTheme.of(context).setSystem()  → 시스템 연동
-  선택한 테마 자동 저장 (SharedPreferences 불필요)
-  앱 재시작 후 이전 선택 복원
-```
+![기본 ThemeData vs AdaptiveTheme](/developer-open-book/diagrams/flutter-step08-adaptive-theme.svg)
 
 **설치:**
 
@@ -558,23 +495,7 @@ ScaffoldMessenger.of(context).showSnackBar(
 
 Netflix 앱처럼 하단 탭과 풀스크린 콘텐츠가 공존하는 구조를 분석한다.
 
-```
-Netflix 앱 구조 분해
-──────────────────────────────────────────────────────
-  Scaffold
-    appBar: null (풀스크린)
-    body: IndexedStack
-      [0] HomeScreen
-            └── CustomScrollView
-                  ├── SliverAppBar (투명, 오버랩)
-                  └── SliverList (콘텐츠)
-      [1] SearchScreen
-      [2] ComingSoonScreen
-      [3] DownloadsScreen
-      [4] ProfileScreen
-    bottomNavigationBar: NavigationBar (반투명)
-──────────────────────────────────────────────────────
-```
+![Netflix 앱 Scaffold 구조](/developer-open-book/diagrams/flutter-step08-netflix-structure.svg)
 
 핵심: AppBar 없이 `extendBodyBehindAppBar: true`와 `SliverAppBar`를 조합해 콘텐츠가 상단까지 올라오는 풀스크린 효과를 구현한다.
 

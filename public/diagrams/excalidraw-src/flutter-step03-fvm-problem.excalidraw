@@ -1,0 +1,23 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":120,"y":10,"text":"FVM 없을 때의 문제","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":300,"height":30,"opacity":100},
+    {"type":"rectangle","id":"projA","x":80,"y":60,"width":280,"height":40,"backgroundColor":"#1e3a5f","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"projA_label","x":100,"y":68,"width":240,"height":25,"text":"프로젝트 A (레거시): Flutter 3.3.x","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"projA","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"projB","x":380,"y":60,"width":280,"height":40,"backgroundColor":"#2d1b69","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"projB_label","x":400,"y":68,"width":240,"height":25,"text":"프로젝트 B (신규): Flutter 3.22.x","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"projB","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"arrow1","x":360,"y":100,"width":0,"height":30,"strokeColor":"#a0a0a0","strokeWidth":2,"roughness":1,"opacity":80,"points":[[0,0],[0,30]],"lastCommittedPoint":[0,30],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"upgrade","x":200,"y":140,"width":340,"height":40,"backgroundColor":"#5c3d1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"upgrade_label","x":220,"y":148,"width":300,"height":25,"text":"전역 SDK를 3.22.x로 업그레이드","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"upgrade","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"arrow2","x":360,"y":180,"width":0,"height":30,"strokeColor":"#a0a0a0","strokeWidth":2,"roughness":1,"opacity":80,"points":[[0,0],[0,30]],"lastCommittedPoint":[0,30],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"error","x":200,"y":220,"width":340,"height":40,"backgroundColor":"#5c1a1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#ef4444","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"error_label","x":220,"y":228,"width":300,"height":25,"text":"프로젝트 A 빌드 오류 발생!","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"error","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"arrow3","x":360,"y":260,"width":0,"height":30,"strokeColor":"#a0a0a0","strokeWidth":2,"roughness":1,"opacity":80,"points":[[0,0],[0,30]],"lastCommittedPoint":[0,30],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"downgrade","x":200,"y":300,"width":340,"height":40,"backgroundColor":"#5c3d1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"downgrade_label","x":220,"y":308,"width":300,"height":25,"text":"다시 3.3.x로 다운그레이드 → 반복...","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"downgrade","textAlign":"center","verticalAlign":"middle","opacity":100}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

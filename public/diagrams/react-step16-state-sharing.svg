@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="387" viewBox="20 -20 540 348">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="540" height="348" rx="12" fill="#141414"/>
+  <text x="50" y="28" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="20" opacity="1">Custom Hook은 State를 공유하지 않는다</text>
+  <rect x="50" y="55" width="220" height="80" rx="12" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="60" y="72.6" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="14" opacity="1">ComponentA</text>
+  <text x="65" y="93.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">useCounter(0)</text>
+  <text x="65" y="112.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">count = 0 → 독립 인스턴스 A</text>
+  <rect x="310" y="55" width="220" height="80" rx="12" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="320" y="72.6" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="14" opacity="1">ComponentB</text>
+  <text x="325" y="93.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">useCounter(0)</text>
+  <text x="325" y="112.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">count = 0 → 독립 인스턴스 B</text>
+  <rect x="50" y="155" width="480" height="70" rx="10.5" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="60" y="173.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· A의 count와 B의 count는 완전히 독립!</text>
+  <text x="60" y="193.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· A에서 increment해도 B의 count는 변하지 않는다</text>
+  <text x="60" y="213.7" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 공유되는 것은 &quot;로직(패턴)&quot;이지 &quot;값(State)&quot;이 아니다</text>
+  <text x="60" y="257.6" fill="#06b6d4" font-family="Nunito, sans-serif" font-size="14" opacity="1">State를 공유하려면:</text>
+  <rect x="50" y="270" width="160" height="28" rx="4.2" fill="#1a4d4d" stroke="#06b6d4" stroke-width="1" opacity="1"/>
+  <text x="130" y="287.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Lifting State Up</text>
+  <rect x="230" y="270" width="140" height="28" rx="4.2" fill="#1a4d4d" stroke="#06b6d4" stroke-width="1" opacity="1"/>
+  <text x="300" y="287.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Context API</text>
+  <rect x="390" y="270" width="140" height="28" rx="4.2" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="460" y="287.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">전역 상태 관리</text>
+</svg>

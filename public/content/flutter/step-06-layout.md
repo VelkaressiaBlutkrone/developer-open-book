@@ -32,34 +32,13 @@ RenderFlex children have non-zero flex but incoming height constraints are unbou
 
 또는 위젯이 예상과 다르게 화면 전체를 차지하거나, 반대로 전혀 보이지 않는 경우도 자주 겪는다. 이런 문제들은 모두 **Flutter 레이아웃의 3원칙**을 모르기 때문에 발생한다.
 
-```
-Flutter 레이아웃 3원칙
-
-  ① Constraints go down
-     부모가 자식에게 "너는 이 범위 안에서만 그려야 해"라고 제약을 내려보낸다
-
-  ② Sizes go up
-     자식이 제약 범위 안에서 자신의 크기를 결정하고 부모에게 보고한다
-
-  ③ Parent sets position
-     부모가 자식을 어디에 배치할지 결정한다 (자식은 자신의 위치를 모른다)
-```
+![Flutter 레이아웃 3원칙](/developer-open-book/diagrams/flutter-step06-three-principles.svg)
 
 이 세 문장을 이해하면 대부분의 레이아웃 오류를 스스로 진단하고 해결할 수 있다.
 
 ### 1.2 왜 Layout 시스템부터 배워야 하는가
 
-```
-Layout을 모르면 겪는 문제들
-────────────────────────────────────────────────
-  "왜 Column 안의 ListView가 오류를 낸다?"
-  "왜 Container에 height를 줬는데 반응이 없다?"
-  "왜 Row 안에서 Text가 넘쳐 overflow가 난다?"
-  "Expanded와 Flexible 중 뭘 써야 하지?"
-  "SizedBox와 Container 중 언제 뭘 쓰지?"
-────────────────────────────────────────────────
-  → 모두 Constraints 흐름을 모르기 때문
-```
+![Layout을 모르면 겪는 문제들](/developer-open-book/diagrams/flutter-step06-layout-problems.svg)
 
 ### 1.3 전체 개념 지도
 

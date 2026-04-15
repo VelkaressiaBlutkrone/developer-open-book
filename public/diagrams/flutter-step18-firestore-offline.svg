@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="770" height="290" viewBox="20 -20 770 290">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="770" height="290" rx="12" fill="#141414"/>
+  <text x="50" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">Firestore 온라인/오프라인 동작</text>
+  <rect x="50" y="60" width="340" height="120" rx="18" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="220" y="124.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">온라인 상태</text>
+  <text x="60" y="106.7" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">앱 → Firestore 읽기</text>
+  <text x="60" y="124.9" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">→ 클라우드 DB에서 데이터 반환</text>
+  <text x="60" y="143.1" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">→ 로컬 캐시에도 저장</text>
+  <rect x="420" y="60" width="340" height="120" rx="18" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="590" y="124.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">오프라인 상태</text>
+  <text x="430" y="106.7" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="13" opacity="1">앱 → 로컬 캐시에서 반환</text>
+  <text x="430" y="124.9" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="13" opacity="1">앱 → Pending Write로 로컬 저장</text>
+  <text x="430" y="143.1" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="13" opacity="1">→ 온라인 복귀 시 자동 동기화</text>
+  <rect x="100" y="200" width="600" height="40" rx="6" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="400" y="223.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">개발자가 별도 구현 없음 — Firestore가 자동 처리</text>
+</svg>

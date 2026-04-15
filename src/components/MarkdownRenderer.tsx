@@ -1,8 +1,10 @@
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import rehypeRaw from 'rehype-raw'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import type { Components } from 'react-markdown'
+import { InteractiveExcalidrawDiagram } from './InteractiveExcalidrawDiagram'
 
 const customCodeTheme = {
   ...oneDark,
@@ -93,6 +95,25 @@ const components: Components = {
       </div>
     )
   },
+  div({ node, children, ...props }: any) {
+    const el = node as any;
+    const diagramAttr = el?.properties?.['dataDiagram'];
+    if (diagramAttr) {
+      const steps = parseInt(el?.properties?.['dataSteps'] || '3', 10);
+      const basePath = `/developer-open-book/diagrams/${diagramAttr}`;
+      const rawDesc = el?.properties?.['dataDescriptions'] || '';
+      const descriptions = rawDesc ? String(rawDesc).split('|') : [];
+      return (
+        <InteractiveExcalidrawDiagram
+          basePath={basePath}
+          totalSteps={steps}
+          descriptions={descriptions}
+          alt={String(el?.properties?.['dataAlt'] || 'Interactive diagram')}
+        />
+      );
+    }
+    return <div {...props}>{children}</div>;
+  },
 }
 
 function extractText(children: React.ReactNode): string {
@@ -107,7 +128,7 @@ function extractText(children: React.ReactNode): string {
 export default function MarkdownRenderer({ content }: { content: string }) {
   return (
     <div className="markdown-body">
-      <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>
+      <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} components={components}>
         {content}
       </ReactMarkdown>
     </div>

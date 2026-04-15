@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="722" viewBox="-10 -20 360 433">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="360" height="433" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">React 데이터 흐름 모델</text>
+  <rect x="20" y="45" width="300" height="338" rx="45" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="170" y="99.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">부모(Parent)</text>
+  <text x="170" y="117.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">State 소유</text>
+  <text x="170" y="135.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼  Props (데이터)  ▼  Props (데이터)</text>
+  <text x="170" y="153.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">자식 A  자식 B</text>
+  <text x="170" y="172" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼ Callback 호출  ▼ Callback 호출</text>
+  <text x="170" y="190.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">&quot;이런 일이  &quot;이런 일이</text>
+  <text x="170" y="208.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">일어났다&quot;  일어났다&quot;</text>
+  <text x="170" y="226.60000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="170" y="244.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">부모가 State 변경</text>
+  <text x="170" y="263" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="170" y="281.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">새로운 Props로 자식들 재렌더링</text>
+  <text x="170" y="299.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">● 데이터:  부모 → 자식  (Props)</text>
+  <text x="170" y="317.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">● 이벤트:  자식 → 부모  (Callback 호출)</text>
+  <text x="170" y="335.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">● 데이터의 &quot;흐름&quot;은 항상 단방향이다</text>
+</svg>

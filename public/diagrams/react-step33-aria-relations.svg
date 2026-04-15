@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="528" viewBox="20 -10 680 528">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-10" width="680" height="528" rx="12" fill="#141414"/>
+  <text x="210" y="39.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">ARIA 속성 연결 구조</text>
+  <rect x="50" y="60" width="620" height="72" rx="10.799999999999999" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="360" y="100.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">&lt;label htmlFor=&quot;email-input&quot;&gt;</text>
+  <text x="70" y="112.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· htmlFor ↔ id 연결</text>
+  <rect x="50" y="142" width="620" height="138" rx="20.7" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="360" y="215.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">&lt;input&gt; 요소 속성</text>
+  <text x="70" y="194.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· id=&quot;email-input&quot; ← label과 연결</text>
+  <text x="70" y="216.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· aria-invalid=&quot;true&quot; ← 에러 상태 선언</text>
+  <text x="70" y="238.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· aria-describedby=&quot;err help&quot; ← 설명 요소 연결</text>
+  <text x="70" y="260.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· aria-required=&quot;true&quot; ← 필수 항목 선언</text>
+  <rect x="50" y="290" width="620" height="94" rx="14.1" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="360" y="341.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">연결된 설명 요소</text>
+  <text x="70" y="342.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· &lt;p id=&quot;err&quot; role=&quot;alert&quot;&gt; ← 에러 (즉시 읽힘)</text>
+  <text x="70" y="364.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· &lt;p id=&quot;help&quot;&gt; ← 도움말 텍스트</text>
+  <rect x="50" y="394" width="620" height="94" rx="14.1" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="360" y="445.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">스크린 리더 출력</text>
+  <text x="70" y="446.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· &quot;이메일, 필수 항목, 텍스트 입력, 유효하지 않음&quot;</text>
+  <text x="70" y="468.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· &quot;유효하지 않은 이메일, 업무용 이메일을 입력하세요&quot;</text>
+</svg>

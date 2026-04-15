@@ -25,16 +25,7 @@
 
 Flutter 입문 시 대부분 `lib/` 아래에 파일을 무작위로 배치한다. 앱이 커질수록 이 방식은 치명적인 문제를 낳는다.
 
-```
-나쁜 프로젝트 구조의 증상
-──────────────────────────────────────────────────────
-  "이 비즈니스 로직이 어느 파일에 있지?"
-  "API 변경 시 수십 개 파일을 수정해야 한다"
-  "이 위젯을 테스트하려면 서버가 필요하다"
-  "새 팀원이 코드 구조를 이해하는 데 2주 걸린다"
-  "기능 하나 추가했더니 다른 기능이 깨졌다"
-──────────────────────────────────────────────────────
-```
+![나쁜 프로젝트 구조의 증상](/developer-open-book/diagrams/flutter-step20-bad-structure-symptoms.svg)
 
 좋은 프로젝트 구조는 이 모든 문제를 예방한다.
 
@@ -182,19 +173,7 @@ lib/
 
 ### 3.3 계층 책임과 의존성 방향
 
-```
-의존성 방향 (화살표 = 의존)
-──────────────────────────────────────────────────────
-  Presentation ──→ Application ──→ Domain
-                                      ↑
-  Data ──────────────────────────────→ Domain
-
-  핵심 규칙: Domain은 아무것도 의존하지 않는다
-  → Domain은 Dart 순수 코드로만 구성
-  → Flutter SDK·Dio·Hive·Firebase 의존성 없음
-  → 가장 쉽게 단위 테스트 가능
-──────────────────────────────────────────────────────
-```
+![의존성 방향](/developer-open-book/diagrams/flutter-step20-dependency-flow.svg)
 
 #### Presentation Layer 책임
 
@@ -426,58 +405,17 @@ class UnauthorizedFailure extends Failure { const UnauthorizedFailure() : super(
 
 ### 4.1 Airbnb 클론: Feature 구조 설계
 
-```
-Airbnb 클론 Feature 분해
-──────────────────────────────────────────────────────
-  features/
-  ├── auth/          로그인·회원가입·소셜 로그인
-  ├── search/        날짜·인원·지역 검색
-  ├── listing/       숙소 목록·상세·사진
-  ├── booking/       예약·결제·확인
-  ├── host/          호스트 관리·등록
-  ├── message/       메시지·알림
-  └── profile/       프로필·리뷰·설정
-
-  core/
-  ├── network/       Dio + Auth Interceptor
-  ├── maps/          Google Maps 설정
-  ├── payment/       결제 SDK
-  └── analytics/     Firebase Analytics
-──────────────────────────────────────────────────────
-```
+![Airbnb 클론 Feature 분해](/developer-open-book/diagrams/flutter-step20-airbnb-features.svg)
 
 **API 교체 시 유지보수 효과:**
 
-```
-기존 REST API → GraphQL로 교체할 때
-
-Feature 기반 + Repository 패턴:
-  변경 파일: data/datasources/listing_remote_datasource.dart
-  변경 없는 파일: domain/entities/, application/, presentation/ 전부
-
-Layer 기반 (비구조화):
-  변경 파일: services/listing_service.dart + 이를 호출하는 모든 화면
-  → 10+ 파일 수정 필요
-```
+![API 교체 시 유지보수 효과](/developer-open-book/diagrams/flutter-step20-api-change-impact.svg)
 
 ---
 
 ### 4.2 팀별 Feature 분담
 
-```
-5인 팀에서 Feature 기반 구조의 협업 효과
-──────────────────────────────────────────────────────
-  팀원 A → features/auth/    담당
-  팀원 B → features/search/  담당
-  팀원 C → features/listing/ 담당
-  팀원 D → features/booking/ 담당
-  팀원 E → core/             담당
-
-  → 각 팀원이 자신의 Feature 폴더만 수정
-  → Git 충돌 최소화
-  → 다른 팀원 코드 이해 없이 독립 개발 가능
-──────────────────────────────────────────────────────
-```
+![5인 팀 Feature 기반 협업 효과](/developer-open-book/diagrams/flutter-step20-team-feature-allocation.svg)
 
 ---
 

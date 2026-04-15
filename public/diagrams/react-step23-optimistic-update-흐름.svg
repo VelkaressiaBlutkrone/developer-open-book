@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="467" viewBox="-10 -20 587.5 457">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="587.5" height="457" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Optimistic Update 흐름</text>
+  <rect x="20" y="45" width="527.5" height="362" rx="54.3" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Optimistic Update 흐름</text>
+  <text x="40" y="104.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">사용자가 체크박스 클릭</text>
+  <text x="40" y="130.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">▼</text>
+  <text x="40" y="156.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">onMutate:</text>
+  <text x="40" y="183.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. 진행 중 리패칭 취소</text>
+  <text x="40" y="213.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. 현재 캐시 백업</text>
+  <text x="40" y="243.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. 캐시를 낙관적으로 변경 → UI 즉시 반영 ★</text>
+  <text x="40" y="272.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── 서버 요청 진행 중...</text>
+  <text x="40" y="298.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── 성공 → onSuccess → onSettled → invalidate → 서버 데이터로 확정</text>
+  <text x="40" y="324.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── 실패 → onError → 백업으로 롤백 → onSettled → invalidate</text>
+  <text x="40" y="350.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">사용자 체감: 체크박스가 &quot;즉시&quot; 반응한다 (서버 응답 대기 없음)</text>
+  <text x="40" y="376.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">실패 시: 체크가 &quot;취소&quot;되고 에러 메시지 표시</text>
+</svg>

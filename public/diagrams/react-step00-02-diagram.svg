@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="758.2" height="293" viewBox="-20 -20 758.2 292.6">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-20" y="-20" width="758.2" height="292.6" rx="12" fill="#141414"/>
+  <text x="10" y="25.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Phase 0 (환경)</text>
+  <rect x="220" y="10" width="300" height="20" rx="0" fill="#555555" stroke="#a0a0a0" stroke-width="2" opacity="1"/>
+  <rect x="220" y="10" width="100" height="20" rx="0" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="530" y="23.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">Remembering ~ Understanding</text>
+  <text x="10" y="55.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Phase 1 (Core)</text>
+  <rect x="220" y="40" width="300" height="20" rx="0" fill="#555555" stroke="#a0a0a0" stroke-width="2" opacity="1"/>
+  <rect x="220" y="40" width="150" height="20" rx="0" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="530" y="53.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">Understanding ~ Applying</text>
+  <text x="10" y="85.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Phase 2 (Hooks)</text>
+  <rect x="220" y="70" width="300" height="20" rx="0" fill="#555555" stroke="#a0a0a0" stroke-width="2" opacity="1"/>
+  <rect x="220" y="70" width="150" height="20" rx="0" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="530" y="83.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">Applying ~ Analyzing</text>
+  <text x="10" y="115.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Phase 3 (Routing)</text>
+  <rect x="220" y="100" width="300" height="20" rx="0" fill="#555555" stroke="#a0a0a0" stroke-width="2" opacity="1"/>
+  <rect x="220" y="100" width="150" height="20" rx="0" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="530" y="113.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">Applying ~ Analyzing</text>
+  <text x="10" y="145.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Phase 4 (상태)</text>
+  <rect x="220" y="130" width="300" height="20" rx="0" fill="#555555" stroke="#a0a0a0" stroke-width="2" opacity="1"/>
+  <rect x="220" y="130" width="150" height="20" rx="0" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="530" y="143.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">Analyzing ~ Evaluating</text>
+  <text x="10" y="175.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Phase 5 (타입/폼)</text>
+  <rect x="220" y="160" width="300" height="20" rx="0" fill="#555555" stroke="#a0a0a0" stroke-width="2" opacity="1"/>
+  <rect x="220" y="160" width="200" height="20" rx="0" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="530" y="173.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">Applying ~ Evaluating</text>
+  <text x="10" y="205.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Phase 6 (테스트)</text>
+  <rect x="220" y="190" width="300" height="20" rx="0" fill="#555555" stroke="#a0a0a0" stroke-width="2" opacity="1"/>
+  <rect x="220" y="190" width="150" height="20" rx="0" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="530" y="203.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">Analyzing ~ Evaluating</text>
+  <text x="10" y="235.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Phase 7 (DevOps)</text>
+  <rect x="220" y="220" width="300" height="20" rx="0" fill="#555555" stroke="#a0a0a0" stroke-width="2" opacity="1"/>
+  <rect x="220" y="220" width="100" height="20" rx="0" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="530" y="233.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">Evaluating ~ Creating</text>
+</svg>

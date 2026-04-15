@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="208" viewBox="20 -15 760 208.2">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-15" width="760" height="208.2" rx="12" fill="#141414"/>
+  <text x="120" y="36.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">Material Design 버전 역사</text>
+  <rect x="50" y="70" width="200" height="60" rx="9" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="150" y="93.60000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Material 1</text>
+  <text x="150" y="114.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">(2014)</text>
+  <defs><marker id="arrow-a1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M250,100 L300,100" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a1)"/>
+  <rect x="300" y="70" width="200" height="60" rx="9" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="400" y="93.60000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Material 2</text>
+  <text x="400" y="114.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">(2018)</text>
+  <defs><marker id="arrow-a2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M500,100 L550,100" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a2)"/>
+  <rect x="550" y="70" width="200" height="60" rx="9" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="650" y="93.60000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Material 3</text>
+  <text x="650" y="114.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">(2021)</text>
+  <text x="50" y="156.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">플랫(flat) + 그림자 디자인</text>
+  <text x="300" y="156.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">정교한 타입·색상·공간</text>
+  <text x="550" y="156.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">개인화·접근성·동적 색상</text>
+  <text x="600" y="56.7" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">← Flutter 현재 기본</text>
+</svg>

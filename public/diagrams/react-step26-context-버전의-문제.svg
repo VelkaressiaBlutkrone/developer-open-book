@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="701" height="487" viewBox="-10 -15 701 487">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="701" height="487" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Context 버전의 문제:</text>
+  <rect x="20" y="50" width="641" height="392" rx="58.8" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· CartContext.Provider value={{ items, addItem, removeItem, ... }}</text>
+  <text x="40" y="109.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 아이템 추가 시 value 객체 변경 → 헤더의 장바구니 아이콘 리렌더링</text>
+  <text x="40" y="135.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 상품 목록 페이지도 리렌더링 (장바구니와 무관한데!)</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· useMemo로 value를 안정화해도 items가 변하면 전부 리렌더링</text>
+  <text x="40" y="187.5" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15" opacity="1">Zustand 버전의 해결:</text>
+  <text x="40" y="213.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 헤더: useCartStore(state =&gt; state.getTotalCount())</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ totalCount가 변할 때만 리렌더링</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 상품 카드: useCartStore(state =&gt; state.addItem)</text>
+  <text x="40" y="291.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ addItem 함수 참조 불변 → 리렌더링 없음!</text>
+  <text x="40" y="317.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 장바구니 페이지: useCartStore(useShallow(state =&gt; state.items))</text>
+  <text x="40" y="343.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ items가 변할 때만 리렌더링 (정상)</text>
+</svg>

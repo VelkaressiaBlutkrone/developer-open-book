@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="583" viewBox="-10 -20 423 411">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="423" height="411" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">Step 01 핵심 개념 관계도</text>
+  <rect x="20" y="45" width="363" height="316" rx="47.4" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="201.5" y="97.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">개발자 PC</text>
+  <text x="201.5" y="115.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Node.js (런타임)</text>
+  <text x="201.5" y="133.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">패키지 매니저  package.json  node_modules</text>
+  <text x="201.5" y="151.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">(npm/pnpm/yarn)  (설계도)  (설치된 패키지)</text>
+  <text x="201.5" y="170.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Vite (빌드 도구)</text>
+  <text x="201.5" y="188.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">개발 서버 (Dev)  ESModule  HMR</text>
+  <text x="201.5" y="206.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">빌드 (Prod)  Rollup  번들/최적화</text>
+  <text x="201.5" y="224.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">VS Code (편집기)</text>
+  <text x="201.5" y="242.89999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">ESLint (품질)</text>
+  <text x="201.5" y="261.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Prettier (스타일)</text>
+  <text x="201.5" y="279.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="201.5" y="297.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">브라우저 (런타임)</text>
+  <text x="201.5" y="315.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">번들된 JS + CSS + 에셋 → React가 DOM 생성·업데이트</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="618" viewBox="-10 -15 599 617">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="599" height="617" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">src/</text>
+  <rect x="20" y="50" width="539" height="522" rx="78.3" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── components/          ← 모든 컴포넌트</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── common/          ← 공통 UI (Button, Input, Modal)</text>
+  <text x="40" y="135.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── layout/          ← 레이아웃 (Header, Footer, Sidebar)</text>
+  <text x="40" y="161.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── features/        ← 기능별 컴포넌트 (ProductCard, CartItem)</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── hooks/               ← 모든 Custom Hook</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── services/            ← 모든 API 서비스</text>
+  <text x="40" y="239.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── stores/              ← 모든 Zustand Store</text>
+  <text x="40" y="265.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── contexts/            ← 모든 Context</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── pages/               ← 페이지 컴포넌트</text>
+  <text x="40" y="317.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── utils/               ← 유틸리티 함수</text>
+  <text x="40" y="343.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── types/               ← TypeScript 타입 (사용 시)</text>
+  <text x="40" y="369.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── constants/           ← 상수</text>
+  <text x="40" y="395.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── assets/              ← 이미지, 폰트 등</text>
+  <text x="40" y="421.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── styles/              ← 전역 스타일</text>
+  <text x="40" y="447.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── lib/                 ← 외부 라이브러리 설정 (apiClient 등)</text>
+  <text x="40" y="473.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── App.jsx</text>
+</svg>

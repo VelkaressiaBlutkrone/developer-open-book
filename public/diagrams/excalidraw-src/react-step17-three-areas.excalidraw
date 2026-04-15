@@ -1,0 +1,231 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t",
+      "x": 80,
+      "y": 10,
+      "text": "React 에러의 3가지 영역",
+      "fontSize": 22,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 211.2,
+      "height": 28,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "a0",
+      "x": 50,
+      "y": 50,
+      "width": 480,
+      "height": 100,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "a0t",
+      "x": 60,
+      "y": 58,
+      "text": "1. 렌더링 에러 (Render Phase)",
+      "fontSize": 15,
+      "strokeColor": "#22c55e",
+      "fontFamily": 2,
+      "width": 216,
+      "height": 21,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "a0i0",
+      "x": 75,
+      "y": 80,
+      "text": "· 컴포넌트 함수 실행 중 throw",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 144,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "a0i1",
+      "x": 75,
+      "y": 100,
+      "text": "· null.property 접근, 타입 에러 등",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 194.39999999999998,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "a0r",
+      "x": 75,
+      "y": 123,
+      "text": "→ Error Boundary가 잡는다 ★",
+      "fontSize": 13,
+      "strokeColor": "#22c55e",
+      "fontFamily": 2,
+      "width": 179.4,
+      "height": 19,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "a1",
+      "x": 50,
+      "y": 160,
+      "width": 480,
+      "height": 80,
+      "backgroundColor": "#5c3d1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "a1t",
+      "x": 60,
+      "y": 168,
+      "text": "2. 이벤트 핸들러 에러",
+      "fontSize": 15,
+      "strokeColor": "#f59e0b",
+      "fontFamily": 2,
+      "width": 117,
+      "height": 21,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "a1i0",
+      "x": 75,
+      "y": 190,
+      "text": "· onClick, onChange 등 핸들러 안에서 throw",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 251.99999999999997,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "a1r",
+      "x": 75,
+      "y": 213,
+      "text": "→ Error Boundary가 잡지 못한다! → try/catch",
+      "fontSize": 13,
+      "strokeColor": "#f59e0b",
+      "fontFamily": 2,
+      "width": 288.59999999999997,
+      "height": 19,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "a2",
+      "x": 50,
+      "y": 250,
+      "width": 480,
+      "height": 100,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "a2t",
+      "x": 60,
+      "y": 258,
+      "text": "3. 비동기 에러",
+      "fontSize": 15,
+      "strokeColor": "#06b6d4",
+      "fontFamily": 2,
+      "width": 81,
+      "height": 21,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "a2i0",
+      "x": 75,
+      "y": 280,
+      "text": "· useEffect 안의 fetch 실패",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 165.6,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "a2i1",
+      "x": 75,
+      "y": 300,
+      "text": "· setTimeout/Promise 안의 에러",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 187.2,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "a2r",
+      "x": 75,
+      "y": 323,
+      "text": "→ try/catch + State / React 19: use() + EB",
+      "fontSize": 13,
+      "strokeColor": "#06b6d4",
+      "fontFamily": 2,
+      "width": 327.59999999999997,
+      "height": 19,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

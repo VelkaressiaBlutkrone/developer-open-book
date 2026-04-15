@@ -44,37 +44,7 @@ JSX와 컴포넌트 실행 모델을 깊이 이해하는 것은 실무에서 디
 
 ### 1.3 이 Step의 핵심 개념 관계도
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│              Step 04 핵심 개념 관계도                           │
-│                                                               │
-│  개발자 작성                                                  │
-│    JSX 코드 (.jsx / .tsx)                                    │
-│       │                                                       │
-│       │ Babel / SWC (트랜스파일)                              │
-│       ▼                                                       │
-│  React.createElement() / jsx()                               │
-│       │                                                       │
-│       │ 함수 호출 결과                                        │
-│       ▼                                                       │
-│  React Element (Plain Object, 불변)                          │
-│       │                                                       │
-│       │ type이 함수? ──→ 해당 함수 호출 (재귀)                │
-│       │ type이 문자열? ──→ 해석 완료                          │
-│       ▼                                                       │
-│  최종 Element 트리 (Virtual DOM)                              │
-│       │                                                       │
-│       │ ReactDOM (Commit Phase)                               │
-│       ▼                                                       │
-│  실제 DOM ──→ 브라우저 Paint ──→ 사용자가 화면을 봄            │
-│                                                               │
-│  핵심 원칙:                                                   │
-│    · 렌더링 = 함수 실행 (DOM 조작이 아님)                     │
-│    · 컴포넌트 = 순수 함수 (같은 입력 → 같은 출력)             │
-│    · UI = f(state) (선언적 UI의 핵심 공식)                    │
-│                                                               │
-└──────────────────────────────────────────────────────────────┘
-```
+![step04 01 step 04 핵심 개념 관계도](/developer-open-book/diagrams/react-step04-01-step-04-핵심-개념-관계도.svg)
 
 ### 1.4 표면 아래의 메커니즘
 
@@ -381,30 +351,7 @@ $$typeof: Symbol.for('react.element')
 
 #### React Element의 핵심 특성
 
-```
-┌──────────────────────────────────────────────────────┐
-│  React Element의 4가지 특성                            │
-│                                                       │
-│  1. Plain Object (일반 객체)                          │
-│     · 특별한 클래스의 인스턴스가 아니다                 │
-│     · 가볍다 (DOM 노드보다 생성 비용이 훨씬 적음)      │
-│                                                       │
-│  2. Immutable (불변)                                  │
-│     · 한 번 생성되면 속성을 변경할 수 없다              │
-│     · Object.freeze()로 동결됨 (개발 모드)             │
-│     · UI를 변경하려면 새 Element를 생성해야 한다        │
-│                                                       │
-│  3. Descriptive (서술적)                              │
-│     · "무엇을 그려야 하는지"를 서술할 뿐               │
-│     · 실제로 DOM을 생성하지 않는다                     │
-│     · 설계도(blueprint)에 해당                        │
-│                                                       │
-│  4. Tree Structure (트리 구조)                        │
-│     · children을 통해 중첩되어 트리를 형성한다          │
-│     · 이 트리가 Virtual DOM Tree에 해당               │
-│                                                       │
-└──────────────────────────────────────────────────────┘
-```
+![step04 02 element의 4가지 특성](/developer-open-book/diagrams/react-step04-02-react-element의-4가지-특성.svg)
 
 #### 중첩 구조의 변환
 
@@ -590,33 +537,7 @@ React(정확히는 JSX 트랜스파일러)는 **첫 글자의 대소문자**로 
 
 일상적으로 "렌더링"은 "화면에 그리는 것"을 의미하지만, React에서의 렌더링은 **"컴포넌트 함수를 호출하여 React Element 트리를 생성하는 것"** 이다. DOM 조작은 렌더링이 아니라 그 **다음 단계(Commit Phase)** 에서 일어난다.
 
-```
-React의 화면 업데이트 3단계
-
-  ┌─────────────────┐
-  │ 1. Trigger       │  "무언가"가 렌더링을 촉발한다
-  │                  │  · 초기 마운트
-  │                  │  · State 변경 (Step 6에서 학습)
-  │                  │  · Props 변경
-  │                  │  · 부모 재렌더링
-  └────────┬────────┘
-           │
-           ▼
-  ┌─────────────────┐
-  │ 2. Render        │  컴포넌트 함수를 호출한다 ★
-  │   (렌더링)       │  · 함수 본문 전체가 실행됨
-  │                  │  · 새로운 React Element 트리 생성
-  │                  │  · 이전 트리와 비교 (Reconciliation, Step 7)
-  │                  │  · ※ DOM을 건드리지 않는다!
-  └────────┬────────┘
-           │
-           ▼
-  ┌─────────────────┐
-  │ 3. Commit        │  변경 사항을 실제 DOM에 반영한다
-  │   (커밋)         │  · 변경된 부분만 DOM에 적용
-  │                  │  · 브라우저가 화면을 다시 그림 (Repaint)
-  └─────────────────┘
-```
+![step04 03 react의 화면 업데이트 3단계](/developer-open-book/diagrams/react-step04-03-react의-화면-업데이트-3단계.svg)
 
 #### 렌더링 = 함수 실행의 의미
 
@@ -881,21 +802,7 @@ function Profile({ user }) {
 
 #### HTML과 다른 속성명
 
-```
-┌────────────────┬──────────────────┬──────────────────────┐
-│  HTML           │  JSX             │  이유                │
-├────────────────┼──────────────────┼──────────────────────┤
-│  class          │  className       │  class는 JS 예약어   │
-│  for            │  htmlFor         │  for는 JS 예약어     │
-│  tabindex       │  tabIndex        │  camelCase 규칙      │
-│  onclick        │  onClick         │  camelCase 규칙      │
-│  onchange       │  onChange        │  camelCase 규칙      │
-│  maxlength      │  maxLength       │  camelCase 규칙      │
-│  style="..."    │  style={{...}}   │  객체 형태로 전달     │
-│  checked (HTML) │  defaultChecked  │  비제어 컴포넌트      │
-│  value (HTML)   │  defaultValue    │  비제어 컴포넌트      │
-└────────────────┴──────────────────┴──────────────────────┘
-```
+![step04 04 html jsx 이유](/developer-open-book/diagrams/react-step04-04-html-jsx-이유.svg)
 
 #### style 속성
 

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="371" viewBox="100 -15 551.5 341">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="100" y="-15" width="551.5" height="341" rx="12" fill="#141414"/>
+  <text x="200" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">테스트 피라미드</text>
+  <rect x="230" y="60" width="200" height="55" rx="8.25" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="330" y="81.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">E2E 테스트</text>
+  <text x="330" y="101" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">(5%)</text>
+  <rect x="180" y="130" width="300" height="55" rx="8.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="330" y="151.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">통합 테스트</text>
+  <text x="330" y="171" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">(25%)</text>
+  <rect x="130" y="200" width="400" height="55" rx="8.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="330" y="221.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">단위/컴포넌트 테스트</text>
+  <text x="330" y="241" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">(70%)</text>
+  <text x="450" y="81.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">느림, 비쌈, 높은 신뢰도</text>
+  <text x="500" y="153.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">중간</text>
+  <text x="550" y="221.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">빠름, 저렴, 많이</text>
+  <text x="130" y="288.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">권장: 단위+통합 70~80% ★  |  E2E 20~30%</text>
+</svg>

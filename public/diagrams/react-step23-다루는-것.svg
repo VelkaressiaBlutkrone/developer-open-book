@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="614" viewBox="-10 -15 560 573">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="560" height="573" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">다루는 것</text>
+  <rect x="20" y="55" width="500" height="294" rx="44.1" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="0.4"/>
+  <text x="35" y="81.2" fill="#22c55e" font-family="Nunito, sans-serif" font-size="18" opacity="1">다루는 것</text>
+  <text x="45" y="107.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · TanStack Query의 핵심 개념과 아키텍처</text>
+  <text x="45" y="133.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · useQuery: 선언적 데이터 조회 + 캐싱</text>
+  <text x="45" y="159.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · useMutation: 데이터 변경 + 캐시 무효화</text>
+  <text x="45" y="185.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · queryKey 설계 전략</text>
+  <text x="45" y="211.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 캐싱 메커니즘 (staleTime, gcTime, refetch)</text>
+  <text x="45" y="237.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 자동 리패칭, 에러 재시도, 요청 중복 제거</text>
+  <text x="45" y="263.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Optimistic Update 패턴</text>
+  <text x="45" y="289.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Infinite Query (무한 스크롤)</text>
+  <text x="45" y="315.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Prefetching</text>
+  <rect x="20" y="364" width="500" height="164" rx="24.599999999999998" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="0.4"/>
+  <text x="35" y="390.2" fill="#ef4444" font-family="Nunito, sans-serif" font-size="18" opacity="1">다루지 않는 것</text>
+  <text x="45" y="416.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · SWR (유사 라이브러리)</text>
+  <text x="45" y="442.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · GraphQL + Apollo Client</text>
+  <text x="45" y="468.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · TanStack Query의 SSR 통합 상세</text>
+  <text x="45" y="494.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Devtools 설정 상세</text>
+</svg>

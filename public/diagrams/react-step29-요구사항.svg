@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="766" viewBox="-10 -15 463 591">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="463" height="591" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">요구사항:</text>
+  <rect x="20" y="50" width="403" height="496" rx="60.449999999999996" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 10,000개 항목의 상품 리스트 생성</text>
+  <text x="40" y="109.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 일반 렌더링과 가상화 렌더링 두 버전 구현</text>
+  <text x="40" y="135.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 성능 비교:</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">- 초기 렌더링 시간 (Performance.now())</text>
+  <text x="40" y="187.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">- 스크롤 시 프레임 레이트 (DevTools Performance)</text>
+  <text x="40" y="213.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">- DOM 노드 수 (DevTools Elements)</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· TanStack Virtual 또는 react-window 사용</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 각 항목: 이미지, 이름, 가격, 설명 (복잡한 UI)</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">비교표:</text>
+  <text x="40" y="317.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">| 항목           | 일반 렌더링 | 가상화 |</text>
+  <text x="40" y="343.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">|---------------|-----------|--------|</text>
+  <text x="40" y="369.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">| 초기 렌더링(ms)| ?         | ?      |</text>
+  <text x="40" y="395.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">| DOM 노드 수   | ?         | ?      |</text>
+  <text x="40" y="421.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">| 스크롤 FPS    | ?         | ?      |</text>
+  <text x="40" y="447.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">| 메모리(MB)    | ?         | ?      |</text>
+</svg>

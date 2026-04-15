@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="598" viewBox="-10 -15 488.5 487">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="488.5" height="487" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">요구사항:</text>
+  <rect x="20" y="50" width="428.5" height="392" rx="58.8" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 상품 카드의 Skeleton 구현</text>
+  <text x="40" y="109.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">- 이미지 영역 (placeholder)</text>
+  <text x="40" y="135.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">- 제목 (텍스트 줄)</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">- 가격 (짧은 텍스트 줄)</text>
+  <text x="40" y="187.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">- 평점 (별 아이콘 placeholder)</text>
+  <text x="40" y="213.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">- shimmer 애니메이션</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 상품 카드 Skeleton과 실제 상품 카드의 레이아웃이 동일한지 검증</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· CLS 측정: Skeleton → 실제 교체 시 레이아웃 이동 = 0</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">추가:</text>
+  <text x="40" y="317.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 페이지 레벨 Skeleton (전체 레이아웃)</text>
+  <text x="40" y="343.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 리스트 Skeleton (카드 그리드 반복)</text>
+</svg>

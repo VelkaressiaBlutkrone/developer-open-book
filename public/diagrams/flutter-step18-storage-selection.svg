@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="353" viewBox="20 -20 760 353">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="760" height="353" rx="12" fill="#141414"/>
+  <text x="50" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">저장소 선택 가이드</text>
+  <rect x="50" y="55" width="700" height="40" rx="6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="400" y="78.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">데이터 크기     구조              선택 저장소</text>
+  <rect x="50" y="105" width="700" height="42" rx="6.3" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="400" y="129.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">소량           단순 Key-Value       →  SharedPreferences</text>
+  <rect x="50" y="157" width="700" height="42" rx="6.3" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="400" y="181.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">중량           객체·목록              →  Hive</text>
+  <rect x="50" y="209" width="700" height="42" rx="6.3" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="400" y="233.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">대량           관계형                →  SQLite (sqflite)</text>
+  <rect x="50" y="261" width="700" height="42" rx="6.3" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="400" y="285.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">실시간·동기       클라우드+오프라인          →  Firebase Firestore</text>
+</svg>

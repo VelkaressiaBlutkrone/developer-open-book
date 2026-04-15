@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="320" viewBox="10 -20 660 320">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="10" y="-20" width="660" height="320" rx="12" fill="#141414"/>
+  <text x="150" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">FormState 메서드 3가지</text>
+  <rect x="40" y="55" width="600" height="65" rx="9.75" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="340" y="73.85" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">validate()</text>
+  <text x="340" y="90.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">→ 모든 TextFormField의 validator 실행</text>
+  <text x="340" y="107.65" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">→ 모두 null 반환 시 true, 하나라도 String 반환 시 false</text>
+  <rect x="40" y="130" width="600" height="65" rx="9.75" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="340" y="148.85" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">save()</text>
+  <text x="340" y="165.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">→ 모든 TextFormField의 onSaved 콜백 실행</text>
+  <text x="340" y="182.65" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">→ 입력값을 외부 변수에 저장. validate() 통과 후 호출</text>
+  <rect x="40" y="205" width="600" height="65" rx="9.75" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="340" y="223.85" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">reset()</text>
+  <text x="340" y="240.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">→ 모든 TextFormField 초기화 (빈 값으로)</text>
+  <text x="340" y="257.65" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">→ 에러 메시지도 함께 초기화</text>
+</svg>

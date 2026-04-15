@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="300" viewBox="10 -20 660 300">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="10" y="-20" width="660" height="300" rx="12" fill="#141414"/>
+  <text x="120" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Provider 배치 원칙</text>
+  <rect x="40" y="55" width="600" height="40" rx="6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="340" y="78.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">전체 앱에서 필요 → MaterialApp 위 또는 runApp 래퍼</text>
+  <rect x="40" y="105" width="600" height="40" rx="6" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="340" y="128.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">특정 화면 하위에서만 필요 → 해당 화면 위젯에서 제공</text>
+  <rect x="40" y="155" width="600" height="40" rx="6" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="340" y="178.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">특정 위젯 트리에서만 필요 → 해당 서브트리 루트에서 제공</text>
+  <rect x="100" y="215" width="480" height="35" rx="5.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="340" y="236" text-anchor="middle" fill="#22c55e" font-family="Nunito, sans-serif" font-size="14">규칙: 해당 상태가 필요한 가장 가까운 공통 조상에 배치</text>
+</svg>

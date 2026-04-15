@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="575" viewBox="-10 -20 360 345">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="360" height="345" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">다루는 것</text>
+  <rect x="20" y="45" width="300" height="250" rx="37.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="170" y="91.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Node.js 런타임과 패키지 매니저의 역할</text>
+  <text x="170" y="109.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 빌드 도구(Vite)의 동작 원리</text>
+  <text x="170" y="128" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· React 프로젝트 생성과 디렉토리 구조 분석</text>
+  <text x="170" y="146.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 개발 서버의 동작 메커니즘</text>
+  <text x="170" y="164.39999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 코드 편집기 설정</text>
+  <text x="170" y="182.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">다루지 않는 것</text>
+  <text x="170" y="200.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· React 문법 (Step 4~)</text>
+  <text x="170" y="219" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· TypeScript 설정 (Step 31)</text>
+  <text x="170" y="237.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 배포 환경 구성 (Step 40)</text>
+  <text x="170" y="255.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Docker/CI 설정 (Step 41)</text>
+</svg>

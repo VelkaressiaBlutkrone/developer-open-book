@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="593" viewBox="120 -20 460 455">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="120" y="-20" width="460" height="455" rx="12" fill="#141414"/>
+  <text x="150" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">Event Loop 실행 순서 예측</text>
+  <rect x="150" y="60" width="400" height="45" rx="6.75" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="350" y="87" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">A ← 동기</text>
+  <rect x="150" y="110" width="400" height="45" rx="6.75" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="350" y="137" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">F ← 동기</text>
+  <rect x="150" y="160" width="400" height="45" rx="6.75" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="0.3"/>
+  <text x="350" y="187" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">C ← Microtask</text>
+  <rect x="150" y="210" width="400" height="45" rx="6.75" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="0.3"/>
+  <text x="350" y="237" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">D ← Microtask</text>
+  <rect x="150" y="260" width="400" height="45" rx="6.75" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="0.3"/>
+  <text x="350" y="287" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">E ← Microtask</text>
+  <rect x="150" y="310" width="400" height="45" rx="6.75" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="0.3"/>
+  <text x="350" y="337" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">B ← Event Queue</text>
+  <rect x="150" y="360" width="400" height="45" rx="6.75" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="0.3"/>
+  <text x="350" y="387" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">G ← await 이후 재개</text>
+</svg>

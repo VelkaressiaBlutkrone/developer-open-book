@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="487" viewBox="20 -20 545 442.8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="545" height="442.8" rx="12" fill="#141414"/>
+  <text x="60" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">HTML 생성 위치 x 시점 — 렌더링 전략</text>
+  <rect x="50" y="55" width="130" height="30" rx="4.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="115" y="73.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13"></text>
+  <rect x="180" y="55" width="140" height="30" rx="4.5" fill="#1a4d4d" stroke="#06b6d4" stroke-width="1" opacity="1"/>
+  <text x="250" y="73.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">빌드 시점</text>
+  <rect x="320" y="55" width="200" height="30" rx="4.5" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="420" y="73.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">요청 시점</text>
+  <rect x="50" y="90" width="130" height="35" rx="5.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="115" y="110.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">서버에서 생성</text>
+  <rect x="180" y="90" width="140" height="35" rx="5.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="250" y="110.75" text-anchor="middle" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13">SSG (Static)</text>
+  <rect x="320" y="90" width="200" height="35" rx="5.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="420" y="110.75" text-anchor="middle" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="13">SSR / Streaming SSR</text>
+  <rect x="50" y="130" width="130" height="35" rx="5.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="115" y="150.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">클라이언트 생성</text>
+  <rect x="180" y="130" width="140" height="35" rx="5.25" fill="#2a2a3a" stroke="#555" stroke-width="1" opacity="1"/>
+  <text x="250" y="150.75" text-anchor="middle" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13">—</text>
+  <rect x="320" y="130" width="200" height="35" rx="5.25" fill="#1a4d4d" stroke="#06b6d4" stroke-width="1" opacity="1"/>
+  <text x="420" y="150.75" text-anchor="middle" fill="#06b6d4" font-family="Nunito, sans-serif" font-size="13">CSR (Client)</text>
+  <text x="55" y="190.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">ISR = SSG + 주기적 재생성 (하이브리드)</text>
+  <text x="55" y="208.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">Streaming SSR = SSR + 점진적 전송</text>
+  <text x="55" y="241.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">전략 간 진화:</text>
+  <rect x="50" y="252" width="120" height="28" rx="4.2" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="110" y="269" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">전통적 SSR</text>
+  <rect x="195" y="252" width="80" height="28" rx="4.2" fill="#1a4d4d" stroke="#06b6d4" stroke-width="1" opacity="1"/>
+  <text x="235" y="269" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">CSR</text>
+  <rect x="300" y="252" width="110" height="28" rx="4.2" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="355" y="269" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">현대 SSR</text>
+  <rect x="435" y="252" width="100" height="28" rx="4.2" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="485" y="269" text-anchor="middle" fill="#22c55e" font-family="Nunito, sans-serif" font-size="12">Streaming</text>
+  <text x="55" y="312.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">성능 지표 우선순위:</text>
+  <text x="60" y="332.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">TTFB :  SSG &gt; Streaming &gt; CSR &gt; SSR</text>
+  <text x="60" y="350.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">FCP  :  SSG &gt; SSR &gt; Streaming &gt; CSR</text>
+  <text x="60" y="368.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">SEO  :  SSG = SSR &gt; ISR &gt; CSR</text>
+  <text x="60" y="386.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">비용  :  SSG/CSR(CDN) &gt; ISR &gt; SSR</text>
+</svg>

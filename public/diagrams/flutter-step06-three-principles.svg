@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="341" viewBox="50 -20 580 330">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="50" y="-20" width="580" height="330" rx="12" fill="#141414"/>
+  <text x="140" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">Flutter 레이아웃 3원칙</text>
+  <rect x="80" y="60" width="520" height="60" rx="9" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="340" y="84.39999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">① Constraints go down</text>
+  <text x="340" y="102.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">부모가 자식에게 &quot;너는 이 범위 안에서만 그려야 해&quot;라고 제약을 내려보낸다</text>
+  <rect x="80" y="140" width="520" height="60" rx="9" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="340" y="164.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">② Sizes go up</text>
+  <text x="340" y="182.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">자식이 제약 범위 안에서 자신의 크기를 결정하고 부모에게 보고한다</text>
+  <rect x="80" y="220" width="520" height="60" rx="9" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="340" y="244.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">③ Parent sets position</text>
+  <text x="340" y="262.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">부모가 자식을 어디에 배치할지 결정한다 (자식은 자신의 위치를 모른다)</text>
+</svg>

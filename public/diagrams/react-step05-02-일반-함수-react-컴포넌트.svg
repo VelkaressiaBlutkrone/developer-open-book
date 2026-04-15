@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="260" viewBox="-10 -20 593 257">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="593" height="257" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">일반 함수  React 컴포넌트</text>
+  <rect x="20" y="45" width="533" height="162" rx="24.3" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="286.5" y="84" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</text>
+  <text x="286.5" y="102.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">function greet(name) {  function Greeting({ name }) {</text>
+  <text x="286.5" y="120.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">return `Hello, ${name}!`;  return &lt;h1&gt;Hello, {name}!&lt;/h1&gt;;</text>
+  <text x="286.5" y="138.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">}  }</text>
+  <text x="286.5" y="156.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">greet('홍길동')  &lt;Greeting name=&quot;홍길동&quot; /&gt;</text>
+  <text x="286.5" y="175" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 'Hello, 홍길동!'  → &lt;h1&gt;Hello, 홍길동!&lt;/h1&gt;</text>
+</svg>

@@ -8,16 +8,7 @@
 
 ## 각 Step 문서 내부 구조 (공통)
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  1. 서론            │ 10~15% │ 동기 유발 + 맥락 + 학습 목표  │
-│  2. 기본 개념·용어   │ 20~25% │ 핵심 용어 정의 + 관계성       │
-│  3. 이론·원리        │ 30~35% │ 근본 원리 심층 탐구 ★ 핵심    │
-│  4. 사례 연구·예시   │ 15~20% │ 이론 ↔ 실제 코드 연결        │
-│  5. 실습             │ 20%   │ 이론 검증용 과제 (블룸 3~6)   │
-│  6. 핵심 정리·다음단계│ 5~10% │ 요약 + 자가진단 + 참고자료    │
-└─────────────────────────────────────────────────────────┘
-```
+![step00 01 1 서론 1015 동기 유발 맥락 학습 목표](/developer-open-book/diagrams/react-step00-01-1-서론-1015-동기-유발-맥락-학습-목표.svg)
 
 ---
 
@@ -145,69 +136,13 @@
 
 ## 📊 Phase별 블룸 분류법 분포
 
-```
-Phase 0 (환경)     ████████░░░░░░░░░░░░░░░░  Remembering ~ Understanding
-Phase 1 (Core)     ░░░░████████████░░░░░░░░  Understanding ~ Applying
-Phase 2 (Hooks)    ░░░░░░░░████████████░░░░  Applying ~ Analyzing
-Phase 3 (Routing)  ░░░░░░░░████████████░░░░  Applying ~ Analyzing
-Phase 4 (상태)     ░░░░░░░░░░░░████████████  Analyzing ~ Evaluating
-Phase 5 (타입/폼)  ░░░░░░░░████████████████  Applying ~ Evaluating
-Phase 6 (테스트)   ░░░░░░░░░░░░████████████  Analyzing ~ Evaluating
-Phase 7 (DevOps)   ░░░░░░░░░░░░░░░░████████  Evaluating ~ Creating
-```
+![step00 02 diagram](/developer-open-book/diagrams/react-step00-02-diagram.svg)
 
 ---
 
 ## 📐 Step 간 의존성 맵 (주요 선수 학습 관계)
 
-```
-Step 1 (환경 설치)
-  └→ Step 2 (JS 복습) → Step 3 (생태계) → Step 4 (JSX)
-                                              │
-     ┌──────────────────────────────────────────┘
-     ▼
-Step 5 (Props) → Step 6 (useState) → Step 7 (Reconciliation)
-     │                │                    │
-     │                ▼                    ▼
-     │           Step 11 (useEffect)  Step 9 (리스트)
-     │                │
-     ▼                ▼
-Step 8 (Form)   Step 12 (useRef) → Step 13 (useReducer)
-                      │
-                      ▼
-                Step 14 (메모이제이션) → Step 16 (Custom Hook)
-                      │
-                      ▼
-                Step 15 (신규 Hooks) → Step 10 (내부 구조)
-                                           │
-                ┌──────────────────────────┘
-                ▼
-           Step 18 (Router) → Step 19 (렌더링 전략)
-                │                    │
-                ▼                    ▼
-           Step 22 (패칭)      Step 20 (RSC) → Step 21 (Next.js)
-                │
-                ▼
-           Step 23 (TanStack Query) → Step 24 (상태 경계)
-                                           │
-                ┌──────────────────────────┘
-                ▼
-           Step 25 (Context) → Step 26 (전역 상태) → Step 27 (아키텍처)
-                                                          │
-                ┌─────────────────────────────────────────┘
-                ▼
-           Step 28 (폴더 구조) → Step 29 (컴포넌트 패턴) → Step 30 (Suspense)
-                                                               │
-                ┌──────────────────────────────────────────────┘
-                ▼
-           Step 31~35 (타입/폼/스타일/애니메이션)
-                │
-                ▼
-           Step 36~38 (테스트/접근성/성능)
-                │
-                ▼
-           Step 39~42 (빌드/배포/CI·CD/보안)
-```
+![step00 03 step 1 환경 설치](/developer-open-book/diagrams/react-step00-03-step-1-환경-설치.svg)
 
 ---
 

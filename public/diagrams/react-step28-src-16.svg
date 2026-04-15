@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="733" height="2445" viewBox="-30 -20 733 2444.6">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-30" y="-20" width="733" height="2444.6" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">src/</text>
+  <rect x="20" y="50" width="633" height="42" rx="6.3" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1.5" opacity="1"/>
+  <text x="336.5" y="74.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">src/</text>
+  <path d="M20,96 L653,96" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="119.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── app/                 ← 앱 초기화 (providers, router, global styles)</text>
+  <path d="M20,138 L653,138" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="161.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── providers.jsx</text>
+  <path d="M20,180 L653,180" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="203.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── router.jsx</text>
+  <path d="M20,222 L653,222" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="245.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── App.jsx</text>
+  <path d="M20,264 L653,264" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="287.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── features/</text>
+  <path d="M20,306 L653,306" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="329.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── auth/</text>
+  <path d="M20,348 L653,348" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="371.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── components/</text>
+  <path d="M20,390 L653,390" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="413.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── hooks/</text>
+  <path d="M20,432 L653,432" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="455.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── services/</text>
+  <path d="M20,474 L653,474" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="497.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── stores/</text>
+  <path d="M20,516 L653,516" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="539.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── types.ts</text>
+  <path d="M20,558 L653,558" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="581.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── constants.ts</text>
+  <path d="M20,600 L653,600" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="623.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── __tests__/</text>
+  <path d="M20,642 L653,642" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="665.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── index.ts</text>
+  <path d="M20,684 L653,684" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="707.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── products/</text>
+  <path d="M20,726 L653,726" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="749.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── components/</text>
+  <path d="M20,768 L653,768" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="791.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── ProductCard/</text>
+  <path d="M20,810 L653,810" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="833.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── index.jsx</text>
+  <path d="M20,852 L653,852" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="875.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── ProductCard.module.css</text>
+  <path d="M20,894 L653,894" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="917.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── ProductCard.test.jsx</text>
+  <path d="M20,936 L653,936" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="959.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── ProductFilter/</text>
+  <path d="M20,978 L653,978" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1001.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── hooks/</text>
+  <path d="M20,1020 L653,1020" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1043.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── services/</text>
+  <path d="M20,1062 L653,1062" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1085.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── utils/       ← feature 전용 유틸</text>
+  <path d="M20,1104 L653,1104" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1127.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── index.ts</text>
+  <path d="M20,1146 L653,1146" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1169.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── cart/</text>
+  <path d="M20,1188 L653,1188" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1211.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── orders/</text>
+  <path d="M20,1230 L653,1230" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1253.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── reviews/</text>
+  <path d="M20,1272 L653,1272" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1295.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── dashboard/</text>
+  <path d="M20,1314 L653,1314" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1337.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── shared/</text>
+  <path d="M20,1356 L653,1356" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1379.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── components/</text>
+  <path d="M20,1398 L653,1398" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1421.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── Button/</text>
+  <path d="M20,1440 L653,1440" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1463.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── index.jsx</text>
+  <path d="M20,1482 L653,1482" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1505.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── Button.module.css</text>
+  <path d="M20,1524 L653,1524" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1547.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── Button.test.jsx</text>
+  <path d="M20,1566 L653,1566" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1589.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── Button.stories.jsx  ← Storybook</text>
+  <path d="M20,1608 L653,1608" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1631.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── Input/</text>
+  <path d="M20,1650 L653,1650" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1673.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── Modal/</text>
+  <path d="M20,1692 L653,1692" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1715.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── index.js</text>
+  <path d="M20,1734 L653,1734" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1757.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── hooks/</text>
+  <path d="M20,1776 L653,1776" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1799.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── utils/</text>
+  <path d="M20,1818 L653,1818" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1841.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── lib/</text>
+  <path d="M20,1860 L653,1860" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1883.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── types/</text>
+  <path d="M20,1902 L653,1902" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1925.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── constants/</text>
+  <path d="M20,1944 L653,1944" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1967.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── styles/          ← 전역 스타일, CSS 변수</text>
+  <path d="M20,1986 L653,1986" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2009.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── pages/               ← 또는 Next.js의 app/ 디렉토리</text>
+  <path d="M20,2028 L653,2028" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2051.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── layouts/</text>
+  <path d="M20,2070 L653,2070" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2093.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── main.jsx</text>
+  <path d="M20,2112 L653,2112" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2135.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">특징:</text>
+  <path d="M20,2154 L653,2154" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2177.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Feature-based + Co-location</text>
+  <path d="M20,2196 L653,2196" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2219.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 컴포넌트별 폴더 (index + style + test + stories)</text>
+  <path d="M20,2238 L653,2238" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2261.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">· feature 내부에 types, constants, utils 포함</text>
+  <path d="M20,2280 L653,2280" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2303.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">· __tests__/ 또는 co-located test 파일</text>
+  <path d="M20,2322 L653,2322" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2345.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Storybook stories 포함 가능</text>
+  <path d="M20,2364 L653,2364" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2387.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">· app/ 폴더로 앱 초기화 로직 분리</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="20 -20 570 380">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="570" height="380" rx="12" fill="#141414"/>
+  <text x="80" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">React Router v6 개념 지도</text>
+  <text x="60" y="62.6" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="14" opacity="1">[라우터 계층]</text>
+  <rect x="60" y="72" width="220" height="25" rx="3.75" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="170" y="87.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">BrowserRouter</text>
+  <rect x="60" y="102" width="220" height="25" rx="3.75" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="170" y="117.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">MemoryRouter</text>
+  <rect x="60" y="132" width="220" height="25" rx="3.75" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="170" y="147.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">createBrowserRouter</text>
+  <text x="310" y="62.6" fill="#22c55e" font-family="Nunito, sans-serif" font-size="14" opacity="1">[라우트 선언]</text>
+  <rect x="310" y="72" width="250" height="90" rx="13.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="320" y="88.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">&lt;Routes&gt;</text>
+  <text x="335" y="105.9" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="11" opacity="1">&lt;Route path=&quot;/&quot; element={&lt;Home/&gt;}&gt;</text>
+  <text x="350" y="123.9" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="11" opacity="1">&lt;Route path=&quot;:id&quot; /&gt;  ← 동적</text>
+  <text x="335" y="141.9" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="11" opacity="1">&lt;Route path=&quot;*&quot; /&gt;     ← 404</text>
+  <rect x="50" y="180" width="150" height="100" rx="15" fill="#1a4d4d" stroke="#06b6d4" stroke-width="1" opacity="1"/>
+  <text x="60" y="197.6" fill="#06b6d4" font-family="Nunito, sans-serif" font-size="14" opacity="1">네비게이션</text>
+  <text x="65" y="218.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">&lt;Link&gt;</text>
+  <text x="65" y="235.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">&lt;NavLink&gt;</text>
+  <text x="65" y="252.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">&lt;Navigate&gt;</text>
+  <text x="65" y="269.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">useNavigate()</text>
+  <rect x="220" y="180" width="160" height="100" rx="15" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="230" y="197.6" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="14" opacity="1">데이터 접근</text>
+  <text x="235" y="218.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">useParams()</text>
+  <text x="235" y="235.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">useSearchParams()</text>
+  <text x="235" y="252.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">useLocation()</text>
+  <rect x="400" y="180" width="160" height="100" rx="15" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="410" y="197.6" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="14" opacity="1">Data Router</text>
+  <text x="415" y="218.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">loader 함수</text>
+  <text x="415" y="235.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">action 함수</text>
+  <text x="415" y="252.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">useLoaderData()</text>
+  <text x="415" y="269.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">useFetcher()</text>
+  <rect x="180" y="300" width="250" height="30" rx="4.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="305" y="318.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">&lt;Outlet/&gt; ← 자식 Route 렌더링 위치</text>
+</svg>

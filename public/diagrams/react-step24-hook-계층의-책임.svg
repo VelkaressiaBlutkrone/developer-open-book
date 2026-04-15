@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="578" viewBox="-10 -15 505.5 487">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="505.5" height="487" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Hook 계층의 책임</text>
+  <rect x="20" y="50" width="445.5" height="392" rx="58.8" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15" opacity="1">✅ 담당하는 것:</text>
+  <text x="40" y="109.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· queryKey 설계와 관리 (Factory 패턴)</text>
+  <text x="40" y="135.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· TanStack Query 연동 (useQuery, useMutation)</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 캐싱 전략 (staleTime, gcTime)</text>
+  <text x="40" y="187.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 캐시 무효화 전략 (invalidateQueries)</text>
+  <text x="40" y="213.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 낙관적 업데이트 (onMutate → onError 롤백)</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· React Hook으로서의 인터페이스 제공</text>
+  <text x="40" y="265.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">❌ 담당하지 않는 것:</text>
+  <text x="40" y="291.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 구체적 API URL (→ Layer 2)</text>
+  <text x="40" y="317.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· HTTP 설정 (→ Layer 1)</text>
+  <text x="40" y="343.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· UI 렌더링 (→ Layer 4)</text>
+</svg>

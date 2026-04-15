@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="394" viewBox="20 -20 540 355">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="540" height="355" rx="12" fill="#141414"/>
+  <text x="60" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">에러 유형과 처리 도구 매핑</text>
+  <rect x="50" y="50" width="150" height="30" rx="4.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="125" y="68.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">에러 발생 위치</text>
+  <rect x="200" y="50" width="170" height="30" rx="4.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="285" y="68.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">EB가 잡는가</text>
+  <rect x="370" y="50" width="160" height="30" rx="4.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="450" y="68.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">처리 도구</text>
+  <rect x="50" y="85" width="150" height="28" rx="4.2" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="125" y="102" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">렌더링 중</text>
+  <rect x="200" y="85" width="170" height="28" rx="4.2" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="285" y="102" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">✅ 잡는다</text>
+  <rect x="370" y="85" width="160" height="28" rx="4.2" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="450" y="102" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">Error Boundary</text>
+  <rect x="50" y="117" width="150" height="28" rx="4.2" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="125" y="134" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">생명주기 메서드</text>
+  <rect x="200" y="117" width="170" height="28" rx="4.2" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="285" y="134" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">✅ 잡는다</text>
+  <rect x="370" y="117" width="160" height="28" rx="4.2" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="450" y="134" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">Error Boundary</text>
+  <rect x="50" y="149" width="150" height="28" rx="4.2" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="125" y="166" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">이벤트 핸들러</text>
+  <rect x="200" y="149" width="170" height="28" rx="4.2" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="285" y="166" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">❌ 못 잡는다</text>
+  <rect x="370" y="149" width="160" height="28" rx="4.2" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="450" y="166" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">try/catch + State</text>
+  <rect x="50" y="181" width="150" height="28" rx="4.2" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="125" y="198" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">setTimeout</text>
+  <rect x="200" y="181" width="170" height="28" rx="4.2" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="285" y="198" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">❌ 못 잡는다</text>
+  <rect x="370" y="181" width="160" height="28" rx="4.2" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="450" y="198" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">try/catch + State</text>
+  <rect x="50" y="213" width="150" height="28" rx="4.2" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="125" y="230" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">fetch / async</text>
+  <rect x="200" y="213" width="170" height="28" rx="4.2" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="285" y="230" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">❌ 못 잡는다</text>
+  <rect x="370" y="213" width="160" height="28" rx="4.2" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="450" y="230" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">try/catch + State</text>
+  <rect x="50" y="245" width="150" height="28" rx="4.2" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="125" y="262" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">SSR</text>
+  <rect x="200" y="245" width="170" height="28" rx="4.2" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="285" y="262" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">❌ 못 잡는다</text>
+  <rect x="370" y="245" width="160" height="28" rx="4.2" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="450" y="262" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">서버 측 처리</text>
+  <rect x="50" y="277" width="150" height="28" rx="4.2" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="125" y="294" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">use() reject</text>
+  <rect x="200" y="277" width="170" height="28" rx="4.2" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="285" y="294" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">✅ 잡는다 (R19)</text>
+  <rect x="370" y="277" width="160" height="28" rx="4.2" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="450" y="294" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">Error Boundary</text>
+</svg>

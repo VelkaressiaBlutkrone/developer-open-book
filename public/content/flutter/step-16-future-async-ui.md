@@ -26,34 +26,13 @@
 
 앱은 대부분 서버에서 데이터를 받아 화면에 표시한다. 그런데 데이터를 가져오는 데 시간이 걸리기 때문에, 그 사이 UI는 어떻게 보여야 하는가?
 
-```
-데이터 로딩의 3가지 상태
-──────────────────────────────────────────────────────
-  ① 로딩 중  → CircularProgressIndicator
-  ② 성공     → 데이터를 표시하는 위젯
-  ③ 실패     → 에러 메시지 + 재시도 버튼
-──────────────────────────────────────────────────────
-```
+![데이터 로딩의 3가지 상태](/developer-open-book/diagrams/flutter-step16-data-loading-states.svg)
 
 이 세 가지 상태를 Flutter의 위젯 트리와 자연스럽게 연결하는 도구가 `FutureBuilder`와 `StreamBuilder`다.
 
 ### 1.2 FutureBuilder vs StreamBuilder vs 상태관리
 
-```
-어떤 것을 선택해야 하는가?
-──────────────────────────────────────────────────────
-  FutureBuilder   단순 화면, 상태관리 솔루션 불필요
-                  데이터를 "그 화면에서만" 사용
-                  → 간단한 프로필 화면, 상세 화면
-
-  StreamBuilder   실시간 데이터 구독
-                  → 채팅, 타이머, IoT 센서, WebSocket
-
-  Provider/Riverpod 여러 화면에서 데이터 공유 필요
-                   캐싱·재시도·전역 로딩 상태 필요
-                   → 쇼핑몰 상품 목록, 알림 등
-──────────────────────────────────────────────────────
-```
+![FutureBuilder vs StreamBuilder vs 상태관리 선택 가이드](/developer-open-book/diagrams/flutter-step16-builder-selection.svg)
 
 ### 1.3 전체 개념 지도
 
@@ -205,18 +184,7 @@ final productsProvider = AsyncNotifierProvider<ProductsNotifier, List<Product>>(
 
 ### 3.3 ConnectionState 전체 흐름
 
-```
-ConnectionState 값과 의미
-──────────────────────────────────────────────────────
-  none     → future가 null인 경우 (FutureBuilder에 future를 전달하지 않음)
-  waiting  → Future가 아직 완료되지 않음 (로딩 중)
-  active   → Stream이 활성 상태 (데이터 방출 중)
-  done     → Future 완료 또는 Stream 종료
-
-FutureBuilder: none → waiting → done
-StreamBuilder: none → waiting → active → (done: 스트림 종료 시)
-──────────────────────────────────────────────────────
-```
+![ConnectionState 값과 의미](/developer-open-book/diagrams/flutter-step16-connection-state.svg)
 
 ---
 

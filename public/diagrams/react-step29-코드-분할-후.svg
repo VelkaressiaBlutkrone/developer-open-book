@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="540" viewBox="-10 -15 599 539">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="599" height="539" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">코드 분할 후:</text>
+  <rect x="20" y="50" width="539" height="444" rx="66.6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">초기 번들 (홈 방문 시 로드):</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">main.js = 150KB</text>
+  <text x="40" y="135.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── 홈 페이지: 50KB</text>
+  <text x="40" y="161.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">── React 핵심: 80KB</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── 공통 코드: 20KB</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">필요 시 추가 로드:</text>
+  <text x="40" y="239.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">products-chunk.js = 150KB    ← /products 방문 시</text>
+  <text x="40" y="265.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">dashboard-chunk.js = 400KB   ← /dashboard 방문 시 (차트 포함)</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">admin-chunk.js = 100KB       ← /admin 방문 시</text>
+  <text x="40" y="317.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">결과:</text>
+  <text x="40" y="343.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 초기 로딩: 800KB → 150KB (81% 감소!)</text>
+  <text x="40" y="369.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 페이지 전환 시 해당 청크만 추가 로드</text>
+  <text x="40" y="395.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 사용하지 않는 페이지의 코드는 영원히 로드 안 함</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="632" viewBox="-10 -15 437.5 461">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="437.5" height="461" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">소규모 프로젝트 (5~10개 파일):</text>
+  <rect x="20" y="50" width="377.5" height="366" rx="54.9" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 어떤 구조든 상관없다. 파일이 적으니까 찾기 쉽다.</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">중규모 프로젝트 (50~100개 파일):</text>
+  <text x="40" y="135.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· &quot;이 컴포넌트 어디 있지?&quot; → 파일 찾기에 시간 소모</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· &quot;이 함수를 어디에 만들지?&quot; → 애매한 위치에 파일 생성</text>
+  <text x="40" y="187.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· &quot;이 컴포넌트가 저 모듈에 의존해도 되나?&quot; → 의존성 혼란</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">대규모 프로젝트 (200개+ 파일, 팀 작업):</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 새 팀원이 구조를 파악하는 데 며칠이 걸린다</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 하나의 기능을 수정하려면 10개 폴더를 돌아다녀야 한다</text>
+  <text x="40" y="291.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 순환 의존성이 발생하여 빌드가 깨진다</text>
+  <text x="40" y="317.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· &quot;이 코드를 어디에 두어야 하지?&quot;에 대해 팀원마다 다른 답</text>
+</svg>

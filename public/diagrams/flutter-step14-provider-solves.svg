@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="290" viewBox="10 -20 660 290">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="10" y="-20" width="660" height="290" rx="12" fill="#141414"/>
+  <text x="100" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Provider가 해결하는 3가지 문제</text>
+  <rect x="40" y="55" width="600" height="55" rx="8.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="340" y="76.89999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">① Prop Drilling 해결</text>
+  <text x="340" y="95.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">중간 위젯을 거치지 않고 필요한 위젯이 직접 상태를 가져옴</text>
+  <rect x="40" y="120" width="600" height="55" rx="8.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="340" y="141.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">② 상태 생명주기 관리</text>
+  <text x="340" y="160.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">위젯 트리에 상태를 바인딩 → 트리에서 제거 시 자동 dispose</text>
+  <rect x="40" y="185" width="600" height="55" rx="8.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="340" y="206.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">③ 의존성 주입 (Dependency Injection)</text>
+  <text x="340" y="225.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">위젯이 필요한 의존성을 직접 생성하지 않고 외부에서 주입받음</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="442" viewBox="-10 -15 590.5 435">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="590.5" height="435" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">✅ 목표: 관심사에 따라 코드를 계층으로 분리한다</text>
+  <rect x="20" y="50" width="530.5" height="340" rx="51" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· HTTP 계층: &quot;어떻게 서버와 통신하는가&quot; (fetch/Axios, 인터셉터)</text>
+  <text x="40" y="109.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 서비스 계층: &quot;어떤 API를 호출하는가&quot; (URL, 파라미터, 변환)</text>
+  <text x="40" y="135.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Hook 계층: &quot;React와 어떻게 연결하는가&quot; (useQuery, useMutation)</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 컴포넌트: &quot;무엇을 보여주는가&quot; (UI만 담당)</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">변경 영향 범위 최소화:</text>
+  <text x="40" y="213.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· API URL 변경 → 서비스 계층만 수정</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 인증 방식 변경 → HTTP 계층만 수정</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 캐싱 전략 변경 → Hook 계층만 수정</text>
+  <text x="40" y="291.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· UI 디자인 변경 → 컴포넌트만 수정</text>
+</svg>

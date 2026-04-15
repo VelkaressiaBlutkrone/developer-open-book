@@ -24,60 +24,15 @@
 
 ### 1.1 푸시 알림의 두 가지 종류
 
-```
-푸시 알림 종류
-──────────────────────────────────────────────────────
-  FCM (Firebase Cloud Messaging)
-    서버 → Google FCM → 기기
-    사용: 채팅 수신, 주문 상태, 공지사항, 이벤트
-
-  Local Notifications (로컬 알림)
-    앱 내부에서 직접 예약·발송
-    서버 불필요
-    사용: 할 일 알림, 타이머, 앱 내 이벤트
-──────────────────────────────────────────────────────
-```
+![푸시 알림 종류](/developer-open-book/diagrams/flutter-step28-notification-types.svg)
 
 ### 1.2 앱 상태별 알림 처리
 
-```
-3가지 앱 상태
-──────────────────────────────────────────────────────
-  Foreground  앱이 화면에 표시된 상태
-              → FCM 알림이 자동 표시되지 않음
-              → onMessage 핸들러에서 수동 처리
-
-  Background  앱이 실행 중이나 화면에 없는 상태
-              → OS가 자동으로 알림 표시
-              → onBackgroundMessage 핸들러
-
-  Terminated  앱이 완전히 종료된 상태
-              → OS가 자동으로 알림 표시
-              → 알림 탭 시 앱 시작 + getInitialMessage()
-──────────────────────────────────────────────────────
-```
+![3가지 앱 상태와 알림 처리](/developer-open-book/diagrams/flutter-step28-app-states.svg)
 
 ### 1.3 전체 개념 지도
 
-```
-Flutter 푸시 알림
-    │
-    ├── FCM (firebase_messaging)
-    │     ├── 토큰 발급·갱신
-    │     ├── 포그라운드: onMessage
-    │     ├── 백그라운드: onBackgroundMessage (최상위 함수)
-    │     ├── 종료 상태: getInitialMessage()
-    │     └── 알림 탭: onMessageOpenedApp
-    │
-    ├── Local Notifications (flutter_local_notifications)
-    │     ├── 즉시 알림
-    │     ├── 스케줄 알림 (timezone 포함)
-    │     └── 반복 알림
-    │
-    └── 딥링크
-          ├── 알림 payload → 화면 라우팅
-          └── go_router / Navigator 연동
-```
+![Flutter 푸시 알림 기술 스택](/developer-open-book/diagrams/flutter-step28-flutter-push-stack.svg)
 
 ---
 
@@ -106,24 +61,7 @@ Flutter 푸시 알림
 
 ### 3.1 FCM 아키텍처
 
-```
-FCM 메시지 전송 흐름
-──────────────────────────────────────────────────────
-  백엔드 서버
-    ↓ Firebase Admin SDK 또는 REST API
-  Firebase Cloud Messaging (Google 서버)
-    ↓ FCM Token으로 라우팅
-  기기 (Android / iOS)
-    ↓ OS 알림 시스템
-  사용자 알림 표시
-──────────────────────────────────────────────────────
-
-FCM Token 역할:
-  - 앱 설치 시 FCM SDK가 고유 토큰 생성
-  - 서버가 이 토큰으로 특정 기기에 알림 전송
-  - 앱 재설치, OS 업데이트 시 토큰 갱신됨
-  - 서버는 최신 토큰을 항상 저장·업데이트 해야 함
-```
+![FCM 메시지 전송 흐름](/developer-open-book/diagrams/flutter-step28-fcm-flow.svg)
 
 ### 3.2 FCM 설치 및 기본 설정
 
@@ -594,26 +532,7 @@ await admin.messaging().send({
 
 ### 4.1 채팅 앱 알림 전략
 
-```
-채팅 앱 알림 시나리오별 처리
-──────────────────────────────────────────────────────
-  시나리오 1: 앱 포그라운드, 채팅 화면 열람 중
-    → 알림 표시 불필요 (이미 보고 있음)
-    → 메시지만 채팅 목록에 추가
-
-  시나리오 2: 앱 포그라운드, 다른 화면 사용 중
-    → In-app 배너 또는 Local Notification 표시
-    → 탭 시 해당 채팅방으로 이동
-
-  시나리오 3: 앱 백그라운드
-    → OS 알림 트레이에 자동 표시
-    → 탭 시 채팅방으로 딥링크 이동
-
-  시나리오 4: 앱 종료 상태
-    → OS 알림 트레이에 자동 표시
-    → 탭 시 앱 시작 + 채팅방으로 이동
-──────────────────────────────────────────────────────
-```
+![채팅 앱 알림 시나리오별 처리](/developer-open-book/diagrams/flutter-step28-chat-notification-scenarios.svg)
 
 ```dart
 // 포그라운드 메시지 처리: 현재 열린 화면 확인

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="976" viewBox="-10 -20 536.5 873">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="536.5" height="873" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Step 31 핵심 요약</text>
+  <rect x="20" y="45" width="476.5" height="778" rx="71.475" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 31 핵심 요약</text>
+  <text x="40" y="105.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. TypeScript = 실행 전에 버그를 잡는 안전망</text>
+  <text x="40" y="133.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Props 타입 정의 → 잘못된 Props 전달을 컴파일에서 차단</text>
+  <text x="40" y="159.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ IDE 자동완성 → 생산성 향상</text>
+  <text x="40" y="185.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 타입 = 문서 → 코드만으로 인터페이스 파악</text>
+  <text x="40" y="213.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. Props 타입 패턴</text>
+  <text x="40" y="241.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ interface로 정의, 선택적 Props에 ? 사용</text>
+  <text x="40" y="267.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ children: ReactNode (가장 넓은 타입)</text>
+  <text x="40" y="293.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Discriminated Union: 조건부 Props 안전하게 정의</text>
+  <text x="40" y="319.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ ComponentProps&lt;'button'&gt;: HTML 속성 확장</text>
+  <text x="40" y="347.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. Event 타입: ChangeEvent, FormEvent, MouseEvent 등</text>
+  <text x="40" y="375.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 제네릭: ChangeEvent&lt;HTMLInputElement&gt;</text>
+  <text x="40" y="401.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 인라인 핸들러에서는 자동 추론에 맡기기</text>
+  <text x="40" y="429.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. Hook 타입</text>
+  <text x="40" y="457.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ useState&lt;T&gt;: 초기값에서 추론, 복잡한 타입은 명시</text>
+  <text x="40" y="483.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ useReducer: 판별 유니온으로 Action 타입 정의</text>
+  <text x="40" y="509.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ useContext + null 체크: Custom Hook에서 처리</text>
+  <text x="40" y="535.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ useRef&lt;HTMLElement&gt;(null): DOM 타입 지정</text>
+  <text x="40" y="563.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">5. Generic Component로 타입 안전한 재사용 컴포넌트 구현</text>
+  <text x="40" y="591.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ List&lt;T&gt;, Select&lt;T&gt;, DataTable&lt;T&gt;</text>
+  <text x="40" y="617.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 사용 시 T가 자동 추론됨</text>
+  <text x="40" y="645.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">6. 유틸리티 타입으로 반복을 줄인다</text>
+  <text x="40" y="673.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Partial(수정), Pick(선택), Omit(제외), Record(매핑)</text>
+  <text x="40" y="699.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ API 타입: 생성=Omit, 수정=Partial, 목록=Pick</text>
+  <text x="40" y="727.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">7. 타입 설계 원칙</text>
+  <text x="40" y="755.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 좁은 타입을 사용한다 (string보다 리터럴 유니온)</text>
+  <text x="40" y="781.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ any를 피하고 unknown을 사용한다</text>
+  <text x="40" y="807.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 타입을 도메인 가까이 정의한다 (Co-location)</text>
+</svg>

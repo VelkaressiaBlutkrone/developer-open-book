@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="709.5" height="591" viewBox="-10 -15 709.5 591">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="709.5" height="591" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Context 방식:                        Zustand 방식:</text>
+  <rect x="20" y="50" width="649.5" height="496" rx="74.39999999999999" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">createContext()                      create((set, get) =&gt; ({</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">+ Provider                             count: 0,</text>
+  <text x="40" y="135.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">+ useReducer / useState                increment: () =&gt; set(s =&gt; ({</text>
+  <text x="40" y="161.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">+ Custom Hook                            count: s.count + 1</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">+ useMemo (value 안정화)               })),</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">}))</text>
+  <text x="40" y="239.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">컴포넌트 트리:                      컴포넌트 트리:</text>
+  <text x="40" y="265.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&lt;Provider value={...}&gt;              (Provider 없음!)</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&lt;App&gt;                              &lt;App&gt;</text>
+  <text x="40" y="317.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&lt;Child useContext() /&gt;             &lt;Child useStore(s =&gt; s.count) /&gt;</text>
+  <text x="40" y="343.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&lt;/App&gt;                             &lt;/App&gt;</text>
+  <text x="40" y="369.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&lt;/Provider&gt;</text>
+  <text x="40" y="395.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Provider 위치를 신경 써야 함        · Provider 불필요</text>
+  <text x="40" y="421.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· value 변경 → 모든 소비자 리렌더링   · selector가 변할 때만 리렌더링</text>
+  <text x="40" y="447.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· React 트리에 종속                   · React 트리 밖에서도 접근 가능</text>
+</svg>

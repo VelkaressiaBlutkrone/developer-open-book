@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="320" viewBox="-10 -20 457 244">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="457" height="244" rx="12" fill="#141414"/>
+  <rect x="20" y="10" width="397" height="184" rx="27.599999999999998" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="218.5" y="50.900000000000006" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Node.js의 역할 (개발·빌드 시점에만 사용)</text>
+  <text x="218.5" y="69.10000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">1. 패키지 관리  → npm/pnpm이 라이브러리 설치·관리</text>
+  <text x="218.5" y="87.30000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">2. 개발 서버  → Vite가 파일을 변환하고 브라우저에 제공</text>
+  <text x="218.5" y="105.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">3. 빌드 도구  → Vite/Rollup이 번들링·최적화 수행</text>
+  <text x="218.5" y="123.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">4. 린팅/포매팅  → ESLint, Prettier가 코드 품질 검사</text>
+  <text x="218.5" y="141.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">5. 테스트 실행  → Vitest 등 테스트 러너가 Node.js에서 실행</text>
+  <text x="218.5" y="160.10000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">※ 최종 사용자의 브라우저에서는 Node.js가 실행되지 않는다</text>
+</svg>

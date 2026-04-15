@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="655" viewBox="-10 -15 446 487">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="446" height="487" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">HTTP 클라이언트 계층의 책임</text>
+  <rect x="20" y="50" width="386" height="392" rx="57.9" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15" opacity="1">✅ 담당하는 것:</text>
+  <text x="40" y="109.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· baseURL, timeout, 기본 헤더 설정</text>
+  <text x="40" y="135.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 인증 토큰 자동 추가 (요청 인터셉터)</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 토큰 갱신 자동화 (401 감지 → refresh → 재시도)</text>
+  <text x="40" y="187.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 에러 표준화 (다양한 에러를 ApiError로 통일)</text>
+  <text x="40" y="213.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 요청/응답 로깅 (개발 모드)</text>
+  <text x="40" y="239.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">❌ 담당하지 않는 것:</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 구체적 API URL (/users, /products)</text>
+  <text x="40" y="291.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 비즈니스 로직</text>
+  <text x="40" y="317.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· React 관련 코드 (Hook, 컴포넌트)</text>
+  <text x="40" y="343.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 캐싱 전략</text>
+</svg>

@@ -78,52 +78,15 @@ Zustand = 독일어로 "상태(State)"
 
 ### 1.4 전역 상태 관리 개념 지도
 
-```
-전역 상태 관리 개념 지도
 
-  ┌─────────────────────────────────────────────────────────────┐
-  │                  상태 관리 도구 선택 지형도                    │
-  │                                                              │
-  │  복잡도↑                                                     │
-  │    │                                         Redux Toolkit  │
-  │    │                              (대규모/팀/엄격한 패턴)     │
-  │    │                    Zustand                             │
-  │    │           (중규모/부분 구독/빠른 개발)                    │
-  │    │      Context API                                        │
-  │    │  (소규모/변경 드문 값)                                   │
-  │    │  useState/useReducer                                    │
-  │    │  (로컬 상태)                                            │
-  │    └──────────────────────────────────────────── 규모↑      │
-  │                                                              │
-  │  Zustand의 위치:                                             │
-  │  · Context보다 성능/유연성이 높다                            │
-  │  · Redux Toolkit보다 학습 비용이 낮다                        │
-  │  · "대부분의 중규모 앱"에 최적의 선택                        │
-  └─────────────────────────────────────────────────────────────┘
-```
+![전역 상태 관리 개념 지도](/developer-open-book/diagrams/react-step26-전역-상태-관리-개념-지도.svg)
+
 
 ### 1.5 이 Step에서 다루는 범위
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  다루는 것                                               │
-│  · Zustand의 핵심 개념과 store 생성                     │
-│  · selector 기반 부분 구독의 원리                        │
-│  · set/get을 활용한 상태 업데이트 패턴                   │
-│  · 미들웨어 (persist, devtools, immer)                  │
-│  · 비동기 액션 (데이터 패칭)                             │
-│  · store 설계 전략 (단일 vs 분리)                       │
-│  · Context, Redux Toolkit과의 비교                      │
-│  · 전역 상태의 Anti-pattern                             │
-│  · 상태 관리 도구 최종 선택 가이드                       │
-├─────────────────────────────────────────────────────────┤
-│  다루지 않는 것                                          │
-│  · Jotai (Atomic 패턴)                                  │
-│  · Recoil                                               │
-│  · MobX                                                 │
-│  · 상태 관리 라이브러리의 내부 구현 상세                  │
-└─────────────────────────────────────────────────────────┘
-```
+
+![다루는 것](/developer-open-book/diagrams/react-step26-다루는-것.svg)
+
 
 ---
 
@@ -135,23 +98,9 @@ Zustand에서 **Store**는 상태(state)와 그 상태를 변경하는 액션(ac
 
 Store가 중요한 이유는 "상태가 어디 있는가"와 "어떻게 변경하는가"가 분리되지 않는다는 점이다. Redux에서는 store(상태 저장소), reducer(변경 로직), action creator(액션 생성 함수)가 별도 파일로 분리되어 보일러플레이트가 증가했다. Zustand는 이 세 요소를 하나의 `create()` 호출 안에 통합함으로써 코드량을 획기적으로 줄인다.
 
-```
-Store의 구성 요소
 
-  create((set, get) => ({
-    // ── 상태 (State) ──
-    count: 0,
-    items: [],
+![Store의 구성 요소](/developer-open-book/diagrams/react-step26-store의-구성-요소.svg)
 
-    // ── 액션 (Action) ──
-    increment: () => set(state => ({ count: state.count + 1 })),
-    addItem: (item) => set(state => ({ items: [...state.items, item] })),
-  }))
-
-  · set: 상태를 업데이트하는 함수 (useState의 setState에 해당)
-  · get: 현재 상태를 읽는 함수 (액션 내부에서 다른 상태 참조 시 사용)
-  · 반환 객체: 상태 + 액션이 한 곳에 공존
-```
 
 ### 2.2 Selector — 부분 구독의 핵심 메커니즘
 
@@ -159,23 +108,9 @@ Store의 구성 요소
 
 Selector가 Zustand의 성능 우위를 결정하는 핵심 요소다. Context에서는 Provider value 전체가 변경 단위였기 때문에 값의 일부만 바뀌어도 모든 소비자가 리렌더링되었다. Selector는 각 컴포넌트가 "자신이 구독한 슬라이스"만 감시하므로, 다른 상태가 변해도 전혀 영향을 받지 않는다.
 
-```
-Selector의 동작 원리
 
-  Store: { count: 0, user: 'Alice', theme: 'dark' }
+![Selector의 동작 원리](/developer-open-book/diagrams/react-step26-selector의-동작-원리.svg)
 
-  컴포넌트 A: useStore(s => s.count)   → count만 구독
-  컴포넌트 B: useStore(s => s.user)    → user만 구독
-  컴포넌트 C: useStore(s => s.theme)   → theme만 구독
-
-  count가 1로 변경되면:
-    · 컴포넌트 A: 리렌더링 ✓
-    · 컴포넌트 B: 리렌더링 없음 ✗
-    · 컴포넌트 C: 리렌더링 없음 ✗
-
-  Context였다면:
-    · 컴포넌트 A, B, C 모두 리렌더링 ✓✓✓
-```
 
 ### 2.3 set과 get — 상태 업데이트와 읽기
 
@@ -208,60 +143,15 @@ Selector의 동작 원리
 
 ### 2.7 Zustand vs Context 구조 비교
 
-```
-Context 방식:                        Zustand 방식:
 
-  createContext()                      create((set, get) => ({
-  + Provider                             count: 0,
-  + useReducer / useState                increment: () => set(s => ({
-  + Custom Hook                            count: s.count + 1
-  + useMemo (value 안정화)               })),
-                                       }))
+![Context 방식:                        Zustand 방식:](/developer-open-book/diagrams/react-step26-context-방식-zustand-방식.svg)
 
-  컴포넌트 트리:                      컴포넌트 트리:
-
-  <Provider value={...}>              (Provider 없음!)
-    <App>                              <App>
-      <Child useContext() />             <Child useStore(s => s.count) />
-    </App>                             </App>
-  </Provider>
-
-  · Provider 위치를 신경 써야 함        · Provider 불필요
-  · value 변경 → 모든 소비자 리렌더링   · selector가 변할 때만 리렌더링
-  · React 트리에 종속                   · React 트리 밖에서도 접근 가능
-```
 
 ### 2.8 개념 간 관계 다이어그램
 
-```
-Zustand 핵심 개념 관계도
 
-  ┌─────────────────────────────────────────────────────────────┐
-  │                         Store                               │
-  │  ┌─────────────────┐    ┌─────────────────────────────────┐ │
-  │  │   State (상태)   │    │       Actions (액션)            │ │
-  │  │  · count: 0     │◄───│  · increment: () => set(...)   │ │
-  │  │  · items: []    │    │  · addItem: (x) => set(...)     │ │
-  │  │  · user: null   │    │  · fetchData: async () => ...  │ │
-  │  └────────┬────────┘    └─────────────────────────────────┘ │
-  └───────────┼─────────────────────────────────────────────────┘
-              │ 구독 (subscribe)
-              │
-  ┌───────────▼─────────────────────────────────────────────────┐
-  │                    컴포넌트 레이어                            │
-  │                                                              │
-  │  Component A          Component B          Component C       │
-  │  selector: s.count    selector: s.items    selector: s.user  │
-  │                                                              │
-  │  count 변경 시:        items 변경 시:        user 변경 시:    │
-  │  A만 리렌더링 ★       B만 리렌더링 ★        C만 리렌더링 ★  │
-  └─────────────────────────────────────────────────────────────┘
+![Zustand 핵심 개념 관계도](/developer-open-book/diagrams/react-step26-zustand-핵심-개념-관계도.svg)
 
-  Middleware 체계:
-  devtools( persist( immer( create(...) ) ) )
-       ↑           ↑       ↑
-   DevTools 연동  영속화  불변 업데이트
-```
 
 ---
 
@@ -316,22 +206,9 @@ function ResetButton() {
 }
 ```
 
-```
-Context와의 핵심 차이
 
-  Context:
-    const { count, increment, reset } = useAppContext();
-    // count가 변하면 → 이 컴포넌트 리렌더링
-    // count만 사용해도, increment/reset을 가진 다른 컴포넌트도 리렌더링!
+![Context와의 핵심 차이](/developer-open-book/diagrams/react-step26-context와의-핵심-차이.svg)
 
-  Zustand:
-    const count = useCounterStore(state => state.count);
-    // count가 변할 때만 이 컴포넌트 리렌더링 ★
-    // 다른 컴포넌트가 reset만 구독하면 count 변경에 무반응!
-
-  원리: Zustand는 각 컴포넌트가 "구독한 부분"만 추적하고
-        그 부분이 변할 때만 해당 컴포넌트를 리렌더링한다
-```
 
 ### 3.2 Selector — 부분 구독의 핵심
 
@@ -375,23 +252,9 @@ const [count, name] = useCounterStore(
 );
 ```
 
-```
-Selector 비교 방식
 
-  기본 (===):
-    · 원시값: 값이 같으면 동일 → 효율적
-    · 객체/배열: 매번 새 참조 → 항상 "변경됨" → 매번 리렌더링!
+![Selector 비교 방식](/developer-open-book/diagrams/react-step26-selector-비교-방식.svg)
 
-  useShallow (얕은 비교):
-    · 객체의 1단계 속성을 각각 === 비교
-    · { count: 1, name: 'a' } vs { count: 1, name: 'a' } → 동일!
-    · 실제로 값이 변한 경우에만 리렌더링
-
-  원칙:
-    · 원시값 selector → 기본 비교 OK
-    · 객체/배열 selector → useShallow 사용
-    · 또는 원시값 selector를 여러 번 호출 (각각 독립)
-```
 
 ### 3.3 set과 get — 상태 업데이트 패턴
 
@@ -493,20 +356,9 @@ function ProductList() {
 }
 ```
 
-```
-⚠️ 서버 데이터 패칭에 Zustand를 사용하는 것은 권장하지 않는다
 
-  Zustand의 fetchProducts는 단순한 패칭일 뿐:
-    · 캐싱 없음
-    · 자동 리패칭 없음
-    · 에러 재시도 없음
-    · Race Condition 방지 없음
+![⚠️ 서버 데이터 패칭에 Zustand를 사용하는 것은 권장하지 않는다](/developer-open-book/diagrams/react-step26-서버-데이터-패칭에-zustand를-사용하는-것은-권장하지-않는다.svg)
 
-  서버 데이터 → TanStack Query (Step 23)
-  클라이언트 전역 상태 → Zustand
-
-  Zustand로 서버 데이터를 관리하는 것은 Step 22의 수동 패칭과 같은 한계
-```
 
 ### 3.4 미들웨어
 
@@ -630,35 +482,9 @@ Store 설계는 단순히 코드를 어디에 두는지가 아니라, 상태 변
 
 #### 단일 Store vs 분리된 Store
 
-```
-방식 1: 도메인별 분리 (권장 ★)
 
-  useAuthStore     → user, login, logout
-  useCartStore     → items, addItem, removeItem
-  useUIStore       → sidebarOpen, theme, modals
+![방식 1: 도메인별 분리 (권장 ★)](/developer-open-book/diagrams/react-step26-방식-1-도메인별-분리-권장.svg)
 
-  장점:
-    · 각 store가 작고 단순하다
-    · 관심사 분리가 명확하다
-    · 한 store의 변경이 다른 store에 영향 없음
-    · 테스트가 독립적이다
-
-  단점:
-    · store 간 상호 참조가 필요하면 약간 복잡
-
-
-방식 2: 단일 Store (소규모 앱에서 OK)
-
-  useStore → 모든 상태와 액션
-
-  장점:
-    · 구조가 단순하다
-    · store 간 참조가 불필요
-
-  단점:
-    · 앱이 커지면 파일이 비대해짐
-    · selector를 세밀하게 작성해야 함
-```
 
 #### 실전 Store 설계 예시
 
@@ -795,130 +621,31 @@ apiClient.interceptors.request.use((config) => {
 
 ### 3.7 Context vs Zustand vs Redux Toolkit 비교
 
-```
-┌──────────────────┬──────────────────┬──────────────────┬──────────────────┐
-│                  │  Context         │  Zustand         │  Redux Toolkit   │
-├──────────────────┼──────────────────┼──────────────────┼──────────────────┤
-│  번들 크기       │  0KB (내장)       │  ~1.5KB          │  ~11KB           │
-│  보일러플레이트   │  많음            │  매우 적음 ★      │  적음 (RTK)      │
-│  Provider 필요   │  필수            │  불필요 ★        │  필수            │
-│  부분 구독       │  불가            │  selector 기반 ★ │  selector 기반   │
-│  DevTools        │  없음            │  미들웨어로 지원 │  내장 ★          │
-│  미들웨어        │  없음            │  persist, immer  │  내장 (thunk 등) │
-│  비동기 처리     │  수동            │  자연스러운 async│  createAsyncThunk│
-│  React 외 접근   │  불가            │  getState() ★    │  store.getState()│
-│  학습 곡선       │  낮음            │  매우 낮음 ★     │  중간            │
-│  생태계          │  React 내장      │  성장 중         │  가장 큼 ★       │
-│  타입 안전성     │  수동 설정       │  우수            │  우수            │
-│  Time Travel     │  불가            │  DevTools 통해   │  DevTools ★     │
-├──────────────────┼──────────────────┼──────────────────┼──────────────────┤
-│  적합한 경우     │  변경 드문 전역값 │  대부분의 앱 ★   │  대규모/복잡한 앱│
-│                  │  테마, 인증      │  빠른 개발       │  엄격한 패턴 필요│
-│                  │                  │  유연한 구조     │  팀 규모 큰 경우 │
-└──────────────────┴──────────────────┴──────────────────┴──────────────────┘
-```
 
-```
-Redux Toolkit(RTK) 간략 소개
+![Context         │  Zustand         │  Redux Toolkit](/developer-open-book/diagrams/react-step26-context-zustand-redux-toolkit.svg)
 
-  RTK는 Redux의 공식 도구킷으로, 기존 Redux의 복잡함을 해소:
-    · configureStore: Redux store를 간편하게 생성
-    · createSlice: reducer + action을 한 번에 정의
-    · createAsyncThunk: 비동기 로직 표준 패턴
-    · RTK Query: TanStack Query와 유사한 데이터 패칭
 
-  Zustand vs RTK 선택:
-    · 소~중규모 앱, 빠른 개발 → Zustand
-    · 대규모 앱, 엄격한 패턴, 큰 팀 → RTK
-    · 이미 Redux 생태계에 익숙 → RTK
-    · 새 프로젝트, 간결함 선호 → Zustand
-```
+
+![Redux Toolkit(RTK) 간략 소개](/developer-open-book/diagrams/react-step26-redux-toolkit-rtk-간략-소개.svg)
+
 
 ### 3.8 전역 상태의 Anti-pattern
 
 전역 상태 관리에서 Anti-pattern은 단순히 코드 스타일의 문제가 아니라, 애플리케이션의 예측 가능성과 테스트 용이성을 직접적으로 훼손한다. 상태가 어디서 어떻게 변경되는지 추적하기 어려워지면, 디버깅 비용이 기하급수적으로 증가한다.
 
-```
-❌ Anti-pattern 1: 모든 것을 전역 상태에 넣기
 
-  "이 값을 여러 곳에서 쓸 수도 있으니 전역으로..."
-
-  문제: 상태가 "어디서 변경되는지" 추적 어려움
-  원칙: "정말 전역이 필요한가?" → 대부분 Props나 로컬 State로 충분
+![❌ Anti-pattern 1: 모든 것을 전역 상태에 넣기](/developer-open-book/diagrams/react-step26-anti-pattern-1-모든-것을-전역-상태에-넣기.svg)
 
 
-❌ Anti-pattern 2: 서버 데이터를 전역 상태에 저장
 
-  useStore({ users: [] })에 API 응답을 저장하고 수동 관리
+![전역 상태에 적합한 데이터](/developer-open-book/diagrams/react-step26-전역-상태에-적합한-데이터.svg)
 
-  문제: Step 22의 수동 패칭 7가지 한계 그대로 발생
-  해결: 서버 데이터는 TanStack Query로 관리
-
-
-❌ Anti-pattern 3: 파생 데이터를 상태에 저장
-
-  useStore({
-    items: [...],
-    filteredItems: [...],  ← items에서 계산 가능!
-    totalPrice: 0,         ← items에서 계산 가능!
-  })
-
-  문제: items 변경 시 filteredItems, totalPrice도 수동 동기화 필요
-  해결: 파생 데이터는 selector 또는 get()으로 "계산"한다
-
-
-❌ Anti-pattern 4: 폼 입력값을 전역에 저장
-
-  useStore({ formName: '', formEmail: '' })
-
-  문제: 매 키 입력마다 전역 상태 업데이트 → 불필요한 영향 범위
-  해결: 폼 입력은 로컬 State(useState) 또는 React Hook Form
-```
-
-```
-전역 상태에 적합한 데이터
-
-  ✅ 인증 상태 (로그인한 사용자 정보)
-  ✅ UI 전역 상태 (테마, 사이드바 열림, 활성 모달)
-  ✅ 장바구니 (여러 페이지에서 접근)
-  ✅ 알림/토스트 (어디서든 추가 가능)
-  ✅ 앱 설정 (언어, 시간대, 표시 옵션)
-
-  ❌ 서버 데이터 → TanStack Query
-  ❌ 폼 입력값 → 로컬 State
-  ❌ URL 상태 → useSearchParams (Step 18)
-  ❌ 파생 데이터 → selector로 계산
-  ❌ 한 컴포넌트에서만 사용하는 State → 로컬 useState
-```
 
 ### 3.9 상태 관리 도구 최종 선택 가이드
 
-```
-프로젝트에서 상태를 어떻게 관리할 것인가?
 
-  ┌─ 서버에서 오는 데이터인가?
-  │    YES → TanStack Query (Step 23)
-  │    NO ↓
-  │
-  ├─ URL에 반영되어야 하는 상태인가? (필터, 검색어, 페이지)
-  │    YES → useSearchParams / URL (Step 18)
-  │    NO ↓
-  │
-  ├─ 한 컴포넌트에서만 사용하는가?
-  │    YES → useState / useReducer (로컬)
-  │    NO ↓
-  │
-  ├─ 부모-자식 2~3단계에서만 공유하는가?
-  │    YES → Props 전달 또는 Composition (Step 5)
-  │    NO ↓
-  │
-  ├─ 변경이 드물고 앱 전체에서 필요한가? (테마, 인증, 로케일)
-  │    YES → Context API (Step 25)
-  │    NO ↓
-  │
-  └─ 여러 페이지에서 공유 + 빈번한 변경 + 부분 구독 필요?
-       YES → Zustand (이 Step) ★
-```
+![프로젝트에서 상태를 어떻게 관리할 것인가?](/developer-open-book/diagrams/react-step26-프로젝트에서-상태를-어떻게-관리할-것인가.svg)
+
 
 ---
 
@@ -928,21 +655,9 @@ Redux Toolkit(RTK) 간략 소개
 
 이커머스 앱에서 장바구니 기능은 전형적인 Zustand 적용 사례다. Context 기반으로 구현했을 때 발생하는 문제를 분석하고, Zustand로 마이그레이션하는 과정을 살펴본다.
 
-```
-Context 버전의 문제:
-  · CartContext.Provider value={{ items, addItem, removeItem, ... }}
-  · 아이템 추가 시 value 객체 변경 → 헤더의 장바구니 아이콘 리렌더링
-  · 상품 목록 페이지도 리렌더링 (장바구니와 무관한데!)
-  · useMemo로 value를 안정화해도 items가 변하면 전부 리렌더링
 
-Zustand 버전의 해결:
-  · 헤더: useCartStore(state => state.getTotalCount())
-    → totalCount가 변할 때만 리렌더링
-  · 상품 카드: useCartStore(state => state.addItem)
-    → addItem 함수 참조 불변 → 리렌더링 없음!
-  · 장바구니 페이지: useCartStore(useShallow(state => state.items))
-    → items가 변할 때만 리렌더링 (정상)
-```
+![Context 버전의 문제:](/developer-open-book/diagrams/react-step26-context-버전의-문제.svg)
+
 
 마이그레이션 후 리렌더링 횟수 비교:
 
@@ -1087,23 +802,9 @@ function ProductPage() {
 
 **목표:** Step 25의 Context 코드를 Zustand로 마이그레이션하고 차이를 분석한다.
 
-```
-과제:
-  · Step 25 실습 2의 장바구니 Context를 Zustand로 변환
-  · 변환 전후 비교:
-    - 코드 줄 수 (Provider, Hook, store 포함)
-    - 리렌더링 횟수 (console.log로 측정)
-    - Provider 배치 여부
-    - 보일러플레이트 양
 
-기록표:
-  | 항목              | Context | Zustand |
-  |-------------------|---------|---------|
-  | 코드 줄 수         | ?       | ?       |
-  | Provider 필요     | ?       | ?       |
-  | 리렌더링 (추가 시) | ?개     | ?개     |
-  | React 외부 접근   | ?       | ?       |
-```
+![과제:](/developer-open-book/diagrams/react-step26-과제.svg)
+
 
 ---
 
@@ -1142,50 +843,9 @@ function ProductPage() {
 
 ### 6.1 핵심 요약
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│                      Step 26 핵심 요약                        │
-├──────────────────────────────────────────────────────────────┤
-│                                                               │
-│  1. Zustand = 최소 API + selector 기반 부분 구독 전역 상태    │
-│     → create((set, get) => ({ state, actions }))             │
-│     → Provider 불필요, ~1.5KB, 보일러플레이트 최소            │
-│                                                               │
-│  2. Selector = 부분 구독의 핵심                               │
-│     → useStore(state => state.count) — count 변경 시만 리렌더링│
-│     → 객체 반환 시 useShallow 사용                            │
-│     → Context의 "전체 리렌더링" 문제를 근본적으로 해결        │
-│                                                               │
-│  3. 미들웨어로 기능을 확장한다                                 │
-│     → persist: localStorage 자동 저장/복원                   │
-│     → devtools: Redux DevTools 연동                          │
-│     → immer: 불변 업데이트를 직접 변경처럼 작성               │
-│                                                               │
-│  4. React 트리 밖에서도 State에 접근 가능                     │
-│     → useStore.getState(): 현재 상태 읽기                    │
-│     → useStore.subscribe(): 변경 감지                        │
-│     → Axios 인터셉터, 유틸리티 함수에서 활용                  │
-│                                                               │
-│  5. 도메인별 Store 분리를 권장한다                             │
-│     → useAuthStore, useCartStore, useUIStore                 │
-│     → 각 store가 독립적으로 변경·테스트 가능                  │
-│                                                               │
-│  6. Anti-pattern을 피한다                                     │
-│     → 서버 데이터를 Zustand에 넣지 않음 (→ TanStack Query)   │
-│     → 파생 데이터를 State로 저장하지 않음 (→ selector/get)    │
-│     → 폼 입력값을 전역에 넣지 않음 (→ 로컬 State)            │
-│     → 한 곳에서만 쓰는 State를 전역에 넣지 않음               │
-│                                                               │
-│  7. 상태 관리 도구 최종 선택                                   │
-│     → 서버 데이터 → TanStack Query                           │
-│     → URL 상태 → useSearchParams                             │
-│     → 로컬 UI → useState                                     │
-│     → 변경 드문 전역 → Context                               │
-│     → 변경 빈번 전역 → Zustand ★                             │
-│     → 대규모/엄격한 팀 → Redux Toolkit                       │
-│                                                               │
-└──────────────────────────────────────────────────────────────┘
-```
+
+![Step 26 핵심 요약](/developer-open-book/diagrams/react-step26-step-26-핵심-요약.svg)
+
 
 ### 6.2 자가진단 퀴즈
 

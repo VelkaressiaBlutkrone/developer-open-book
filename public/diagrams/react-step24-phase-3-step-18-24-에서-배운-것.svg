@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="1404" viewBox="-10 -15 497 1163">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="497" height="1163" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Phase 3 (Step 18~24)에서 배운 것</text>
+  <rect x="20" y="50" width="437" height="1068" rx="65.55" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 18: React Router v6+</text>
+  <text x="40" y="109.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 클라이언트 사이드 라우팅, Nested Routes, Layout</text>
+  <text x="40" y="135.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 동적 라우트, useSearchParams, Protected Route</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Data Router (loader/action)</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 19: 렌더링 전략 비교</text>
+  <text x="40" y="213.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· CSR, SSR, SSG, ISR, Streaming SSR</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Hydration의 정확한 과정</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 성능 지표(TTFB, FCP, TTI) 관점 비교</text>
+  <text x="40" y="291.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 혼합 전략</text>
+  <text x="40" y="317.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 20: React Server Components</text>
+  <text x="40" y="343.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Server vs Client Component</text>
+  <text x="40" y="369.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· &quot;use client&quot; 경계 설계</text>
+  <text x="40" y="395.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· RSC ≠ SSR, 번들 크기 감소</text>
+  <text x="40" y="421.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Server Actions</text>
+  <text x="40" y="447.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 21: Next.js App Router</text>
+  <text x="40" y="473.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 파일 시스템 라우팅 규약</text>
+  <text x="40" y="499.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· layout/loading/error 특수 파일</text>
+  <text x="40" y="525.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 정적/동적 렌더링 자동 판단</text>
+  <text x="40" y="551.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Server Actions + revalidation</text>
+  <text x="40" y="577.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 22: REST API + 수동 패칭</text>
+  <text x="40" y="603.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· fetch/Axios 사용법</text>
+  <text x="40" y="629.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 수동 패칭의 7가지 한계 인식</text>
+  <text x="40" y="655.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Server State vs Client State 구분</text>
+  <text x="40" y="681.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 23: TanStack Query</text>
+  <text x="40" y="707.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· useQuery, useMutation, queryKey</text>
+  <text x="40" y="733.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 캐싱, 리패칭, 에러 재시도</text>
+  <text x="40" y="759.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Optimistic Update, Infinite Query</text>
+  <text x="40" y="785.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 24: API 계층 설계 (이 Step)</text>
+  <text x="40" y="811.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 3계층 아키텍처 (HTTP → Service → Hook)</text>
+  <text x="40" y="837.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 에러 분류와 계층적 처리</text>
+  <text x="40" y="863.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 인증 토큰 자동 관리</text>
+  <text x="40" y="889.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 로딩/에러 UI 일관된 패턴</text>
+  <text x="40" y="915.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">Phase 3의 핵심 메시지:</text>
+  <text x="40" y="941.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&quot;URL로 페이지를 관리하고 (라우팅)</text>
+  <text x="40" y="967.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">서버 데이터를 체계적으로 관리하며 (TanStack Query)</text>
+  <text x="40" y="993.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">API 코드를 계층적으로 설계한다 (3계층 아키텍처)&quot;</text>
+  <text x="40" y="1019.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Phase 4부터는 이 기반 위에 전역 상태 관리와 아키텍처 패턴을 쌓는다.</text>
+</svg>

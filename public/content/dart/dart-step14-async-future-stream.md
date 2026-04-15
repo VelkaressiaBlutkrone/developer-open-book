@@ -95,7 +95,7 @@ Dart 방식 (단일 스레드 + Event Loop)
 
 ### 3.1 Future의 세 가지 상태
 
-![diagram](/developer-open-book/diagrams/step14-future-states.svg)
+<div data-diagram="future-states" data-steps="3" data-alt="Future의 세 가지 상태" data-descriptions="Future가 생성되면 Uncompleted(대기 중) 상태로 시작합니다|비동기 작업이 성공하면 Completed with value 상태가 됩니다|비동기 작업이 실패하면 Completed with error 상태가 됩니다"></div>
 
 ```dart
 import 'dart:async';
@@ -1106,15 +1106,7 @@ void main() async {
 
 > **정답 힌트**
 >
-> ```
-> A   ← 동기
-> F   ← 동기
-> C   ← Microtask (Future.microtask)
-> D   ← Microtask (Future.value.then)
-> E   ← Microtask (scheduleMicrotask)
-> B   ← Event Queue (Future.delayed zero)
-> G   ← await 이후 재개 (Event Queue 후)
-> ```
+> <div data-diagram="step14-exec-order" data-steps="7" data-alt="Event Loop 실행 순서" data-descriptions="A 출력 — 동기 코드가 먼저 실행됩니다|F 출력 — 동기 코드가 계속 실행됩니다|C 출력 — Future.microtask의 Microtask가 실행됩니다|D 출력 — Future.value.then의 Microtask가 실행됩니다|E 출력 — scheduleMicrotask의 Microtask가 실행됩니다|B 출력 — Future.delayed(zero)의 Event Queue 콜백이 실행됩니다|G 출력 — await 이후 나머지 코드가 재개됩니다"></div>
 
 ### 실습 9-2: `async*` / `yield`로 페이지네이션 Stream 구현
 

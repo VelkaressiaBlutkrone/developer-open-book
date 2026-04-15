@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="638.5" height="639" viewBox="-10 -20 638.5 639">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="638.5" height="639" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">fetch의 특이한 동작들</text>
+  <rect x="20" y="45" width="578.5" height="544" rx="81.6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">fetch의 특이한 동작들</text>
+  <text x="40" y="105.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. HTTP 에러(4xx, 5xx)에서 reject되지 않는다!</text>
+  <text x="40" y="134.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">fetch는 네트워크 에러에서만 reject된다.</text>
+  <text x="40" y="160.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">400, 404, 500 등은 &quot;성공한 응답&quot;으로 취급된다.</text>
+  <text x="40" y="185.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ response.ok를 반드시 확인해야 한다!</text>
+  <text x="40" y="212.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">// ❌ 에러를 놓치는 코드</text>
+  <text x="40" y="238.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">const data = await fetch('/api/users').then(r =&gt; r.json());</text>
+  <text x="40" y="264.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">// 404여도 data에 에러 객체가 들어올 뿐, 예외가 발생하지 않음!</text>
+  <text x="40" y="290.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">// ✅ 올바른 에러 처리</text>
+  <text x="40" y="316.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">const response = await fetch('/api/users');</text>
+  <text x="40" y="342.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">if (!response.ok) throw new Error(`HTTP ${response.status}`);</text>
+  <text x="40" y="368.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">const data = await response.json();</text>
+  <text x="40" y="395.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. response.json()도 Promise다 (await 필요!)</text>
+  <text x="40" y="424.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">const response = await fetch(url);  // 1번째 await</text>
+  <text x="40" y="450.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">const data = await response.json(); // 2번째 await</text>
+  <text x="40" y="477.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. 요청 취소: AbortController 사용</text>
+  <text x="40" y="506.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">const controller = new AbortController();</text>
+  <text x="40" y="532.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">fetch(url, { signal: controller.signal });</text>
+  <text x="40" y="558.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">controller.abort();  // 취소</text>
+</svg>

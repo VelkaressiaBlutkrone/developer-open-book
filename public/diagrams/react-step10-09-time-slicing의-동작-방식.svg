@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="751.6" height="445" viewBox="-20 -20 751.6 444.6">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-20" y="-20" width="751.6" height="444.6" rx="12" fill="#141414"/>
+  <text x="10" y="22.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Time Slicing의 동작 방식</text>
+  <text x="10" y="47.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">메인 스레드 타임라인:</text>
+  <text x="10" y="72.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Synchronous:</text>
+  <text x="10" y="100.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1"></text>
+  <rect x="220" y="85" width="300" height="20" rx="0" fill="#555555" stroke="#a0a0a0" stroke-width="2" opacity="1"/>
+  <rect x="220" y="85" width="300" height="20" rx="0" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="530" y="98.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">(한 덩어리)</text>
+  <text x="10" y="127.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">|←────────── 200ms, 다른 작업 불가 ──────────→|</text>
+  <text x="10" y="152.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Concurrent (Time Slicing):</text>
+  <text x="10" y="180.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1"></text>
+  <rect x="220" y="165" width="300" height="20" rx="0" fill="#555555" stroke="#a0a0a0" stroke-width="2" opacity="1"/>
+  <rect x="220" y="165" width="210" height="20" rx="0" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="530" y="178.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">(잘게 나뉨)</text>
+  <text x="10" y="207.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">|5ms|쉼|5ms|쉼|5ms|쉼|5ms|쉼|5ms|쉼|5ms|</text>
+  <text x="10" y="235.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1"></text>
+  <rect x="220" y="220" width="300" height="20" rx="0" fill="#555555" stroke="#a0a0a0" stroke-width="2" opacity="1"/>
+  <text x="530" y="233.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">= &quot;쉼&quot; 구간에서 브라우저가 할 수 있는 일:</text>
+  <text x="10" y="262.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 사용자 키보드 입력 처리</text>
+  <text x="10" y="287.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 마우스 클릭 처리</text>
+  <text x="10" y="312.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 애니메이션 프레임 처리</text>
+  <text x="10" y="337.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 레이아웃 재계산</text>
+  <text x="10" y="362.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 총 렌더링 시간은 약간 더 길어질 수 있지만</text>
+  <text x="10" y="387.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 사용자 체감 성능은 훨씬 좋아진다 (UI가 멈추지 않음)</text>
+</svg>

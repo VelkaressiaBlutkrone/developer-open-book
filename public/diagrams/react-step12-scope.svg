@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="526" viewBox="20 -20 510 447">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="510" height="447" rx="12" fill="#141414"/>
+  <text x="100" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Step 12 — 다루는 범위</text>
+  <rect x="50" y="50" width="450" height="221" rx="33.15" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="60" y="72.4" fill="#22c55e" font-family="Nunito, sans-serif" font-size="16" opacity="1">다루는 것</text>
+  <text x="65" y="96.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· useRef의 본질과 내부 구조</text>
+  <text x="65" y="118.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· useRef vs useState: 근본적 차이</text>
+  <text x="65" y="140.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· ref로 DOM 노드에 접근하는 패턴</text>
+  <text x="65" y="162.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· ref의 연결 타이밍 (Commit Phase)</text>
+  <text x="65" y="184.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· forwardRef와 React 19의 ref Props</text>
+  <text x="65" y="206.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· useImperativeHandle</text>
+  <text x="65" y="228.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Stale Closure 해결에서의 useRef 활용</text>
+  <text x="65" y="250.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· ref 콜백 패턴</text>
+  <rect x="50" y="286" width="450" height="111" rx="16.65" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="60" y="308.4" fill="#ef4444" font-family="Nunito, sans-serif" font-size="16" opacity="1">다루지 않는 것</text>
+  <text x="65" y="332.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· useReducer (Step 13)</text>
+  <text x="65" y="354.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· useMemo / useCallback (Step 14)</text>
+  <text x="65" y="376.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 외부 라이브러리 통합 상세</text>
+</svg>

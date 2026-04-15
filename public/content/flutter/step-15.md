@@ -27,38 +27,13 @@
 
 Provider는 훌륭하지만 규모가 커질수록 한계가 드러난다.
 
-```
-Provider의 한계
-──────────────────────────────────────────────────────
-  ① 같은 타입의 Provider 두 개 동시 제공 어려움
-     → UserProvider가 두 개 필요한 경우 처리 복잡
-
-  ② context 의존성
-     → 위젯 트리 밖(서비스, 저장소)에서 상태 접근 번거로움
-
-  ③ 컴파일 타임 안전성 부족
-     → 잘못된 타입 접근 시 런타임 오류
-
-  ④ 상태 초기화 시점 제어 어려움
-     → Provider가 생성되는 시점이 항상 위젯 트리 렌더링 시
-
-  ⑤ 로직과 UI의 분리 한계
-     → ChangeNotifier가 UI 의존적 성격을 가질 수 있음
-──────────────────────────────────────────────────────
-```
+![Provider의 한계](/developer-open-book/diagrams/flutter-step15-provider-limits.svg)
 
 ### 1.2 이 Step의 학습 전략
 
 Riverpod과 Bloc은 각각 방대한 문서를 가진 독립적인 생태계다. 이 문서는 **핵심 개념과 실용적 사용법**에 집중하고, 심화 기능은 공식 문서 링크로 안내한다.
 
-```
-학습 우선순위
-──────────────────────────────────────────────────────
-  1순위: Riverpod ← 2026년 Flutter 신규 프로젝트 표준
-  2순위: Bloc/Cubit ← 대규모 팀·엔터프라이즈 선호
-  참고:  Redux ← 개념 이해용 (Flutter에서 권장 안 됨)
-──────────────────────────────────────────────────────
-```
+![학습 우선순위](/developer-open-book/diagrams/flutter-step15-learning-priority.svg)
 
 ### 1.3 전체 개념 지도
 
@@ -269,19 +244,7 @@ class ProductListScreen extends ConsumerWidget {
 
 **AsyncValue의 3가지 상태:**
 
-```
-AsyncValue<T>
-  ├── AsyncLoading   → 로딩 중
-  ├── AsyncData<T>   → 데이터 있음
-  └── AsyncError     → 오류 발생
-
-.when() 패턴으로 3가지 모두 처리:
-productsAsync.when(
-  loading: () => LoadingWidget(),
-  error: (e, st) => ErrorWidget(e),
-  data: (data) => DataWidget(data),
-)
-```
+![AsyncValue 3가지 상태](/developer-open-book/diagrams/flutter-step15-async-value.svg)
 
 ---
 
@@ -380,20 +343,7 @@ class DataNotifier extends AutoDisposeAsyncNotifier<Data> {
 
 #### Cubit: 메서드로 상태 변경 (경량 버전)
 
-```
-Cubit 구조
-──────────────────────────────────────────────────────
-  UI               Cubit                State
-  ────             ──────               ──────
-  탭 이벤트  ──→  increment()  ──→  emit(count + 1)
-  스와이프   ──→  reset()      ──→  emit(0)
-                               ──→  Stream<State>
-                                        ↓
-                               BlocBuilder가 수신
-                                        ↓
-                               UI 재구성
-──────────────────────────────────────────────────────
-```
+![Cubit 구조](/developer-open-book/diagrams/flutter-step15-cubit-structure.svg)
 
 ```dart
 // 설치
@@ -625,32 +575,7 @@ BlocConsumer<SubmitBloc, SubmitState>(
 
 ### 4.1 Spotify 스타일 플레이리스트: Bloc 구조 분석
 
-```
-플레이리스트 Bloc 설계
-──────────────────────────────────────────────────────
-  이벤트
-    LoadPlaylistEvent(playlistId)
-    AddTrackEvent(track)
-    RemoveTrackEvent(trackId)
-    ReorderTracksEvent(oldIndex, newIndex)
-    ShuffleEvent()
-
-  상태
-    PlaylistInitial
-    PlaylistLoading
-    PlaylistLoaded(tracks, isShuffled, currentTrackIndex)
-    PlaylistError(message)
-
-  흐름
-    화면 진입 → add(LoadPlaylistEvent)
-    Bloc → _onLoad() → API 호출 → emit(PlaylistLoaded)
-    BlocBuilder → 트랙 목록 표시
-
-    트랙 탭 → add(PlayTrackEvent)
-    Bloc → emit(상태 업데이트, currentTrackIndex 변경)
-    BlocBuilder → 현재 재생 트랙 하이라이트
-──────────────────────────────────────────────────────
-```
+![플레이리스트 Bloc 설계](/developer-open-book/diagrams/flutter-step15-playlist-bloc.svg)
 
 이 구조의 장점: 모든 상태 전환이 이벤트로 로깅되어 "어떤 이벤트가 어떤 상태를 만들었는가"를 정확히 추적할 수 있다.
 

@@ -1,0 +1,329 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t",
+      "x": 80,
+      "y": 10,
+      "text": "useReducer 데이터 흐름",
+      "fontSize": 22,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 224.39999999999998,
+      "height": 28,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "u",
+      "x": 180,
+      "y": 55,
+      "width": 200,
+      "height": 32,
+      "backgroundColor": "#5c3d1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "ut",
+      "x": 180,
+      "y": 60,
+      "text": "사용자 액션 (클릭, 입력)",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 180,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "u",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "line",
+      "id": "a1",
+      "x": 280,
+      "y": 87,
+      "width": 0,
+      "height": 18,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        18
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "eh",
+      "x": 150,
+      "y": 110,
+      "width": 260,
+      "height": 45,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "eht",
+      "x": 155,
+      "y": 115,
+      "text": "이벤트 핸들러",
+      "fontSize": 14,
+      "strokeColor": "#4a9eed",
+      "fontFamily": 2,
+      "width": 58.800000000000004,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "ehd",
+      "x": 155,
+      "y": 135,
+      "text": "dispatch({ type, payload })",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 194.39999999999998,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "line",
+      "id": "a2",
+      "x": 280,
+      "y": 155,
+      "width": 0,
+      "height": 18,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        18
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "rd",
+      "x": 100,
+      "y": 180,
+      "width": 360,
+      "height": 80,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "rdt",
+      "x": 110,
+      "y": 185,
+      "text": "Reducer 함수",
+      "fontSize": 16,
+      "strokeColor": "#22c55e",
+      "fontFamily": 2,
+      "width": 96,
+      "height": 22,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "rd1",
+      "x": 110,
+      "y": 210,
+      "text": "(currentState, action) → newState",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 257.4,
+      "height": 19,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "rd2",
+      "x": 110,
+      "y": 230,
+      "text": "switch (action.type) { case ... }",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 237.59999999999997,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "line",
+      "id": "a3",
+      "x": 280,
+      "y": 260,
+      "width": 0,
+      "height": 18,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        18
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "rr",
+      "x": 170,
+      "y": 285,
+      "width": 220,
+      "height": 35,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "rrt",
+      "x": 170,
+      "y": 292,
+      "text": "재렌더링 → 새 State로 UI 갱신",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 200,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "rr",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "rectangle",
+      "id": "k",
+      "x": 50,
+      "y": 340,
+      "width": 460,
+      "height": 50,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "k1",
+      "x": 60,
+      "y": 347,
+      "text": "핵심: 컴포넌트는 \"무엇이 일어났는가\"만 dispatch",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 241.79999999999998,
+      "height": 19,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "k2",
+      "x": 60,
+      "y": 367,
+      "text": "\"어떻게 State가 변하는가\"는 reducer가 결정 → 관심사 분리",
+      "fontSize": 13,
+      "strokeColor": "#8b5cf6",
+      "fontFamily": 2,
+      "width": 304.2,
+      "height": 19,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

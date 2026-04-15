@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="442" viewBox="20 -20 550 405">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="550" height="405" rx="12" fill="#141414"/>
+  <text x="60" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">CSR 동작 과정</text>
+  <rect x="50" y="50" width="180" height="250" rx="27" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="80" y="69.4" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="16" opacity="1">서버</text>
+  <rect x="310" y="50" width="230" height="250" rx="34.5" fill="#1a4d4d" stroke="#06b6d4" stroke-width="1" opacity="1"/>
+  <text x="360" y="69.4" fill="#06b6d4" font-family="Nunito, sans-serif" font-size="16" opacity="1">브라우저</text>
+  <text x="60" y="90.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">1. 빈 HTML + JS</text>
+  <text x="320" y="90.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">2. HTML 수신 (빈 div)</text>
+  <text x="320" y="120.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">3. JS 번들 다운로드</text>
+  <text x="60" y="150.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">JS 번들 전송</text>
+  <text x="320" y="150.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">4. JS 실행, React DOM 생성</text>
+  <text x="320" y="180.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">5. API 요청</text>
+  <text x="60" y="210.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">API 응답</text>
+  <text x="320" y="211.7" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">6. 화면 완성!</text>
+  <rect x="50" y="315" width="490" height="40" rx="6" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="60" y="332.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">요청→TTFB(빠름)→FCP(느림! JS후)→API패칭→LCP(더 느림)→TTI</text>
+</svg>

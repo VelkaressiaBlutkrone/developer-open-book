@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="563" viewBox="-10 -20 570.5 535">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="570.5" height="535" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">React Hook Form의 동작 원리</text>
+  <rect x="20" y="45" width="510.5" height="440" rx="66" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">React Hook Form의 동작 원리</text>
+  <text x="40" y="104.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Controlled (useState):           Uncontrolled (RHF):</text>
+  <text x="40" y="130.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">─────────────────────           ─────────────────────</text>
+  <text x="40" y="155.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 모든 입력이 State에 저장       · DOM이 값을 직접 보관</text>
+  <text x="40" y="181.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 입력할 때마다 setState          · 입력해도 리렌더링 없음!</text>
+  <text x="40" y="207.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 매 키 입력마다 리렌더링 ★      · 제출/검증 시에만 값을 읽음</text>
+  <text x="40" y="233.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 10필드 폼: 키 입력 시          · 10필드 폼: 키 입력 시</text>
+  <text x="40" y="260.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">전체 폼이 리렌더링             아무것도 리렌더링 안 함! ★</text>
+  <text x="40" y="286.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">RHF의 핵심 전략:</text>
+  <text x="40" y="313.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. register로 ref를 DOM에 연결</text>
+  <text x="40" y="343.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. 사용자가 입력하면 DOM이 값을 보관 (React State 아님!)</text>
+  <text x="40" y="373.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. 제출 시 ref를 통해 DOM에서 값을 읽어온다</text>
+  <text x="40" y="403.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. 검증 후 에러가 있으면 formState.errors만 업데이트</text>
+  <text x="40" y="433.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">5. 에러 표시 컴포넌트만 리렌더링 (formState 구독)</text>
+  <text x="40" y="462.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">결과: 입력 성능이 Controlled 대비 압도적으로 빠르다 ★</text>
+</svg>

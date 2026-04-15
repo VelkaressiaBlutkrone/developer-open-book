@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="485" viewBox="-10 -20 468.5 379">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="468.5" height="379" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">수동 패칭의 7가지 한계</text>
+  <rect x="20" y="45" width="408.5" height="284" rx="42.6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">수동 패칭의 7가지 한계</text>
+  <text x="40" y="105.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. Race Condition — 응답 순서 불일치</text>
+  <text x="40" y="135.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. 캐싱 부재 — 같은 데이터 중복 요청</text>
+  <text x="40" y="165.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. 데이터 동기화 — Stale Data 감지/갱신 불가</text>
+  <text x="40" y="195.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. Waterfall — 직렬 요청으로 인한 느린 로딩</text>
+  <text x="40" y="225.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">5. 에러 재시도 — 네트워크 불안정 시 수동 처리</text>
+  <text x="40" y="255.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">6. 낙관적 업데이트 — 수동 구현이 매우 복잡</text>
+  <text x="40" y="285.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">7. 보일러플레이트 — 매 패칭마다 loading/error/data 반복</text>
+  <text x="40" y="314.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">이 모든 문제를 해결하는 것이 TanStack Query (Step 23)</text>
+</svg>

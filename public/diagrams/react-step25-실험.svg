@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="607.5" height="591" viewBox="-10 -15 607.5 591">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="607.5" height="591" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">실험:</text>
+  <rect x="20" y="50" width="547.5" height="496" rx="74.39999999999999" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 1: 하나의 Context에 모든 값을 넣는다</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">AppContext: { user, theme, counter, sidebarOpen }</text>
+  <text x="40" y="135.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ 4개 소비자 컴포넌트를 만들고 각각 console.log</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ counter를 빠르게 증가시키며 다른 컴포넌트의 리렌더링 관찰</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 2: Context를 분리한다</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">UserContext, ThemeContext, CounterContext, UIContext</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ 같은 실험 반복 → counter만 리렌더링되는지 확인</text>
+  <text x="40" y="265.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 3: useMemo로 value 안정화</text>
+  <text x="40" y="291.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ useMemo 적용 전후의 리렌더링 횟수 비교</text>
+  <text x="40" y="317.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">기록:</text>
+  <text x="40" y="343.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">| 최적화 단계 | counter 변경 시 리렌더링되는 컴포넌트 수 |</text>
+  <text x="40" y="369.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">|------------|----------------------------------------|</text>
+  <text x="40" y="395.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">| Step 1     | ?개                                    |</text>
+  <text x="40" y="421.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">| Step 2     | ?개                                    |</text>
+  <text x="40" y="447.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">| Step 3     | ?개                                    |</text>
+</svg>

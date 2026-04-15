@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="620" viewBox="-10 -20 440 455">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="440" height="455" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">다루는 것 (React에서 매일 사용하는 JS 문법)</text>
+  <rect x="20" y="45" width="380" height="360" rx="54" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="210" y="101.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 변수 선언: let, const</text>
+  <text x="210" y="119.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 화살표 함수와 일반 함수의 차이</text>
+  <text x="210" y="137.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Destructuring (구조 분해 할당)</text>
+  <text x="210" y="155.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Spread / Rest 연산자</text>
+  <text x="210" y="173.89999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Template Literal</text>
+  <text x="210" y="192.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 삼항 연산자와 논리 연산자</text>
+  <text x="210" y="210.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 배열 고차 함수 (map, filter, reduce 등)</text>
+  <text x="210" y="228.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· ES Module (import / export)</text>
+  <text x="210" y="246.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Optional Chaining / Nullish Coalescing</text>
+  <text x="210" y="264.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Promise와 async/await</text>
+  <text x="210" y="283.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">다루지 않는 것</text>
+  <text x="210" y="301.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· JavaScript 기초 (변수, 조건문, 반복문 등)</text>
+  <text x="210" y="319.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· DOM API (querySelector 등) — React가 대체</text>
+  <text x="210" y="337.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· class 문법 — 함수 컴포넌트가 표준</text>
+  <text x="210" y="355.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Proxy, Reflect 등 고급 메타프로그래밍</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="330" viewBox="-10 -20 508 279">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="508" height="279" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">HTML (네이티브)  React (Synthetic)</text>
+  <rect x="20" y="45" width="448" height="184" rx="27.599999999999998" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="244" y="85.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">onclick=&quot;handler()&quot;  onClick={handler}</text>
+  <text x="244" y="104.10000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">소문자  camelCase</text>
+  <text x="244" y="122.30000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">문자열로 핸들러 전달  함수 참조로 핸들러 전달</text>
+  <text x="244" y="140.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">onchange  onChange</text>
+  <text x="244" y="158.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">(포커스 아웃 시 발생)  (입력할 때마다 발생!) ★</text>
+  <text x="244" y="176.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">return false로 기본 동작 방지  e.preventDefault() 명시 호출</text>
+  <text x="244" y="195.10000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">이벤트가 각 노드에 등록  root에서 위임 처리</text>
+</svg>

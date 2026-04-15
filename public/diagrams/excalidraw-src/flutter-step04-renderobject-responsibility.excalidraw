@@ -1,0 +1,18 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":150,"y":10,"text":"RenderObject의 핵심 책임","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":340,"height":30,"opacity":100},
+    {"type":"rectangle","id":"r1","x":80,"y":60,"width":420,"height":35,"backgroundColor":"#1e3a5f","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"r1_l","x":90,"y":68,"width":400,"height":20,"text":"1. 크기 계산 — Constraints로 자신의 크기 결정","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"r1","textAlign":"left","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"r2","x":80,"y":105,"width":420,"height":35,"backgroundColor":"#2d1b69","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"r2_l","x":90,"y":113,"width":400,"height":20,"text":"2. 위치 계산 — 부모가 자신의 위치를 결정","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"r2","textAlign":"left","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"r3","x":80,"y":150,"width":420,"height":35,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"r3_l","x":90,"y":158,"width":400,"height":20,"text":"3. 그리기 — Canvas에 실제 픽셀 명령 생성","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"r3","textAlign":"left","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"r4","x":80,"y":195,"width":420,"height":35,"backgroundColor":"#5c3d1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"r4_l","x":90,"y":203,"width":400,"height":20,"text":"4. Hit Testing — 터치 이벤트 판단","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"r4","textAlign":"left","verticalAlign":"middle","opacity":100}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

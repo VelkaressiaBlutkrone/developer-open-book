@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="801" viewBox="-10 -15 403.5 539">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="403.5" height="539" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">시나리오: 10개 필드가 있는 프로필 수정 폼</text>
+  <rect x="20" y="50" width="343.5" height="444" rx="51.525" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">useState (Controlled):</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&quot;이름&quot; 필드에 한 글자 입력</text>
+  <text x="40" y="135.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ setValues() → 전체 컴포넌트 리렌더링</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ 10개 input 모두 재렌더링!</text>
+  <text x="40" y="187.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ 빠르게 타이핑하면 체감 가능한 지연</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">RHF (Uncontrolled):</text>
+  <text x="40" y="239.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&quot;이름&quot; 필드에 한 글자 입력</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ DOM이 값 보관 → React State 변경 없음</text>
+  <text x="40" y="291.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ 리렌더링 0회! ★</text>
+  <text x="40" y="317.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ 검증 실패 시 해당 필드의 에러만 리렌더링</text>
+  <text x="40" y="343.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">React DevTools Profiler로 측정:</text>
+  <text x="40" y="369.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">useState: 키 입력당 렌더링 10회 (모든 필드)</text>
+  <text x="40" y="395.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">RHF: 키 입력당 렌더링 0회 (제출/에러 시에만)</text>
+</svg>

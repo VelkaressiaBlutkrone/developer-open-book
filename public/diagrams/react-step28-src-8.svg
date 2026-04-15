@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="742" height="2655" viewBox="-30 -20 742 2654.6">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-30" y="-20" width="742" height="2654.6" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">src/</text>
+  <rect x="20" y="50" width="642" height="42" rx="6.3" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1.5" opacity="1"/>
+  <text x="341" y="74.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">src/</text>
+  <path d="M20,96 L662,96" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="119.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── features/                    ← 비즈니스 기능별 모듈</text>
+  <path d="M20,138 L662,138" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="161.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── auth/                    ← 인증 기능</text>
+  <path d="M20,180 L662,180" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="203.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── components/</text>
+  <path d="M20,222 L662,222" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="245.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── LoginForm.jsx</text>
+  <path d="M20,264 L662,264" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="287.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── RegisterForm.jsx</text>
+  <path d="M20,306 L662,306" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="329.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── AuthGuard.jsx</text>
+  <path d="M20,348 L662,348" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="371.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── hooks/</text>
+  <path d="M20,390 L662,390" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="413.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── useAuth.js</text>
+  <path d="M20,432 L662,432" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="455.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── services/</text>
+  <path d="M20,474 L662,474" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="497.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── authService.js</text>
+  <path d="M20,516 L662,516" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="539.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── stores/</text>
+  <path d="M20,558 L662,558" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="581.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── authStore.js</text>
+  <path d="M20,600 L662,600" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="623.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── types.js             ← 이 feature 전용 타입</text>
+  <path d="M20,642 L662,642" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="665.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── constants.js         ← 이 feature 전용 상수</text>
+  <path d="M20,684 L662,684" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="707.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── index.js             ← Barrel Export (Public API)</text>
+  <path d="M20,726 L662,726" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="749.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── products/                ← 상품 기능</text>
+  <path d="M20,768 L662,768" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="791.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── components/</text>
+  <path d="M20,810 L662,810" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="833.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── ProductCard.jsx</text>
+  <path d="M20,852 L662,852" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="875.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── ProductGrid.jsx</text>
+  <path d="M20,894 L662,894" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="917.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── ProductDetail.jsx</text>
+  <path d="M20,936 L662,936" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="959.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── ProductFilter.jsx</text>
+  <path d="M20,978 L662,978" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1001.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── hooks/</text>
+  <path d="M20,1020 L662,1020" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1043.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── useProducts.js</text>
+  <path d="M20,1062 L662,1062" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1085.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── useProductFilter.js</text>
+  <path d="M20,1104 L662,1104" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1127.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── services/</text>
+  <path d="M20,1146 L662,1146" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1169.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── productService.js</text>
+  <path d="M20,1188 L662,1188" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1211.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── index.js</text>
+  <path d="M20,1230 L662,1230" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1253.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── cart/                    ← 장바구니 기능</text>
+  <path d="M20,1272 L662,1272" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1295.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── components/</text>
+  <path d="M20,1314 L662,1314" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1337.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── hooks/</text>
+  <path d="M20,1356 L662,1356" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1379.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── stores/</text>
+  <path d="M20,1398 L662,1398" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1421.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── index.js</text>
+  <path d="M20,1440 L662,1440" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1463.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── orders/                  ← 주문 기능</text>
+  <path d="M20,1482 L662,1482" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1505.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── components/</text>
+  <path d="M20,1524 L662,1524" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1547.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── hooks/</text>
+  <path d="M20,1566 L662,1566" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1589.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── services/</text>
+  <path d="M20,1608 L662,1608" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1631.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── index.js</text>
+  <path d="M20,1650 L662,1650" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1673.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── shared/                      ← 공통 모듈 (여러 feature에서 사용)</text>
+  <path d="M20,1692 L662,1692" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1715.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── components/              ← 공통 UI (Button, Input, Modal, Spinner)</text>
+  <path d="M20,1734 L662,1734" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1757.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── Button.jsx</text>
+  <path d="M20,1776 L662,1776" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1799.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── Input.jsx</text>
+  <path d="M20,1818 L662,1818" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1841.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── Modal.jsx</text>
+  <path d="M20,1860 L662,1860" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1883.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── index.js</text>
+  <path d="M20,1902 L662,1902" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1925.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── hooks/                   ← 공통 Hook (useDebounce, useMediaQuery)</text>
+  <path d="M20,1944 L662,1944" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1967.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── utils/                   ← 유틸리티 (formatPrice, formatDate)</text>
+  <path d="M20,1986 L662,1986" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2009.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── lib/                     ← 라이브러리 설정 (apiClient, queryClient)</text>
+  <path d="M20,2028 L662,2028" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2051.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── types/                   ← 공통 타입</text>
+  <path d="M20,2070 L662,2070" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2093.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── constants/               ← 공통 상수</text>
+  <path d="M20,2112 L662,2112" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2135.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── pages/                       ← 페이지 (라우트) 컴포넌트</text>
+  <path d="M20,2154 L662,2154" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2177.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── HomePage.jsx</text>
+  <path d="M20,2196 L662,2196" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2219.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── ProductsPage.jsx</text>
+  <path d="M20,2238 L662,2238" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2261.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── ProductDetailPage.jsx</text>
+  <path d="M20,2280 L662,2280" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2303.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── CartPage.jsx</text>
+  <path d="M20,2322 L662,2322" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2345.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── OrdersPage.jsx</text>
+  <path d="M20,2364 L662,2364" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2387.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── layouts/                     ← 레이아웃 컴포넌트</text>
+  <path d="M20,2406 L662,2406" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2429.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── RootLayout.jsx</text>
+  <path d="M20,2448 L662,2448" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2471.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── DashboardLayout.jsx</text>
+  <path d="M20,2490 L662,2490" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2513.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── AuthLayout.jsx</text>
+  <path d="M20,2532 L662,2532" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2555.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── App.jsx</text>
+  <path d="M20,2574 L662,2574" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="2597.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── main.jsx</text>
+</svg>

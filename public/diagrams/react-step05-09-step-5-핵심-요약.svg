@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="810" viewBox="-10 -20 516.5 697">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="516.5" height="697" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">Step 5 핵심 요약</text>
+  <rect x="20" y="45" width="456.5" height="602" rx="68.475" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="248.25" y="122" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">1. Props = 부모가 자식에게 전달하는 읽기 전용 객체</text>
+  <text x="248.25" y="140.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 모든 JSX 속성이 하나의 JS 객체로 묶여 전달됨</text>
+  <text x="248.25" y="158.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ Destructuring으로 수신하는 것이 표준</text>
+  <text x="248.25" y="176.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 기본값은 매개변수 Default Value로 설정</text>
+  <text x="248.25" y="194.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">2. Props는 Immutable이다 — 3가지 이유</text>
+  <text x="248.25" y="213" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 예측 가능성: 같은 입력 → 같은 출력 보장</text>
+  <text x="248.25" y="231.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 변경 감지: 참조 비교 기반, 직접 수정하면 감지 불가</text>
+  <text x="248.25" y="249.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 단방향 보장: 데이터 역류 방지, 소유권 명확화</text>
+  <text x="248.25" y="267.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">3. 데이터는 위에서 아래로만 흐른다 (One-Way Data Flow)</text>
+  <text x="248.25" y="285.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ Props: 부모 → 자식 (데이터 전달)</text>
+  <text x="248.25" y="304" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ Callback: 자식 → 부모 (이벤트 알림)</text>
+  <text x="248.25" y="322.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 양방향보다 추적·디버깅이 용이하다</text>
+  <text x="248.25" y="340.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">4. 형제 컴포넌트가 데이터를 공유하면 Lifting State Up</text>
+  <text x="248.25" y="358.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ State를 가장 가까운 공통 부모로 끌어올린다</text>
+  <text x="248.25" y="376.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 파생 데이터는 렌더링 중 계산 (State로 만들지 않는다)</text>
+  <text x="248.25" y="395" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">5. children과 합성으로 유연한 컴포넌트를 만든다</text>
+  <text x="248.25" y="413.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 상속 대신 합성 (Composition over Inheritance)</text>
+  <text x="248.25" y="431.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ Named Slot 패턴으로 여러 영역에 컨텐츠 삽입</text>
+  <text x="248.25" y="449.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">6. 부모 재렌더링 → 자식 재렌더링이 기본 동작이다</text>
+  <text x="248.25" y="467.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ Props 변경 여부와 무관하게 발생</text>
+  <text x="248.25" y="486" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ React.memo로 최적화 가능 (Step 14)</text>
+  <text x="248.25" y="504.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">7. Props Drilling은 합성 패턴으로 완화할 수 있다</text>
+  <text x="248.25" y="522.4000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 깊은 Drilling은 Context(Step 25) 또는 전역 상태(Step 26)</text>
+  <text x="248.25" y="540.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">8. Props를 State에 복사하지 않는다</text>
+  <text x="248.25" y="558.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ Props에서 계산 가능한 값은 파생 데이터로 처리</text>
+  <text x="248.25" y="577" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ Single Source of Truth 원칙</text>
+</svg>

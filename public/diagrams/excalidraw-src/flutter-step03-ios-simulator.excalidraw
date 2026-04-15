@@ -1,0 +1,20 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":150,"y":10,"text":"iOS Simulator 구조","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":260,"height":30,"opacity":100},
+    {"type":"rectangle","id":"macos","x":80,"y":60,"width":400,"height":40,"backgroundColor":"#1e3a5f","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"macos_label","x":100,"y":68,"width":360,"height":25,"text":"macOS (x86_64 또는 Apple Silicon)","fontSize":16,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"macos","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"arrow1","x":280,"y":100,"width":0,"height":15,"strokeColor":"#a0a0a0","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[0,15]],"lastCommittedPoint":[0,15]},
+    {"type":"rectangle","id":"sim","x":120,"y":120,"width":340,"height":40,"backgroundColor":"#2d1b69","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"sim_label","x":140,"y":128,"width":300,"height":25,"text":"Simulator.app (Xcode 내장)","fontSize":16,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"sim","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"arrow2","x":280,"y":160,"width":0,"height":15,"strokeColor":"#a0a0a0","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[0,15]],"lastCommittedPoint":[0,15]},
+    {"type":"rectangle","id":"iosapp","x":160,"y":180,"width":280,"height":40,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"iosapp_label","x":180,"y":188,"width":240,"height":25,"text":"iOS 앱 (x86_64/arm64 빌드)","fontSize":15,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"iosapp","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"note1","x":80,"y":240,"text":"실기기와의 차이:","fontSize":14,"strokeColor":"#f59e0b","fontFamily":2,"width":150,"height":20,"opacity":80},
+    {"type":"text","id":"note2","x":80,"y":265,"text":"- 카메라, Touch ID, Face ID 미지원\n- 네트워크 조건이 실기기와 다를 수 있음\n- 메모리 제한이 실기기보다 관대함","fontSize":13,"strokeColor":"#a0a0a0","fontFamily":2,"width":380,"height":55,"opacity":70}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

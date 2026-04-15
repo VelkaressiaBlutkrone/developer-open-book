@@ -38,31 +38,9 @@ React 프로젝트에서 이 원칙을 API 통신에 적용하면 세 가지 계
 
 ### 1.2 API 코드가 곳곳에 흩어지면 일어나는 일
 
-```
-❌ 계층 없이 각 컴포넌트에서 직접 API 호출
 
-  UserList.jsx:
-    fetch('https://api.example.com/users', {
-      headers: { 'Authorization': `Bearer ${token}` }
-    })
+![❌ 계층 없이 각 컴포넌트에서 직접 API 호출](/developer-open-book/diagrams/react-step24-계층-없이-각-컴포넌트에서-직접-api-호출.svg)
 
-  UserProfile.jsx:
-    fetch('https://api.example.com/users/42', {
-      headers: { 'Authorization': `Bearer ${token}` }
-    })
-
-  OrderList.jsx:
-    fetch('https://api.example.com/orders', {
-      headers: { 'Authorization': `Bearer ${token}` }
-    })
-
-  문제:
-    · baseURL이 30개 파일에 하드코딩 → URL 변경 시 30곳 수정
-    · 인증 헤더가 30곳에서 반복 → 토큰 로직 변경 시 30곳 수정
-    · 에러 처리가 30곳에서 제각각 → 일관성 없는 UX
-    · API 스펙 변경 시 영향 범위를 파악하기 어렵다
-    · 테스트 시 모든 컴포넌트에서 fetch를 모킹해야 한다
-```
 
 ### 1.3 계층 분리의 목표와 산업적 가치
 
@@ -70,42 +48,15 @@ React 프로젝트에서 이 원칙을 API 통신에 적용하면 세 가지 계
 
 또한 계층 분리는 팀 협업을 가능하게 한다. 백엔드 API 스펙이 변경되면 서비스 계층 담당자만 수정하면 되고, UI 개발자는 영향받지 않는다. 새 팀원이 합류하면 각 계층의 책임이 명확하게 문서화되어 있어 온보딩이 빠르다.
 
-```
-✅ 목표: 관심사에 따라 코드를 계층으로 분리한다
 
-  · HTTP 계층: "어떻게 서버와 통신하는가" (fetch/Axios, 인터셉터)
-  · 서비스 계층: "어떤 API를 호출하는가" (URL, 파라미터, 변환)
-  · Hook 계층: "React와 어떻게 연결하는가" (useQuery, useMutation)
-  · 컴포넌트: "무엇을 보여주는가" (UI만 담당)
+![✅ 목표: 관심사에 따라 코드를 계층으로 분리한다](/developer-open-book/diagrams/react-step24-목표-관심사에-따라-코드를-계층으로-분리한다.svg)
 
-  변경 영향 범위 최소화:
-    · API URL 변경 → 서비스 계층만 수정
-    · 인증 방식 변경 → HTTP 계층만 수정
-    · 캐싱 전략 변경 → Hook 계층만 수정
-    · UI 디자인 변경 → 컴포넌트만 수정
-```
 
 ### 1.4 이 Step에서 다루는 범위
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  다루는 것                                               │
-│  · 3계층 API 아키텍처 설계                              │
-│  · HTTP 클라이언트 계층 (Axios 인스턴스, 인터셉터)       │
-│  · 서비스 계층 (도메인별 API 함수)                       │
-│  · Hook 계층 (TanStack Query Custom Hook)               │
-│  · 에러 분류와 계층적 처리 전략                          │
-│  · 인증 토큰 관리와 자동 갱신                            │
-│  · 로딩/에러 UI의 일관된 패턴                            │
-│  · Phase 3 전체 통합 복습                                │
-├─────────────────────────────────────────────────────────┤
-│  다루지 않는 것                                          │
-│  · OAuth 구현 상세                                       │
-│  · 백엔드 API 개발                                      │
-│  · Sentry 등 에러 모니터링 도구 설정 (Step 42)          │
-│  · MSW(Mock Service Worker) 상세 (Step 37)              │
-└─────────────────────────────────────────────────────────┘
-```
+
+![다루는 것](/developer-open-book/diagrams/react-step24-다루는-것.svg)
+
 
 ---
 
@@ -133,42 +84,9 @@ React 프로젝트에서 이 원칙을 API 통신에 적용하면 세 가지 계
 
 아키텍처 다이어그램을 볼 때 중요한 것은 각 화살표의 방향이다. 위에서 아래로만 의존성이 흐른다. 컴포넌트에서 서비스 계층을 직접 호출하거나, HTTP 클라이언트에서 React Hook을 사용하는 것은 이 원칙을 위반한다.
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                   3계층 API 아키텍처                          │
-│                                                              │
-│  ┌─────────────────────────────────────────────────────┐    │
-│  │  Layer 4: 컴포넌트 (UI)                              │    │
-│  │  · UI 렌더링에만 집중                                │    │
-│  │  · Hook의 반환값(data, isLoading 등)만 사용           │    │
-│  └────────────────────────┬────────────────────────────┘    │
-│                           │ useUsers(), useCreateUser()     │
-│  ┌────────────────────────┼────────────────────────────┐    │
-│  │  Layer 3: Hook 계층    ▼                             │    │
-│  │  · TanStack Query 연동                               │    │
-│  │  · queryKey 관리, 캐싱 전략, 에러 재시도              │    │
-│  │  · useQuery, useMutation 래핑                        │    │
-│  └────────────────────────┬────────────────────────────┘    │
-│                           │ userService.getUsers()          │
-│  ┌────────────────────────┼────────────────────────────┐    │
-│  │  Layer 2: 서비스 계층  ▼                             │    │
-│  │  · 도메인별 API 함수 (users, products, orders)       │    │
-│  │  · URL 구성, 파라미터 조립, 응답 변환                │    │
-│  │  · API 스펙의 캡슐화                                 │    │
-│  └────────────────────────┬────────────────────────────┘    │
-│                           │ apiClient.get('/users')         │
-│  ┌────────────────────────┼────────────────────────────┐    │
-│  │  Layer 1: HTTP 클라이언트 ▼                          │    │
-│  │  · Axios 인스턴스 (또는 fetch 래퍼)                  │    │
-│  │  · baseURL, timeout, 인증 헤더                       │    │
-│  │  · 인터셉터 (토큰 추가, 에러 변환, 로깅)             │    │
-│  └─────────────────────────────────────────────────────┘    │
-│                           │                                  │
-│                           ▼                                  │
-│                    실제 서버 (REST API)                       │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
-```
+
+![3계층 API 아키텍처](/developer-open-book/diagrams/react-step24-3계층-api-아키텍처.svg)
+
 
 ---
 
@@ -301,22 +219,9 @@ export function normalizeError(error) {
 }
 ```
 
-```
-HTTP 클라이언트 계층의 책임
 
-  ✅ 담당하는 것:
-    · baseURL, timeout, 기본 헤더 설정
-    · 인증 토큰 자동 추가 (요청 인터셉터)
-    · 토큰 갱신 자동화 (401 감지 → refresh → 재시도)
-    · 에러 표준화 (다양한 에러를 ApiError로 통일)
-    · 요청/응답 로깅 (개발 모드)
+![HTTP 클라이언트 계층의 책임](/developer-open-book/diagrams/react-step24-http-클라이언트-계층의-책임.svg)
 
-  ❌ 담당하지 않는 것:
-    · 구체적 API URL (/users, /products)
-    · 비즈니스 로직
-    · React 관련 코드 (Hook, 컴포넌트)
-    · 캐싱 전략
-```
 
 ### 3.2 Layer 2: 서비스 계층
 
@@ -397,21 +302,9 @@ export const productService = {
 };
 ```
 
-```
-서비스 계층의 책임
 
-  ✅ 담당하는 것:
-    · 구체적 API URL 관리 (/users, /products/:id)
-    · 요청 파라미터 조립 (query string, body)
-    · 응답 데이터 변환 (필요한 경우)
-    · API 스펙의 캡슐화 (URL 구조가 바뀌어도 사용처에 영향 없음)
+![서비스 계층의 책임](/developer-open-book/diagrams/react-step24-서비스-계층의-책임.svg)
 
-  ❌ 담당하지 않는 것:
-    · HTTP 설정 (baseURL, 인증 → Layer 1)
-    · React Hook 연동 (→ Layer 3)
-    · UI 로직 (→ Layer 4)
-    · 캐싱 전략 (→ Layer 3)
-```
 
 ### 3.3 Layer 3: Hook 계층
 
@@ -498,68 +391,19 @@ export function useDeleteUser() {
 }
 ```
 
-```
-Hook 계층의 책임
 
-  ✅ 담당하는 것:
-    · queryKey 설계와 관리 (Factory 패턴)
-    · TanStack Query 연동 (useQuery, useMutation)
-    · 캐싱 전략 (staleTime, gcTime)
-    · 캐시 무효화 전략 (invalidateQueries)
-    · 낙관적 업데이트 (onMutate → onError 롤백)
-    · React Hook으로서의 인터페이스 제공
+![Hook 계층의 책임](/developer-open-book/diagrams/react-step24-hook-계층의-책임.svg)
 
-  ❌ 담당하지 않는 것:
-    · 구체적 API URL (→ Layer 2)
-    · HTTP 설정 (→ Layer 1)
-    · UI 렌더링 (→ Layer 4)
-```
 
 #### 폴더 구조
 
-```
-src/
-├── lib/
-│   ├── apiClient.js          ← Layer 1: HTTP 클라이언트
-│   └── normalizeError.js     ← 에러 표준화
-│
-├── services/
-│   ├── userService.js        ← Layer 2: 사용자 API
-│   ├── productService.js     ← Layer 2: 상품 API
-│   └── orderService.js       ← Layer 2: 주문 API
-│
-├── hooks/
-│   ├── useUsers.js           ← Layer 3: 사용자 Hook
-│   ├── useProducts.js        ← Layer 3: 상품 Hook
-│   └── useOrders.js          ← Layer 3: 주문 Hook
-│
-├── components/               ← Layer 4: UI
-│   ├── UserList.jsx
-│   ├── ProductGrid.jsx
-│   └── ...
-│
-└── pages/
-    └── ...
-```
 
-```
-계층별 변경 영향 분석
+![src/](/developer-open-book/diagrams/react-step24-src.svg)
 
-  "API 서버 URL이 바뀌면?"
-    → apiClient.js의 baseURL만 수정 (1곳)
 
-  "사용자 API가 /users → /v2/members로 바뀌면?"
-    → userService.js만 수정 (1곳)
-    → Hook과 컴포넌트는 변경 없음!
 
-  "사용자 목록의 staleTime을 변경하고 싶다면?"
-    → useUsers.js만 수정 (1곳)
-    → 서비스와 컴포넌트는 변경 없음!
+![계층별 변경 영향 분석](/developer-open-book/diagrams/react-step24-계층별-변경-영향-분석.svg)
 
-  "사용자 목록의 UI를 변경하고 싶다면?"
-    → UserList.jsx만 수정 (1곳)
-    → Hook, 서비스, HTTP는 변경 없음!
-```
 
 ### 3.4 에러 분류와 처리 전략
 
@@ -569,53 +413,15 @@ src/
 
 #### 에러의 4가지 유형
 
-```
-┌──────────────┬──────────────────┬──────────────────────────┐
-│  에러 유형    │  원인             │  처리 전략               │
-├──────────────┼──────────────────┼──────────────────────────┤
-│  네트워크     │  서버 미응답      │  "네트워크를 확인하세요"  │
-│  에러         │  타임아웃        │  + 자동 재시도 (retry)   │
-│              │  오프라인        │  + 오프라인 감지 UI       │
-├──────────────┼──────────────────┼──────────────────────────┤
-│  HTTP 에러    │  4xx: 클라이언트 │  상태 코드별 다른 대응   │
-│              │  5xx: 서버       │  401→갱신/로그인         │
-│              │                  │  403→권한 안내           │
-│              │                  │  404→Not Found UI       │
-│              │                  │  500→서버 에러 안내      │
-├──────────────┼──────────────────┼──────────────────────────┤
-│  비즈니스     │  서버의 비즈니스  │  서버 메시지를 사용자에게 │
-│  에러         │  규칙 위반       │  표시 ("재고가 부족합니다")│
-│              │  (200이지만 실패) │  맥락에 맞는 안내         │
-├──────────────┼──────────────────┼──────────────────────────┤
-│  검증 에러    │  폼 입력값       │  필드별 인라인 에러 표시  │
-│  (422)       │  유효성 검증 실패 │  { field: message } 매핑 │
-└──────────────┴──────────────────┴──────────────────────────┘
-```
+
+![에러 유형    │  원인             │  처리 전략](/developer-open-book/diagrams/react-step24-에러-유형-원인-처리-전략.svg)
+
 
 #### 에러 처리의 계층적 배치
 
-```
-어디에서 어떤 에러를 처리하는가
 
-  Layer 1 (HTTP 클라이언트):
-    · 네트워크 에러 → 표준화된 ApiError로 변환
-    · 401 → 자동 토큰 갱신 시도
-    · 모든 에러를 표준 형태로 통일
+![어디에서 어떤 에러를 처리하는가](/developer-open-book/diagrams/react-step24-어디에서-어떤-에러를-처리하는가.svg)
 
-  Layer 3 (Hook):
-    · TanStack Query의 retry로 자동 재시도
-    · onError 콜백으로 전역 에러 처리 (토스트 등)
-    · useMutation의 onError로 Mutation 에러 처리
-
-  Layer 4 (컴포넌트):
-    · isError + error.message로 에러 UI 표시
-    · Error Boundary로 렌더링 에러 catch
-    · 검증 에러(422) → 폼 필드별 에러 표시
-
-  전역 (QueryClient):
-    · 모든 쿼리/뮤테이션의 기본 에러 처리
-    · 에러 로깅, 모니터링 서비스 전송
-```
 
 #### QueryClient 전역 에러 핸들러
 
@@ -663,34 +469,9 @@ export const queryClient = new QueryClient({
 
 `localStorage`에 토큰을 저장하는 것은 XSS 공격에 취약하다는 단점이 있다. 프로덕션 환경에서는 `httpOnly` 쿠키가 더 안전하지만, 설정이 더 복잡하다. 팀의 보안 요구사항에 맞게 선택해야 한다.
 
-```
-인증 토큰 관리 아키텍처
 
-  로그인:
-    1. 사용자가 이메일/비밀번호 입력
-    2. POST /auth/login → { accessToken, refreshToken }
-    3. 토큰을 저장 (localStorage 또는 httpOnly Cookie)
-    4. 이후 모든 요청에 자동으로 Authorization 헤더 추가 (인터셉터)
+![인증 토큰 관리 아키텍처](/developer-open-book/diagrams/react-step24-인증-토큰-관리-아키텍처.svg)
 
-  토큰 갱신:
-    1. 요청 → 401 Unauthorized 응답
-    2. 인터셉터가 401 감지
-    3. POST /auth/refresh → { 새 accessToken }
-    4. 새 토큰 저장
-    5. 원래 요청을 새 토큰으로 재시도
-    6. 갱신 실패 → 로그아웃 + 로그인 페이지 이동
-
-  다중 요청 동시 401 처리:
-    · 요청 A, B, C가 동시에 401을 받을 때
-    · 토큰 갱신은 한 번만 실행
-    · 나머지 요청은 갱신 완료 후 재시도
-
-  ⚠️ 보안 고려:
-    · accessToken: 짧은 유효기간 (15분~1시간)
-    · refreshToken: 긴 유효기간 (7일~30일)
-    · httpOnly Cookie가 localStorage보다 안전 (XSS 방어)
-    · CSRF 방어도 고려 필요
-```
 
 #### 동시 401 처리 (Refresh Queue)
 
@@ -814,56 +595,9 @@ function UserListPage() {
 
 ### 3.7 Phase 3 전체 통합 복습
 
-```
-Phase 3 (Step 18~24)에서 배운 것
 
-  Step 18: React Router v6+
-           · 클라이언트 사이드 라우팅, Nested Routes, Layout
-           · 동적 라우트, useSearchParams, Protected Route
-           · Data Router (loader/action)
+![Phase 3 (Step 18~24)에서 배운 것](/developer-open-book/diagrams/react-step24-phase-3-step-18-24-에서-배운-것.svg)
 
-  Step 19: 렌더링 전략 비교
-           · CSR, SSR, SSG, ISR, Streaming SSR
-           · Hydration의 정확한 과정
-           · 성능 지표(TTFB, FCP, TTI) 관점 비교
-           · 혼합 전략
-
-  Step 20: React Server Components
-           · Server vs Client Component
-           · "use client" 경계 설계
-           · RSC ≠ SSR, 번들 크기 감소
-           · Server Actions
-
-  Step 21: Next.js App Router
-           · 파일 시스템 라우팅 규약
-           · layout/loading/error 특수 파일
-           · 정적/동적 렌더링 자동 판단
-           · Server Actions + revalidation
-
-  Step 22: REST API + 수동 패칭
-           · fetch/Axios 사용법
-           · 수동 패칭의 7가지 한계 인식
-           · Server State vs Client State 구분
-
-  Step 23: TanStack Query
-           · useQuery, useMutation, queryKey
-           · 캐싱, 리패칭, 에러 재시도
-           · Optimistic Update, Infinite Query
-
-  Step 24: API 계층 설계 (이 Step)
-           · 3계층 아키텍처 (HTTP → Service → Hook)
-           · 에러 분류와 계층적 처리
-           · 인증 토큰 자동 관리
-           · 로딩/에러 UI 일관된 패턴
-
-
-  Phase 3의 핵심 메시지:
-    "URL로 페이지를 관리하고 (라우팅)
-     서버 데이터를 체계적으로 관리하며 (TanStack Query)
-     API 코드를 계층적으로 설계한다 (3계층 아키텍처)"
-
-  Phase 4부터는 이 기반 위에 전역 상태 관리와 아키텍처 패턴을 쌓는다.
-```
 
 ---
 
@@ -944,33 +678,9 @@ function ProductPage({ productId }) {
 
 실제 프로젝트에서 이 구조가 어떻게 확장되는지 보여주는 예시다. 도메인이 늘어나도 각 계층의 패턴은 동일하게 유지된다.
 
-```
-src/
-├── lib/
-│   ├── apiClient.js              ← Axios 인스턴스 + 인터셉터
-│   ├── normalizeError.js         ← 에러 표준화
-│   └── queryClient.js            ← QueryClient + 전역 에러 처리
-│
-├── services/
-│   ├── authService.js            ← 로그인, 회원가입, 토큰 갱신
-│   ├── userService.js            ← 사용자 CRUD + 프로필
-│   ├── productService.js         ← 상품 조회, 검색
-│   ├── cartService.js            ← 장바구니 CRUD
-│   ├── orderService.js           ← 주문 생성, 조회
-│   └── reviewService.js          ← 리뷰 CRUD
-│
-├── hooks/
-│   ├── useAuth.js                ← 인증 상태 + 로그인/로그아웃
-│   ├── useUsers.js               ← 사용자 쿼리/뮤테이션
-│   ├── useProducts.js            ← 상품 쿼리 (목록, 상세, 검색)
-│   ├── useCart.js                ← 장바구니 쿼리/뮤테이션 + 낙관적 업데이트
-│   ├── useOrders.js              ← 주문 쿼리/뮤테이션
-│   └── useReviews.js             ← 리뷰 쿼리/뮤테이션
-│
-├── components/                   ← UI 컴포넌트 (Hook 사용)
-├── pages/                        ← 페이지 컴포넌트
-└── App.jsx                       ← QueryClientProvider + Router
-```
+
+![src/](/developer-open-book/diagrams/react-step24-src-14.svg)
+
 
 ---
 
@@ -1069,50 +779,9 @@ src/
 
 ### 6.1 핵심 요약
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│                      Step 24 핵심 요약                        │
-├──────────────────────────────────────────────────────────────┤
-│                                                               │
-│  1. 3계층 API 아키텍처 = 관심사 분리의 실천                   │
-│     → Layer 1 (HTTP): apiClient, 인터셉터, 에러 표준화       │
-│     → Layer 2 (Service): 도메인별 API 함수, URL 캡슐화       │
-│     → Layer 3 (Hook): TanStack Query 연동, 캐싱 전략         │
-│     → Layer 4 (Component): UI만 담당, Hook의 반환값만 사용   │
-│                                                               │
-│  2. 변경 영향을 최소화한다                                    │
-│     → URL 변경 → 서비스만 수정                               │
-│     → 인증 방식 변경 → HTTP만 수정                           │
-│     → 캐싱 전략 변경 → Hook만 수정                           │
-│     → UI 변경 → 컴포넌트만 수정                              │
-│                                                               │
-│  3. 에러를 분류하여 각각 다르게 처리한다                       │
-│     → 네트워크: 재시도 + "연결 확인" 안내                    │
-│     → HTTP 4xx: 상태 코드별 다른 대응                        │
-│     → 비즈니스: 서버 메시지를 사용자에게 표시                 │
-│     → 검증: 필드별 인라인 에러                               │
-│     → ApiError 클래스로 표준화                               │
-│                                                               │
-│  4. 인증 토큰은 인터셉터로 자동 관리한다                      │
-│     → 요청 인터셉터: Authorization 헤더 자동 추가            │
-│     → 응답 인터셉터: 401 → 토큰 갱신 → 원래 요청 재시도     │
-│     → Refresh Queue: 동시 401 시 갱신 1회만                  │
-│                                                               │
-│  5. QueryClient로 전역 에러 처리를 설정한다                   │
-│     → retry: 4xx는 재시도 안 함, 5xx/네트워크만 재시도       │
-│     → mutations.onError: 전역 토스트 알림                    │
-│     → 에러 로깅/모니터링 연동                                │
-│                                                               │
-│  6. queryKey Factory로 캐시 키를 중앙 관리한다                │
-│     → userKeys.all, .list(filters), .detail(id)              │
-│     → 계층적 invalidation으로 정확한 캐시 갱신               │
-│                                                               │
-│  7. 로딩/에러 UI를 일관된 패턴으로 제공한다                   │
-│     → QueryStateHandler 래퍼 또는 Error Boundary 통합        │
-│     → 스켈레톤, 에러 상태, 빈 상태의 재사용 가능 컴포넌트    │
-│                                                               │
-└──────────────────────────────────────────────────────────────┘
-```
+
+![Step 24 핵심 요약](/developer-open-book/diagrams/react-step24-step-24-핵심-요약.svg)
+
 
 ### 6.2 자가진단 퀴즈
 

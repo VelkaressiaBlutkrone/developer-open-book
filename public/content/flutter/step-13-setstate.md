@@ -40,41 +40,13 @@ setState(() => _count++);
 
 ### 1.2 왜 rebuild 범위를 이해해야 하는가
 
-```
-잘못된 setState 사용의 결과
-──────────────────────────────────────────────────────
-  최상위 위젯에서 setState() 호출
-       ↓
-  앱 전체 위젯 트리 rebuild
-       ↓
-  매 탭마다 수백 개의 위젯 build() 호출
-       ↓
-  프레임 예산(16.6ms) 초과 → Jank 발생
-──────────────────────────────────────────────────────
-```
+![잘못된 setState 사용의 결과](/developer-open-book/diagrams/flutter-step13-bad-setstate.svg)
 
 rebuild 범위를 최소화하는 것이 Flutter 성능 최적화의 핵심이다.
 
 ### 1.3 전체 개념 지도
 
-```
-setState 심화
-    │
-    ├── 동작 원리
-    │     ├── dirty marking
-    │     ├── build() 재호출 범위
-    │     └── reconciliation
-    │
-    ├── rebuild 최소화 전략
-    │     ├── const 위젯
-    │     ├── 위젯 분리 (extract)
-    │     └── ValueKey를 통한 Element 재사용 제어
-    │
-    └── 디버깅 도구
-          ├── Flutter DevTools — Rebuild counts
-          ├── debugPrintRebuildDirtyWidgets
-          └── Performance Overlay
-```
+![setState 심화 개념 지도](/developer-open-book/diagrams/flutter-step13-concept-map.svg)
 
 ---
 
@@ -259,19 +231,7 @@ ListView(
 
 **ValueKey의 rebuild 최적화 효과:**
 
-```
-items 리스트에서 맨 앞에 아이템 삽입 시
-
-Key 없음:
-  [A, B, C] → [NEW, A, B, C]
-  위치 0: B가 A Element 재사용 → A의 State가 B에 붙어버림 (버그!)
-  위치 3: 새 Element 생성
-
-ValueKey 있음:
-  [A(id:1), B(id:2), C(id:3)] → [NEW(id:4), A(id:1), B(id:2), C(id:3)]
-  id:1 Element → id:1 Widget과 정확히 매칭 (State 보존)
-  id:4: 새 Element 생성
-```
+![ValueKey의 rebuild 최적화 효과](/developer-open-book/diagrams/flutter-step13-valuekey-optimization.svg)
 
 ---
 
@@ -396,22 +356,9 @@ class _CounterWithValueNotifierState
 
 ### 3.6 Flutter DevTools로 rebuild 추적
 
-```
-DevTools → Performance → Widget Rebuild Counts
-──────────────────────────────────────────────────────
-  위젯 이름              rebuild 횟수
-  ─────────────────────────────────
-  _ProductPageState       128        ← 너무 많음! 최적화 필요
-  HeavyImageWidget         128        ← 이미지가 매번 rebuild?!
-  FavoriteButton            64        ← 적절
-  Text('고정 텍스트')         0         ← const 덕분
-──────────────────────────────────────────────────────
+![DevTools Widget Rebuild Counts](/developer-open-book/diagrams/flutter-step13-devtools-rebuild.svg)
 
-rebuild 횟수가 비정상적으로 높은 위젯을 찾아
-  1. const 적용 가능한지 확인
-  2. 별도 StatefulWidget으로 분리 가능한지 확인
-  3. ValueNotifier로 교체 가능한지 확인
-```
+rebuild 횟수가 비정상적으로 높은 위젯을 찾아 1) const 적용 가능한지, 2) 별도 StatefulWidget으로 분리 가능한지, 3) ValueNotifier로 교체 가능한지 확인한다.
 
 **코드에서 rebuild 로그 출력:**
 
@@ -429,27 +376,7 @@ void main() {
 
 ### 4.1 뉴스피드 앱의 rebuild 최적화
 
-```
-최적화 전: 좋아요 버튼 탭 시
-──────────────────────────────────────────────────────
-  NewsFeedPage (setState)
-    └── ListView
-          ├── NewsCard (id:1)  ← build() 재호출 (불필요)
-          ├── NewsCard (id:2)  ← build() 재호출 (불필요)
-          ├── NewsCard (id:3)  ← build() 재호출 (탭한 카드)
-          └── NewsCard (id:4)  ← build() 재호출 (불필요)
-  → 4개 모두 rebuild
-
-최적화 후: NewsCard를 StatefulWidget으로 분리
-──────────────────────────────────────────────────────
-  NewsFeedPage (StatelessWidget)
-    └── ListView
-          ├── NewsCard(key: ValueKey(1))  ← rebuild 없음
-          ├── NewsCard(key: ValueKey(2))  ← rebuild 없음
-          ├── NewsCard(key: ValueKey(3))  ← 자체 setState만
-          └── NewsCard(key: ValueKey(4))  ← rebuild 없음
-  → 탭한 카드만 rebuild
-```
+![뉴스피드 rebuild 최적화 전/후](/developer-open-book/diagrams/flutter-step13-newsfeed-optimization.svg)
 
 ```dart
 // 최적화된 구조

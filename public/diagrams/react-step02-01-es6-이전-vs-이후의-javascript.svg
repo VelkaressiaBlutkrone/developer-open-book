@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="328" viewBox="-10 -20 550.5 301">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="550.5" height="301" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">ES6 이전 vs 이후의 JavaScript</text>
+  <rect x="20" y="45" width="490.5" height="206" rx="30.9" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="265.25" y="87.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">ES5 (2009 이전)  ES6+ (2015 이후)</text>
+  <text x="265.25" y="106" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">var x = 10;  const x = 10;</text>
+  <text x="265.25" y="124.19999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">function add(a, b) { ... }  const add = (a, b) =&gt; ...</text>
+  <text x="265.25" y="142.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">var name = obj.name;  const { name } = obj;</text>
+  <text x="265.25" y="160.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">arr.concat([4])  [...arr, 4]</text>
+  <text x="265.25" y="178.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">'Hello ' + name  `Hello ${name}`</text>
+  <text x="265.25" y="197" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">require('module')  import module from 'module'</text>
+  <text x="265.25" y="215.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">callback(function() {})  callback(() =&gt; {})</text>
+</svg>

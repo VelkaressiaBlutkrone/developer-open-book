@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="732" viewBox="-10 -15 420.5 513">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="420.5" height="513" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Context의 핵심 아이디어</text>
+  <rect x="20" y="50" width="360.5" height="418" rx="54.074999999999996" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&quot;데이터를 트리 최상위에서 제공하고,</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">필요한 컴포넌트가 직접 접근한다.</text>
+  <text x="40" y="135.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">중간 컴포넌트는 관여하지 않는다.&quot;</text>
+  <text x="40" y="161.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Props Drilling:</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">App → Layout → Sidebar → MenuItem</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">(전달)    (전달)    (사용)</text>
+  <text x="40" y="239.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Context:</text>
+  <text x="40" y="265.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">App (Provider)</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">↓ ── Context 터널 ──</text>
+  <text x="40" y="317.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">MenuItem (useContext로 직접 접근!)</text>
+  <text x="40" y="343.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Layout과 Sidebar는 theme을 모른다</text>
+  <text x="40" y="369.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· MenuItem이 직접 Context에서 읽는다</text>
+</svg>

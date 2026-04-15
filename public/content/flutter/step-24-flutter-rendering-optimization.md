@@ -24,34 +24,11 @@
 
 ### 1.1 성능이 UX에 미치는 영향
 
-```
-렌더링 성능과 사용자 경험
-──────────────────────────────────────────────────────
-  60fps 유지 → 프레임당 16.6ms 예산
-  120fps 유지 → 프레임당 8.3ms 예산 (ProMotion)
-
-  프레임 드롭(Jank) 발생 시:
-    16ms → 33ms: 30fps → 버벅임 느낌
-    33ms → 66ms: 15fps → 명백한 끊김
-    66ms+ → 체감 멈춤
-
-  Google 연구: 렌더링 지연 100ms당 전환율 1% 감소
-──────────────────────────────────────────────────────
-```
+![렌더링 성능과 사용자 경험](/developer-open-book/diagrams/flutter-step24-perf-ux.svg)
 
 ### 1.2 성능 최적화의 원칙
 
-```
-최적화 순서 (중요도 순)
-──────────────────────────────────────────────────────
-  1. 측정 먼저   → DevTools로 실제 병목 확인
-                  (추측으로 최적화하지 않는다)
-  2. 큰 것부터   → 작은 최적화보다 구조적 개선이 효과적
-  3. 검증 필수   → 최적화 전후 수치 비교
-  4. Profile 모드 → Release 모드와 유사한 환경에서 측정
-                  (Debug 모드는 JIT·디버그 오버헤드로 느림)
-──────────────────────────────────────────────────────
-```
+![최적화 순서](/developer-open-book/diagrams/flutter-step24-optimization-order.svg)
 
 ### 1.3 전체 개념 지도
 
@@ -84,34 +61,7 @@
 
 ### 3.1 Flutter 렌더링 파이프라인과 병목 위치
 
-```
-렌더링 파이프라인과 병목 가능 위치
-──────────────────────────────────────────────────────
-① Build Phase      [UI Thread]   ← 과도한 rebuild
-  Widget.build() 호출
-  새 Widget Tree 생성
-
-② Layout Phase     [UI Thread]   ← 복잡한 중첩 레이아웃
-  RenderObject 크기·위치 계산
-  Constraints 전파
-
-③ Paint Phase      [UI Thread]   ← 복잡한 커스텀 페인팅
-  Canvas 그리기 명령 생성
-  Layer 트리 구성
-
-④ Composite Phase  [UI Thread]
-  Layer 트리 → Raster Thread 전달
-
-⑤ Rasterize Phase  [Raster Thread] ← Shader 컴파일(Skia)
-  GPU에서 픽셀 생성
-  화면 전송
-──────────────────────────────────────────────────────
-
-Performance Overlay 해석:
-  상단 막대 = UI Thread (빨간색 = 예산 초과)
-  하단 막대 = Raster Thread (빨간색 = 예산 초과)
-  기준선 = 16ms (60fps 기준)
-```
+![렌더링 파이프라인과 병목 위치](/developer-open-book/diagrams/flutter-step24-rendering-pipeline.svg)
 
 ---
 
@@ -191,19 +141,7 @@ linter:
 
 `RepaintBoundary`는 자식 위젯의 repaint를 **별도 레이어**에서 처리한다. 자식이 변경되어도 부모가 repaint되지 않고, 부모가 repaint되어도 자식이 영향받지 않는다.
 
-```
-RepaintBoundary 없음
-──────────────────────────────────────────────────────
-  부모 위젯 변경
-    → 부모 + 모든 자식 repaint
-    → 배경 이미지·정적 위젯까지 매번 repaint → 비용 큼
-
-RepaintBoundary 있음
-──────────────────────────────────────────────────────
-  부모 위젯 변경
-    → 부모 repaint (RepaintBoundary 경계에서 중단)
-    → 자식은 캐시된 레이어 재사용 → 비용 없음
-```
+![RepaintBoundary 효과](/developer-open-book/diagrams/flutter-step24-repaint-boundary.svg)
 
 ```dart
 // 사용 시나리오 1: 자주 변하는 애니메이션 위젯 분리
@@ -271,14 +209,7 @@ ListView.builder(
 
 **itemExtent의 성능 효과:**
 
-```
-itemExtent 없음:
-  각 항목의 높이를 측정해야 함 → 매 스크롤마다 레이아웃 계산
-
-itemExtent 있음:
-  모든 항목이 같은 높이 → 인덱스로 바로 위치 계산 (O(1))
-  스크롤 성능 크게 향상
-```
+![itemExtent 효과](/developer-open-book/diagrams/flutter-step24-item-extent.svg)
 
 #### Sliver: 세밀한 스크롤 제어
 
@@ -398,42 +329,11 @@ MaterialApp(
 // 또는 DevTools → Performance → Enable Performance Overlay
 ```
 
-```
-Performance Overlay 읽는 법
-──────────────────────────────────────────────────────
-  ┌──────────────────────────────────────────────────┐
-  │  ████░░░░░░░░░  ← UI Thread (Dart)              │
-  │  ██░░░░░░░░░░░  ← Raster Thread (GPU)           │
-  │  ──────────────  ← 16ms 기준선                   │
-  └──────────────────────────────────────────────────┘
-
-  막대가 기준선 아래 → 60fps 유지 (정상)
-  막대가 기준선 위  → Jank 발생
-
-  UI Thread 초과:  Dart 코드 최적화 필요
-                   (rebuild 최소화, compute 분리)
-  Raster Thread 초과: GPU 작업 최적화 필요
-                   (RepaintBoundary, Impeller 전환)
-```
+![Performance Overlay 읽는 법](/developer-open-book/diagrams/flutter-step24-performance-overlay.svg)
 
 #### Widget Inspector: Rebuild 추적
 
-```
-DevTools → Widget Inspector → Rebuild Counts
-──────────────────────────────────────────────────────
-  버튼을 탭할 때마다 rebuild count를 확인
-
-  위젯 이름                    rebuild 수
-  ─────────────────────────────────────────
-  _ProductPageState             47    ← 과다
-  ProductImageCarousel          47    ← 불필요!
-  ProductDescription            47    ← 불필요!
-  _FavoriteButtonState          47    ← 정상 (이것만 변해야)
-
-  → ProductImageCarousel, ProductDescription은
-    const 또는 별도 위젯으로 분리해야 함
-──────────────────────────────────────────────────────
-```
+![DevTools Widget Inspector](/developer-open-book/diagrams/flutter-step24-widget-inspector.svg)
 
 ```dart
 // 코드에서 rebuild 로그 활성화
@@ -446,46 +346,13 @@ void main() {
 
 #### Timeline: 프레임 상세 분석
 
-```
-DevTools → Performance → Timeline
-──────────────────────────────────────────────────────
-  프레임별 상세 이벤트 분석
-  어느 build()가 얼마나 걸리는지 확인 가능
-
-  느린 프레임 클릭 → 상세 이벤트 보기
-    Build(ProductCard): 12ms  ← 이 위젯이 느린 이유 찾기
-    Layout(Column): 2ms
-    Paint(ProductImage): 4ms
-──────────────────────────────────────────────────────
-```
+![DevTools Performance Timeline](/developer-open-book/diagrams/flutter-step24-timeline.svg)
 
 ---
 
 ### 3.8 최적화 체크리스트
 
-```
-코드 리뷰 시 확인할 항목
-──────────────────────────────────────────────────────
-  Rebuild 최소화
-  □ 변하지 않는 위젯에 const 적용?
-  □ setState가 너무 큰 범위를 rebuild하지 않는가?
-  □ ValueNotifier/ValueListenableBuilder 활용 가능한가?
-  □ ListView.builder 대신 ListView 사용하지 않는가?
-
-  Repaint 최소화
-  □ 자주 repaint되는 애니메이션에 RepaintBoundary 적용?
-  □ 복잡한 CustomPainter에 RepaintBoundary 적용?
-
-  메모리 최적화
-  □ 큰 이미지에 cacheWidth/cacheHeight 적용?
-  □ dispose()에서 모든 컨트롤러·구독 해제?
-  □ 무거운 작업은 compute()로 분리?
-
-  리스트 최적화
-  □ 고정 높이 리스트에 itemExtent 적용?
-  □ 리스트 항목에 ValueKey 적용?
-──────────────────────────────────────────────────────
-```
+![코드 리뷰 시 확인할 항목](/developer-open-book/diagrams/flutter-step24-code-review-checklist.svg)
 
 ---
 
@@ -493,32 +360,7 @@ DevTools → Performance → Timeline
 
 ### 4.1 모바일 게임 앱: RepaintBoundary로 FPS 30→60
 
-```
-게임 앱 화면 구조
-──────────────────────────────────────────────────────
-  Stack(
-    배경 이미지 (정적, 변하지 않음)
-    적 캐릭터들 (60fps로 움직임)
-    플레이어 (60fps로 움직임)
-    점수 HUD (점수 변경 시만 업데이트)
-    미니맵 (0.5초마다 업데이트)
-  )
-
-문제: 적이 움직일 때마다 전체 Stack repaint
-  → 배경·HUD·미니맵까지 매 프레임 repaint
-  → Raster Thread 과부하 → 30fps
-
-해결: RepaintBoundary로 레이어 분리
-──────────────────────────────────────────────────────
-  Stack(
-    RepaintBoundary(child: BackgroundImage()),  ← 캐시됨
-    GameCharactersLayer(),                      ← 60fps repaint
-    RepaintBoundary(child: ScoreHUD()),         ← 점수 변경 시만
-    RepaintBoundary(child: MiniMap()),          ← 0.5초마다
-  )
-결과: 배경·HUD·미니맵은 캐시 레이어 재사용
-      캐릭터 레이어만 60fps repaint → FPS 30→60
-```
+![게임 앱 화면 구조 최적화](/developer-open-book/diagrams/flutter-step24-game-screen-structure.svg)
 
 ---
 
@@ -772,18 +614,7 @@ class _PerformanceDemoState extends State<PerformanceDemo> {
 
 **Q5. [Evaluate]** 아래 앱 프로파일링 결과를 보고 우선순위가 높은 최적화 2가지를 선택하고 이유를 설명하라.
 
-```
-Widget Inspector 결과 (버튼 탭 10회 후):
-  _HomePageState                rebuild: 47
-  HeaderBannerWidget            rebuild: 47  ← 배너, 변하지 않음
-  ProductGrid                   rebuild: 47  ← 전체 그리드
-  _LikeButtonState              rebuild: 47  ← 이것만 변해야 함
-  FooterWidget                  rebuild: 47  ← 변하지 않음
-
-Performance Overlay:
-  UI Thread: 평균 12ms (기준선 초과 없음)
-  Raster Thread: 평균 8ms (기준선 초과 없음)
-```
+![Widget Inspector 결과](/developer-open-book/diagrams/flutter-step24-widget-inspector-result.svg)
 
 > **모범 답안:** Performance Overlay는 정상이므로 현재 Jank는 없다. 그러나 불필요한 rebuild가 과도하다.
 >

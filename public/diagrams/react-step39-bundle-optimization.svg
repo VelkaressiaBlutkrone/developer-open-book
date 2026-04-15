@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="265" viewBox="0 -15 720 265">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="0" y="-15" width="720" height="265" rx="12" fill="#141414"/>
+  <text x="140" y="33" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">번들 최적화 개념 관계도</text>
+  <rect x="30" y="60" width="200" height="55" rx="8.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="130" y="81.89999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">코드 분할</text>
+  <text x="130" y="100.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">큰 번들을 작게 나눔</text>
+  <rect x="260" y="60" width="200" height="55" rx="8.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="360" y="81.89999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">장기 캐싱</text>
+  <text x="360" y="100.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">내용 해시로 관리</text>
+  <rect x="490" y="60" width="200" height="55" rx="8.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="590" y="81.89999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">manualChunks</text>
+  <text x="590" y="100.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">라이브러리 분리</text>
+  <defs><marker id="arrow-a_600" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M130,115 L340,155" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a_600)"/>
+  <defs><marker id="arrow-a_601" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M360,115 L360,155" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a_601)"/>
+  <defs><marker id="arrow-a_602" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M590,115 L360,155" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a_602)"/>
+  <rect x="200" y="160" width="300" height="60" rx="9" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="350" y="175.29999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">초기 로딩 속도 향상</text>
+  <text x="350" y="193.49999999999997" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">반복 방문 시 전송량 감소</text>
+  <text x="350" y="211.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">캐시 효율 극대화</text>
+</svg>

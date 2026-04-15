@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="526" viewBox="20 -20 510 447">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="510" height="447" rx="12" fill="#141414"/>
+  <text x="100" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Step 13 — 다루는 범위</text>
+  <rect x="50" y="50" width="450" height="221" rx="33.15" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="60" y="72.4" fill="#22c55e" font-family="Nunito, sans-serif" font-size="16" opacity="1">다루는 것</text>
+  <text x="65" y="96.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· useReducer의 구조와 데이터 흐름</text>
+  <text x="65" y="118.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· reducer 함수의 작성 규칙</text>
+  <text x="65" y="140.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· useState vs useReducer 선택 기준</text>
+  <text x="65" y="162.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 복합 State 관리 패턴</text>
+  <text x="65" y="184.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· action 설계 전략</text>
+  <text x="65" y="206.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 유한 상태 머신(FSM) 개념과 적용</text>
+  <text x="65" y="228.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· useReducer + useContext 조합 미리보기</text>
+  <text x="65" y="250.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 초기화 함수(init)와 Lazy Initialization</text>
+  <rect x="50" y="286" width="450" height="111" rx="16.65" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="60" y="308.4" fill="#ef4444" font-family="Nunito, sans-serif" font-size="16" opacity="1">다루지 않는 것</text>
+  <text x="65" y="332.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Redux / Zustand 등 전역 상태 관리 (Step 26)</text>
+  <text x="65" y="354.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Context API 상세 (Step 25)</text>
+  <text x="65" y="376.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· useMemo / useCallback (Step 14)</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="775" height="200" viewBox="0 -20 775 200.4">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="0" y="-20" width="775" height="200.4" rx="12" fill="#141414"/>
+  <text x="50" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">렌더링 파이프라인과 병목 위치</text>
+  <rect x="30" y="70" width="160" height="55" rx="8.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="110" y="92.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Build</text>
+  <text x="110" y="109.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">(Widget→Element)</text>
+  <text x="30" y="144.9" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="11" opacity="1">setState 과다 호출</text>
+  <defs><marker id="arrow-el420" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#4a9eed"/></marker></defs>
+  <path d="M190,97 L215,97" fill="none" stroke="#4a9eed" stroke-width="2" opacity="1" marker-end="url(#arrow-el420)"/>
+  <rect x="215" y="70" width="160" height="55" rx="8.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="295" y="92.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Layout</text>
+  <text x="295" y="109.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">(크기·위치 계산)</text>
+  <text x="215" y="144.9" fill="#22c55e" font-family="Nunito, sans-serif" font-size="11" opacity="1">복잡한 중첩 레이아웃</text>
+  <defs><marker id="arrow-el424" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M375,97 L400,97" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-el424)"/>
+  <rect x="400" y="70" width="160" height="55" rx="8.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="480" y="92.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Paint</text>
+  <text x="480" y="109.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">(화면 그리기)</text>
+  <text x="400" y="144.9" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="11" opacity="1">큰 영역 재페인트</text>
+  <defs><marker id="arrow-el428" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#8b5cf6"/></marker></defs>
+  <path d="M560,97 L585,97" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="1" marker-end="url(#arrow-el428)"/>
+  <rect x="585" y="70" width="160" height="55" rx="8.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="665" y="92.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Composite</text>
+  <text x="665" y="109.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">(GPU 합성)</text>
+  <text x="585" y="144.9" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="11" opacity="1">GPU 과부하</text>
+</svg>

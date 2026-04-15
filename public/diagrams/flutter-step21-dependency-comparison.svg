@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="277" viewBox="20 -20 680 276.8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="680" height="276.8" rx="12" fill="#141414"/>
+  <text x="50" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">잘못된 의존성 vs 올바른 의존성</text>
+  <text x="50" y="71.2" fill="#ef4444" font-family="Nunito, sans-serif" font-size="18" opacity="1">잘못된 의존성</text>
+  <rect x="80" y="90" width="220" height="45" rx="6.75" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="190" y="116.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Domain</text>
+  <rect x="80" y="155" width="220" height="45" rx="6.75" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="190" y="181.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Data (Dio, Hive)</text>
+  <defs><marker id="arrow-el256" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M190,135 L190,155" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-el256)"/>
+  <text x="80" y="220.8" fill="#ef4444" font-family="Nunito, sans-serif" font-size="12" opacity="1">Domain이 Dio를 직접 import</text>
+  <text x="420" y="71.2" fill="#22c55e" font-family="Nunito, sans-serif" font-size="18" opacity="1">올바른 의존성</text>
+  <rect x="450" y="90" width="220" height="45" rx="6.75" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="560" y="116.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Domain (Interface)</text>
+  <rect x="450" y="155" width="220" height="45" rx="6.75" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="560" y="181.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Data (구현체)</text>
+  <defs><marker id="arrow-el263" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M560,155 L560,135" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-el263)"/>
+  <text x="450" y="220.8" fill="#22c55e" font-family="Nunito, sans-serif" font-size="12" opacity="1">Data가 Domain 인터페이스 구현</text>
+</svg>

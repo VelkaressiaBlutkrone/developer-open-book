@@ -100,47 +100,11 @@ useReducer의 해결:
 
 ### 1.4 이 Step의 학습 지도 (개념 지도)
 
-```
-┌──────────────────────────────────────────────────────────────────┐
-│                    useReducer 개념 지도                           │
-│                                                                   │
-│  [useState 한계] ──────→ [useReducer 등장 배경]                   │
-│       │                            │                             │
-│       │                            ▼                             │
-│       │                    [useReducer 구조]                      │
-│       │                   /        │        \                    │
-│       │           [Action]      [Reducer]  [State]               │
-│       │               │             │          │                 │
-│       │        [dispatch 호출]  [순수 함수]  [불변 업데이트]       │
-│       │                             │                            │
-│       │              ┌──────────────┤                            │
-│       │         [실전 패턴]    [FSM 설계]                         │
-│       │         [패칭/폼/CRUD] [상태 전이 테이블]                  │
-│       │                             │                            │
-│       └────────→ [useReducer + useContext 미리보기]               │
-└──────────────────────────────────────────────────────────────────┘
-```
+![useReducer 개념 지도](/developer-open-book/diagrams/react-step13-concept-map.svg)
 
 ### 1.5 이 Step에서 다루는 범위
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  다루는 것                                               │
-│  · useReducer의 구조와 데이터 흐름                       │
-│  · reducer 함수의 작성 규칙                              │
-│  · useState vs useReducer 선택 기준                     │
-│  · 복합 State 관리 패턴                                  │
-│  · action 설계 전략                                      │
-│  · 유한 상태 머신(FSM) 개념과 적용                       │
-│  · useReducer + useContext 조합 미리보기                 │
-│  · 초기화 함수(init)와 Lazy Initialization              │
-├─────────────────────────────────────────────────────────┤
-│  다루지 않는 것                                          │
-│  · Redux / Zustand 등 전역 상태 관리 (Step 26)          │
-│  · Context API 상세 (Step 25)                           │
-│  · useMemo / useCallback (Step 14)                      │
-└─────────────────────────────────────────────────────────┘
-```
+![Step 13 다루는 범위](/developer-open-book/diagrams/react-step13-scope.svg)
 
 ---
 
@@ -161,29 +125,7 @@ useReducer의 해결:
 
 ### 2.2 용어 간 관계 다이어그램
 
-```
-┌──────────────────────────────────────────────────────────────────┐
-│                    useReducer 구성 요소 관계                      │
-│                                                                   │
-│  useReducer(reducer, initialState, init?)                         │
-│       │                    │                                      │
-│       │                    └──→ 초기 State 생성                   │
-│       │                                                           │
-│       ▼                                                           │
-│  [state]  ←──────────── reducer(currentState, action)            │
-│     │                        ↑              ↑                    │
-│     │                        │          action 객체               │
-│     └──→ JSX 렌더링      (순수 함수)   { type, payload? }         │
-│                              │              │                    │
-│                        새 State 반환    dispatch(action) 호출     │
-│                                            ↑                    │
-│                                      이벤트 핸들러               │
-│                                      (사용자 상호작용)            │
-│                                                                   │
-│  핵심 흐름:                                                        │
-│  사용자 → dispatch(action) → reducer → newState → 재렌더링        │
-└──────────────────────────────────────────────────────────────────┘
-```
+![useReducer 구성 요소 관계](/developer-open-book/diagrams/react-step13-component-relations.svg)
 
 ### 2.3 Reducer 패턴의 이론적 뿌리
 
@@ -200,48 +142,7 @@ Redux/useReducer Reducer: (currentState, action) => newState
 
 ### 2.4 useReducer의 데이터 흐름
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                  useReducer 데이터 흐름                       │
-│                                                              │
-│  사용자 액션 (클릭, 입력 등)                                  │
-│       │                                                      │
-│       ▼                                                      │
-│  ┌──────────────┐                                            │
-│  │  이벤트 핸들러 │                                           │
-│  │              │  dispatch({ type: 'ADD_TODO', payload: text })
-│  └──────┬───────┘                                            │
-│         │  action 전달                                       │
-│         ▼                                                    │
-│  ┌──────────────────────────────────────┐                    │
-│  │  Reducer 함수                         │                    │
-│  │                                       │                    │
-│  │  function reducer(state, action) {    │                    │
-│  │    switch (action.type) {             │                    │
-│  │      case 'ADD_TODO':                 │                    │
-│  │        return { ...state,             │                    │
-│  │          todos: [...state.todos,      │                    │
-│  │            { text: action.payload }]  │                    │
-│  │        };                             │                    │
-│  │    }                                  │                    │
-│  │  }                                    │                    │
-│  │                                       │                    │
-│  │  (currentState, action) → newState    │                    │
-│  └──────────────┬───────────────────────┘                    │
-│                 │  새 State 반환                              │
-│                 ▼                                             │
-│  ┌──────────────────┐                                        │
-│  │  재렌더링 트리거   │                                        │
-│  │  새 State로 UI 갱신│                                       │
-│  └──────────────────┘                                        │
-│                                                              │
-│  핵심:                                                       │
-│  · 컴포넌트는 "무엇이 일어났는가"만 dispatch                  │
-│  · "어떻게 State가 변하는가"는 reducer가 결정                 │
-│  · 관심사 분리(Separation of Concerns)                       │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
-```
+![useReducer 데이터 흐름](/developer-open-book/diagrams/react-step13-data-flow.svg)
 
 ---
 

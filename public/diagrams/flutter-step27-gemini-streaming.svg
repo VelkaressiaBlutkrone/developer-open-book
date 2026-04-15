@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="202" viewBox="20 -20 700 201.8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="700" height="201.8" rx="12" fill="#141414"/>
+  <text x="50" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">Gemini 스트리밍 응답 흐름</text>
+  <rect x="50" y="70" width="180" height="55" rx="8.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="140" y="101.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">User Input</text>
+  <text x="50" y="145.8" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="12" opacity="1">프롬프트 전송</text>
+  <defs><marker id="arrow-el686" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#4a9eed"/></marker></defs>
+  <path d="M230,97 L280,97" fill="none" stroke="#4a9eed" stroke-width="2" opacity="1" marker-end="url(#arrow-el686)"/>
+  <rect x="280" y="70" width="180" height="55" rx="8.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="370" y="101.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Gemini API</text>
+  <text x="280" y="145.8" fill="#22c55e" font-family="Nunito, sans-serif" font-size="12" opacity="1">SSE 스트리밍 응답</text>
+  <defs><marker id="arrow-el690" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M460,97 L510,97" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-el690)"/>
+  <rect x="510" y="70" width="180" height="55" rx="8.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="600" y="101.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Flutter UI</text>
+  <text x="510" y="145.8" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="12" opacity="1">실시간 텍스트 렌더링</text>
+</svg>

@@ -34,22 +34,7 @@ React는 UI를 만드는 라이브러리다. 훌륭한 컴포넌트 모델, Virt
 
 2016년 Vercel(당시 ZEIT)이 출시한 Next.js는 이 공백을 채우는 프레임워크였다. 초기에는 SSR을 손쉽게 구현하는 도구로 시작했으나, 2023년 App Router의 안정화와 함께 RSC를 기본으로 하는 풀스택 React 프레임워크로 진화했다. React 공식 문서는 현재 "새 프로젝트를 시작한다면 프레임워크를 사용하라"고 권장하며, Next.js를 첫 번째 선택지로 소개한다.
 
-```
-React가 제공하는 것 vs 실제 앱에 필요한 것
-
-  React 제공:                    실제 앱에 추가로 필요한 것:
-  ────────────────────────       ────────────────────────────────
-  · 컴포넌트 모델                 · 라우팅 (React Router 등)
-  · Virtual DOM / Reconciliation · 서버 사이드 렌더링
-  · Hooks                        · 데이터 패칭 전략
-  · Concurrent Features          · 캐싱 레이어
-  · Suspense                     · 코드 분할 / 번들 최적화
-                                 · 이미지 / 폰트 최적화
-                                 · SEO (메타데이터)
-                                 · 빌드 / 배포 파이프라인
-
-  Next.js App Router = 위 모든 것을 통합한 메타 프레임워크
-```
+![React vs 실제 앱 요구사항](/developer-open-book/diagrams/react-step21-react-vs-needs.svg)
 
 ### 1.2 App Router가 가져온 패러다임 전환
 
@@ -84,27 +69,7 @@ Pages Router → App Router 패러다임 변화
 
 ### 1.4 이 Step에서 다루는 범위
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  다루는 것                                               │
-│  · App Router의 파일 시스템 라우팅 규약                  │
-│  · 특수 파일: page, layout, loading, error, not-found   │
-│  · 동적 라우트와 Route Groups                           │
-│  · Server Component가 기본인 환경에서의 데이터 패칭      │
-│  · Next.js 캐싱 계층 구조                               │
-│  · 정적 렌더링 vs 동적 렌더링의 자동 판단               │
-│  · Server Actions 실전 패턴                             │
-│  · Parallel Routes, Intercepting Routes 개요            │
-│  · Vite+React Router vs Next.js 선택 기준              │
-├─────────────────────────────────────────────────────────┤
-│  다루지 않는 것                                          │
-│  · Next.js 설치/설정 절차 (공식 문서 참조)              │
-│  · Pages Router (레거시 — App Router가 현재 표준)       │
-│  · Middleware 상세                                       │
-│  · Edge Runtime 상세                                    │
-│  · Vercel 배포 상세 (Step 40)                           │
-└─────────────────────────────────────────────────────────┘
-```
+![Step 21 다루는 범위](/developer-open-book/diagrams/react-step21-scope.svg)
 
 ---
 
@@ -134,58 +99,11 @@ Pages Router → App Router 패러다임 변화
 
 ### 2.3 App Router vs React Router 구조 비교
 
-```
-React Router (코드 기반):                Next.js App Router (파일 기반):
-
-  const router = createBrowserRouter([     app/
-    {                                        ├── layout.js      (RootLayout)
-      path: '/',                             ├── page.js        (HomePage)
-      element: <RootLayout />,               ├── loading.js     (전역 로딩)
-      errorElement: <ErrorPage />,           ├── error.js       (전역 에러)
-      children: [                            ├── not-found.js   (404)
-        { index: true, element: <Home /> },  │
-        {                                    ├── products/
-          path: 'products',                  │   ├── layout.js  (ProductsLayout)
-          element: <ProductsLayout />,       │   ├── page.js    (ProductListPage)
-          children: [                        │   └── [id]/
-            { index: true, element: <List /> },    ├── page.js  (ProductDetail)
-            { path: ':id', element: <Detail /> },  ├── loading.js
-          ]                                        └── error.js
-        }
-      ]
-    }
-  ]);
-
-  코드 기반:                              파일 기반:
-  · 라우트를 JavaScript로 선언            · 폴더 구조가 곧 라우트 구조
-  · 유연하지만 명시적 설정 필요           · 규약에 따라 자동 설정
-  · loader/action을 라우트에 연결         · Server Component + Server Action
-```
+![React Router vs App Router](/developer-open-book/diagrams/react-step21-router-comparison.svg)
 
 ### 2.4 개념 간 관계 — 특수 파일들의 계층 구조
 
-```
-특수 파일들의 중첩 관계
-
-  /dashboard/analytics 접근 시 자동 생성되는 React 트리:
-
-  <RootLayout>             ← app/layout.js
-    <DashboardLayout>      ← app/dashboard/layout.js
-      <ErrorBoundary       ← app/dashboard/error.js (자동 래핑)
-        fallback={<DashboardError />}
-      >
-        <Suspense          ← app/dashboard/loading.js (자동 래핑)
-          fallback={<DashboardLoading />}
-        >
-          <AnalyticsPage /> ← app/dashboard/analytics/page.js
-        </Suspense>
-      </ErrorBoundary>
-    </DashboardLayout>
-  </RootLayout>
-
-  개발자가 작성하는 것: 4개의 파일
-  Next.js가 자동으로 조립하는 것: 위의 전체 트리 구조
-```
+![특수 파일들의 중첩 관계](/developer-open-book/diagrams/react-step21-file-nesting.svg)
 
 ---
 
@@ -195,28 +113,7 @@ React Router (코드 기반):                Next.js App Router (파일 기반):
 
 #### 기본 구조
 
-```
-app/
-├── layout.js          → 모든 페이지의 루트 레이아웃
-├── page.js            → /
-├── about/
-│   └── page.js        → /about
-├── products/
-│   ├── page.js        → /products
-│   └── [id]/
-│       └── page.js    → /products/:id (/products/42 등)
-├── blog/
-│   ├── page.js        → /blog
-│   └── [slug]/
-│       └── page.js    → /blog/:slug (/blog/hello-world 등)
-└── dashboard/
-    ├── layout.js      → /dashboard/* 공유 레이아웃
-    ├── page.js        → /dashboard
-    ├── analytics/
-    │   └── page.js    → /dashboard/analytics
-    └── settings/
-        └── page.js    → /dashboard/settings
-```
+![App Router 파일 시스템 라우팅](/developer-open-book/diagrams/react-step21-file-tree.svg)
 
 ```
 핵심 규칙

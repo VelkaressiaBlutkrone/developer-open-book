@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="558" viewBox="-10 -15 560 521">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="560" height="521" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">다루는 것</text>
+  <rect x="20" y="55" width="500" height="268" rx="40.199999999999996" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="0.4"/>
+  <text x="35" y="81.2" fill="#22c55e" font-family="Nunito, sans-serif" font-size="18" opacity="1">다루는 것</text>
+  <text x="45" y="107.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Context의 생성, 제공, 소비 3단계</text>
+  <text x="45" y="133.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · React 19의 Context 변경사항</text>
+  <text x="45" y="159.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · useReducer + Context 결합 패턴</text>
+  <text x="45" y="185.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Context 리렌더링 문제와 최적화 전략</text>
+  <text x="45" y="211.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Context 분리 전략 (State/Dispatch 분리)</text>
+  <text x="45" y="237.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Custom Hook으로 Context 캡슐화</text>
+  <text x="45" y="263.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Context가 적합한 경우 vs 부적합한 경우</text>
+  <text x="45" y="289.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Zustand 등 전역 상태 라이브러리와의 비교 (개요)</text>
+  <rect x="20" y="338" width="500" height="138" rx="20.7" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="0.4"/>
+  <text x="35" y="364.2" fill="#ef4444" font-family="Nunito, sans-serif" font-size="18" opacity="1">다루지 않는 것</text>
+  <text x="45" y="390.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Zustand 상세 (Step 26)</text>
+  <text x="45" y="416.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Redux Toolkit 상세 (Step 26)</text>
+  <text x="45" y="442.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 서버 상태와 Context의 관계 (Step 23~24에서 학습)</text>
+</svg>

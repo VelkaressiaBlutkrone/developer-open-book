@@ -99,73 +99,21 @@ function RegisterForm() {
 
 ### 1.3 React Hook Form이 해결하는 것
 
-```
-수동 폼의 한계              RHF의 해결
 
-  State 4개 관리           → useForm() 한 줄로 전부 관리
-  매 입력마다 리렌더링     → Uncontrolled 기반 → 리렌더링 최소화 ★
-  validate 수동 작성       → Zod 스키마로 자동 검증 + 타입 추론
-  touched 수동 추적        → formState.touchedFields 자동 관리
-  에러 표시 로직 반복      → formState.errors 자동 관리
-  배열 필드 구현 어려움    → useFieldArray 내장
-  서버 에러 반영 어려움    → setError로 서버 에러 통합
-```
+![수동 폼의 한계              RHF의 해결](/developer-open-book/diagrams/react-step32-수동-폼의-한계-rhf의-해결.svg)
+
 
 ### 1.4 개념 지도
 
-```
-RHF + Zod 아키텍처 개념 지도
 
-  ┌───────────────────────────────────────────────────────────┐
-  │                   폼 관리 전체 흐름                        │
-  │                                                           │
-  │   스키마 정의 (Zod)                                       │
-  │   ─────────────                                           │
-  │   z.object({ ... })  →  검증 규칙 + TypeScript 타입       │
-  │   z.infer<typeof S>  →  Props 타입 자동 추출              │
-  │                                                           │
-  │   폼 설정 (RHF)                                           │
-  │   ──────────                                              │
-  │   useForm({ resolver: zodResolver(schema) })              │
-  │      ↓                                                    │
-  │   register / Controller  →  input 등록                   │
-  │   handleSubmit           →  검증 후 onSubmit 호출         │
-  │   formState.errors       →  Zod 에러 메시지 자동 반영     │
-  │                                                           │
-  │   성능 최적화 (Uncontrolled)                              │
-  │   ────────────────────────                               │
-  │   DOM이 값 보관  →  키 입력 시 리렌더링 0회              │
-  │   에러 시에만    →  해당 필드만 리렌더링                  │
-  │                                                           │
-  │   동적 기능                                               │
-  │   ──────────                                              │
-  │   useFieldArray  →  배열 필드 (추가/삭제/이동)            │
-  │   trigger()      →  부분 검증 (다단계 폼)                 │
-  │   setError()     →  서버 에러 통합                        │
-  │                                                           │
-  └───────────────────────────────────────────────────────────┘
-```
+![RHF + Zod 아키텍처 개념 지도](/developer-open-book/diagrams/react-step32-rhf-zod-아키텍처-개념-지도.svg)
+
 
 ### 1.5 이 Step에서 다루는 범위
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  다루는 것                                               │
-│  · React Hook Form 핵심 API와 동작 원리                 │
-│  · Uncontrolled 기반 성능 최적화의 원리                  │
-│  · Zod 스키마를 활용한 검증 + 타입 추론                  │
-│  · zodResolver로 RHF + Zod 통합                        │
-│  · Controller를 활용한 외부 UI 컴포넌트 연동             │
-│  · useFieldArray로 동적 배열 필드 관리                   │
-│  · 다단계 폼(Multi-step Form) 패턴                     │
-│  · 에러 처리 (클라이언트 + 서버 에러)                   │
-├─────────────────────────────────────────────────────────┤
-│  다루지 않는 것                                          │
-│  · Formik (경쟁 라이브러리)                              │
-│  · Yup (Zod 대안 — 유사 개념)                           │
-│  · RHF DevTools 설정 상세                               │
-└─────────────────────────────────────────────────────────┘
-```
+
+![다루는 것](/developer-open-book/diagrams/react-step32-다루는-것.svg)
+
 
 ---
 
@@ -188,29 +136,9 @@ RHF + Zod 아키텍처 개념 지도
 
 Controlled vs Uncontrolled의 차이는 "값이 어디에 저장되는가"의 차이다. Controlled는 React State에, Uncontrolled는 DOM에 값이 저장된다. React State가 변경되면 리렌더링이 발생하지만 DOM은 값이 바뀌어도 React 렌더링 사이클과 무관하다. RHF는 이 특성을 활용하여 입력 성능을 극적으로 향상시킨다.
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│           React Hook Form의 동작 원리                        │
-│                                                              │
-│  Controlled (useState):           Uncontrolled (RHF):       │
-│  ─────────────────────           ─────────────────────      │
-│  · 모든 입력이 State에 저장       · DOM이 값을 직접 보관     │
-│  · 입력할 때마다 setState          · 입력해도 리렌더링 없음!  │
-│  · 매 키 입력마다 리렌더링 ★      · 제출/검증 시에만 값을 읽음│
-│  · 10필드 폼: 키 입력 시          · 10필드 폼: 키 입력 시    │
-│    전체 폼이 리렌더링             아무것도 리렌더링 안 함! ★ │
-│                                                              │
-│  RHF의 핵심 전략:                                            │
-│    1. register로 ref를 DOM에 연결                           │
-│    2. 사용자가 입력하면 DOM이 값을 보관 (React State 아님!)  │
-│    3. 제출 시 ref를 통해 DOM에서 값을 읽어온다               │
-│    4. 검증 후 에러가 있으면 formState.errors만 업데이트       │
-│    5. 에러 표시 컴포넌트만 리렌더링 (formState 구독)         │
-│                                                              │
-│  결과: 입력 성능이 Controlled 대비 압도적으로 빠르다 ★       │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
-```
+
+![React Hook Form의 동작 원리](/developer-open-book/diagrams/react-step32-react-hook-form의-동작-원리.svg)
+
 
 ### 2.3 Zod의 핵심 아이디어 — "스키마 하나로 검증과 타입을"
 
@@ -289,20 +217,9 @@ function LoginForm() {
 }
 ```
 
-```
-register('email', { rules })가 반환하는 것
 
-  {
-    name: 'email',
-    ref: (element) => { /* DOM 참조 연결 */ },
-    onChange: (event) => { /* 값 변경 추적 (내부적) */ },
-    onBlur: (event) => { /* touched 추적 */ },
-  }
+![register('email', { rules })가 반환하는 것](/developer-open-book/diagrams/react-step32-register-email-rules-가-반환하는-것.svg)
 
-  → {...register('email')}로 input에 spread하면
-    name, ref, onChange, onBlur가 모두 자동 연결됨
-  → State 없이 DOM에서 직접 값을 관리!
-```
 
 #### formState 활용
 
@@ -323,60 +240,17 @@ const {
 });
 ```
 
-```
-검증 모드 (mode)
 
-  'onSubmit' (기본): 제출 시에만 검증 → 가장 가벼움
-  'onBlur':          필드를 떠날 때 검증 → 균형잡힌 UX
-  'onChange':        입력할 때마다 검증 → 가장 반응적 (비용 높음)
-  'all':             onBlur + onChange → 가장 적극적
+![검증 모드 (mode)](/developer-open-book/diagrams/react-step32-검증-모드-mode.svg)
 
-  권장: 'onBlur' — 사용자가 필드를 떠날 때 피드백 제공
-        입력 중에는 방해하지 않으면서 즉각적 피드백
-```
 
 ### 3.2 Zod — 스키마 기반 검증 + 타입 추론
 
 #### Zod의 핵심 아이디어
 
-```
-"스키마를 한 번 정의하면 검증 + 타입이 동시에 나온다"
 
-  기존 방식 (검증과 타입을 따로 관리):
+!["스키마를 한 번 정의하면 검증 + 타입이 동시에 나온다"](/developer-open-book/diagrams/react-step32-스키마를-한-번-정의하면-검증-타입이-동시에-나온다.svg)
 
-    // 1. TypeScript 타입 정의
-    interface User {
-      name: string;
-      email: string;
-      age: number;
-    }
-
-    // 2. 검증 로직을 별도로 작성 (중복!)
-    function validate(data) {
-      if (typeof data.name !== 'string') throw Error();
-      if (!data.email.includes('@')) throw Error();
-      if (data.age < 0 || data.age > 150) throw Error();
-    }
-
-    // 문제: 타입 정의와 검증 로직이 분리 → 불일치 위험!
-
-  Zod 방식 (하나의 스키마에서 둘 다):
-
-    const userSchema = z.object({
-      name: z.string().min(1, '이름을 입력하세요'),
-      email: z.string().email('유효한 이메일을 입력하세요'),
-      age: z.number().min(0).max(150),
-    });
-
-    // 스키마에서 타입을 자동 추출!
-    type User = z.infer<typeof userSchema>;
-    // { name: string; email: string; age: number; }
-
-    // 동일한 스키마로 런타임 검증!
-    userSchema.parse(data);  // 실패 시 ZodError throw
-
-    // 하나의 스키마 = 타입 + 검증 → 불일치 불가능! ★
-```
 
 #### Zod 스키마 기본 문법
 
@@ -538,17 +412,9 @@ function Field({
 }
 ```
 
-```
-RHF + Zod의 흐름
 
-  1. Zod 스키마 정의 → 검증 규칙 + TypeScript 타입 동시 생성
-  2. zodResolver(schema) → RHF의 resolver에 연결
-  3. register('fieldName') → input을 RHF에 등록 (Uncontrolled)
-  4. 사용자 입력 → DOM이 값 보관 (리렌더링 없음!)
-  5. handleSubmit 호출 → DOM에서 값 수집 → Zod 스키마로 검증
-  6. 검증 실패 → formState.errors에 Zod 에러 메시지 반영
-  7. 검증 성공 → onSubmit(data) 호출 — data는 타입 안전!
-```
+![RHF + Zod의 흐름](/developer-open-book/diagrams/react-step32-rhf-zod의-흐름.svg)
+
 
 ### 3.4 Controller — 외부 UI 컴포넌트 연동
 
@@ -599,21 +465,9 @@ function ProfileForm() {
 }
 ```
 
-```
-register vs Controller 선택 기준
 
-  register:
-    · 일반 HTML input, textarea, select에 사용
-    · Uncontrolled 방식 → 리렌더링 없음
-    · {...register('name')}으로 간결하게 연결
-    · 대부분의 경우 이것으로 충분
+![register vs Controller 선택 기준](/developer-open-book/diagrams/react-step32-register-vs-controller-선택-기준.svg)
 
-  Controller:
-    · register가 작동하지 않는 외부 UI 컴포넌트에 사용
-    · Controlled 방식 → 값 변경 시 리렌더링
-    · 자체 value/onChange 인터페이스를 가진 컴포넌트
-    · DatePicker, Select, Slider, ColorPicker, Rich Editor 등
-```
 
 ### 3.5 useFieldArray — 동적 배열 필드
 
@@ -831,37 +685,9 @@ function MultiStepForm() {
 
 ### 3.7 수동 폼 vs RHF+Zod 비교
 
-```
-┌──────────────────┬─────────────────────┬─────────────────────┐
-│                  │  수동 (useState)     │  RHF + Zod          │
-├──────────────────┼─────────────────────┼─────────────────────┤
-│  State 변수      │  4+ (values, errors, │  0 (useForm이 관리) │
-│                  │  touched, submitting)│                     │
-│  검증 코드       │  수동 validate 함수  │  Zod 스키마 ★       │
-│  타입 정의       │  별도 interface      │  z.infer (자동) ★   │
-│  리렌더링        │  매 키 입력마다      │  제출/에러 시에만 ★  │
-│  코드량 (4필드)  │  ~60줄              │  ~25줄 ★            │
-│  배열 필드       │  매우 복잡          │  useFieldArray ★    │
-│  다단계 폼       │  State 분리 복잡    │  trigger로 부분 검증 │
-│  서버 에러 통합  │  수동 State 관리    │  setError ★         │
-│  타입 안전성     │  별도 관리 필요      │  스키마=타입 ★       │
-│  학습 곡선       │  낮음              │  중간               │
-│  외부 의존성     │  없음              │  3개 패키지          │
-└──────────────────┴─────────────────────┴─────────────────────┘
 
-RHF가 불필요한 경우:
-  · 검색 input 하나 (단순 useState로 충분)
-  · 토글/체크박스 하나 (단순 State)
-  · 필드가 1~2개인 간단한 폼
+![수동 (useState)     │  RHF + Zod](/developer-open-book/diagrams/react-step32-수동-usestate-rhf-zod.svg)
 
-RHF가 필요한 경우:
-  · 필드 3개 이상의 폼
-  · 복잡한 검증 규칙 (패턴, 교차 검증)
-  · 배열/동적 필드
-  · 다단계 폼
-  · 성능이 중요한 대규모 폼
-  · 서버 에러와 클라이언트 에러 통합
-```
 
 ---
 
@@ -871,25 +697,9 @@ RHF가 필요한 경우:
 
 이 사례는 Controlled vs Uncontrolled의 성능 차이를 측정 가능한 수치로 보여준다. React DevTools Profiler나 직접 콘솔 로그로 렌더링 횟수를 확인할 수 있다.
 
-```
-시나리오: 10개 필드가 있는 프로필 수정 폼
 
-  useState (Controlled):
-    "이름" 필드에 한 글자 입력
-    → setValues() → 전체 컴포넌트 리렌더링
-    → 10개 input 모두 재렌더링!
-    → 빠르게 타이핑하면 체감 가능한 지연
+![시나리오: 10개 필드가 있는 프로필 수정 폼](/developer-open-book/diagrams/react-step32-시나리오-10개-필드가-있는-프로필-수정-폼.svg)
 
-  RHF (Uncontrolled):
-    "이름" 필드에 한 글자 입력
-    → DOM이 값 보관 → React State 변경 없음
-    → 리렌더링 0회! ★
-    → 검증 실패 시 해당 필드의 에러만 리렌더링
-
-  React DevTools Profiler로 측정:
-    useState: 키 입력당 렌더링 10회 (모든 필드)
-    RHF: 키 입력당 렌더링 0회 (제출/에러 시에만)
-```
 
 ### 4.2 사례: Zod로 "타입 정의 = 검증" 통합
 
@@ -1037,46 +847,9 @@ const onSubmit = async (data: RegisterFormValues) => {
 
 ### 6.1 핵심 요약
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│                      Step 32 핵심 요약                        │
-├──────────────────────────────────────────────────────────────┤
-│                                                               │
-│  1. RHF = Uncontrolled 기반 + 선언적 검증 + 최소 리렌더링     │
-│     → register로 DOM에서 직접 값 관리 (State 없음)           │
-│     → 입력 시 리렌더링 0회, 제출/에러 시에만 업데이트         │
-│     → handleSubmit이 검증 → 유효한 데이터만 콜백에 전달      │
-│                                                               │
-│  2. Zod = 스키마 정의 하나로 "검증 + 타입" 동시 달성          │
-│     → z.object({ ... }) → 런타임 검증 규칙                   │
-│     → z.infer<typeof schema> → TypeScript 타입 추출          │
-│     → 타입과 검증의 불일치가 원천 차단됨 ★                    │
-│                                                               │
-│  3. zodResolver = RHF + Zod의 접착제                         │
-│     → useForm({ resolver: zodResolver(schema) })             │
-│     → Zod 에러 메시지가 formState.errors에 자동 반영         │
-│                                                               │
-│  4. Controller = 외부 UI 컴포넌트 연동                       │
-│     → register가 작동하지 않는 커스텀 컴포넌트용             │
-│     → DatePicker, Select, Slider 등에 사용                   │
-│     → Controlled 방식 (register보다 리렌더링 많음)           │
-│                                                               │
-│  5. useFieldArray = 동적 배열 필드 관리                       │
-│     → append, remove, insert, move 등                        │
-│     → 주문 항목, 태그, 경력 사항 등에 활용                   │
-│     → Zod의 z.array()와 자연스럽게 결합                      │
-│                                                               │
-│  6. 다단계 폼 = 스텝별 스키마 + trigger()로 부분 검증         │
-│     → 전체 데이터는 하나의 useForm에서 관리                  │
-│     → trigger(fieldNames)로 현재 스텝만 검증                 │
-│     → .merge()로 전체 스키마 합성                            │
-│                                                               │
-│  7. RHF 도입 기준                                             │
-│     → 필드 3개+ / 복잡한 검증 / 배열 필드 / 다단계 → RHF    │
-│     → 검색바 / 토글 / 댓글 하나 → useState 충분             │
-│                                                               │
-└──────────────────────────────────────────────────────────────┘
-```
+
+![Step 32 핵심 요약](/developer-open-book/diagrams/react-step32-step-32-핵심-요약.svg)
+
 
 ### 6.2 자가진단 퀴즈
 

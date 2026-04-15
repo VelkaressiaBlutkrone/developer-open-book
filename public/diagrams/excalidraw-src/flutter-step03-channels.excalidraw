@@ -1,0 +1,21 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":150,"y":10,"text":"Flutter Channel","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":220,"height":30,"opacity":100},
+    {"type":"rectangle","id":"stable","x":80,"y":60,"width":200,"height":45,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"stable_label","x":100,"y":70,"width":160,"height":25,"text":"stable","fontSize":18,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"stable","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"stable_desc","x":300,"y":70,"text":"안정 버전 (프로덕션 권장)","fontSize":14,"strokeColor":"#a0a0a0","fontFamily":2,"width":250,"height":20,"opacity":80},
+    {"type":"line","id":"arrow1","x":180,"y":105,"width":0,"height":20,"strokeColor":"#a0a0a0","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[0,20]],"lastCommittedPoint":[0,20],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"beta","x":80,"y":130,"width":200,"height":45,"backgroundColor":"#5c3d1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"beta_label","x":100,"y":140,"width":160,"height":25,"text":"beta","fontSize":18,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"beta","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"beta_desc","x":300,"y":140,"text":"다음 stable 후보 (새 기능 미리 사용)","fontSize":14,"strokeColor":"#a0a0a0","fontFamily":2,"width":300,"height":20,"opacity":80},
+    {"type":"line","id":"arrow2","x":180,"y":175,"width":0,"height":20,"strokeColor":"#a0a0a0","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[0,20]],"lastCommittedPoint":[0,20],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"main","x":80,"y":200,"width":200,"height":45,"backgroundColor":"#5c1a1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#ef4444","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"main_label","x":100,"y":210,"width":160,"height":25,"text":"main","fontSize":18,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"main","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"main_desc","x":300,"y":210,"text":"최신 커밋 (불안정, 실험적)","fontSize":14,"strokeColor":"#a0a0a0","fontFamily":2,"width":250,"height":20,"opacity":80}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

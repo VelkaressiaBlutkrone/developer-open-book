@@ -26,23 +26,7 @@
 
 Robert C. Martin(Uncle Bob)이 제안한 소프트웨어 설계 원칙으로, **외부 의존성으로부터 비즈니스 로직을 보호**하는 것이 핵심이다.
 
-```
-Clean Architecture 핵심 질문
-──────────────────────────────────────────────────────
-  "내일 Flutter를 SwiftUI로 바꾼다면?"
-  → Domain Layer는 전혀 수정 불필요
-  → Presentation Layer만 교체
-
-  "REST API를 GraphQL로 바꾼다면?"
-  → Domain Layer는 전혀 수정 불필요
-  → Data Layer만 교체
-
-  "Hive를 SQLite로 바꾼다면?"
-  → Domain Layer는 전혀 수정 불필요
-  → Data Layer만 교체
-──────────────────────────────────────────────────────
-비즈니스 로직(Domain)은 기술 선택에 독립적이어야 한다
-```
+![Clean Architecture 핵심 질문](/developer-open-book/diagrams/flutter-step21-core-questions.svg)
 
 ### 1.2 Flutter에서 Clean Architecture 원형
 
@@ -79,37 +63,7 @@ Robert Martin의 원형을 Flutter 맥락에서 단순화하면:
 
 ### 3.1 의존성 규칙: 왜 Domain이 아무것도 의존하지 않는가
 
-```
-잘못된 의존성 (Domain → Data)
-──────────────────────────────────────────────────────
-class ProductEntity {
-  final Dio _dio;  // ← Data Layer 의존!
-  Future<List<Product>> fetch() => _dio.get('/products');
-}
-// 문제: Dio를 교체하면 Entity도 수정해야 함
-// 문제: Entity를 테스트하려면 실제 서버가 필요함
-
-올바른 의존성 (Data → Domain)
-──────────────────────────────────────────────────────
-// Domain: 순수 인터페이스만 선언
-abstract interface class ProductRepository {
-  Future<List<Product>> getProducts();
-}
-
-// Data: Domain 인터페이스를 구현
-class ProductRepositoryImpl implements ProductRepository {
-  final Dio _dio;
-  ProductRepositoryImpl(this._dio);
-
-  @override
-  Future<List<Product>> getProducts() async {
-    final res = await _dio.get('/products');
-    return (res.data as List).map(ProductDto.fromJson).map((d) => d.toDomain()).toList();
-  }
-}
-// 결과: Dio 교체 시 Impl만 수정, Domain은 불변
-// 결과: Domain 테스트 시 MockRepository로 대체 가능
-```
+![잘못된 의존성 vs 올바른 의존성](/developer-open-book/diagrams/flutter-step21-dependency-comparison.svg)
 
 ---
 
@@ -671,21 +625,7 @@ class ProductListScreen extends ConsumerWidget {
 
 ### 4.1 API 교체 시 Domain 불변 검증
 
-```
-시나리오: 상품 API를 REST → GraphQL로 교체
-
-수정 필요한 파일:
-  ✅ data/datasources/product_remote_datasource_impl.dart  (구현체 교체)
-  ✅ data/dtos/product_dto.dart                            (응답 형식 변경)
-
-수정 불필요한 파일:
-  ❌ domain/entities/product.dart           (Entity 변경 없음)
-  ❌ domain/repositories/product_repository.dart (인터페이스 변경 없음)
-  ❌ application/get_products_use_case.dart  (UseCase 변경 없음)
-  ❌ presentation/ 전체                     (UI 변경 없음)
-
-→ 2개 파일만 수정으로 API 완전 교체 완료
-```
+![REST에서 GraphQL 교체 시나리오](/developer-open-book/diagrams/flutter-step21-api-migration.svg)
 
 ---
 

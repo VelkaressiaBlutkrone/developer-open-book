@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="515" viewBox="20 -20 545 468">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="545" height="468" rx="12" fill="#141414"/>
+  <text x="100" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">useEffect 개념 지도</text>
+  <rect x="50" y="60" width="160" height="35" rx="5.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="130" y="81" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">순수 렌더링</text>
+  <rect x="300" y="60" width="200" height="35" rx="5.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="400" y="81" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">부수 효과의 필요성</text>
+  <rect x="340" y="120" width="120" height="35" rx="5.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="400" y="141.5" text-anchor="middle" fill="#22c55e" font-family="Nunito, sans-serif" font-size="16">useEffect</text>
+  <rect x="80" y="180" width="130" height="30" rx="4.5" fill="#1a4d4d" stroke="#06b6d4" stroke-width="1" opacity="1"/>
+  <text x="145" y="198.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">실행 타이밍</text>
+  <rect x="240" y="180" width="120" height="30" rx="4.5" fill="#1a4d4d" stroke="#06b6d4" stroke-width="1" opacity="1"/>
+  <text x="300" y="198.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">의존성 배열</text>
+  <rect x="390" y="180" width="120" height="30" rx="4.5" fill="#1a4d4d" stroke="#06b6d4" stroke-width="1" opacity="1"/>
+  <text x="450" y="198.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Cleanup</text>
+  <text x="90" y="228.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">Paint 후 실행</text>
+  <text x="240" y="228.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">[dep]  []  생략</text>
+  <text x="395" y="228.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">이전 효과 정리</text>
+  <rect x="160" y="255" width="260" height="35" rx="5.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="290" y="276" text-anchor="middle" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="14">올바른 멘탈 모델: 동기화</text>
+  <rect x="80" y="315" width="90" height="28" rx="4.2" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="125" y="332.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">패칭</text>
+  <rect x="200" y="315" width="90" height="28" rx="4.2" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="245" y="332.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">타이머</text>
+  <rect x="320" y="315" width="90" height="28" rx="4.2" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="365" y="332.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">이벤트</text>
+  <text x="180" y="372.6" fill="#ef4444" font-family="Nunito, sans-serif" font-size="14" opacity="1">언제 필요 없는가?</text>
+  <rect x="50" y="390" width="120" height="28" rx="4.2" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="110" y="407.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">파생 데이터</text>
+  <rect x="200" y="390" width="130" height="28" rx="4.2" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="265" y="407.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">이벤트 핸들러</text>
+  <rect x="360" y="390" width="110" height="28" rx="4.2" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="415" y="407.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">key 패턴</text>
+</svg>

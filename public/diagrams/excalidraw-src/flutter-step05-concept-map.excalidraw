@@ -1,0 +1,27 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":200,"y":10,"text":"Widget 종류 개념 지도","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":300,"height":30,"opacity":100},
+    {"type":"rectangle","id":"root","x":250,"y":55,"width":180,"height":40,"backgroundColor":"#1e3a5f","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"root_l","x":260,"y":63,"width":160,"height":25,"text":"Widget 종류","fontSize":16,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"root","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"l1","x":280,"y":95,"width":0,"height":30,"strokeColor":"#a0a0a0","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[0,30]],"lastCommittedPoint":[0,30]},
+    {"type":"line","id":"l2","x":400,"y":95,"width":0,"height":30,"strokeColor":"#a0a0a0","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[0,30]],"lastCommittedPoint":[0,30]},
+    {"type":"rectangle","id":"sl_box","x":80,"y":130,"width":220,"height":40,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"sl_box_l","x":90,"y":138,"width":200,"height":25,"text":"StatelessWidget","fontSize":16,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"sl_box","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"l3","x":190,"y":170,"width":0,"height":20,"strokeColor":"#a0a0a0","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[0,20]],"lastCommittedPoint":[0,20]},
+    {"type":"rectangle","id":"sl_build","x":110,"y":195,"width":180,"height":30,"backgroundColor":"#1a4d4d","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#06b6d4","strokeWidth":1,"roughness":1,"opacity":80},
+    {"type":"text","id":"sl_build_l","x":120,"y":202,"width":160,"height":18,"text":"build() 하나만 구현","fontSize":13,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"sl_build","textAlign":"center","verticalAlign":"middle","opacity":80},
+    {"type":"rectangle","id":"sf_box","x":360,"y":130,"width":220,"height":40,"backgroundColor":"#2d1b69","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"sf_box_l","x":370,"y":138,"width":200,"height":25,"text":"StatefulWidget","fontSize":16,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"sf_box","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"l4","x":470,"y":170,"width":0,"height":20,"strokeColor":"#a0a0a0","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[0,20]],"lastCommittedPoint":[0,20]},
+    {"type":"rectangle","id":"sf_create","x":380,"y":195,"width":200,"height":30,"backgroundColor":"#1a4d4d","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#06b6d4","strokeWidth":1,"roughness":1,"opacity":80},
+    {"type":"text","id":"sf_create_l","x":390,"y":202,"width":180,"height":18,"text":"createState() → State","fontSize":13,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"sf_create","textAlign":"center","verticalAlign":"middle","opacity":80},
+    {"type":"line","id":"l5","x":470,"y":225,"width":0,"height":15,"strokeColor":"#a0a0a0","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[0,15]],"lastCommittedPoint":[0,15]},
+    {"type":"rectangle","id":"state_box","x":350,"y":245,"width":250,"height":140,"backgroundColor":"#5c3d1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"state_l","x":360,"y":255,"width":230,"height":120,"text":"State 객체\n├── 프로퍼티 (가변 상태)\n├── Lifecycle 메서드\n│   initState()\n│   didChangeDependencies()\n│   build()\n│   didUpdateWidget()\n│   deactivate()\n│   dispose()\n└── setState() → rebuild","fontSize":11,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"state_box","textAlign":"left","verticalAlign":"middle","opacity":100}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

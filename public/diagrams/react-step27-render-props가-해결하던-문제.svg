@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="960" viewBox="-10 -15 548 877">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="548" height="877" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Render Props가 해결하던 문제:</text>
+  <rect x="20" y="50" width="488" height="782" rx="73.2" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 상태 로직의 재사용 (여러 컴포넌트에서 마우스 위치 추적)</text>
+  <text x="40" y="109.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 렌더링의 유연성 (사용자가 UI를 결정)</text>
+  <text x="40" y="135.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Custom Hook이 더 나은 이유:</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 중첩이 없다 (Render Props는 콜백 중첩 → &quot;Callback Hell&quot;)</text>
+  <text x="40" y="187.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 합성이 자연스럽다 (Hook을 여러 개 호출)</text>
+  <text x="40" y="213.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 타입 추론이 쉽다</text>
+  <text x="40" y="239.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">// Render Props — 중첩 발생</text>
+  <text x="40" y="265.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&lt;MouseTracker&gt;</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">{(mouse) =&gt; (</text>
+  <text x="40" y="317.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&lt;WindowSize&gt;</text>
+  <text x="40" y="343.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">{(size) =&gt; (</text>
+  <text x="40" y="369.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&lt;p&gt;{mouse.x} / {size.width}&lt;/p&gt;</text>
+  <text x="40" y="395.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">)}</text>
+  <text x="40" y="421.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&lt;/WindowSize&gt;</text>
+  <text x="40" y="447.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">)}</text>
+  <text x="40" y="473.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&lt;/MouseTracker&gt;</text>
+  <text x="40" y="499.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">// Custom Hook — 깔끔</text>
+  <text x="40" y="525.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">function MyComponent() {</text>
+  <text x="40" y="551.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">const mouse = useMousePosition();</text>
+  <text x="40" y="577.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">const size = useWindowSize();</text>
+  <text x="40" y="603.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">return &lt;p&gt;{mouse.x} / {size.width}&lt;/p&gt;;</text>
+  <text x="40" y="629.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">}</text>
+  <text x="40" y="655.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">현재 Render Props가 여전히 유용한 경우:</text>
+  <text x="40" y="681.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 라이브러리가 &quot;렌더링 커스터마이즈&quot;를 제공할 때</text>
+  <text x="40" y="707.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Downshift, React Table 등 Headless 라이브러리</text>
+  <text x="40" y="733.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Compound Component 내부에서 부분적으로 사용</text>
+</svg>

@@ -1,0 +1,26 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":150,"y":10,"text":"Flutter SDK 구조","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":250,"height":30,"opacity":100},
+    {"type":"rectangle","id":"root","x":100,"y":60,"width":200,"height":40,"backgroundColor":"#1e3a5f","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"root_label","x":120,"y":70,"width":160,"height":20,"text":"flutter/","fontSize":18,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"root","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"l1","x":200,"y":100,"width":0,"height":30,"strokeColor":"#a0a0a0","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[0,30]],"lastCommittedPoint":[0,30]},
+    {"type":"line","id":"l1h","x":200,"y":130,"width":-80,"height":0,"strokeColor":"#a0a0a0","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[-80,0]],"lastCommittedPoint":[-80,0]},
+    {"type":"rectangle","id":"bin","x":60,"y":120,"width":140,"height":35,"backgroundColor":"#2d1b69","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"bin_label","x":70,"y":128,"width":120,"height":20,"text":"bin/","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"bin","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"bin_desc","x":210,"y":128,"text":"flutter CLI 진입점, dart CLI","fontSize":13,"strokeColor":"#a0a0a0","fontFamily":2,"width":250,"height":18,"opacity":70},
+    {"type":"rectangle","id":"packages","x":60,"y":170,"width":140,"height":35,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"packages_label","x":70,"y":178,"width":120,"height":20,"text":"packages/flutter/","fontSize":13,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"packages","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"packages_desc","x":210,"y":178,"text":"Flutter Framework 소스코드 (Dart)","fontSize":13,"strokeColor":"#a0a0a0","fontFamily":2,"width":280,"height":18,"opacity":70},
+    {"type":"rectangle","id":"examples","x":60,"y":220,"width":140,"height":35,"backgroundColor":"#1a4d4d","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#06b6d4","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"examples_label","x":70,"y":228,"width":120,"height":20,"text":"examples/","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"examples","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"examples_desc","x":210,"y":228,"text":"공식 예제 프로젝트","fontSize":13,"strokeColor":"#a0a0a0","fontFamily":2,"width":200,"height":18,"opacity":70},
+    {"type":"rectangle","id":"version","x":60,"y":270,"width":140,"height":35,"backgroundColor":"#5c3d1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"version_label","x":70,"y":278,"width":120,"height":20,"text":"version","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"version","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"version_desc","x":210,"y":278,"text":"현재 SDK 버전 정보","fontSize":13,"strokeColor":"#a0a0a0","fontFamily":2,"width":200,"height":18,"opacity":70}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

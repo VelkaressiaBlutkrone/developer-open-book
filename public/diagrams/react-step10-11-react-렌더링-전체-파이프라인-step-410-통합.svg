@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="1031" viewBox="-10 -20 533.5 917">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="533.5" height="917" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">React 렌더링 전체 파이프라인 (Step 4~10 통합)</text>
+  <rect x="20" y="45" width="473.5" height="822" rx="71.02499999999999" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="256.75" y="141.00000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">1. 개발자가 JSX를 작성한다 (Step 4)</text>
+  <text x="256.75" y="159.20000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">&lt;App count={1} /&gt;</text>
+  <text x="256.75" y="177.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Transpile (빌드 타임)</text>
+  <text x="256.75" y="195.60000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="256.75" y="213.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">2. JSX → React.createElement / jsx() (Step 4)</text>
+  <text x="256.75" y="232.00000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">_jsx(App, { count: 1 })</text>
+  <text x="256.75" y="250.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ React Element: { type: App, props: { count: 1 } }</text>
+  <text x="256.75" y="268.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">런타임</text>
+  <text x="256.75" y="286.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="256.75" y="304.80000000000007" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">3. Trigger: 렌더링 촉발 (Step 6)</text>
+  <text x="256.75" y="323" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 초기 마운트 (root.render)</text>
+  <text x="256.75" y="341.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· setState 호출</text>
+  <text x="256.75" y="359.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 부모 재렌더링 → Props 변경</text>
+  <text x="256.75" y="377.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="256.75" y="395.80000000000007" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">4. Render Phase (Step 7, 10)</text>
+  <text x="256.75" y="414" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 컴포넌트 함수 호출 = &quot;렌더링&quot; (Step 4)</text>
+  <text x="256.75" y="432.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Props 전달 (Step 5), State 읽기 (Step 6)</text>
+  <text x="256.75" y="450.4000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 새 React Element 트리 생성</text>
+  <text x="256.75" y="468.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Fiber 트리 순회 — Reconciliation (Step 7)</text>
+  <text x="256.75" y="486.80000000000007" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 이전 트리와 비교 (Diff 알고리즘)</text>
+  <text x="256.75" y="505" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· key로 리스트 항목 매칭 (Step 7)</text>
+  <text x="256.75" y="523.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 변경 필요한 Fiber에 effectTag 표시</text>
+  <text x="256.75" y="541.4000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· ★ Concurrent 모드: 중단·재개 가능 (Step 10)</text>
+  <text x="256.75" y="559.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="256.75" y="577.8000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">5. Commit Phase (Step 10)</text>
+  <text x="256.75" y="596" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· effectTag에 따라 실제 DOM 조작</text>
+  <text x="256.75" y="614.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 동기적 실행 (중단 불가)</text>
+  <text x="256.75" y="632.4000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· useLayoutEffect 실행</text>
+  <text x="256.75" y="650.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="256.75" y="668.8000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">6. 브라우저 Paint</text>
+  <text x="256.75" y="687" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 화면에 변경 사항 표시</text>
+  <text x="256.75" y="705.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 사용자가 업데이트된 UI를 본다</text>
+  <text x="256.75" y="723.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="256.75" y="741.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">7. Post-Commit</text>
+  <text x="256.75" y="759.8000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· useEffect 비동기 실행 (Step 11에서 학습)</text>
+  <text x="256.75" y="778" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 데이터 패칭, 구독 설정 등 부수 효과</text>
+</svg>

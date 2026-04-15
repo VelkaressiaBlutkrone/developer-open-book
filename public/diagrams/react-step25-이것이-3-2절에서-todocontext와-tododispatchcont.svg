@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="711.3000000000001" height="461" viewBox="-10 -15 711.3000000000001 461">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="711.3000000000001" height="461" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">이것이 3.2절에서 TodoContext와 TodoDispatchContext를 분리한 이유이다</text>
+  <rect x="20" y="50" width="530.5" height="366" rx="54.9" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">dispatch 함수는 useReducer에 의해 안정적인 참조를 가진다</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">(리렌더링되어도 같은 함수 참조)</text>
+  <text x="40" y="135.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">TodoContext.Provider value={todos}</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ todos가 변하면 소비자 리렌더링 (예상대로)</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">TodoDispatchContext.Provider value={dispatch}</text>
+  <text x="40" y="213.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ dispatch는 참조가 변하지 않으므로 소비자 리렌더링 없음!</text>
+  <text x="40" y="239.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">AddTodoForm: useTodoDispatch()만 사용</text>
+  <text x="40" y="265.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ todos가 변해도 리렌더링 안 됨 ★ (dispatch 참조는 동일)</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">TodoStats: useTodos()만 사용</text>
+  <text x="40" y="317.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ dispatch가 변해도 리렌더링 안 됨 (어차피 안 변하지만)</text>
+</svg>

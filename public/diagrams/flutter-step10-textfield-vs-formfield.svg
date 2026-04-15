@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="275" viewBox="0 -20 700 275">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="0" y="-20" width="700" height="275" rx="12" fill="#141414"/>
+  <text x="120" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">TextField vs TextFormField 선택 기준</text>
+  <rect x="30" y="55" width="300" height="170" rx="25.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="120" y="75.3" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="17" opacity="1">TextField</text>
+  <text x="50" y="101.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• Form 없이 단독 사용</text>
+  <text x="50" y="119.9" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• TextEditingController로</text>
+  <text x="50" y="138.1" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">  값 직접 관리</text>
+  <text x="50" y="156.3" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• 실시간 입력 처리,</text>
+  <text x="50" y="174.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">  검색 바, 채팅 입력에 적합</text>
+  <text x="50" y="192.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• 유효성 검사를 직접 구현</text>
+  <rect x="370" y="55" width="300" height="170" rx="25.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="440" y="75.3" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="17" opacity="1">TextFormField</text>
+  <text x="390" y="101.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• 반드시 Form 위젯 안에서 사용</text>
+  <text x="390" y="119.9" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• validator·onSaved 콜백 내장</text>
+  <text x="390" y="138.1" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• Form 전체 일괄 검증</text>
+  <text x="390" y="156.3" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">  (validate()) 가능</text>
+  <text x="390" y="174.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">• 로그인·회원가입·설정 등</text>
+  <text x="390" y="192.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">  폼 화면에 적합</text>
+</svg>

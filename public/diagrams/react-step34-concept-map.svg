@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="340" viewBox="20 -10 660 340">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-10" width="660" height="340" rx="12" fill="#141414"/>
+  <rect x="150" y="20" width="400" height="45" rx="6.75" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="350" y="47.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20">CSS 스타일링 아키텍처</text>
+  <defs><marker id="arrow-a_182" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M350,65 L140,95" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a_182)"/>
+  <rect x="50" y="100" width="180" height="55" rx="8.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="140" y="131.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">스코프 전략</text>
+  <text x="60" y="181.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">전역 CSS</text>
+  <text x="60" y="201.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">CSS Modules</text>
+  <text x="60" y="221.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">인라인 style</text>
+  <defs><marker id="arrow-a_188" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M350,65 L350,95" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a_188)"/>
+  <rect x="260" y="100" width="180" height="55" rx="8.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="350" y="131.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">디자인 시스템</text>
+  <text x="270" y="181.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">토큰 (색상)</text>
+  <text x="270" y="201.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">테마 (다크모드)</text>
+  <text x="270" y="221.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">컴포넌트 라이브러리</text>
+  <defs><marker id="arrow-a_194" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M350,65 L560,95" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a_194)"/>
+  <rect x="470" y="100" width="180" height="55" rx="8.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="560" y="131.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">빌드 방식</text>
+  <text x="480" y="181.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">빌드타임 CSS</text>
+  <text x="480" y="201.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">런타임 CSS-in-JS</text>
+  <text x="480" y="221.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">제로 런타임</text>
+  <rect x="85" y="255" width="160" height="45" rx="6.75" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="165" y="281" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Tailwind CSS</text>
+  <rect x="270" y="255" width="160" height="45" rx="6.75" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="350" y="281" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">CSS Modules</text>
+  <rect x="455" y="255" width="160" height="45" rx="6.75" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="535" y="281" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">shadcn/ui</text>
+</svg>

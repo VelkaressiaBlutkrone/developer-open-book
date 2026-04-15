@@ -1,0 +1,21 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":150,"y":10,"text":"async/await vs compute() 비교","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":400,"height":30,"opacity":100},
+    {"type":"text","id":"subtitle1","x":80,"y":55,"text":"async/await만 사용 (UI Jank 발생)","fontSize":16,"strokeColor":"#ef4444","fontFamily":2,"width":320,"height":22,"opacity":100},
+    {"type":"rectangle","id":"main1","x":80,"y":85,"width":600,"height":40,"backgroundColor":"#5c1a1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#ef4444","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"main1_label","x":100,"y":93,"width":560,"height":25,"text":"메인 Isolate: [UI 렌더링] → [HTTP 대기] → [JSON 파싱 — CPU 100%] → Jank!","fontSize":13,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"main1","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"subtitle2","x":80,"y":155,"text":"compute() 사용 (UI 60fps 유지)","fontSize":16,"strokeColor":"#22c55e","fontFamily":2,"width":320,"height":22,"opacity":100},
+    {"type":"rectangle","id":"main2","x":80,"y":185,"width":600,"height":40,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"main2_label","x":100,"y":193,"width":560,"height":25,"text":"메인 Isolate: [UI 렌더링] → [HTTP 대기] → [compute 호출] → [결과 수신 → UI 업데이트]","fontSize":12,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"main2","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"msg_down","x":450,"y":225,"width":0,"height":25,"strokeColor":"#8b5cf6","strokeWidth":1,"roughness":1,"opacity":80,"points":[[0,0],[0,25]],"lastCommittedPoint":[0,25],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"text","id":"msg_label","x":460,"y":230,"text":"메시지 전달","fontSize":11,"strokeColor":"#a0a0a0","fontFamily":2,"width":80,"height":16,"opacity":60},
+    {"type":"rectangle","id":"bg_isolate","x":80,"y":260,"width":600,"height":40,"backgroundColor":"#2d1b69","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"bg_label","x":100,"y":268,"width":560,"height":25,"text":"백그라운드 Isolate: [JSON 파싱 CPU 점유] → [결과 반환]","fontSize":13,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"bg_isolate","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"result","x":120,"y":320,"text":"UI는 파싱 중에도 60fps를 유지한다","fontSize":14,"strokeColor":"#22c55e","fontFamily":2,"width":300,"height":20,"opacity":80}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

@@ -23,47 +23,15 @@
 
 ### 1.1 Flutter 앱에서 AI의 역할
 
-```
-AI가 모바일 앱을 바꾸는 방식
-──────────────────────────────────────────────────────
-  ① 이미지 인식       사진 속 텍스트 읽기, 물체 분류
-  ② 자연어 처리       챗봇, 번역, 요약, 감정 분석
-  ③ 추천 시스템       개인화 피드, 상품 추천
-  ④ 코드 어시스턴트   자동 완성, 코드 리뷰
-  ⑤ 멀티모달         이미지+텍스트 동시 입력/출력
-──────────────────────────────────────────────────────
-```
+![AI가 모바일 앱을 바꾸는 방식](/developer-open-book/diagrams/flutter-step27-ai-changing-apps.svg)
 
 ### 1.2 On-device AI vs 서버 AI
 
-```
-트레이드오프 비교
-──────────────────────────────────────────────────────
-                  On-device AI        서버 AI
-  개인정보 보호    ✅ 데이터 기기 내    ❌ 서버 전송
-  인터넷 불필요    ✅ 오프라인 동작     ❌ 연결 필요
-  응답 속도       ✅ 빠름 (로컬 실행)  ⚠️ 네트워크 지연
-  모델 성능       ❌ 제한적           ✅ GPT-4·Gemini 등 대형 모델
-  앱 크기         ❌ 모델 파일 포함    ✅ 앱 크기 영향 없음
-  비용            ✅ 추가 API 비용 없음 ❌ API 호출 비용
-  업데이트        ❌ 앱 업데이트 필요   ✅ 서버에서 즉시 개선
-──────────────────────────────────────────────────────
-```
+![On-device AI vs Cloud AI 트레이드오프](/developer-open-book/diagrams/flutter-step27-tradeoff.svg)
 
 ### 1.3 전체 개념 지도
 
-```
-Flutter AI 통합
-    │
-    ├── On-device AI
-    │     ├── ML Kit (Google)    ← 텍스트 인식, 얼굴 감지, 바코드
-    │     └── TensorFlow Lite    ← 커스텀 모델, 이미지 분류
-    │
-    └── 서버 AI (API)
-          ├── Gemini API         ← 텍스트 생성, 이미지 분석, 멀티모달
-          ├── OpenAI API         ← GPT-4, DALL-E
-          └── Anthropic API      ← Claude
-```
+![Flutter AI 통합 기술 스택](/developer-open-book/diagrams/flutter-step27-flutter-ai-stack.svg)
 
 ---
 
@@ -670,22 +638,7 @@ class _ImageDescriptionScreenState extends State<ImageDescriptionScreen> {
 
 ### 4.1 ChatGPT-like 앱: 스트리밍 + StreamBuilder
 
-```
-Gemini 스트리밍 응답 흐름
-──────────────────────────────────────────────────────
-  사용자 입력 → sendMessageStream(text)
-      ↓
-  Gemini 서버 → 토큰을 하나씩 Stream으로 반환
-      ↓ (청크 1) "안녕"
-  setState → _messages.last.text = "안녕"
-      ↓ (청크 2) "하세요"
-  setState → _messages.last.text = "안녕하세요"
-      ↓ (청크 3) ", 무엇을"
-  setState → _messages.last.text = "안녕하세요, 무엇을"
-      ↓ ... 계속
-  UI: 텍스트가 실시간으로 타이핑되는 것처럼 표시
-──────────────────────────────────────────────────────
-```
+![Gemini 스트리밍 응답 흐름](/developer-open-book/diagrams/flutter-step27-gemini-streaming.svg)
 
 ---
 

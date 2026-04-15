@@ -57,43 +57,7 @@ React의 내부 구조를 이해하는 것은 **주니어와 시니어를 구분
 
 ### 1.3 이 Step의 핵심 개념 관계도
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│              Step 10 핵심 개념 관계도                           │
-│                                                               │
-│  Stack Reconciler (React 15 이전)                            │
-│    · 동기적 재귀 → 대규모 트리에서 UI 멈춤                   │
-│         │                                                     │
-│         │ 한계 극복                                           │
-│         ▼                                                     │
-│  Fiber Architecture (React 16+)                              │
-│    · Fiber Node: 컴포넌트당 1개, State/Effect 보관            │
-│    · 연결 리스트 구조 (child/sibling/return)                  │
-│    · Double Buffering: current + workInProgress               │
-│    · Work Unit 단위로 중단/재개 가능                          │
-│         │                                                     │
-│         │ 기반 위에                                           │
-│         ▼                                                     │
-│  Render Phase (중단 가능, 순수)                               │
-│    · 컴포넌트 함수 호출, Diff 수행                            │
-│    · DOM을 건드리지 않음                                      │
-│         │                                                     │
-│         ▼                                                     │
-│  Commit Phase (중단 불가, 동기)                               │
-│    · DOM 변경 반영                                            │
-│    · useLayoutEffect 실행                                     │
-│    · Paint 후 useEffect 실행                                  │
-│         │                                                     │
-│         │ Concurrent Rendering (React 18+)                    │
-│         ▼                                                     │
-│  Time Slicing + Priority Scheduling                          │
-│    · 긴급(사용자 입력) > 비긴급(데이터 갱신)                  │
-│    · useTransition, useDeferredValue                         │
-│                                                               │
-│  React 19: React Compiler → 자동 메모이제이션                 │
-│                                                               │
-└──────────────────────────────────────────────────────────────┘
-```
+![step10 01 step 10 핵심 개념 관계도](/developer-open-book/diagrams/react-step10-01-step-10-핵심-개념-관계도.svg)
 
 ### 1.4 왜 내부 구조를 알아야 하는가
 
@@ -115,25 +79,7 @@ Step 4~9에서 React의 핵심 개념(JSX, Props, State, Reconciliation, Key, Fo
 
 ### 1.5 이 Step에서 다루는 범위
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  다루는 것                                               │
-│  · Stack Reconciler → Fiber Architecture 전환 배경       │
-│  · Fiber 노드의 구조와 역할                              │
-│  · Render Phase vs Commit Phase의 세부 동작              │
-│  · Concurrent Rendering의 개념과 의미                    │
-│  · Time Slicing과 우선순위 스케줄링                      │
-│  · React 19의 주요 변경사항 개요                         │
-│  · React Compiler(React Forget) 개요                    │
-│  · Phase 1 전체 통합 복습                                │
-├─────────────────────────────────────────────────────────┤
-│  다루지 않는 것                                          │
-│  · Fiber 소스 코드 레벨의 구현 세부사항                   │
-│  · useTransition, useDeferredValue 실습 (Step 15)       │
-│  · Suspense for Data Fetching (Step 30)                 │
-│  · Server Components 내부 동작 (Step 20)                │
-└─────────────────────────────────────────────────────────┘
-```
+![step10 02 다루는 것](/developer-open-book/diagrams/react-step10-02-다루는-것.svg)
 
 ---
 
@@ -236,26 +182,7 @@ Stack Reconciler의 동작 방식
 
 #### 문제: 대규모 업데이트 시 UI 멈춤
 
-```
-시나리오: 1000개의 리스트 항목을 업데이트해야 할 때
-
-  ┌────────────────────────────────────────────┐
-  │  Stack Reconciler                          │
-  │                                            │
-  │  메인 스레드:                               │
-  │  ████████████████████████████████████████   │
-  │  ↑ 렌더링 시작            렌더링 완료 ↑     │
-  │  |←──── 200ms 동안 메인 스레드 점유 ────→|   │
-  │                                            │
-  │  이 200ms 동안:                            │
-  │  · 사용자의 키보드 입력을 처리할 수 없다     │
-  │  · 애니메이션이 멈춘다                      │
-  │  · 클릭에 반응하지 않는다                   │
-  │  · 화면이 "얼어붙은" 것처럼 느껴진다        │
-  └────────────────────────────────────────────┘
-
-  사용자 체감: "앱이 버벅인다", "반응이 없다"
-```
+![step10 03 시나리오 1000개의 리스트 항목을 업데이트해야 할 때](/developer-open-book/diagrams/react-step10-03-시나리오-1000개의-리스트-항목을-업데이트해야-할-때.svg)
 
 ```
 핵심 문제:
@@ -294,100 +221,17 @@ Stack Reconciler → Fiber Architecture
 
 #### Fiber 노드의 구조
 
-```
-하나의 Fiber 노드 (간략화)
-
-{
-  // ── 정체성 ──
-  type: Counter,              // 컴포넌트 함수 또는 HTML 태그명
-  key: null,                  // React Element의 key
-
-  // ── 트리 관계 (연결 리스트) ──
-  return: parentFiber,        // 부모 Fiber를 가리킨다
-  child: firstChildFiber,     // 첫 번째 자식 Fiber
-  sibling: nextSiblingFiber,  // 다음 형제 Fiber
-
-  // ── 상태와 효과 ──
-  memoizedState: {            // Hook의 State가 저장되는 곳!
-    queue: [...],
-    next: nextHook            // useState, useEffect 등이 연결 리스트로 연결
-  },
-  updateQueue: [...],         // 대기 중인 State 업데이트
-  effectTag: 'UPDATE',        // Commit Phase에서 수행할 작업 종류
-
-  // ── Double Buffering ──
-  alternate: workInProgressFiber,  // 반대쪽 트리의 대응 노드
-
-  // ── Props ──
-  pendingProps: { ... },      // 새로 전달된 Props
-  memoizedProps: { ... },     // 이전 렌더링의 Props
-}
-```
+![step10 04 하나의 fiber 노드 간략화](/developer-open-book/diagrams/react-step10-04-하나의-fiber-노드-간략화.svg)
 
 #### Fiber 트리의 구조 — 연결 리스트
 
-```
-React Element 트리 (우리가 생각하는 트리)
-
-        App
-       / | \
-    Header Content Footer
-            |
-         Article
-          / \
-        P1   P2
-
-
-Fiber 트리 (실제 내부 구조 — child/sibling/return 연결 리스트)
-
-  App
-  │ child
-  ▼
-  Header ──sibling──→ Content ──sibling──→ Footer
-                      │ child
-                      ▼
-                    Article
-                    │ child
-                    ▼
-                    P1 ──sibling──→ P2
-
-  모든 노드는 return으로 부모를 가리킨다 (역방향 링크)
-
-  순회 순서:
-  App → Header → (Header 완료, sibling) → Content → Article → P1
-  → (P1 완료, sibling) → P2 → (P2 완료, return) → Article 완료
-  → (return) → Content 완료 → (sibling) → Footer → (Footer 완료)
-  → App 완료
-```
+![step10 05 element 트리 우리가 생각하는 트리](/developer-open-book/diagrams/react-step10-05-react-element-트리-우리가-생각하는-트리.svg)
 
 > 💡 **왜 트리 대신 연결 리스트인가?** 연결 리스트는 **현재 위치를 기억**하기 쉽다. "P1까지 처리했다"라는 포인터 하나면 나중에 정확히 그 지점부터 다시 시작할 수 있다. 재귀 호출 스택은 이런 중간 저장이 불가능하다.
 
 #### Double Buffering — 두 개의 트리
 
-```
-React는 항상 두 개의 Fiber 트리를 유지한다
-
-  Current Tree                   WorkInProgress Tree
-  (현재 화면에 반영된 트리)         (새 렌더링을 위한 작업 트리)
-
-  ┌─────────────┐              ┌─────────────┐
-  │ App          │ ←alternate→ │ App          │
-  │ state: old   │              │ state: new   │
-  ├─────────────┤              ├─────────────┤
-  │ Counter      │ ←alternate→ │ Counter      │
-  │ count: 0     │              │ count: 1     │
-  └─────────────┘              └─────────────┘
-
-동작 과정:
-  1. State 변경 트리거
-  2. Current Tree를 기반으로 WorkInProgress Tree 생성 (Render Phase)
-     · 변경이 없는 Fiber는 재사용 (복사하지 않음)
-     · 변경이 있는 Fiber만 새로 생성
-  3. WorkInProgress Tree가 완성되면 Current로 교체 (Commit Phase)
-     · "포인터 전환"으로 한 순간에 교체 (Double Buffering)
-     · 사용자는 불완전한 중간 상태를 보지 않는다
-  4. 이전 Current Tree는 다음 렌더링의 WorkInProgress로 재활용
-```
+![step10 06 react는 항상 두 개의 fiber 트리를 유지한다](/developer-open-book/diagrams/react-step10-06-react는-항상-두-개의-fiber-트리를-유지한다.svg)
 
 #### useState가 Fiber에 저장되는 원리
 
@@ -455,66 +299,7 @@ Step 6에서 배운 것: "useState는 렌더링 간에 값을 유지한다"
 
 #### 전체 파이프라인
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                   React 렌더링 파이프라인                     │
-│                                                              │
-│  Trigger                                                     │
-│  ──────                                                      │
-│  · setState 호출                                             │
-│  · 부모 재렌더링                                             │
-│  · Context 값 변경                                           │
-│         │                                                    │
-│         ▼                                                    │
-│  ┌─────────────────────────────────────────────────────┐    │
-│  │  Render Phase (순수, 중단 가능)                      │    │
-│  │                                                      │    │
-│  │  1. 변경된 Fiber부터 시작                            │    │
-│  │  2. 컴포넌트 함수 호출 (= "렌더링")                  │    │
-│  │  3. 새 React Element와 이전 Fiber를 비교 (Diff)      │    │
-│  │  4. 변경이 필요한 Fiber에 effectTag를 표시            │    │
-│  │     · PLACEMENT (추가)                               │    │
-│  │     · UPDATE (속성 변경)                              │    │
-│  │     · DELETION (제거)                                │    │
-│  │  5. 자식 → 형제 → 부모 순서로 트리 순회              │    │
-│  │                                                      │    │
-│  │  특징:                                               │    │
-│  │  · DOM을 건드리지 않는다                              │    │
-│  │  · 부수 효과가 없어야 한다 (순수)                     │    │
-│  │  · 중단하고 나중에 재개할 수 있다 ★                   │    │
-│  │  · 여러 번 실행될 수 있다 (StrictMode)               │    │
-│  └─────────────────────────────────────────────────────┘    │
-│         │                                                    │
-│         ▼                                                    │
-│  ┌─────────────────────────────────────────────────────┐    │
-│  │  Commit Phase (부수 효과, 중단 불가)                  │    │
-│  │                                                      │    │
-│  │  1. Before Mutation                                  │    │
-│  │     · getSnapshotBeforeUpdate (class) 호출           │    │
-│  │                                                      │    │
-│  │  2. Mutation                                         │    │
-│  │     · effectTag에 따라 실제 DOM 조작 실행             │    │
-│  │     · appendChild, removeChild, 속성 변경 등         │    │
-│  │     · ref 업데이트                                   │    │
-│  │                                                      │    │
-│  │  3. Layout                                           │    │
-│  │     · useLayoutEffect 콜백 실행 (동기)               │    │
-│  │     · componentDidMount/Update (class) 호출          │    │
-│  │                                                      │    │
-│  │  특징:                                               │    │
-│  │  · 실제 DOM을 변경한다                               │    │
-│  │  · 동기적으로 한 번에 실행 (중단 불가) ★              │    │
-│  │  · 불완전한 UI를 사용자에게 보여주지 않는다           │    │
-│  └─────────────────────────────────────────────────────┘    │
-│         │                                                    │
-│         ▼                                                    │
-│  Post-Commit                                                 │
-│  ───────────                                                 │
-│  · 브라우저가 화면을 페인트                                  │
-│  · useEffect 콜백이 비동기적으로 실행                        │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
-```
+![step10 07 렌더링 파이프라인](/developer-open-book/diagrams/react-step10-07-react-렌더링-파이프라인.svg)
 
 #### Render Phase가 "순수"해야 하는 이유
 
@@ -583,95 +368,17 @@ Commit Phase는 왜 중단할 수 없는가?
 
 #### 핵심 개념
 
-```
-Synchronous Rendering (React 17 이전 기본)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  렌더링 시작 ──────────────────────────→ 렌더링 완료 → Commit → Paint
-  |←──────── 중단 불가, 한 번에 처리 ──────→|
-
-  문제: 200ms 렌더링 동안 사용자 입력 처리 불가
-
-
-Concurrent Rendering (React 18+)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  렌더링 시작 ──→ 일시 중단 → 입력 처리 → 재개 ──→ 완료 → Commit → Paint
-  |←── 5ms ──→|  ↑ 브라우저   |←── 5ms ──→|
-                  에게 양보
-
-  · 렌더링을 작은 조각(~5ms)으로 나눈다
-  · 각 조각 사이에 브라우저가 다른 작업을 처리할 수 있다
-  · 더 급한 업데이트가 오면 현재 작업을 중단하고 급한 것을 먼저 처리
-```
+![step10 08 synchronous rendering 17 이전 기본](/developer-open-book/diagrams/react-step10-08-synchronous-rendering-react-17-이전-기본.svg)
 
 #### Time Slicing
 
-```
-Time Slicing의 동작 방식
-
-  메인 스레드 타임라인:
-
-  Synchronous:
-  ████████████████████████████████████████████  (한 덩어리)
-  |←────────── 200ms, 다른 작업 불가 ──────────→|
-
-  Concurrent (Time Slicing):
-  ████░░████░░████░░████░░████░░████░░████     (잘게 나뉨)
-  |5ms|쉼|5ms|쉼|5ms|쉼|5ms|쉼|5ms|쉼|5ms|
-
-  ░░ = "쉼" 구간에서 브라우저가 할 수 있는 일:
-    · 사용자 키보드 입력 처리
-    · 마우스 클릭 처리
-    · 애니메이션 프레임 처리
-    · 레이아웃 재계산
-
-  → 총 렌더링 시간은 약간 더 길어질 수 있지만
-  → 사용자 체감 성능은 훨씬 좋아진다 (UI가 멈추지 않음)
-```
+![step10 09 time slicing의 동작 방식](/developer-open-book/diagrams/react-step10-09-time-slicing의-동작-방식.svg)
 
 #### 우선순위 스케줄링
 
 React 18에서는 업데이트에 **우선순위(Priority)** 가 부여된다.
 
-```
-우선순위 분류
-
-  ┌──────────────────────────────────────────────────────┐
-  │  우선순위   │  트리거                │  특성          │
-  ├──────────────────────────────────────────────────────┤
-  │  Immediate  │  사용자 입력 (타이핑,  │  즉시 처리     │
-  │  (긴급)     │  클릭, 키보드)         │  중단 불가     │
-  │             │                       │                │
-  │  Transition │  useTransition으로     │  중단 가능     │
-  │  (전환)     │  래핑된 업데이트       │  낮은 우선순위 │
-  │             │                       │                │
-  │  Default    │  일반 setState        │  보통 우선순위 │
-  │  (기본)     │                       │                │
-  └──────────────────────────────────────────────────────┘
-
-시나리오: 검색어 입력 + 검색 결과 렌더링
-
-  // React 18 이전: 모든 업데이트가 같은 우선순위
-  const handleChange = (e) => {
-    setQuery(e.target.value);        // 입력 필드 업데이트
-    setFilteredResults(search(e.target.value));  // 대규모 리스트 필터링
-    // 두 업데이트가 같은 렌더링에서 처리
-    // 리스트 필터링이 오래 걸리면 입력 필드도 느려짐!
-  };
-
-  // React 18: useTransition으로 우선순위 분리
-  const [isPending, startTransition] = useTransition();
-
-  const handleChange = (e) => {
-    setQuery(e.target.value);        // 긴급: 입력 필드 즉시 반영
-
-    startTransition(() => {
-      setFilteredResults(search(e.target.value));  // 전환: 나중에 처리 OK
-    });
-    // 입력 필드는 즉시 반영, 리스트는 여유 있을 때 업데이트
-  };
-```
+![step10 10 우선순위 분류](/developer-open-book/diagrams/react-step10-10-우선순위-분류.svg)
 
 > 💡 `useTransition`과 `useDeferredValue`의 **실전 사용법**은 Step 15에서 상세히 학습한다. 이 Step에서는 "왜 이런 API가 필요한가"의 이론적 배경을 이해하는 것이 목표이다.
 
@@ -763,64 +470,7 @@ React Compiler (자동 최적화):
 
 Phase 1에서 배운 모든 개념을 하나의 흐름으로 통합한다.
 
-```
-React 렌더링 전체 파이프라인 (Step 4~10 통합)
-
-  ┌─────────────────────────────────────────────────────────┐
-  │ 1. 개발자가 JSX를 작성한다 (Step 4)                      │
-  │    <App count={1} />                                    │
-  └────────────────────────┬────────────────────────────────┘
-                           │ Transpile (빌드 타임)
-                           ▼
-  ┌─────────────────────────────────────────────────────────┐
-  │ 2. JSX → React.createElement / jsx() (Step 4)           │
-  │    _jsx(App, { count: 1 })                              │
-  │    → React Element: { type: App, props: { count: 1 } }  │
-  └────────────────────────┬────────────────────────────────┘
-                           │ 런타임
-                           ▼
-  ┌─────────────────────────────────────────────────────────┐
-  │ 3. Trigger: 렌더링 촉발 (Step 6)                        │
-  │    · 초기 마운트 (root.render)                          │
-  │    · setState 호출                                      │
-  │    · 부모 재렌더링 → Props 변경                         │
-  └────────────────────────┬────────────────────────────────┘
-                           │
-                           ▼
-  ┌─────────────────────────────────────────────────────────┐
-  │ 4. Render Phase (Step 7, 10)                            │
-  │    · 컴포넌트 함수 호출 = "렌더링" (Step 4)             │
-  │    · Props 전달 (Step 5), State 읽기 (Step 6)           │
-  │    · 새 React Element 트리 생성                         │
-  │    · Fiber 트리 순회 — Reconciliation (Step 7)          │
-  │    · 이전 트리와 비교 (Diff 알고리즘)                   │
-  │    · key로 리스트 항목 매칭 (Step 7)                    │
-  │    · 변경 필요한 Fiber에 effectTag 표시                  │
-  │    · ★ Concurrent 모드: 중단·재개 가능 (Step 10)        │
-  └────────────────────────┬────────────────────────────────┘
-                           │
-                           ▼
-  ┌─────────────────────────────────────────────────────────┐
-  │ 5. Commit Phase (Step 10)                               │
-  │    · effectTag에 따라 실제 DOM 조작                      │
-  │    · 동기적 실행 (중단 불가)                             │
-  │    · useLayoutEffect 실행                               │
-  └────────────────────────┬────────────────────────────────┘
-                           │
-                           ▼
-  ┌─────────────────────────────────────────────────────────┐
-  │ 6. 브라우저 Paint                                       │
-  │    · 화면에 변경 사항 표시                               │
-  │    · 사용자가 업데이트된 UI를 본다                       │
-  └────────────────────────┬────────────────────────────────┘
-                           │
-                           ▼
-  ┌─────────────────────────────────────────────────────────┐
-  │ 7. Post-Commit                                          │
-  │    · useEffect 비동기 실행 (Step 11에서 학습)            │
-  │    · 데이터 패칭, 구독 설정 등 부수 효과                 │
-  └─────────────────────────────────────────────────────────┘
-```
+![step10 11 렌더링 전체 파이프라인 step 410 통합](/developer-open-book/diagrams/react-step10-11-react-렌더링-전체-파이프라인-step-410-통합.svg)
 
 ---
 

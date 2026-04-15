@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="564" viewBox="-10 -15 463 435">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="463" height="435" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">REST URL 설계 원칙</text>
+  <rect x="20" y="50" width="403" height="340" rx="51" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">리소스 = 명사, 복수형</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">/users              → 사용자 컬렉션</text>
+  <text x="40" y="135.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">/users/42           → 42번 사용자 (개별 리소스)</text>
+  <text x="40" y="161.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">/users/42/posts     → 42번 사용자의 게시글 컬렉션</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">/users/42/posts/7   → 42번 사용자의 7번 게시글</text>
+  <text x="40" y="213.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">❌ 동사를 URL에 넣지 않는다</text>
+  <text x="40" y="239.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">/getUsers           → ❌</text>
+  <text x="40" y="265.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">/deleteUser/42      → ❌</text>
+  <text x="40" y="291.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ 동사는 HTTP 메서드로 표현한다</text>
+</svg>

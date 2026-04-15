@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="609" viewBox="-10 -20 448.5 455">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="448.5" height="455" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">사용자 액션 (클릭, 입력 등)</text>
+  <rect x="20" y="45" width="388.5" height="360" rx="54" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="214.25" y="101.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="214.25" y="119.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">이벤트 핸들러  setState 호출들이 큐에 쌓인다</text>
+  <text x="214.25" y="137.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">실행  Batching: 핸들러가 끝날 때까지 대기</text>
+  <text x="214.25" y="155.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="214.25" y="173.89999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">State 큐 처리  쌓인 업데이트를 순서대로 처리</text>
+  <text x="214.25" y="192.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">교체(value) or 함수(updater) 구분</text>
+  <text x="214.25" y="210.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="214.25" y="228.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">재렌더링  컴포넌트 함수 호출 (새 스냅샷 생성)</text>
+  <text x="214.25" y="246.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">(Render Phase)  새 React Element 트리 생성</text>
+  <text x="214.25" y="264.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="214.25" y="283.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Reconciliation  이전 트리 vs 새 트리 비교 (Step 7)</text>
+  <text x="214.25" y="301.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">(Diff)  변경된 부분 파악</text>
+  <text x="214.25" y="319.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="214.25" y="337.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">DOM 업데이트  변경분만 실제 DOM에 반영</text>
+  <text x="214.25" y="355.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">(Commit Phase)  브라우저가 화면을 다시 그림</text>
+</svg>

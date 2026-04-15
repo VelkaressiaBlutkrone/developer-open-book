@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="343" viewBox="-10 -20 740 342.6">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="740" height="342.6" rx="12" fill="#141414"/>
+  <text x="150" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Material Design 시스템 개념 지도</text>
+  <rect x="220" y="50" width="260" height="45" rx="6.75" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="350" y="76.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Material Design 시스템</text>
+  <path d="M200,95 L100,130" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M350,95 L350,130" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M500,95 L600,130" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <rect x="20" y="130" width="180" height="40" rx="6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="110" y="153.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">Scaffold</text>
+  <text x="20" y="185.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">├ AppBar (상단 툴바)</text>
+  <text x="20" y="202.60000000000002" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">├ body (메인 콘텐츠)</text>
+  <text x="20" y="219.4" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">├ drawer (좌측 메뉴)</text>
+  <text x="20" y="236.20000000000002" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">├ endDrawer (우측 메뉴)</text>
+  <text x="20" y="253" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">├ bottomNavigationBar</text>
+  <text x="20" y="269.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">├ floatingActionButton</text>
+  <text x="20" y="286.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">└ bottomSheet</text>
+  <rect x="270" y="130" width="180" height="40" rx="6" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="360" y="153.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">Theme 시스템</text>
+  <text x="270" y="185.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">├ ThemeData</text>
+  <text x="270" y="202.60000000000002" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">│  ├ ColorScheme</text>
+  <text x="270" y="219.4" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">│  ├ TextTheme</text>
+  <text x="270" y="236.20000000000002" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">│  └ 위젯별 테마</text>
+  <text x="270" y="253" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">└ Theme.of(context)</text>
+  <text x="270" y="269.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">   (InheritedWidget 전파)</text>
+  <rect x="520" y="130" width="180" height="40" rx="6" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="610" y="153.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">AdaptiveTheme</text>
+  <text x="520" y="185.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">라이트/다크 전환</text>
+  <text x="520" y="202.60000000000002" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">+ 시스템 연동</text>
+</svg>

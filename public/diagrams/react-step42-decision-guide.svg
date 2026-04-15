@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="466" viewBox="20 -10 540 419">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-10" width="540" height="419" rx="12" fill="#141414"/>
+  <text x="190" y="38" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">언제 무엇을 쓰는가</text>
+  <rect x="50" y="55" width="160" height="36" rx="5.3999999999999995" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="130" y="76.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">상황</text>
+  <rect x="210" y="55" width="160" height="36" rx="5.3999999999999995" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="290" y="76.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">권장 도구</text>
+  <rect x="370" y="55" width="160" height="36" rx="5.3999999999999995" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="450" y="76.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">근거</text>
+  <rect x="50" y="91" width="160" height="36" rx="5.3999999999999995" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="130" y="112.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">서버 데이터 패칭</text>
+  <rect x="210" y="91" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="290" y="112.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">TanStack Query</text>
+  <rect x="370" y="91" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="450" y="112.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">캐싱/리패칭 자동</text>
+  <rect x="50" y="127" width="160" height="36" rx="5.3999999999999995" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="130" y="148.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">클라이언트 UI 상태</text>
+  <rect x="210" y="127" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="290" y="148.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">useState+Zustand</text>
+  <rect x="370" y="127" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="450" y="148.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">서버 데이터와 분리</text>
+  <rect x="50" y="163" width="160" height="36" rx="5.3999999999999995" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="130" y="184.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">인증/테마 전역</text>
+  <rect x="210" y="163" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="290" y="184.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Context</text>
+  <rect x="370" y="163" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="450" y="184.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">변경 드문 전역 값</text>
+  <rect x="50" y="199" width="160" height="36" rx="5.3999999999999995" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="130" y="220.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">복잡한 폼</text>
+  <rect x="210" y="199" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="290" y="220.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">RHF + Zod</text>
+  <rect x="370" y="199" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="450" y="220.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">성능 + 타입 안전성</text>
+  <rect x="50" y="235" width="160" height="36" rx="5.3999999999999995" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="130" y="256.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">스타일</text>
+  <rect x="210" y="235" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="290" y="256.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Tailwind+shadcn</text>
+  <rect x="370" y="235" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="450" y="256.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">빠른 개발, 일관성</text>
+  <rect x="50" y="271" width="160" height="36" rx="5.3999999999999995" fill="#555555" stroke="#a0a0a0" stroke-width="2" opacity="1"/>
+  <text x="130" y="292.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">에러 처리</text>
+  <rect x="210" y="271" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="290" y="292.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">ErrorBoundary+Sentry</text>
+  <rect x="370" y="271" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="450" y="292.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">선언적 + 자동 수집</text>
+  <rect x="50" y="307" width="160" height="36" rx="5.3999999999999995" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="130" y="328.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">배포</text>
+  <rect x="210" y="307" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="290" y="328.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Vercel + Git</text>
+  <rect x="370" y="307" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="450" y="328.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">간편한 자동화</text>
+  <rect x="50" y="343" width="160" height="36" rx="5.3999999999999995" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="130" y="364.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">모니터링</text>
+  <rect x="210" y="343" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="290" y="364.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Sentry+SourceMap</text>
+  <rect x="370" y="343" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="450" y="364.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">원본 코드 디버깅</text>
+</svg>

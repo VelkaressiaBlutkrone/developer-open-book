@@ -1,0 +1,305 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "r_207",
+      "x": 50,
+      "y": 10,
+      "width": 620,
+      "height": 358,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_208",
+      "x": 50,
+      "y": 10,
+      "width": 620,
+      "height": 40,
+      "text": "Step 34 — CSS 전략",
+      "fontSize": 20,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_207"
+    },
+    {
+      "type": "rectangle",
+      "id": "r_209",
+      "x": 60,
+      "y": 50,
+      "width": 600,
+      "height": 196,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_210",
+      "x": 60,
+      "y": 50,
+      "width": 600,
+      "height": 32,
+      "text": "다루는 것",
+      "fontSize": 16,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_209"
+    },
+    {
+      "type": "text",
+      "id": "t_211",
+      "x": 80,
+      "y": 82,
+      "width": 105,
+      "height": 18,
+      "text": "· 스타일링 방식 5종 비교",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_212",
+      "x": 80,
+      "y": 104,
+      "width": 196,
+      "height": 18,
+      "text": "· Tailwind CSS 핵심 (유틸리티 퍼스트)",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_213",
+      "x": 80,
+      "y": 126,
+      "width": 182,
+      "height": 18,
+      "text": "· CSS Modules (로컬 스코프, 합성)",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_214",
+      "x": 80,
+      "y": 148,
+      "width": 112,
+      "height": 18,
+      "text": "· 디자인 토큰과 테마 시스템",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_215",
+      "x": 80,
+      "y": 170,
+      "width": 84,
+      "height": 18,
+      "text": "· 반응형 디자인 패턴",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_216",
+      "x": 80,
+      "y": 192,
+      "width": 91,
+      "height": 18,
+      "text": "· 다크 모드 구현 전략",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_217",
+      "x": 80,
+      "y": 214,
+      "width": 189,
+      "height": 18,
+      "text": "· 컴포넌트 라이브러리 (shadcn/ui) 활용",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_218",
+      "x": 80,
+      "y": 236,
+      "width": 112,
+      "height": 18,
+      "text": "· 스타일링 전략 선택 가이드",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "line",
+      "id": "l_219",
+      "x": 60,
+      "y": 248,
+      "width": 600,
+      "height": 0,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          600,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        600,
+        0
+      ]
+    },
+    {
+      "type": "rectangle",
+      "id": "r_220",
+      "x": 60,
+      "y": 252,
+      "width": 600,
+      "height": 108,
+      "backgroundColor": "#5c1a1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#ef4444",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_221",
+      "x": 60,
+      "y": 252,
+      "width": 600,
+      "height": 32,
+      "text": "다루지 않는 것",
+      "fontSize": 16,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_220"
+    },
+    {
+      "type": "text",
+      "id": "t_222",
+      "x": 80,
+      "y": 284,
+      "width": 154,
+      "height": 18,
+      "text": "· CSS 기초 문법 (별도 학습 가정)",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_223",
+      "x": 80,
+      "y": 306,
+      "width": 119,
+      "height": 18,
+      "text": "· Sass/SCSS 상세 문법",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_224",
+      "x": 80,
+      "y": 328,
+      "width": 217,
+      "height": 18,
+      "text": "· 애니메이션 라이브러리 (Framer Motion 등)",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_225",
+      "x": 80,
+      "y": 350,
+      "width": 203,
+      "height": 18,
+      "text": "· Storybook 설정 (Step 37에서 개요)",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

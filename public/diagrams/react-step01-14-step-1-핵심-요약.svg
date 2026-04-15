@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="726" viewBox="-10 -20 448.5 543">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="448.5" height="543" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">Step 1 핵심 요약</text>
+  <rect x="20" y="45" width="388.5" height="448" rx="58.275" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="214.25" y="108.69999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">1. Node.js는 개발 도구의 실행 환경이다</text>
+  <text x="214.25" y="126.89999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 빌드 도구, 패키지 매니저, 린터가 Node.js 위에서 동작</text>
+  <text x="214.25" y="145.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 최종 사용자의 브라우저에서는 실행되지 않는다</text>
+  <text x="214.25" y="163.29999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ LTS 버전 사용을 권장한다</text>
+  <text x="214.25" y="181.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">2. 패키지 매니저는 의존성의 단일 진실 공급원을 관리한다</text>
+  <text x="214.25" y="199.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ npm: 기본 제공, 범용</text>
+  <text x="214.25" y="217.89999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ pnpm: 디스크 효율, Phantom Dependency 방지</text>
+  <text x="214.25" y="236.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ package.json + lock 파일 = 재현 가능한 환경</text>
+  <text x="214.25" y="254.29999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">3. Vite는 ESModule 기반의 차세대 빌드 도구이다</text>
+  <text x="214.25" y="272.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 개발 서버: on-demand 변환 (번들링 없음)</text>
+  <text x="214.25" y="290.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 프로덕션: Rollup 기반 최적화 번들링</text>
+  <text x="214.25" y="308.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ CRA를 대체하는 현재의 표준</text>
+  <text x="214.25" y="327.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">4. 개발 타임 / 빌드 타임 / 런타임을 구분한다</text>
+  <text x="214.25" y="345.29999999999995" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 각 시점에서 동작하는 도구와 코드가 다르다</text>
+  <text x="214.25" y="363.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ dependencies vs devDependencies의 근거</text>
+  <text x="214.25" y="381.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">5. 프로젝트 구조에서 각 파일의 역할을 안다</text>
+  <text x="214.25" y="399.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ index.html: Vite의 진입점</text>
+  <text x="214.25" y="418.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ src/main.jsx: React의 진입점</text>
+  <text x="214.25" y="436.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ public/ vs src/assets/: 정적 에셋 처리 방식의 차이</text>
+</svg>

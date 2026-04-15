@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="765" height="219" viewBox="-10 -10 765 218.8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-10" width="765" height="218.8" rx="12" fill="#141414"/>
+  <text x="50" y="39.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">스타일링 방식 스펙트럼</text>
+  <text x="50" y="69.4" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="16" opacity="1">전통적 ◀───────────────────────▶ 모던</text>
+  <rect x="20" y="85" width="165" height="50" rx="7.5" fill="#555555" stroke="#a0a0a0" stroke-width="2" opacity="1"/>
+  <text x="102.5" y="104.39999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Vanilla CSS</text>
+  <text x="102.5" y="122.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">+ BEM</text>
+  <rect x="200" y="85" width="165" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="282.5" y="104.39999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">CSS Modules</text>
+  <text x="282.5" y="122.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">+ PostCSS</text>
+  <rect x="380" y="85" width="165" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="462.5" y="104.39999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Tailwind CSS</text>
+  <text x="462.5" y="122.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">유틸리티</text>
+  <rect x="560" y="85" width="165" height="50" rx="7.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="642.5" y="104.39999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">CSS-in-JS</text>
+  <text x="642.5" y="122.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">styled-comp.</text>
+  <text x="25" y="155.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">전역 스코프</text>
+  <text x="25" y="172.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">제로 런타임</text>
+  <text x="205" y="155.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">로컬 스코프</text>
+  <text x="205" y="172.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">제로 런타임</text>
+  <text x="385" y="155.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">유틸리티 클래스</text>
+  <text x="385" y="172.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">제로 런타임</text>
+  <text x="565" y="155.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">JS에서 CSS 작성</text>
+  <text x="565" y="172.8" fill="#ef4444" font-family="Nunito, sans-serif" font-size="12" opacity="1">런타임 비용!</text>
+</svg>

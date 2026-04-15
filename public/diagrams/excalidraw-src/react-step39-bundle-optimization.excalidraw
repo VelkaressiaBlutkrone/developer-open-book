@@ -1,0 +1,253 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_593",
+      "x": 140,
+      "y": 15,
+      "width": 130,
+      "height": 24,
+      "text": "번들 최적화 개념 관계도",
+      "fontSize": 20,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "r_594",
+      "x": 30,
+      "y": 60,
+      "width": 200,
+      "height": 55,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_595",
+      "x": 30,
+      "y": 60,
+      "width": 200,
+      "height": 55,
+      "text": "코드 분할\n큰 번들을 작게 나눔",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_594"
+    },
+    {
+      "type": "rectangle",
+      "id": "r_596",
+      "x": 260,
+      "y": 60,
+      "width": 200,
+      "height": 55,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_597",
+      "x": 260,
+      "y": 60,
+      "width": 200,
+      "height": 55,
+      "text": "장기 캐싱\n내용 해시로 관리",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_596"
+    },
+    {
+      "type": "rectangle",
+      "id": "r_598",
+      "x": 490,
+      "y": 60,
+      "width": 200,
+      "height": 55,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_599",
+      "x": 490,
+      "y": 60,
+      "width": 200,
+      "height": 55,
+      "text": "manualChunks\n라이브러리 분리",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_598"
+    },
+    {
+      "type": "arrow",
+      "id": "a_600",
+      "x": 130,
+      "y": 115,
+      "width": 210,
+      "height": 40,
+      "strokeColor": "#555555",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          210,
+          40
+        ]
+      ],
+      "lastCommittedPoint": [
+        210,
+        40
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "arrow",
+      "id": "a_601",
+      "x": 360,
+      "y": 115,
+      "width": 0,
+      "height": 40,
+      "strokeColor": "#555555",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          40
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        40
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "arrow",
+      "id": "a_602",
+      "x": 590,
+      "y": 115,
+      "width": -230,
+      "height": 40,
+      "strokeColor": "#555555",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -230,
+          40
+        ]
+      ],
+      "lastCommittedPoint": [
+        -230,
+        40
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "r_603",
+      "x": 200,
+      "y": 160,
+      "width": 300,
+      "height": 60,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_604",
+      "x": 200,
+      "y": 160,
+      "width": 300,
+      "height": 60,
+      "text": "초기 로딩 속도 향상\n반복 방문 시 전송량 감소\n캐시 효율 극대화",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_603"
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

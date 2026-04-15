@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="1336" viewBox="-10 -20 431.5 961">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="431.5" height="961" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">React 렌더링 파이프라인</text>
+  <rect x="20" y="45" width="371.5" height="866" rx="55.725" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="205.75" y="144.79999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Trigger</text>
+  <text x="205.75" y="162.99999999999997" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· setState 호출</text>
+  <text x="205.75" y="181.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 부모 재렌더링</text>
+  <text x="205.75" y="199.39999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Context 값 변경</text>
+  <text x="205.75" y="217.59999999999997" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="205.75" y="235.79999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Render Phase (순수, 중단 가능)</text>
+  <text x="205.75" y="254" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">1. 변경된 Fiber부터 시작</text>
+  <text x="205.75" y="272.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">2. 컴포넌트 함수 호출 (= &quot;렌더링&quot;)</text>
+  <text x="205.75" y="290.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">3. 새 React Element와 이전 Fiber를 비교 (Diff)</text>
+  <text x="205.75" y="308.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">4. 변경이 필요한 Fiber에 effectTag를 표시</text>
+  <text x="205.75" y="326.79999999999995" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· PLACEMENT (추가)</text>
+  <text x="205.75" y="345" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· UPDATE (속성 변경)</text>
+  <text x="205.75" y="363.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· DELETION (제거)</text>
+  <text x="205.75" y="381.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">5. 자식 → 형제 → 부모 순서로 트리 순회</text>
+  <text x="205.75" y="399.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">특징:</text>
+  <text x="205.75" y="417.79999999999995" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· DOM을 건드리지 않는다</text>
+  <text x="205.75" y="436" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 부수 효과가 없어야 한다 (순수)</text>
+  <text x="205.75" y="454.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 중단하고 나중에 재개할 수 있다 ★</text>
+  <text x="205.75" y="472.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 여러 번 실행될 수 있다 (StrictMode)</text>
+  <text x="205.75" y="490.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="205.75" y="508.79999999999995" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Commit Phase (부수 효과, 중단 불가)</text>
+  <text x="205.75" y="527" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">1. Before Mutation</text>
+  <text x="205.75" y="545.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· getSnapshotBeforeUpdate (class) 호출</text>
+  <text x="205.75" y="563.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">2. Mutation</text>
+  <text x="205.75" y="581.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· effectTag에 따라 실제 DOM 조작 실행</text>
+  <text x="205.75" y="599.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· appendChild, removeChild, 속성 변경 등</text>
+  <text x="205.75" y="618" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· ref 업데이트</text>
+  <text x="205.75" y="636.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">3. Layout</text>
+  <text x="205.75" y="654.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· useLayoutEffect 콜백 실행 (동기)</text>
+  <text x="205.75" y="672.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· componentDidMount/Update (class) 호출</text>
+  <text x="205.75" y="690.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">특징:</text>
+  <text x="205.75" y="709" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 실제 DOM을 변경한다</text>
+  <text x="205.75" y="727.1999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 동기적으로 한 번에 실행 (중단 불가) ★</text>
+  <text x="205.75" y="745.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 불완전한 UI를 사용자에게 보여주지 않는다</text>
+  <text x="205.75" y="763.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="205.75" y="781.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Post-Commit</text>
+  <text x="205.75" y="800" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 브라우저가 화면을 페인트</text>
+  <text x="205.75" y="818.1999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· useEffect 콜백이 비동기적으로 실행</text>
+</svg>

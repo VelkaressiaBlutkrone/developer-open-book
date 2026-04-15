@@ -48,41 +48,7 @@ React 19의 Actions 패턴(useActionState, useOptimistic)은 서버와의 비동
 
 ### 1.3 개념 지도 — 이 Step의 전체 구조
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                  React 신규 Hooks 개념 지도                       │
-│                                                                  │
-│  ┌───────────────────────────────────────────────────────────┐  │
-│  │  React 18 — Concurrent Features                           │  │
-│  │                                                           │  │
-│  │   useTransition ────────── "setState를 전환으로 표시"      │  │
-│  │        │                   ↑ 이벤트 핸들러 측에서 사용     │  │
-│  │        │                                                  │  │
-│  │   useDeferredValue ─────── "값의 업데이트를 지연"          │  │
-│  │        │                   ↑ 데이터 소비 측에서 사용       │  │
-│  │        │                                                  │  │
-│  │   useId ───────────────── SSR 호환 고유 ID               │  │
-│  │                                                           │  │
-│  └───────────────────────────────────────────────────────────┘  │
-│                                                                  │
-│  ┌───────────────────────────────────────────────────────────┐  │
-│  │  React 19 — Actions & async 전환                          │  │
-│  │                                                           │  │
-│  │   use() ────────────────── Promise/Context 직접 읽기      │  │
-│  │        └── Suspense와 결합  ↑ 조건문 안에서 호출 가능     │  │
-│  │                                                           │  │
-│  │   useActionState ──────── 폼 Action 상태 통합 관리        │  │
-│  │        └── (prevState, formData) → newState 패턴          │  │
-│  │                                                           │  │
-│  │   useOptimistic ───────── 서버 응답 전 UI 선반영          │  │
-│  │        └── 실패 시 자동 롤백                               │  │
-│  │                                                           │  │
-│  │   useFormStatus ───────── 폼 자식에서 제출 상태 접근      │  │
-│  │                                                           │  │
-│  └───────────────────────────────────────────────────────────┘  │
-│                                                                  │
-└─────────────────────────────────────────────────────────────────┘
-```
+![React 신규 Hooks 개념 지도](/developer-open-book/diagrams/react-step15-concept-map.svg)
 
 ### 1.4 Concurrent Features의 실전 도구들
 
@@ -105,25 +71,7 @@ Step 10에서 배운 이론:
 
 ### 1.5 이 Step에서 다루는 범위
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  다루는 것                                               │
-│  · useTransition: 전환 업데이트 표시와 isPending        │
-│  · useDeferredValue: 값 지연과 시각적 피드백             │
-│  · useTransition vs useDeferredValue 비교               │
-│  · useId: SSR 호환 고유 ID 생성                         │
-│  · use(): Promise와 Context 읽기 (React 19)            │
-│  · useActionState: 폼 Action 상태 관리 (React 19)      │
-│  · useOptimistic: 낙관적 UI 업데이트 (React 19)        │
-│  · useFormStatus: 폼 제출 상태 접근 (React 19)         │
-├─────────────────────────────────────────────────────────┤
-│  다루지 않는 것                                          │
-│  · Suspense for Data Fetching 상세 (Step 30)           │
-│  · Server Actions 상세 (Step 21)                        │
-│  · React Hook Form (Step 33)                            │
-│  · TanStack Query (Step 23)                             │
-└─────────────────────────────────────────────────────────┘
-```
+![Step 15 다루는 범위](/developer-open-book/diagrams/react-step15-scope.svg)
 
 ---
 

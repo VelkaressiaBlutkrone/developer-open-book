@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="726.5" height="565" viewBox="-10 -15 726.5 565">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="726.5" height="565" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">가장 제한적 ──────────────────────────── 가장 유연</text>
+  <rect x="20" y="50" width="666.5" height="470" rx="70.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Props 기반         Slot 패턴          Compound          Headless</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&lt;Button            &lt;Card              &lt;Tabs&gt;            useCombobox()</text>
+  <text x="40" y="135.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">label=&quot;클릭&quot;       header={...}       &lt;Tabs.List&gt;      · UI 완전 제어</text>
+  <text x="40" y="161.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">icon=&quot;star&quot;        footer={...}       &lt;Tabs.Tab&gt;       · 스타일 완전 제어</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">variant=&quot;primary&quot;  &gt;내용&lt;            &lt;/Tabs&gt;           · 접근성 자동</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">/&gt;                  &lt;/Card&gt;</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 간단한 컴포넌트   · 레이아웃 영역   · 복합 UI          · 라이브러리 설계</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 제한된 커스텀     · 영역별 커스텀   · 구조 커스텀       · 최대 커스텀</text>
+  <text x="40" y="291.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 빠른 구현         · 적당한 유연성   · 상태 공유         · 복잡한 구현</text>
+  <text x="40" y="317.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">선택 기준:</text>
+  <text x="40" y="343.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 사용처가 정해져 있고 변경 가능성이 낮다 → Props 기반</text>
+  <text x="40" y="369.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 레이아웃의 특정 영역만 커스텀이 필요하다 → Slot 패턴</text>
+  <text x="40" y="395.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 복합 UI의 구조와 내용을 자유롭게 제어해야 한다 → Compound</text>
+  <text x="40" y="421.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 라이브러리로 배포하여 어떤 디자인 시스템에도 적용해야 한다 → Headless</text>
+</svg>

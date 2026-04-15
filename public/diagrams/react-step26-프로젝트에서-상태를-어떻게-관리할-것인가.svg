@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="833" viewBox="-10 -15 463 643">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="463" height="643" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">프로젝트에서 상태를 어떻게 관리할 것인가?</text>
+  <rect x="20" y="50" width="403" height="548" rx="60.449999999999996" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">─ 서버에서 오는 데이터인가?</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">YES → TanStack Query (Step 23)</text>
+  <text x="40" y="135.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">NO ↓</text>
+  <text x="40" y="161.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">─ URL에 반영되어야 하는 상태인가? (필터, 검색어, 페이지)</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">YES → useSearchParams / URL (Step 18)</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">NO ↓</text>
+  <text x="40" y="239.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">─ 한 컴포넌트에서만 사용하는가?</text>
+  <text x="40" y="265.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">YES → useState / useReducer (로컬)</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">NO ↓</text>
+  <text x="40" y="317.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">─ 부모-자식 2~3단계에서만 공유하는가?</text>
+  <text x="40" y="343.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">YES → Props 전달 또는 Composition (Step 5)</text>
+  <text x="40" y="369.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">NO ↓</text>
+  <text x="40" y="395.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">─ 변경이 드물고 앱 전체에서 필요한가? (테마, 인증, 로케일)</text>
+  <text x="40" y="421.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">YES → Context API (Step 25)</text>
+  <text x="40" y="447.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">NO ↓</text>
+  <text x="40" y="473.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">─ 여러 페이지에서 공유 + 빈번한 변경 + 부분 구독 필요?</text>
+  <text x="40" y="499.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">YES → Zustand (이 Step) ★</text>
+</svg>

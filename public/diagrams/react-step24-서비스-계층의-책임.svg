@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="576" viewBox="-10 -15 480 461">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="480" height="461" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">서비스 계층의 책임</text>
+  <rect x="20" y="50" width="420" height="366" rx="54.9" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15" opacity="1">✅ 담당하는 것:</text>
+  <text x="40" y="109.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 구체적 API URL 관리 (/users, /products/:id)</text>
+  <text x="40" y="135.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 요청 파라미터 조립 (query string, body)</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 응답 데이터 변환 (필요한 경우)</text>
+  <text x="40" y="187.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· API 스펙의 캡슐화 (URL 구조가 바뀌어도 사용처에 영향 없음)</text>
+  <text x="40" y="213.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">❌ 담당하지 않는 것:</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· HTTP 설정 (baseURL, 인증 → Layer 1)</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· React Hook 연동 (→ Layer 3)</text>
+  <text x="40" y="291.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· UI 로직 (→ Layer 4)</text>
+  <text x="40" y="317.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 캐싱 전략 (→ Layer 3)</text>
+</svg>

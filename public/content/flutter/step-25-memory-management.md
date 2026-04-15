@@ -24,64 +24,15 @@
 
 ### 1.1 메모리 누수가 앱에 미치는 영향
 
-```
-메모리 누수의 증상
-──────────────────────────────────────────────────────
-  ① 앱 사용 시간이 길어질수록 메모리 사용량 증가
-  ② 결국 OOM(Out Of Memory) → 앱 강제 종료
-  ③ 화면 전환이 느려짐 (GC 압박)
-  ④ 배터리 소모 증가 (불필요한 작업 지속)
-  ⑤ Flutter 경고:
-     "A X was disposed after it had been used"
-     "setState() called after dispose()"
-──────────────────────────────────────────────────────
-```
+![메모리 누수의 증상](/developer-open-book/diagrams/flutter-step25-memory-leak-symptoms.svg)
 
 ### 1.2 Flutter 메모리 관리 기본 원칙
 
-```
-Dart의 메모리 관리
-──────────────────────────────────────────────────────
-  Dart는 가비지 컬렉터(GC) 사용
-  → 참조가 없어진 객체는 자동 해제
-
-  그런데 메모리 누수가 발생하는 이유?
-  → 객체에 대한 참조가 의도치 않게 유지되기 때문
-
-  주요 원인:
-  ① 리스너·구독이 해제되지 않음
-     → 리스너가 객체를 참조 → GC 대상 아님
-  ② 컨트롤러가 dispose되지 않음
-     → 내부 리소스가 계속 살아있음
-  ③ Isolate가 종료되지 않음
-     → 별도 메모리 공간 계속 점유
-──────────────────────────────────────────────────────
-```
+![Dart의 메모리 관리](/developer-open-book/diagrams/flutter-step25-dart-memory.svg)
 
 ### 1.3 전체 개념 지도
 
-```
-Flutter 메모리 관리
-    │
-    ├── dispose() 패턴
-    │     ├── AnimationController.dispose()
-    │     ├── TextEditingController.dispose()
-    │     ├── ScrollController.dispose()
-    │     ├── FocusNode.dispose()
-    │     ├── StreamSubscription.cancel()
-    │     └── ValueNotifier.dispose()
-    │
-    ├── 메모리 누수 패턴
-    │     ├── dispose() 후 setState() 호출
-    │     ├── Stream 구독 미해제
-    │     ├── Timer 미취소
-    │     └── Isolate 미종료
-    │
-    └── 진단 도구
-          ├── DevTools Memory 탭
-          ├── flutter logs (경고 메시지)
-          └── dart:developer (Timeline)
-```
+![Flutter 메모리 관리 핵심](/developer-open-book/diagrams/flutter-step25-flutter-memory.svg)
 
 ---
 
@@ -385,16 +336,7 @@ class _IsolateManagerState extends State<IsolateManager> {
 
 **Isolate 메모리 공유 불가의 의미:**
 
-```
-Main Isolate               Worker Isolate
-──────────────             ──────────────
-  메모리 A                   메모리 B (별도)
-  Dart 힙 A                  Dart 힙 B (별도)
-
-  통신: SendPort/ReceivePort로 메시지 복사 전달
-  → 큰 데이터 전달 시 복사 비용 발생
-  → TransferableTypedData로 zero-copy 전달 가능
-```
+![Isolate 간 통신](/developer-open-book/diagrams/flutter-step25-isolate-communication.svg)
 
 > ⚠️ **함정 주의:** Isolate 내부에서 생성한 객체는 main Isolate에서 직접 접근할 수 없다. `SendPort.send()`를 통해 메시지를 보낼 때 Dart는 객체를 **직렬화(복사)**하여 전달한다. 이 복사 비용을 간과하면 오히려 성능이 저하될 수 있다. 단순 계산은 `compute()`로 충분하며, 반복적인 대량 데이터 전달이 필요하다면 `TransferableTypedData`를 사용한다.
 
@@ -402,26 +344,7 @@ Main Isolate               Worker Isolate
 
 ### 3.6 Flutter DevTools Memory 탭 활용
 
-```
-DevTools → Memory 탭
-──────────────────────────────────────────────────────
-  실시간 그래프: 시간에 따른 메모리 사용량
-
-  ① 화면 전환을 반복하면서 메모리가 계속 오르는가?
-     → YES: 메모리 누수 가능성
-
-  ② 힙 스냅샷 (Heap Snapshot) 비교
-     - 스냅샷 A: 화면 진입 전
-     - 화면 진입 후 여러 액션 수행
-     - 화면 이탈 (pop)
-     - 스냅샷 B: 화면 이탈 후
-     - A와 B 비교: 줄어들지 않은 객체 = 누수 후보
-
-  ③ 누수 식별
-     "StatefulElement", "AnimationController",
-     "StreamSubscription" 등이 B에만 남아있으면 누수!
-──────────────────────────────────────────────────────
-```
+![DevTools Memory 탭 활용](/developer-open-book/diagrams/flutter-step25-devtools-memory.svg)
 
 ```bash
 # Memory 프로파일링 실행
@@ -508,62 +431,7 @@ void dispose() {
 
 ### 4.1 채팅 앱 메모리 누수 진단 시나리오
 
-```
-증상: 채팅 화면을 반복적으로 열고 닫으면 메모리가 계속 증가
-
-DevTools Memory 탭으로 분석:
-  힙 스냅샷 비교 결과
-  → StreamSubscription 인스턴스가 닫아도 계속 증가
-  → AnimationController 인스턴스 누적
-
-원인 코드:
-──────────────────────────────────────────────────────
-class _ChatRoomState extends State<ChatRoomScreen>
-    with TickerProviderStateMixin {
-
-  late AnimationController _typingCtrl;
-  // StreamSubscription 변수 없음!
-
-  @override
-  void initState() {
-    super.initState();
-    _typingCtrl = AnimationController(vsync: this, duration: ...);
-    // ← 구독 객체 저장 안 함
-    MessageService.typingStream.listen((typing) {
-      setState(() => _isTyping = typing);
-    });
-  }
-
-  // dispose() 없음!
-}
-──────────────────────────────────────────────────────
-
-수정 코드:
-──────────────────────────────────────────────────────
-class _ChatRoomState extends State<ChatRoomScreen>
-    with TickerProviderStateMixin {
-
-  late AnimationController _typingCtrl;
-  StreamSubscription<bool>? _typingSub; // ← 저장
-
-  @override
-  void initState() {
-    super.initState();
-    _typingCtrl = AnimationController(vsync: this, duration: ...);
-    _typingSub = MessageService.typingStream.listen((typing) {
-      if (!mounted) return;
-      setState(() => _isTyping = typing);
-    });
-  }
-
-  @override
-  void dispose() {
-    _typingCtrl.dispose();   // ✅
-    _typingSub?.cancel();    // ✅
-    super.dispose();
-  }
-}
-```
+![채팅 화면 메모리 누수 사례](/developer-open-book/diagrams/flutter-step25-chat-memory-leak.svg)
 
 ---
 

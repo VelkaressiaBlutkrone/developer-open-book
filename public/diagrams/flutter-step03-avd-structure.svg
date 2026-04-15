@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="480" viewBox="50 -20 460 368.2">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="50" y="-20" width="460" height="368.2" rx="12" fill="#141414"/>
+  <text x="150" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">AVD 실행 구조</text>
+  <rect x="80" y="60" width="400" height="40" rx="6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="280" y="84" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">PC OS (macOS/Windows/Linux)</text>
+  <rect x="120" y="120" width="340" height="40" rx="6" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="290" y="144" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">QEMU 가상화 레이어</text>
+  <rect x="160" y="180" width="280" height="40" rx="6" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="300" y="204" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">가상 Android OS</text>
+  <rect x="200" y="240" width="220" height="40" rx="6" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="310" y="264" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Flutter 앱 실행</text>
+  <text x="80" y="311.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="0.7">Intel HAXM 또는 AMD 가속 활성화 시 성능 대폭 향상</text>
+</svg>

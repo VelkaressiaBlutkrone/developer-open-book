@@ -24,56 +24,15 @@
 
 ### 1.1 CI/CD가 해결하는 문제
 
-```
-수동 배포의 고통
-──────────────────────────────────────────────────────
-  개발자가 매 배포마다:
-  1. 로컬에서 테스트 실행 (잊어버리는 경우 많음)
-  2. 버전 업데이트
-  3. Keystore·인증서 꺼내기
-  4. flutter build appbundle --release
-  5. Play Console 접속 → AAB 업로드
-  6. TestFlight 업로드
-  총 소요: 30분~2시간, 실수 가능성 높음
-
-CI/CD 자동화 후:
-  git push origin main
-  → 자동으로 테스트·빌드·스토어 업로드까지 완료
-  총 소요: 개발자 직접 작업 0분 (파이프라인 15~20분)
-──────────────────────────────────────────────────────
-```
+![수동 배포의 고통](/developer-open-book/diagrams/flutter-step30-manual-deploy-pain.svg)
 
 ### 1.2 CI와 CD의 차이
 
-```
-CI (Continuous Integration, 지속적 통합)
-  → PR/머지마다 자동 테스트·빌드
-  → "코드가 항상 동작하는 상태임을 보장"
-
-CD (Continuous Delivery/Deployment, 지속적 배포)
-  → 빌드 산출물을 자동으로 스토어·배포 환경에 전달
-  → "언제든지 배포 가능한 상태 유지"
-```
+![CI vs CD](/developer-open-book/diagrams/flutter-step30-ci-cd-concept.svg)
 
 ### 1.3 전체 개념 지도
 
-```
-Flutter CI/CD
-    │
-    ├── GitHub Actions      ← GitHub 내장, YAML 워크플로우
-    │     ├── PR 자동 테스트  (CI)
-    │     └── main 머지 시 자동 빌드·배포 (CD)
-    │
-    ├── Codemagic           ← Flutter 전용 CI/CD
-    │     ├── GUI 설정 (코드 없이 클릭)
-    │     ├── iOS 빌드 (macOS 환경 제공)
-    │     └── TestFlight·Play Store 자동 배포
-    │
-    └── Fastlane            ← 모바일 배포 자동화 도구
-          ├── lane 정의 (Ruby)
-          ├── Android: supply (Play Store 업로드)
-          └── iOS: pilot (TestFlight), deliver (App Store)
-```
+![Flutter CI/CD 기술 스택](/developer-open-book/diagrams/flutter-step30-flutter-cicd-stack.svg)
 
 ---
 
@@ -512,24 +471,7 @@ end
 
 ### 3.6 전체 파이프라인 설계
 
-```
-브랜치 전략별 파이프라인
-──────────────────────────────────────────────────────
-  feature/* 브랜치
-    Push → CI: flutter analyze + flutter test
-
-  develop 브랜치
-    PR 생성 → CI: 테스트 + Android Debug 빌드
-    Merge  → CD: Android 내부 테스트 자동 배포
-
-  main 브랜치
-    PR 생성 → CI: 전체 테스트 + Android/iOS 빌드 검증
-    Merge  → CD: Android 내부 테스트 + iOS TestFlight 자동 배포
-
-  릴리즈 태그 (v1.2.3)
-    → CD: Play Store Beta + App Store 심사 제출
-──────────────────────────────────────────────────────
-```
+![브랜치 전략별 파이프라인](/developer-open-book/diagrams/flutter-step30-branch-strategy.svg)
 
 ---
 
@@ -549,35 +491,7 @@ end
 
 ### 4.1 인디 앱 개발자: 수동 배포 2시간 → 15분
 
-```
-Before (수동)
-──────────────────────────────────────────────────────
-  1. 로컬 테스트 실행 (가끔 건너뜀)        5분
-  2. pubspec.yaml 버전 업데이트             2분
-  3. Keystore 꺼내기, key.properties 생성  5분
-  4. flutter build appbundle --release     8분
-  5. Play Console 로그인 → AAB 업로드      10분
-  6. 출시 메모 작성                         10분
-  7. iOS IPA 빌드 (Mac에서)               15분
-  8. TestFlight 업로드                     10분
-  ────────────────────────────────────────────
-  총 65분+, 실수 가능성, 개발자 주의 분산
-
-After (GitHub Actions + Codemagic)
-──────────────────────────────────────────────────────
-  git tag v1.2.3 && git push origin v1.2.3  30초
-
-  자동 실행:
-  1. 테스트 실행                            3분
-  2. Android AAB 빌드·서명                  8분
-  3. Play Store 내부 테스트 업로드           2분
-  4. Codemagic iOS IPA 빌드               12분
-  5. TestFlight 업로드                      3분
-  ────────────────────────────────────────────
-  개발자 직접 시간: 30초
-  파이프라인 총 시간: 약 15분 (병렬 실행)
-──────────────────────────────────────────────────────
-```
+![CI/CD 도입 전후 비교](/developer-open-book/diagrams/flutter-step30-before-after-cicd.svg)
 
 ---
 
@@ -885,30 +799,7 @@ on:
 
 ### 6.3 다음 단계 학습 제안
 
-```
-Flutter 완주 후 심화 방향
-──────────────────────────────────────────────────────
-  아키텍처 심화
-  → DDD(Domain Driven Design) 적용
-  → Micro-frontend (Feature를 별도 패키지로 분리)
-
-  상태관리 마스터
-  → Riverpod 코드 생성 (@riverpod 어노테이션)
-  → Bloc + TDD 실전 적용
-
-  성능 마스터
-  → Flutter DevTools 심층 분석
-  → Impeller 렌더링 파이프라인 이해
-
-  멀티플랫폼 확장
-  → Flutter Web 최적화
-  → Flutter Desktop (Windows·macOS·Linux)
-
-  오픈소스 기여
-  → pub.dev 패키지 개발·배포
-  → Flutter 공식 저장소 기여
-──────────────────────────────────────────────────────
-```
+![Flutter 완주 후 심화 방향](/developer-open-book/diagrams/flutter-step30-learning-path.svg)
 
 ---
 
@@ -953,26 +844,4 @@ Flutter 완주 후 심화 방향
 
 ## 🎊 축하합니다! Flutter 학습 로드맵 30 Step을 완주했습니다
 
-```
-학습 여정 완료 ✅
-──────────────────────────────────────────────────────
-  Step 01  Flutter 아키텍처 → 3-Layer, Rendering Pipeline
-  Step 02  Dart 핵심 → Null Safety, async/await, Isolate
-  ...
-  Step 29  앱 빌드 및 배포 → Keystore, Play Store, App Store
-  Step 30  CI/CD 자동화 → GitHub Actions, Codemagic, Fastlane
-
-  이 로드맵을 통해 습득한 것:
-  ✅ Flutter 아키텍처 원리 이해
-  ✅ 실무 수준 UI 구현 능력
-  ✅ 상태관리 패턴 선택과 적용
-  ✅ Clean Architecture 설계
-  ✅ 테스트 작성과 품질 관리
-  ✅ 성능 최적화 기법
-  ✅ 플랫폼 연동, AI 통합, 푸시 알림
-  ✅ 앱 빌드, 배포, 자동화
-
-  다음 단계: 실제 프로젝트에 적용하고
-             오픈소스에 기여해보세요! 🚀
-──────────────────────────────────────────────────────
-```
+![Flutter 학습 여정 완료](/developer-open-book/diagrams/flutter-step30-journey-complete.svg)

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="506" viewBox="20 -10 680 506">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-10" width="680" height="506" rx="12" fill="#141414"/>
+  <text x="210" y="39.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">CSS 스코프 전략 비교</text>
+  <rect x="50" y="60" width="620" height="72" rx="10.799999999999999" fill="#555555" stroke="#a0a0a0" stroke-width="2" opacity="1"/>
+  <text x="360" y="100.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">전역 CSS (BEM)</text>
+  <text x="70" y="112.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· .card {...} → 모든 .card에 적용 → 충돌 가능성 상존</text>
+  <rect x="50" y="142" width="620" height="94" rx="14.1" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="360" y="193.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">CSS Modules</text>
+  <text x="70" y="194.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· .card {...} → 빌드 후 .Card_card_a1b2 {...}</text>
+  <text x="70" y="216.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 자동 스코프 → 다른 .card와 절대 충돌 안 함 ★</text>
+  <rect x="50" y="246" width="620" height="94" rx="14.1" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="360" y="297.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">Tailwind CSS</text>
+  <text x="70" y="298.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· className=&quot;bg-white rounded-lg p-4 shadow&quot;</text>
+  <text x="70" y="320.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 클래스 이름 없음 → 충돌 자체가 불가능 ★</text>
+  <rect x="50" y="350" width="620" height="116" rx="17.4" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="360" y="412.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">CSS-in-JS (styled-components)</text>
+  <text x="70" y="402.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· const Card = styled.div`...`</text>
+  <text x="70" y="424.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 런타임에 고유 클래스 생성 → 스코프 보장</text>
+  <text x="70" y="446.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 단: 렌더링마다 CSS 문자열 생성 비용 발생</text>
+</svg>

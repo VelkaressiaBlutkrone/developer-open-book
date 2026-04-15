@@ -1,0 +1,770 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t",
+      "x": 100,
+      "y": 10,
+      "text": "useEffect 개념 지도",
+      "fontSize": 24,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 215.99999999999997,
+      "height": 30,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "r1",
+      "x": 50,
+      "y": 60,
+      "width": 160,
+      "height": 35,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r1t",
+      "x": 50,
+      "y": 67,
+      "text": "순수 렌더링",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 140,
+      "height": 20,
+      "opacity": 100,
+      "containerId": "r1",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "rectangle",
+      "id": "r2",
+      "x": 300,
+      "y": 60,
+      "width": 200,
+      "height": 35,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r2t",
+      "x": 300,
+      "y": 67,
+      "text": "부수 효과의 필요성",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 180,
+      "height": 20,
+      "opacity": 100,
+      "containerId": "r2",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "line",
+      "id": "a1",
+      "x": 210,
+      "y": 77,
+      "width": 90,
+      "height": 0,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          90,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        90,
+        0
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "r3",
+      "x": 340,
+      "y": 120,
+      "width": 120,
+      "height": 35,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r3t",
+      "x": 340,
+      "y": 127,
+      "text": "useEffect",
+      "fontSize": 16,
+      "strokeColor": "#22c55e",
+      "fontFamily": 2,
+      "width": 100,
+      "height": 22,
+      "opacity": 100,
+      "containerId": "r3",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "line",
+      "id": "a2",
+      "x": 400,
+      "y": 95,
+      "width": 0,
+      "height": 25,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          25
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        25
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "b1",
+      "x": 80,
+      "y": 180,
+      "width": 130,
+      "height": 30,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "b1t",
+      "x": 80,
+      "y": 186,
+      "text": "실행 타이밍",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 110,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "b1",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "rectangle",
+      "id": "b2",
+      "x": 240,
+      "y": 180,
+      "width": 120,
+      "height": 30,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "b2t",
+      "x": 240,
+      "y": 186,
+      "text": "의존성 배열",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 100,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "b2",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "rectangle",
+      "id": "b3",
+      "x": 390,
+      "y": 180,
+      "width": 120,
+      "height": 30,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "b3t",
+      "x": 390,
+      "y": 186,
+      "text": "Cleanup",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 100,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "b3",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "line",
+      "id": "a3",
+      "x": 340,
+      "y": 155,
+      "width": 195,
+      "height": 25,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -195,
+          25
+        ]
+      ],
+      "lastCommittedPoint": [
+        -195,
+        25
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "line",
+      "id": "a4",
+      "x": 400,
+      "y": 155,
+      "width": 100,
+      "height": 25,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -100,
+          25
+        ]
+      ],
+      "lastCommittedPoint": [
+        -100,
+        25
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "line",
+      "id": "a5",
+      "x": 400,
+      "y": 155,
+      "width": 50,
+      "height": 25,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          50,
+          25
+        ]
+      ],
+      "lastCommittedPoint": [
+        50,
+        25
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "s1",
+      "x": 90,
+      "y": 218,
+      "text": "Paint 후 실행",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 72,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "s2",
+      "x": 240,
+      "y": 218,
+      "text": "[dep]  []  생략",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 93.6,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "s3",
+      "x": 395,
+      "y": 218,
+      "text": "이전 효과 정리",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 57.599999999999994,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "mm",
+      "x": 160,
+      "y": 255,
+      "width": 260,
+      "height": 35,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "mmt",
+      "x": 160,
+      "y": 262,
+      "text": "올바른 멘탈 모델: 동기화",
+      "fontSize": 14,
+      "strokeColor": "#8b5cf6",
+      "fontFamily": 2,
+      "width": 240,
+      "height": 20,
+      "opacity": 100,
+      "containerId": "mm",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "line",
+      "id": "a6",
+      "x": 145,
+      "y": 155,
+      "width": 55,
+      "height": 100,
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          55,
+          100
+        ]
+      ],
+      "lastCommittedPoint": [
+        55,
+        100
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "u1",
+      "x": 80,
+      "y": 315,
+      "width": 90,
+      "height": 28,
+      "backgroundColor": "#5c3d1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "u1t",
+      "x": 80,
+      "y": 320,
+      "text": "패칭",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 70,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "u1",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "rectangle",
+      "id": "u2",
+      "x": 200,
+      "y": 315,
+      "width": 90,
+      "height": 28,
+      "backgroundColor": "#5c3d1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "u2t",
+      "x": 200,
+      "y": 320,
+      "text": "타이머",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 70,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "u2",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "rectangle",
+      "id": "u3",
+      "x": 320,
+      "y": 315,
+      "width": 90,
+      "height": 28,
+      "backgroundColor": "#5c3d1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "u3t",
+      "x": 320,
+      "y": 320,
+      "text": "이벤트",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 70,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "u3",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "line",
+      "id": "a7",
+      "x": 290,
+      "y": 290,
+      "width": 165,
+      "height": 25,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -165,
+          25
+        ]
+      ],
+      "lastCommittedPoint": [
+        -165,
+        25
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "line",
+      "id": "a8",
+      "x": 290,
+      "y": 290,
+      "width": 45,
+      "height": 25,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -45,
+          25
+        ]
+      ],
+      "lastCommittedPoint": [
+        -45,
+        25
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "line",
+      "id": "a9",
+      "x": 290,
+      "y": 290,
+      "width": 75,
+      "height": 25,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          75,
+          25
+        ]
+      ],
+      "lastCommittedPoint": [
+        75,
+        25
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "nn",
+      "x": 180,
+      "y": 360,
+      "text": "언제 필요 없는가?",
+      "fontSize": 14,
+      "strokeColor": "#ef4444",
+      "fontFamily": 2,
+      "width": 84,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "n1",
+      "x": 50,
+      "y": 390,
+      "width": 120,
+      "height": 28,
+      "backgroundColor": "#5c1a1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#ef4444",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "n1t",
+      "x": 50,
+      "y": 395,
+      "text": "파생 데이터",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 100,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "n1",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "rectangle",
+      "id": "n2",
+      "x": 200,
+      "y": 390,
+      "width": 130,
+      "height": 28,
+      "backgroundColor": "#5c1a1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#ef4444",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "n2t",
+      "x": 200,
+      "y": 395,
+      "text": "이벤트 핸들러",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 110,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "n2",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "rectangle",
+      "id": "n3",
+      "x": 360,
+      "y": 390,
+      "width": 110,
+      "height": 28,
+      "backgroundColor": "#5c1a1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#ef4444",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "n3t",
+      "x": 360,
+      "y": 395,
+      "text": "key 패턴",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 90,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "n3",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

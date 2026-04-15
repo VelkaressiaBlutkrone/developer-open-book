@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="694" viewBox="-10 -20 431.5 499">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="431.5" height="499" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">React (라이브러리)</text>
+  <rect x="20" y="45" width="371.5" height="404" rx="55.725" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="205.75" y="104.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">&quot;UI 렌더링만 할게. 나머지는 네가 알아서.&quot;</text>
+  <text x="205.75" y="123.10000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">↓ 개발자의 부담: 라우팅, SSR, 빌드, 최적화를 직접 구성해야 함</text>
+  <text x="205.75" y="141.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">메타 프레임워크 (Next.js, Remix 등)</text>
+  <text x="205.75" y="159.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">&quot;React 위에 라우팅, SSR, 빌드, 최적화를 다 통합해줄게.</text>
+  <text x="205.75" y="177.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">너는 컴포넌트만 작성해.&quot;</text>
+  <text x="205.75" y="195.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">↓ 관계</text>
+  <text x="205.75" y="214.10000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Next.js (메타 프레임워크)</text>
+  <text x="205.75" y="232.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">React (라이브러리)</text>
+  <text x="205.75" y="250.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 컴포넌트</text>
+  <text x="205.75" y="268.70000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Hooks</text>
+  <text x="205.75" y="286.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Reconciliation</text>
+  <text x="205.75" y="305.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">+ 파일 기반 라우팅</text>
+  <text x="205.75" y="323.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">+ SSR / SSG / ISR</text>
+  <text x="205.75" y="341.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">+ React Server Components</text>
+  <text x="205.75" y="359.70000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">+ API Routes / Server Actions</text>
+  <text x="205.75" y="377.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">+ 이미지·폰트 최적화</text>
+  <text x="205.75" y="396.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">+ 번들 최적화</text>
+</svg>

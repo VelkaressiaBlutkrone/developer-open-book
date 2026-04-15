@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="501" viewBox="20 -20 561.6 468.6">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="561.6" height="468.6" rx="12" fill="#141414"/>
+  <text x="150" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Gesture Arena 동작 원리</text>
+  <rect x="220" y="55" width="260" height="40" rx="6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="350" y="78.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">① 포인터 이벤트 발생</text>
+  <defs><marker id="arrow-a1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M350,95 L350,115" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a1)"/>
+  <rect x="180" y="115" width="340" height="40" rx="6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="350" y="138.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">② Hit Test → GestureRecognizer 수집</text>
+  <defs><marker id="arrow-a2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M350,155 L350,175" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a2)"/>
+  <rect x="180" y="175" width="340" height="55" rx="8.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="350" y="197.29999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">③ Arena에서 경쟁 시작</text>
+  <text x="350" y="214.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">각 recognizer가 처리/포기 선언</text>
+  <defs><marker id="arrow-a3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M350,230 L350,250" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a3)"/>
+  <rect x="180" y="250" width="340" height="55" rx="8.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="350" y="272.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">④ 승자 결정</text>
+  <text x="350" y="289.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">마지막 1개 또는 명시적 승리 선언</text>
+  <defs><marker id="arrow-a4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M350,305 L350,325" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a4)"/>
+  <rect x="220" y="325" width="260" height="40" rx="6" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="350" y="348.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">⑤ 승자의 콜백만 호출</text>
+  <text x="50" y="395.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">실전 예시: ListView 내부의 GestureDetector</text>
+  <text x="50" y="412.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">세로 드래그 → ScrollGestureRecognizer 승리  |  수평 드래그 → HorizontalDragRecognizer 승리</text>
+</svg>

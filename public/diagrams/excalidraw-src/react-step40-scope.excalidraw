@@ -1,0 +1,305 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "r_622",
+      "x": 50,
+      "y": 10,
+      "width": 620,
+      "height": 358,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_623",
+      "x": 50,
+      "y": 10,
+      "width": 620,
+      "height": 40,
+      "text": "Step 40 — 배포 + CI/CD",
+      "fontSize": 20,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_622"
+    },
+    {
+      "type": "rectangle",
+      "id": "r_624",
+      "x": 60,
+      "y": 50,
+      "width": 600,
+      "height": 196,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_625",
+      "x": 60,
+      "y": 50,
+      "width": 600,
+      "height": 32,
+      "text": "다루는 것",
+      "fontSize": 16,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_624"
+    },
+    {
+      "type": "text",
+      "id": "t_626",
+      "x": 80,
+      "y": 82,
+      "width": 161,
+      "height": 18,
+      "text": "· CSR vs SSR 앱의 배포 아키텍처",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_627",
+      "x": 80,
+      "y": 104,
+      "width": 315,
+      "height": 18,
+      "text": "· 정적 호스팅 (Vercel, Netlify, AWS S3+CloudFront)",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_628",
+      "x": 80,
+      "y": 126,
+      "width": 133,
+      "height": 18,
+      "text": "· Docker 컨테이너 배포 개요",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_629",
+      "x": 80,
+      "y": 148,
+      "width": 196,
+      "height": 18,
+      "text": "· GitHub Actions CI/CD 파이프라인",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_630",
+      "x": 80,
+      "y": 170,
+      "width": 168,
+      "height": 18,
+      "text": "· 환경별 배포 전략 (스테이징, 프로덕션)",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_631",
+      "x": 80,
+      "y": 192,
+      "width": 49,
+      "height": 18,
+      "text": "· 롤백 전략",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_632",
+      "x": 80,
+      "y": 214,
+      "width": 119,
+      "height": 18,
+      "text": "· Feature Flag 개요",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_633",
+      "x": 80,
+      "y": 236,
+      "width": 91,
+      "height": 18,
+      "text": "· 배포 모니터링과 알림",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "line",
+      "id": "l_634",
+      "x": 60,
+      "y": 248,
+      "width": 600,
+      "height": 0,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          600,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        600,
+        0
+      ]
+    },
+    {
+      "type": "rectangle",
+      "id": "r_635",
+      "x": 60,
+      "y": 252,
+      "width": 600,
+      "height": 108,
+      "backgroundColor": "#5c1a1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#ef4444",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_636",
+      "x": 60,
+      "y": 252,
+      "width": 600,
+      "height": 32,
+      "text": "다루지 않는 것",
+      "fontSize": 16,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_635"
+    },
+    {
+      "type": "text",
+      "id": "t_637",
+      "x": 80,
+      "y": 284,
+      "width": 140,
+      "height": 18,
+      "text": "· Kubernetes/오케스트레이션",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_638",
+      "x": 80,
+      "y": 306,
+      "width": 105,
+      "height": 18,
+      "text": "· Terraform/IaC",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_639",
+      "x": 80,
+      "y": 328,
+      "width": 154,
+      "height": 18,
+      "text": "· AWS/GCP/Azure 서비스 상세",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_640",
+      "x": 80,
+      "y": 350,
+      "width": 105,
+      "height": 18,
+      "text": "· 도메인/SSL 설정 상세",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

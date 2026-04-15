@@ -1,0 +1,527 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_915",
+      "x": 130,
+      "y": 10,
+      "width": 143,
+      "height": 26,
+      "text": "프로젝트 진행 체크리스트",
+      "fontSize": 22,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "r_916",
+      "x": 50,
+      "y": 50,
+      "width": 550,
+      "height": 42,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_917",
+      "x": 50,
+      "y": 50,
+      "width": 550,
+      "height": 42,
+      "text": "1단계: 설계 (1~2일)",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_916"
+    },
+    {
+      "type": "text",
+      "id": "t_918",
+      "x": 70,
+      "y": 80,
+      "width": 192,
+      "height": 16,
+      "text": "요구사항 정의, 기술 스택 선택, 폴더 구조, 데이터 모델",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "a_919",
+      "x": 325,
+      "y": 92,
+      "width": 0,
+      "height": 10,
+      "strokeColor": "#555555",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        10
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "r_920",
+      "x": 50,
+      "y": 105,
+      "width": 550,
+      "height": 42,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_921",
+      "x": 50,
+      "y": 105,
+      "width": 550,
+      "height": 42,
+      "text": "2단계: 기반 구축 (1~2일)",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_920"
+    },
+    {
+      "type": "text",
+      "id": "t_922",
+      "x": 70,
+      "y": 135,
+      "width": 276,
+      "height": 16,
+      "text": "프로젝트 생성, ESLint/Prettier, Tailwind, Path Alias",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "a_923",
+      "x": 325,
+      "y": 147,
+      "width": 0,
+      "height": 10,
+      "strokeColor": "#555555",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        10
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "r_924",
+      "x": 50,
+      "y": 160,
+      "width": 550,
+      "height": 42,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_925",
+      "x": 50,
+      "y": 160,
+      "width": 550,
+      "height": 42,
+      "text": "3단계: 핵심 기능 (5~10일)",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_924"
+    },
+    {
+      "type": "text",
+      "id": "t_926",
+      "x": 70,
+      "y": 190,
+      "width": 240,
+      "height": 16,
+      "text": "인증, CRUD, TanStack Query, RHF+Zod, 에러/로딩",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "a_927",
+      "x": 325,
+      "y": 202,
+      "width": 0,
+      "height": 10,
+      "strokeColor": "#555555",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        10
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "r_928",
+      "x": 50,
+      "y": 215,
+      "width": 550,
+      "height": 42,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_929",
+      "x": 50,
+      "y": 215,
+      "width": 550,
+      "height": 42,
+      "text": "4단계: 품질 향상 (2~3일)",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_928"
+    },
+    {
+      "type": "text",
+      "id": "t_930",
+      "x": 70,
+      "y": 245,
+      "width": 222,
+      "height": 16,
+      "text": "TypeScript strict, 반응형, 다크모드, 접근성, 성능",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "a_931",
+      "x": 325,
+      "y": 257,
+      "width": 0,
+      "height": 10,
+      "strokeColor": "#555555",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        10
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "r_932",
+      "x": 50,
+      "y": 270,
+      "width": 550,
+      "height": 42,
+      "backgroundColor": "#5c3d1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_933",
+      "x": 50,
+      "y": 270,
+      "width": 550,
+      "height": 42,
+      "text": "5단계: 테스트 (2~3일)",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_932"
+    },
+    {
+      "type": "text",
+      "id": "t_934",
+      "x": 70,
+      "y": 300,
+      "width": 240,
+      "height": 16,
+      "text": "RTL+MSW, Custom Hook 테스트, Playwright E2E",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "a_935",
+      "x": 325,
+      "y": 312,
+      "width": 0,
+      "height": 10,
+      "strokeColor": "#555555",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        10
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "r_936",
+      "x": 50,
+      "y": 325,
+      "width": 550,
+      "height": 42,
+      "backgroundColor": "#5c1a1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#ef4444",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_937",
+      "x": 50,
+      "y": 325,
+      "width": 550,
+      "height": 42,
+      "text": "6단계: 배포+모니터링 (1~2일)",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_936"
+    },
+    {
+      "type": "text",
+      "id": "t_938",
+      "x": 70,
+      "y": 355,
+      "width": 270,
+      "height": 16,
+      "text": "GitHub Actions CI, Vercel, Sentry, Source Map",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "a_939",
+      "x": 325,
+      "y": 367,
+      "width": 0,
+      "height": 10,
+      "strokeColor": "#555555",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        10
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "r_940",
+      "x": 50,
+      "y": 380,
+      "width": 550,
+      "height": 42,
+      "backgroundColor": "#555555",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_941",
+      "x": 50,
+      "y": 380,
+      "width": 550,
+      "height": 42,
+      "text": "7단계: 문서화 (1일)",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_940"
+    },
+    {
+      "type": "text",
+      "id": "t_942",
+      "x": 70,
+      "y": 410,
+      "width": 168,
+      "height": 16,
+      "text": "README, 아키텍처 다이어그램, 기술 결정 근거",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

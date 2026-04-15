@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="854" viewBox="-10 -20 474 675">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="474" height="675" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">Step 10 핵심 개념 관계도</text>
+  <rect x="20" y="45" width="414" height="580" rx="62.099999999999994" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="227" y="120.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Stack Reconciler (React 15 이전)</text>
+  <text x="227" y="138.29999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 동기적 재귀 → 대규모 트리에서 UI 멈춤</text>
+  <text x="227" y="156.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">한계 극복</text>
+  <text x="227" y="174.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="227" y="192.89999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Fiber Architecture (React 16+)</text>
+  <text x="227" y="211.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Fiber Node: 컴포넌트당 1개, State/Effect 보관</text>
+  <text x="227" y="229.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 연결 리스트 구조 (child/sibling/return)</text>
+  <text x="227" y="247.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Double Buffering: current + workInProgress</text>
+  <text x="227" y="265.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Work Unit 단위로 중단/재개 가능</text>
+  <text x="227" y="283.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">기반 위에</text>
+  <text x="227" y="302.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="227" y="320.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Render Phase (중단 가능, 순수)</text>
+  <text x="227" y="338.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 컴포넌트 함수 호출, Diff 수행</text>
+  <text x="227" y="356.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· DOM을 건드리지 않음</text>
+  <text x="227" y="374.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="227" y="393.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Commit Phase (중단 불가, 동기)</text>
+  <text x="227" y="411.29999999999995" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· DOM 변경 반영</text>
+  <text x="227" y="429.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· useLayoutEffect 실행</text>
+  <text x="227" y="447.70000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Paint 후 useEffect 실행</text>
+  <text x="227" y="465.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Concurrent Rendering (React 18+)</text>
+  <text x="227" y="484.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="227" y="502.29999999999995" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Time Slicing + Priority Scheduling</text>
+  <text x="227" y="520.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 긴급(사용자 입력) &gt; 비긴급(데이터 갱신)</text>
+  <text x="227" y="538.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· useTransition, useDeferredValue</text>
+  <text x="227" y="556.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">React 19: React Compiler → 자동 메모이제이션</text>
+</svg>

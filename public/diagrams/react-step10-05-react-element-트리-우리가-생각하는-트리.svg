@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="610" height="653" viewBox="-10 -20 610 653">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="610" height="653" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">React Element 트리 (우리가 생각하는 트리)</text>
+  <rect x="20" y="45" width="550" height="558" rx="82.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="295" y="118.20000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">App</text>
+  <text x="295" y="136.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">/ | \</text>
+  <text x="295" y="154.60000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Header Content Footer</text>
+  <text x="295" y="172.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">|</text>
+  <text x="295" y="191" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Article</text>
+  <text x="295" y="209.20000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">/ \</text>
+  <text x="295" y="227.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">P1  P2</text>
+  <text x="295" y="245.60000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Fiber 트리 (실제 내부 구조 — child/sibling/return 연결 리스트)</text>
+  <text x="295" y="263.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">App</text>
+  <text x="295" y="282" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">child</text>
+  <text x="295" y="300.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="295" y="318.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Header  sibling  → Content  sibling  → Footer</text>
+  <text x="295" y="336.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">child</text>
+  <text x="295" y="354.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="295" y="373" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Article</text>
+  <text x="295" y="391.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">child</text>
+  <text x="295" y="409.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="295" y="427.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">P1  sibling  → P2</text>
+  <text x="295" y="445.80000000000007" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">모든 노드는 return으로 부모를 가리킨다 (역방향 링크)</text>
+  <text x="295" y="464" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">순회 순서:</text>
+  <text x="295" y="482.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">App → Header → (Header 완료, sibling) → Content → Article → P1</text>
+  <text x="295" y="500.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ (P1 완료, sibling) → P2 → (P2 완료, return) → Article 완료</text>
+  <text x="295" y="518.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ (return) → Content 완료 → (sibling) → Footer → (Footer 완료)</text>
+  <text x="295" y="536.8000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ App 완료</text>
+</svg>

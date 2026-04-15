@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="320" viewBox="-10 -20 440 235">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="440" height="235" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">Named Export  Default Export</text>
+  <rect x="20" y="45" width="380" height="140" rx="21" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="210" y="82.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">파일당 개수  여러 개 가능  최대 1개</text>
+  <text x="210" y="100.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">import 형태  { name } 중괄호 필수  중괄호 없이 자유 이름</text>
+  <text x="210" y="118.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">이름 일치  반드시 일치  자유롭게 지정</text>
+  <text x="210" y="136.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">IDE 지원  자동 완성 용이  이름 추적 어려움</text>
+  <text x="210" y="154.89999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">일반적 사용  유틸 함수, 상수, 타입  컴포넌트, 클래스</text>
+</svg>

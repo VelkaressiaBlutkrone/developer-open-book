@@ -49,34 +49,7 @@ Custom Hook은 이 문제를 근본적으로 해결한다. `useFetch`를 한 곳
 
 ### 1.3 개념 지도 — Custom Hook의 전체 그림
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                  Custom Hook 개념 지도                           │
-│                                                                  │
-│  문제: 컴포넌트에 로직이 혼재                                    │
-│  ┌─────────────────────────────────┐                            │
-│  │ UserProfile                     │                            │
-│  │   · 패칭 로직 (State + Effect)  │ ← 관심사 혼재              │
-│  │   · 에러 처리 로직              │                            │
-│  │   · UI 렌더링 (JSX)             │                            │
-│  └─────────────────────────────────┘                            │
-│                   ↓ 추출                                         │
-│  해결: 관심사 분리                                               │
-│  ┌─────────────────┐  ┌──────────────────────┐                  │
-│  │ useFetch()      │  │ UserProfile          │                  │
-│  │ · 패칭 State    │  │ · UI 렌더링만        │                  │
-│  │ · Effect        │  │ · const { data } =   │                  │
-│  │ · 에러 처리     │  │     useFetch(url)    │                  │
-│  └─────────────────┘  └──────────────────────┘                  │
-│         ↑ 재사용                                                 │
-│  ProductDetail, OrderList, CommentThread...                      │
-│                                                                  │
-│  합성 패턴:                                                      │
-│  useDebounce + useFetch → useSearch                              │
-│  useIntersectionObserver + usePaginatedFetch → useInfiniteScroll │
-│                                                                  │
-└─────────────────────────────────────────────────────────────────┘
-```
+![Custom Hook 개념 지도](/developer-open-book/diagrams/react-step16-concept-map.svg)
 
 ### 1.4 반복되는 패턴의 발견
 
@@ -152,24 +125,7 @@ Custom Hook은 아닌 것:
 
 ### 1.6 이 Step에서 다루는 범위
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  다루는 것                                               │
-│  · Custom Hook의 정의와 규칙                             │
-│  · "로직 재사용"과 "State 공유"의 차이                   │
-│  · 관심사 분리(SoC) 원칙의 적용                         │
-│  · Custom Hook 추출 시점과 판단 기준                     │
-│  · Hook API 설계 원칙 (네이밍, 반환값, 인터페이스)       │
-│  · Hook 합성(Composition) 패턴                          │
-│  · 실전 Custom Hook 라이브러리 설계                     │
-│  · 테스트 전략 개요                                      │
-├─────────────────────────────────────────────────────────┤
-│  다루지 않는 것                                          │
-│  · 전역 상태 관리 (Step 25~26)                          │
-│  · TanStack Query의 커스텀 쿼리 훅 (Step 23)           │
-│  · 테스트 구현 상세 (Step 36)                            │
-└─────────────────────────────────────────────────────────┘
-```
+![Step 16 다루는 범위](/developer-open-book/diagrams/react-step16-scope.svg)
 
 ---
 
@@ -191,37 +147,7 @@ Custom Hook을 처음 배울 때 가장 흔한 오해는 "같은 Hook을 여러 
 
 Custom Hook을 호출할 때마다 **독립적인 State 인스턴스**가 생성된다. Hook은 클래스의 정적 속성(static property)이 아니라, 호출할 때마다 새로운 상태를 초기화하는 함수다.
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│  ⚠️ 가장 중요한 개념: Custom Hook은 State를 공유하지 않는다  │
-│                                                              │
-│  function useCounter(initial = 0) {                         │
-│    const [count, setCount] = useState(initial);             │
-│    const increment = () => setCount(c => c + 1);            │
-│    return { count, increment };                             │
-│  }                                                          │
-│                                                              │
-│  function ComponentA() {                                    │
-│    const { count, increment } = useCounter(0);              │
-│    // count = 0 → 독립적인 State 인스턴스 A                 │
-│  }                                                          │
-│                                                              │
-│  function ComponentB() {                                    │
-│    const { count, increment } = useCounter(0);              │
-│    // count = 0 → 독립적인 State 인스턴스 B                 │
-│  }                                                          │
-│                                                              │
-│  · ComponentA의 count와 ComponentB의 count는 완전히 독립!   │
-│  · A에서 increment해도 B의 count는 변하지 않는다             │
-│  · 공유되는 것은 "로직(패턴)"이지 "값(State)"이 아니다       │
-│                                                              │
-│  State를 공유하려면:                                         │
-│    → Lifting State Up (Step 5)                              │
-│    → Context API (Step 25)                                  │
-│    → 전역 상태 관리 (Step 26)                                │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
-```
+![Custom Hook은 State를 공유하지 않는다](/developer-open-book/diagrams/react-step16-state-sharing.svg)
 
 ### 2.3 Custom Hook과 일반 함수의 차이
 

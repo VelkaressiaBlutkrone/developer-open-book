@@ -405,3 +405,181 @@
   .markdown-body h1 { font-size: 1.4rem; }
   .markdown-body h2 { font-size: 1.2rem; }
 }
+
+/* ===== Interactive Excalidraw Diagram ===== */
+.interactive-diagram {
+  margin: 24px 0;
+  border: 1px solid rgba(138, 101, 8, 0.3);
+  border-radius: 8px;
+  background: #1a1610;
+  overflow: hidden;
+  outline: none;
+}
+
+.interactive-diagram:focus-within {
+  border-color: #8a6508;
+  box-shadow: 0 0 0 2px rgba(138, 101, 8, 0.2);
+}
+
+.interactive-excalidraw-canvas {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.excalidraw-step-img {
+  position: absolute;
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.excalidraw-step-img.active {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Stepper Controls */
+.stepper-controls {
+  border-top: 1px solid rgba(138, 101, 8, 0.3);
+  padding: 12px 16px;
+  background: #1e1a14;
+}
+
+.stepper-progress-track {
+  height: 4px;
+  background: #2a2520;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.stepper-progress-fill {
+  height: 100%;
+  background: #8a6508;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.stepper-progress-thumb {
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  background: #8a6508;
+  border: 2px solid #1e1a14;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: left 0.3s ease;
+}
+
+.stepper-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.stepper-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stepper-btn {
+  background: none;
+  border: 1px solid rgba(138, 101, 8, 0.4);
+  color: #c4b78a;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.stepper-btn:hover:not(:disabled) {
+  background: rgba(138, 101, 8, 0.15);
+  border-color: #8a6508;
+}
+
+.stepper-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.stepper-btn-play {
+  background: #8a6508;
+  border-color: #8a6508;
+  color: #1e1a14;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.stepper-btn-play:hover {
+  background: #a07a0a !important;
+  border-color: #a07a0a !important;
+}
+
+.stepper-counter {
+  font-size: 0.8rem;
+  color: #8a7a5a;
+  font-variant-numeric: tabular-nums;
+  min-width: 80px;
+  text-align: center;
+}
+
+.stepper-speed {
+  display: flex;
+  gap: 2px;
+  background: #2a2520;
+  border-radius: 6px;
+  padding: 2px;
+}
+
+.stepper-speed-btn {
+  background: none;
+  border: none;
+  color: #6a5a3a;
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.stepper-speed-btn:hover {
+  color: #c4b78a;
+}
+
+.stepper-speed-btn.active {
+  background: #8a6508;
+  color: #1e1a14;
+}
+
+.stepper-label {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: #2a2520;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #8a7a5a;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .stepper-buttons { flex-wrap: wrap; gap: 8px; }
+  .stepper-speed { order: 3; width: 100%; justify-content: center; }
+  .stepper-counter { order: 2; }
+  .stepper-nav { order: 1; }
+}

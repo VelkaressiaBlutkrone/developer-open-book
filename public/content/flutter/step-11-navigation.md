@@ -26,20 +26,7 @@
 
 모바일 앱은 단일 화면이 아니라 **여러 화면(Screen/Page)의 집합**이다. 사용자가 버튼을 탭하면 다음 화면으로 이동하고, 뒤로가기를 누르면 이전 화면으로 돌아온다. 이 흐름을 관리하는 것이 **내비게이션(Navigation)**이다.
 
-```
-앱 화면 흐름 예시 (쇼핑 앱)
-──────────────────────────────────────────────────────
-  홈 화면
-    ↓ 상품 탭
-  상품 상세 화면
-    ↓ 구매하기 탭
-  결제 화면
-    ↓ 결제 완료
-  완료 화면 (홈으로 돌아가기 → 스택 전부 제거)
-
-  + 어느 화면에서나 뒤로가기 → 이전 화면으로 복귀
-──────────────────────────────────────────────────────
-```
+![쇼핑 앱 화면 흐름](/developer-open-book/diagrams/flutter-step11-shopping-flow.svg)
 
 ### 1.2 Flutter의 두 가지 내비게이션 방식
 
@@ -152,12 +139,7 @@ Navigator.pushNamedAndRemoveUntil(
 
 **각 메서드 스택 변화 시각화:**
 
-```
-push:                  [A] → [A, B]
-pop:                   [A, B] → [A]
-pushReplacement:       [A, B] → [A, C]   (B가 C로 교체)
-pushAndRemoveUntil(/C, false): [A, B] → [C]
-```
+![Navigator 스택 메서드 시각화](/developer-open-book/diagrams/flutter-step11-stack-methods.svg)
 
 ---
 
@@ -293,17 +275,7 @@ Hero(
 
 **Hero 애니메이션 동작 원리:**
 
-```
-Navigator.push() 호출
-      ↓
-Flutter가 동일 tag의 Hero 위젯을 두 화면에서 탐색
-      ↓
-전환 중: Hero 위젯이 오버레이 레이어로 올라옴
-      ↓
-화면 A의 위치·크기 → 화면 B의 위치·크기로 보간(interpolation)
-      ↓
-전환 완료: Hero가 화면 B에 안착
-```
+![Hero 애니메이션 동작 원리](/developer-open-book/diagrams/flutter-step11-hero-principle.svg)
 
 > ⚠️ **함정 주의:** Hero의 `tag`는 현재 Navigator 스택 내에서 **유일**해야 한다. 목록 화면에서 여러 아이템에 같은 tag를 쓰면 오류가 발생한다. 아이템 ID 등을 포함해 `'product-${product.id}'`처럼 고유하게 만들어야 한다.
 
@@ -391,23 +363,7 @@ context.pop();                      // 뒤로가기
 
 ### 4.1 쇼핑 앱의 내비게이션 스택 설계
 
-```
-앱 흐름 설계
-──────────────────────────────────────────────────────
-  [스플래시] → pushReplacement([로그인]) → pushReplacement([홈])
-       ↓ 로그인 유지 시
-  pushReplacement([홈])
-
-  [홈] → push([상품 상세])
-       → push([장바구니])
-       → push([결제])
-       → pushAndRemoveUntil([결제 완료], false)  ← 스택 정리
-
-  [뒤로가기]:
-  [결제] → pop → [장바구니] → pop → [상품 상세] → pop → [홈]
-  (결제 완료 후에는 뒤로가기 없음 → pushAndRemoveUntil 덕분)
-──────────────────────────────────────────────────────
-```
+![쇼핑 앱 내비게이션 스택 설계](/developer-open-book/diagrams/flutter-step11-nav-stack-design.svg)
 
 ### 4.2 사진 선택 화면: pop으로 결과 반환
 

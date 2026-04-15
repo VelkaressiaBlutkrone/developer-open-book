@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="975" viewBox="-10 -20 553.5 899">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="553.5" height="899" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Step 25 핵심 요약</text>
+  <rect x="20" y="45" width="493.5" height="804" rx="74.02499999999999" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 25 핵심 요약</text>
+  <text x="40" y="105.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. Context = Props 없이 트리를 관통하여 데이터를 전달한다</text>
+  <text x="40" y="133.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ createContext → Provider(값 제공) → useContext(값 소비)</text>
+  <text x="40" y="159.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 중간 컴포넌트가 Props를 전달하지 않아도 된다</text>
+  <text x="40" y="185.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ React 19: &lt;Context value={...}&gt; (.Provider 생략)</text>
+  <text x="40" y="213.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. useReducer + Context = 전역 상태 관리 패턴</text>
+  <text x="40" y="241.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Provider에서 useReducer로 State 생성</text>
+  <text x="40" y="267.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Context로 State와 dispatch를 하위 트리에 제공</text>
+  <text x="40" y="293.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Custom Hook으로 캡슐화 (useCart, useAuth 등)</text>
+  <text x="40" y="321.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. Context의 리렌더링 문제를 이해해야 한다 ★</text>
+  <text x="40" y="349.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Provider value 변경 → 모든 소비자 리렌더링</text>
+  <text x="40" y="375.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ React.memo로도 방지 불가 (useContext는 memo 우회)</text>
+  <text x="40" y="401.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 자주 변하는 값을 Context에 넣으면 성능 문제</text>
+  <text x="40" y="429.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. 리렌더링 최적화 4가지 전략</text>
+  <text x="40" y="457.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Context 분리: 관심사별로 다른 Context 사용</text>
+  <text x="40" y="483.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ State/Dispatch 분리: dispatch는 안정적 참조</text>
+  <text x="40" y="509.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ useMemo로 value 안정화: 객체 참조 안정화</text>
+  <text x="40" y="535.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ children 패턴: Provider의 리렌더링이 자식에 전파 방지</text>
+  <text x="40" y="563.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">5. Context가 적합한 데이터: 변경이 드문 전역 값</text>
+  <text x="40" y="591.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 테마, 인증, 로케일, 기능 플래그</text>
+  <text x="40" y="617.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 변경 빈도가 낮고, 앱 전체에서 필요한 값</text>
+  <text x="40" y="645.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">6. Context가 부적합한 데이터</text>
+  <text x="40" y="673.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 자주 변하는 상태 (폼 입력, 카운터, 위치) → Zustand</text>
+  <text x="40" y="699.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 서버 데이터 (API 응답) → TanStack Query</text>
+  <text x="40" y="725.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 부분 구독이 필요한 복잡한 상태 → Zustand</text>
+  <text x="40" y="753.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">7. Custom Hook으로 Context를 캡슐화한다</text>
+  <text x="40" y="781.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 컴포넌트가 Context의 존재를 모르게 한다</text>
+  <text x="40" y="807.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Provider 밖에서 사용 시 명확한 에러 메시지</text>
+  <text x="40" y="833.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 구현 변경 시 Hook 인터페이스 유지</text>
+</svg>

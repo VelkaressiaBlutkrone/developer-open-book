@@ -26,17 +26,7 @@
 
 Flutter의 모든 Widget은 불변(immutable)이다. 그렇다면 "상태가 변하는 UI"는 어떻게 구현하는가? Flutter는 이 문제를 Widget을 두 종류로 나눠 해결한다.
 
-```
-Flutter의 두 가지 Widget
-
-  StatelessWidget         StatefulWidget
-  ─────────────────       ──────────────────────────
-  상태 없음               상태 있음 (State 객체 분리)
-  한 번 그리면 끝         setState() 호출 시 rebuild
-  단순·경량               생명주기 관리 필요
-  부모에게서 받은         자체적으로 변하는 데이터
-  데이터만 표시           를 가질 수 있음
-```
+![Flutter의 두 가지 Widget](/developer-open-book/diagrams/flutter-step05-two-widgets.svg)
 
 ### 1.2 State 분리 설계의 핵심 의도
 
@@ -46,25 +36,7 @@ Flutter의 두 가지 Widget
 
 ### 1.3 전체 개념 지도
 
-```
-Widget 종류
-    │
-    ├── StatelessWidget
-    │       └── build() 하나만 구현
-    │
-    └── StatefulWidget
-            ├── createState() → State 생성
-            └── State 객체
-                    ├── 프로퍼티 (가변 상태 데이터)
-                    ├── Lifecycle 메서드
-                    │     initState()
-                    │     didChangeDependencies()
-                    │     build()
-                    │     didUpdateWidget()
-                    │     deactivate()
-                    │     dispose()
-                    └── setState() → rebuild 예약
-```
+![Widget 종류 개념 지도](/developer-open-book/diagrams/flutter-step05-concept-map.svg)
 
 ---
 

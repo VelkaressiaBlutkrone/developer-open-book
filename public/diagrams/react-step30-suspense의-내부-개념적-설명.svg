@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="976" viewBox="-10 -20 536.5 873">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="536.5" height="873" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Suspense의 내부 (개념적 설명)</text>
+  <rect x="20" y="45" width="476.5" height="778" rx="71.475" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Suspense의 내부 (개념적 설명)</text>
+  <text x="40" y="105.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. 컴포넌트가 렌더링된다</text>
+  <text x="40" y="135.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. 컴포넌트 내부에서 use(promise)를 호출한다</text>
+  <text x="40" y="165.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. Promise가 아직 pending이면:</text>
+  <text x="40" y="193.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· React가 Promise를 &quot;throw&quot;한다 (에러가 아닌 Promise를 던짐!)</text>
+  <text x="40" y="219.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 가장 가까운 &lt;Suspense&gt;가 이를 잡는다 (ErrorBoundary와 유사)</text>
+  <text x="40" y="245.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· &lt;Suspense&gt;가 fallback을 렌더링한다</text>
+  <text x="40" y="273.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. Promise가 resolve되면:</text>
+  <text x="40" y="301.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· React가 컴포넌트를 다시 렌더링한다</text>
+  <text x="40" y="327.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· use(promise)가 resolve된 값을 반환한다</text>
+  <text x="40" y="353.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· fallback이 실제 컴포넌트로 교체된다</text>
+  <text x="40" y="381.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">5. Promise가 reject되면:</text>
+  <text x="40" y="409.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 가장 가까운 ErrorBoundary가 에러를 잡는다</text>
+  <text x="40" y="436.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">개념적 의사코드:</text>
+  <text x="40" y="462.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">function Suspense({ fallback, children }) {</text>
+  <text x="40" y="488.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">try {</text>
+  <text x="40" y="514.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">return render(children);</text>
+  <text x="40" y="540.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">} catch (thrown) {</text>
+  <text x="40" y="566.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">if (thrown instanceof Promise) {</text>
+  <text x="40" y="592.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">show(fallback);</text>
+  <text x="40" y="618.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">thrown.then(() =&gt; retry(children));</text>
+  <text x="40" y="644.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">} else {</text>
+  <text x="40" y="670.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">throw thrown; // 일반 에러 → ErrorBoundary가 처리</text>
+  <text x="40" y="696.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">}</text>
+  <text x="40" y="722.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">}</text>
+  <text x="40" y="748.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">}</text>
+  <text x="40" y="774.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">⚠️ 실제 내부 구현은 Fiber Architecture와 결합되어 훨씬 복잡하지만</text>
+  <text x="40" y="800.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&quot;Promise를 throw하고 Suspense가 잡는다&quot;라는 멘탈 모델은 정확하다</text>
+</svg>

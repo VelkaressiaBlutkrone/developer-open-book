@@ -1,0 +1,22 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":120,"y":10,"text":"const Widget 동작 비교","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":320,"height":30,"opacity":100},
+    {"type":"text","id":"sub1","x":80,"y":55,"text":"const Text('Flutter')","fontSize":16,"strokeColor":"#22c55e","fontFamily":2,"width":220,"height":22,"opacity":100},
+    {"type":"rectangle","id":"c1","x":80,"y":85,"width":300,"height":35,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"c1_l","x":90,"y":92,"width":280,"height":20,"text":"Widget == 이전 Widget? → 동일 객체","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"c1","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"a1","x":230,"y":120,"width":0,"height":15,"strokeColor":"#a0a0a0","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[0,15]],"lastCommittedPoint":[0,15],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"c2","x":80,"y":140,"width":300,"height":35,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"c2_l","x":90,"y":147,"width":280,"height":20,"text":"Element·RenderObject 재사용, 비교 연산 없음","fontSize":12,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"c2","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"sub2","x":430,"y":55,"text":"Text('Flutter') (const 없음)","fontSize":16,"strokeColor":"#ef4444","fontFamily":2,"width":260,"height":22,"opacity":100},
+    {"type":"rectangle","id":"n1","x":430,"y":85,"width":300,"height":35,"backgroundColor":"#5c1a1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#ef4444","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"n1_l","x":440,"y":92,"width":280,"height":20,"text":"새 객체 생성 → 이전 Widget과 내용 비교","fontSize":13,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"n1","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"a2","x":580,"y":120,"width":0,"height":15,"strokeColor":"#a0a0a0","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[0,15]],"lastCommittedPoint":[0,15],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"n2","x":430,"y":140,"width":300,"height":35,"backgroundColor":"#5c3d1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"n2_l","x":440,"y":147,"width":280,"height":20,"text":"같다 해도 비교 연산 비용 발생","fontSize":13,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"n2","textAlign":"center","verticalAlign":"middle","opacity":100}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

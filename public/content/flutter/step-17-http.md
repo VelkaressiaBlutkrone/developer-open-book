@@ -27,17 +27,7 @@
 
 모바일 앱의 대부분 기능은 서버와의 데이터 교환에 의존한다.
 
-```
-앱 ←→ 서버 통신 흐름
-──────────────────────────────────────────────────────
-  앱                          서버
-  ───                         ─────
-  "상품 목록 줘"  ──GET /products──→  데이터베이스 조회
-                ←──JSON 응답────────  JSON 반환
-  JSON 파싱 → Dart 모델
-  UI에 표시
-──────────────────────────────────────────────────────
-```
+![앱 서버 통신 흐름](/developer-open-book/diagrams/flutter-step17-app-server-flow.svg)
 
 ### 1.2 Flutter HTTP 패키지 비교
 
@@ -88,16 +78,7 @@
 
 #### HTTP 메서드와 CRUD 매핑
 
-```
-CRUD          HTTP 메서드   URL 예시               설명
-──────────    ───────────   ───────────────────    ─────────────
-Create   →    POST          /api/products          새 상품 생성
-Read     →    GET           /api/products          전체 목록 조회
-             GET           /api/products/42        단일 조회
-Update   →    PUT           /api/products/42        전체 수정
-             PATCH         /api/products/42        일부 수정
-Delete   →    DELETE        /api/products/42        삭제
-```
+![CRUD HTTP 메서드 매핑](/developer-open-book/diagrams/flutter-step17-crud-methods.svg)
 
 #### HTTP 상태 코드 핵심 정리
 
@@ -554,22 +535,7 @@ client.request(request).listen((response) {
 
 ### 4.1 레이어드 아키텍처로 HTTP 통신 구조화
 
-```
-실무 앱의 HTTP 통신 레이어 구조
-──────────────────────────────────────────────────────
-  UI 레이어 (Widget)
-    ↓ 데이터 요청
-  ViewModel / Notifier (Riverpod)
-    ↓ 비즈니스 로직
-  Repository 레이어
-    ↓ 데이터 소스 추상화
-  DataSource 레이어
-    ↓ 실제 API 호출
-  Dio + Interceptors
-    ↓ HTTP 요청
-  서버 (REST API)
-──────────────────────────────────────────────────────
-```
+![실무 앱의 HTTP 통신 레이어 구조](/developer-open-book/diagrams/flutter-step17-http-layer-structure.svg)
 
 ```dart
 // DataSource: 실제 API 호출

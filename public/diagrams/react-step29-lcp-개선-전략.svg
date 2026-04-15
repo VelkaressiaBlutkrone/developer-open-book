@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="759" viewBox="-10 -20 502.5 635.4">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="502.5" height="635.4" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">LCP 개선 전략:</text>
+  <rect x="20" y="45" width="442.5" height="518" rx="66.375" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">LCP 개선 전략:</text>
+  <text x="40" y="105.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. 이미지 최적화 (WebP, 적절한 크기, preload)</text>
+  <text x="40" y="135.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. 코드 분할로 초기 JS 번들 축소</text>
+  <text x="40" y="165.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. SSR/SSG로 서버에서 HTML 제공</text>
+  <text x="40" y="195.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. render-blocking CSS 최소화 (critical CSS 인라인)</text>
+  <text x="40" y="225.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">5. 서버 응답 시간 개선 (CDN, 캐싱)</text>
+  <text x="40" y="254.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">INP 개선 전략:</text>
+  <text x="40" y="281.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. 무거운 JS 실행 최소화 (useMemo, 코드 분할)</text>
+  <text x="40" y="311.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. useTransition으로 긴급/비긴급 업데이트 분리</text>
+  <text x="40" y="341.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. Virtualization으로 DOM 노드 수 감소</text>
+  <text x="40" y="371.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. Long Task 분할 (yield to main thread)</text>
+  <text x="40" y="401.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">5. Third-party 스크립트 지연 로드</text>
+  <text x="40" y="430.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">CLS 개선 전략:</text>
+  <text x="40" y="457.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. 이미지/비디오에 width, height 속성 명시</text>
+  <text x="40" y="487.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. 동적 콘텐츠에 미리 공간 확보 (skeleton, placeholder)</text>
+  <text x="40" y="517.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. 웹 폰트: font-display: swap + preload</text>
+  <text x="40" y="547.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. 광고/임베드에 고정 크기 컨테이너</text>
+  <text x="40" y="577.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">5. 조건부 렌더링으로 인한 레이아웃 이동 방지</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="299" viewBox="20 -20 760 299">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="760" height="299" rx="12" fill="#141414"/>
+  <text x="50" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">채팅 앱 알림 시나리오별 처리</text>
+  <rect x="50" y="60" width="700" height="55" rx="8.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="400" y="91.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">같은 채팅방 열려있음  →  알림 표시 안 함, 메시지만 추가</text>
+  <rect x="50" y="127" width="700" height="55" rx="8.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="400" y="158.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">다른 화면에 있음  →  인앱 배너로 알림 + 바로가기</text>
+  <rect x="50" y="194" width="700" height="55" rx="8.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="400" y="225.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">백그라운드/종료  →  시스템 알림 → 탭하면 해당 채팅방 이동</text>
+</svg>

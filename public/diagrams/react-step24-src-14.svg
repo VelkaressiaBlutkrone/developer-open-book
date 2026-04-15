@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="675.5" height="747" viewBox="-10 -15 675.5 747">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="675.5" height="747" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">src/</text>
+  <rect x="20" y="50" width="615.5" height="652" rx="92.325" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── lib/</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── apiClient.js              ← Axios 인스턴스 + 인터셉터</text>
+  <text x="40" y="135.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">── normalizeError.js         ← 에러 표준화</text>
+  <text x="40" y="161.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">── queryClient.js            ← QueryClient + 전역 에러 처리</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── services/</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── authService.js            ← 로그인, 회원가입, 토큰 갱신</text>
+  <text x="40" y="239.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── userService.js            ← 사용자 CRUD + 프로필</text>
+  <text x="40" y="265.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── productService.js         ← 상품 조회, 검색</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── cartService.js            ← 장바구니 CRUD</text>
+  <text x="40" y="317.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── orderService.js           ← 주문 생성, 조회</text>
+  <text x="40" y="343.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── reviewService.js          ← 리뷰 CRUD</text>
+  <text x="40" y="369.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── hooks/</text>
+  <text x="40" y="395.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── useAuth.js                ← 인증 상태 + 로그인/로그아웃</text>
+  <text x="40" y="421.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── useUsers.js               ← 사용자 쿼리/뮤테이션</text>
+  <text x="40" y="447.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── useProducts.js            ← 상품 쿼리 (목록, 상세, 검색)</text>
+  <text x="40" y="473.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── useCart.js                ← 장바구니 쿼리/뮤테이션 + 낙관적 업데이트</text>
+  <text x="40" y="499.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── useOrders.js              ← 주문 쿼리/뮤테이션</text>
+  <text x="40" y="525.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── useReviews.js             ← 리뷰 쿼리/뮤테이션</text>
+  <text x="40" y="551.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── components/                   ← UI 컴포넌트 (Hook 사용)</text>
+  <text x="40" y="577.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── pages/                        ← 페이지 컴포넌트</text>
+  <text x="40" y="603.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── App.jsx                       ← QueryClientProvider + Router</text>
+</svg>

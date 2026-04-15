@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="586" viewBox="-10 -15 560 547">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="560" height="547" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">다루는 것</text>
+  <rect x="20" y="55" width="500" height="268" rx="40.199999999999996" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="0.4"/>
+  <text x="35" y="81.2" fill="#22c55e" font-family="Nunito, sans-serif" font-size="18" opacity="1">다루는 것</text>
+  <text x="45" y="107.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Core Web Vitals (LCP, INP, CLS)</text>
+  <text x="45" y="133.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 코드 분할(Code Splitting)과 React.lazy</text>
+  <text x="45" y="159.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 라우트 기반 코드 분할</text>
+  <text x="45" y="185.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 번들 분석과 최적화</text>
+  <text x="45" y="211.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 이미지 최적화 전략</text>
+  <text x="45" y="237.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Virtualization(가상화)으로 대규모 리스트 처리</text>
+  <text x="45" y="263.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Lighthouse를 활용한 성능 진단</text>
+  <text x="45" y="289.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 성능 최적화 우선순위 프레임워크</text>
+  <rect x="20" y="338" width="500" height="164" rx="24.599999999999998" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="0.4"/>
+  <text x="35" y="364.2" fill="#ef4444" font-family="Nunito, sans-serif" font-size="18" opacity="1">다루지 않는 것</text>
+  <text x="45" y="390.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 서버 최적화 (CDN, 캐싱 헤더, 압축)</text>
+  <text x="45" y="416.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · SSR/SSG 최적화 (Step 19~21에서 학습)</text>
+  <text x="45" y="442.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · React Compiler (Step 14에서 개요 학습)</text>
+  <text x="45" y="468.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Web Worker를 활용한 오프스레드 계산</text>
+</svg>

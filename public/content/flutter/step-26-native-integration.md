@@ -25,41 +25,11 @@
 
 Flutter는 자체 렌더링 엔진으로 UI를 그리지만, 하드웨어 기능과 OS API 접근에는 Native 코드가 필요하다.
 
-```
-Flutter만으로 불가능한 것들 → Native 연동 필요
-──────────────────────────────────────────────────────
-  ① 하드웨어 센서
-     배터리 레벨, 자이로스코프, 근접 센서
-
-  ② OS 고유 기능
-     Android: 백그라운드 서비스, AlarmManager
-     iOS: HealthKit, ARKit, CoreMotion
-
-  ③ 기존 Native SDK 통합
-     회사 내부 Android/iOS SDK
-     특정 하드웨어 제조사 SDK
-
-  ④ 성능 임계 영역
-     실시간 오디오 처리, 영상 처리
-──────────────────────────────────────────────────────
-```
+![Flutter에서 Native 연동이 필요한 경우](/developer-open-book/diagrams/flutter-step26-native-needs.svg)
 
 ### 1.2 Platform Channel vs 플러그인
 
-```
-선택 기준
-──────────────────────────────────────────────────────
-  pub.dev 플러그인 존재?
-    YES → 플러그인 사용 (battery_plus, sensors_plus 등)
-          검증된 코드, 크로스 플랫폼, 유지보수 편의
-
-    NO  → 직접 Platform Channel 구현
-          회사 내부 SDK, 특수 하드웨어, 최신 OS API
-
-  직접 구현 필요 시:
-    → 이 Step의 내용 적용
-──────────────────────────────────────────────────────
-```
+![Platform Channel 선택 기준](/developer-open-book/diagrams/flutter-step26-selection-guide.svg)
 
 ### 1.3 전체 개념 지도
 
@@ -92,54 +62,11 @@ Flutter만으로 불가능한 것들 → Native 연동 필요
 
 ### 3.1 Platform Channel 통신 흐름
 
-```
-MethodChannel 통신 흐름 (배터리 레벨 조회 예시)
-──────────────────────────────────────────────────────
-  Flutter (Dart)
-    MethodChannel('com.example/battery')
-      .invokeMethod('getBatteryLevel')
-          │
-          │ (직렬화: MessageCodec)
-          ▼
-  Platform Runner Thread (UI Thread)
-    Android: FlutterPlugin → MethodCallHandler
-    iOS:     FlutterAppDelegate → FlutterMethodChannel
-          │
-          │ (Native API 호출)
-          ▼
-  OS API
-    Android: BatteryManager.getIntProperty()
-    iOS:     UIDevice.current.batteryLevel
-          │
-          │ (역직렬화 후 result.success() 호출)
-          ▼
-  Flutter (Dart)
-    invokeMethod 결과 반환 (Future<T> 완료)
-──────────────────────────────────────────────────────
-
-주의: 모든 채널 통신은 메인(UI) 스레드에서 처리
-      → Native에서 무거운 작업은 백그라운드 스레드로 분리 필요
-```
+![MethodChannel 통신 흐름](/developer-open-book/diagrams/flutter-step26-method-channel-flow.svg)
 
 ### 3.2 지원하는 데이터 타입 (StandardMessageCodec)
 
-```
-Dart           ↔    Android (Kotlin)   ↔    iOS (Swift)
-──────────────────────────────────────────────────────
-null           ↔    null               ↔    nil
-bool           ↔    Boolean            ↔    Bool / NSNumber
-int            ↔    Int / Long         ↔    Int / NSNumber
-double         ↔    Double             ↔    Double / NSNumber
-String         ↔    String             ↔    String
-Uint8List      ↔    ByteArray          ↔    FlutterStandardTypedData
-List           ↔    List               ↔    Array
-Map            ↔    HashMap            ↔    Dictionary
-
-⚠️ 지원하지 않는 타입은 직접 변환 필요
-   DateTime → int (millisecondsSinceEpoch)
-   Enum → String
-   커스텀 객체 → Map<String, dynamic>
-```
+![Dart Android iOS 타입 매핑](/developer-open-book/diagrams/flutter-step26-platform-mapping.svg)
 
 ---
 
@@ -535,21 +462,7 @@ result.error(
 
 실무에서는 채널 코드를 별도 플러그인 패키지로 분리한다.
 
-```
-my_app/
-├── lib/
-│   └── main.dart
-│
-└── packages/
-    └── battery_channel/      ← 채널 플러그인 패키지
-          ├── lib/
-          │     └── battery_channel.dart  (Dart API)
-          ├── android/
-          │     └── src/.../BatteryPlugin.kt
-          ├── ios/
-          │     └── Classes/BatteryPlugin.swift
-          └── pubspec.yaml
-```
+![Flutter 플러그인 패키지 구조](/developer-open-book/diagrams/flutter-step26-plugin-structure.svg)
 
 ```yaml
 # my_app/pubspec.yaml

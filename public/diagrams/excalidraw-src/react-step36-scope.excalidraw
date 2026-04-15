@@ -1,0 +1,292 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "r_335",
+      "x": 50,
+      "y": 10,
+      "width": 620,
+      "height": 336,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_336",
+      "x": 50,
+      "y": 10,
+      "width": 620,
+      "height": 40,
+      "text": "Step 36 — React Testing Library",
+      "fontSize": 20,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_335"
+    },
+    {
+      "type": "rectangle",
+      "id": "r_337",
+      "x": 60,
+      "y": 50,
+      "width": 600,
+      "height": 174,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_338",
+      "x": 60,
+      "y": 50,
+      "width": 600,
+      "height": 32,
+      "text": "다루는 것",
+      "fontSize": 16,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_337"
+    },
+    {
+      "type": "text",
+      "id": "t_339",
+      "x": 80,
+      "y": 82,
+      "width": 119,
+      "height": 18,
+      "text": "· RTL의 철학과 핵심 API",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_340",
+      "x": 80,
+      "y": 104,
+      "width": 161,
+      "height": 18,
+      "text": "· 컴포넌트 렌더링, 쿼리, 이벤트 테스트",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_341",
+      "x": 80,
+      "y": 126,
+      "width": 189,
+      "height": 18,
+      "text": "· 비동기 테스트 (waitFor, findBy)",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_342",
+      "x": 80,
+      "y": 148,
+      "width": 210,
+      "height": 18,
+      "text": "· Custom Hook 테스트 (renderHook)",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_343",
+      "x": 80,
+      "y": 170,
+      "width": 91,
+      "height": 18,
+      "text": "· MSW로 API 모킹",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_344",
+      "x": 80,
+      "y": 192,
+      "width": 133,
+      "height": 18,
+      "text": "· \"무엇을 테스트할 것인가\" 전략",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_345",
+      "x": 80,
+      "y": 214,
+      "width": 84,
+      "height": 18,
+      "text": "· 테스트 구조와 패턴",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "line",
+      "id": "l_346",
+      "x": 60,
+      "y": 226,
+      "width": 600,
+      "height": 0,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          600,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        600,
+        0
+      ]
+    },
+    {
+      "type": "rectangle",
+      "id": "r_347",
+      "x": 60,
+      "y": 230,
+      "width": 600,
+      "height": 108,
+      "backgroundColor": "#5c1a1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#ef4444",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_348",
+      "x": 60,
+      "y": 230,
+      "width": 600,
+      "height": 32,
+      "text": "다루지 않는 것",
+      "fontSize": 16,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_347"
+    },
+    {
+      "type": "text",
+      "id": "t_349",
+      "x": 80,
+      "y": 262,
+      "width": 133,
+      "height": 18,
+      "text": "· E2E 테스트 (Step 37)",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_350",
+      "x": 80,
+      "y": 284,
+      "width": 126,
+      "height": 18,
+      "text": "· 스냅샷 테스트 (제한적 가치)",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_351",
+      "x": 80,
+      "y": 306,
+      "width": 133,
+      "height": 18,
+      "text": "· Vitest/Jest 설정 상세",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_352",
+      "x": 80,
+      "y": 328,
+      "width": 84,
+      "height": 18,
+      "text": "· 시각적 회귀 테스트",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

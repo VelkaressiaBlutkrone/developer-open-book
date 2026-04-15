@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="333" viewBox="-10 -20 423.00000000000006 235">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="423.00000000000006" height="235" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">1. 서론  10~15%  동기 유발 + 맥락 + 학습 목표</text>
+  <rect x="20" y="45" width="363" height="140" rx="21" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="201.5" y="82.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">2. 기본 개념·용어  20~25%  핵심 용어 정의 + 관계성</text>
+  <text x="201.5" y="100.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">3. 이론·원리  30~35%  근본 원리 심층 탐구 ★ 핵심</text>
+  <text x="201.5" y="118.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">4. 사례 연구·예시  15~20%  이론 ↔ 실제 코드 연결</text>
+  <text x="201.5" y="136.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">5. 실습  20%  이론 검증용 과제 (블룸 3~6)</text>
+  <text x="201.5" y="154.89999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">6. 핵심 정리·다음단계  5~10%  요약 + 자가진단 + 참고자료</text>
+</svg>

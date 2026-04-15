@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="295" viewBox="10 -20 660 295">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="10" y="-20" width="660" height="295" rx="12" fill="#141414"/>
+  <text x="130" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Navigator 스택 메서드 시각화</text>
+  <rect x="40" y="55" width="600" height="40" rx="6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="340" y="78.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">push:                    [A] → [A, B]</text>
+  <rect x="40" y="105" width="600" height="40" rx="6" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="340" y="128.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">pop:                      [A, B] → [A]</text>
+  <rect x="40" y="155" width="600" height="40" rx="6" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="340" y="178.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">pushReplacement:    [A, B] → [A, C]   (B가 C로 교체)</text>
+  <rect x="40" y="205" width="600" height="40" rx="6" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="340" y="228.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">pushAndRemoveUntil:  [A, B] → [C]   (전부 제거)</text>
+</svg>

@@ -26,21 +26,7 @@
 
 앱에서 사용자 입력을 받는 화면은 단순해 보이지만 실제로는 여러 가지를 동시에 처리해야 한다.
 
-```
-로그인 폼 하나에 필요한 것들
-──────────────────────────────────────────────────
-  ① 텍스트 입력 받기          TextField
-  ② 입력값 실시간 읽기         TextEditingController
-  ③ 유효성 검사               validator 함수
-  ④ 폼 전체 일괄 검증          Form + GlobalKey<FormState>
-  ⑤ 비밀번호 마스킹            obscureText
-  ⑥ 키보드 타입 지정           keyboardType
-  ⑦ 다음 필드로 포커스 이동    FocusNode + textInputAction
-  ⑧ 제출 시 저장              FormState.save()
-  ⑨ 오류 초기화               FormState.reset()
-──────────────────────────────────────────────────
-Flutter Form 시스템은 이 모든 것을 체계적으로 처리한다
-```
+![로그인 폼에 필요한 요소들](/developer-open-book/diagrams/flutter-step10-form-requirements.svg)
 
 ### 1.2 전체 개념 지도
 
@@ -74,21 +60,7 @@ Flutter Form 시스템은 이 모든 것을 체계적으로 처리한다
 
 ### 3.1 TextField vs TextFormField 선택 기준
 
-```
-TextField
-  ─────────────────────────────────────────────────
-  • Form 없이 단독 사용
-  • TextEditingController로 값 직접 관리
-  • 실시간 입력 처리, 검색 바, 채팅 입력에 적합
-  • 유효성 검사를 직접 구현해야 함
-
-TextFormField
-  ─────────────────────────────────────────────────
-  • 반드시 Form 위젯 안에서 사용
-  • validator·onSaved 콜백 내장
-  • Form 전체 일괄 검증(validate()) 가능
-  • 로그인·회원가입·설정 등 폼 화면에 적합
-```
+![TextField vs TextFormField 선택 기준](/developer-open-book/diagrams/flutter-step10-textfield-vs-formfield.svg)
 
 | 상황                                | 선택                 |
 | ----------------------------------- | -------------------- |
@@ -254,21 +226,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
 **FormState 메서드 3가지:**
 
-```
-_formKey.currentState!.validate()
-  → 모든 TextFormField의 validator 실행
-  → 모두 null 반환 시 true, 하나라도 String 반환 시 false
-  → 오류가 있으면 해당 필드 아래에 에러 메시지 표시
-
-_formKey.currentState!.save()
-  → 모든 TextFormField의 onSaved 콜백 실행
-  → 입력값을 외부 변수에 저장
-  → validate() 통과 후 호출해야 함
-
-_formKey.currentState!.reset()
-  → 모든 TextFormField 초기화 (빈 값으로)
-  → 에러 메시지도 함께 초기화
-```
+![FormState 메서드 3가지](/developer-open-book/diagrams/flutter-step10-formstate-methods.svg)
 
 ---
 

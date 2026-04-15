@@ -1,0 +1,295 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t",
+      "x": 80,
+      "y": 10,
+      "text": "React Router 핵심 구성 요소",
+      "fontSize": 22,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 277.2,
+      "height": 28,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "g0",
+      "x": 50,
+      "y": 50,
+      "width": 500,
+      "height": 35,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "g0l",
+      "x": 60,
+      "y": 58,
+      "text": "라우터:",
+      "fontSize": 14,
+      "strokeColor": "#4a9eed",
+      "fontFamily": 2,
+      "width": 33.6,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "g0v",
+      "x": 170,
+      "y": 58,
+      "text": "BrowserRouter, createBrowserRouter",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 265.2,
+      "height": 19,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "g1",
+      "x": 50,
+      "y": 90,
+      "width": 500,
+      "height": 35,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "g1l",
+      "x": 60,
+      "y": 98,
+      "text": "라우트:",
+      "fontSize": 14,
+      "strokeColor": "#22c55e",
+      "fontFamily": 2,
+      "width": 33.6,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "g1v",
+      "x": 170,
+      "y": 98,
+      "text": "<Routes>, <Route>, <Route index>",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 249.6,
+      "height": 19,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "g2",
+      "x": 50,
+      "y": 130,
+      "width": 500,
+      "height": 35,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "g2l",
+      "x": 60,
+      "y": 138,
+      "text": "네비게이션:",
+      "fontSize": 14,
+      "strokeColor": "#06b6d4",
+      "fontFamily": 2,
+      "width": 50.400000000000006,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "g2v",
+      "x": 170,
+      "y": 138,
+      "text": "<Link>, <NavLink>, <Navigate>, useNavigate()",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 343.2,
+      "height": 19,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "g3",
+      "x": 50,
+      "y": 170,
+      "width": 500,
+      "height": 35,
+      "backgroundColor": "#5c3d1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "g3l",
+      "x": 60,
+      "y": 178,
+      "text": "데이터:",
+      "fontSize": 14,
+      "strokeColor": "#f59e0b",
+      "fontFamily": 2,
+      "width": 33.6,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "g3v",
+      "x": 170,
+      "y": 178,
+      "text": "useParams(), useSearchParams(), useLocation()",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 351,
+      "height": 19,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "g4",
+      "x": 50,
+      "y": 210,
+      "width": 500,
+      "height": 35,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "g4l",
+      "x": 60,
+      "y": 218,
+      "text": "레이아웃:",
+      "fontSize": 14,
+      "strokeColor": "#8b5cf6",
+      "fontFamily": 2,
+      "width": 42,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "g4v",
+      "x": 170,
+      "y": 218,
+      "text": "<Outlet>",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 62.4,
+      "height": 19,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "g5",
+      "x": 50,
+      "y": 250,
+      "width": 500,
+      "height": 35,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "g5l",
+      "x": 60,
+      "y": 258,
+      "text": "Data Router:",
+      "fontSize": 14,
+      "strokeColor": "#06b6d4",
+      "fontFamily": 2,
+      "width": 100.80000000000001,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "g5v",
+      "x": 170,
+      "y": 258,
+      "text": "loader, action, useLoaderData(), <Form>",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 304.2,
+      "height": 19,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

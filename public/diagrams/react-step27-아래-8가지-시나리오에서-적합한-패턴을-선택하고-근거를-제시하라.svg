@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="467" viewBox="-10 -20 553.5 431">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="553.5" height="431" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">아래 8가지 시나리오에서 적합한 패턴을 선택하고 근거를 제시하라.</text>
+  <rect x="20" y="45" width="493.5" height="336" rx="50.4" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">아래 8가지 시나리오에서 적합한 패턴을 선택하고 근거를 제시하라.</text>
+  <text x="40" y="105.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. 앱 전체에서 사용하는 기본 Button 컴포넌트</text>
+  <text x="40" y="135.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. 복잡한 데이터 테이블 (정렬, 필터, 페이지네이션)</text>
+  <text x="40" y="165.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. 모달/다이얼로그 (Trigger + Overlay + Content + Actions)</text>
+  <text x="40" y="195.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. 인증 상태에 따른 페이지 접근 제어</text>
+  <text x="40" y="225.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">5. 다크 모드 토글 기능을 여러 컴포넌트에 적용</text>
+  <text x="40" y="255.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">6. 자동완성 검색 입력 (어떤 디자인 시스템에서도 사용 가능해야 함)</text>
+  <text x="40" y="285.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">7. 페이지 레이아웃 (헤더, 사이드바, 콘텐츠, 푸터 영역)</text>
+  <text x="40" y="315.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">8. 스텝 위자드 (Step 1 → Step 2 → Step 3 → 완료)</text>
+  <text x="40" y="344.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">선택지: Props 기반 / Slot 패턴 / Compound Component /</text>
+  <text x="40" y="370.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Headless Hook / Custom Hook / HOC</text>
+</svg>

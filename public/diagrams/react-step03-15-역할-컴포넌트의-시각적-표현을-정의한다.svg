@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="614" viewBox="-10 -20 423 433">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="423" height="433" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">역할: 컴포넌트의 시각적 표현을 정의한다</text>
+  <rect x="20" y="45" width="363" height="338" rx="50.699999999999996" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="201.5" y="99.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Tailwind CSS</text>
+  <text x="201.5" y="117.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Utility-first CSS 프레임워크</text>
+  <text x="201.5" y="135.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">클래스 기반 스타일링, 디자인 시스템과 잘 결합</text>
+  <text x="201.5" y="153.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">현재 가장 인기 있는 스타일링 방식</text>
+  <text x="201.5" y="172" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">이 로드맵: Step 34</text>
+  <text x="201.5" y="190.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">CSS Modules</text>
+  <text x="201.5" y="208.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">CSS 파일을 모듈로 스코프화</text>
+  <text x="201.5" y="226.60000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">전역 네임스페이스 충돌 방지</text>
+  <text x="201.5" y="244.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">이 로드맵: Step 34</text>
+  <text x="201.5" y="263" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">CSS-in-JS (styled-components, Emotion)</text>
+  <text x="201.5" y="281.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">JavaScript 안에서 CSS를 작성</text>
+  <text x="201.5" y="299.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">동적 스타일링에 강점</text>
+  <text x="201.5" y="317.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">런타임 비용 이슈로 인해 Tailwind로 이동하는 추세</text>
+  <text x="201.5" y="335.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">이 로드맵: Step 34</text>
+</svg>

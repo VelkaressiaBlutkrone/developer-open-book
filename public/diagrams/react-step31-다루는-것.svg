@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="558" viewBox="-10 -15 560 521">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="560" height="521" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">다루는 것</text>
+  <rect x="20" y="55" width="500" height="242" rx="36.3" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="0.4"/>
+  <text x="35" y="81.2" fill="#22c55e" font-family="Nunito, sans-serif" font-size="18" opacity="1">다루는 것</text>
+  <text x="45" y="107.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 컴포넌트 Props 타입 정의 (interface vs type)</text>
+  <text x="45" y="133.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · children, Event, Ref의 타입</text>
+  <text x="45" y="159.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Hook의 타입 (useState, useReducer, useContext, useRef)</text>
+  <text x="45" y="185.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Generic Component (재사용 가능한 타입)</text>
+  <text x="45" y="211.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 유틸리티 타입 (Partial, Pick, Omit, Record 등)</text>
+  <text x="45" y="237.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · ComponentProps를 활용한 HTML 속성 확장</text>
+  <text x="45" y="263.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 타입 설계 원칙과 실전 패턴</text>
+  <rect x="20" y="312" width="500" height="164" rx="24.599999999999998" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="0.4"/>
+  <text x="35" y="338.2" fill="#ef4444" font-family="Nunito, sans-serif" font-size="18" opacity="1">다루지 않는 것</text>
+  <text x="45" y="364.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · TypeScript 기초 문법 (별도 학습 가정)</text>
+  <text x="45" y="390.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · tsconfig.json 세부 설정</text>
+  <text x="45" y="416.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 타입 가드, 조건부 타입 등 고급 타입 프로그래밍</text>
+  <text x="45" y="442.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Zod 등 런타임 검증 (Step 32)</text>
+</svg>

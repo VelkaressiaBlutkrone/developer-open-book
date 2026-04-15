@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="506" viewBox="20 -20 530 447">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="530" height="447" rx="12" fill="#141414"/>
+  <text x="100" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Step 16 — 다루는 범위</text>
+  <rect x="50" y="50" width="470" height="221" rx="33.15" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="60" y="72.4" fill="#22c55e" font-family="Nunito, sans-serif" font-size="16" opacity="1">다루는 것</text>
+  <text x="65" y="96.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Custom Hook의 정의와 규칙</text>
+  <text x="65" y="118.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· &quot;로직 재사용&quot;과 &quot;State 공유&quot;의 차이</text>
+  <text x="65" y="140.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 관심사 분리(SoC) 원칙의 적용</text>
+  <text x="65" y="162.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Custom Hook 추출 시점과 판단 기준</text>
+  <text x="65" y="184.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Hook API 설계 원칙 (네이밍, 반환값, 인터페이스)</text>
+  <text x="65" y="206.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Hook 합성(Composition) 패턴</text>
+  <text x="65" y="228.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 실전 Custom Hook 라이브러리 설계</text>
+  <text x="65" y="250.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 테스트 전략 개요</text>
+  <rect x="50" y="286" width="470" height="111" rx="16.65" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="60" y="308.4" fill="#ef4444" font-family="Nunito, sans-serif" font-size="16" opacity="1">다루지 않는 것</text>
+  <text x="65" y="332.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 전역 상태 관리 (Step 25~26)</text>
+  <text x="65" y="354.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· TanStack Query의 커스텀 쿼리 훅 (Step 23)</text>
+  <text x="65" y="376.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 테스트 구현 상세 (Step 36)</text>
+</svg>

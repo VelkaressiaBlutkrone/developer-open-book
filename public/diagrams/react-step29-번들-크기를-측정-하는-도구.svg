@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="592" viewBox="-10 -15 599 591">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="599" height="591" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">번들 크기를 &quot;측정&quot;하는 도구</text>
+  <rect x="20" y="50" width="539" height="496" rx="74.39999999999999" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">1. rollup-plugin-visualizer (Vite 권장)</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">npm install -D rollup-plugin-visualizer</text>
+  <text x="40" y="135.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">// vite.config.js</text>
+  <text x="40" y="161.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">import { visualizer } from 'rollup-plugin-visualizer';</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">export default defineConfig({</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">plugins: [react(), visualizer({ open: true })],</text>
+  <text x="40" y="239.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">});</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ npm run build 후 번들 시각화 HTML 생성</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">2. source-map-explorer</text>
+  <text x="40" y="317.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">npx source-map-explorer dist/assets/*.js</text>
+  <text x="40" y="343.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ 소스맵 기반 정확한 크기 분석</text>
+  <text x="40" y="369.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">분석에서 확인할 것:</text>
+  <text x="40" y="395.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 가장 큰 모듈은 무엇인가?</text>
+  <text x="40" y="421.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 사용하지 않는 라이브러리가 번들에 포함되어 있는가?</text>
+  <text x="40" y="447.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 특정 페이지에서만 사용하는 라이브러리가 메인 번들에 있는가?</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="629" viewBox="-10 -20 562 589.4">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="562" height="589.4" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">React.lazy가 Suspense와 결합하는 원리</text>
+  <rect x="20" y="45" width="502" height="492" rx="73.8" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">React.lazy가 Suspense와 결합하는 원리</text>
+  <text x="40" y="104.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">const LazyComponent = lazy(() =&gt; import('./Heavy'));</text>
+  <text x="40" y="130.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&lt;Suspense fallback={&lt;Spinner /&gt;}&gt;</text>
+  <text x="40" y="156.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&lt;LazyComponent /&gt;</text>
+  <text x="40" y="182.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&lt;/Suspense&gt;</text>
+  <text x="40" y="208.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">동작:</text>
+  <text x="40" y="235.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. &lt;LazyComponent /&gt; 렌더링 시도</text>
+  <text x="40" y="265.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. import('./Heavy')가 아직 로드되지 않음 → Promise 상태</text>
+  <text x="40" y="295.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. lazy 내부에서 해당 Promise를 throw</text>
+  <text x="40" y="325.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. &lt;Suspense&gt;가 잡아서 &lt;Spinner /&gt; 표시</text>
+  <text x="40" y="355.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">5. JS 청크 다운로드 완료 → Promise resolve</text>
+  <text x="40" y="385.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">6. &lt;LazyComponent /&gt;를 다시 렌더링 → 실제 컴포넌트 표시</text>
+  <text x="40" y="414.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">use(promise)도 동일한 원리로 동작:</text>
+  <text x="40" y="441.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. use(fetchData())가 Promise를 만남</text>
+  <text x="40" y="471.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. pending이면 → throw (Suspense가 잡음)</text>
+  <text x="40" y="501.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. resolve되면 → 값 반환 (컴포넌트 렌더링 계속)</text>
+  <text x="40" y="531.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. reject되면 → throw error (ErrorBoundary가 잡음)</text>
+</svg>

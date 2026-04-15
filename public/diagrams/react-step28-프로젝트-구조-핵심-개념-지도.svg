@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="1100" viewBox="-30 -20 463 848.6">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-30" y="-20" width="463" height="848.6" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">프로젝트 구조 핵심 개념 지도</text>
+  <rect x="20" y="50" width="363" height="42" rx="6.3" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1.5" opacity="1"/>
+  <text x="201.5" y="74.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">프로젝트 구조 핵심 개념 지도</text>
+  <path d="M20,96 L383,96" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="119.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">아키텍처 원칙과 구조의 관계</text>
+  <path d="M20,138 L383,138" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="161.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Screaming Architecture</text>
+  <path d="M20,180 L383,180" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="203.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">&quot;폴더만 봐도 무슨 앱인지 알 수 있어야 한다&quot;</text>
+  <path d="M20,222 L383,222" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="245.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">▼</text>
+  <path d="M20,264 L383,264" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="287.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Feature-based 구조       Layer-based 구조</text>
+  <path d="M20,306 L383,306" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="329.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">(비즈니스 도메인 기준)    (기술 역할 기준)</text>
+  <path d="M20,348 L383,348" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="371.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">features/auth            components/</text>
+  <path d="M20,390 L383,390" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="413.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">features/products   vs   hooks/</text>
+  <path d="M20,432 L383,432" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="455.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">features/cart            services/</text>
+  <path d="M20,474 L383,474" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="497.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">▼</text>
+  <path d="M20,516 L383,516" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="539.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Co-location 원칙</text>
+  <path d="M20,558 L383,558" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="581.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">&quot;함께 변하는 것은 함께 둔다&quot;</text>
+  <path d="M20,600 L383,600" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="623.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">(컴포넌트 + 스타일 + 테스트 + 타입 = 같은 폴더)</text>
+  <path d="M20,642 L383,642" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="665.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">▼</text>
+  <path d="M20,684 L383,684" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="707.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">의존성 방향 규칙</text>
+  <path d="M20,726 L383,726" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="749.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">pages → features → shared (단방향)</text>
+  <path d="M20,768 L383,768" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="791.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Barrel Export (Public API 정의)</text>
+</svg>

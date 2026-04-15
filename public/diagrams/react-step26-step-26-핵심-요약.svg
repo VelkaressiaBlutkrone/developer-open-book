@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="1031" viewBox="-10 -20 553.5 951">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="553.5" height="951" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Step 26 핵심 요약</text>
+  <rect x="20" y="45" width="493.5" height="856" rx="74.02499999999999" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 26 핵심 요약</text>
+  <text x="40" y="105.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. Zustand = 최소 API + selector 기반 부분 구독 전역 상태</text>
+  <text x="40" y="133.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ create((set, get) =&gt; ({ state, actions }))</text>
+  <text x="40" y="159.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Provider 불필요, ~1.5KB, 보일러플레이트 최소</text>
+  <text x="40" y="187.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. Selector = 부분 구독의 핵심</text>
+  <text x="40" y="215.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ useStore(state =&gt; state.count) — count 변경 시만 리렌더링</text>
+  <text x="40" y="241.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 객체 반환 시 useShallow 사용</text>
+  <text x="40" y="267.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Context의 &quot;전체 리렌더링&quot; 문제를 근본적으로 해결</text>
+  <text x="40" y="295.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. 미들웨어로 기능을 확장한다</text>
+  <text x="40" y="323.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ persist: localStorage 자동 저장/복원</text>
+  <text x="40" y="349.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ devtools: Redux DevTools 연동</text>
+  <text x="40" y="375.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ immer: 불변 업데이트를 직접 변경처럼 작성</text>
+  <text x="40" y="403.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. React 트리 밖에서도 State에 접근 가능</text>
+  <text x="40" y="431.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ useStore.getState(): 현재 상태 읽기</text>
+  <text x="40" y="457.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ useStore.subscribe(): 변경 감지</text>
+  <text x="40" y="483.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Axios 인터셉터, 유틸리티 함수에서 활용</text>
+  <text x="40" y="511.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">5. 도메인별 Store 분리를 권장한다</text>
+  <text x="40" y="539.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ useAuthStore, useCartStore, useUIStore</text>
+  <text x="40" y="565.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 각 store가 독립적으로 변경·테스트 가능</text>
+  <text x="40" y="593.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">6. Anti-pattern을 피한다</text>
+  <text x="40" y="621.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 서버 데이터를 Zustand에 넣지 않음 (→ TanStack Query)</text>
+  <text x="40" y="647.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 파생 데이터를 State로 저장하지 않음 (→ selector/get)</text>
+  <text x="40" y="673.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 폼 입력값을 전역에 넣지 않음 (→ 로컬 State)</text>
+  <text x="40" y="699.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 한 곳에서만 쓰는 State를 전역에 넣지 않음</text>
+  <text x="40" y="727.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">7. 상태 관리 도구 최종 선택</text>
+  <text x="40" y="755.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 서버 데이터 → TanStack Query</text>
+  <text x="40" y="781.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ URL 상태 → useSearchParams</text>
+  <text x="40" y="807.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 로컬 UI → useState</text>
+  <text x="40" y="833.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 변경 드문 전역 → Context</text>
+  <text x="40" y="859.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 변경 빈번 전역 → Zustand ★</text>
+  <text x="40" y="885.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 대규모/엄격한 팀 → Redux Toolkit</text>
+</svg>

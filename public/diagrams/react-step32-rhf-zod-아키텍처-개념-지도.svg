@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="763" viewBox="-10 -15 505.5 643">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="505.5" height="643" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">RHF + Zod 아키텍처 개념 지도</text>
+  <rect x="20" y="50" width="445.5" height="548" rx="66.825" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">폼 관리 전체 흐름</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">스키마 정의 (Zod)</text>
+  <text x="40" y="135.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">z.object({ ... })  →  검증 규칙 + TypeScript 타입</text>
+  <text x="40" y="161.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">z.infer&lt;typeof S&gt;  →  Props 타입 자동 추출</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">폼 설정 (RHF)</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">useForm({ resolver: zodResolver(schema) })</text>
+  <text x="40" y="239.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">↓</text>
+  <text x="40" y="265.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">register / Controller  →  input 등록</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">handleSubmit           →  검증 후 onSubmit 호출</text>
+  <text x="40" y="317.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">formState.errors       →  Zod 에러 메시지 자동 반영</text>
+  <text x="40" y="343.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">성능 최적화 (Uncontrolled)</text>
+  <text x="40" y="369.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">DOM이 값 보관  →  키 입력 시 리렌더링 0회</text>
+  <text x="40" y="395.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">에러 시에만    →  해당 필드만 리렌더링</text>
+  <text x="40" y="421.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">동적 기능</text>
+  <text x="40" y="447.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">useFieldArray  →  배열 필드 (추가/삭제/이동)</text>
+  <text x="40" y="473.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">trigger()      →  부분 검증 (다단계 폼)</text>
+  <text x="40" y="499.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">setError()     →  서버 에러 통합</text>
+</svg>

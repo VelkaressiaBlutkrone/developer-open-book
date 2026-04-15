@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="607.5" height="487" viewBox="-10 -15 607.5 487">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="607.5" height="487" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">&lt;ul&gt;</text>
+  <rect x="20" y="50" width="547.5" height="392" rx="58.8" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">{items.map(item =&gt; &lt;li key={item.id}&gt;{item.name}&lt;/li&gt;)}</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&lt;/ul&gt;</text>
+  <text x="40" y="135.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">items가 10,000개면:</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 10,000개의 &lt;li&gt; DOM 노드 생성</text>
+  <text x="40" y="187.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 초기 렌더링: 수백 ms</text>
+  <text x="40" y="213.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 스크롤 시 리렌더링: 버벅임</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 메모리 사용: 수십~수백 MB</text>
+  <text x="40" y="265.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">사용자가 화면에서 실제로 보는 것:</text>
+  <text x="40" y="291.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 약 20~30개 항목만 보임!</text>
+  <text x="40" y="317.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 나머지 9,970개는 화면 밖에 존재</text>
+  <text x="40" y="343.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ &quot;보이지 않는 DOM을 왜 만들어야 하는가?&quot;</text>
+</svg>

@@ -62,50 +62,11 @@ useRef의 두 가지 역할
 
 ### 1.4 이 Step의 학습 지도 (개념 지도)
 
-```
-┌──────────────────────────────────────────────────────────────────┐
-│                      useRef 개념 지도                             │
-│                                                                   │
-│  [렌더링 사이클]──────────→ [렌더링 무관 값의 필요성]             │
-│       │                              │                           │
-│       │                              ▼                           │
-│       │                         [useRef]                         │
-│       │                        /         \                       │
-│       │              [DOM 참조]           [값 저장]               │
-│       │                  │                    │                  │
-│       │         [ref 속성 연결]          [타이머 ID]              │
-│       │         [Commit Phase]           [이전 값]               │
-│       │                  │              [외부 인스턴스]            │
-│       │                  │                                       │
-│       │         [forwardRef / React19]                           │
-│       │         [useImperativeHandle]                            │
-│       │                                                          │
-│       └────────→ [useRef vs useState 선택 기준]                   │
-│                              │                                   │
-│                   [Stale Closure 해결]                            │
-└──────────────────────────────────────────────────────────────────┘
-```
+![useRef 개념 지도](/developer-open-book/diagrams/react-step12-concept-map.svg)
 
 ### 1.5 이 Step에서 다루는 범위
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  다루는 것                                               │
-│  · useRef의 본질과 내부 구조                             │
-│  · useRef vs useState: 근본적 차이                      │
-│  · ref로 DOM 노드에 접근하는 패턴                        │
-│  · ref의 연결 타이밍 (Commit Phase)                     │
-│  · forwardRef와 React 19의 ref Props                   │
-│  · useImperativeHandle                                  │
-│  · Stale Closure 해결에서의 useRef 활용                  │
-│  · ref 콜백 패턴                                         │
-├─────────────────────────────────────────────────────────┤
-│  다루지 않는 것                                          │
-│  · useReducer (Step 13)                                 │
-│  · useMemo / useCallback (Step 14)                      │
-│  · 외부 라이브러리 통합 상세 (실무 프로젝트에서)          │
-└─────────────────────────────────────────────────────────┘
-```
+![Step 12 다루는 범위](/developer-open-book/diagrams/react-step12-scope.svg)
 
 ---
 
@@ -125,50 +86,11 @@ useRef의 두 가지 역할
 
 ### 2.2 용어 간 관계 다이어그램
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│                     useRef 구성 요소 관계                     │
-│                                                              │
-│  useRef(initialValue)                                        │
-│       │                                                      │
-│       ▼                                                      │
-│  { current: initialValue }  ←── Fiber 노드에 저장            │
-│       │                                                      │
-│       ├── [DOM 참조 용도]                                    │
-│       │      <div ref={myRef} />                             │
-│       │      Commit Phase에서 myRef.current = DOM 노드       │
-│       │      useEffect/이벤트핸들러에서 myRef.current 사용   │
-│       │                                                      │
-│       └── [값 저장 용도]                                     │
-│              ref.current = newValue  (재렌더링 없음)          │
-│              타이머 ID / 외부 인스턴스 / 이전 값 저장         │
-│                                                              │
-│  useState vs useRef:                                         │
-│    setState → 재렌더링 ★        ref.current = x → 재렌더링 없음│
-│    읽기: 렌더링 스냅샷           읽기: 항상 최신 값            │
-└──────────────────────────────────────────────────────────────┘
-```
+![useRef 구성 요소 관계](/developer-open-book/diagrams/react-step12-component-relations.svg)
 
 ### 2.3 useRef vs useState 개념 비교
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│                                                               │
-│  useState                        useRef                      │
-│  ─────────                       ──────                      │
-│                                                               │
-│  const [value, setValue]         const ref = useRef(initial)  │
-│    = useState(initial)            ref.current = newValue      │
-│                                                               │
-│  값 변경: setValue(new)          값 변경: ref.current = new   │
-│  재렌더링: 트리거됨 ★            재렌더링: 트리거 안 됨 ★     │
-│  읽기 시점: 렌더링의 스냅샷       읽기 시점: 항상 최신 값      │
-│  불변: 직접 변경 금지            가변: 직접 변경 가능          │
-│  용도: UI에 표시되는 데이터      용도: UI에 표시되지 않는 값   │
-│                                        + DOM 참조            │
-│                                                               │
-└──────────────────────────────────────────────────────────────┘
-```
+![useState vs useRef 비교](/developer-open-book/diagrams/react-step12-useState-vs-useRef.svg)
 
 ### 2.4 "렌더링에 참여하지 않는 값"이 왜 필요한가
 

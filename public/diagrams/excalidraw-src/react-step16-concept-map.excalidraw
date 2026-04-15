@@ -1,0 +1,371 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t",
+      "x": 80,
+      "y": 10,
+      "text": "Custom Hook 개념 지도",
+      "fontSize": 24,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 244.79999999999998,
+      "height": 30,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "prob",
+      "x": 60,
+      "y": 50,
+      "text": "문제: 컴포넌트에 로직이 혼재",
+      "fontSize": 14,
+      "strokeColor": "#ef4444",
+      "fontFamily": 2,
+      "width": 134.4,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "p",
+      "x": 50,
+      "y": 75,
+      "width": 240,
+      "height": 75,
+      "backgroundColor": "#5c1a1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#ef4444",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "pt",
+      "x": 60,
+      "y": 80,
+      "text": "UserProfile",
+      "fontSize": 14,
+      "strokeColor": "#ef4444",
+      "fontFamily": 2,
+      "width": 92.4,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "p1",
+      "x": 65,
+      "y": 100,
+      "text": "· 패칭 로직 (State + Effect)",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 172.79999999999998,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "p2",
+      "x": 65,
+      "y": 118,
+      "text": "· 에러 처리 / UI 렌더링 (JSX)",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 158.39999999999998,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "line",
+      "id": "ext",
+      "x": 170,
+      "y": 150,
+      "width": 0,
+      "height": 20,
+      "strokeColor": "#22c55e",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          20
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        20
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "exl",
+      "x": 185,
+      "y": 152,
+      "text": "추출",
+      "fontSize": 12,
+      "strokeColor": "#22c55e",
+      "fontFamily": 2,
+      "width": 14.399999999999999,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "sol",
+      "x": 60,
+      "y": 180,
+      "text": "해결: 관심사 분리",
+      "fontSize": 14,
+      "strokeColor": "#22c55e",
+      "fontFamily": 2,
+      "width": 84,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "h",
+      "x": 50,
+      "y": 205,
+      "width": 180,
+      "height": 70,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "ht",
+      "x": 60,
+      "y": 210,
+      "text": "useFetch()",
+      "fontSize": 14,
+      "strokeColor": "#22c55e",
+      "fontFamily": 2,
+      "width": 84,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "h1",
+      "x": 65,
+      "y": 230,
+      "text": "· 패칭 State",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 72,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "h2",
+      "x": 65,
+      "y": 248,
+      "text": "· Effect + 에러 처리",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 115.19999999999999,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "c",
+      "x": 270,
+      "y": 205,
+      "width": 220,
+      "height": 70,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "ct",
+      "x": 280,
+      "y": 210,
+      "text": "UserProfile",
+      "fontSize": 14,
+      "strokeColor": "#4a9eed",
+      "fontFamily": 2,
+      "width": 92.4,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "c1",
+      "x": 285,
+      "y": 230,
+      "text": "· UI 렌더링만",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 64.8,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "c2",
+      "x": 285,
+      "y": 248,
+      "text": "· const {data} = useFetch(url)",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 215.99999999999997,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "ru",
+      "x": 55,
+      "y": 290,
+      "text": "재사용:",
+      "fontSize": 13,
+      "strokeColor": "#06b6d4",
+      "fontFamily": 2,
+      "width": 31.2,
+      "height": 19,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "rl",
+      "x": 55,
+      "y": 310,
+      "text": "ProductDetail, OrderList, CommentThread...",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 302.4,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "co",
+      "x": 55,
+      "y": 340,
+      "text": "합성 패턴:",
+      "fontSize": 13,
+      "strokeColor": "#8b5cf6",
+      "fontFamily": 2,
+      "width": 46.8,
+      "height": 19,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "cp1",
+      "x": 50,
+      "y": 360,
+      "width": 430,
+      "height": 28,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "cp1t",
+      "x": 55,
+      "y": 365,
+      "text": "useDebounce + useFetch → useSearch",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 244.79999999999998,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "cp2",
+      "x": 50,
+      "y": 395,
+      "width": 430,
+      "height": 28,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "cp2t",
+      "x": 55,
+      "y": 400,
+      "text": "useIntersectionObserver + usePaginatedFetch → useInfiniteScroll",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 453.59999999999997,
+      "height": 18,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

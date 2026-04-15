@@ -1,0 +1,1478 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "x": 30,
+      "y": 10,
+      "width": 363.00000000000006,
+      "height": 30.799999999999997,
+      "text": "수동 (useState)     │  RHF + Zod",
+      "fontSize": 22,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "h_0",
+      "x": 20,
+      "y": 50,
+      "width": 309,
+      "height": 42,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 1.5,
+      "roughness": 1,
+      "opacity": 100,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "type": "text",
+      "id": "h_0_label",
+      "x": 0,
+      "y": 0,
+      "width": 10,
+      "height": 10,
+      "text": "수동 (useState)",
+      "fontSize": 15,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100,
+      "containerId": "h_0",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "rectangle",
+      "id": "h_1",
+      "x": 331,
+      "y": 50,
+      "width": 201,
+      "height": 42,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 1.5,
+      "roughness": 1,
+      "opacity": 100,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "type": "text",
+      "id": "h_1_label",
+      "x": 0,
+      "y": 0,
+      "width": 10,
+      "height": 10,
+      "text": "RHF + Zod",
+      "fontSize": 15,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100,
+      "containerId": "h_1",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "arrow",
+      "id": "sep_1",
+      "x": 20,
+      "y": 96,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r1_c0",
+      "x": 30,
+      "y": 107,
+      "width": 61.60000000000001,
+      "height": 19.599999999999998,
+      "text": "State 변수",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r1_c1",
+      "x": 341,
+      "y": 107,
+      "width": 146.3,
+      "height": 19.599999999999998,
+      "text": "4+ (values, errors,",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r1_c2",
+      "x": 544,
+      "y": 107,
+      "width": 115.50000000000001,
+      "height": 19.599999999999998,
+      "text": "0 (useForm이 관리)",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_2",
+      "x": 20,
+      "y": 138,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r2_c0",
+      "x": 30,
+      "y": 149,
+      "width": 154.00000000000003,
+      "height": 19.599999999999998,
+      "text": "touched, submitting)",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_3",
+      "x": 20,
+      "y": 180,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r3_c0",
+      "x": 30,
+      "y": 191,
+      "width": 38.50000000000001,
+      "height": 19.599999999999998,
+      "text": "검증 코드",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r3_c1",
+      "x": 341,
+      "y": 191,
+      "width": 107.80000000000001,
+      "height": 19.599999999999998,
+      "text": "수동 validate 함수",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r3_c2",
+      "x": 544,
+      "y": 191,
+      "width": 69.30000000000001,
+      "height": 19.599999999999998,
+      "text": "Zod 스키마 ★",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#f59e0b",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_4",
+      "x": 20,
+      "y": 222,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r4_c0",
+      "x": 30,
+      "y": 233,
+      "width": 38.50000000000001,
+      "height": 19.599999999999998,
+      "text": "타입 정의",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r4_c1",
+      "x": 341,
+      "y": 233,
+      "width": 92.4,
+      "height": 19.599999999999998,
+      "text": "별도 interface",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r4_c2",
+      "x": 544,
+      "y": 233,
+      "width": 107.80000000000001,
+      "height": 19.599999999999998,
+      "text": "z.infer (자동) ★",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#22c55e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_5",
+      "x": 20,
+      "y": 264,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r5_c0",
+      "x": 30,
+      "y": 275,
+      "width": 30.800000000000004,
+      "height": 19.599999999999998,
+      "text": "리렌더링",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r5_c1",
+      "x": 341,
+      "y": 275,
+      "width": 61.60000000000001,
+      "height": 19.599999999999998,
+      "text": "매 키 입력마다",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r5_c2",
+      "x": 544,
+      "y": 275,
+      "width": 84.70000000000002,
+      "height": 19.599999999999998,
+      "text": "제출/에러 시에만 ★",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#f59e0b",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_6",
+      "x": 20,
+      "y": 306,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r6_c0",
+      "x": 30,
+      "y": 317,
+      "width": 69.30000000000001,
+      "height": 19.599999999999998,
+      "text": "코드량 (4필드)",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r6_c1",
+      "x": 341,
+      "y": 317,
+      "width": 30.800000000000004,
+      "height": 19.599999999999998,
+      "text": "~60줄",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r6_c2",
+      "x": 544,
+      "y": 317,
+      "width": 46.2,
+      "height": 19.599999999999998,
+      "text": "~25줄 ★",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#f59e0b",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_7",
+      "x": 20,
+      "y": 348,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r7_c0",
+      "x": 30,
+      "y": 359,
+      "width": 38.50000000000001,
+      "height": 19.599999999999998,
+      "text": "배열 필드",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r7_c1",
+      "x": 341,
+      "y": 359,
+      "width": 38.50000000000001,
+      "height": 19.599999999999998,
+      "text": "매우 복잡",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r7_c2",
+      "x": 544,
+      "y": 359,
+      "width": 115.50000000000001,
+      "height": 19.599999999999998,
+      "text": "useFieldArray ★",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#f59e0b",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_8",
+      "x": 20,
+      "y": 390,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r8_c0",
+      "x": 30,
+      "y": 401,
+      "width": 38.50000000000001,
+      "height": 19.599999999999998,
+      "text": "다단계 폼",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r8_c1",
+      "x": 341,
+      "y": 401,
+      "width": 84.70000000000002,
+      "height": 19.599999999999998,
+      "text": "State 분리 복잡",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r8_c2",
+      "x": 544,
+      "y": 401,
+      "width": 107.80000000000001,
+      "height": 19.599999999999998,
+      "text": "trigger로 부분 검증",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_9",
+      "x": 20,
+      "y": 432,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r9_c0",
+      "x": 30,
+      "y": 443,
+      "width": 61.60000000000001,
+      "height": 19.599999999999998,
+      "text": "서버 에러 통합",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r9_c1",
+      "x": 341,
+      "y": 443,
+      "width": 84.70000000000002,
+      "height": 19.599999999999998,
+      "text": "수동 State 관리",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r9_c2",
+      "x": 544,
+      "y": 443,
+      "width": 77.00000000000001,
+      "height": 19.599999999999998,
+      "text": "setError ★",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#f59e0b",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_10",
+      "x": 20,
+      "y": 474,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r10_c0",
+      "x": 30,
+      "y": 485,
+      "width": 46.2,
+      "height": 19.599999999999998,
+      "text": "타입 안전성",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r10_c1",
+      "x": 341,
+      "y": 485,
+      "width": 61.60000000000001,
+      "height": 19.599999999999998,
+      "text": "별도 관리 필요",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r10_c2",
+      "x": 544,
+      "y": 485,
+      "width": 61.60000000000001,
+      "height": 19.599999999999998,
+      "text": "스키마=타입 ★",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#f59e0b",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_11",
+      "x": 20,
+      "y": 516,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r11_c0",
+      "x": 30,
+      "y": 527,
+      "width": 38.50000000000001,
+      "height": 19.599999999999998,
+      "text": "학습 곡선",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r11_c1",
+      "x": 341,
+      "y": 527,
+      "width": 15.400000000000002,
+      "height": 19.599999999999998,
+      "text": "낮음",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r11_c2",
+      "x": 544,
+      "y": 527,
+      "width": 15.400000000000002,
+      "height": 19.599999999999998,
+      "text": "중간",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_12",
+      "x": 20,
+      "y": 558,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r12_c0",
+      "x": 30,
+      "y": 569,
+      "width": 46.2,
+      "height": 19.599999999999998,
+      "text": "외부 의존성",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r12_c1",
+      "x": 341,
+      "y": 569,
+      "width": 15.400000000000002,
+      "height": 19.599999999999998,
+      "text": "없음",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#ef4444",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r12_c2",
+      "x": 544,
+      "y": 569,
+      "width": 46.2,
+      "height": 19.599999999999998,
+      "text": "3개 패키지",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_13",
+      "x": 20,
+      "y": 600,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r13_c0",
+      "x": 30,
+      "y": 611,
+      "width": 100.10000000000001,
+      "height": 19.599999999999998,
+      "text": "RHF가 불필요한 경우:",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_14",
+      "x": 20,
+      "y": 642,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r14_c0",
+      "x": 30,
+      "y": 653,
+      "width": 238.70000000000005,
+      "height": 19.599999999999998,
+      "text": "· 검색 input 하나 (단순 useState로 충분)",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_15",
+      "x": 20,
+      "y": 684,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r15_c0",
+      "x": 30,
+      "y": 695,
+      "width": 177.10000000000002,
+      "height": 19.599999999999998,
+      "text": "· 토글/체크박스 하나 (단순 State)",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_16",
+      "x": 20,
+      "y": 726,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r16_c0",
+      "x": 30,
+      "y": 737,
+      "width": 130.9,
+      "height": 19.599999999999998,
+      "text": "· 필드가 1~2개인 간단한 폼",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_17",
+      "x": 20,
+      "y": 768,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r17_c0",
+      "x": 30,
+      "y": 779,
+      "width": 92.4,
+      "height": 19.599999999999998,
+      "text": "RHF가 필요한 경우:",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_18",
+      "x": 20,
+      "y": 810,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r18_c0",
+      "x": 30,
+      "y": 821,
+      "width": 100.10000000000001,
+      "height": 19.599999999999998,
+      "text": "· 필드 3개 이상의 폼",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_19",
+      "x": 20,
+      "y": 852,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r19_c0",
+      "x": 30,
+      "y": 863,
+      "width": 177.10000000000002,
+      "height": 19.599999999999998,
+      "text": "· 복잡한 검증 규칙 (패턴, 교차 검증)",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_20",
+      "x": 20,
+      "y": 894,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r20_c0",
+      "x": 30,
+      "y": 905,
+      "width": 77.00000000000001,
+      "height": 19.599999999999998,
+      "text": "· 배열/동적 필드",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_21",
+      "x": 20,
+      "y": 936,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r21_c0",
+      "x": 30,
+      "y": 947,
+      "width": 53.900000000000006,
+      "height": 19.599999999999998,
+      "text": "· 다단계 폼",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_22",
+      "x": 20,
+      "y": 978,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r22_c0",
+      "x": 30,
+      "y": 989,
+      "width": 115.50000000000001,
+      "height": 19.599999999999998,
+      "text": "· 성능이 중요한 대규모 폼",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_23",
+      "x": 20,
+      "y": 1020,
+      "width": 679,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          679,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r23_c0",
+      "x": 30,
+      "y": 1031,
+      "width": 154.00000000000003,
+      "height": 19.599999999999998,
+      "text": "· 서버 에러와 클라이언트 에러 통합",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="797" viewBox="-10 -20 525 697">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="525" height="697" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">Step 9 핵심 요약</text>
+  <rect x="20" y="45" width="465" height="602" rx="69.75" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="252.5" y="122" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">1. 조건부 렌더링 6가지 패턴</text>
+  <text x="252.5" y="140.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ Guard Clause: 로딩/에러/빈 상태를 조기 반환</text>
+  <text x="252.5" y="158.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 삼항 연산자: JSX 인라인에서 A 또는 B 선택</text>
+  <text x="252.5" y="176.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ &amp;&amp; 연산자: 보이거나 / 안 보이거나</text>
+  <text x="252.5" y="194.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ || / ??: 기본값(Fallback) 제공</text>
+  <text x="252.5" y="213" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 변수 할당: 복잡한 분기 (switch)</text>
+  <text x="252.5" y="231.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 객체 매핑: 4개 이상 분기의 깔끔한 처리</text>
+  <text x="252.5" y="249.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">2. &amp;&amp; 연산자의 숫자 0 함정</text>
+  <text x="252.5" y="267.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 0 &amp;&amp; &lt;Component /&gt; → 화면에 &quot;0&quot; 표시!</text>
+  <text x="252.5" y="285.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 해결: count &gt; 0 &amp;&amp; ... 또는 !!count &amp;&amp; ...</text>
+  <text x="252.5" y="304" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 규칙: &amp;&amp; 왼쪽에 숫자가 올 수 있으면 명시적 비교 필수</text>
+  <text x="252.5" y="322.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">3. React가 렌더링하지 않는 값: false, null, undefined, true</text>
+  <text x="252.5" y="340.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">React가 렌더링하는 값: 0, NaN, 문자열, Element</text>
+  <text x="252.5" y="358.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">4. 리스트 렌더링 = array.map() + key</text>
+  <text x="252.5" y="376.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ map의 최상위 Element에 고유한 key 부여</text>
+  <text x="252.5" y="395" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ key는 데이터의 ID 사용 (index는 조건부 허용)</text>
+  <text x="252.5" y="413.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">5. 필터/정렬/검색은 파생 데이터로 처리한다</text>
+  <text x="252.5" y="431.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 원본 State를 변경하지 않는다</text>
+  <text x="252.5" y="449.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ filter().sort().map() 체이닝</text>
+  <text x="252.5" y="467.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ .sort()는 반드시 [...arr].sort()로 복사 후 사용</text>
+  <text x="252.5" y="486" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">6. 데이터 표시 UI의 4가지 상태를 항상 설계한다</text>
+  <text x="252.5" y="504.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ Loading → Error → Empty → Data 순서로 Guard Clause</text>
+  <text x="252.5" y="522.4000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ Empty State에는 행동 유도 메시지 포함</text>
+  <text x="252.5" y="540.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">7. CSS 숨기기 vs 조건부 렌더링의 트레이드오프</text>
+  <text x="252.5" y="558.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ CSS: State 보존, DOM 유지, 빠른 토글</text>
+  <text x="252.5" y="577" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 조건부 렌더링: State 파괴, DOM 제거, 메모리 절약</text>
+</svg>

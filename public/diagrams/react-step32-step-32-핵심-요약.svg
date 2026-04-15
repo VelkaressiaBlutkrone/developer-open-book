@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="1029" viewBox="-10 -20 494 847">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="494" height="847" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Step 32 핵심 요약</text>
+  <rect x="20" y="45" width="434" height="752" rx="65.1" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 32 핵심 요약</text>
+  <text x="40" y="105.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. RHF = Uncontrolled 기반 + 선언적 검증 + 최소 리렌더링</text>
+  <text x="40" y="133.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ register로 DOM에서 직접 값 관리 (State 없음)</text>
+  <text x="40" y="159.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 입력 시 리렌더링 0회, 제출/에러 시에만 업데이트</text>
+  <text x="40" y="185.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ handleSubmit이 검증 → 유효한 데이터만 콜백에 전달</text>
+  <text x="40" y="213.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. Zod = 스키마 정의 하나로 &quot;검증 + 타입&quot; 동시 달성</text>
+  <text x="40" y="241.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ z.object({ ... }) → 런타임 검증 규칙</text>
+  <text x="40" y="267.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ z.infer&lt;typeof schema&gt; → TypeScript 타입 추출</text>
+  <text x="40" y="293.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 타입과 검증의 불일치가 원천 차단됨 ★</text>
+  <text x="40" y="321.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. zodResolver = RHF + Zod의 접착제</text>
+  <text x="40" y="349.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ useForm({ resolver: zodResolver(schema) })</text>
+  <text x="40" y="375.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Zod 에러 메시지가 formState.errors에 자동 반영</text>
+  <text x="40" y="403.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. Controller = 외부 UI 컴포넌트 연동</text>
+  <text x="40" y="431.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ register가 작동하지 않는 커스텀 컴포넌트용</text>
+  <text x="40" y="457.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ DatePicker, Select, Slider 등에 사용</text>
+  <text x="40" y="483.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Controlled 방식 (register보다 리렌더링 많음)</text>
+  <text x="40" y="511.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">5. useFieldArray = 동적 배열 필드 관리</text>
+  <text x="40" y="539.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ append, remove, insert, move 등</text>
+  <text x="40" y="565.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 주문 항목, 태그, 경력 사항 등에 활용</text>
+  <text x="40" y="591.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Zod의 z.array()와 자연스럽게 결합</text>
+  <text x="40" y="619.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">6. 다단계 폼 = 스텝별 스키마 + trigger()로 부분 검증</text>
+  <text x="40" y="647.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 전체 데이터는 하나의 useForm에서 관리</text>
+  <text x="40" y="673.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ trigger(fieldNames)로 현재 스텝만 검증</text>
+  <text x="40" y="699.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ .merge()로 전체 스키마 합성</text>
+  <text x="40" y="727.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">7. RHF 도입 기준</text>
+  <text x="40" y="755.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 필드 3개+ / 복잡한 검증 / 배열 필드 / 다단계 → RHF</text>
+  <text x="40" y="781.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 검색바 / 토글 / 댓글 하나 → useState 충분</text>
+</svg>

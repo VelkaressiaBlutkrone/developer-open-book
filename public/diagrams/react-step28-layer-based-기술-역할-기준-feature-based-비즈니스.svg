@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="801" height="1143" viewBox="-30 -20 801 1142.6">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-30" y="-20" width="801" height="1142.6" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Layer-based (기술 역할 기준):      Feature-based (비즈니스 기능 기준):</text>
+  <rect x="20" y="50" width="534" height="42" rx="6.3" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1.5" opacity="1"/>
+  <text x="287" y="74.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">Layer-based (기술 역할 기준):      Feature-based (비즈니스 기능 기준):</text>
+  <path d="M20,96 L721,96" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="119.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">src/                               src/</text>
+  <path d="M20,138 L721,138" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="161.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── components/                    ├── features/</text>
+  <path d="M20,180 L721,180" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="203.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── Button.jsx</text>
+  <text x="566" y="203.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── auth/</text>
+  <path d="M20,222 L721,222" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="245.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── ProductCard.jsx</text>
+  <text x="566" y="245.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── components/</text>
+  <path d="M20,264 L721,264" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="287.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── CartItem.jsx</text>
+  <text x="566" y="287.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── hooks/</text>
+  <path d="M20,306 L721,306" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="329.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── LoginForm.jsx</text>
+  <text x="566" y="329.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── services/</text>
+  <path d="M20,348 L721,348" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="371.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── hooks/</text>
+  <text x="566" y="371.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── index.js</text>
+  <path d="M20,390 L721,390" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="413.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── useAuth.js</text>
+  <text x="566" y="413.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── products/</text>
+  <path d="M20,432 L721,432" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="455.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── useProducts.js</text>
+  <text x="566" y="455.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── components/</text>
+  <path d="M20,474 L721,474" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="497.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── useCart.js</text>
+  <text x="566" y="497.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── hooks/</text>
+  <path d="M20,516 L721,516" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="539.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── services/</text>
+  <text x="566" y="539.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── services/</text>
+  <path d="M20,558 L721,558" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="581.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── authService.js</text>
+  <text x="566" y="581.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── index.js</text>
+  <path d="M20,600 L721,600" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="623.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── productService.js</text>
+  <text x="566" y="623.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── cart/</text>
+  <path d="M20,642 L721,642" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="665.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── cartService.js</text>
+  <text x="566" y="665.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── components/</text>
+  <path d="M20,684 L721,684" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="707.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── pages/</text>
+  <text x="566" y="707.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── hooks/</text>
+  <path d="M20,726 L721,726" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="749.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── HomePage.jsx</text>
+  <text x="566" y="749.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── index.js</text>
+  <path d="M20,768 L721,768" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="791.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── ProductsPage.jsx           ├── shared/</text>
+  <path d="M20,810 L721,810" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="833.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── CartPage.jsx</text>
+  <text x="566" y="833.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── components/</text>
+  <path d="M20,852 L721,852" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="875.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── utils/</text>
+  <text x="566" y="875.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">├── hooks/</text>
+  <path d="M20,894 L721,894" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="917.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── formatPrice.js</text>
+  <text x="566" y="917.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── utils/</text>
+  <path d="M20,936 L721,936" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="959.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└── pages/</text>
+  <path d="M20,978 L721,978" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1001.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">&quot;이 앱은 components,               &quot;이 앱은 auth, products,</text>
+  <path d="M20,1020 L721,1020" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1043.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">hooks, services를                  cart를 다루는</text>
+  <path d="M20,1062 L721,1062" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="1085.6" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="14" opacity="1">가지고 있다&quot;                       이커머스 앱이다&quot; ★</text>
+</svg>

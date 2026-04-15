@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="815" viewBox="-10 -20 448.5 609">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="448.5" height="609" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">Step 3 핵심 요약</text>
+  <rect x="20" y="45" width="388.5" height="514" rx="58.275" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="214.25" y="114.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">1. SPA는 하나의 HTML에서 JS로 화면을 동적 교체하는 방식이다</text>
+  <text x="214.25" y="132.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ History API + DOM 조작 + 비동기 통신이 핵심</text>
+  <text x="214.25" y="150.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 빠른 전환이 장점이지만 초기 로딩·SEO에 한계</text>
+  <text x="214.25" y="169" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">2. React는 라이브러리이다</text>
+  <text x="214.25" y="187.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ UI 렌더링만 담당, 나머지는 개발자가 선택</text>
+  <text x="214.25" y="205.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 프레임워크와의 차이: 제어의 역전(IoC) 여부</text>
+  <text x="214.25" y="223.60000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 유연하지만 &quot;선택 피로&quot;가 따른다</text>
+  <text x="214.25" y="241.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">3. 생태계는 9개 주요 영역으로 분류된다</text>
+  <text x="214.25" y="260" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 라우팅, 데이터 패칭, 상태 관리, 폼, 스타일링</text>
+  <text x="214.25" y="278.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 타입, 테스트, 빌드/배포, 메타 프레임워크</text>
+  <text x="214.25" y="296.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 각 영역에 1~3개의 대표 도구가 경쟁 중</text>
+  <text x="214.25" y="314.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">4. 메타 프레임워크는 React 위에 구축된 통합 솔루션이다</text>
+  <text x="214.25" y="332.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ Next.js가 시장 1위, Remix가 대안</text>
+  <text x="214.25" y="351" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ React 코어를 먼저 이해한 뒤 학습하는 것이 효과적</text>
+  <text x="214.25" y="369.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">5. React는 클라이언트에서 서버로 확장 중이다</text>
+  <text x="214.25" y="387.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ React Server Components, Server Actions</text>
+  <text x="214.25" y="405.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 그러나 컴포넌트 모델의 핵심 원리는 변하지 않았다</text>
+  <text x="214.25" y="423.80000000000007" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">6. 도구가 바뀌어도 원리는 유지된다</text>
+  <text x="214.25" y="442" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ Layer 1(컴포넌트 모델)을 탄탄히 하면 도구 전환에 유연</text>
+  <text x="214.25" y="460.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 이 로드맵이 Phase 1~2에 가장 많은 시간을 배분하는 이유</text>
+  <text x="214.25" y="478.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">7. 기술 선택은 &quot;최신&quot;이 아니라 &quot;적합&quot;이 기준이다</text>
+  <text x="214.25" y="496.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 팀 경험 &gt; 프로젝트 요구사항 &gt; 생태계 성숙도</text>
+</svg>

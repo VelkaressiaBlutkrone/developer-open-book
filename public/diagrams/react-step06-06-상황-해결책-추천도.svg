@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="405" viewBox="-10 -20 380.5 257">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="380.5" height="257" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">상황  해결책  추천도</text>
+  <rect x="20" y="45" width="320.5" height="162" rx="24.3" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="180.25" y="84" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">setState에서  Updater Function  ⭐⭐⭐</text>
+  <text x="180.25" y="102.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">이전 값 필요  prev =&gt; prev + 1  가장 일반적</text>
+  <text x="180.25" y="120.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">타이머/이벤트에서  useRef로 최신 값  ⭐⭐⭐</text>
+  <text x="180.25" y="138.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">최신 값 읽기  동기화  읽기 전용일 때</text>
+  <text x="180.25" y="156.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">useEffect 내부에서  의존성 배열에  ⭐⭐</text>
+  <text x="180.25" y="175" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">값 참조  해당 값 추가  Step 11에서 학습</text>
+</svg>

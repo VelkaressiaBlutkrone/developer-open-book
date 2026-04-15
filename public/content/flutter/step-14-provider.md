@@ -26,36 +26,11 @@
 
 Step 12에서 살펴본 Prop Drilling 문제를 기억하는가? Provider는 이 문제를 InheritedWidget 기반으로 우아하게 해결한다.
 
-```
-Provider가 해결하는 3가지 문제
-──────────────────────────────────────────────────────
-① Prop Drilling
-   중간 위젯을 거치지 않고 필요한 위젯이 직접 상태를 가져옴
-
-② 상태 생명주기 관리
-   위젯 트리에 상태를 바인딩 → 트리에서 제거 시 자동 dispose
-
-③ 의존성 주입 (Dependency Injection)
-   위젯이 필요한 의존성(서비스·저장소)을
-   직접 생성하지 않고 외부에서 주입받음
-──────────────────────────────────────────────────────
-```
+![Provider가 해결하는 3가지 문제](/developer-open-book/diagrams/flutter-step14-provider-solves.svg)
 
 ### 1.2 Provider의 위치
 
-```
-Flutter 상태관리 생태계에서 Provider의 위치
-──────────────────────────────────────────────────────
-  Flutter 내장
-    InheritedWidget  ← 저수준, 직접 사용하기 불편
-
-  Provider 패키지 (pub.dev)
-    InheritedWidget를 래핑 → 더 편리한 API 제공
-
-  Riverpod 패키지
-    Provider의 한계를 개선 (Step 15에서 학습)
-──────────────────────────────────────────────────────
-```
+![Flutter 상태관리 생태계에서 Provider의 위치](/developer-open-book/diagrams/flutter-step14-provider-position.svg)
 
 ### 1.3 전체 개념 지도
 
@@ -178,16 +153,7 @@ void main() {
 
 **Provider 배치 원칙:**
 
-```
-어디에 배치해야 하는가?
-──────────────────────────────────────────────────────
-  전체 앱에서 필요: MaterialApp 위 또는 runApp 래퍼
-  특정 화면 하위에서만 필요: 해당 화면 위젯에서 제공
-  특정 위젯 트리에서만 필요: 해당 서브트리 루트에서 제공
-
-  규칙: 해당 상태가 필요한 가장 가까운 공통 조상에 배치
-──────────────────────────────────────────────────────
-```
+![Provider 배치 원칙](/developer-open-book/diagrams/flutter-step14-placement.svg)
 
 ---
 

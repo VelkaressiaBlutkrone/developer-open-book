@@ -1,0 +1,318 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "r_288",
+      "x": 50,
+      "y": 10,
+      "width": 620,
+      "height": 380,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_289",
+      "x": 50,
+      "y": 10,
+      "width": 620,
+      "height": 40,
+      "text": "Step 35 — i18n + a11y",
+      "fontSize": 20,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_288"
+    },
+    {
+      "type": "rectangle",
+      "id": "r_290",
+      "x": 60,
+      "y": 50,
+      "width": 600,
+      "height": 218,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_291",
+      "x": 60,
+      "y": 50,
+      "width": 600,
+      "height": 32,
+      "text": "다루는 것",
+      "fontSize": 16,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_290"
+    },
+    {
+      "type": "text",
+      "id": "t_292",
+      "x": 80,
+      "y": 82,
+      "width": 203,
+      "height": 18,
+      "text": "· i18n 아키텍처: react-i18next 기반",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_293",
+      "x": 80,
+      "y": 104,
+      "width": 189,
+      "height": 18,
+      "text": "· 번역 키 관리, 네임스페이스, 동적 언어 전환",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_294",
+      "x": 80,
+      "y": 126,
+      "width": 175,
+      "height": 18,
+      "text": "· 날짜/숫자/통화 포맷팅 (Intl API)",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_295",
+      "x": 80,
+      "y": 148,
+      "width": 133,
+      "height": 18,
+      "text": "· WCAG 4대 원칙과 핵심 기준",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_296",
+      "x": 80,
+      "y": 170,
+      "width": 147,
+      "height": 18,
+      "text": "· 시맨틱 HTML: 올바른 요소 선택",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_297",
+      "x": 80,
+      "y": 192,
+      "width": 126,
+      "height": 18,
+      "text": "· ARIA: 역할, 상태, 속성",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_298",
+      "x": 80,
+      "y": 214,
+      "width": 175,
+      "height": 18,
+      "text": "· 키보드 접근성: 포커스 관리, Tab 순서",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_299",
+      "x": 80,
+      "y": 236,
+      "width": 154,
+      "height": 18,
+      "text": "· 색상 대비, 텍스트 크기, 모션 감소",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_300",
+      "x": 80,
+      "y": 258,
+      "width": 203,
+      "height": 18,
+      "text": "· 접근성 진단 도구 (axe, Lighthouse)",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "line",
+      "id": "l_301",
+      "x": 60,
+      "y": 270,
+      "width": 600,
+      "height": 0,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          600,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        600,
+        0
+      ]
+    },
+    {
+      "type": "rectangle",
+      "id": "r_302",
+      "x": 60,
+      "y": 274,
+      "width": 600,
+      "height": 108,
+      "backgroundColor": "#5c1a1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#ef4444",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_303",
+      "x": 60,
+      "y": 274,
+      "width": 600,
+      "height": 32,
+      "text": "다루지 않는 것",
+      "fontSize": 16,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_302"
+    },
+    {
+      "type": "text",
+      "id": "t_304",
+      "x": 80,
+      "y": 306,
+      "width": 112,
+      "height": 18,
+      "text": "· RTL 레이아웃 구현 상세",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_305",
+      "x": 80,
+      "y": 328,
+      "width": 98,
+      "height": 18,
+      "text": "· 번역 관리 플랫폼 연동",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_306",
+      "x": 80,
+      "y": 350,
+      "width": 112,
+      "height": 18,
+      "text": "· WCAG AAA 수준 상세",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_307",
+      "x": 80,
+      "y": 372,
+      "width": 119,
+      "height": 18,
+      "text": "· 스크린 리더 내부 동작 상세",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

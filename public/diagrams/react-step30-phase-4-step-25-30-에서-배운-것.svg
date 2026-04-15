@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="1155" viewBox="-10 -15 590.5 1137">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="590.5" height="1137" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Phase 4 (Step 25~30)에서 배운 것</text>
+  <rect x="20" y="50" width="530.5" height="1042" rx="79.575" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 25: Context API</text>
+  <text x="40" y="109.5" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Props Drilling 해결, Provider + useContext</text>
+  <text x="40" y="135.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 리렌더링 문제와 최적화 4전략</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 적합한 데이터: 변경 드문 전역 값 (테마, 인증)</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 26: Zustand</text>
+  <text x="40" y="213.5" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15" opacity="1">· selector 기반 부분 구독 → Context 한계 해결</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Provider 불필요, React 트리 밖 접근 가능</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 미들웨어 (persist, devtools, immer)</text>
+  <text x="40" y="291.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 상태 관리 도구 최종 선택 가이드</text>
+  <text x="40" y="317.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 27: 컴포넌트 설계 패턴</text>
+  <text x="40" y="343.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Compound Component (구조의 유연성)</text>
+  <text x="40" y="369.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Headless Component (최대 커스터마이즈)</text>
+  <text x="40" y="395.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 유연성의 단계: Props &lt; Slot &lt; Compound &lt; Headless</text>
+  <text x="40" y="421.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 패턴의 진화: HOC → Render Props → Hook</text>
+  <text x="40" y="447.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 28: 프로젝트 구조</text>
+  <text x="40" y="473.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Feature-based vs Layer-based</text>
+  <text x="40" y="499.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Screaming Architecture, Co-location</text>
+  <text x="40" y="525.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 의존성 방향: pages → features → shared</text>
+  <text x="40" y="551.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Barrel Export로 모듈 경계 정의</text>
+  <text x="40" y="577.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 29: 성능 최적화 심화</text>
+  <text x="40" y="603.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Core Web Vitals (LCP, INP, CLS)</text>
+  <text x="40" y="629.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 코드 분할 (React.lazy + Suspense)</text>
+  <text x="40" y="655.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 번들 분석, 이미지 최적화, Virtualization</text>
+  <text x="40" y="681.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Lighthouse 진단 + 최적화 우선순위</text>
+  <text x="40" y="707.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 30: Suspense 아키텍처 (이 Step)</text>
+  <text x="40" y="733.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Suspense의 진짜 역할 (선언적 비동기 처리)</text>
+  <text x="40" y="759.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· use() + Suspense + ErrorBoundary = 선언적 데이터 패칭</text>
+  <text x="40" y="785.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 경계 배치가 UX를 결정한다</text>
+  <text x="40" y="811.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Streaming SSR의 청크 단위 = Suspense 경계</text>
+  <text x="40" y="837.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">Phase 4의 핵심 메시지:</text>
+  <text x="40" y="863.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&quot;상태를 목적에 맞는 도구로 관리하고 (Context/Zustand/TanStack Query)</text>
+  <text x="40" y="889.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">컴포넌트를 재사용 가능하게 설계하며 (Compound/Headless)</text>
+  <text x="40" y="915.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">코드를 체계적으로 조직하고 (Feature-based)</text>
+  <text x="40" y="941.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">성능을 측정 기반으로 최적화하며 (Lighthouse/Profiler)</text>
+  <text x="40" y="967.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">로딩과 에러를 선언적으로 처리한다 (Suspense/ErrorBoundary)&quot;</text>
+  <text x="40" y="993.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Phase 5부터는 이 기반 위에 타입 안전성, 폼, 스타일링을 완성한다.</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="667" height="539" viewBox="-10 -15 667 539">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="667" height="539" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Next.js App Router에서 Suspense는 파일 규약으로 자동 적용됨</text>
+  <rect x="20" y="50" width="607" height="444" rx="66.6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">app/dashboard/</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── layout.js      → 레이아웃 (즉시 표시)</text>
+  <text x="40" y="135.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── page.js        → 메인 콘텐츠 (Server Component, async)</text>
+  <text x="40" y="161.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── loading.js     → = &lt;Suspense fallback={&lt;Loading /&gt;}&gt; 자동 적용!</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── error.js       → = &lt;ErrorBoundary&gt; 자동 적용!</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">파일만 만들면 Suspense 아키텍처가 완성된다:</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· loading.js → Suspense fallback (스켈레톤)</text>
+  <text x="40" y="265.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">· error.js → ErrorBoundary (에러 UI)</text>
+  <text x="40" y="291.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· page.js → async Server Component (데이터 패칭)</text>
+  <text x="40" y="317.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 개발자는 각 파일만 작성하면 프레임워크가 조합</text>
+  <text x="40" y="343.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 21에서 배운 &quot;특수 파일 규약&quot;의 진짜 의미:</text>
+  <text x="40" y="369.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Next.js가 Suspense + ErrorBoundary 아키텍처를</text>
+  <text x="40" y="395.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">파일 시스템 규약으로 추상화한 것이다!</text>
+</svg>

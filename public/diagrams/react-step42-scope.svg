@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="398" viewBox="20 -20 680 397.6">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="680" height="397.6" rx="12" fill="#141414"/>
+  <rect x="50" y="10" width="620" height="336" rx="50.4" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="360" y="183" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20">Step 42 — 종합 프로젝트 + 마무리</text>
+  <rect x="60" y="50" width="600" height="196" rx="29.4" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="360" y="152" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">다루는 것</text>
+  <text x="80" y="94.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 42단계 전체 통합 복습</text>
+  <text x="80" y="116.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 기술 스택 최종 정리</text>
+  <text x="80" y="138.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 핵심 원칙 10선</text>
+  <text x="80" y="160.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 종합 프로젝트 아이디어와 체크리스트</text>
+  <text x="80" y="182.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 기술 선택 결정 가이드</text>
+  <text x="80" y="204.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· React 개발자 성장 로드맵</text>
+  <text x="80" y="226.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 자가 수준 진단 체크리스트</text>
+  <text x="80" y="248.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 사례 연구 (실전 프로젝트 통합 패턴)</text>
+  <rect x="60" y="252" width="600" height="86" rx="12.9" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="360" y="299" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">다루지 않는 것</text>
+  <text x="80" y="296.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 각 기술의 새로운 개념 (앞 Step에서 다뤘음)</text>
+  <text x="80" y="318.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· GraphQL, Redux 등 로드맵 범위 외 기술</text>
+  <text x="80" y="340.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 특정 회사의 채용 프로세스</text>
+</svg>

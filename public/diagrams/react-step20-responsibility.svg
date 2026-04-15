@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="284" viewBox="20 -20 560 265">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="560" height="265" rx="12" fill="#141414"/>
+  <text x="60" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">책임 분리 관점의 RSC 모델</text>
+  <rect x="50" y="55" width="230" height="160" rx="24" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="80" y="74.4" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="16" opacity="1">서버의 책임</text>
+  <text x="65" y="99.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 데이터 조회 (DB, API)</text>
+  <text x="65" y="119.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 비즈니스 로직 실행</text>
+  <text x="65" y="139.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 민감한 로직 보호</text>
+  <text x="65" y="159.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 정적 콘텐츠 렌더링</text>
+  <text x="65" y="179.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 무거운 라이브러리 실행</text>
+  <text x="100" y="206.7" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="13" opacity="1">↓ Server Component</text>
+  <rect x="320" y="55" width="230" height="160" rx="24" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="350" y="74.4" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="16" opacity="1">클라이언트의 책임</text>
+  <text x="335" y="99.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 사용자 입력 처리</text>
+  <text x="335" y="119.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 상태(State) 관리</text>
+  <text x="335" y="139.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 애니메이션, 전환 효과</text>
+  <text x="335" y="159.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 브라우저 API 접근</text>
+  <text x="335" y="179.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 실시간 업데이트</text>
+  <text x="370" y="206.7" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="13" opacity="1">↓ Client Component</text>
+</svg>

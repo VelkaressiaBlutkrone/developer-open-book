@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="561" viewBox="70 -10 460 430">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="70" y="-10" width="460" height="430" rx="12" fill="#141414"/>
+  <text x="200" y="39.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">정적 호스팅 + CDN 동작</text>
+  <rect x="100" y="60" width="400" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="300" y="88.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">빌드 → dist/ 폴더 생성</text>
+  <defs><marker id="arrow-a_644" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M300,110 L300,130" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a_644)"/>
+  <rect x="100" y="130" width="400" height="50" rx="7.5" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="300" y="158.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">index.html + assets/*.js + assets/*.css</text>
+  <defs><marker id="arrow-a_647" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M300,180 L300,200" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a_647)"/>
+  <rect x="100" y="200" width="400" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="300" y="228.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">CDN 엣지 서버에 파일 전파</text>
+  <defs><marker id="arrow-a_650" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M300,250 L300,270" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a_650)"/>
+  <rect x="100" y="270" width="400" height="50" rx="7.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="300" y="298.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">서울 / 도쿄 / 뉴욕 / 런던 엣지</text>
+  <defs><marker id="arrow-a_653" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M300,320 L300,340" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a_653)"/>
+  <rect x="100" y="340" width="400" height="50" rx="7.5" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="300" y="368.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">사용자 요청 → 가장 가까운 엣지 응답 ★</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="637.1" height="543" viewBox="0 -20 637.1 543">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="0" y="-20" width="637.1" height="543" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Feature A가 Feature B의 데이터를 필요로 할 때</text>
+  <rect x="30" y="55" width="480" height="438" rx="65.7" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.5"/>
+  <text x="45" y="82.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Feature A가 Feature B의 데이터를 필요로 할 때</text>
+  <text x="45" y="106.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">방법 1: page에서 조합 (권장)</text>
+  <text x="45" y="130.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">// pages/CheckoutPage.jsx</text>
+  <text x="45" y="154.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">import { useCart } from '@/features/cart';</text>
+  <text x="45" y="178.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">import { useAuth } from '@/features/auth';</text>
+  <text x="45" y="202.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">// page가 두 feature를 조합하여 사용</text>
+  <text x="45" y="226.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">방법 2: 이벤트 기반 (느슨한 결합)</text>
+  <text x="45" y="250.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">// cart feature가 &quot;주문 완료&quot; 이벤트를 발행</text>
+  <text x="45" y="274.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">// orders feature가 이벤트를 구독하여 반응</text>
+  <text x="45" y="298.6" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="14" opacity="1">// → Zustand subscribe 또는 커스텀 이벤트 시스템</text>
+  <text x="45" y="322.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">방법 3: shared로 올리기</text>
+  <text x="45" y="346.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">// 두 feature가 공유하는 타입/유틸/컴포넌트를</text>
+  <text x="45" y="370.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">// shared/로 이동</text>
+  <text x="45" y="394.6" fill="#ef4444" font-family="Nunito, sans-serif" font-size="14" opacity="1">❌ 피해야 하는 방법:</text>
+  <text x="45" y="418.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">// features/cart/에서 features/products/의 내부 파일 직접 import</text>
+  <text x="45" y="442.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">import { ProductCard } from '@/features/products/components/ProductCard';</text>
+  <text x="45" y="466.6" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="14" opacity="1">// → feature의 내부 구현에 의존 → 결합도 증가</text>
+</svg>

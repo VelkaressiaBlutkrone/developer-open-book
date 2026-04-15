@@ -1,0 +1,292 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "r_799",
+      "x": 50,
+      "y": 10,
+      "width": 620,
+      "height": 336,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_800",
+      "x": 50,
+      "y": 10,
+      "width": 620,
+      "height": 40,
+      "text": "Step 42 — 종합 프로젝트 + 마무리",
+      "fontSize": 20,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_799"
+    },
+    {
+      "type": "rectangle",
+      "id": "r_801",
+      "x": 60,
+      "y": 50,
+      "width": 600,
+      "height": 196,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_802",
+      "x": 60,
+      "y": 50,
+      "width": 600,
+      "height": 32,
+      "text": "다루는 것",
+      "fontSize": 16,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_801"
+    },
+    {
+      "type": "text",
+      "id": "t_803",
+      "x": 80,
+      "y": 82,
+      "width": 105,
+      "height": 18,
+      "text": "· 42단계 전체 통합 복습",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_804",
+      "x": 80,
+      "y": 104,
+      "width": 91,
+      "height": 18,
+      "text": "· 기술 스택 최종 정리",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_805",
+      "x": 80,
+      "y": 126,
+      "width": 77,
+      "height": 18,
+      "text": "· 핵심 원칙 10선",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_806",
+      "x": 80,
+      "y": 148,
+      "width": 147,
+      "height": 18,
+      "text": "· 종합 프로젝트 아이디어와 체크리스트",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_807",
+      "x": 80,
+      "y": 170,
+      "width": 98,
+      "height": 18,
+      "text": "· 기술 선택 결정 가이드",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_808",
+      "x": 80,
+      "y": 192,
+      "width": 126,
+      "height": 18,
+      "text": "· React 개발자 성장 로드맵",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_809",
+      "x": 80,
+      "y": 214,
+      "width": 112,
+      "height": 18,
+      "text": "· 자가 수준 진단 체크리스트",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_810",
+      "x": 80,
+      "y": 236,
+      "width": 161,
+      "height": 18,
+      "text": "· 사례 연구 (실전 프로젝트 통합 패턴)",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "line",
+      "id": "l_811",
+      "x": 60,
+      "y": 248,
+      "width": 600,
+      "height": 0,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          600,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        600,
+        0
+      ]
+    },
+    {
+      "type": "rectangle",
+      "id": "r_812",
+      "x": 60,
+      "y": 252,
+      "width": 600,
+      "height": 86,
+      "backgroundColor": "#5c1a1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#ef4444",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_813",
+      "x": 60,
+      "y": 252,
+      "width": 600,
+      "height": 32,
+      "text": "다루지 않는 것",
+      "fontSize": 16,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_812"
+    },
+    {
+      "type": "text",
+      "id": "t_814",
+      "x": 80,
+      "y": 284,
+      "width": 203,
+      "height": 18,
+      "text": "· 각 기술의 새로운 개념 (앞 Step에서 다뤘음)",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_815",
+      "x": 80,
+      "y": 306,
+      "width": 210,
+      "height": 18,
+      "text": "· GraphQL, Redux 등 로드맵 범위 외 기술",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_816",
+      "x": 80,
+      "y": 328,
+      "width": 112,
+      "height": 18,
+      "text": "· 특정 회사의 채용 프로세스",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

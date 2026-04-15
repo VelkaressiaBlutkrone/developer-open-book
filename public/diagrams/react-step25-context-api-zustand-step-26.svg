@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="605" viewBox="-30 -20 1013 680.6">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-30" y="-20" width="1013" height="680.6" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Context API          │  Zustand (Step 26)</text>
+  <rect x="20" y="50" width="516" height="42" rx="6.3" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1.5" opacity="1"/>
+  <text x="278" y="74.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">Context API</text>
+  <rect x="538" y="50" width="183" height="42" rx="6.3" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1.5" opacity="1"/>
+  <text x="629.5" y="74.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">Zustand (Step 26)</text>
+  <path d="M20,96 L933,96" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="119.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">설치</text>
+  <text x="548" y="119.6" fill="#ef4444" font-family="Nunito, sans-serif" font-size="14" opacity="1">없음 (React 내장)</text>
+  <text x="733" y="119.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">npm install zustand</text>
+  <path d="M20,138 L933,138" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="161.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">보일러플레이트</text>
+  <text x="548" y="161.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">많음 (Context +</text>
+  <text x="733" y="161.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">적음 (create 함수)</text>
+  <path d="M20,180 L933,180" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="203.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Provider + Hook)</text>
+  <path d="M20,222 L933,222" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="245.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">리렌더링 최적화</text>
+  <text x="548" y="245.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">수동 (분리, useMemo)</text>
+  <text x="733" y="245.6" fill="#22c55e" font-family="Nunito, sans-serif" font-size="14" opacity="1">자동 (selector 기반)</text>
+  <path d="M20,264 L933,264" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="287.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">DevTools</text>
+  <text x="548" y="287.6" fill="#ef4444" font-family="Nunito, sans-serif" font-size="14" opacity="1">없음</text>
+  <text x="733" y="287.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">있음</text>
+  <path d="M20,306 L933,306" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="329.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">학습 곡선</text>
+  <text x="548" y="329.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">낮음</text>
+  <text x="733" y="329.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">낮음</text>
+  <path d="M20,348 L933,348" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="371.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Provider 필요</text>
+  <text x="548" y="371.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">필수</text>
+  <text x="733" y="371.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">불필요</text>
+  <path d="M20,390 L933,390" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="413.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">적합한 규모</text>
+  <text x="548" y="413.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">소규모, 변경 드문 값</text>
+  <text x="733" y="413.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">중~대규모, 빈번한 변경</text>
+  <path d="M20,432 L933,432" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="455.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Server State</text>
+  <text x="548" y="455.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">부적합</text>
+  <text x="733" y="455.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">부적합 (TanStack Query)</text>
+  <path d="M20,474 L933,474" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="497.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">요약:</text>
+  <path d="M20,516 L933,516" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="539.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Context: 테마, 인증, 로케일 등 &quot;앱 설정&quot; 수준의 값에 적합</text>
+  <path d="M20,558 L933,558" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="581.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Zustand: 자주 변하거나 부분 구독이 필요한 복잡한 상태에 적합</text>
+  <path d="M20,600 L933,600" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="623.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">· TanStack Query: 서버 데이터는 항상 이것으로 (Context/Zustand 아님)</text>
+</svg>

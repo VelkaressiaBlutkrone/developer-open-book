@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="961" viewBox="-10 -20 545 873">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="545" height="873" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Step 28 핵심 요약</text>
+  <rect x="20" y="45" width="485" height="778" rx="72.75" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 28 핵심 요약</text>
+  <text x="40" y="105.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. Feature-based 구조 = 비즈니스 기능별 폴더 분류 (권장)</text>
+  <text x="40" y="133.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ features/auth, features/products, features/cart</text>
+  <text x="40" y="159.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 관련 코드가 한 곳에 모임 (높은 응집도)</text>
+  <text x="40" y="185.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Screaming Architecture: 폴더만 봐도 앱의 목적을 파악</text>
+  <text x="40" y="213.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. Layer-based는 소규모에 적합</text>
+  <text x="40" y="241.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ components/, hooks/, services/ 분류</text>
+  <text x="40" y="267.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 직관적이지만 기능이 흩어짐</text>
+  <text x="40" y="293.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 프로젝트가 커지면 Feature-based로 전환 고려</text>
+  <text x="40" y="321.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. Co-location = &quot;함께 변하는 것은 함께 둔다&quot;</text>
+  <text x="40" y="349.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 컴포넌트, 스타일, 테스트, 타입을 같은 폴더에</text>
+  <text x="40" y="375.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 삭제 시 폴더째 제거 가능</text>
+  <text x="40" y="403.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. 의존성 방향: pages → features → shared (단방향)</text>
+  <text x="40" y="431.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ shared는 features를 import 금지</text>
+  <text x="40" y="457.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ feature는 다른 feature의 내부 파일 직접 import 금지</text>
+  <text x="40" y="483.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ feature 간 통신은 page에서 조합 또는 이벤트 기반</text>
+  <text x="40" y="511.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">5. Barrel Export로 모듈의 Public API를 정의한다</text>
+  <text x="40" y="539.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ index.js에서 외부 공개할 것만 재수출</text>
+  <text x="40" y="565.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 내부 구현을 캡슐화</text>
+  <text x="40" y="591.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ import 경로가 깔끔해진다</text>
+  <text x="40" y="619.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">6. 규모에 맞는 구조를 선택한다</text>
+  <text x="40" y="647.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 소규모(~30 파일): Layer-based</text>
+  <text x="40" y="673.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 중규모(30~100): Feature-based</text>
+  <text x="40" y="699.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 대규모(100+): Feature-based + Co-location + 컴포넌트 폴더</text>
+  <text x="40" y="727.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">7. pages/는 &quot;조합 계층&quot;이다</text>
+  <text x="40" y="755.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 여러 feature를 import하여 조합</text>
+  <text x="40" y="781.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ feature 간 결합을 page가 중재</text>
+  <text x="40" y="807.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Next.js에서는 app/ 디렉토리가 이 역할</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="355" viewBox="-10 -20 360 213">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="360" height="213" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">개발자가 작성한 코드  브라우저가 실행하는 코드</text>
+  <rect x="20" y="45" width="300" height="118" rx="17.7" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="170" y="80.19999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">JSX 문법  변환 도구  순수 JavaScript</text>
+  <text x="170" y="98.39999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">ES Module  →  번들된 파일</text>
+  <text x="170" y="116.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">TypeScript  (Vite 등)  최적화된 CSS</text>
+  <text x="170" y="134.79999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">최신 JS 문법  정적 에셋</text>
+</svg>

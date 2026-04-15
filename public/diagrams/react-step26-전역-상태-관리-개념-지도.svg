@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="803" viewBox="-30 -20 571 764.6">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-30" y="-20" width="571" height="764.6" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">전역 상태 관리 개념 지도</text>
+  <rect x="20" y="50" width="471" height="42" rx="6.3" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1.5" opacity="1"/>
+  <text x="255.5" y="74.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">전역 상태 관리 개념 지도</text>
+  <path d="M20,96 L491,96" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="119.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">상태 관리 도구 선택 지형도</text>
+  <path d="M20,138 L491,138" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="161.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">복잡도↑</text>
+  <path d="M20,180 L491,180" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="203.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Redux Toolkit</text>
+  <path d="M20,222 L491,222" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="245.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">(대규모/팀/엄격한 패턴)</text>
+  <path d="M20,264 L491,264" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="287.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Zustand</text>
+  <path d="M20,306 L491,306" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="329.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">(중규모/부분 구독/빠른 개발)</text>
+  <path d="M20,348 L491,348" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="371.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Context API</text>
+  <path d="M20,390 L491,390" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="413.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">(소규모/변경 드문 값)</text>
+  <path d="M20,432 L491,432" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="455.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">useState/useReducer</text>
+  <path d="M20,474 L491,474" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="497.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">(로컬 상태)</text>
+  <path d="M20,516 L491,516" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="539.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">└──────────────────────────────────────────── 규모↑</text>
+  <path d="M20,558 L491,558" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="581.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">Zustand의 위치:</text>
+  <path d="M20,600 L491,600" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="623.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Context보다 성능/유연성이 높다</text>
+  <path d="M20,642 L491,642" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="665.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Redux Toolkit보다 학습 비용이 낮다</text>
+  <path d="M20,684 L491,684" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <text x="30" y="707.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">· &quot;대부분의 중규모 앱&quot;에 최적의 선택</text>
+</svg>

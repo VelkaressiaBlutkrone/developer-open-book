@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="531" viewBox="20 -20 530 469">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="530" height="469" rx="12" fill="#141414"/>
+  <text x="100" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Step 17 — 다루는 범위</text>
+  <rect x="50" y="50" width="470" height="243" rx="36.449999999999996" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="60" y="72.4" fill="#22c55e" font-family="Nunito, sans-serif" font-size="16" opacity="1">다루는 것</text>
+  <text x="65" y="96.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Error Boundary의 구조와 동작 원리</text>
+  <text x="65" y="118.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Error Boundary가 잡는 에러 / 잡지 못하는 에러</text>
+  <text x="65" y="140.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 계층적 Error Boundary 설계 전략</text>
+  <text x="65" y="162.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 이벤트 핸들러와 비동기 에러 처리 패턴</text>
+  <text x="65" y="184.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Error Boundary + Suspense 결합</text>
+  <text x="65" y="206.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Fallback UI 설계와 UX 원칙</text>
+  <text x="65" y="228.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 에러 복구 전략 (리셋, 재시도)</text>
+  <text x="65" y="250.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 전역 에러 핸들링 패턴</text>
+  <text x="65" y="272.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Phase 2 전체 통합 복습</text>
+  <rect x="50" y="308" width="470" height="111" rx="16.65" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="60" y="330.4" fill="#ef4444" font-family="Nunito, sans-serif" font-size="16" opacity="1">다루지 않는 것</text>
+  <text x="65" y="354.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Sentry 등 모니터링 도구 설정 (Step 42)</text>
+  <text x="65" y="376.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 서버 사이드 에러 처리 (Step 21)</text>
+  <text x="65" y="398.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 테스트에서의 에러 시나리오 검증 (Step 36~37)</text>
+</svg>

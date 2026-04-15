@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="428" viewBox="20 -20 540 385">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="540" height="385" rx="12" fill="#141414"/>
+  <text x="60" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">렌더링 패러다임 관계도</text>
+  <rect x="50" y="55" width="480" height="35" rx="5.25" fill="#1a4d4d" stroke="#06b6d4" stroke-width="1" opacity="1"/>
+  <text x="60" y="72.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">CSR: 클라이언트에서 모든 것을 처리 — 모든 코드 → 번들 → 브라우저</text>
+  <rect x="50" y="100" width="480" height="35" rx="5.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="60" y="117.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">SSR: 서버에서 HTML 생성 → 클라이언트 Hydration — 동일 코드 양쪽 실행</text>
+  <rect x="50" y="145" width="480" height="45" rx="6.75" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="60" y="160.8" fill="#22c55e" font-family="Nunito, sans-serif" font-size="12" opacity="1">RSC: 컴포넌트를 서버/클라이언트로 명시적 분리</text>
+  <text x="70" y="178.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">SC → 서버에서만, 번들 미포함 / CC → 기존 React와 동일</text>
+  <rect x="50" y="205" width="480" height="55" rx="8.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="60" y="221.7" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="13" opacity="1">RSC + SSR (실제 사용 조합):</text>
+  <text x="70" y="240.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">SC → RSC Payload + CC → SSR HTML → Hydration</text>
+  <text x="70" y="258.8" fill="#22c55e" font-family="Nunito, sans-serif" font-size="12" opacity="1">→ 최적의 초기 HTML + 최소 번들 동시 달성</text>
+  <rect x="50" y="275" width="480" height="60" rx="9" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="65" y="290.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">CSR: 브라우저에서 전부</text>
+  <text x="65" y="307.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">SSR: 서버에서 HTML, 브라우저에서 Hydration(전부)</text>
+  <text x="65" y="324.8" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="12" opacity="1">RSC: 서버에서 Server 부분, 브라우저에서 Client만 → 명시적 분리가 핵심</text>
+</svg>

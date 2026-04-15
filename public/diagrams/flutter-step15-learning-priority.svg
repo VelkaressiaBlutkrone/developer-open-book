@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="272" viewBox="70 -20 540 245">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="70" y="-20" width="540" height="245" rx="12" fill="#141414"/>
+  <text x="180" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">학습 우선순위</text>
+  <rect x="100" y="55" width="480" height="40" rx="6" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="340" y="78.75" text-anchor="middle" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15">1순위: Riverpod ← 2026년 Flutter 신규 프로젝트 표준</text>
+  <rect x="100" y="105" width="480" height="40" rx="6" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="340" y="128.75" text-anchor="middle" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="15">2순위: Bloc/Cubit ← 대규모 팀·엔터프라이즈 선호</text>
+  <rect x="100" y="155" width="480" height="40" rx="6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="340" y="178.75" text-anchor="middle" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15">참고: Redux ← 개념 이해용 (Flutter에서 권장 안 됨)</text>
+</svg>

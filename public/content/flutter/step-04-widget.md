@@ -103,25 +103,7 @@ abstract class Widget {
 
 **Widget이 불변이어야 하는 이유:**
 
-```
-가변 Widget을 허용한다면?
-─────────────────────────────────────────────────────
-  Widget의 색상을 변경
-       ↓
-  Flutter: "이 Widget이 변경됐나? 언제? 어떻게?"
-       ↓
-  변경 감지를 위한 복잡한 추적 로직 필요
-       ↓
-  성능 저하, 예측 불가능한 동작
-
-불변 Widget이라면?
-─────────────────────────────────────────────────────
-  새 Widget 객체를 생성해 반환
-       ↓
-  Flutter: "새 Widget과 기존 Element를 비교"
-       ↓
-  runtimeType과 Key만 비교하면 됨 → 단순·빠름
-```
+![가변 Widget vs 불변 Widget](/developer-open-book/diagrams/flutter-step04-mutable-vs-immutable.svg)
 
 Widget이 불변이기 때문에 Flutter는 빠르고 단순한 **비교(diffing)** 알고리즘으로 변경을 감지할 수 있다.
 
@@ -154,15 +136,7 @@ MaterialApp(                    ← Widget
 
 Element는 Widget과 RenderObject를 이어주는 **살아있는 연결자**다. Flutter 프레임워크가 내부적으로 생성하고 관리한다.
 
-```
-Element의 핵심 책임
-─────────────────────────────────────────────────────
-  1. Widget 참조 유지   : 현재 자신에게 연결된 Widget을 기억
-  2. 자식 Element 관리  : 자식 트리의 생성·업데이트·삭제
-  3. RenderObject 참조  : 연결된 RenderObject 보유 (있는 경우)
-  4. BuildContext 제공  : BuildContext == Element (동일 객체)
-  5. 생명주기 관리      : mount → active → inactive → unmount
-```
+![Element의 핵심 책임](/developer-open-book/diagrams/flutter-step04-element-responsibility.svg)
 
 **Element의 핵심 특성: 재사용된다**
 
@@ -174,26 +148,11 @@ Widget은 새로 만들어졌지만, Element는 재사용되고 내부의 Widget
 
 RenderObject는 **레이아웃 계산과 픽셀 그리기**를 담당한다. 세 트리 중 가장 무거운 객체이며, 가능한 한 재사용된다.
 
-```
-RenderObject의 핵심 책임
-─────────────────────────────────────────────────────
-  1. 크기 계산  : 부모로부터 받은 Constraints로 자신의 크기 결정
-  2. 위치 계산  : 부모가 자신의 위치를 결정
-  3. 그리기     : Canvas에 실제 픽셀 명령 생성
-  4. Hit Testing: 터치 이벤트가 자신을 지나치는지 판단
-```
+![RenderObject의 핵심 책임](/developer-open-book/diagrams/flutter-step04-renderobject-responsibility.svg)
 
 **모든 Widget이 RenderObject를 갖지는 않는다:**
 
-```
-Widget 종류에 따른 Element·RenderObject 보유 여부
-─────────────────────────────────────────────────────
-  RenderObjectWidget  → RenderObjectElement → RenderObject 생성
-  (Text, Container 등 실제로 그려지는 Widget)
-
-  ComponentWidget     → ComponentElement   → RenderObject 없음
-  (StatelessWidget, StatefulWidget 등 다른 Widget을 조합하는 Widget)
-```
+![Widget 종류별 Element·RenderObject](/developer-open-book/diagrams/flutter-step04-widget-element-types.svg)
 
 ---
 
@@ -220,21 +179,7 @@ abstract class Element implements BuildContext {
 }
 ```
 
-```
-BuildContext의 활용
-─────────────────────────────────────────────────────
-  Theme.of(context)
-    → context(Element)가 트리를 위로 탐색
-    → 가장 가까운 Theme 조상 Element를 찾아 반환
-
-  Navigator.of(context)
-    → context가 트리를 위로 탐색
-    → 가장 가까운 Navigator 조상을 반환
-
-  MediaQuery.of(context)
-    → 가장 가까운 MediaQuery 조상을 찾아 화면 정보 반환
-─────────────────────────────────────────────────────
-```
+![BuildContext의 활용](/developer-open-book/diagrams/flutter-step04-buildcontext-usage.svg)
 
 > ⚠️ **함정 주의:** `initState()` 안에서 `BuildContext`를 사용하면 오류가 발생할 수 있다. 이 시점에는 Element가 아직 트리에 완전히 연결되지 않았기 때문이다. `context`가 필요한 코드는 `build()` 또는 `didChangeDependencies()` 안에서 사용해야 한다.
 
@@ -310,18 +255,7 @@ child: const Text('Flutter') // 항상 동일한 Text 인스턴스
 
 `const Widget`을 사용하면 Flutter가 reconciliation 과정에서 **동일한 객체임을 즉시 확인**하고 해당 서브트리 전체를 rebuild 대상에서 제외한다.
 
-```
-const Text('Flutter')의 동작
-─────────────────────────────────────────────────────
-  첫 번째 build():
-    Widget == 이전 Widget? → 동일 객체(identical) → 확인 완료
-    → Element·RenderObject 재사용, 비교 연산 없음
-
-  const 없는 Text('Flutter')의 동작:
-    새 객체 생성 → 이전 Widget과 내용 비교
-    → 같다 해도 비교 연산 비용 발생
-─────────────────────────────────────────────────────
-```
+![const Widget 동작 비교](/developer-open-book/diagrams/flutter-step04-const-widget.svg)
 
 > ⚠️ **함정 주의:** `const`는 값이 런타임에 결정되는 경우 사용할 수 없다. `const Text(_dynamicValue)`는 컴파일 오류다. 변하지 않는 UI 요소에만 적용한다.
 
