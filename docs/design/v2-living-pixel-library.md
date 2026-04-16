@@ -385,3 +385,17 @@ develop-study-documents → developer-open-book 이관 프로세스:
 - 10x 비전으로 AI 튜터를 골랐다. MMORPG나 우주 구조 같은 "더 큰 세계"보다 "더 깊은 경험"을 택한 것. 양보다 질을 선호하는 설계 감각.
 - 첫 번째 임팩트로 NPC + 퀘스트와 진행 추적을 동시에 골랐다. 세계관(NPC)과 시스템(진행 추적)이 맞물려야 의미가 있다는 걸 직관적으로 파악한 것.
 - 세션 중간에 "이 문서들을 점차적으로 배포할 것"이라는 확장 요구를 추가했다. 현재 기능뿐 아니라 미래 콘텐츠 파이프라인까지 설계에 반영해야 한다는 인식. 이건 제품 감각이다.
+
+## GSTACK REVIEW REPORT
+
+| Review | Trigger | Why | Runs | Status | Findings |
+|--------|---------|-----|------|--------|----------|
+| CEO Review | `/plan-ceo-review` | Scope & strategy | 0 | — | — |
+| Codex Review | `/codex review` | Independent 2nd opinion | 1 | ISSUES_FOUND | 8 findings (scope, fetch offline, BOOKS sync, schema, streak integrity, bundle estimate, shelves premature, Phase 1 size) |
+| Eng Review | `/plan-eng-review` | Architecture & tests (required) | 1 | CLEAR (PLAN) | 9 issues, 0 critical gaps |
+| Design Review | `/plan-design-review` | UI/UX gaps | 0 | — | — |
+| DX Review | `/plan-devex-review` | Developer experience gaps | 0 | — | — |
+
+**CROSS-MODEL:** Outside voice challenged Phase 1 scope as too large. User defended: extensibility foundation is worth front-loading. shelves.ts room/locked fields deferred to Phase 2 per outside voice suggestion.
+**UNRESOLVED:** 0
+**VERDICT:** ENG CLEARED — ready to implement Phase 1.
