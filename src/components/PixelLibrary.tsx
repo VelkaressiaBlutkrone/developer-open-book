@@ -4,7 +4,7 @@ import { LIBRARY_MAP, LIBRARY_COLS, LIBRARY_ROWS, INTERACTIVE_ZONES } from '../d
 import { Tile, type TileValue } from '../types/tiles'
 import type { Book } from '../types'
 import TileRenderer from './TileRenderer'
-import BookListPanel from './BookListPanel'
+import ShelfView from './ShelfView'
 import ReadingView from './ReadingView'
 
 type Filter = 'all' | 'dart' | 'flutter' | 'react'
@@ -200,7 +200,7 @@ export default function PixelLibrary() {
       </footer>
 
       {selectedCategory && (
-        <BookListPanel
+        <ShelfView
           category={selectedCategory}
           label={selectedCategory === 'dart' ? 'Dart Programming' : selectedCategory === 'flutter' ? 'Flutter Development' : 'React Development'}
           books={categoryBooks[selectedCategory]}

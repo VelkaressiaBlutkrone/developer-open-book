@@ -103,48 +103,92 @@
 /* ── Floor Tiles ── */
 .tile-floor-wood {
   background:
-    linear-gradient(180deg, #8b6914 0%, #7a5c12 30%, #8b6914 31%, #7a5c12 60%, #8b6914 61%, #7a5c12 100%);
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px, transparent 15px,
+      rgba(0,0,0,0.06) 15px, rgba(0,0,0,0.06) 16px
+    ),
+    linear-gradient(180deg,
+      #8b6914 0%, #7e5f12 2px,
+      #8b6914 2px, #7a5c12 14px,
+      #8b6914 14px, #7e5f12 16px,
+      #8b6914 16px, #7a5c12 30px,
+      #8b6914 30px, #7a5c12 32px
+    );
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
 }
 
 .tile-floor-wood-2 {
   background:
-    linear-gradient(180deg, #7a5c12 0%, #6b4f0e 30%, #7a5c12 31%, #6b4f0e 60%, #7a5c12 61%, #6b4f0e 100%);
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px, transparent 10px,
+      rgba(0,0,0,0.06) 10px, rgba(0,0,0,0.06) 11px
+    ),
+    linear-gradient(180deg,
+      #7a5c12 0%, #6e5210 2px,
+      #7a5c12 2px, #6b4f0e 14px,
+      #7a5c12 14px, #6e5210 16px,
+      #7a5c12 16px, #6b4f0e 30px,
+      #7a5c12 30px, #6b4f0e 32px
+    );
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
 }
 
 .tile-floor-stone {
-  background: #5a5a5a;
+  background:
+    linear-gradient(180deg, #5e5e5e 0%, #555 15px, #5e5e5e 16px, #555 32px),
+    linear-gradient(90deg, #5e5e5e 0%, #555 15px, #5e5e5e 16px, #555 32px);
   box-shadow: inset 1px 1px 0 #6b6b6b, inset -1px -1px 0 #4a4a4a;
 }
 
 /* ── Wall Tiles ── */
 .tile-wall-top {
   background:
-    linear-gradient(180deg, #4a4a4a 0%, #5a5a5a 40%, #6b6b6b 50%, #5a5a5a 60%, #4a4a4a 100%);
-  box-shadow: inset 0 -2px 0 #3a3a3a;
+    repeating-linear-gradient(
+      90deg,
+      #555 0px, #555 7px,
+      #4a4a4a 7px, #4a4a4a 8px,
+      #606060 8px, #606060 15px,
+      #4a4a4a 15px, #4a4a4a 16px
+    ),
+    linear-gradient(180deg, #4a4a4a 0%, #585858 40%, #6b6b6b 50%, #585858 60%, #4a4a4a 100%);
+  box-shadow: inset 0 1px 0 #707070, inset 0 -2px 0 #3a3a3a;
 }
 
 .tile-wall-mid {
   background:
     repeating-linear-gradient(
-      0deg,
+      90deg,
+      transparent 0px, transparent 7px,
+      rgba(0,0,0,0.12) 7px, rgba(0,0,0,0.12) 8px,
+      transparent 8px, transparent 15px,
+      rgba(0,0,0,0.12) 15px, rgba(0,0,0,0.12) 16px
+    ),
+    repeating-linear-gradient(
+      180deg,
       #5a5a5a 0px, #5a5a5a 6px,
-      #4a4a4a 6px, #4a4a4a 7px,
-      #6b6b6b 7px, #6b6b6b 14px,
-      #5a5a5a 14px, #5a5a5a 15px
+      #4e4e4e 6px, #4e4e4e 7px,
+      #656565 7px, #656565 14px,
+      #4e4e4e 14px, #4e4e4e 15px
     );
-  box-shadow: inset 2px 0 0 rgba(255,255,255,0.05);
+  box-shadow: inset 1px 0 0 rgba(255,255,255,0.06), inset -1px 0 0 rgba(0,0,0,0.1);
 }
 
 .tile-wall-bottom {
   background:
-    linear-gradient(180deg, #5a5a5a 0%, #4a4a4a 60%, #3a2a1a 80%, #4a3520 100%);
-  box-shadow: inset 0 -1px 0 #2a1a0a;
+    linear-gradient(180deg,
+      #5a5a5a 0%, #525252 30%,
+      #4a4a4a 50%, #3d2d1a 70%,
+      #4a3520 85%, #3a2a1a 100%
+    );
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), inset 0 -1px 0 #2a1a0a;
 }
 
 .tile-wall-corner {
   background:
-    linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 50%, #4a4a4a 100%);
-  box-shadow: inset 1px 1px 0 #5a5a5a;
+    linear-gradient(135deg, #505050 0%, #3e3e3e 40%, #4a4a4a 60%, #3e3e3e 100%);
+  box-shadow: inset 1px 1px 0 #606060, inset -1px -1px 0 #333;
 }
 
 .tile-flip {
@@ -527,67 +571,75 @@
   background: radial-gradient(ellipse at center, rgba(255,180,60,0.12) 0%, transparent 70%);
 }
 
-/* ── Book List Panel ── */
-.book-list-panel {
+/* ── Shelf View (3D Bookshelf Overlay) ── */
+.shelf-view-overlay {
   position: fixed;
-  top: 0;
-  right: 0;
-  width: 380px;
-  max-width: 90vw;
-  height: 100dvh;
-  background: #1a1208;
-  border-left: 2px solid #3a2a1a;
-  box-shadow: -8px 0 40px rgba(0,0,0,0.6);
+  inset: 0;
   z-index: 200;
-  display: flex;
-  flex-direction: column;
-  animation: panel-slide-in 0.3s var(--ease-out-expo) forwards;
-  outline: none;
-}
-
-@keyframes panel-slide-in {
-  from { transform: translateX(100%); }
-  to { transform: translateX(0); }
-}
-
-.panel-header {
+  background: rgba(10, 7, 3, 0.85);
+  backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 20px 24px;
+  justify-content: center;
+  animation: shelf-overlay-in 0.3s var(--ease-out-expo) forwards;
+}
+
+@keyframes shelf-overlay-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.shelf-view-container {
+  background: linear-gradient(180deg, #1a1208 0%, #0f0b07 100%);
+  border: 2px solid #3a2a1a;
+  border-radius: 4px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.7), 0 0 200px rgba(40,20,0,0.15);
+  max-width: 95vw;
+  max-height: 90dvh;
+  display: flex;
+  flex-direction: column;
+  animation: shelf-container-in 0.4s var(--ease-out-expo) forwards;
+  overflow: hidden;
+}
+
+@keyframes shelf-container-in {
+  from { opacity: 0; transform: scale(0.92) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Header */
+.shelf-view-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 28px;
   border-bottom: 1px solid #3a2a1a;
-  background: #0f0b07;
+  background: rgba(15,11,7,0.6);
 }
 
-.panel-icon {
-  font-size: 1.5rem;
-}
+.shelf-view-title-group { display: flex; flex-direction: column; gap: 2px; }
 
-.panel-title-group {
-  flex: 1;
-}
-
-.panel-title {
+.shelf-view-title {
   font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #f5efe0;
   margin: 0;
 }
 
-.panel-count {
+.shelf-view-count {
   font-size: 0.75rem;
   color: #9a8b78;
   font-family: 'Lora', serif;
 }
 
-.panel-close {
+.shelf-view-close {
   background: none;
   border: 1px solid #3a2a1a;
   color: #9a8b78;
   width: 32px;
   height: 32px;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -596,67 +648,227 @@
   transition: all 0.2s;
 }
 
-.panel-close:hover {
+.shelf-view-close:hover {
   background: #2a1a0a;
   color: #f5efe0;
   border-color: #5c3a1e;
 }
 
-.panel-book-list {
-  list-style: none;
-  overflow-y: auto;
-  flex: 1;
-  padding: 8px 0;
+/* Books area */
+.shelf-view-books-area {
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 20px 40px 0;
   scrollbar-width: thin;
   scrollbar-color: #3a2a1a #1a1208;
 }
 
-.panel-book-item {
+.shelf-view-row {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
-  padding: 12px 24px;
-  background: none;
-  border: none;
-  color: #f5efe0;
-  font-family: 'Lora', serif;
-  font-size: 0.9rem;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  gap: 0;
+  padding-bottom: 0;
+  min-height: 220px;
+}
+
+/* Wooden shelf base */
+.shelf-view-base {
+  height: 18px;
+  margin: 0 -40px;
+  background:
+    repeating-linear-gradient(90deg, transparent 0, transparent 60px, rgba(0,0,0,0.08) 60px, rgba(0,0,0,0.08) 61px),
+    linear-gradient(180deg, #7a5230 0%, #5c3a1e 40%, #4a2e14 100%);
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+  border-radius: 0 0 2px 2px;
+  position: relative;
+}
+
+.shelf-base-dart { box-shadow: 0 4px 12px rgba(0,0,0,0.5), 0 2px 16px rgba(1,117,194,0.1); }
+.shelf-base-flutter { box-shadow: 0 4px 12px rgba(0,0,0,0.5), 0 2px 16px rgba(2,86,155,0.1); }
+.shelf-base-react { box-shadow: 0 4px 12px rgba(0,0,0,0.5), 0 2px 16px rgba(97,218,251,0.1); }
+
+/* Individual book spine in shelf view */
+.shelf-book {
+  position: relative;
   cursor: pointer;
-  text-align: left;
-  transition: background 0.15s;
-  border-left: 3px solid transparent;
+  perspective: 600px;
+  transform-style: preserve-3d;
+  flex-shrink: 0;
+  opacity: 0;
+  animation: sv-book-rise 0.5s var(--ease-out-expo) forwards;
+  transition: transform 0.25s var(--ease-out-expo), padding 0.25s var(--ease-out-expo);
 }
 
-.panel-book-item:hover {
-  background: rgba(92,58,30,0.3);
+@keyframes sv-book-rise {
+  from { opacity: 0; transform: translateY(16px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-.panel-dart .panel-book-item:hover { border-left-color: #0175C2; }
-.panel-flutter .panel-book-item:hover { border-left-color: #02569B; }
-.panel-react .panel-book-item:hover { border-left-color: #61DAFB; }
+.shelf-book:hover {
+  transform: rotateY(-28deg) translateZ(20px) translateY(-4px);
+  padding: 0 6px;
+  z-index: 10;
+}
 
-.book-item-step {
-  font-size: 0.7rem;
-  color: #9a8b78;
-  white-space: nowrap;
-  min-width: 52px;
+.shelf-book:focus-visible {
+  outline: 2px solid #b8860b;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Spine */
+.shelf-book-spine {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 2px 8px;
+  box-shadow:
+    inset -1px 0 0 rgba(255,255,255,0.12),
+    inset 1px 0 0 rgba(0,0,0,0.2),
+    2px 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Decorative lines on spine */
+.shelf-book-spine::before,
+.shelf-book-spine::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(184,134,11,0.3), transparent);
+}
+
+.shelf-book-spine::before { top: 10%; }
+.shelf-book-spine::after { bottom: 10%; }
+
+.shelf-spine-title {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: rgba(255,255,255,0.88);
+  font-family: 'Crimson Pro', serif;
+  font-weight: 500;
+  line-height: 1.2;
+  overflow: hidden;
+  max-height: calc(var(--sv-height) - 60px);
+  letter-spacing: 0.02em;
+}
+
+.shelf-spine-badge {
+  writing-mode: vertical-rl;
   font-family: 'JetBrains Mono', monospace;
+  font-size: 7.5px;
+  color: rgba(184,134,11,0.4);
+  letter-spacing: 0.5px;
 }
 
-.book-item-title {
-  flex: 1;
+/* Book top (3D cap) */
+.shelf-book-top {
+  height: 10px;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.15), rgba(0,0,0,0.1));
+  transform: rotateX(90deg);
+  transform-origin: bottom;
 }
 
-.book-item-arrow {
-  color: #5c3a1e;
-  font-size: 1.2rem;
-  transition: transform 0.15s;
+/* Cover peek (visible on hover) */
+.shelf-book-cover {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 80px;
+  transform: rotateY(90deg);
+  transform-origin: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 8px;
+  opacity: 0;
+  transition: opacity 0.2s;
 }
 
-.panel-book-item:hover .book-item-arrow {
-  transform: translateX(4px);
+.shelf-book:hover .shelf-book-cover { opacity: 1; }
+
+.shelf-cover-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 9px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.shelf-cover-cat {
+  font-family: 'Crimson Pro', serif;
+  font-size: 7.5px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(184,134,11,0.7);
+}
+
+/* Tooltip */
+.shelf-tooltip {
+  z-index: 300;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  background: rgba(15,11,7,0.95);
+  border: 1px solid #b8860b;
+  padding: 8px 14px;
+  border-radius: 3px;
+  backdrop-filter: blur(12px);
+  min-width: 160px;
+  max-width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+.shelf-tooltip.visible { opacity: 1; }
+
+.shelf-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  background: rgba(15,11,7,0.95);
+  border-right: 1px solid #b8860b;
+  border-bottom: 1px solid #b8860b;
+}
+
+.st-step {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
   color: #b8860b;
+}
+
+.st-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #f5efe0;
+  line-height: 1.3;
+}
+
+.st-category {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #9a8b78;
 }
 
 /* ── Pixel Header tweaks ── */
@@ -833,14 +1045,15 @@
   .pixel-title span { display: none; }
   .library-nav button { padding: 5px 10px; font-size: 0.75rem; }
 
-  .book-list-panel { width: 100vw; max-width: 100vw; }
-  .panel-header { padding: 16px 20px; }
-  .panel-book-item { padding: 10px 20px; }
+  .shelf-view-container { max-width: 100vw; max-height: 100dvh; border-radius: 0; }
+  .shelf-view-books-area { padding: 16px 20px 0; }
+  .shelf-view-base { margin: 0 -20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .deco-candle::after { animation: none; opacity: 0.8; }
   .deco-lamp::after { animation: none; opacity: 0.8; }
   .deco-npc-walker { animation: none; }
-  .book-list-panel { animation: none; }
+  .shelf-view-overlay { animation: none; }
+  .shelf-view-container { animation: none; }
 }
