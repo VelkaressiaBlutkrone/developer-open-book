@@ -1,5 +1,5 @@
 import content from '../content/dart-step17-extensions.md?raw';
-import { MarkdownRenderer } from '../components/MarkdownRenderer';
+import MarkdownRenderer from '../components/MarkdownRenderer';
 import { TableOfContents } from '../components/TableOfContents';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 

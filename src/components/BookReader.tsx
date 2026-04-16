@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { MarkdownRenderer } from './MarkdownRenderer';
+import MarkdownRenderer from './MarkdownRenderer';
 import type { RouteConfig } from '../routes';
 
 /* Vite glob import: all .md files as raw strings (lazy) */

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { MarkdownRenderer } from '../components/MarkdownRenderer';
+import MarkdownRenderer from '../components/MarkdownRenderer';
 import { TableOfContents } from '../components/TableOfContents';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { routes } from '../routes';

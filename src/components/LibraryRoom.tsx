@@ -1,8 +1,9 @@
 import { useState, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { type RouteConfig, routes } from '../routes';
+import { BookReader } from './BookReader';
 
 const B = import.meta.env.BASE_URL + 'sprites/';
+/* v2: overlay-based book reader */
 
 /* ── 책장 = 언어/주제 단위. 모든 문서가 하나의 책장에 ── */
 interface ShelfDef {
@@ -61,12 +62,12 @@ function chunkArray<T>(arr: T[], size: number): T[][] {
 
 export function LibraryRoom() {
   const [openShelf, setOpenShelf] = useState<ShelfDef | null>(null);
-  const navigate = useNavigate();
+  const [readingBook, setReadingBook] = useState<RouteConfig | null>(null);
 
   const handleBookClick = useCallback((route: RouteConfig) => {
     setOpenShelf(null);
-    navigate(route.path);
-  }, [navigate]);
+    setReadingBook(route);
+  }, []);
 
   return (
     <div className="lr">
@@ -194,6 +195,14 @@ export function LibraryRoom() {
           books={routes.filter(openShelf.filter)}
           onClose={() => setOpenShelf(null)}
           onBookClick={handleBookClick}
+        />
+      )}
+
+      {/* Book Reader Overlay */}
+      {readingBook && (
+        <BookReader
+          route={readingBook}
+          onClose={() => setReadingBook(null)}
         />
       )}
 

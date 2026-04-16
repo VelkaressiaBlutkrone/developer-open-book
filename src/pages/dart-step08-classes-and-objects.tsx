@@ -1,5 +1,5 @@
 import content from '../content/dart-step08-classes-and-objects.md?raw';
-import { MarkdownRenderer } from '../components/MarkdownRenderer';
+import MarkdownRenderer from '../components/MarkdownRenderer';
 import { TableOfContents } from '../components/TableOfContents';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 

@@ -1,5 +1,5 @@
 import content from '../content/dart-step18-sealed-patterns.md?raw';
-import { MarkdownRenderer } from '../components/MarkdownRenderer';
+import MarkdownRenderer from '../components/MarkdownRenderer';
 import { TableOfContents } from '../components/TableOfContents';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
