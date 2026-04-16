@@ -1,0 +1,846 @@
+/* ══════════════════════════════════════════
+   PIXEL LIBRARY — RPG Top-Down Scene
+   ══════════════════════════════════════════ */
+
+/* ── Scene Container ── */
+.pixel-library-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100dvh - 120px);
+  padding: 24px 16px;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.pixel-scene {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 32px);
+  grid-template-rows: repeat(var(--rows), 32px);
+  position: relative;
+  transform: scale(var(--scene-scale, 2));
+  transform-origin: center center;
+  border: 2px solid #2a1a0a;
+  box-shadow:
+    0 0 40px rgba(0,0,0,0.6),
+    0 0 120px rgba(40,20,0,0.3);
+}
+
+@media (min-width: 1400px) { .pixel-scene { --scene-scale: 2.5; } }
+@media (max-width: 1399px) and (min-width: 1100px) { .pixel-scene { --scene-scale: 2; } }
+@media (max-width: 1099px) and (min-width: 769px) { .pixel-scene { --scene-scale: 1.5; } }
+
+/* Hide tilemap on mobile, show cards instead */
+@media (max-width: 768px) {
+  .pixel-scene { display: none; }
+  .pixel-mobile-view { display: block !important; }
+}
+
+.pixel-mobile-view { display: none; }
+
+/* ── Tile Cell (grid wrapper) ── */
+.tile-cell {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  cursor: default;
+}
+
+.tile-cell.tile-interactive {
+  cursor: pointer;
+  z-index: 2;
+}
+
+.tile-cell.tile-interactive:hover .tile {
+  filter: brightness(1.3) saturate(1.2);
+}
+
+.tile-cell.tile-interactive:hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255,200,80,0.6);
+  pointer-events: none;
+  z-index: 5;
+  animation: shelf-pulse 1.5s ease-in-out infinite;
+}
+
+.tile-cell.tile-dimmed .tile {
+  filter: brightness(0.4) saturate(0.3);
+}
+
+.tile-cell.tile-highlighted .tile {
+  filter: brightness(1.2) saturate(1.3);
+}
+
+.tile-cell.tile-highlighted::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255,200,80,0.4);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.tile-cell.tile-selected .tile {
+  filter: brightness(1.4) saturate(1.4);
+}
+
+@keyframes shelf-pulse {
+  0%, 100% { border-color: rgba(255,200,80,0.3); }
+  50% { border-color: rgba(255,200,80,0.8); }
+}
+
+/* ── Base Tile ── */
+.tile {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Floor Tiles ── */
+.tile-floor-wood {
+  background:
+    linear-gradient(180deg, #8b6914 0%, #7a5c12 30%, #8b6914 31%, #7a5c12 60%, #8b6914 61%, #7a5c12 100%);
+}
+
+.tile-floor-wood-2 {
+  background:
+    linear-gradient(180deg, #7a5c12 0%, #6b4f0e 30%, #7a5c12 31%, #6b4f0e 60%, #7a5c12 61%, #6b4f0e 100%);
+}
+
+.tile-floor-stone {
+  background: #5a5a5a;
+  box-shadow: inset 1px 1px 0 #6b6b6b, inset -1px -1px 0 #4a4a4a;
+}
+
+/* ── Wall Tiles ── */
+.tile-wall-top {
+  background:
+    linear-gradient(180deg, #4a4a4a 0%, #5a5a5a 40%, #6b6b6b 50%, #5a5a5a 60%, #4a4a4a 100%);
+  box-shadow: inset 0 -2px 0 #3a3a3a;
+}
+
+.tile-wall-mid {
+  background:
+    repeating-linear-gradient(
+      0deg,
+      #5a5a5a 0px, #5a5a5a 6px,
+      #4a4a4a 6px, #4a4a4a 7px,
+      #6b6b6b 7px, #6b6b6b 14px,
+      #5a5a5a 14px, #5a5a5a 15px
+    );
+  box-shadow: inset 2px 0 0 rgba(255,255,255,0.05);
+}
+
+.tile-wall-bottom {
+  background:
+    linear-gradient(180deg, #5a5a5a 0%, #4a4a4a 60%, #3a2a1a 80%, #4a3520 100%);
+  box-shadow: inset 0 -1px 0 #2a1a0a;
+}
+
+.tile-wall-corner {
+  background:
+    linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 50%, #4a4a4a 100%);
+  box-shadow: inset 1px 1px 0 #5a5a5a;
+}
+
+.tile-flip {
+  transform: scaleX(-1);
+}
+
+/* ── Bookshelf Tiles ── */
+.tile-shelf {
+  background:
+    linear-gradient(180deg, #5c3a1e 0%, #4a2e14 3px, transparent 3px),
+    linear-gradient(180deg, transparent 28px, #5c3a1e 28px, #4a2e14 100%);
+  position: relative;
+}
+
+/* Book spines on shelves */
+.tile-shelf::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 2px;
+  right: 2px;
+  bottom: 5px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--book-c1, #6b1c2a) 0px, var(--book-c1, #6b1c2a) 3px,
+    var(--book-c2, #1B4F72) 3px, var(--book-c2, #1B4F72) 6px,
+    var(--book-c3, #1a3a2a) 6px, var(--book-c3, #1a3a2a) 8px,
+    var(--book-c4, #4a1942) 8px, var(--book-c4, #4a1942) 10px,
+    var(--book-c5, #935116) 10px, var(--book-c5, #935116) 14px,
+    var(--book-c6, #2c5f2d) 14px, var(--book-c6, #2c5f2d) 16px,
+    var(--book-c7, #8B2635) 16px, var(--book-c7, #8B2635) 19px,
+    var(--book-c8, #1A5276) 19px, var(--book-c8, #1A5276) 22px,
+    var(--book-c9, #7D3C98) 22px, var(--book-c9, #7D3C98) 24px,
+    var(--book-c10, #6b4f1a) 24px, var(--book-c10, #6b4f1a) 27px,
+    var(--book-c1, #6b1c2a) 27px, var(--book-c1, #6b1c2a) 29px
+  );
+}
+
+/* Shelf wood shadow */
+.tile-shelf::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.3) 100%);
+}
+
+/* Category-specific book colors */
+.tile-shelf-dart {
+  --book-c1: #0175C2; --book-c2: #1B4F72; --book-c3: #0D47A1;
+  --book-c4: #01579B; --book-c5: #006064; --book-c6: #004D40;
+  --book-c7: #1565C0; --book-c8: #0277BD; --book-c9: #00838F;
+  --book-c10: #00695C;
+}
+
+.tile-shelf-flutter {
+  --book-c1: #02569B; --book-c2: #0175C2; --book-c3: #42A5F5;
+  --book-c4: #1565C0; --book-c5: #1E88E5; --book-c6: #1976D2;
+  --book-c7: #0D47A1; --book-c8: #1A237E; --book-c9: #283593;
+  --book-c10: #303F9F;
+}
+
+.tile-shelf-react {
+  --book-c1: #61DAFB; --book-c2: #21a1c9; --book-c3: #1a8aad;
+  --book-c4: #087ea4; --book-c5: #149eca; --book-c6: #2b6c8a;
+  --book-c7: #0a7ea4; --book-c8: #23272f; --book-c9: #343a46;
+  --book-c10: #1c5a7a;
+}
+
+/* ── Table ── */
+.tile-table {
+  background: #7a5c12;
+  position: relative;
+}
+
+.tile-table::before {
+  content: '';
+  position: absolute;
+  inset: 4px 2px;
+  background: #8b6e28;
+  border: 1px solid #5c4a10;
+  border-radius: 1px;
+}
+
+/* ── Chair ── */
+.tile-chair {
+  background:
+    linear-gradient(180deg, #7a5c12 0%, #6b4f0e 30%, #7a5c12 31%, #6b4f0e 100%);
+}
+
+.tile-chair::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  width: 12px;
+  height: 16px;
+  background: #5c3a1e;
+  border: 1px solid #4a2e14;
+  border-radius: 1px;
+}
+
+/* ── Carpet ── */
+.tile-carpet {
+  background: #4a1e2a;
+  box-shadow: inset 0 0 0 1px #5c2a3a;
+}
+
+.tile-carpet::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid #6b3a4a;
+  opacity: 0.5;
+}
+
+/* ── Door ── */
+.tile-door {
+  background:
+    linear-gradient(180deg, #3a2a1a 0%, #5c3a1e 20%, #6b4a28 50%, #5c3a1e 80%, #3a2a1a 100%);
+}
+
+.tile-door .deco-door {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  right: 6px;
+  bottom: 0;
+  background: #2a1a0a;
+  border: 1px solid #4a3520;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+}
+
+/* ── Decorative Elements ── */
+.tile-deco {
+  position: absolute;
+  z-index: 3;
+}
+
+/* Candle */
+.deco-candle {
+  top: 4px;
+  left: 11px;
+  width: 10px;
+  height: 20px;
+}
+
+.deco-candle::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 3px;
+  width: 4px;
+  height: 12px;
+  background: linear-gradient(180deg, #f5efe0 0%, #e8dab0 100%);
+}
+
+.deco-candle::after {
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  left: 2px;
+  width: 6px;
+  height: 8px;
+  background: radial-gradient(ellipse at center bottom, #ffcc33 0%, #ff8800 40%, transparent 70%);
+  animation: candle-flicker 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes candle-flicker {
+  0% { opacity: 0.7; transform: scaleY(0.9) translateY(1px); }
+  25% { opacity: 1; transform: scaleY(1.1) translateX(1px); }
+  50% { opacity: 0.8; transform: scaleY(1) translateX(-1px); }
+  75% { opacity: 1; transform: scaleY(1.15); }
+  100% { opacity: 0.9; transform: scaleY(0.95) translateY(-1px); }
+}
+
+/* Lamp */
+.deco-lamp {
+  top: 2px;
+  left: 10px;
+  width: 12px;
+  height: 28px;
+}
+
+.deco-lamp::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 4px;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(180deg, #8b6e28 0%, #6b5220 100%);
+}
+
+.deco-lamp::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 10px;
+  height: 8px;
+  background: radial-gradient(ellipse at center, #ffdd66 0%, #cc8800 60%, transparent 100%);
+  border-radius: 50%;
+  animation: lamp-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes lamp-glow {
+  0% { opacity: 0.6; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1.05); }
+}
+
+/* Plant */
+.deco-plant {
+  top: 6px;
+  left: 8px;
+  width: 16px;
+  height: 22px;
+}
+
+.deco-plant::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background: #8b5e3c;
+  border-radius: 1px;
+}
+
+.deco-plant::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: 12px;
+  height: 14px;
+  background: radial-gradient(ellipse at center bottom, #2d6b2d 0%, #1a4a1a 60%, transparent 100%);
+  border-radius: 50% 50% 20% 20%;
+}
+
+/* Wall Map */
+.deco-map {
+  top: 4px;
+  left: 4px;
+  width: 24px;
+  height: 20px;
+  background: #d4c9a8;
+  border: 1px solid #8b7d5e;
+  border-radius: 1px;
+}
+
+.deco-map::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background:
+    linear-gradient(90deg, transparent 30%, #7a9a5a 30%, #7a9a5a 60%, transparent 60%),
+    linear-gradient(0deg, transparent 40%, #5a8aba 40%, #5a8aba 55%, transparent 55%);
+  opacity: 0.5;
+}
+
+/* Books on table */
+.deco-books {
+  top: 6px;
+  left: 6px;
+  width: 20px;
+  height: 20px;
+}
+
+.deco-books::before {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 2px;
+  width: 16px;
+  height: 4px;
+  background: #6b1c2a;
+  box-shadow: 0 -5px 0 #1B4F72, 0 -9px 0 #2c5f2d;
+}
+
+/* Signs */
+.deco-sign {
+  top: 2px;
+  left: 6px;
+  width: 20px;
+  height: 10px;
+  background: #5c3a1e;
+  border: 1px solid #3a2008;
+  border-radius: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tile-sign-dart .deco-sign { box-shadow: inset 0 0 4px rgba(1,117,194,0.5); }
+.tile-sign-flutter .deco-sign { box-shadow: inset 0 0 4px rgba(2,86,155,0.5); }
+.tile-sign-react .deco-sign { box-shadow: inset 0 0 4px rgba(97,218,251,0.5); }
+
+/* ── NPCs ── */
+.tile-npc { z-index: 4; }
+
+.deco-npc-reader,
+.deco-npc-walker,
+.deco-npc-librarian {
+  top: 4px;
+  left: 8px;
+  width: 16px;
+  height: 24px;
+}
+
+/* NPC body */
+.deco-npc-reader::before,
+.deco-npc-walker::before,
+.deco-npc-librarian::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 2px;
+  width: 12px;
+  height: 14px;
+  border-radius: 2px 2px 0 0;
+}
+
+/* NPC head */
+.deco-npc-reader::after,
+.deco-npc-walker::after,
+.deco-npc-librarian::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  background: #e8c090;
+  border-radius: 50%;
+}
+
+/* Reader - purple robe, sitting */
+.deco-npc-reader::before { background: #6b3a8a; }
+
+/* Walker - blue cloak */
+.deco-npc-walker::before { background: #1B4F72; }
+.deco-npc-walker {
+  animation: npc-walk 4s ease-in-out infinite;
+}
+
+@keyframes npc-walk {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+
+/* Librarian - green robe, standing at desk */
+.deco-npc-librarian::before { background: #2c5f2d; }
+
+/* ── Light Sources (overlay glow) ── */
+.light-source {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.light-candle {
+  width: 96px;
+  height: 96px;
+  left: calc(var(--light-col) * 32px - 32px);
+  top: calc(var(--light-row) * 32px - 32px);
+  background: radial-gradient(ellipse at center, rgba(255,200,80,0.15) 0%, transparent 70%);
+}
+
+.light-lamp {
+  width: 160px;
+  height: 160px;
+  left: calc(var(--light-col) * 32px - 64px);
+  top: calc(var(--light-row) * 32px - 64px);
+  background: radial-gradient(ellipse at center, rgba(255,180,60,0.12) 0%, transparent 70%);
+}
+
+/* ── Book List Panel ── */
+.book-list-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 380px;
+  max-width: 90vw;
+  height: 100dvh;
+  background: #1a1208;
+  border-left: 2px solid #3a2a1a;
+  box-shadow: -8px 0 40px rgba(0,0,0,0.6);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  animation: panel-slide-in 0.3s var(--ease-out-expo) forwards;
+  outline: none;
+}
+
+@keyframes panel-slide-in {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 24px;
+  border-bottom: 1px solid #3a2a1a;
+  background: #0f0b07;
+}
+
+.panel-icon {
+  font-size: 1.5rem;
+}
+
+.panel-title-group {
+  flex: 1;
+}
+
+.panel-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f5efe0;
+  margin: 0;
+}
+
+.panel-count {
+  font-size: 0.75rem;
+  color: #9a8b78;
+  font-family: 'Lora', serif;
+}
+
+.panel-close {
+  background: none;
+  border: 1px solid #3a2a1a;
+  color: #9a8b78;
+  width: 32px;
+  height: 32px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.panel-close:hover {
+  background: #2a1a0a;
+  color: #f5efe0;
+  border-color: #5c3a1e;
+}
+
+.panel-book-list {
+  list-style: none;
+  overflow-y: auto;
+  flex: 1;
+  padding: 8px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #3a2a1a #1a1208;
+}
+
+.panel-book-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  color: #f5efe0;
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+  border-left: 3px solid transparent;
+}
+
+.panel-book-item:hover {
+  background: rgba(92,58,30,0.3);
+}
+
+.panel-dart .panel-book-item:hover { border-left-color: #0175C2; }
+.panel-flutter .panel-book-item:hover { border-left-color: #02569B; }
+.panel-react .panel-book-item:hover { border-left-color: #61DAFB; }
+
+.book-item-step {
+  font-size: 0.7rem;
+  color: #9a8b78;
+  white-space: nowrap;
+  min-width: 52px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.book-item-title {
+  flex: 1;
+}
+
+.book-item-arrow {
+  color: #5c3a1e;
+  font-size: 1.2rem;
+  transition: transform 0.15s;
+}
+
+.panel-book-item:hover .book-item-arrow {
+  transform: translateX(4px);
+  color: #b8860b;
+}
+
+/* ── Pixel Header tweaks ── */
+.pixel-header {
+  background: #0f0b07;
+  border-bottom: 2px solid #2a1a0a;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pixel-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #f5efe0;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.pixel-title span {
+  font-weight: 400;
+  font-style: italic;
+  color: #9a8b78;
+  margin-left: 6px;
+}
+
+.library-nav {
+  display: flex;
+  gap: 6px;
+}
+
+.library-nav button {
+  background: none;
+  border: 1px solid #3a2a1a;
+  color: #9a8b78;
+  padding: 6px 14px;
+  font-family: 'Lora', serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.library-nav button:hover {
+  background: rgba(92,58,30,0.3);
+  color: #f5efe0;
+}
+
+.library-nav button.active {
+  background: #5c3a1e;
+  color: #f5efe0;
+  border-color: #7a5230;
+}
+
+/* ── Pixel Footer ── */
+.pixel-footer {
+  background: #0f0b07;
+  border-top: 2px solid #2a1a0a;
+  padding: 16px 32px;
+  text-align: center;
+}
+
+.library-credit {
+  font-size: 0.75rem;
+  color: #6b5744;
+  font-family: 'Lora', serif;
+}
+
+.credit-collection { color: #9a8b78; }
+.credit-divider { margin: 0 8px; opacity: 0.4; }
+
+/* ── Mobile Zone Cards ── */
+.mobile-zone-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.mobile-zone-card {
+  background: #1a1208;
+  border: 2px solid #3a2a1a;
+  border-radius: 4px;
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.2s;
+  font-family: 'Lora', serif;
+  color: #f5efe0;
+  text-align: left;
+}
+
+.mobile-zone-card:hover,
+.mobile-zone-card:active {
+  background: #2a1a0a;
+  border-color: #5c3a1e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.zone-card-shelves {
+  width: 64px;
+  height: 56px;
+  background: #3a2a1a;
+  border-radius: 2px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.zone-card-shelf-row {
+  display: flex;
+  gap: 1px;
+  flex: 1;
+  align-items: stretch;
+}
+
+.zone-card-book {
+  flex: 1;
+  border-radius: 1px;
+}
+
+.zone-dart .zone-card-book { background: #0175C2; }
+.zone-dart .zone-card-book:nth-child(2) { background: #01579B; }
+.zone-dart .zone-card-book:nth-child(3) { background: #006064; }
+.zone-dart .zone-card-book:nth-child(4) { background: #0D47A1; }
+
+.zone-flutter .zone-card-book { background: #02569B; }
+.zone-flutter .zone-card-book:nth-child(2) { background: #1565C0; }
+.zone-flutter .zone-card-book:nth-child(3) { background: #1E88E5; }
+.zone-flutter .zone-card-book:nth-child(4) { background: #1A237E; }
+
+.zone-react .zone-card-book { background: #61DAFB; }
+.zone-react .zone-card-book:nth-child(2) { background: #21a1c9; }
+.zone-react .zone-card-book:nth-child(3) { background: #087ea4; }
+.zone-react .zone-card-book:nth-child(4) { background: #149eca; }
+
+.zone-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.zone-card-label {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+}
+
+.zone-card-count {
+  font-size: 0.75rem;
+  color: #9a8b78;
+}
+
+.zone-dart { border-left: 3px solid #0175C2; }
+.zone-flutter { border-left: 3px solid #02569B; }
+.zone-react { border-left: 3px solid #61DAFB; }
+
+/* ── Responsive Adjustments ── */
+@media (max-width: 768px) {
+  .pixel-header { padding: 12px 16px; }
+  .pixel-title { font-size: 1rem; }
+  .pixel-title span { display: none; }
+  .library-nav button { padding: 5px 10px; font-size: 0.75rem; }
+
+  .book-list-panel { width: 100vw; max-width: 100vw; }
+  .panel-header { padding: 16px 20px; }
+  .panel-book-item { padding: 10px 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deco-candle::after { animation: none; opacity: 0.8; }
+  .deco-lamp::after { animation: none; opacity: 0.8; }
+  .deco-npc-walker { animation: none; }
+  .book-list-panel { animation: none; }
+}
