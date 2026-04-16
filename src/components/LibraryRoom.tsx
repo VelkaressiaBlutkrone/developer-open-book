@@ -143,36 +143,36 @@ export function LibraryRoom() {
       <img src={B + 'chair.png'} className="lr-obj" alt=""
         style={{ top: '70%', right: '20%', width: '7vmin', height: '7vmin', transform: 'scaleX(-1)' }} />
 
-      {/* ── Corner plants ── */}
-      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ top: '6%', left: '2%', width: '7vmin', height: '7vmin', zIndex: 4 }} />
-      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ top: '6%', right: '2%', width: '7vmin', height: '7vmin', zIndex: 4 }} />
-      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ bottom: '6%', left: '2%', width: '7vmin', height: '7vmin', zIndex: 4 }} />
-      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ bottom: '6%', right: '2%', width: '7vmin', height: '7vmin', zIndex: 4 }} />
-      {/* Side wall plants */}
-      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ top: '50%', left: '7%', width: '6vmin', height: '6vmin', zIndex: 4 }} />
-      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ top: '50%', right: '7%', width: '6vmin', height: '6vmin', zIndex: 4 }} />
+      {/* ── Corner plants (on floor, inside walls) ── */}
+      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ top: '8%', left: '8%', width: '6vmin', height: '6vmin', zIndex: 4 }} />
+      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ top: '8%', right: '8%', width: '6vmin', height: '6vmin', zIndex: 4 }} />
+      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ bottom: '6%', left: '8%', width: '6vmin', height: '6vmin', zIndex: 4 }} />
+      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ bottom: '6%', right: '8%', width: '6vmin', height: '6vmin', zIndex: 4 }} />
+      {/* Side wall plants (just inside wall edge) */}
+      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ top: '48%', left: '9%', width: '5vmin', height: '5vmin', zIndex: 4 }} />
+      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ top: '48%', right: '9%', width: '5vmin', height: '5vmin', zIndex: 4 }} />
       {/* Bottom center plants */}
-      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ bottom: '6%', left: '42%', width: '6vmin', height: '6vmin', zIndex: 4 }} />
-      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ bottom: '6%', right: '42%', width: '6vmin', height: '6vmin', zIndex: 4 }} />
+      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ bottom: '6%', left: '42%', width: '5vmin', height: '5vmin', zIndex: 4 }} />
+      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ bottom: '6%', right: '42%', width: '5vmin', height: '5vmin', zIndex: 4 }} />
 
-      {/* ── Top wall lamps (between shelves) ── */}
-      <img src={B + 'lamp.png'} className="lr-obj" alt="" style={{ top: '0%', left: '33%', width: '5vmin', height: '8vmin', zIndex: 4 }} />
-      <img src={B + 'lamp.png'} className="lr-obj" alt="" style={{ top: '0%', right: '33%', width: '5vmin', height: '8vmin', zIndex: 4 }} />
+      {/* ── Top wall lamps (on wall, between shelves) ── */}
+      <img src={B + 'lamp.png'} className="lr-obj" alt="" style={{ top: '1%', left: '34%', width: '5vmin', height: '7vmin', zIndex: 6 }} />
+      <img src={B + 'lamp.png'} className="lr-obj" alt="" style={{ top: '1%', right: '34%', width: '5vmin', height: '7vmin', zIndex: 6 }} />
 
-      {/* ── Side wall candles ── */}
-      <img src={B + 'candle.png'} className="lr-obj pixel-candle" alt="" style={{ top: '28%', left: '7%', width: '5vmin', height: '5vmin', zIndex: 4 }} />
-      <img src={B + 'candle.png'} className="lr-obj pixel-candle" alt="" style={{ top: '28%', right: '7%', width: '5vmin', height: '5vmin', zIndex: 4 }} />
-      <div className="lr-glow" style={{ top: '26%', left: '4%', width: '11vmin', height: '9vmin' }} />
-      <div className="lr-glow" style={{ top: '26%', right: '4%', width: '11vmin', height: '9vmin' }} />
+      {/* ── Side wall candles (on wall surface) ── */}
+      <img src={B + 'candle.png'} className="lr-obj pixel-candle" alt="" style={{ top: '30%', left: '2%', width: '5vmin', height: '5vmin', zIndex: 6 }} />
+      <img src={B + 'candle.png'} className="lr-obj pixel-candle" alt="" style={{ top: '30%', right: '2%', width: '5vmin', height: '5vmin', zIndex: 6 }} />
+      <div className="lr-glow" style={{ top: '28%', left: '0%', width: '12vmin', height: '10vmin' }} />
+      <div className="lr-glow" style={{ top: '28%', right: '0%', width: '12vmin', height: '10vmin' }} />
       {/* Lower side wall candles */}
-      <img src={B + 'candle.png'} className="lr-obj pixel-candle" alt="" style={{ top: '68%', left: '7%', width: '5vmin', height: '5vmin', zIndex: 4 }} />
-      <img src={B + 'candle.png'} className="lr-obj pixel-candle" alt="" style={{ top: '68%', right: '7%', width: '5vmin', height: '5vmin', zIndex: 4 }} />
-      <div className="lr-glow" style={{ top: '66%', left: '4%', width: '11vmin', height: '9vmin' }} />
-      <div className="lr-glow" style={{ top: '66%', right: '4%', width: '11vmin', height: '9vmin' }} />
+      <img src={B + 'candle.png'} className="lr-obj pixel-candle" alt="" style={{ top: '65%', left: '2%', width: '5vmin', height: '5vmin', zIndex: 6 }} />
+      <img src={B + 'candle.png'} className="lr-obj pixel-candle" alt="" style={{ top: '65%', right: '2%', width: '5vmin', height: '5vmin', zIndex: 6 }} />
+      <div className="lr-glow" style={{ top: '63%', left: '0%', width: '12vmin', height: '10vmin' }} />
+      <div className="lr-glow" style={{ top: '63%', right: '0%', width: '12vmin', height: '10vmin' }} />
 
-      {/* ── Wall map (upper left area) ── */}
+      {/* ── Wall map (centered on top wall) ── */}
       <img src={B + 'wallmap.png'} className="lr-obj" alt=""
-        style={{ top: '1%', left: '50%', transform: 'translateX(-50%)', width: '9vmin', height: '9vmin', zIndex: 3 }} />
+        style={{ top: '0%', left: '50%', transform: 'translateX(-50%)', width: '8vmin', height: '7vmin', zIndex: 6 }} />
 
       {/* ── NPCs ── */}
       {/* Librarian at main table */}
