@@ -2,8 +2,47 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
 import rehypeSlug from 'rehype-slug'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
+
+// Register only used languages
+import dart from 'react-syntax-highlighter/dist/esm/languages/prism/dart'
+import jsxLang from 'react-syntax-highlighter/dist/esm/languages/prism/jsx'
+import javascript from 'react-syntax-highlighter/dist/esm/languages/prism/javascript'
+import tsx from 'react-syntax-highlighter/dist/esm/languages/prism/tsx'
+import bash from 'react-syntax-highlighter/dist/esm/languages/prism/bash'
+import yaml from 'react-syntax-highlighter/dist/esm/languages/prism/yaml'
+import typescript from 'react-syntax-highlighter/dist/esm/languages/prism/typescript'
+import json from 'react-syntax-highlighter/dist/esm/languages/prism/json'
+import swift from 'react-syntax-highlighter/dist/esm/languages/prism/swift'
+import ruby from 'react-syntax-highlighter/dist/esm/languages/prism/ruby'
+import kotlin from 'react-syntax-highlighter/dist/esm/languages/prism/kotlin'
+import markup from 'react-syntax-highlighter/dist/esm/languages/prism/markup'
+import groovy from 'react-syntax-highlighter/dist/esm/languages/prism/groovy'
+import css from 'react-syntax-highlighter/dist/esm/languages/prism/css'
+import properties from 'react-syntax-highlighter/dist/esm/languages/prism/properties'
+import markdown from 'react-syntax-highlighter/dist/esm/languages/prism/markdown'
+import docker from 'react-syntax-highlighter/dist/esm/languages/prism/docker'
+
+SyntaxHighlighter.registerLanguage('dart', dart)
+SyntaxHighlighter.registerLanguage('jsx', jsxLang)
+SyntaxHighlighter.registerLanguage('javascript', javascript)
+SyntaxHighlighter.registerLanguage('tsx', tsx)
+SyntaxHighlighter.registerLanguage('bash', bash)
+SyntaxHighlighter.registerLanguage('yaml', yaml)
+SyntaxHighlighter.registerLanguage('typescript', typescript)
+SyntaxHighlighter.registerLanguage('json', json)
+SyntaxHighlighter.registerLanguage('jsonc', json)
+SyntaxHighlighter.registerLanguage('swift', swift)
+SyntaxHighlighter.registerLanguage('ruby', ruby)
+SyntaxHighlighter.registerLanguage('kotlin', kotlin)
+SyntaxHighlighter.registerLanguage('html', markup)
+SyntaxHighlighter.registerLanguage('gradle', groovy)
+SyntaxHighlighter.registerLanguage('css', css)
+SyntaxHighlighter.registerLanguage('properties', properties)
+SyntaxHighlighter.registerLanguage('markdown', markdown)
+SyntaxHighlighter.registerLanguage('dockerfile', docker)
+SyntaxHighlighter.registerLanguage('proguard', properties)
 import type { Components } from 'react-markdown'
 import { InteractiveExcalidrawDiagram } from './InteractiveExcalidrawDiagram'
 
@@ -120,7 +159,7 @@ const components: Components = {
     const diagramAttr = el?.properties?.['dataDiagram'];
     if (diagramAttr) {
       const steps = parseInt(el?.properties?.['dataSteps'] || '3', 10);
-      const basePath = `/developer-open-book/diagrams/${diagramAttr}`;
+      const basePath = `${import.meta.env.BASE_URL}diagrams/${diagramAttr}`;
       const rawDesc = el?.properties?.['dataDescriptions'] || '';
       const descriptions = rawDesc ? String(rawDesc).split('|') : [];
       return (

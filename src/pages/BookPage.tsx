@@ -1,21 +1,19 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useEffect, useCallback, useMemo } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import MarkdownRenderer from '../components/MarkdownRenderer';
 import { TableOfContents } from '../components/TableOfContents';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { useContent } from '../hooks/useContent';
 import { routes } from '../routes';
 
-const mdModules = import.meta.glob('../content/*.md', { query: '?raw', import: 'default' }) as Record<string, () => Promise<string>>;
-
 export default function BookPage() {
-  const [content, setContent] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
   const location = useLocation();
   const navigate = useNavigate();
   useScrollAnimation();
 
   const currentRoute = routes.find(r => r.path === location.pathname);
   const slug = currentRoute?.slug || location.pathname.replace(/^\//, '');
+  const { content, loading, error } = useContent(slug);
 
   const shelfBooks = useMemo(() => {
     if (!currentRoute?.shelf) return [];
@@ -38,26 +36,12 @@ export default function BookPage() {
     return () => window.removeEventListener('keydown', handleKey);
   }, [goPrev, goNext]);
 
-  useEffect(() => {
-    setLoading(true);
-    setContent(null);
-
-    const key = `../content/${slug}.md`;
-    const loader = mdModules[key];
-
-    if (loader) {
-      loader().then((md) => {
-        setContent(md);
-        setLoading(false);
-      });
-    } else {
-      setContent(`# ${currentRoute?.title || slug}\n\n이 문서의 콘텐츠를 불러올 수 없습니다.`);
-      setLoading(false);
-    }
-  }, [slug, currentRoute?.title]);
-
   if (loading) {
     return <div className="loading">Loading...</div>;
+  }
+
+  if (error) {
+    return <div className="loading error">{error}</div>;
   }
 
   return (

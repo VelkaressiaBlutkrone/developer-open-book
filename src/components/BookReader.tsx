@@ -1,9 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import MarkdownRenderer from './MarkdownRenderer';
+import { useContent } from '../hooks/useContent';
 import type { RouteConfig } from '../routes';
-
-/* Vite glob import: all .md files as raw strings (lazy) */
-const mdModules = import.meta.glob('../content/*.md', { query: '?raw', import: 'default' }) as Record<string, () => Promise<string>>;
 
 interface Props {
   route: RouteConfig;
@@ -11,28 +9,8 @@ interface Props {
 }
 
 export function BookReader({ route, onClose }: Props) {
-  const [content, setContent] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(true);
-    setContent(null);
-
-    // Derive content file path from route path
-    const slug = route.slug || route.path.replace(/^\//, '');
-    const key = `../content/${slug}.md`;
-
-    const loader = mdModules[key];
-    if (loader) {
-      loader().then((md) => {
-        setContent(md);
-        setLoading(false);
-      });
-    } else {
-      setContent(`# ${route.title}\n\n이 문서의 콘텐츠를 불러올 수 없습니다.`);
-      setLoading(false);
-    }
-  }, [route]);
+  const slug = route.slug || route.path.replace(/^\//, '');
+  const { content, loading } = useContent(slug);
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {

@@ -241,7 +241,13 @@ void main() {
 
 **`??`의 동작 원리**
 
-![diagram](/developer-open-book/diagrams/step03-null-coalescing.svg)
+```
+expr1 ?? expr2
+
+  expr1이 null?
+   ├─ YES ──► expr2 반환
+   └─ NO  ──► expr1 반환
+```
 
 ---
 
@@ -777,6 +783,10 @@ Step 4에서는 `for`, `while`, `do-while`의 동작 원리 및 차이를 이해
 >     ? email!.toUpperCase()
 >     : '유효하지 않은 이메일';
 > ```
+
+---
+
+> ⬅️ [Step 2 — 변수와 데이터 타입](#) | ➡️ [Step 4 — 반복문 →](#)
 
 ---
 

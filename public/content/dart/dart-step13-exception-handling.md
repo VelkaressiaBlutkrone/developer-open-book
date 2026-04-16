@@ -85,7 +85,22 @@ Dart는 오류를 두 가지 방식으로 표현합니다.
 
 Dart의 오류 계층 구조는 두 개의 최상위 타입으로 나뉩니다.
 
-![diagram](/developer-open-book/diagrams/step13-error-hierarchy.svg)
+```
+Object
+  ├── Error          — 프로그래밍 오류 (복구 불가, 잡지 않는 것이 원칙)
+  │    ├── AssertionError
+  │    ├── RangeError
+  │    ├── StateError
+  │    ├── TypeError
+  │    ├── UnsupportedError
+  │    └── StackOverflowError
+  │
+  └── Exception      — 예상 가능한 런타임 예외 (복구 가능, 처리해야 함)
+       ├── FormatException
+       ├── IOException
+       ├── TimeoutException
+       └── (커스텀 Exception 구현체들)
+```
 
 **`Error` — 프로그래밍 실수의 표시**
 
@@ -325,7 +340,24 @@ void main() {
 
 ### 4.5 처리 순서와 우선순위
 
-![diagram](/developer-open-book/diagrams/step13-exception-flow.svg)
+```
+try 블록에서 예외 발생
+          │
+          ▼
+  on 블록을 위에서부터 순서대로 매칭
+          │
+    매칭 성공 ──► 해당 블록 실행
+          │
+    매칭 실패 ──► 예외가 상위 호출자로 전파
+          │
+  (매칭 성공/실패 무관)
+          │
+          ▼
+     finally 실행
+          │
+          ▼
+  예외가 전파됐다면 계속 전파
+```
 
 ```dart
 void example() {
@@ -1124,6 +1156,10 @@ Step 14에서는 Dart의 비동기 핵심인 `Future` 생성과 조합 (`Future.
 > **6번 정답 힌트**
 >
 > Repository 레이어: 저수준 예외를 도메인 예외로 변환 후 전파 (변환만, 처리 X). Service 레이어: 비즈니스 복구 로직 처리 (재시도, 기본값, 대안 경로). UI 레이어: 사용자 피드백으로 변환 (에러 메시지, 다이얼로그). 각 레이어가 자신의 책임 범위만 처리하고 나머지는 전파하는 것이 계층 분리의 핵심입니다.
+
+---
+
+> ⬅️ [Step 12 — 열거형(Enum)](#) | ➡️ [Step 14 — 비동기 프로그래밍 심화 →](#)
 
 ---
 

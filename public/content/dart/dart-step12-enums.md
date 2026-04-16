@@ -515,7 +515,11 @@ void main() {
 
 **상태 전환 다이어그램**
 
-![diagram](/developer-open-book/diagrams/step12-order-state-transition.svg)
+```
+pending ──► confirmed ──► shipped ──► delivered (종료)
+   │              │
+   └──────────────┴──────────────────► cancelled (종료)
+```
 
 ---
 
@@ -979,6 +983,10 @@ Step 13에서는 Dart의 예외 처리 메커니즘(`try`/`catch`/`on`/`finally`
 > **Enum 유리한 점**: `.values`로 모든 상태 순회 가능, 선언이 간결하고 `switch` exhaustiveness check 자동 지원.
 >
 > **Enum 불리한 점**: 각 상태마다 다른 데이터를 갖기 어려움(예: `shipped` 상태에 `trackingNumber` 필드, `cancelled` 상태에 `reason` 필드처럼 상태별 다른 구조), 런타임에 새 상태를 동적으로 추가 불가.
+
+---
+
+> ⬅️ [Step 11 — Mixins](#) | ➡️ [Step 13 — 예외 처리 →](#)
 
 ---
 

@@ -84,7 +84,15 @@
 
 **테스트 피라미드**
 
-![diagram](/developer-open-book/diagrams/step21-test-pyramid.svg)
+```
+         /▲\
+        / E2E \        ← 소수, 느림, 비용 큼
+       /───────\
+      /  통합   \      ← 중간, 실제 DB/API 연동
+     /───────────\
+    /   단위 테스트 \   ← 다수, 빠름, 격리됨
+   /───────────────\
+```
 
 > **전제 지식**: Step 8~13 (클래스, OOP, 예외), Step 14 (비동기), Step 16~18 (제네릭, sealed class)
 
@@ -1672,6 +1680,10 @@ Step 22에서는 Dart 패키지 시스템(pub.dev), `pubspec.yaml` 의존성 관
 > 인메모리 저장소: 격리성 높음(외부 DB 불필요), 빠름, `Repository` 계약 전체를 실제로 검증해 회귀 감지 우수. 단, `InMemoryRepository`와 실제 DB 구현 간 동작 차이가 있을 수 있음.
 > Mock: 완벽한 격리, 가장 빠름, 상호작용(호출 여부/순서) 검증 가능. 단, Repository 내부 로직은 검증 불가, 구현 변경 시 Mock 설정도 변경해야 함.
 > `UserService` 테스트라면 Mock이 적합(의존성 격리). `UserRepository` 자체 테스트라면 인메모리 구현이 더 적합.
+
+---
+
+> ⬅️ [Step 20 — Callable, Typedef, 함수형 심화](#) | ➡️ [Step 22 — 패키지와 pub.dev 생태계 →](#)
 
 ---
 

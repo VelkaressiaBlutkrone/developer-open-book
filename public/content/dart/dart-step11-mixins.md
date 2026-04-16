@@ -506,7 +506,20 @@ void main() {
 
 **선형화 체인 시각화**
 
-![diagram](/developer-open-book/diagrams/step11-mixin-linearization.svg)
+```
+class MyClass with A, B, C
+
+→ 내부적으로 다음 계층 구조로 변환:
+
+Object
+  └── A
+       └── B
+            └── C
+                 └── MyClass  ← 최종 클래스
+
+메서드 검색 순서: MyClass → C → B → A → Object
+(왼쪽부터 검색, 먼저 발견된 것 사용)
+```
 
 **`super`로 체인 따라 호출**
 
@@ -618,11 +631,43 @@ void main() {
 
 세 메커니즘의 전체 비교를 정리합니다.
 
-![diagram](/developer-open-book/diagrams/step11-full-comparison.svg)
+```
+┌─────────────────┬──────────┬────────────┬────────────────┐
+│ 특성            │ extends  │ implements │ with (mixin)   │
+├─────────────────┼──────────┼────────────┼────────────────┤
+│ 구현 상속       │ ✅ 전체  │ ❌         │ ✅ 선택적      │
+│ 다중 사용       │ ❌ 단일  │ ✅ 여러 개 │ ✅ 여러 개     │
+│ 계약 강제       │ 선택적   │ ✅ 전체    │ 추상 멤버로    │
+│ 단독 인스턴스   │ ✅       │ ✅         │ ❌ (mixin class는 ✅) │
+│ 적용 대상 제한  │ —        │ —          │ on 키워드      │
+│ IS-A 관계       │ ✅ 강함  │ 약함       │ ❌             │
+│ 코드 주입       │ 수직     │ ❌         │ ✅ 수평        │
+│ 주요 목적       │ 계층 구조│ 계약 정의  │ 기능 조각 주입 │
+└─────────────────┴──────────┴────────────┴────────────────┘
+```
 
 **선택 흐름도**
 
-![diagram](/developer-open-book/diagrams/step11-reuse-decision-flow.svg)
+```
+코드를 재사용하고 싶다
+          │
+          ▼
+    IS-A 관계이며
+    계층 구조가 명확한가?
+     ├─ YES ──► extends (또는 abstract class)
+     └─ NO
+           │
+           ▼
+    여러 클래스에 공통 기능을
+    수평으로 주입하고 싶은가?
+     ├─ YES ──► mixin (with)
+     └─ NO
+           │
+           ▼
+    공통 구현 없이 API 계약만
+    강제하고 싶은가?
+     └─ YES ──► implements (또는 abstract class)
+```
 
 ---
 
@@ -982,7 +1027,13 @@ void main() {
 >
 > 선형화 순서: `MyClass → M2 → M1 → Base`
 >
-> <div data-diagram="step11-mixin-linear" data-steps="5" data-alt="Mixin 선형화 실행 순서" data-descriptions="M2의 super.greet() 호출 전 코드가 먼저 실행됩니다|M1의 super.greet() 호출 전 코드가 실행됩니다|Base 클래스의 greet()가 실행됩니다|M1의 super.greet() 호출 후 코드가 실행됩니다|M2의 super.greet() 호출 후 코드가 실행됩니다"></div>
+> ```
+> M2 전
+> M1 전
+> Base
+> M1 후
+> M2 후
+> ```
 >
 > `with M1, M2`에서 오른쪽(M2)이 먼저 실행되고, 각 `super.greet()`는 선형화 체인에서 다음 단계를 호출합니다.
 
@@ -1155,6 +1206,10 @@ Step 12에서는 Dart 2.17+의 강화된 Enum을 학습합니다. 단순 상수 
 > **6번 정답 힌트**
 >
 > Mixin 방식은 `logInfo()` 등을 직접 호출해 간결하고, `runtimeType`으로 태그를 자동 설정할 수 있습니다. Composition 방식(`final logger = Logger()`)은 Logger를 교체하거나 Mock으로 대체하기 쉬워 테스트에 유리합니다. 단순한 로깅은 Mixin, 테스트가 중요하거나 Logger 구현체를 교환해야 하는 경우는 Composition이 적합합니다.
+
+---
+
+> ⬅️ [Step 10 — OOP 확장](#) | ➡️ [Step 12 — 열거형(Enum) →](#)
 
 ---
 

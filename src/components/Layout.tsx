@@ -6,14 +6,7 @@ import { SearchBar } from './SearchBar';
 import { ScrollProgress } from './ScrollProgress';
 import { BackToTop } from './BackToTop';
 import { routes } from '../routes';
-
-const SHELF_LABELS: Record<string, string> = {
-  dart: 'Dart',
-  flutter: 'Flutter',
-  react: 'React',
-  spring: 'Spring Boot',
-  archive: 'Archive',
-};
+import { getShelfLabel } from '../data/shelves';
 
 interface Props {
   children: React.ReactNode;
@@ -27,7 +20,7 @@ export function Layout({ children }: Props) {
 
   const currentRoute = routes.find(r => r.path === location.pathname);
   const currentShelf = currentRoute?.shelf;
-  const shelfLabel = currentShelf ? SHELF_LABELS[currentShelf] || currentShelf : '';
+  const shelfLabel = currentShelf ? getShelfLabel(currentShelf) : '';
 
   /* Home = full-screen library room, no header/sidebar */
   if (isHome) {

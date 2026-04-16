@@ -108,7 +108,15 @@ Isolate는 Dart에서 **진정한 병렬 실행 단위**입니다.
 
 ### 3.2 메모리 격리와 메시지 패싱
 
-![diagram](/developer-open-book/diagrams/step15-thread-vs-isolate.svg)
+```
+Java/Python 스레드 방식:
+  스레드 A ──────────► 공유 메모리 ◄────────── 스레드 B
+                        (Lock 필요, Race Condition 위험)
+
+Dart Isolate 방식:
+  Isolate A (힙 A) ──복사──► 메시지 큐 ──복사──► Isolate B (힙 B)
+                              (공유 없음, Race Condition 불가능)
+```
 
 **값 복사의 의미**
 
@@ -1000,6 +1008,10 @@ Step 16에서는 Dart 제네릭의 타입 안전성, 공변성/반공변성, 경
 > (A) 단일 Isolate: 한 CPU 코어만 사용. 나머지 코어 낭비.
 > (B) 4개 Isolate: 4코어 CPU에서 이론상 4배 빠름. 생성 오버헤드 4배지만 작업 시간 대비 무시 가능. 최적에 가까움.
 > (C) 100개 Isolate: 4코어에서 100개는 과잉. Isolate 생성 오버헤드(각 수ms) 100배, 컨텍스트 스위칭 증가. CPU 코어 수에 맞춘 Pool 크기(보통 코어 수 = 최적)가 효율적.
+
+---
+
+> ⬅️ [Step 14 — 비동기 프로그래밍 심화](#) | ➡️ [Step 16 — 제네릭(Generics) →](#)
 
 ---
 

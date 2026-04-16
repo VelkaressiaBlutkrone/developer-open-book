@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { useStepSimulator } from './useStepSimulator';
+import { useStepSimulator } from '../hooks/useStepSimulator';
 import { StepperControls } from './StepperControls';
 
 interface Props {

@@ -68,7 +68,14 @@
 
 Dart는 이 질문들에 대응하는 네 가지 생성자 패턴을 제공합니다.
 
-![diagram](/developer-open-book/diagrams/step09-constructor-types.svg)
+```
+┌─────────────────────────────────────────────────────────┐
+│  기본 생성자       │ 표준 초기화                         │
+│  Named 생성자      │ 여러 생성 시나리오 제공             │
+│  const 생성자      │ 컴파일 타임 상수, 메모리 재사용     │
+│  factory 생성자    │ 생성 로직 완전 제어, 재사용 가능    │
+└─────────────────────────────────────────────────────────┘
+```
 
 > **전제 지식**: Step 8 완료 (클래스 기본, 필드, 메서드, getter/setter)
 
@@ -746,7 +753,26 @@ void main() {
 
 **생성자 선택 흐름도**
 
-![diagram](/developer-open-book/diagrams/step09-constructor-decision.svg)
+```
+객체를 생성해야 한다
+        │
+        ▼
+  모든 필드가 final이고
+  컴파일 타임 값인가?
+   ├─ YES ──► const 생성자
+   └─ NO
+        │
+        ▼
+  기존 인스턴스를 재사용하거나
+  서브클래스를 반환해야 하는가?
+   ├─ YES ──► factory 생성자
+   └─ NO
+        │
+        ▼
+  다양한 생성 방식이 필요한가?
+   ├─ YES ──► Named 생성자 (+ Redirecting으로 중복 제거)
+   └─ NO  ──► 기본 생성자
+```
 
 **`const` vs `factory` — 헷갈리기 쉬운 차이점**
 
@@ -985,6 +1011,10 @@ Step 10에서는 `extends`(상속), `implements`(인터페이스), `abstract cla
 > **6번 정답 힌트**
 >
 > `factory` 생성자는 `ClassName()` 형태로 호출해 일반 생성자와 동일한 문법을 유지합니다. `getInstance()` 방식은 `ClassName.getInstance()` 처럼 명시적 메서드 호출이 필요합니다. `factory` 방식은 호출부 코드 변경 없이 내부 구현을 싱글톤으로 전환할 수 있어 인터페이스 투명성이 높습니다.
+
+---
+
+> ⬅️ [Step 8 — 클래스와 객체 기본](#) | ➡️ [Step 10 — OOP 확장 →](#)
 
 ---
 

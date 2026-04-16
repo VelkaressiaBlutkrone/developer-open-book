@@ -1,6 +1,8 @@
 import { useState, useCallback } from 'react';
 import { type RouteConfig, routes } from '../routes';
 import { BookReader } from './BookReader';
+import { SPINE_COLORS, seedFromId } from '../data/books';
+import { SHELVES as SHELF_REGISTRY } from '../data/shelves';
 
 const B = import.meta.env.BASE_URL + 'sprites/';
 /* v2: overlay-based book reader */
@@ -14,45 +16,21 @@ interface ShelfDef {
   pos: string;
 }
 
-const SHELVES: ShelfDef[] = [
-  {
-    id: 'dart', label: 'Dart', icon: '📘',
-    filter: r => r.shelf === 'dart',
-    pos: 'top-left',
-  },
-  {
-    id: 'flutter', label: 'Flutter', icon: '📗',
-    filter: r => r.shelf === 'flutter',
-    pos: 'top-center',
-  },
-  {
-    id: 'react', label: 'React', icon: '📙',
-    filter: r => r.shelf === 'react',
-    pos: 'top-right',
-  },
-  {
-    id: 'spring', label: 'Spring Boot', icon: '📕',
-    filter: r => r.shelf === 'spring',
-    pos: 'bot-left',
-  },
-  {
-    id: 'etc', label: 'Archive', icon: '📓',
-    filter: r => r.shelf === 'archive',
-    pos: 'bot-right',
-  },
-];
+const SHELF_POSITIONS: Record<string, string> = {
+  dart: 'top-left',
+  flutter: 'top-center',
+  react: 'top-right',
+  spring: 'bot-left',
+  archive: 'bot-right',
+};
 
-const SPINE_COLORS = [
-  '#6b1c2a', '#1B4F72', '#1a3a2a', '#4a1942', '#8B2635',
-  '#2c5f2d', '#7D3C98', '#935116', '#1A5276', '#6b3a2a',
-  '#2d4a1e', '#4a2c5f', '#703030', '#285f5c', '#5c3d6b',
-];
-
-function seedHash(s: string) {
-  let h = 0;
-  for (let i = 0; i < s.length; i++) h = ((h << 5) - h + s.charCodeAt(i)) | 0;
-  return Math.abs(h);
-}
+const SHELVES: ShelfDef[] = SHELF_REGISTRY.map(s => ({
+  id: s.id,
+  label: s.name,
+  icon: s.icon,
+  filter: (r: RouteConfig) => r.shelf === s.id,
+  pos: SHELF_POSITIONS[s.id] || 'bot-right',
+}));
 
 function chunkArray<T>(arr: T[], size: number): T[][] {
   const result: T[][] = [];
@@ -241,7 +219,7 @@ function ShelfModal({ shelf, books, onClose, onBookClick }: {
             <div key={ri} className="modal-shelf-unit">
               <div className="modal-shelf-row">
                 {row.map((book, i) => {
-                  const seed = seedHash(book.path);
+                  const seed = seedFromId(book.path);
                   const height = 130 + (seed % 50);
                   const thickness = 28 + (seed % 18);
                   const color = SPINE_COLORS[seed % SPINE_COLORS.length];
