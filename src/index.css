@@ -1241,8 +1241,21 @@ body::after {
 }
 .lr-wall-t { top: 0; left: 0; right: 0; height: 7vmin; }
 .lr-wall-b { bottom: 0; left: 0; right: 0; height: 5vmin; }
-.lr-wall-l { top: 0; bottom: 0; left: 0; width: 7vmin; }
-.lr-wall-r { top: 0; bottom: 0; right: 0; width: 7vmin; }
+/* Side walls: use a darker gradient overlay to differentiate from top/bottom */
+.lr-wall-l {
+  top: 0; bottom: 0; left: 0; width: 7vmin;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.15) 0%, transparent 50%, rgba(0,0,0,0.15) 100%),
+    url('/developer-open-book/sprites/tile-wall.png') repeat;
+  background-size: auto, 64px 64px;
+}
+.lr-wall-r {
+  top: 0; bottom: 0; right: 0; width: 7vmin;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.15) 0%, transparent 50%, rgba(0,0,0,0.15) 100%),
+    url('/developer-open-book/sprites/tile-wall.png') repeat;
+  background-size: auto, 64px 64px;
+}
 
 /* ── Bookshelf wrapper (shelf + sign) ── */
 .lr-shelf-wrap {

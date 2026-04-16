@@ -112,36 +112,38 @@ export function LibraryRoom() {
       {/* ── Central carpet ── */}
       <div className="lr-carpet" />
 
-      {/* ── Main reading table (center, slightly upper) ── */}
+      {/* ── Main reading table (center) ── */}
       <img src={B + 'table.png'} className="lr-obj" alt=""
-        style={{ top: '38%', left: '50%', transform: 'translate(-50%,-50%)', width: '15vmin', height: '11vmin', zIndex: 3 }} />
+        style={{ top: '36%', left: '50%', transform: 'translate(-50%,-50%)', width: '14vmin', height: '10vmin', zIndex: 3 }} />
       <img src={B + 'candle.png'} className="lr-obj pixel-candle" alt=""
-        style={{ top: '30%', left: '50%', transform: 'translateX(-50%)', width: '5vmin', height: '5vmin', zIndex: 4 }} />
-      <div className="lr-glow" style={{ top: '28%', left: '44%', width: '14vmin', height: '10vmin' }} />
+        style={{ top: '28%', left: '50%', transform: 'translateX(-50%)', width: '5vmin', height: '5vmin', zIndex: 4 }} />
+      <div className="lr-glow" style={{ top: '26%', left: '44%', width: '14vmin', height: '10vmin' }} />
 
-      {/* Chairs around main table */}
+      {/* Chairs tucked close to main table */}
       <img src={B + 'chair.png'} className="lr-obj" alt=""
-        style={{ top: '44%', left: '38%', width: '7vmin', height: '7vmin' }} />
+        style={{ top: '38%', left: '40%', width: '6vmin', height: '6vmin' }} />
       <img src={B + 'chair.png'} className="lr-obj" alt=""
-        style={{ top: '44%', right: '38%', width: '7vmin', height: '7vmin', transform: 'scaleX(-1)' }} />
+        style={{ top: '38%', right: '40%', width: '6vmin', height: '6vmin', transform: 'scaleX(-1)' }} />
 
-      {/* ── Left reading nook (lower left) ── */}
+      {/* ── Left reading nook ── */}
       <img src={B + 'table.png'} className="lr-obj" alt=""
-        style={{ top: '62%', left: '22%', width: '12vmin', height: '9vmin', zIndex: 3 }} />
+        style={{ top: '60%', left: '20%', width: '11vmin', height: '8vmin', zIndex: 3 }} />
       <img src={B + 'candle.png'} className="lr-obj pixel-candle" alt=""
-        style={{ top: '56%', left: '25%', width: '4vmin', height: '4vmin', zIndex: 4 }} />
-      <div className="lr-glow" style={{ top: '54%', left: '20%', width: '12vmin', height: '9vmin' }} />
+        style={{ top: '55%', left: '23%', width: '4vmin', height: '4vmin', zIndex: 4 }} />
+      <div className="lr-glow" style={{ top: '53%', left: '18%', width: '12vmin', height: '9vmin' }} />
+      {/* Chair directly below table */}
       <img src={B + 'chair.png'} className="lr-obj" alt=""
-        style={{ top: '70%', left: '20%', width: '7vmin', height: '7vmin' }} />
+        style={{ top: '66%', left: '22%', width: '6vmin', height: '6vmin' }} />
 
-      {/* ── Right reading nook (lower right) ── */}
+      {/* ── Right reading nook ── */}
       <img src={B + 'table.png'} className="lr-obj" alt=""
-        style={{ top: '62%', right: '22%', width: '12vmin', height: '9vmin', zIndex: 3 }} />
+        style={{ top: '60%', right: '20%', width: '11vmin', height: '8vmin', zIndex: 3 }} />
       <img src={B + 'candle.png'} className="lr-obj pixel-candle" alt=""
-        style={{ top: '56%', right: '25%', width: '4vmin', height: '4vmin', zIndex: 4 }} />
-      <div className="lr-glow" style={{ top: '54%', right: '20%', width: '12vmin', height: '9vmin' }} />
+        style={{ top: '55%', right: '23%', width: '4vmin', height: '4vmin', zIndex: 4 }} />
+      <div className="lr-glow" style={{ top: '53%', right: '18%', width: '12vmin', height: '9vmin' }} />
+      {/* Chair directly below table */}
       <img src={B + 'chair.png'} className="lr-obj" alt=""
-        style={{ top: '70%', right: '20%', width: '7vmin', height: '7vmin', transform: 'scaleX(-1)' }} />
+        style={{ top: '66%', right: '22%', width: '6vmin', height: '6vmin', transform: 'scaleX(-1)' }} />
 
       {/* ── Corner plants (on floor, inside walls) ── */}
       <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ top: '8%', left: '8%', width: '6vmin', height: '6vmin', zIndex: 4 }} />
@@ -177,13 +179,13 @@ export function LibraryRoom() {
       {/* ── NPCs ── */}
       {/* Librarian at main table */}
       <img src={B + 'librarian/rotations/south.png'} className="lr-npc" alt=""
-        style={{ top: '32%', left: '56%', width: '8vmin', height: '8vmin' }} />
+        style={{ top: '30%', left: '55%', width: '7vmin', height: '7vmin' }} />
       {/* Scholar at left nook */}
       <img src={B + 'scholar/rotations/east.png'} className="lr-npc" alt=""
-        style={{ top: '60%', left: '30%', width: '7vmin', height: '7vmin', animationDelay: '-1.2s' }} />
+        style={{ top: '57%', left: '29%', width: '6vmin', height: '6vmin', animationDelay: '-1.2s' }} />
       {/* Visitor at right nook */}
       <img src={B + 'visitor/rotations/west.png'} className="lr-npc" alt=""
-        style={{ top: '60%', right: '30%', width: '7vmin', height: '7vmin', animationDelay: '-2.5s' }} />
+        style={{ top: '57%', right: '29%', width: '6vmin', height: '6vmin', animationDelay: '-2.5s' }} />
 
       <div className="lr-vignette" />
 
