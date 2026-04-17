@@ -4,10 +4,12 @@ import { BookReader } from './BookReader';
 import { ProgressIndicator } from './ProgressIndicator';
 import { SpeechBubble } from './SpeechBubble';
 import { NPCMarker } from './NPCMarker';
+import AIChat from './AIChat';
 import { SPINE_COLORS, seedFromId } from '../data/books';
 import { SHELVES as SHELF_REGISTRY } from '../data/shelves';
 import { getNPCsByRoom, findDialogueNode, getNPCMarkerType, type NPC, type DialogueNode } from '../data/npcs';
 import { getQuestById } from '../data/quests';
+import { getAPIKey } from '../ai/claude';
 import { WorldMap } from './WorldMap';
 import { SoundToggle } from './SoundToggle';
 import { DustCanvas, type DustCanvasRef } from './DustCanvas';
@@ -63,6 +65,8 @@ export function LibraryRoom() {
   const [readingBook, setReadingBook] = useState<RouteConfig | null>(null);
   const [activeNPC, setActiveNPC] = useState<NPC | null>(null);
   const [dialogueNode, setDialogueNode] = useState<DialogueNode | null>(null);
+  const [npcMode, setNpcMode] = useState<'select' | 'quest' | null>(null);
+  const [aiChatNPC, setAiChatNPC] = useState<NPC | null>(null);
   const [showWorldMap, setShowWorldMap] = useState(false);
   const [currentRoom, setCurrentRoom] = useState('main');
   const [showFlash, setShowFlash] = useState(false);
@@ -78,13 +82,11 @@ export function LibraryRoom() {
   }, []);
 
   const handleNPCClick = useCallback((npc: NPC) => {
-    const node = findDialogueNode(npc, state);
-    if (node) {
-      play('npcTalk');
-      setActiveNPC(npc);
-      setDialogueNode(node);
-    }
-  }, [state, play]);
+    play('npcTalk');
+    setActiveNPC(npc);
+    setNpcMode('select');
+    setDialogueNode(null);
+  }, [play]);
 
   const handleDialogueSelect = useCallback((nextId: string) => {
     if (!activeNPC) return;
@@ -127,7 +129,21 @@ export function LibraryRoom() {
   const closeDialogue = useCallback(() => {
     setActiveNPC(null);
     setDialogueNode(null);
+    setNpcMode(null);
   }, []);
+
+  const handleSelectQuest = useCallback(() => {
+    if (!activeNPC) return;
+    setNpcMode('quest');
+    const node = findDialogueNode(activeNPC, state);
+    if (node) setDialogueNode(node);
+  }, [activeNPC, state]);
+
+  const handleSelectAI = useCallback(() => {
+    if (!activeNPC) return;
+    setAiChatNPC(activeNPC);
+    closeDialogue();
+  }, [activeNPC, closeDialogue]);
 
   return (
     <div className="lr">
@@ -206,8 +222,14 @@ export function LibraryRoom() {
             <NPCMarker type={marker} />
             <img src={B + npc.sprite[npc.defaultDirection]} alt={npc.name} className="lr-npc lr-npc-clickable"
               width={110} height={110} onClick={() => handleNPCClick(npc)} />
-            {activeNPC?.id === 'librarian' && dialogueNode && (
-              <SpeechBubble text={dialogueNode.text} options={dialogueNode.options}
+            {activeNPC?.id === 'librarian' && npcMode === 'select' && (
+              <SpeechBubble mode="select" hasApiKey={!!getAPIKey()}
+                onSelectQuest={handleSelectQuest} onSelectAI={handleSelectAI}
+                onClose={closeDialogue} />
+            )}
+            {activeNPC?.id === 'librarian' && npcMode === 'quest' && dialogueNode && (
+              <SpeechBubble mode="dialogue" text={dialogueNode.text}
+                options={dialogueNode.options}
                 onSelect={handleDialogueSelect} onClose={closeDialogue} />
             )}
           </div>
@@ -227,8 +249,14 @@ export function LibraryRoom() {
             <img src={B + npc.sprite[npc.defaultDirection]} alt={npc.name} className="lr-npc lr-npc-clickable"
               width={96} height={96} style={{ animationDelay: '-1.2s' }}
               onClick={() => handleNPCClick(npc)} />
-            {activeNPC?.id === 'scholar' && dialogueNode && (
-              <SpeechBubble text={dialogueNode.text} options={dialogueNode.options}
+            {activeNPC?.id === 'scholar' && npcMode === 'select' && (
+              <SpeechBubble mode="select" hasApiKey={!!getAPIKey()}
+                onSelectQuest={handleSelectQuest} onSelectAI={handleSelectAI}
+                onClose={closeDialogue} />
+            )}
+            {activeNPC?.id === 'scholar' && npcMode === 'quest' && dialogueNode && (
+              <SpeechBubble mode="dialogue" text={dialogueNode.text}
+                options={dialogueNode.options}
                 onSelect={handleDialogueSelect} onClose={closeDialogue} />
             )}
           </div>
@@ -258,8 +286,14 @@ export function LibraryRoom() {
             <img src={B + npc.sprite[npc.defaultDirection]} alt={npc.name} className="lr-npc lr-npc-clickable"
               width={96} height={96} style={{ animationDelay: '-2.5s' }}
               onClick={() => handleNPCClick(npc)} />
-            {activeNPC?.id === 'visitor' && dialogueNode && (
-              <SpeechBubble text={dialogueNode.text} options={dialogueNode.options}
+            {activeNPC?.id === 'visitor' && npcMode === 'select' && (
+              <SpeechBubble mode="select" hasApiKey={!!getAPIKey()}
+                onSelectQuest={handleSelectQuest} onSelectAI={handleSelectAI}
+                onClose={closeDialogue} />
+            )}
+            {activeNPC?.id === 'visitor' && npcMode === 'quest' && dialogueNode && (
+              <SpeechBubble mode="dialogue" text={dialogueNode.text}
+                options={dialogueNode.options}
                 onSelect={handleDialogueSelect} onClose={closeDialogue} />
             )}
           </div>
@@ -277,8 +311,14 @@ export function LibraryRoom() {
             <img src={B + npc.sprite[npc.defaultDirection]} alt={npc.name} className="lr-npc lr-npc-clickable"
               width={96} height={96} style={{ animationDelay: '-0.8s' }}
               onClick={() => handleNPCClick(npc)} />
-            {activeNPC?.id === 'researcher' && dialogueNode && (
-              <SpeechBubble text={dialogueNode.text} options={dialogueNode.options}
+            {activeNPC?.id === 'researcher' && npcMode === 'select' && (
+              <SpeechBubble mode="select" hasApiKey={!!getAPIKey()}
+                onSelectQuest={handleSelectQuest} onSelectAI={handleSelectAI}
+                onClose={closeDialogue} />
+            )}
+            {activeNPC?.id === 'researcher' && npcMode === 'quest' && dialogueNode && (
+              <SpeechBubble mode="dialogue" text={dialogueNode.text}
+                options={dialogueNode.options}
                 onSelect={handleDialogueSelect} onClose={closeDialogue} />
             )}
           </div>
@@ -353,6 +393,10 @@ export function LibraryRoom() {
 
       {readingBook && (
         <BookReader route={readingBook} onClose={() => setReadingBook(null)} />
+      )}
+
+      {aiChatNPC && (
+        <AIChat npc={aiChatNPC} onClose={() => setAiChatNPC(null)} />
       )}
     </div>
   );

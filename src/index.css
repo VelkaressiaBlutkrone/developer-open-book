@@ -3385,3 +3385,8 @@ body::after {
   transition: background 0.2s;
 }
 .api-settings-save:hover { background: rgba(184,134,11,0.15); }
+
+.speech-bubble-option.locked {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
