@@ -208,10 +208,10 @@ export function LibraryRoom() {
       <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={48} height={48}
         style={{ top: '30%', left: '50%', marginLeft: -24, zIndex: 4 }} />
       <div className="lr-glow" style={{ top: '28%', left: '46%', width: '8%', height: '8%' }} />
-      <img src={B + 'chairs/south.png'} alt="" className="lr-sprite" width={80} height={80}
-        style={{ top: '54%', left: '50%', marginLeft: -100 }} />
-      <img src={B + 'chairs/south.png'} alt="" className="lr-sprite" width={80} height={80}
-        style={{ top: '54%', left: '50%', marginLeft: 20 }} />
+      <img src={B + 'chairs/south.png'} alt="" className="lr-sprite" width={88} height={88}
+        style={{ top: '53%', left: '50%', marginLeft: -108 }} />
+      <img src={B + 'chairs/south.png'} alt="" className="lr-sprite" width={88} height={88}
+        style={{ top: '53%', left: '50%', marginLeft: 20 }} />
       {/* Librarian NPC — rendered from data */}
       {(() => {
         const npc = roomNPCs.find(n => n.id === 'librarian');
@@ -221,7 +221,7 @@ export function LibraryRoom() {
           <div className="lr-npc-wrap" style={{ position: 'absolute', ...npc.position, zIndex: 6 }}>
             <NPCMarker type={marker} />
             <img src={B + npc.sprite[npc.defaultDirection]} alt={npc.name} className="lr-npc lr-npc-clickable"
-              width={110} height={110} onClick={() => handleNPCClick(npc)} />
+              width={96} height={96} onClick={() => handleNPCClick(npc)} />
             {activeNPC?.id === 'librarian' && npcMode === 'select' && (
               <SpeechBubble mode="select" hasApiKey={!!getAPIKey()}
                 onSelectQuest={handleSelectQuest} onSelectAI={handleSelectAI}

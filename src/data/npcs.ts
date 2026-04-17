@@ -126,7 +126,7 @@ export const NPCS: NPC[] = [
     name: 'React 연구원',
     role: 'researcher',
     room: 'main',
-    position: { top: '26%', right: '12%' },
+    position: { top: '36%', right: '18%' },
     sprite: {
       south: S + 'researcher/rotations/south.png',
       north: S + 'researcher/rotations/north.png',
