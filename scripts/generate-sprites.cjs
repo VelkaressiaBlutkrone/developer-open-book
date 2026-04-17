@@ -229,4 +229,145 @@ saveCanvas(east, 'chairs/east.png');
 const west = drawChairWest();
 saveCanvas(west, 'chairs/west.png');
 
-console.log('\nDone! 4 chair direction sprites generated.');
+console.log('\n4 chair direction sprites generated.');
+
+// ═══════════════════════════════════════════
+// RESEARCHER NPC (48×48, blue/purple palette)
+// ═══════════════════════════════════════════
+
+const R_HAIR = '#2a1a4e';
+const R_SKIN = '#e8c8a0';
+const R_ROBE = '#4a3a8b';
+const R_ROBE_LIGHT = '#6b5aab';
+const R_ROBE_DARK = '#332870';
+const R_BOOK = '#d4a017';
+const R_GLASSES = '#87CEEB';
+
+function drawResearcherSouth() {
+  const c = createCanvas(48, 48);
+  const ctx = c.getContext('2d');
+
+  // Hair
+  for (let x = 18; x <= 29; x++) { setPixel(ctx, x, 6, R_HAIR); setPixel(ctx, x, 7, R_HAIR); }
+  for (let x = 17; x <= 30; x++) { setPixel(ctx, x, 8, R_HAIR); setPixel(ctx, x, 9, R_HAIR); }
+
+  // Face
+  for (let y = 10; y <= 15; y++) for (let x = 19; x <= 28; x++) setPixel(ctx, x, y, R_SKIN);
+  // Glasses
+  setPixel(ctx, 20, 12, R_GLASSES); setPixel(ctx, 21, 12, R_GLASSES);
+  setPixel(ctx, 26, 12, R_GLASSES); setPixel(ctx, 27, 12, R_GLASSES);
+  setPixel(ctx, 22, 12, R_GLASSES); setPixel(ctx, 25, 12, R_GLASSES); // bridge
+  // Eyes
+  setPixel(ctx, 21, 12, '#1a1a2e'); setPixel(ctx, 26, 12, '#1a1a2e');
+
+  // Robe body
+  for (let y = 16; y <= 32; y++) {
+    const w = y < 20 ? 6 : y < 28 ? 8 : 7;
+    const cx = 24;
+    for (let x = cx - w; x <= cx + w; x++) {
+      setPixel(ctx, x, y, y % 3 === 0 ? R_ROBE_LIGHT : R_ROBE);
+    }
+  }
+  // Robe dark edges
+  for (let y = 16; y <= 32; y++) {
+    setPixel(ctx, 16, y, R_ROBE_DARK); setPixel(ctx, 32, y, R_ROBE_DARK);
+  }
+
+  // Book in hand (right side)
+  for (let y = 22; y <= 28; y++) for (let x = 30; x <= 35; x++) setPixel(ctx, x, y, R_BOOK);
+  for (let x = 31; x <= 34; x++) setPixel(ctx, x, 24, '#fff'); // pages
+
+  // Hands
+  setPixel(ctx, 29, 24, R_SKIN); setPixel(ctx, 29, 25, R_SKIN);
+
+  // Legs/feet
+  for (let y = 33; y <= 37; y++) {
+    setPixel(ctx, 20, y, R_ROBE_DARK); setPixel(ctx, 21, y, R_ROBE);
+    setPixel(ctx, 26, y, R_ROBE_DARK); setPixel(ctx, 27, y, R_ROBE);
+  }
+  // Shoes
+  for (let x = 19; x <= 22; x++) setPixel(ctx, x, 38, '#2a1a1a');
+  for (let x = 25; x <= 28; x++) setPixel(ctx, x, 38, '#2a1a1a');
+
+  // Shadow
+  for (let x = 18; x <= 30; x++) setPixel(ctx, x, 39, 'rgba(0,0,0,0.15)');
+
+  return c;
+}
+
+function drawResearcherNorth() {
+  const c = createCanvas(48, 48);
+  const ctx = c.getContext('2d');
+
+  // Hair (back view, more visible)
+  for (let x = 17; x <= 30; x++) for (let y = 6; y <= 14; y++) setPixel(ctx, x, y, R_HAIR);
+
+  // Robe body (back)
+  for (let y = 15; y <= 32; y++) {
+    const w = y < 20 ? 6 : y < 28 ? 8 : 7;
+    for (let x = 24 - w; x <= 24 + w; x++) setPixel(ctx, x, y, y % 4 === 0 ? R_ROBE_LIGHT : R_ROBE);
+  }
+  for (let y = 15; y <= 32; y++) { setPixel(ctx, 16, y, R_ROBE_DARK); setPixel(ctx, 32, y, R_ROBE_DARK); }
+
+  // Legs
+  for (let y = 33; y <= 37; y++) {
+    setPixel(ctx, 20, y, R_ROBE_DARK); setPixel(ctx, 21, y, R_ROBE);
+    setPixel(ctx, 26, y, R_ROBE_DARK); setPixel(ctx, 27, y, R_ROBE);
+  }
+  for (let x = 19; x <= 22; x++) setPixel(ctx, x, 38, '#2a1a1a');
+  for (let x = 25; x <= 28; x++) setPixel(ctx, x, 38, '#2a1a1a');
+  for (let x = 18; x <= 30; x++) setPixel(ctx, x, 39, 'rgba(0,0,0,0.15)');
+
+  return c;
+}
+
+function drawResearcherEast() {
+  const c = createCanvas(48, 48);
+  const ctx = c.getContext('2d');
+
+  // Hair (side)
+  for (let x = 20; x <= 28; x++) for (let y = 6; y <= 10; y++) setPixel(ctx, x, y, R_HAIR);
+  // Face (side)
+  for (let y = 10; y <= 15; y++) for (let x = 22; x <= 28; x++) setPixel(ctx, x, y, R_SKIN);
+  setPixel(ctx, 27, 12, '#1a1a2e'); // eye
+  setPixel(ctx, 26, 12, R_GLASSES); setPixel(ctx, 28, 12, R_GLASSES);
+
+  // Robe
+  for (let y = 16; y <= 32; y++) {
+    const w = y < 20 ? 5 : 7;
+    for (let x = 19; x <= 19 + w * 2; x++) setPixel(ctx, x, y, y % 3 === 0 ? R_ROBE_LIGHT : R_ROBE);
+  }
+
+  // Book (held forward)
+  for (let y = 20; y <= 26; y++) for (let x = 32; x <= 37; x++) setPixel(ctx, x, y, R_BOOK);
+  setPixel(ctx, 31, 22, R_SKIN); setPixel(ctx, 31, 23, R_SKIN);
+
+  // Legs
+  for (let y = 33; y <= 37; y++) { setPixel(ctx, 22, y, R_ROBE_DARK); setPixel(ctx, 26, y, R_ROBE_DARK); }
+  for (let x = 21; x <= 23; x++) setPixel(ctx, x, 38, '#2a1a1a');
+  for (let x = 25; x <= 27; x++) setPixel(ctx, x, 38, '#2a1a1a');
+  for (let x = 20; x <= 28; x++) setPixel(ctx, x, 39, 'rgba(0,0,0,0.15)');
+
+  return c;
+}
+
+function drawResearcherWest() {
+  const east = drawResearcherEast();
+  const c = createCanvas(48, 48);
+  const ctx = c.getContext('2d');
+  ctx.translate(48, 0);
+  ctx.scale(-1, 1);
+  ctx.drawImage(east, 0, 0);
+  return c;
+}
+
+// Generate researcher NPC
+const researcherDir = path.join(OUT, 'researcher', 'rotations');
+if (!fs.existsSync(researcherDir)) fs.mkdirSync(researcherDir, { recursive: true });
+
+saveCanvas(drawResearcherSouth(), 'researcher/rotations/south.png');
+saveCanvas(drawResearcherNorth(), 'researcher/rotations/north.png');
+saveCanvas(drawResearcherEast(), 'researcher/rotations/east.png');
+saveCanvas(drawResearcherWest(), 'researcher/rotations/west.png');
+
+console.log('4 researcher NPC sprites generated.\n\nAll done!');
