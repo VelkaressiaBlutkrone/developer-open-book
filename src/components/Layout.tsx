@@ -6,6 +6,7 @@ import { SearchBar } from './SearchBar';
 import { ScrollProgress } from './ScrollProgress';
 import { BackToTop } from './BackToTop';
 import { ProgressIndicator } from './ProgressIndicator';
+import { PixelDiorama } from './PixelDiorama';
 import { routes } from '../routes';
 import { getShelfLabel } from '../data/shelves';
 
@@ -31,6 +32,7 @@ export function Layout({ children }: Props) {
   return (
     <div className="app-layout library-theme">
       <ScrollProgress />
+      <PixelDiorama />
       <header className="app-header">
         <div className="header-left">
           <button
