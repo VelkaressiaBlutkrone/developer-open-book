@@ -1568,6 +1568,127 @@ body::after {
   top: 12px;
   right: 16px;
   z-index: 20;
+}
+
+/* ══════════════════════════════════════════
+   SPEECH BUBBLE
+   ══════════════════════════════════════════ */
+.speech-bubble-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+}
+
+.speech-bubble {
+  position: absolute;
+  bottom: calc(100% + 16px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 220px;
+  max-width: 320px;
+  background: #1a1208;
+  border: 2px solid rgba(184,134,11,0.4);
+  border-radius: 8px;
+  padding: 14px 16px;
+  color: #e8daba;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  z-index: 1600;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  animation: bubble-in 0.25s ease-out;
+}
+
+@keyframes bubble-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(8px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.speech-bubble-tail {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #1a1208;
+}
+
+.speech-bubble-text {
+  margin-bottom: 8px;
+  font-family: 'Georgia', serif;
+}
+
+.speech-bubble-options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.speech-bubble-option {
+  background: rgba(184,134,11,0.12);
+  border: 1px solid rgba(184,134,11,0.3);
+  color: #d4a017;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-family: 'Georgia', serif;
+  text-align: left;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.speech-bubble-option:hover {
+  background: rgba(184,134,11,0.25);
+  border-color: #d4a017;
+}
+
+.speech-bubble-close {
+  background: none;
+  border: 1px solid rgba(184,134,11,0.2);
+  color: rgba(184,134,11,0.5);
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  margin-top: 4px;
+  transition: color 0.2s;
+}
+
+.speech-bubble-close:hover {
+  color: #d4a017;
+}
+
+/* ══════════════════════════════════════════
+   NPC MARKER (! / ?)
+   ══════════════════════════════════════════ */
+.npc-marker {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-weight: 900;
+  font-family: 'Georgia', serif;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+  animation: marker-bounce 1s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 8;
+}
+
+.npc-marker-complete {
+  color: #f5c542;
+}
+
+.npc-marker-available {
+  color: #c0c0c0;
+}
+
+@keyframes marker-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-6px); }
+  z-index: 20;
   letter-spacing: 0.1em;
   margin-top: 4px;
 }
