@@ -12,6 +12,12 @@ import {
 } from './progress'
 import { checkNewBadges } from './badges'
 import { migrateIfNeeded } from './migrate'
+import {
+  activateQuest as _activateQuest,
+  completeQuest as _completeQuest,
+  unlockRoom as _unlockRoom,
+  setTitle as _setTitle,
+} from './questProgress'
 
 // ── Store (external, works with useSyncExternalStore) ──
 
@@ -51,6 +57,10 @@ interface ProgressAPI {
   trackScroll: (bookId: string, scrollPos: number) => void
   trackTime: (bookId: string, deltaMs: number) => void
   checkCompletion: (bookId: string, markdown: string) => void
+  activateQuest: (questId: string) => void
+  completeQuest: (questId: string) => void
+  unlockRoom: (roomId: string) => void
+  setTitle: (title: string) => void
 }
 
 const ProgressContext = createContext<ProgressAPI | null>(null)
@@ -84,7 +94,26 @@ export function ProgressProvider({ children }: { children: React.ReactNode }) {
     }
   }, [])
 
-  const api: ProgressAPI = { state, trackScroll, trackTime, checkCompletion }
+  const activateQuest = useCallback((questId: string) => {
+    setState(_activateQuest(getSnapshot(), questId))
+  }, [])
+
+  const completeQuest = useCallback((questId: string) => {
+    setState(_completeQuest(getSnapshot(), questId))
+  }, [])
+
+  const unlockRoom = useCallback((roomId: string) => {
+    setState(_unlockRoom(getSnapshot(), roomId))
+  }, [])
+
+  const setTitle = useCallback((title: string) => {
+    setState(_setTitle(getSnapshot(), title))
+  }, [])
+
+  const api: ProgressAPI = {
+    state, trackScroll, trackTime, checkCompletion,
+    activateQuest, completeQuest, unlockRoom, setTitle,
+  }
 
   return (
     <ProgressContext.Provider value={api}>
