@@ -6,14 +6,14 @@
 
 ## 현재 상태
 
-**Phase 1: Foundation — Lane A/B/C/D/E 완료, Lane G 미완료**
+**Phase 1: Foundation — 전체 완료 (Lane A~G)**
 - Lane A (콘텐츠 마이그레이션 + fetch 전환 + 동적 라우트): 완료 ✅
 - Lane B (books.ts + shelves.ts 리팩토링): 완료 ✅
 - Lane C (BookPage fetch 전환): Lane A에 통합 완료 ✅
 - Lane D (번들 최적화): 완료 ✅ (993KB → 418KB, 57% 감소)
 - Lane E (dead code 정리): 완료 ✅ (170,460줄 삭제)
 - Lane C-진행추적 (1-E): 완료 ✅ (progress store + 배지 13개 + 스트릭 + ProgressIndicator UI)
-- **Lane G (테스트): 미완료** ← 다음 작업
+- Lane G (테스트): 완료 ✅ (Vitest + 41개 유닛 테스트)
 
 ---
 
@@ -79,11 +79,11 @@ Phase 4: AI 튜터 NPC
 - [x] PrismLight + 19개 언어 선별 import (300개+ → 19개)
 - [x] 결과: 993KB → 418KB (57% 감소), 초기 로드 235KB
 
-### 1-G. 테스트 인프라
-- [ ] Vitest 설치 + vitest.config.ts
-- [ ] progress.ts 유닛 테스트 (읽기 저장/로드, 완독 감지, 스트릭 계산, 마이그레이션)
-- [ ] books.ts 유닛 테스트 (getBookBySlug, getBooksByShelf, getBookVisual)
-- [ ] useContent 훅 테스트 (fetch 성공/404/네트워크 오류)
+### 1-G. 테스트 인프라 ✅ (2026-04-17)
+- [x] Vitest 설치 + vite.config.ts test 설정
+- [x] progress.test.ts (23개): 완독 감지, 스크롤 저장, 시간 추적, 스트릭 계산
+- [x] books.test.ts (18개): BOOKS 레지스트리, getBookBySlug, getBooksByShelf, getBookVisual
+- [ ] useContent 훅 테스트 (fetch 성공/404/네트워크 오류) — jsdom 환경 필요, 추후
 
 ---
 
@@ -125,7 +125,9 @@ Lane E: 1-D (dead code 정리) — A, B 완료 후
 | 2026-04-16 | Phase 1 엔지니어링 리뷰 완료 + TODOS.md | `e3fb492` |
 | 2026-04-16 | .vite/ gitignore 추가 | `db3ba47` |
 | 2026-04-16 | Phase 1 Lane A/B/D/E 구현 (233파일, 170K줄 삭제) | `7a1f391` |
-| 2026-04-17 | 1-E 진행 추적 시스템 (progress store, 배지 13개, ProgressIndicator) | — |
+| 2026-04-17 | 1-E 진행 추적 시스템 (progress store, 배지 13개, ProgressIndicator) | `3ea6333` |
+| 2026-04-17 | pixellab.ai 스프라이트 에셋 이관 + 메인 화면 배치 개선 | `1a4ea74`~`deb0769` |
+| 2026-04-17 | 1-G 테스트 인프라 (Vitest + 41개 유닛 테스트) | `12986a1` |
 
 ---
 
@@ -133,9 +135,8 @@ Lane E: 1-D (dead code 정리) — A, B 완료 후
 
 > **다음 세션에서 이 섹션부터 시작하세요.**
 
-1. **1-G 테스트 인프라**: Vitest 설치 + progress.ts/books.ts/useContent 유닛 테스트
-2. **배포 확인**: `npm run deploy`로 GitHub Pages 배포 후 라이브 사이트 동작 확인
-3. **Phase 1 완료 시 Phase 2로 전환**: NPC + 퀘스트 시스템
+1. **배포 확인**: `npm run deploy`로 GitHub Pages 배포 후 라이브 사이트 동작 확인
+2. **Phase 2 시작**: NPC + 퀘스트 시스템
 
 ---
 
