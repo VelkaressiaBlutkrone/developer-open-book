@@ -5,9 +5,7 @@ import { SPINE_COLORS, seedFromId } from '../data/books';
 import { SHELVES as SHELF_REGISTRY } from '../data/shelves';
 
 const B = import.meta.env.BASE_URL + 'sprites/';
-/* v2: overlay-based book reader */
 
-/* ── 책장 = 언어/주제 단위. 모든 문서가 하나의 책장에 ── */
 interface ShelfDef {
   id: string;
   label: string;
@@ -38,6 +36,18 @@ function chunkArray<T>(arr: T[], size: number): T[][] {
   return result;
 }
 
+/*
+ * Consistent 2.5× pixel scale for all sprites.
+ * Original → rendered:
+ *   table  64×48 → 160×120
+ *   chair  32×32 → 80×80
+ *   candle 32×32 → 60×60 (slightly smaller, decorative)
+ *   plant  32×32 → 80×80
+ *   lamp   32×48 → 80×120
+ *   wallmap 48×48 → 120×120
+ *   NPC    48×48 → 120×120
+ */
+
 export function LibraryRoom() {
   const [openShelf, setOpenShelf] = useState<ShelfDef | null>(null);
   const [readingBook, setReadingBook] = useState<RouteConfig | null>(null);
@@ -63,10 +73,9 @@ export function LibraryRoom() {
           <div key={shelf.id} className={`lr-shelf-wrap lr-shelf-${shelf.pos}`}>
             <button
               className={`lr-shelf ${empty ? 'lr-shelf-empty' : ''}`}
-              onClick={() => setOpenShelf(shelf)}
+              onClick={() => !empty && setOpenShelf(shelf)}
               aria-label={`${shelf.label} (${books.length}권)`}
             >
-              {/* Book rows visual */}
               <div className="lr-shelf-books">
                 <div className="lr-shelf-bookrow" />
                 <div className="lr-shelf-plank" />
@@ -76,7 +85,6 @@ export function LibraryRoom() {
                 <div className="lr-shelf-plank" />
               </div>
             </button>
-            {/* Nameplate sign in FRONT of shelf */}
             <div className="lr-sign">
               <span className="lr-sign-icon">{shelf.icon}</span>
               <span className="lr-sign-text">{shelf.label}</span>
@@ -87,83 +95,71 @@ export function LibraryRoom() {
         );
       })}
 
-      {/* ── Central carpet ── */}
       <div className="lr-carpet" />
 
-      {/* ── Main reading table (center) ── */}
-      <img src={B + 'table.png'} className="lr-obj" alt=""
-        style={{ top: '36%', left: '50%', transform: 'translate(-50%,-50%)', width: '14vmin', height: '10vmin', zIndex: 3 }} />
-      <img src={B + 'candle.png'} className="lr-obj pixel-candle" alt=""
-        style={{ top: '28%', left: '50%', transform: 'translateX(-50%)', width: '5vmin', height: '5vmin', zIndex: 4 }} />
-      <div className="lr-glow" style={{ top: '26%', left: '44%', width: '14vmin', height: '10vmin' }} />
+      {/* ── Wall decorations ── */}
+      <img src={B + 'wallmap.png'} alt="" className="lr-sprite" width={120} height={120}
+        style={{ top: '0%', left: '50%', marginLeft: -60, zIndex: 6 }} />
+      <img src={B + 'lamp.png'} alt="" className="lr-sprite" width={80} height={120}
+        style={{ top: '0%', left: '33%', zIndex: 6 }} />
+      <img src={B + 'lamp.png'} alt="" className="lr-sprite" width={80} height={120}
+        style={{ top: '0%', right: '33%', zIndex: 6 }} />
 
-      {/* Chairs tucked close to main table */}
-      <img src={B + 'chair.png'} className="lr-obj" alt=""
-        style={{ top: '38%', left: '40%', width: '6vmin', height: '6vmin' }} />
-      <img src={B + 'chair.png'} className="lr-obj" alt=""
-        style={{ top: '38%', right: '40%', width: '6vmin', height: '6vmin', transform: 'scaleX(-1)' }} />
+      {/* Side wall candles */}
+      <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={60} height={60}
+        style={{ top: '35%', left: '2.5%', zIndex: 6 }} />
+      <div className="lr-glow" style={{ top: '33%', left: '1%', width: '8%', height: '8%' }} />
+      <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={60} height={60}
+        style={{ top: '35%', right: '2.5%', zIndex: 6 }} />
+      <div className="lr-glow" style={{ top: '33%', right: '1%', width: '8%', height: '8%' }} />
 
-      {/* ── Left reading nook ── */}
-      <img src={B + 'table.png'} className="lr-obj" alt=""
-        style={{ top: '60%', left: '20%', width: '11vmin', height: '8vmin', zIndex: 3 }} />
-      <img src={B + 'candle.png'} className="lr-obj pixel-candle" alt=""
-        style={{ top: '55%', left: '23%', width: '4vmin', height: '4vmin', zIndex: 4 }} />
-      <div className="lr-glow" style={{ top: '53%', left: '18%', width: '12vmin', height: '9vmin' }} />
-      {/* Chair directly below table */}
-      <img src={B + 'chair.png'} className="lr-obj" alt=""
-        style={{ top: '66%', left: '22%', width: '6vmin', height: '6vmin' }} />
+      {/* ── Central table — librarian ── */}
+      <img src={B + 'table.png'} alt="" className="lr-sprite" width={160} height={120}
+        style={{ top: '36%', left: '50%', marginLeft: -80 }} />
+      <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={48} height={48}
+        style={{ top: '30%', left: '50%', marginLeft: -24, zIndex: 4 }} />
+      <div className="lr-glow" style={{ top: '28%', left: '46%', width: '8%', height: '8%' }} />
+      <img src={B + 'chairs/south.png'} alt="" className="lr-sprite" width={80} height={80}
+        style={{ top: '54%', left: '50%', marginLeft: -100 }} />
+      <img src={B + 'chairs/south.png'} alt="" className="lr-sprite" width={80} height={80}
+        style={{ top: '54%', left: '50%', marginLeft: 20 }} />
+      <img src={B + 'librarian/rotations/south.png'} alt="Librarian" className="lr-npc"
+        width={110} height={110}
+        style={{ top: '26%', left: '50%', marginLeft: 40 }} />
 
-      {/* ── Right reading nook ── */}
-      <img src={B + 'table.png'} className="lr-obj" alt=""
-        style={{ top: '60%', right: '20%', width: '11vmin', height: '8vmin', zIndex: 3 }} />
-      <img src={B + 'candle.png'} className="lr-obj pixel-candle" alt=""
-        style={{ top: '55%', right: '23%', width: '4vmin', height: '4vmin', zIndex: 4 }} />
-      <div className="lr-glow" style={{ top: '53%', right: '18%', width: '12vmin', height: '9vmin' }} />
-      {/* Chair directly below table */}
-      <img src={B + 'chair.png'} className="lr-obj" alt=""
-        style={{ top: '66%', right: '22%', width: '6vmin', height: '6vmin', transform: 'scaleX(-1)' }} />
+      {/* ── Left nook — scholar sitting at table ── */}
+      <img src={B + 'chairs/east.png'} alt="" className="lr-sprite" width={72} height={72}
+        style={{ top: '62%', left: '26%', marginLeft: -80 }} />
+      <img src={B + 'scholar/rotations/east.png'} alt="Scholar" className="lr-npc"
+        width={96} height={96}
+        style={{ top: '56%', left: '26%', marginLeft: -110, animationDelay: '-1.2s' }} />
+      <img src={B + 'table.png'} alt="" className="lr-sprite" width={128} height={96}
+        style={{ top: '58%', left: '26%', marginLeft: -44 }} />
+      <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={40} height={40}
+        style={{ top: '54%', left: '27%', zIndex: 4 }} />
+      <div className="lr-glow" style={{ top: '52%', left: '23%', width: '8%', height: '6%' }} />
 
-      {/* ── Corner plants (on floor, inside walls) ── */}
-      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ top: '8%', left: '8%', width: '6vmin', height: '6vmin', zIndex: 4 }} />
-      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ top: '8%', right: '8%', width: '6vmin', height: '6vmin', zIndex: 4 }} />
-      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ bottom: '6%', left: '8%', width: '6vmin', height: '6vmin', zIndex: 4 }} />
-      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ bottom: '6%', right: '8%', width: '6vmin', height: '6vmin', zIndex: 4 }} />
-      {/* Side wall plants (just inside wall edge) */}
-      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ top: '48%', left: '9%', width: '5vmin', height: '5vmin', zIndex: 4 }} />
-      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ top: '48%', right: '9%', width: '5vmin', height: '5vmin', zIndex: 4 }} />
-      {/* Bottom center plants */}
-      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ bottom: '6%', left: '42%', width: '5vmin', height: '5vmin', zIndex: 4 }} />
-      <img src={B + 'plant.png'} className="lr-obj" alt="" style={{ bottom: '6%', right: '42%', width: '5vmin', height: '5vmin', zIndex: 4 }} />
+      {/* ── Right nook — visitor sitting at table ── */}
+      <img src={B + 'table.png'} alt="" className="lr-sprite" width={128} height={96}
+        style={{ top: '58%', right: '26%', marginRight: -44 }} />
+      <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={40} height={40}
+        style={{ top: '54%', right: '27%', zIndex: 4 }} />
+      <div className="lr-glow" style={{ top: '52%', right: '23%', width: '8%', height: '6%' }} />
+      <img src={B + 'chairs/west.png'} alt="" className="lr-sprite" width={72} height={72}
+        style={{ top: '62%', right: '26%', marginRight: -80 }} />
+      <img src={B + 'visitor/rotations/west.png'} alt="Visitor" className="lr-npc"
+        width={96} height={96}
+        style={{ top: '56%', right: '26%', marginRight: -110, animationDelay: '-2.5s' }} />
 
-      {/* ── Top wall lamps (on wall, between shelves) ── */}
-      <img src={B + 'lamp.png'} className="lr-obj" alt="" style={{ top: '1%', left: '34%', width: '5vmin', height: '7vmin', zIndex: 6 }} />
-      <img src={B + 'lamp.png'} className="lr-obj" alt="" style={{ top: '1%', right: '34%', width: '5vmin', height: '7vmin', zIndex: 6 }} />
-
-      {/* ── Side wall candles (on wall surface) ── */}
-      <img src={B + 'candle.png'} className="lr-obj pixel-candle" alt="" style={{ top: '30%', left: '2%', width: '5vmin', height: '5vmin', zIndex: 6 }} />
-      <img src={B + 'candle.png'} className="lr-obj pixel-candle" alt="" style={{ top: '30%', right: '2%', width: '5vmin', height: '5vmin', zIndex: 6 }} />
-      <div className="lr-glow" style={{ top: '28%', left: '0%', width: '12vmin', height: '10vmin' }} />
-      <div className="lr-glow" style={{ top: '28%', right: '0%', width: '12vmin', height: '10vmin' }} />
-      {/* Lower side wall candles */}
-      <img src={B + 'candle.png'} className="lr-obj pixel-candle" alt="" style={{ top: '65%', left: '2%', width: '5vmin', height: '5vmin', zIndex: 6 }} />
-      <img src={B + 'candle.png'} className="lr-obj pixel-candle" alt="" style={{ top: '65%', right: '2%', width: '5vmin', height: '5vmin', zIndex: 6 }} />
-      <div className="lr-glow" style={{ top: '63%', left: '0%', width: '12vmin', height: '10vmin' }} />
-      <div className="lr-glow" style={{ top: '63%', right: '0%', width: '12vmin', height: '10vmin' }} />
-
-      {/* ── Wall map (centered on top wall) ── */}
-      <img src={B + 'wallmap.png'} className="lr-obj" alt=""
-        style={{ top: '0%', left: '50%', transform: 'translateX(-50%)', width: '8vmin', height: '7vmin', zIndex: 6 }} />
-
-      {/* ── NPCs ── */}
-      {/* Librarian at main table */}
-      <img src={B + 'librarian/rotations/south.png'} className="lr-npc" alt=""
-        style={{ top: '30%', left: '55%', width: '7vmin', height: '7vmin' }} />
-      {/* Scholar at left nook */}
-      <img src={B + 'scholar/rotations/east.png'} className="lr-npc" alt=""
-        style={{ top: '57%', left: '29%', width: '6vmin', height: '6vmin', animationDelay: '-1.2s' }} />
-      {/* Visitor at right nook */}
-      <img src={B + 'visitor/rotations/west.png'} className="lr-npc" alt=""
-        style={{ top: '57%', right: '29%', width: '6vmin', height: '6vmin', animationDelay: '-2.5s' }} />
+      {/* ── Corner plants ── */}
+      <img src={B + 'plant.png'} alt="" className="lr-sprite" width={72} height={72}
+        style={{ top: '9%', left: '8.5%', zIndex: 4 }} />
+      <img src={B + 'plant.png'} alt="" className="lr-sprite" width={72} height={72}
+        style={{ top: '9%', right: '8.5%', zIndex: 4 }} />
+      <img src={B + 'plant.png'} alt="" className="lr-sprite" width={72} height={72}
+        style={{ bottom: '6%', left: '8.5%', zIndex: 4 }} />
+      <img src={B + 'plant.png'} alt="" className="lr-sprite" width={72} height={72}
+        style={{ bottom: '6%', right: '8.5%', zIndex: 4 }} />
 
       <div className="lr-vignette" />
 
@@ -172,7 +168,6 @@ export function LibraryRoom() {
         <p>책장을 클릭하여 도서를 탐색하세요</p>
       </div>
 
-      {/* Shelf Modal */}
       {openShelf && (
         <ShelfModal
           shelf={openShelf}
@@ -182,14 +177,9 @@ export function LibraryRoom() {
         />
       )}
 
-      {/* Book Reader Overlay */}
       {readingBook && (
-        <BookReader
-          route={readingBook}
-          onClose={() => setReadingBook(null)}
-        />
+        <BookReader route={readingBook} onClose={() => setReadingBook(null)} />
       )}
-
     </div>
   );
 }

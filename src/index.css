@@ -1413,7 +1413,19 @@ body::after {
   font-style: italic;
 }
 
-/* ── Objects ── */
+/* ── Sprites — consistent pixel-art rendering ── */
+.lr-sprite {
+  position: absolute;
+  image-rendering: pixelated;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.lr-sprite.pixel-candle {
+  z-index: 4;
+}
+
+/* ── Objects (legacy) ── */
 .lr-obj {
   position: absolute;
   image-rendering: pixelated;
@@ -1454,8 +1466,6 @@ body::after {
 /* ── NPCs ── */
 .lr-npc {
   position: absolute;
-  width: 5vmin;
-  height: 5vmin;
   image-rendering: pixelated;
   pointer-events: none;
   z-index: 6;
