@@ -370,4 +370,107 @@ saveCanvas(drawResearcherNorth(), 'researcher/rotations/north.png');
 saveCanvas(drawResearcherEast(), 'researcher/rotations/east.png');
 saveCanvas(drawResearcherWest(), 'researcher/rotations/west.png');
 
-console.log('4 researcher NPC sprites generated.\n\nAll done!');
+console.log('4 researcher NPC sprites generated.');
+
+// ═══════════════════════════════════════════
+// BOOKSHELF SPRITE (96×64, top-down 3/4 view)
+// ═══════════════════════════════════════════
+
+const SHELF_WOOD = '#5c3a1e';
+const SHELF_DARK = '#3d2008';
+const SHELF_HI = '#7a5230';
+const SHELF_PLANK = '#6b4420';
+
+const BOOK_COLORS = [
+  '#6b1c2a', '#1B4F72', '#1a3a2a', '#4a1942',
+  '#8B2635', '#2c5f2d', '#7D3C98', '#935116',
+  '#1A5276', '#6b3a2a', '#285f5c', '#703030',
+];
+
+function drawBookshelf() {
+  const W = 96, H = 64;
+  const c = createCanvas(W, H);
+  const ctx = c.getContext('2d');
+
+  // Outer frame
+  // Left/right posts
+  for (let y = 0; y < H; y++) {
+    for (let x = 0; x < 4; x++) setPixel(ctx, x, y, SHELF_DARK);
+    for (let x = W - 4; x < W; x++) setPixel(ctx, x, y, SHELF_DARK);
+  }
+  // Top/bottom frame
+  for (let x = 0; x < W; x++) {
+    for (let y = 0; y < 3; y++) setPixel(ctx, x, y, SHELF_HI);
+    for (let y = H - 3; y < H; y++) setPixel(ctx, x, y, SHELF_DARK);
+  }
+
+  // 3 rows of books with planks between
+  const rows = [
+    { y: 3, h: 16 },   // top row
+    { y: 22, h: 16 },  // middle row
+    { y: 41, h: 14 },  // bottom row (shorter)
+  ];
+
+  for (const row of rows) {
+    // Book spines
+    let x = 5;
+    let colorIdx = row.y; // different starting color per row
+    while (x < W - 5) {
+      const bookW = 3 + Math.floor(Math.random() * 4); // 3-6px wide
+      const bookH = row.h - 2 - Math.floor(Math.random() * 3); // slight height variation
+      const color = BOOK_COLORS[(colorIdx++) % BOOK_COLORS.length];
+      const yOff = row.y + (row.h - bookH); // align to bottom of row
+
+      for (let by = yOff; by < yOff + bookH; by++) {
+        for (let bx = x; bx < Math.min(x + bookW, W - 5); bx++) {
+          setPixel(ctx, bx, by, color);
+        }
+      }
+      // Spine highlight (left edge)
+      for (let by = yOff + 1; by < yOff + bookH - 1; by++) {
+        setPixel(ctx, x, by, lighten(color, 0.2));
+      }
+      // Spine shadow (right edge)
+      for (let by = yOff + 1; by < yOff + bookH - 1; by++) {
+        setPixel(ctx, x + bookW - 1, by, darken(color, 0.2));
+      }
+
+      x += bookW + 1; // gap between books
+    }
+
+    // Plank below each row
+    const plankY = row.y + row.h;
+    for (let px = 3; px < W - 3; px++) {
+      setPixel(ctx, px, plankY, SHELF_HI);
+      setPixel(ctx, px, plankY + 1, SHELF_PLANK);
+      setPixel(ctx, px, plankY + 2, SHELF_DARK);
+    }
+  }
+
+  // Shadow under shelf
+  for (let x = 2; x < W - 2; x++) {
+    setPixel(ctx, x, H - 1, 'rgba(0,0,0,0.3)');
+    setPixel(ctx, x, H - 2, 'rgba(0,0,0,0.15)');
+  }
+
+  return c;
+}
+
+function lighten(hex, amount) {
+  const r = Math.min(255, parseInt(hex.slice(1, 3), 16) + 255 * amount);
+  const g = Math.min(255, parseInt(hex.slice(3, 5), 16) + 255 * amount);
+  const b = Math.min(255, parseInt(hex.slice(5, 7), 16) + 255 * amount);
+  return `rgb(${Math.round(r)},${Math.round(g)},${Math.round(b)})`;
+}
+
+function darken(hex, amount) {
+  const r = Math.max(0, parseInt(hex.slice(1, 3), 16) * (1 - amount));
+  const g = Math.max(0, parseInt(hex.slice(3, 5), 16) * (1 - amount));
+  const b = Math.max(0, parseInt(hex.slice(5, 7), 16) * (1 - amount));
+  return `rgb(${Math.round(r)},${Math.round(g)},${Math.round(b)})`;
+}
+
+// Generate multiple variants (seeded randomness via different starting state)
+saveCanvas(drawBookshelf(), 'bookshelf.png');
+
+console.log('1 bookshelf sprite generated.\n\nAll done!');

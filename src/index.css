@@ -1276,10 +1276,10 @@ html {
   align-items: center;
 }
 
-/* Top row */
-.lr-shelf-top-left   { top: 7vmin; left: 10%;  width: 22%; }
-.lr-shelf-top-center { top: 7vmin; left: 39%; width: 22%; }
-.lr-shelf-top-right  { top: 7vmin; right: 10%; width: 22%; }
+/* Top row — lowered to avoid wallmap overlap */
+.lr-shelf-top-left   { top: 9vmin; left: 10%;  width: 22%; }
+.lr-shelf-top-center { top: 9vmin; left: 39%; width: 22%; }
+.lr-shelf-top-right  { top: 9vmin; right: 10%; width: 22%; }
 /* Bottom row — raised slightly from wall */
 .lr-shelf-bot-left   { bottom: 6vmin; left: 15%; width: 22%; flex-direction: column-reverse; }
 .lr-shelf-bot-right  { bottom: 6vmin; right: 15%; width: 22%; flex-direction: column-reverse; }
@@ -1287,13 +1287,21 @@ html {
 .lr-shelf-left  { top: 28%; left: 5vmin; width: 8%; }
 .lr-shelf-right { top: 28%; right: 5vmin; width: 8%; }
 
-/* ── The bookshelf itself (wooden furniture with book rows) ── */
+/* ── The bookshelf itself ── */
+.lr-shelf-img {
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+  display: block;
+}
+
 .lr-shelf {
   width: 100%;
   border: none;
   padding: 0;
   cursor: pointer;
   border-radius: 3px;
+  background: none;
   overflow: hidden;
   transition: transform 0.2s, box-shadow 0.3s;
   box-shadow:

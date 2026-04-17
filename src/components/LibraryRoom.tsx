@@ -164,14 +164,7 @@ export function LibraryRoom() {
               onClick={() => !empty && setOpenShelf(shelf)}
               aria-label={`${shelf.label} (${books.length}권)`}
             >
-              <div className="lr-shelf-books">
-                <div className="lr-shelf-bookrow" />
-                <div className="lr-shelf-plank" />
-                <div className="lr-shelf-bookrow" />
-                <div className="lr-shelf-plank" />
-                <div className="lr-shelf-bookrow lr-shelf-bookrow-short" />
-                <div className="lr-shelf-plank" />
-              </div>
+              <img src={B + 'bookshelf.png'} alt="" className="lr-shelf-img" />
             </button>
             <div className="lr-sign">
               <span className="lr-sign-icon">{shelf.icon}</span>
@@ -186,8 +179,8 @@ export function LibraryRoom() {
       <div className="lr-carpet" />
 
       {/* ── Wall decorations ── */}
-      <img src={B + 'wallmap.png'} alt="도서관 지도" className="lr-sprite lr-wallmap-clickable" width={120} height={120}
-        style={{ top: '0%', left: '50%', marginLeft: -60, zIndex: 6, cursor: 'pointer', pointerEvents: 'auto' }}
+      <img src={B + 'wallmap.png'} alt="도서관 지도" className="lr-sprite lr-wallmap-clickable" width={72} height={72}
+        style={{ top: '0.5%', left: '50%', marginLeft: -36, zIndex: 7, cursor: 'pointer', pointerEvents: 'auto' }}
         onClick={() => setShowWorldMap(true)} title="도서관 지도 열기" />
       <img src={B + 'lamp.png'} alt="" className="lr-sprite" width={80} height={120}
         style={{ top: '0%', left: '33%', zIndex: 6 }} />
