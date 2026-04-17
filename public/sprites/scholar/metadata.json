@@ -1,0 +1,26 @@
+{
+  "character": {
+    "id": "4372ed3e-bd01-4cc8-9cca-90a688256dd9",
+    "name": "Reading Scholar",
+    "prompt": "medieval fantasy scholar NPC, young man reading a book, brown leather vest over white shirt, brown hair, studious appearance",
+    "size": {
+      "width": 48,
+      "height": 48
+    },
+    "template_id": "mannequin",
+    "directions": 4,
+    "view": "high top-down",
+    "created_at": "2026-04-16T05:18:49.217791+00:00"
+  },
+  "frames": {
+    "rotations": {
+      "south": "rotations/south.png",
+      "west": "rotations/west.png",
+      "east": "rotations/east.png",
+      "north": "rotations/north.png"
+    },
+    "animations": {}
+  },
+  "export_version": "2.0",
+  "export_date": "2026-04-16T05:19:30.404113"
+}
