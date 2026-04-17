@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import { type RouteConfig, routes } from '../routes';
 import { BookReader } from './BookReader';
+import { ProgressIndicator } from './ProgressIndicator';
 import { SPINE_COLORS, seedFromId } from '../data/books';
 import { SHELVES as SHELF_REGISTRY } from '../data/shelves';
 
@@ -161,6 +162,12 @@ export function LibraryRoom() {
       <img src={B + 'plant.png'} alt="" className="lr-sprite" width={72} height={72}
         style={{ bottom: '7%', right: '8.5%', zIndex: 4 }} />
 
+      {/* ── Side wall plants ── */}
+      <img src={B + 'plant.png'} alt="" className="lr-sprite" width={64} height={64}
+        style={{ top: '48%', left: '9%', zIndex: 4 }} />
+      <img src={B + 'plant.png'} alt="" className="lr-sprite" width={64} height={64}
+        style={{ top: '48%', right: '9%', zIndex: 4 }} />
+
       {/* ── Bottom center decoration ── */}
       <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={48} height={48}
         style={{ bottom: '8%', left: '50%', marginLeft: -24, zIndex: 6 }} />
@@ -183,6 +190,11 @@ export function LibraryRoom() {
       <div className="lr-title">
         <h1>Developer Open Book</h1>
         <p>책장을 클릭하여 도서를 탐색하세요</p>
+      </div>
+
+      {/* Progress indicator — top right corner */}
+      <div className="lr-progress">
+        <ProgressIndicator />
       </div>
 
       {openShelf && (
