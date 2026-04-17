@@ -14,11 +14,13 @@ import {
 
 function emptyState(): UserProgress {
   return {
-    version: 2,
+    version: 3,
     books: {},
     badges: [],
     streak: { current: 0, lastReadDate: '', longest: 0 },
     totals: { booksCompleted: 0, totalTimeMs: 0 },
+    quests: {},
+    unlockedRooms: ['main'],
   }
 }
 

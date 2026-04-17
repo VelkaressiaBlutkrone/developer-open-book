@@ -12,7 +12,7 @@ export interface ReadingProgress {
 }
 
 export interface UserProgress {
-  version: 2
+  version: 3
   books: Record<string, ReadingProgress>
   badges: string[]          // earned badge IDs
   streak: {
@@ -24,6 +24,9 @@ export interface UserProgress {
     booksCompleted: number
     totalTimeMs: number
   }
+  quests: Record<string, 'active' | 'completed'>
+  unlockedRooms: string[]
+  title?: string
 }
 
 // ── Constants ──
@@ -36,11 +39,13 @@ const WORDS_PER_MINUTE = 200
 
 function createDefault(): UserProgress {
   return {
-    version: 2,
+    version: 3,
     books: {},
     badges: [],
     streak: { current: 0, lastReadDate: '', longest: 0 },
     totals: { booksCompleted: 0, totalTimeMs: 0 },
+    quests: {},
+    unlockedRooms: ['main'],
   }
 }
 
@@ -51,10 +56,20 @@ export function loadProgress(): UserProgress {
     const raw = localStorage.getItem(STORAGE_KEY)
     if (!raw) return createDefault()
     const parsed = JSON.parse(raw)
-    if (parsed.version === 2) return parsed as UserProgress
+    if (parsed.version === 3) return parsed as UserProgress
+    if (parsed.version === 2) return migrateV2toV3(parsed)
     return createDefault()
   } catch {
     return createDefault()
+  }
+}
+
+function migrateV2toV3(v2: Record<string, unknown>): UserProgress {
+  return {
+    ...(v2 as unknown as UserProgress),
+    version: 3,
+    quests: {},
+    unlockedRooms: ['main'],
   }
 }
 
