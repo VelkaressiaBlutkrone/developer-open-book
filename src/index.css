@@ -1270,9 +1270,9 @@ body::after {
 .lr-shelf-top-left   { top: 7vmin; left: 10%;  width: 22%; }
 .lr-shelf-top-center { top: 7vmin; left: 39%; width: 22%; }
 .lr-shelf-top-right  { top: 7vmin; right: 10%; width: 22%; }
-/* Bottom row */
-.lr-shelf-bot-left   { bottom: 5vmin; left: 15%; width: 22%; flex-direction: column-reverse; }
-.lr-shelf-bot-right  { bottom: 5vmin; right: 15%; width: 22%; flex-direction: column-reverse; }
+/* Bottom row — raised slightly from wall */
+.lr-shelf-bot-left   { bottom: 6vmin; left: 15%; width: 22%; flex-direction: column-reverse; }
+.lr-shelf-bot-right  { bottom: 6vmin; right: 15%; width: 22%; flex-direction: column-reverse; }
 /* Side walls */
 .lr-shelf-left  { top: 28%; left: 5vmin; width: 8%; }
 .lr-shelf-right { top: 28%; right: 5vmin; width: 8%; }

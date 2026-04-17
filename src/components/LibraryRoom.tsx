@@ -157,9 +157,26 @@ export function LibraryRoom() {
       <img src={B + 'plant.png'} alt="" className="lr-sprite" width={72} height={72}
         style={{ top: '9%', right: '8.5%', zIndex: 4 }} />
       <img src={B + 'plant.png'} alt="" className="lr-sprite" width={72} height={72}
-        style={{ bottom: '6%', left: '8.5%', zIndex: 4 }} />
+        style={{ bottom: '7%', left: '8.5%', zIndex: 4 }} />
       <img src={B + 'plant.png'} alt="" className="lr-sprite" width={72} height={72}
-        style={{ bottom: '6%', right: '8.5%', zIndex: 4 }} />
+        style={{ bottom: '7%', right: '8.5%', zIndex: 4 }} />
+
+      {/* ── Bottom center decoration ── */}
+      <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={48} height={48}
+        style={{ bottom: '8%', left: '50%', marginLeft: -24, zIndex: 6 }} />
+      <div className="lr-glow" style={{ bottom: '6%', left: '47%', width: '6%', height: '6%' }} />
+      <img src={B + 'plant.png'} alt="" className="lr-sprite" width={60} height={60}
+        style={{ bottom: '7%', left: '50%', marginLeft: -120, zIndex: 4 }} />
+      <img src={B + 'plant.png'} alt="" className="lr-sprite" width={60} height={60}
+        style={{ bottom: '7%', left: '50%', marginLeft: 60, zIndex: 4 }} />
+
+      {/* ── Lower side candles ── */}
+      <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={50} height={50}
+        style={{ top: '68%', left: '3%', zIndex: 6 }} />
+      <div className="lr-glow" style={{ top: '66%', left: '1%', width: '8%', height: '8%' }} />
+      <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={50} height={50}
+        style={{ top: '68%', right: '3%', zIndex: 6 }} />
+      <div className="lr-glow" style={{ top: '66%', right: '1%', width: '8%', height: '8%' }} />
 
       <div className="lr-vignette" />
 
