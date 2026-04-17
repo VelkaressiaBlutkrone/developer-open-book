@@ -5,6 +5,7 @@ import { ThemeToggle } from './ThemeToggle';
 import { SearchBar } from './SearchBar';
 import { ScrollProgress } from './ScrollProgress';
 import { BackToTop } from './BackToTop';
+import { ProgressIndicator } from './ProgressIndicator';
 import { routes } from '../routes';
 import { getShelfLabel } from '../data/shelves';
 
@@ -50,6 +51,7 @@ export function Layout({ children }: Props) {
           </h1>
         </div>
         <div className="header-right">
+          <ProgressIndicator />
           <SearchBar />
           <ThemeToggle />
         </div>

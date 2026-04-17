@@ -6,14 +6,14 @@
 
 ## 현재 상태
 
-**Phase 1: Foundation — Lane A/B/D/E 완료, Lane C/G 미완료**
+**Phase 1: Foundation — Lane A/B/C/D/E 완료, Lane G 미완료**
 - Lane A (콘텐츠 마이그레이션 + fetch 전환 + 동적 라우트): 완료 ✅
 - Lane B (books.ts + shelves.ts 리팩토링): 완료 ✅
 - Lane C (BookPage fetch 전환): Lane A에 통합 완료 ✅
 - Lane D (번들 최적화): 완료 ✅ (993KB → 418KB, 57% 감소)
 - Lane E (dead code 정리): 완료 ✅ (170,460줄 삭제)
-- **Lane C-진행추적 (1-E): 미완료** ← 다음 작업
-- **Lane G (테스트): 미완료** ← 그 다음 작업
+- Lane C-진행추적 (1-E): 완료 ✅ (progress store + 배지 13개 + 스트릭 + ProgressIndicator UI)
+- **Lane G (테스트): 미완료** ← 다음 작업
 
 ---
 
@@ -58,19 +58,21 @@ Phase 4: AI 튜터 NPC
 - [x] pixel-library.css 1060줄 미사용 클래스 제거
 - [x] MarkdownRenderer.tsx 하드코딩 경로 수정
 
-### 1-E. 진행 추적 시스템 ← **미완료, 다음 작업**
-- [ ] src/store/progress.ts 신규 생성
+### 1-E. 진행 추적 시스템 ✅ (2026-04-17)
+- [x] src/store/progress.ts 신규 생성
   - UserProgress 인터페이스 (version, books, badges, streak, totals)
   - ReadingProgress 인터페이스 (bookId, lastReadAt, scrollPosition, completed, timeSpentMs)
   - localStorage 저장/로드/마이그레이션
   - 완독 감지: max(30초, 추정읽기시간 50%) + 스크롤 90%
   - 짧은 문서(500단어 미만): 스크롤 바닥 도달만으로 완독
-- [ ] src/store/migrate.ts: 구 형식 localStorage 키 → 신 형식 변환
-- [ ] ProgressContext: React Context로 앱 전역 접근
-- [ ] BookPage/BookReader에서 스크롤 위치 자동 저장
-- [ ] 배지 시스템 (최소 10개, 픽셀 아트 SVG 아이콘)
-- [ ] 스트릭 카운터 (일간 연속 읽기)
-- [ ] Layout.tsx 헤더에 진행률/스트릭 표시
+- [x] src/store/migrate.ts: 구 형식 localStorage 키 → 신 형식 변환
+- [x] src/store/ProgressContext.tsx: useSyncExternalStore 기반 Context + Provider
+- [x] src/hooks/useReadingTracker.ts: BookPage용 스크롤/시간 추적 훅
+- [x] BookPage/BookReader에서 스크롤 위치 자동 저장 + 읽기 시간 추적
+- [x] src/store/badges.ts: 배지 13개 (완독, 스트릭, 카테고리 마스터, 시간, 탐험가) + 픽셀 아트 SVG
+- [x] 스트릭 카운터 (일간 연속 읽기, 최장 스트릭 기록)
+- [x] src/components/ProgressIndicator.tsx: 헤더 드롭다운 패널 (프로그레스 바, 통계, 배지 그리드)
+- [x] Layout.tsx 헤더에 📖 0/97 + 🔥 스트릭 표시
 
 ### 1-F. 번들 최적화 ✅ (2026-04-16, `7a1f391`)
 - [x] 19개 언어 사용 조사 완료 (dart 874, jsx 379, js 70 ...)
@@ -123,6 +125,7 @@ Lane E: 1-D (dead code 정리) — A, B 완료 후
 | 2026-04-16 | Phase 1 엔지니어링 리뷰 완료 + TODOS.md | `e3fb492` |
 | 2026-04-16 | .vite/ gitignore 추가 | `db3ba47` |
 | 2026-04-16 | Phase 1 Lane A/B/D/E 구현 (233파일, 170K줄 삭제) | `7a1f391` |
+| 2026-04-17 | 1-E 진행 추적 시스템 (progress store, 배지 13개, ProgressIndicator) | — |
 
 ---
 
@@ -130,10 +133,9 @@ Lane E: 1-D (dead code 정리) — A, B 완료 후
 
 > **다음 세션에서 이 섹션부터 시작하세요.**
 
-1. **1-E 진행 추적 시스템**: progress.ts + migrate.ts + ProgressContext + 배지 + 스트릭
-2. **1-G 테스트 인프라**: Vitest 설치 + progress.ts/books.ts/useContent 유닛 테스트
-3. **배포 확인**: `npm run deploy`로 GitHub Pages 배포 후 라이브 사이트 동작 확인
-4. **worklog 업데이트**: 완료 항목 체크, Phase 1 완료 시 Phase 2로 전환
+1. **1-G 테스트 인프라**: Vitest 설치 + progress.ts/books.ts/useContent 유닛 테스트
+2. **배포 확인**: `npm run deploy`로 GitHub Pages 배포 후 라이브 사이트 동작 확인
+3. **Phase 1 완료 시 Phase 2로 전환**: NPC + 퀘스트 시스템
 
 ---
 

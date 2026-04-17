@@ -4,7 +4,9 @@ import MarkdownRenderer from '../components/MarkdownRenderer';
 import { TableOfContents } from '../components/TableOfContents';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { useContent } from '../hooks/useContent';
+import { useReadingTracker } from '../hooks/useReadingTracker';
 import { routes } from '../routes';
+import { BOOKS } from '../data/books';
 
 export default function BookPage() {
   const location = useLocation();
@@ -14,6 +16,10 @@ export default function BookPage() {
   const currentRoute = routes.find(r => r.path === location.pathname);
   const slug = currentRoute?.slug || location.pathname.replace(/^\//, '');
   const { content, loading, error } = useContent(slug);
+
+  // Find the book ID for reading tracker
+  const book = BOOKS.find(b => b.slug === slug);
+  useReadingTracker(book?.id, content);
 
   const shelfBooks = useMemo(() => {
     if (!currentRoute?.shelf) return [];

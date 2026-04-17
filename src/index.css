@@ -2458,3 +2458,201 @@ body::after {
   color: var(--text-muted);
   flex-shrink: 0;
 }
+
+/* ══════════════════════════════════════════
+   PROGRESS INDICATOR
+   ══════════════════════════════════════════ */
+.progress-indicator {
+  position: relative;
+}
+
+.progress-indicator-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: border-color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+
+.progress-indicator-btn:hover {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.progress-indicator-books {
+  font-variant-numeric: tabular-nums;
+}
+
+.progress-indicator-streak {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Panel overlay */
+.progress-panel-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+}
+
+/* Panel dropdown */
+.progress-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 320px;
+  max-height: 480px;
+  overflow-y: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 20px;
+  z-index: 100;
+  animation: fadeInUp 0.25s var(--easing);
+}
+
+.progress-panel-title {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin: 0 0 16px;
+}
+
+.progress-panel-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 16px 0 10px;
+}
+
+/* Progress bar */
+.progress-bar-container {
+  position: relative;
+  height: 24px;
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+  border-radius: 12px;
+  transition: width 0.5s var(--easing);
+  min-width: 2px;
+}
+
+.progress-bar-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  mix-blend-mode: difference;
+  filter: invert(1);
+}
+
+/* Stats grid */
+.progress-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.progress-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 10px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+}
+
+.progress-stat-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.progress-stat-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Badges grid */
+.progress-badges {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 8px;
+}
+
+.progress-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 4px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.progress-badge.earned {
+  background: var(--accent-bg);
+}
+
+.progress-badge.locked {
+  opacity: 0.35;
+}
+
+.progress-badge-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-badge-icon svg {
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated;
+}
+
+.progress-badge.locked .progress-badge-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+.progress-badge-name {
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .progress-indicator-btn {
+    padding: 4px 6px;
+    font-size: 0.75rem;
+    gap: 4px;
+  }
+  .progress-panel {
+    width: calc(100vw - 32px);
+    right: -60px;
+  }
+}
