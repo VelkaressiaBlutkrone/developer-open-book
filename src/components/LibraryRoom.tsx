@@ -180,7 +180,7 @@ export function LibraryRoom() {
 
       {/* ── Wall decorations ── */}
       <img src={B + 'wallmap.png'} alt="도서관 지도" className="lr-sprite lr-wallmap-clickable" width={64} height={64}
-        style={{ top: '0.5%', left: '50%', marginLeft: -32, zIndex: 7, cursor: 'pointer', pointerEvents: 'auto' }}
+        style={{ top: '1%', left: '8%', zIndex: 7, cursor: 'pointer', pointerEvents: 'auto' }}
         onClick={() => setShowWorldMap(true)} title="도서관 지도 열기" />
       <img src={B + 'lamp.png'} alt="" className="lr-sprite" width={80} height={120}
         style={{ top: '0%', left: '33%', zIndex: 6 }} />
@@ -197,14 +197,14 @@ export function LibraryRoom() {
 
       {/* ── Central table — librarian ── */}
       <img src={B + 'table.png'} alt="" className="lr-sprite" width={160} height={120}
-        style={{ top: '36%', left: '50%', marginLeft: -80 }} />
+        style={{ top: '36%', left: '42%' }} />
       <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={48} height={48}
-        style={{ top: '30%', left: '50%', marginLeft: -24, zIndex: 4 }} />
-      <div className="lr-glow" style={{ top: '28%', left: '46%', width: '8%', height: '8%' }} />
+        style={{ top: '30%', left: '46%', zIndex: 4 }} />
+      <div className="lr-glow" style={{ top: '28%', left: '44%', width: '8%', height: '8%' }} />
       <img src={B + 'chairs/south.png'} alt="" className="lr-sprite" width={96} height={96}
-        style={{ top: '52%', left: '50%', marginLeft: -116 }} />
+        style={{ top: '52%', left: '38%' }} />
       <img src={B + 'chairs/south.png'} alt="" className="lr-sprite" width={96} height={96}
-        style={{ top: '52%', left: '50%', marginLeft: 20 }} />
+        style={{ top: '52%', left: '52%' }} />
       {/* Librarian NPC — rendered from data */}
       {(() => {
         const npc = roomNPCs.find(n => n.id === 'librarian');
@@ -231,7 +231,7 @@ export function LibraryRoom() {
 
       {/* ── Left nook — scholar sitting at table ── */}
       <img src={B + 'chairs/east.png'} alt="" className="lr-sprite" width={72} height={72}
-        style={{ top: '62%', left: '26%', marginLeft: -80 }} />
+        style={{ top: '62%', left: '14%' }} />
       {(() => {
         const npc = roomNPCs.find(n => n.id === 'scholar');
         if (!npc) return null;
@@ -255,20 +255,20 @@ export function LibraryRoom() {
           </div>
         );
       })()}
-      <img src={B + 'table.png'} alt="" className="lr-sprite" width={128} height={96}
-        style={{ top: '58%', left: '26%', marginLeft: -44 }} />
-      <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={40} height={40}
-        style={{ top: '54%', left: '27%', zIndex: 4 }} />
-      <div className="lr-glow" style={{ top: '52%', left: '23%', width: '8%', height: '6%' }} />
+      <img src={B + 'table.png'} alt="" className="lr-sprite" width={100} height={75}
+        style={{ top: '60%', left: '20%' }} />
+      <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={36} height={36}
+        style={{ top: '56%', left: '24%', zIndex: 4 }} />
+      <div className="lr-glow" style={{ top: '54%', left: '22%', width: '6%', height: '6%' }} />
 
       {/* ── Right nook — visitor sitting at table ── */}
-      <img src={B + 'table.png'} alt="" className="lr-sprite" width={128} height={96}
-        style={{ top: '58%', right: '26%', marginRight: -44 }} />
-      <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={40} height={40}
-        style={{ top: '54%', right: '27%', zIndex: 4 }} />
-      <div className="lr-glow" style={{ top: '52%', right: '23%', width: '8%', height: '6%' }} />
+      <img src={B + 'table.png'} alt="" className="lr-sprite" width={100} height={75}
+        style={{ top: '60%', right: '20%' }} />
+      <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={36} height={36}
+        style={{ top: '56%', right: '24%', zIndex: 4 }} />
+      <div className="lr-glow" style={{ top: '54%', right: '22%', width: '6%', height: '6%' }} />
       <img src={B + 'chairs/west.png'} alt="" className="lr-sprite" width={72} height={72}
-        style={{ top: '62%', right: '26%', marginRight: -80 }} />
+        style={{ top: '62%', right: '14%' }} />
       {(() => {
         const npc = roomNPCs.find(n => n.id === 'visitor');
         if (!npc) return null;
@@ -292,12 +292,6 @@ export function LibraryRoom() {
           </div>
         );
       })()}
-
-      {/* ── Researcher reading nook ── */}
-      <img src={B + 'table.png'} alt="" className="lr-sprite" width={100} height={75}
-        style={{ top: '48%', right: '14%' }} />
-      <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={32} height={32}
-        style={{ top: '44%', right: '16%', zIndex: 4 }} />
 
       {/* ── Researcher NPC ── */}
       {(() => {
@@ -342,12 +336,12 @@ export function LibraryRoom() {
 
       {/* ── Bottom center decoration ── */}
       <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={48} height={48}
-        style={{ bottom: '8%', left: '50%', marginLeft: -24, zIndex: 6 }} />
+        style={{ bottom: '8%', left: '48%', zIndex: 6 }} />
       <div className="lr-glow" style={{ bottom: '6%', left: '47%', width: '6%', height: '6%' }} />
       <img src={B + 'plant.png'} alt="" className="lr-sprite" width={60} height={60}
-        style={{ bottom: '7%', left: '50%', marginLeft: -120, zIndex: 4 }} />
+        style={{ bottom: '7%', left: '38%', zIndex: 4 }} />
       <img src={B + 'plant.png'} alt="" className="lr-sprite" width={60} height={60}
-        style={{ bottom: '7%', left: '50%', marginLeft: 60, zIndex: 4 }} />
+        style={{ bottom: '7%', left: '56%', zIndex: 4 }} />
 
       {/* ── Lower side candles ── */}
       <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={50} height={50}

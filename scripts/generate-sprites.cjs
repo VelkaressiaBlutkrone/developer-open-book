@@ -417,7 +417,7 @@ function drawBookshelf() {
     let colorIdx = row.y; // different starting color per row
     while (x < W - 5) {
       const bookW = 3 + Math.floor(Math.random() * 4); // 3-6px wide
-      const bookH = row.h - 2 - Math.floor(Math.random() * 3); // slight height variation
+      const bookH = row.h - 2; // fixed height per row — uniform look
       const color = BOOK_COLORS[(colorIdx++) % BOOK_COLORS.length];
       const yOff = row.y + (row.h - bookH); // align to bottom of row
 

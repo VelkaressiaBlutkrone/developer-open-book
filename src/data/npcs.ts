@@ -66,7 +66,7 @@ export const NPCS: NPC[] = [
     name: '사서',
     role: 'librarian',
     room: 'main',
-    position: { top: '26%', left: '50%', marginLeft: 40 },
+    position: { top: '28%', left: '54%' },
     sprite: {
       south: S + 'librarian/rotations/south.png',
       north: S + 'librarian/rotations/north.png',
@@ -76,9 +76,9 @@ export const NPCS: NPC[] = [
     defaultDirection: 'south',
     dialogueTree: librarianDialogue,
     schedule: [
-      { period: 'morning', position: { top: '26%', left: '50%', marginLeft: 40 }, direction: 'south' },
-      { period: 'afternoon', position: { top: '26%', right: '14%' }, direction: 'west' },
-      { period: 'night', position: { top: '40%', left: '50%', marginLeft: -60 }, direction: 'south' },
+      { period: 'morning', position: { top: '28%', left: '54%' }, direction: 'south' },
+      { period: 'afternoon', position: { top: '28%', right: '14%' }, direction: 'west' },
+      { period: 'night', position: { top: '40%', left: '44%' }, direction: 'south' },
     ],
   },
   {
@@ -86,7 +86,7 @@ export const NPCS: NPC[] = [
     name: 'Dart 학자',
     role: 'scholar',
     room: 'main',
-    position: { top: '56%', left: '26%', marginLeft: -85 },
+    position: { top: '56%', left: '18%' },
     sprite: {
       south: S + 'scholar/rotations/south.png',
       north: S + 'scholar/rotations/north.png',
@@ -97,8 +97,8 @@ export const NPCS: NPC[] = [
     dialogueTree: scholarDialogue,
     schedule: [
       { period: 'morning', position: { top: '26%', left: '12%' }, direction: 'east' },
-      { period: 'afternoon', position: { top: '56%', left: '26%', marginLeft: -85 }, direction: 'east' },
-      { period: 'night', absent: true, position: { top: '56%', left: '26%', marginLeft: -85 }, direction: 'east' },
+      { period: 'afternoon', position: { top: '56%', left: '18%' }, direction: 'east' },
+      { period: 'night', absent: true, position: { top: '56%', left: '18%' }, direction: 'east' },
     ],
   },
   {
@@ -106,7 +106,7 @@ export const NPCS: NPC[] = [
     name: 'Flutter 방문자',
     role: 'visitor',
     room: 'main',
-    position: { top: '56%', right: '26%', marginRight: -85 },
+    position: { top: '56%', right: '18%' },
     sprite: {
       south: S + 'visitor/rotations/south.png',
       north: S + 'visitor/rotations/north.png',
@@ -116,9 +116,9 @@ export const NPCS: NPC[] = [
     defaultDirection: 'west',
     dialogueTree: visitorDialogue,
     schedule: [
-      { period: 'morning', position: { top: '40%', left: '50%', marginLeft: -100 }, direction: 'south' },
-      { period: 'afternoon', position: { top: '56%', right: '26%', marginRight: -85 }, direction: 'west' },
-      { period: 'night', position: { top: '56%', right: '26%', marginRight: -85 }, direction: 'west' },
+      { period: 'morning', position: { top: '40%', left: '40%' }, direction: 'south' },
+      { period: 'afternoon', position: { top: '56%', right: '18%' }, direction: 'west' },
+      { period: 'night', position: { top: '56%', right: '18%' }, direction: 'west' },
     ],
   },
   {

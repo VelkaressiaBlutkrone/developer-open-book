@@ -1474,8 +1474,7 @@ html {
 
 .lr-wallmap {
   top: 1%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 8%;
   width: 7vmin;
   height: 7vmin;
   z-index: 4;
