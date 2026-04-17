@@ -3,11 +3,12 @@ import { useProgress } from '../store/ProgressContext'
 import { getCompletedCount, getTotalBooks, getCompletionPercent } from '../store/progress'
 import { BADGES, getBadgeById } from '../store/badges'
 import { QUESTS, getAvailableQuests, checkRequirements } from '../data/quests'
+import { APIKeySettings } from './APIKeySettings'
 
 export function ProgressIndicator() {
   const { state } = useProgress()
   const [showPanel, setShowPanel] = useState(false)
-  const [tab, setTab] = useState<'stats' | 'quests'>('stats')
+  const [tab, setTab] = useState<'stats' | 'quests' | 'settings'>('stats')
 
   const completed = getCompletedCount(state)
   const total = getTotalBooks()
@@ -73,6 +74,12 @@ export function ProgressIndicator() {
                 onClick={() => setTab('quests')}
               >
                 📜 퀘스트 {activeCount > 0 && `(${activeCount})`}
+              </button>
+              <button
+                className={`progress-tab ${tab === 'settings' ? 'active' : ''}`}
+                onClick={() => setTab('settings')}
+              >
+                ⚙️ 설정
               </button>
             </div>
 
@@ -190,6 +197,8 @@ export function ProgressIndicator() {
                 )}
               </div>
             )}
+
+            {tab === 'settings' && <APIKeySettings />}
           </div>
         </>
       )}

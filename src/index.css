@@ -3071,3 +3071,35 @@ body::after {
     right: -60px;
   }
 }
+
+/* API Key Settings */
+.api-settings { padding-top: 4px; }
+.api-settings-field { margin-bottom: 12px; }
+.api-settings-label {
+  display: block; font-size: 0.75rem; color: var(--text-muted);
+  margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.05em;
+}
+.api-settings-row { display: flex; gap: 6px; }
+.api-settings-input {
+  flex: 1; padding: 6px 10px; border: 1px solid var(--border);
+  border-radius: var(--radius-sm); background: var(--bg-secondary);
+  color: var(--text-primary); font-size: 0.8rem; font-family: monospace;
+}
+.api-settings-input:focus { border-color: var(--accent); outline: none; }
+.api-settings-delete {
+  background: none; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 4px 8px; cursor: pointer; font-size: 0.9rem;
+}
+.api-settings-models { display: flex; flex-direction: column; gap: 6px; }
+.api-settings-model {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 0.8rem; color: var(--text-secondary); cursor: pointer;
+}
+.api-settings-model input { accent-color: var(--accent); }
+.api-settings-save {
+  width: 100%; padding: 6px; border: 1px solid var(--accent);
+  background: var(--accent-bg); color: var(--accent);
+  border-radius: var(--radius-sm); cursor: pointer; font-size: 0.8rem;
+  transition: background 0.2s;
+}
+.api-settings-save:hover { background: rgba(184,134,11,0.15); }
