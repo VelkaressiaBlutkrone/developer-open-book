@@ -130,6 +130,7 @@ Lane E: 1-D (dead code 정리) — A, B 완료 후
 | 2026-04-17 | 1-G 테스트 인프라 (Vitest + 41개 유닛 테스트) | `12986a1` |
 | 2026-04-17 | Phase 2 NPC + 퀘스트 시스템 (NPC 4명, 퀘스트 17개, 월드맵, 말풍선) | `cf2e2c7`~`977e8d0` |
 | 2026-04-17 | Phase 3 애니메이션 + 사운드 (먼지 파티클, 8bit 효과음, NPC 시간대 이동) | `1ce37ec` |
+| 2026-04-17 | Phase 4 AI 튜터 NPC (BYOK Claude API, AIChat 오버레이, NPC 모드 전환) | `2bc3018` |
 
 ---
 
@@ -138,7 +139,7 @@ Lane E: 1-D (dead code 정리) — A, B 완료 후
 > **다음 세션에서 이 섹션부터 시작하세요.**
 
 1. **배포 확인**: `npm run deploy`로 GitHub Pages 배포 후 라이브 사이트 동작 확인
-2. **Phase 4 시작**: AI 튜터 NPC
+2. **v2 전체 로드맵 완료** — Phase 1~4 모두 구현됨
 
 ---
 
