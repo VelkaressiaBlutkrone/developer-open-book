@@ -179,8 +179,8 @@ export function LibraryRoom() {
       <div className="lr-carpet" />
 
       {/* ── Wall decorations ── */}
-      <img src={B + 'wallmap.png'} alt="도서관 지도" className="lr-sprite lr-wallmap-clickable" width={72} height={72}
-        style={{ top: '0.5%', left: '50%', marginLeft: -36, zIndex: 7, cursor: 'pointer', pointerEvents: 'auto' }}
+      <img src={B + 'wallmap.png'} alt="도서관 지도" className="lr-sprite lr-wallmap-clickable" width={64} height={64}
+        style={{ top: '0.5%', left: '50%', marginLeft: -32, zIndex: 7, cursor: 'pointer', pointerEvents: 'auto' }}
         onClick={() => setShowWorldMap(true)} title="도서관 지도 열기" />
       <img src={B + 'lamp.png'} alt="" className="lr-sprite" width={80} height={120}
         style={{ top: '0%', left: '33%', zIndex: 6 }} />
@@ -201,10 +201,10 @@ export function LibraryRoom() {
       <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={48} height={48}
         style={{ top: '30%', left: '50%', marginLeft: -24, zIndex: 4 }} />
       <div className="lr-glow" style={{ top: '28%', left: '46%', width: '8%', height: '8%' }} />
-      <img src={B + 'chairs/south.png'} alt="" className="lr-sprite" width={88} height={88}
-        style={{ top: '53%', left: '50%', marginLeft: -108 }} />
-      <img src={B + 'chairs/south.png'} alt="" className="lr-sprite" width={88} height={88}
-        style={{ top: '53%', left: '50%', marginLeft: 20 }} />
+      <img src={B + 'chairs/south.png'} alt="" className="lr-sprite" width={96} height={96}
+        style={{ top: '52%', left: '50%', marginLeft: -116 }} />
+      <img src={B + 'chairs/south.png'} alt="" className="lr-sprite" width={96} height={96}
+        style={{ top: '52%', left: '50%', marginLeft: 20 }} />
       {/* Librarian NPC — rendered from data */}
       {(() => {
         const npc = roomNPCs.find(n => n.id === 'librarian');
@@ -293,7 +293,13 @@ export function LibraryRoom() {
         );
       })()}
 
-      {/* ── Researcher NPC — near React shelf ── */}
+      {/* ── Researcher reading nook ── */}
+      <img src={B + 'table.png'} alt="" className="lr-sprite" width={100} height={75}
+        style={{ top: '48%', right: '14%' }} />
+      <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={32} height={32}
+        style={{ top: '44%', right: '16%', zIndex: 4 }} />
+
+      {/* ── Researcher NPC ── */}
       {(() => {
         const npc = roomNPCs.find(n => n.id === 'researcher');
         if (!npc) return null;

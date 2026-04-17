@@ -86,7 +86,7 @@ export const NPCS: NPC[] = [
     name: 'Dart 학자',
     role: 'scholar',
     room: 'main',
-    position: { top: '56%', left: '26%', marginLeft: -110 },
+    position: { top: '56%', left: '26%', marginLeft: -85 },
     sprite: {
       south: S + 'scholar/rotations/south.png',
       north: S + 'scholar/rotations/north.png',
@@ -97,8 +97,8 @@ export const NPCS: NPC[] = [
     dialogueTree: scholarDialogue,
     schedule: [
       { period: 'morning', position: { top: '26%', left: '12%' }, direction: 'east' },
-      { period: 'afternoon', position: { top: '56%', left: '26%', marginLeft: -110 }, direction: 'east' },
-      { period: 'night', absent: true, position: { top: '56%', left: '26%', marginLeft: -110 }, direction: 'east' },
+      { period: 'afternoon', position: { top: '56%', left: '26%', marginLeft: -85 }, direction: 'east' },
+      { period: 'night', absent: true, position: { top: '56%', left: '26%', marginLeft: -85 }, direction: 'east' },
     ],
   },
   {
@@ -106,7 +106,7 @@ export const NPCS: NPC[] = [
     name: 'Flutter 방문자',
     role: 'visitor',
     room: 'main',
-    position: { top: '56%', right: '26%', marginRight: -110 },
+    position: { top: '56%', right: '26%', marginRight: -85 },
     sprite: {
       south: S + 'visitor/rotations/south.png',
       north: S + 'visitor/rotations/north.png',
@@ -117,8 +117,8 @@ export const NPCS: NPC[] = [
     dialogueTree: visitorDialogue,
     schedule: [
       { period: 'morning', position: { top: '40%', left: '50%', marginLeft: -100 }, direction: 'south' },
-      { period: 'afternoon', position: { top: '56%', right: '26%', marginRight: -110 }, direction: 'west' },
-      { period: 'night', position: { top: '56%', right: '26%', marginRight: -110 }, direction: 'west' },
+      { period: 'afternoon', position: { top: '56%', right: '26%', marginRight: -85 }, direction: 'west' },
+      { period: 'night', position: { top: '56%', right: '26%', marginRight: -85 }, direction: 'west' },
     ],
   },
   {
@@ -126,7 +126,7 @@ export const NPCS: NPC[] = [
     name: 'React 연구원',
     role: 'researcher',
     room: 'main',
-    position: { top: '36%', right: '18%' },
+    position: { top: '46%', right: '15%' },
     sprite: {
       south: S + 'researcher/rotations/south.png',
       north: S + 'researcher/rotations/north.png',

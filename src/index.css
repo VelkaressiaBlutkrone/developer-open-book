@@ -1235,7 +1235,7 @@ html {
 /* Floor — fills entire viewport */
 .lr-floor {
   position: absolute;
-  inset: 7vmin 7vmin 5vmin 7vmin;
+  inset: 6vmin 6vmin 5vmin 6vmin;
   background: url('/developer-open-book/sprites/tile-floor.png') repeat;
   background-size: 64px 64px;
   image-rendering: pixelated;
@@ -1249,18 +1249,18 @@ html {
   image-rendering: pixelated;
   z-index: 1;
 }
-.lr-wall-t { top: 0; left: 0; right: 0; height: 7vmin; }
+.lr-wall-t { top: 0; left: 0; right: 0; height: 6vmin; }
 .lr-wall-b { bottom: 0; left: 0; right: 0; height: 5vmin; }
-/* Side walls: use a darker gradient overlay to differentiate from top/bottom */
+/* Side walls */
 .lr-wall-l {
-  top: 0; bottom: 0; left: 0; width: 7vmin;
+  top: 0; bottom: 0; left: 0; width: 6vmin;
   background:
     linear-gradient(180deg, rgba(0,0,0,0.15) 0%, transparent 50%, rgba(0,0,0,0.15) 100%),
     url('/developer-open-book/sprites/tile-wall.png') repeat;
   background-size: auto, 64px 64px;
 }
 .lr-wall-r {
-  top: 0; bottom: 0; right: 0; width: 7vmin;
+  top: 0; bottom: 0; right: 0; width: 6vmin;
   background:
     linear-gradient(180deg, rgba(0,0,0,0.15) 0%, transparent 50%, rgba(0,0,0,0.15) 100%),
     url('/developer-open-book/sprites/tile-wall.png') repeat;
@@ -1276,13 +1276,13 @@ html {
   align-items: center;
 }
 
-/* Top row — lowered to avoid wallmap overlap */
-.lr-shelf-top-left   { top: 9vmin; left: 10%;  width: 22%; }
-.lr-shelf-top-center { top: 9vmin; left: 39%; width: 22%; }
-.lr-shelf-top-right  { top: 9vmin; right: 10%; width: 22%; }
-/* Bottom row — raised slightly from wall */
-.lr-shelf-bot-left   { bottom: 6vmin; left: 15%; width: 22%; flex-direction: column-reverse; }
-.lr-shelf-bot-right  { bottom: 6vmin; right: 15%; width: 22%; flex-direction: column-reverse; }
+/* Top row */
+.lr-shelf-top-left   { top: 8vmin; left: 8%;  width: 20%; }
+.lr-shelf-top-center { top: 8vmin; left: 40%; width: 20%; }
+.lr-shelf-top-right  { top: 8vmin; right: 8%; width: 20%; }
+/* Bottom row */
+.lr-shelf-bot-left   { bottom: 7vmin; left: 14%; width: 20%; flex-direction: column-reverse; }
+.lr-shelf-bot-right  { bottom: 7vmin; right: 14%; width: 20%; flex-direction: column-reverse; }
 /* Side walls */
 .lr-shelf-left  { top: 28%; left: 5vmin; width: 8%; }
 .lr-shelf-right { top: 28%; right: 5vmin; width: 8%; }
@@ -1570,7 +1570,7 @@ html {
 /* ── Title ── */
 .lr-title {
   position: absolute;
-  top: 16px;
+  top: 4px;
   left: 0; right: 0;
   text-align: center;
   z-index: 20;
