@@ -128,6 +128,7 @@ Lane E: 1-D (dead code 정리) — A, B 완료 후
 | 2026-04-17 | 1-E 진행 추적 시스템 (progress store, 배지 13개, ProgressIndicator) | `3ea6333` |
 | 2026-04-17 | pixellab.ai 스프라이트 에셋 이관 + 메인 화면 배치 개선 | `1a4ea74`~`deb0769` |
 | 2026-04-17 | 1-G 테스트 인프라 (Vitest + 41개 유닛 테스트) | `12986a1` |
+| 2026-04-17 | Phase 2 NPC + 퀘스트 시스템 (NPC 4명, 퀘스트 17개, 월드맵, 말풍선) | `cf2e2c7`~`977e8d0` |
 
 ---
 
@@ -136,7 +137,7 @@ Lane E: 1-D (dead code 정리) — A, B 완료 후
 > **다음 세션에서 이 섹션부터 시작하세요.**
 
 1. **배포 확인**: `npm run deploy`로 GitHub Pages 배포 후 라이브 사이트 동작 확인
-2. **Phase 2 시작**: NPC + 퀘스트 시스템
+2. **Phase 3 시작**: 애니메이션 + 사운드
 
 ---
 
