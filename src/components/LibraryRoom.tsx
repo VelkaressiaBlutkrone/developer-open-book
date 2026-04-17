@@ -2,8 +2,13 @@ import { useState, useCallback } from 'react';
 import { type RouteConfig, routes } from '../routes';
 import { BookReader } from './BookReader';
 import { ProgressIndicator } from './ProgressIndicator';
+import { SpeechBubble } from './SpeechBubble';
+import { NPCMarker } from './NPCMarker';
 import { SPINE_COLORS, seedFromId } from '../data/books';
 import { SHELVES as SHELF_REGISTRY } from '../data/shelves';
+import { getNPCsByRoom, findDialogueNode, getNPCMarkerType, type NPC, type DialogueNode } from '../data/npcs';
+import { getQuestById } from '../data/quests';
+import { useProgress } from '../store/ProgressContext';
 
 const B = import.meta.env.BASE_URL + 'sprites/';
 
@@ -52,10 +57,61 @@ function chunkArray<T>(arr: T[], size: number): T[][] {
 export function LibraryRoom() {
   const [openShelf, setOpenShelf] = useState<ShelfDef | null>(null);
   const [readingBook, setReadingBook] = useState<RouteConfig | null>(null);
+  const [activeNPC, setActiveNPC] = useState<NPC | null>(null);
+  const [dialogueNode, setDialogueNode] = useState<DialogueNode | null>(null);
+
+  const { state, activateQuest, completeQuest, unlockRoom, setTitle } = useProgress();
+  const roomNPCs = getNPCsByRoom('main');
 
   const handleBookClick = useCallback((route: RouteConfig) => {
     setOpenShelf(null);
     setReadingBook(route);
+  }, []);
+
+  const handleNPCClick = useCallback((npc: NPC) => {
+    const node = findDialogueNode(npc, state);
+    if (node) {
+      setActiveNPC(npc);
+      setDialogueNode(node);
+    }
+  }, [state]);
+
+  const handleDialogueSelect = useCallback((nextId: string) => {
+    if (!activeNPC) return;
+    const node = activeNPC.dialogueTree.find(n => n.id === nextId);
+    if (node) {
+      // Execute action if present
+      if (node.action) {
+        switch (node.action.type) {
+          case 'give_quest':
+            activateQuest(node.action.payload);
+            break;
+          case 'complete_quest': {
+            completeQuest(node.action.payload);
+            const quest = getQuestById(node.action.payload);
+            if (quest) {
+              for (const reward of quest.rewards) {
+                if (reward.type === 'unlock_room') unlockRoom(reward.value);
+                if (reward.type === 'title') setTitle(reward.value);
+              }
+            }
+            break;
+          }
+          case 'unlock_room':
+            unlockRoom(node.action.payload);
+            break;
+          case 'give_title':
+            setTitle(node.action.payload);
+            break;
+        }
+      }
+      setDialogueNode(node);
+    }
+  }, [activeNPC, activateQuest, completeQuest, unlockRoom, setTitle]);
+
+  const closeDialogue = useCallback(() => {
+    setActiveNPC(null);
+    setDialogueNode(null);
   }, []);
 
   return (
@@ -124,16 +180,44 @@ export function LibraryRoom() {
         style={{ top: '54%', left: '50%', marginLeft: -100 }} />
       <img src={B + 'chairs/south.png'} alt="" className="lr-sprite" width={80} height={80}
         style={{ top: '54%', left: '50%', marginLeft: 20 }} />
-      <img src={B + 'librarian/rotations/south.png'} alt="Librarian" className="lr-npc"
-        width={110} height={110}
-        style={{ top: '26%', left: '50%', marginLeft: 40 }} />
+      {/* Librarian NPC — rendered from data */}
+      {(() => {
+        const npc = roomNPCs.find(n => n.id === 'librarian');
+        if (!npc) return null;
+        const marker = getNPCMarkerType(npc, state);
+        return (
+          <div className="lr-npc-wrap" style={{ position: 'absolute', ...npc.position, zIndex: 6 }}>
+            <NPCMarker type={marker} />
+            <img src={B + npc.sprite[npc.defaultDirection]} alt={npc.name} className="lr-npc lr-npc-clickable"
+              width={110} height={110} onClick={() => handleNPCClick(npc)} />
+            {activeNPC?.id === 'librarian' && dialogueNode && (
+              <SpeechBubble text={dialogueNode.text} options={dialogueNode.options}
+                onSelect={handleDialogueSelect} onClose={closeDialogue} />
+            )}
+          </div>
+        );
+      })()}
 
       {/* ── Left nook — scholar sitting at table ── */}
       <img src={B + 'chairs/east.png'} alt="" className="lr-sprite" width={72} height={72}
         style={{ top: '62%', left: '26%', marginLeft: -80 }} />
-      <img src={B + 'scholar/rotations/east.png'} alt="Scholar" className="lr-npc"
-        width={96} height={96}
-        style={{ top: '56%', left: '26%', marginLeft: -110, animationDelay: '-1.2s' }} />
+      {(() => {
+        const npc = roomNPCs.find(n => n.id === 'scholar');
+        if (!npc) return null;
+        const marker = getNPCMarkerType(npc, state);
+        return (
+          <div className="lr-npc-wrap" style={{ position: 'absolute', ...npc.position, zIndex: 6 }}>
+            <NPCMarker type={marker} />
+            <img src={B + npc.sprite[npc.defaultDirection]} alt={npc.name} className="lr-npc lr-npc-clickable"
+              width={96} height={96} style={{ animationDelay: '-1.2s' }}
+              onClick={() => handleNPCClick(npc)} />
+            {activeNPC?.id === 'scholar' && dialogueNode && (
+              <SpeechBubble text={dialogueNode.text} options={dialogueNode.options}
+                onSelect={handleDialogueSelect} onClose={closeDialogue} />
+            )}
+          </div>
+        );
+      })()}
       <img src={B + 'table.png'} alt="" className="lr-sprite" width={128} height={96}
         style={{ top: '58%', left: '26%', marginLeft: -44 }} />
       <img src={B + 'candle.png'} alt="" className="lr-sprite pixel-candle" width={40} height={40}
@@ -148,9 +232,42 @@ export function LibraryRoom() {
       <div className="lr-glow" style={{ top: '52%', right: '23%', width: '8%', height: '6%' }} />
       <img src={B + 'chairs/west.png'} alt="" className="lr-sprite" width={72} height={72}
         style={{ top: '62%', right: '26%', marginRight: -80 }} />
-      <img src={B + 'visitor/rotations/west.png'} alt="Visitor" className="lr-npc"
-        width={96} height={96}
-        style={{ top: '56%', right: '26%', marginRight: -110, animationDelay: '-2.5s' }} />
+      {(() => {
+        const npc = roomNPCs.find(n => n.id === 'visitor');
+        if (!npc) return null;
+        const marker = getNPCMarkerType(npc, state);
+        return (
+          <div className="lr-npc-wrap" style={{ position: 'absolute', ...npc.position, zIndex: 6 }}>
+            <NPCMarker type={marker} />
+            <img src={B + npc.sprite[npc.defaultDirection]} alt={npc.name} className="lr-npc lr-npc-clickable"
+              width={96} height={96} style={{ animationDelay: '-2.5s' }}
+              onClick={() => handleNPCClick(npc)} />
+            {activeNPC?.id === 'visitor' && dialogueNode && (
+              <SpeechBubble text={dialogueNode.text} options={dialogueNode.options}
+                onSelect={handleDialogueSelect} onClose={closeDialogue} />
+            )}
+          </div>
+        );
+      })()}
+
+      {/* ── Researcher NPC — near React shelf ── */}
+      {(() => {
+        const npc = roomNPCs.find(n => n.id === 'researcher');
+        if (!npc) return null;
+        const marker = getNPCMarkerType(npc, state);
+        return (
+          <div className="lr-npc-wrap" style={{ position: 'absolute', ...npc.position, zIndex: 6 }}>
+            <NPCMarker type={marker} />
+            <img src={B + npc.sprite[npc.defaultDirection]} alt={npc.name} className="lr-npc lr-npc-clickable"
+              width={96} height={96} style={{ animationDelay: '-0.8s' }}
+              onClick={() => handleNPCClick(npc)} />
+            {activeNPC?.id === 'researcher' && dialogueNode && (
+              <SpeechBubble text={dialogueNode.text} options={dialogueNode.options}
+                onSelect={handleDialogueSelect} onClose={closeDialogue} />
+            )}
+          </div>
+        );
+      })()}
 
       {/* ── Corner plants ── */}
       <img src={B + 'plant.png'} alt="" className="lr-sprite" width={72} height={72}

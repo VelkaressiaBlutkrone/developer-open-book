@@ -1463,13 +1463,22 @@ body::after {
   z-index: 4;
 }
 
+/* ── NPC wrapper (for marker + bubble positioning) ── */
+.lr-npc-wrap {
+  pointer-events: auto;
+}
+
 /* ── NPCs ── */
 .lr-npc {
-  position: absolute;
   image-rendering: pixelated;
   pointer-events: none;
   z-index: 6;
   animation: npc-idle 3s ease-in-out infinite;
+}
+
+.lr-npc-clickable {
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 /* Empty shelf */
