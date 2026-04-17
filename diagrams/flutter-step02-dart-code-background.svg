@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="279" viewBox="50 -20 920 285">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="50" y="-20" width="920" height="285" rx="12" fill="#141414"/>
+  <text x="120" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">Flutter 코드 한 줄의 배경</text>
+  <rect x="80" y="60" width="600" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="380" y="89" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">final result = await fetchUser();</text>
+  <rect x="700" y="55" width="140" height="30" rx="4.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="770" y="73.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">async/await</text>
+  <rect x="700" y="90" width="220" height="30" rx="4.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="810" y="108.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Null Safety (non-nullable)</text>
+  <rect x="80" y="130" width="600" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="380" y="159" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">final (name, age) = result;</text>
+  <rect x="700" y="130" width="230" height="30" rx="4.5" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="815" y="148.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Records &amp; Patterns (3.3+)</text>
+  <rect x="80" y="200" width="860" height="35" rx="5.25" fill="#1a4d4d" stroke="#06b6d4" stroke-width="1" opacity="0.8"/>
+  <text x="510" y="221" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">이 세 줄을 이해하려면 Dart 핵심 개념 전부가 필요하다</text>
+</svg>

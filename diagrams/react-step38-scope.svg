@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="354" viewBox="20 -20 680 353.6">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="680" height="353.6" rx="12" fill="#141414"/>
+  <rect x="50" y="10" width="620" height="292" rx="43.8" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="360" y="161" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20">Step 38 — 코드 품질 자동화</text>
+  <rect x="60" y="50" width="600" height="152" rx="22.8" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="360" y="130" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">다루는 것</text>
+  <text x="80" y="94.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· ESLint 설정과 핵심 규칙</text>
+  <text x="80" y="116.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Prettier 설정과 ESLint 통합</text>
+  <text x="80" y="138.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Husky + lint-staged (Git Hook 자동화)</text>
+  <text x="80" y="160.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 코드 리뷰 체크리스트</text>
+  <text x="80" y="182.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Storybook 개요 (컴포넌트 문서화)</text>
+  <text x="80" y="204.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 코드 품질 자동화 파이프라인 전체 설계</text>
+  <rect x="60" y="208" width="600" height="86" rx="12.9" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="360" y="255" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">다루지 않는 것</text>
+  <text x="80" y="252.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Storybook 설정/플러그인 상세</text>
+  <text x="80" y="274.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· SonarQube 등 정적 분석 서버</text>
+  <text x="80" y="296.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 모노레포 린트 설정</text>
+</svg>

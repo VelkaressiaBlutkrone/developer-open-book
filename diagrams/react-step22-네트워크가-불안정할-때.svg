@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="576" viewBox="-10 -15 480 461">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="480" height="461" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">네트워크가 불안정할 때</text>
+  <rect x="20" y="50" width="420" height="366" rx="54.9" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">수동: 요청 실패 → 에러 표시 → 사용자가 &quot;다시 시도&quot; 클릭</text>
+  <text x="40" y="109.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">라이브러리: 실패 시 자동 재시도 (exponential backoff)</text>
+  <text x="40" y="135.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">1차 시도 실패 → 1초 후 재시도</text>
+  <text x="40" y="161.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">2차 시도 실패 → 2초 후 재시도</text>
+  <text x="40" y="187.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">3차 시도 실패 → 에러 표시</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">수동 구현 시:</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 재시도 횟수, 간격, 조건을 직접 관리</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 지수 백오프 로직 직접 구현</text>
+  <text x="40" y="291.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 재시도 중 취소/중단 처리</text>
+  <text x="40" y="317.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ 모든 패칭에 이 로직을 복사?</text>
+</svg>

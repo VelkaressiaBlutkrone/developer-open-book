@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="433" viewBox="20 -20 760 433">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="760" height="433" rx="12" fill="#141414"/>
+  <text x="50" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">CRUD ↔ HTTP 메서드 매핑</text>
+  <rect x="50" y="55" width="700" height="40" rx="6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="400" y="78.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">CRUD        HTTP 메서드    URL 예시                설명</text>
+  <rect x="50" y="105" width="700" height="38" rx="5.7" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="400" y="127.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Create     POST       /api/products          새 상품 생성</text>
+  <rect x="50" y="153" width="700" height="38" rx="5.7" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="400" y="175.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Read       GET        /api/products          전체 목록 조회</text>
+  <rect x="50" y="201" width="700" height="38" rx="5.7" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="400" y="223.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Read       GET        /api/products/42       단일 조회</text>
+  <rect x="50" y="249" width="700" height="38" rx="5.7" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="400" y="271.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Update     PUT        /api/products/42       전체 수정</text>
+  <rect x="50" y="297" width="700" height="38" rx="5.7" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="400" y="319.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Update     PATCH      /api/products/42       일부 수정</text>
+  <rect x="50" y="345" width="700" height="38" rx="5.7" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="400" y="367.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Delete     DELETE     /api/products/42       삭제</text>
+</svg>

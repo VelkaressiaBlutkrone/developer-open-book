@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="421" viewBox="-10 -20 397.5 279">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="397.5" height="279" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">상황  권장 패턴</text>
+  <rect x="20" y="45" width="337.5" height="184" rx="27.599999999999998" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="188.75" y="85.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">로딩/에러/빈 상태 분기  Guard Clause (조기 반환)</text>
+  <text x="188.75" y="104.10000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">A 또는 B (인라인, 단순)  삼항 연산자</text>
+  <text x="188.75" y="122.30000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">보이거나 / 안 보이거나  &amp;&amp; 연산자</text>
+  <text x="188.75" y="140.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">데이터 없을 때 기본값  || 또는 ??</text>
+  <text x="188.75" y="158.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">3개 이상 분기  변수 할당 (switch) 또는</text>
+  <text x="188.75" y="176.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">객체 매핑</text>
+  <text x="188.75" y="195.10000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">설정 기반 동적 렌더링  객체 매핑</text>
+</svg>

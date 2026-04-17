@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="468" viewBox="20 -10 680 468">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-10" width="680" height="468" rx="12" fill="#141414"/>
+  <text x="210" y="39.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">react-i18next 아키텍처</text>
+  <rect x="50" y="60" width="620" height="116" rx="17.4" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="360" y="122.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">i18n 설정 (i18n/config.ts)</text>
+  <text x="70" y="112.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· LanguageDetector → 브라우저 언어 자동 감지</text>
+  <text x="70" y="134.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· resources → 번역 파일 등록</text>
+  <text x="70" y="156.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· fallbackLng → 번역 없을 때 기본 언어</text>
+  <rect x="50" y="186" width="620" height="116" rx="17.4" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="360" y="248.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">번역 리소스 파일</text>
+  <text x="70" y="238.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· ko.json: &quot;저장&quot;</text>
+  <text x="70" y="260.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· en.json: &quot;Save&quot;</text>
+  <text x="70" y="282.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· ja.json: &quot;保存&quot;</text>
+  <rect x="50" y="312" width="620" height="116" rx="17.4" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="360" y="374.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">컴포넌트 (useTranslation)</text>
+  <text x="70" y="364.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· const { t, i18n } = useTranslation()</text>
+  <text x="70" y="386.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· t('common.save') → &quot;저장&quot; (현재 언어 기준)</text>
+  <text x="70" y="408.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· i18n.changeLanguage('en') → 전체 앱 언어 전환</text>
+</svg>

@@ -1,0 +1,14 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":120,"y":10,"text":"Flutter의 두 가지 Widget","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":340,"height":30,"opacity":100},
+    {"type":"rectangle","id":"sl","x":80,"y":60,"width":280,"height":170,"backgroundColor":"#1e3a5f","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"sl_l","x":90,"y":70,"width":260,"height":150,"text":"StatelessWidget\n─────────────────\n상태 없음\n한 번 그리면 끝\n단순·경량\n부모에게서 받은\n데이터만 표시","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"sl","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"sf","x":400,"y":60,"width":280,"height":170,"backgroundColor":"#2d1b69","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"sf_l","x":410,"y":70,"width":260,"height":150,"text":"StatefulWidget\n──────────────────────\n상태 있음 (State 객체 분리)\nsetState() 호출 시 rebuild\n생명주기 관리 필요\n자체적으로 변하는 데이터\n를 가질 수 있음","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"sf","textAlign":"center","verticalAlign":"middle","opacity":100}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="554" viewBox="-10 -20 445.00000000000006 411">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="445.00000000000006" height="411" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">React가 렌더링하지 않는 값 (화면에 아무것도 표시 안 됨)</text>
+  <rect x="20" y="45" width="312" height="316" rx="46.8" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="176" y="97.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">false</text>
+  <text x="176" y="115.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">null</text>
+  <text x="176" y="133.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">undefined</text>
+  <text x="176" y="151.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">true</text>
+  <text x="176" y="170.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 조건부 렌더링에서 &quot;아무것도 표시하지 않음&quot;에 활용</text>
+  <text x="176" y="188.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">React가 렌더링하는 값 (화면에 표시됨!)  ⚠️ 주의</text>
+  <text x="176" y="206.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">0  → 문자 &quot;0&quot;이 화면에 표시됨</text>
+  <text x="176" y="224.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">NaN  → 문자 &quot;NaN&quot;이 화면에 표시됨</text>
+  <text x="176" y="242.89999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">''  → 빈 문자열 (표시되지만 보이지 않음)</text>
+  <text x="176" y="261.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">'hello'  → &quot;hello&quot; 표시</text>
+  <text x="176" y="279.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">42  → &quot;42&quot; 표시</text>
+  <text x="176" y="297.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">&lt;p&gt;Hi&lt;/p&gt; → React Element로 렌더링</text>
+  <text x="176" y="315.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">[1, 2]  → &quot;12&quot; 표시 (배열 요소가 나열됨)</text>
+</svg>

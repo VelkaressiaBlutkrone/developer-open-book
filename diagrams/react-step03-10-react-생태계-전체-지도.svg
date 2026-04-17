@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="714" viewBox="-10 -20 567.5 675">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="567.5" height="675" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">React 생태계 전체 지도</text>
+  <rect x="20" y="45" width="507.5" height="580" rx="76.125" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="273.75" y="120.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">🏗️ 코어 (React Core)</text>
+  <text x="273.75" y="138.29999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">react · react-dom · JSX · Hooks · Reconciliation</text>
+  <text x="273.75" y="156.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">이 로드맵 Phase 1~2</text>
+  <text x="273.75" y="174.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">🧭 라우팅  📡 데이터  🧠 상태 관리</text>
+  <text x="273.75" y="192.89999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">React Router  TanStack  Context API</text>
+  <text x="273.75" y="211.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">TanStack  Query  Zustand</text>
+  <text x="273.75" y="229.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Router  SWR  Redux Toolkit</text>
+  <text x="273.75" y="247.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Axios  Jotai</text>
+  <text x="273.75" y="265.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Phase 3  Phase 3  Phase 4</text>
+  <text x="273.75" y="283.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">📝 폼  🎨 스타일링  📐 타입 시스템</text>
+  <text x="273.75" y="302.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">React Hook  Tailwind CSS  TypeScript</text>
+  <text x="273.75" y="320.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Form  CSS Modules  Zod</text>
+  <text x="273.75" y="338.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Zod  Styled-</text>
+  <text x="273.75" y="356.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Components  Phase 5</text>
+  <text x="273.75" y="374.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Phase 5  Phase 5</text>
+  <text x="273.75" y="393.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">🧪 테스트  🏭 빌드/배포  🌐 메타 프레임워크</text>
+  <text x="273.75" y="411.29999999999995" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Vitest  Vite  Next.js</text>
+  <text x="273.75" y="429.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">RTL  Vercel  Remix</text>
+  <text x="273.75" y="447.70000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Playwright  Docker  Gatsby</text>
+  <text x="273.75" y="465.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">MSW  GitHub</text>
+  <text x="273.75" y="484.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Actions  Phase 3</text>
+  <text x="273.75" y="502.29999999999995" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Phase 6  Phase 7</text>
+  <text x="273.75" y="520.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">🔧 개발 도구 (DevTools &amp; DX)</text>
+  <text x="273.75" y="538.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">ESLint · Prettier · React DevTools · VS Code Extensions</text>
+  <text x="273.75" y="556.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">전 Phase에 걸쳐 사용</text>
+</svg>

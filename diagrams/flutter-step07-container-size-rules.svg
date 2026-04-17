@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="361" viewBox="50 -20 540 325">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="50" y="-20" width="540" height="325" rx="12" fill="#141414"/>
+  <text x="120" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">Container 크기 결정 우선순위</text>
+  <rect x="80" y="60" width="480" height="35" rx="5.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="320" y="81" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">1. width·height 명시 → 해당 크기로 고정</text>
+  <rect x="80" y="105" width="480" height="35" rx="5.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="320" y="126" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">2. constraints 명시 → 제약 범위 내</text>
+  <rect x="80" y="150" width="480" height="35" rx="5.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="320" y="171" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">3. 자식이 있음 → 자식 크기 + padding</text>
+  <rect x="80" y="195" width="480" height="35" rx="5.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="320" y="215.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">4. 자식 없음 + Bounded → 부모가 준 최대 크기 (꽉 채움)</text>
+  <rect x="80" y="240" width="480" height="35" rx="5.25" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="320" y="261" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">5. 자식 없음 + Unbounded → 크기 0</text>
+</svg>

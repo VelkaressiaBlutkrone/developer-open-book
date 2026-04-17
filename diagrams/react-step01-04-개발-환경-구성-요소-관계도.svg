@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="722" viewBox="-10 -20 360 433">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="360" height="433" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">개발 환경 구성 요소 관계도</text>
+  <rect x="20" y="45" width="300" height="338" rx="45" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="170" y="99.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">OS (Windows / macOS / Linux)</text>
+  <text x="170" y="117.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Node.js (JS 런타임)</text>
+  <text x="170" y="135.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">npm / pnpm / yarn (패키지 매니저)</text>
+  <text x="170" y="153.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">node_modules/ (설치된 패키지들)</text>
+  <text x="170" y="172" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">react</text>
+  <text x="170" y="190.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">react-dom</text>
+  <text x="170" y="208.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">vite</text>
+  <text x="170" y="226.60000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Vite (빌드 도구)</text>
+  <text x="170" y="244.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">개발 서버 (Dev Server + HMR)</text>
+  <text x="170" y="263" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">프로덕션 빌드 (Rollup 기반 번들링)</text>
+  <text x="170" y="281.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">VS Code (코드 편집기)</text>
+  <text x="170" y="299.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">ESLint (코드 품질 검사)</text>
+  <text x="170" y="317.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Prettier (코드 포매팅)</text>
+  <text x="170" y="335.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">React 관련 확장 프로그램</text>
+</svg>

@@ -1,0 +1,290 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "x": 140,
+      "y": 10,
+      "width": 350,
+      "height": 30,
+      "text": "Isolate 메모리 아키텍처",
+      "fontSize": 24,
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "strokeColor": "#e5e5e5",
+      "opacity": 100,
+      "containerId": null
+    },
+    {
+      "type": "rectangle",
+      "id": "main_box",
+      "x": 30,
+      "y": 60,
+      "width": 270,
+      "height": 170,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "type": "text",
+      "id": "main_title",
+      "x": 100,
+      "y": 68,
+      "width": 130,
+      "height": 22,
+      "text": "메인 Isolate",
+      "fontSize": 16,
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "strokeColor": "#e5e5e5",
+      "opacity": 100,
+      "containerId": null
+    },
+    {
+      "type": "rectangle",
+      "id": "heap_a",
+      "x": 50,
+      "y": 120,
+      "width": 110,
+      "height": 50,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "type": "text",
+      "id": "heap_a_label",
+      "x": 60,
+      "y": 132,
+      "width": 90,
+      "height": 20,
+      "text": "힙 메모리 A",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "strokeColor": "#e5e5e5",
+      "opacity": 100,
+      "containerId": "heap_a"
+    },
+    {
+      "type": "rectangle",
+      "id": "loop_a",
+      "x": 170,
+      "y": 120,
+      "width": 110,
+      "height": 50,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "type": "text",
+      "id": "loop_a_label",
+      "x": 180,
+      "y": 132,
+      "width": 90,
+      "height": 20,
+      "text": "Event Loop A",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "strokeColor": "#e5e5e5",
+      "opacity": 100,
+      "containerId": "loop_a"
+    },
+    {
+      "type": "rectangle",
+      "id": "worker_box",
+      "x": 430,
+      "y": 60,
+      "width": 270,
+      "height": 170,
+      "backgroundColor": "#5c3d1a",
+      "fillStyle": "solid",
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "type": "text",
+      "id": "worker_title",
+      "x": 500,
+      "y": 68,
+      "width": 130,
+      "height": 22,
+      "text": "워커 Isolate",
+      "fontSize": 16,
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "strokeColor": "#e5e5e5",
+      "opacity": 100,
+      "containerId": null
+    },
+    {
+      "type": "rectangle",
+      "id": "heap_b",
+      "x": 450,
+      "y": 120,
+      "width": 110,
+      "height": 50,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "type": "text",
+      "id": "heap_b_label",
+      "x": 460,
+      "y": 132,
+      "width": 90,
+      "height": 20,
+      "text": "힙 메모리 B",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "strokeColor": "#e5e5e5",
+      "opacity": 100,
+      "containerId": "heap_b"
+    },
+    {
+      "type": "rectangle",
+      "id": "loop_b",
+      "x": 570,
+      "y": 120,
+      "width": 110,
+      "height": 50,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "type": "text",
+      "id": "loop_b_label",
+      "x": 580,
+      "y": 132,
+      "width": 90,
+      "height": 20,
+      "text": "Event Loop B",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "strokeColor": "#e5e5e5",
+      "opacity": 100,
+      "containerId": "loop_b"
+    },
+    {
+      "type": "arrow",
+      "id": "msg_right",
+      "x": 300,
+      "y": 140,
+      "width": 130,
+      "height": 0,
+      "points": [
+        [0, 0],
+        [130, 0]
+      ],
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "arrow",
+      "id": "msg_left",
+      "x": 430,
+      "y": 155,
+      "width": -130,
+      "height": 0,
+      "points": [
+        [0, 0],
+        [-130, 0]
+      ],
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "startArrowhead": null,
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "text",
+      "id": "msg_label",
+      "x": 320,
+      "y": 165,
+      "width": 120,
+      "height": 40,
+      "text": "메시지 패싱\n(값 복사)",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "strokeColor": "#a0a0a0",
+      "opacity": 100,
+      "containerId": null
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

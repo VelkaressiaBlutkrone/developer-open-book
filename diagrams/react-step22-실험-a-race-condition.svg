@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="616" height="539" viewBox="-10 -15 616 539">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="616" height="539" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">실험 A — Race Condition:</text>
+  <rect x="20" y="50" width="556" height="444" rx="66.6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 사용자 프로필 페이지: userId를 빠르게 전환</text>
+  <text x="40" y="109.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· AbortController 없이 구현 → 잘못된 데이터 표시 관찰</text>
+  <text x="40" y="135.5" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15" opacity="1">· AbortController 추가 → 문제 해결 확인</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 분석: &quot;매번 이 코드를 작성해야 하는가?&quot;</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">실험 B — 캐싱 부재:</text>
+  <text x="40" y="213.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 3개 컴포넌트(Header, Sidebar, Profile)에서 같은 /api/user/me 호출</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· DevTools Network 탭에서 동일 요청 3번 확인</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 분석: &quot;이 중복을 어떻게 제거할 수 있는가?&quot;</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">실험 C — Waterfall:</text>
+  <text x="40" y="317.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 부모: GET /api/user/:id → 200ms</text>
+  <text x="40" y="343.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 자식: GET /api/user/:id/posts → 200ms (부모 완료 후 시작)</text>
+  <text x="40" y="369.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 총 시간: 400ms</text>
+  <text x="40" y="395.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Promise.all로 병렬화 시도 → 의존성 때문에 불가능한 이유 분석</text>
+</svg>

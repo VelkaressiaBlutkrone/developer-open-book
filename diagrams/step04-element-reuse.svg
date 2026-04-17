@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="461" viewBox="0 -10 800 461.4">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="0" y="-10" width="800" height="461.4" rx="12" fill="#141414"/>
+  <text x="150" y="45.2" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="28" opacity="1">setState 시 Element 재사용</text>
+  <text x="50" y="94.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">Phase 1</text>
+  <rect x="50" y="110" width="180" height="55" rx="8.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="140" y="142" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">setState() 호출</text>
+  <defs><marker id="arrow-a1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#e5e5e5"/></marker></defs>
+  <path d="M230,137 L300,137" fill="none" stroke="#e5e5e5" stroke-width="2" opacity="1" marker-end="url(#arrow-a1)"/>
+  <rect x="300" y="110" width="200" height="55" rx="8.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="400" y="141.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">새 Widget Tree 생성</text>
+  <text x="50" y="214.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">Phase 2</text>
+  <defs><marker id="arrow-a2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#e5e5e5"/></marker></defs>
+  <path d="M400,165 L400,230" fill="none" stroke="#e5e5e5" stroke-width="2" opacity="1" marker-end="url(#arrow-a2)"/>
+  <rect x="280" y="230" width="240" height="60" rx="0" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="400" y="253.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Flutter reconciliation</text>
+  <text x="400" y="274.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">같은 타입·위치인가?</text>
+  <defs><marker id="arrow-a3_yes" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M280,260 L150,260" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-a3_yes)"/>
+  <text x="180" y="252.6" fill="#22c55e" font-family="Nunito, sans-serif" font-size="14" opacity="1">YES</text>
+  <defs><marker id="arrow-a3_no" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M520,260 L650,260" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-a3_no)"/>
+  <text x="560" y="252.6" fill="#ef4444" font-family="Nunito, sans-serif" font-size="14" opacity="1">NO</text>
+  <rect x="30" y="320" width="200" height="55" rx="8.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="130" y="352" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Element 재사용</text>
+  <defs><marker id="arrow-a4_reuse" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M130,290 L130,320" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-a4_reuse)"/>
+  <text x="35" y="396.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">updateWidget()로</text>
+  <text x="35" y="414.9" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">기존 Element 갱신</text>
+  <rect x="570" y="320" width="200" height="55" rx="8.25" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="670" y="352" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Element 재생성</text>
+  <defs><marker id="arrow-a4_recreate" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M670,290 L670,320" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-a4_recreate)"/>
+  <text x="575" y="396.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">기존 Element 폐기</text>
+  <text x="575" y="414.9" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">새 Element 생성</text>
+</svg>

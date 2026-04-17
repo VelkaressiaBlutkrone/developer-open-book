@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="1071" viewBox="-10 -20 460 821">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="460" height="821" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">&quot;무엇을 먼저 최적화해야 하는가?&quot;</text>
+  <rect x="20" y="45" width="400" height="726" rx="60" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&quot;무엇을 먼저 최적화해야 하는가?&quot;</text>
+  <text x="40" y="104.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Priority 1: 가장 높은 효과 / 가장 낮은 비용</text>
+  <text x="40" y="129.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 코드 분할 (React.lazy + 라우트 기반)</text>
+  <text x="40" y="155.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 이미지 최적화 (WebP, lazy, 크기 지정)</text>
+  <text x="40" y="181.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Tree Shaking 확인 (무거운 라이브러리 제거/대체)</text>
+  <text x="40" y="207.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 대부분의 앱에서 가장 큰 개선 효과</text>
+  <text x="40" y="234.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Priority 2: 측정 기반 최적화</text>
+  <text x="40" y="259.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Lighthouse로 병목 식별</text>
+  <text x="40" y="285.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 번들 분석으로 큰 모듈 찾기</text>
+  <text x="40" y="311.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· React Profiler로 느린 컴포넌트 찾기</text>
+  <text x="40" y="337.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ &quot;측정 → 식별 → 최적화 → 재측정&quot; 사이클</text>
+  <text x="40" y="364.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Priority 3: 상황별 최적화</text>
+  <text x="40" y="389.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 대규모 리스트 → Virtualization</text>
+  <text x="40" y="415.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 무거운 계산 → useMemo, useTransition</text>
+  <text x="40" y="441.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 빈번한 리렌더링 → React.memo + useCallback</text>
+  <text x="40" y="467.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 문제가 실제로 체감될 때만 적용</text>
+  <text x="40" y="494.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Priority 4: 아키텍처 레벨</text>
+  <text x="40" y="519.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· SSR/SSG 도입 (SEO + 초기 로딩)</text>
+  <text x="40" y="545.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· CDN 활용 (정적 자원 캐싱)</text>
+  <text x="40" y="571.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 서비스 워커 (오프라인 캐싱)</text>
+  <text x="40" y="597.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 도입 비용이 높으므로 필요성을 신중히 판단</text>
+  <text x="40" y="624.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">핵심 원칙:</text>
+  <text x="40" y="651.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. 측정 없이 최적화하지 않는다 (Step 14 복습)</text>
+  <text x="40" y="681.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. 가장 높은 효과의 최적화부터 적용한다</text>
+  <text x="40" y="711.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. 과도한 최적화는 코드 복잡성을 높인다</text>
+  <text x="40" y="741.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. &quot;충분히 빠르면&quot; 더 최적화하지 않는다</text>
+</svg>

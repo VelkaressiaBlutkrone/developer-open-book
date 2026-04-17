@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="317" viewBox="70 -20 520 275">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="70" y="-20" width="520" height="275" rx="12" fill="#141414"/>
+  <text x="120" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">인기 순위 (pub.dev 다운로드 기준)</text>
+  <rect x="100" y="55" width="460" height="35" rx="5.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="330" y="76.25" text-anchor="middle" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15">1위: Riverpod  ← 신규 프로젝트 표준</text>
+  <rect x="100" y="100" width="400" height="35" rx="5.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="300" y="121.25" text-anchor="middle" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="15">2위: Provider  ← 레거시 유지·입문용</text>
+  <rect x="100" y="145" width="340" height="35" rx="5.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="270" y="166.25" text-anchor="middle" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="15">3위: Bloc/Cubit  ← 엔터프라이즈·대규모</text>
+  <rect x="100" y="190" width="280" height="35" rx="5.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="240" y="211.25" text-anchor="middle" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15">4위: GetX  ← 빠른 프로토타이핑</text>
+</svg>

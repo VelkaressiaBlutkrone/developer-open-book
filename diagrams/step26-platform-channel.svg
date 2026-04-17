@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 -20 800 499.6">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="0" y="-20" width="800" height="499.6" rx="12" fill="#141414"/>
+  <text x="200" y="35.2" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="28" opacity="1">Platform Channel 선택</text>
+  <rect x="240" y="80" width="300" height="60" rx="9" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="390" y="114.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">pub.dev 플러그인 존재?</text>
+  <text x="140" y="169.4" fill="#22c55e" font-family="Nunito, sans-serif" font-size="16" opacity="1">YES</text>
+  <defs><marker id="arrow-arrow_yes" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M310,140 L230,190" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-arrow_yes)"/>
+  <rect x="120" y="200" width="220" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="230" y="229.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">플러그인 사용</text>
+  <text x="120" y="271.7" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">battery_plus, sensors_plus</text>
+  <text x="570" y="169.4" fill="#ef4444" font-family="Nunito, sans-serif" font-size="16" opacity="1">NO</text>
+  <defs><marker id="arrow-arrow_no" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M470,140 L550,190" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-arrow_no)"/>
+  <rect x="420" y="200" width="260" height="50" rx="7.5" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="550" y="229" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">직접 Platform Channel 구현</text>
+  <text x="100" y="338" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="20" opacity="1">Channel 종류</text>
+  <rect x="30" y="370" width="220" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="140" y="399.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">MethodChannel</text>
+  <text x="50" y="442.6" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="14" opacity="1">단방향 요청-응답</text>
+  <rect x="290" y="370" width="220" height="50" rx="7.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="400" y="399.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">EventChannel</text>
+  <text x="320" y="442.6" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="14" opacity="1">지속 스트림</text>
+  <rect x="550" y="370" width="220" height="50" rx="7.5" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="660" y="399" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">BasicMessageChannel</text>
+  <text x="580" y="442.6" fill="#06b6d4" font-family="Nunito, sans-serif" font-size="14" opacity="1">양방향 메시지</text>
+</svg>

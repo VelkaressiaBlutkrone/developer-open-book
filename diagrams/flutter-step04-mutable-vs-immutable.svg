@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="290" viewBox="50 -20 680 290">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="50" y="-20" width="680" height="290" rx="12" fill="#141414"/>
+  <text x="120" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">가변 Widget vs 불변 Widget</text>
+  <text x="80" y="69.4" fill="#ef4444" font-family="Nunito, sans-serif" font-size="16" opacity="1">가변 Widget을 허용한다면?</text>
+  <rect x="80" y="85" width="280" height="35" rx="5.25" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="220" y="106" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Widget의 색상을 변경</text>
+  <rect x="80" y="140" width="280" height="45" rx="6.75" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="220" y="157.29999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">&quot;이 Widget이 변경됐나?</text>
+  <text x="220" y="174.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">언제? 어떻게?&quot;</text>
+  <rect x="80" y="205" width="280" height="35" rx="5.25" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="220" y="226" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">복잡한 추적 로직 → 성능 저하</text>
+  <text x="420" y="69.4" fill="#22c55e" font-family="Nunito, sans-serif" font-size="16" opacity="1">불변 Widget이라면?</text>
+  <rect x="420" y="85" width="280" height="35" rx="5.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="560" y="106" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">새 Widget 객체를 생성해 반환</text>
+  <rect x="420" y="140" width="280" height="45" rx="6.75" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="560" y="166" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">새 Widget과 기존 Element를 비교</text>
+  <rect x="420" y="205" width="280" height="35" rx="5.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="560" y="225.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">runtimeType+Key 비교 → 단순·빠름</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="727" viewBox="-10 -15 573.5 695">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="573.5" height="695" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">❌ Anti-pattern 1: 모든 것을 전역 상태에 넣기</text>
+  <rect x="20" y="50" width="513.5" height="600" rx="77.02499999999999" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&quot;이 값을 여러 곳에서 쓸 수도 있으니 전역으로...&quot;</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">문제: 상태가 &quot;어디서 변경되는지&quot; 추적 어려움</text>
+  <text x="40" y="135.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">원칙: &quot;정말 전역이 필요한가?&quot; → 대부분 Props나 로컬 State로 충분</text>
+  <text x="40" y="161.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">❌ Anti-pattern 2: 서버 데이터를 전역 상태에 저장</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">useStore({ users: [] })에 API 응답을 저장하고 수동 관리</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">문제: Step 22의 수동 패칭 7가지 한계 그대로 발생</text>
+  <text x="40" y="239.5" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15" opacity="1">해결: 서버 데이터는 TanStack Query로 관리</text>
+  <text x="40" y="265.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">❌ Anti-pattern 3: 파생 데이터를 상태에 저장</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">useStore({</text>
+  <text x="40" y="317.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">items: [...],</text>
+  <text x="40" y="343.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">filteredItems: [...],  ← items에서 계산 가능!</text>
+  <text x="40" y="369.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">totalPrice: 0,         ← items에서 계산 가능!</text>
+  <text x="40" y="395.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">})</text>
+  <text x="40" y="421.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">문제: items 변경 시 filteredItems, totalPrice도 수동 동기화 필요</text>
+  <text x="40" y="447.5" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15" opacity="1">해결: 파생 데이터는 selector 또는 get()으로 &quot;계산&quot;한다</text>
+  <text x="40" y="473.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">❌ Anti-pattern 4: 폼 입력값을 전역에 저장</text>
+  <text x="40" y="499.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">useStore({ formName: '', formEmail: '' })</text>
+  <text x="40" y="525.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">문제: 매 키 입력마다 전역 상태 업데이트 → 불필요한 영향 범위</text>
+  <text x="40" y="551.5" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15" opacity="1">해결: 폼 입력은 로컬 State(useState) 또는 React Hook Form</text>
+</svg>

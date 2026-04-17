@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="414" viewBox="-10 -20 499.5 345">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="499.5" height="345" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">Diff 알고리즘의 두 가지 휴리스틱</text>
+  <rect x="20" y="45" width="439.5" height="250" rx="37.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="239.75" y="91.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">가정 1: 타입이 다른 Element는 완전히 다른 트리를 만든다</text>
+  <text x="239.75" y="109.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· &lt;div&gt;가 &lt;section&gt;으로 바뀌면 하위 트리 전체를 새로 만든다</text>
+  <text x="239.75" y="128" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· &lt;ComponentA&gt;가 &lt;ComponentB&gt;로 바뀌면 언마운트 후 새로 마운트</text>
+  <text x="239.75" y="146.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 하위 노드를 하나하나 비교하지 않는다 (핵심 최적화)</text>
+  <text x="239.75" y="164.39999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">가정 2: 개발자가 key로 형제 간 Element의 안정적 식별을 제공</text>
+  <text x="239.75" y="182.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 같은 key를 가진 Element는 같은 것으로 간주</text>
+  <text x="239.75" y="200.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· key가 다르면 다른 Element로 간주</text>
+  <text x="239.75" y="219" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 리스트에서 Element의 순서가 바뀌어도 key로 추적 가능</text>
+  <text x="239.75" y="237.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">이 두 가정이 틀리는 경우는 실제로 매우 드물다</text>
+  <text x="239.75" y="255.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 극소수의 비효율을 감수하고 O(n) 성능을 달성</text>
+</svg>

@@ -1,0 +1,305 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "r_720",
+      "x": 50,
+      "y": 10,
+      "width": 620,
+      "height": 358,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_721",
+      "x": 50,
+      "y": 10,
+      "width": 620,
+      "height": 40,
+      "text": "Step 41 — 프로덕션 모니터링",
+      "fontSize": 20,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_720"
+    },
+    {
+      "type": "rectangle",
+      "id": "r_722",
+      "x": 60,
+      "y": 50,
+      "width": 600,
+      "height": 196,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_723",
+      "x": 60,
+      "y": 50,
+      "width": 600,
+      "height": 32,
+      "text": "다루는 것",
+      "fontSize": 16,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_722"
+    },
+    {
+      "type": "text",
+      "id": "t_724",
+      "x": 80,
+      "y": 82,
+      "width": 168,
+      "height": 18,
+      "text": "· Sentry를 활용한 에러 모니터링 통합",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_725",
+      "x": 80,
+      "y": 104,
+      "width": 175,
+      "height": 18,
+      "text": "· Source Map과 프로덕션 에러 디버깅",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_726",
+      "x": 80,
+      "y": 126,
+      "width": 196,
+      "height": 18,
+      "text": "· Error Boundary + Sentry 결합",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_727",
+      "x": 80,
+      "y": 148,
+      "width": 168,
+      "height": 18,
+      "text": "· Core Web Vitals 수집과 분석",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_728",
+      "x": 80,
+      "y": 170,
+      "width": 154,
+      "height": 18,
+      "text": "· 로깅 전략 (무엇을, 어떤 수준으로)",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_729",
+      "x": 80,
+      "y": 192,
+      "width": 154,
+      "height": 18,
+      "text": "· 사용자 분석(Analytics) 기초",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_730",
+      "x": 80,
+      "y": 214,
+      "width": 91,
+      "height": 18,
+      "text": "· 알림과 대응 프로세스",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_731",
+      "x": 80,
+      "y": 236,
+      "width": 84,
+      "height": 18,
+      "text": "· 모니터링 전략 설계",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "line",
+      "id": "l_732",
+      "x": 60,
+      "y": 248,
+      "width": 600,
+      "height": 0,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          600,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        600,
+        0
+      ]
+    },
+    {
+      "type": "rectangle",
+      "id": "r_733",
+      "x": 60,
+      "y": 252,
+      "width": 600,
+      "height": 108,
+      "backgroundColor": "#5c1a1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#ef4444",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_734",
+      "x": 60,
+      "y": 252,
+      "width": 600,
+      "height": 32,
+      "text": "다루지 않는 것",
+      "fontSize": 16,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_733"
+    },
+    {
+      "type": "text",
+      "id": "t_735",
+      "x": 80,
+      "y": 284,
+      "width": 84,
+      "height": 18,
+      "text": "· APM 서버 사이드",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_736",
+      "x": 80,
+      "y": 306,
+      "width": 154,
+      "height": 18,
+      "text": "· Datadog/New Relic 상세",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_737",
+      "x": 80,
+      "y": 328,
+      "width": 154,
+      "height": 18,
+      "text": "· 로그 집계 시스템(ELK Stack)",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_738",
+      "x": 80,
+      "y": 350,
+      "width": 112,
+      "height": 18,
+      "text": "· A/B 테스트 플랫폼 상세",
+      "fontSize": 14,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

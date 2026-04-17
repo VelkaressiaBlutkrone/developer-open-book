@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="330" viewBox="20 -20 560 308">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="560" height="308" rx="12" fill="#141414"/>
+  <text x="80" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">useRef 구성 요소 관계</text>
+  <rect x="50" y="55" width="500" height="130" rx="19.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="60" y="78.5" fill="#06b6d4" font-family="Nunito, sans-serif" font-size="15" opacity="1">useRef(initialValue)</text>
+  <text x="80" y="101.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">{ current: initialValue }  ← Fiber 노드에 저장</text>
+  <rect x="80" y="115" width="200" height="55" rx="8.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="90" y="132.6" fill="#22c55e" font-family="Nunito, sans-serif" font-size="14" opacity="1">DOM 참조 용도</text>
+  <text x="90" y="150.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">&lt;div ref={myRef} /&gt;</text>
+  <text x="90" y="165.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">Commit Phase에서 할당</text>
+  <rect x="310" y="115" width="220" height="55" rx="8.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="320" y="132.6" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="14" opacity="1">값 저장 용도</text>
+  <text x="320" y="150.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">ref.current = newValue</text>
+  <text x="320" y="165.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">타이머 ID / 이전 값 / 인스턴스</text>
+  <text x="60" y="214.4" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16" opacity="1">useState vs useRef</text>
+  <rect x="50" y="230" width="240" height="28" rx="4.2" fill="#1a4d4d" stroke="#06b6d4" stroke-width="1" opacity="1"/>
+  <text x="170" y="247.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">setState → 재렌더링 ★</text>
+  <rect x="310" y="230" width="240" height="28" rx="4.2" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="430" y="247.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">ref.current = x → 재렌더링 없음</text>
+</svg>

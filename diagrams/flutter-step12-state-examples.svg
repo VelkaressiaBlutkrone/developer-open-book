@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="230" viewBox="10 -20 640 230">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="10" y="-20" width="640" height="230" rx="12" fill="#141414"/>
+  <text x="180" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">상태(State)의 예시</text>
+  <rect x="40" y="55" width="280" height="35" rx="5.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="180" y="75.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">카운터 값 → Text 위젯 변경</text>
+  <rect x="340" y="55" width="280" height="35" rx="5.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="480" y="75.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">로그인 여부 → 화면 분기</text>
+  <rect x="40" y="100" width="280" height="35" rx="5.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="180" y="120.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">서버 목록 → ListView 채움</text>
+  <rect x="340" y="100" width="280" height="35" rx="5.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="480" y="120.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">선택된 탭 인덱스 → 화면 전환</text>
+  <rect x="40" y="145" width="280" height="35" rx="5.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="180" y="165.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">다크모드 → 앱 전체 테마 변경</text>
+  <rect x="340" y="145" width="280" height="35" rx="5.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="480" y="165.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">장바구니 → 어디서든 추가/삭제</text>
+</svg>

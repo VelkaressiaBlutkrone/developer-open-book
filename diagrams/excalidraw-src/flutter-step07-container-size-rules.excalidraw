@@ -1,0 +1,20 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":120,"y":10,"text":"Container 크기 결정 우선순위","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":380,"height":30,"opacity":100},
+    {"type":"rectangle","id":"r1","x":80,"y":60,"width":480,"height":35,"backgroundColor":"#1e3a5f","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"r1_l","x":90,"y":68,"width":460,"height":20,"text":"1. width·height 명시 → 해당 크기로 고정","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"r1","textAlign":"left","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"r2","x":80,"y":105,"width":480,"height":35,"backgroundColor":"#2d1b69","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"r2_l","x":90,"y":113,"width":460,"height":20,"text":"2. constraints 명시 → 제약 범위 내","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"r2","textAlign":"left","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"r3","x":80,"y":150,"width":480,"height":35,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"r3_l","x":90,"y":158,"width":460,"height":20,"text":"3. 자식이 있음 → 자식 크기 + padding","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"r3","textAlign":"left","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"r4","x":80,"y":195,"width":480,"height":35,"backgroundColor":"#5c3d1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"r4_l","x":90,"y":203,"width":460,"height":20,"text":"4. 자식 없음 + Bounded → 부모가 준 최대 크기 (꽉 채움)","fontSize":13,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"r4","textAlign":"left","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"r5","x":80,"y":240,"width":480,"height":35,"backgroundColor":"#5c1a1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#ef4444","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"r5_l","x":90,"y":248,"width":460,"height":20,"text":"5. 자식 없음 + Unbounded → 크기 0","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"r5","textAlign":"left","verticalAlign":"middle","opacity":100}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

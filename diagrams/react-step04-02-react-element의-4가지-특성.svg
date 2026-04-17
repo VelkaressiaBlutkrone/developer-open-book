@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="722" viewBox="-10 -20 360 433">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="360" height="433" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">React Element의 4가지 특성</text>
+  <rect x="20" y="45" width="300" height="338" rx="45" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="170" y="99.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">1. Plain Object (일반 객체)</text>
+  <text x="170" y="117.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 특별한 클래스의 인스턴스가 아니다</text>
+  <text x="170" y="135.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 가볍다 (DOM 노드보다 생성 비용이 훨씬 적음)</text>
+  <text x="170" y="153.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">2. Immutable (불변)</text>
+  <text x="170" y="172" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 한 번 생성되면 속성을 변경할 수 없다</text>
+  <text x="170" y="190.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Object.freeze()로 동결됨 (개발 모드)</text>
+  <text x="170" y="208.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· UI를 변경하려면 새 Element를 생성해야 한다</text>
+  <text x="170" y="226.60000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">3. Descriptive (서술적)</text>
+  <text x="170" y="244.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· &quot;무엇을 그려야 하는지&quot;를 서술할 뿐</text>
+  <text x="170" y="263" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 실제로 DOM을 생성하지 않는다</text>
+  <text x="170" y="281.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 설계도(blueprint)에 해당</text>
+  <text x="170" y="299.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">4. Tree Structure (트리 구조)</text>
+  <text x="170" y="317.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· children을 통해 중첩되어 트리를 형성한다</text>
+  <text x="170" y="335.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 이 트리가 Virtual DOM Tree에 해당</text>
+</svg>

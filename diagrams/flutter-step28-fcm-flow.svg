@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="810" height="192" viewBox="20 -20 810 191.8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="810" height="191.8" rx="12" fill="#141414"/>
+  <text x="50" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">FCM 메시지 전송 흐름</text>
+  <rect x="50" y="70" width="150" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="125" y="98.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">서버/CF</text>
+  <text x="50" y="135.8" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="12" opacity="1">FCM API 호출</text>
+  <defs><marker id="arrow-el721" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#4a9eed"/></marker></defs>
+  <path d="M200,95 L250,95" fill="none" stroke="#4a9eed" stroke-width="2" opacity="1" marker-end="url(#arrow-el721)"/>
+  <rect x="250" y="70" width="150" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="325" y="98.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">FCM 서버</text>
+  <text x="250" y="135.8" fill="#22c55e" font-family="Nunito, sans-serif" font-size="12" opacity="1">메시지 라우팅</text>
+  <defs><marker id="arrow-el725" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M400,95 L450,95" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-el725)"/>
+  <rect x="450" y="70" width="150" height="50" rx="7.5" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="525" y="98.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">APNs/GCM</text>
+  <text x="450" y="135.8" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="12" opacity="1">플랫폼 전달</text>
+  <defs><marker id="arrow-el729" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/></marker></defs>
+  <path d="M600,95 L650,95" fill="none" stroke="#f59e0b" stroke-width="2" opacity="1" marker-end="url(#arrow-el729)"/>
+  <rect x="650" y="70" width="150" height="50" rx="7.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="725" y="98.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">디바이스</text>
+  <text x="650" y="135.8" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="12" opacity="1">알림 표시</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="592" viewBox="115 -20 537 530">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="115" y="-20" width="537" height="530" rx="12" fill="#141414"/>
+  <text x="195" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">Event Loop 처리 흐름</text>
+  <rect x="230" y="65" width="300" height="55" rx="8.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="380" y="96.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">1. 동기 코드 실행 완료</text>
+  <defs><marker id="arrow-a31" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#e5e5e5"/></marker></defs>
+  <path d="M380,120 L380,150" fill="none" stroke="#e5e5e5" stroke-width="2" opacity="1" marker-end="url(#arrow-a31)"/>
+  <rect x="230" y="155" width="300" height="55" rx="8.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="380" y="186.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">2. Microtask Queue 처리</text>
+  <text x="545" y="180.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">(비어있을 때까지)</text>
+  <defs><marker id="arrow-a32" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#e5e5e5"/></marker></defs>
+  <path d="M380,210 L380,240" fill="none" stroke="#e5e5e5" stroke-width="2" opacity="1" marker-end="url(#arrow-a32)"/>
+  <rect x="230" y="245" width="300" height="55" rx="8.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="380" y="276.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">3. Event Queue 이벤트 1개 처리</text>
+  <defs><marker id="arrow-a33" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#e5e5e5"/></marker></defs>
+  <path d="M380,300 L380,330" fill="none" stroke="#e5e5e5" stroke-width="2" opacity="1" marker-end="url(#arrow-a33)"/>
+  <rect x="230" y="335" width="300" height="55" rx="8.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="380" y="366.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">4. 2번으로 돌아감 (반복)</text>
+  <defs><marker id="arrow-loop" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M225,362 L165,362 L165,177 L230,177" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" stroke-dasharray="8 4" marker-end="url(#arrow-loop)"/>
+  <defs><marker id="arrow-a34" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#e5e5e5"/></marker></defs>
+  <path d="M380,390 L380,420" fill="none" stroke="#e5e5e5" stroke-width="2" opacity="1" marker-end="url(#arrow-a34)"/>
+  <rect x="230" y="425" width="300" height="55" rx="8.25" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="380" y="456.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">5. 큐 비었으면 프로그램 종료</text>
+</svg>

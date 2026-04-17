@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="299" viewBox="50 -20 541.65 270">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="50" y="-20" width="541.65" height="270" rx="12" fill="#141414"/>
+  <text x="150" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">BuildContext의 활용</text>
+  <rect x="80" y="60" width="220" height="40" rx="6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="190" y="84" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Theme.of(context)</text>
+  <text x="340" y="81.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="0.8">트리를 위로 탐색 → 가장 가까운 Theme 반환</text>
+  <rect x="80" y="120" width="220" height="40" rx="6" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="190" y="144" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Navigator.of(context)</text>
+  <text x="340" y="141.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="0.8">트리를 위로 탐색 → 가장 가까운 Navigator 반환</text>
+  <rect x="80" y="180" width="220" height="40" rx="6" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="190" y="203.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">MediaQuery.of(context)</text>
+  <text x="340" y="201.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="0.8">가장 가까운 MediaQuery → 화면 정보 반환</text>
+</svg>

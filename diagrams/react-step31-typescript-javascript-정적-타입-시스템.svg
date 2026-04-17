@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="482" viewBox="-10 -15 573.5 461">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="573.5" height="461" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">TypeScript = JavaScript + 정적 타입 시스템</text>
+  <rect x="20" y="50" width="513.5" height="366" rx="54.9" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 코드를 실행하기 전에 타입 에러를 발견한다 (컴파일 타임)</text>
+  <text x="40" y="109.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· IDE 자동완성이 정확해진다 (Props 목록, 메서드 제안)</text>
+  <text x="40" y="135.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 리팩토링이 안전해진다 (타입이 변하면 사용처를 자동 추적)</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 문서 역할을 한다 (타입 정의 = 인터페이스 문서)</text>
+  <text x="40" y="187.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 실무 React 프로젝트의 90%+ 가 TypeScript를 사용</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">TypeScript가 React에서 특히 빛나는 이유:</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Props의 타입을 정의하면 → 잘못된 Props 전달을 컴파일에서 차단</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Event Handler의 타입 → e.target.value가 어떤 타입인지 자동 추론</text>
+  <text x="40" y="291.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Hook의 제네릭 → useState&lt;User&gt;(null)로 정확한 타입 추론</text>
+  <text x="40" y="317.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Context의 타입 → Provider/Consumer의 타입 일치 보장</text>
+</svg>

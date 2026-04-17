@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="640" viewBox="-10 -20 800 640">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="800" height="640" rx="12" fill="#141414"/>
+  <text x="150" y="35.2" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="28" opacity="1">Prop Drilling vs Provider</text>
+  <rect x="20" y="70" width="340" height="520" rx="51" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="0.2"/>
+  <text x="80" y="98" fill="#ef4444" font-family="Nunito, sans-serif" font-size="20" opacity="1">Prop Drilling</text>
+  <rect x="80" y="120" width="220" height="45" rx="6.75" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="190" y="147" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">AppPage</text>
+  <defs><marker id="arrow-pd-a1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M190,165 L190,200" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-pd-a1)"/>
+  <rect x="80" y="200" width="220" height="45" rx="6.75" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="190" y="227" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">SectionWidget</text>
+  <text x="305" y="185.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">전달만 함</text>
+  <defs><marker id="arrow-pd-a2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M190,245 L190,280" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-pd-a2)"/>
+  <rect x="80" y="280" width="220" height="45" rx="6.75" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="190" y="307" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">ListWidget</text>
+  <text x="305" y="265.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">전달만 함</text>
+  <defs><marker id="arrow-pd-a3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M190,325 L190,360" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-pd-a3)"/>
+  <rect x="80" y="360" width="220" height="45" rx="6.75" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="190" y="387" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">ItemWidget</text>
+  <text x="305" y="345.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">전달만 함</text>
+  <defs><marker id="arrow-pd-a4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M190,405 L190,440" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-pd-a4)"/>
+  <rect x="80" y="440" width="220" height="45" rx="6.75" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="190" y="467" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">IconWidget</text>
+  <rect x="420" y="70" width="340" height="520" rx="51" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="0.2"/>
+  <text x="480" y="98" fill="#22c55e" font-family="Nunito, sans-serif" font-size="20" opacity="1">Provider 방식</text>
+  <rect x="470" y="120" width="240" height="55" rx="8.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="590" y="141.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">AppPage</text>
+  <text x="590" y="160.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">(Provider로 상태 제공)</text>
+  <text x="520" y="272.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">... 중간 위젯 ...</text>
+  <text x="520" y="292.20000000000005" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">(상태 무관)</text>
+  <rect x="470" y="440" width="240" height="45" rx="6.75" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="590" y="467" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">IconWidget</text>
+  <defs><marker id="arrow-pv-direct" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M590,175 L590,440" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-pv-direct)"/>
+  <text x="600" y="310.8" fill="#22c55e" font-family="Nunito, sans-serif" font-size="12" opacity="1">context.watch()</text>
+  <text x="600" y="327.6" fill="#22c55e" font-family="Nunito, sans-serif" font-size="12" opacity="1">직접 접근</text>
+</svg>

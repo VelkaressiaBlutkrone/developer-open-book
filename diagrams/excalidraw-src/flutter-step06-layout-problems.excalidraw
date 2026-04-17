@@ -1,0 +1,23 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":120,"y":10,"text":"Layout을 모르면 겪는 문제들","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":380,"height":30,"opacity":100},
+    {"type":"rectangle","id":"q1","x":80,"y":60,"width":500,"height":30,"backgroundColor":"#5c1a1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#ef4444","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"q1_l","x":90,"y":67,"width":480,"height":18,"text":"\"왜 Column 안의 ListView가 오류를 낸다?\"","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"q1","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"q2","x":80,"y":97,"width":500,"height":30,"backgroundColor":"#5c1a1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#ef4444","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"q2_l","x":90,"y":104,"width":480,"height":18,"text":"\"왜 Container에 height를 줬는데 반응이 없다?\"","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"q2","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"q3","x":80,"y":134,"width":500,"height":30,"backgroundColor":"#5c1a1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#ef4444","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"q3_l","x":90,"y":141,"width":480,"height":18,"text":"\"왜 Row 안에서 Text가 넘쳐 overflow가 난다?\"","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"q3","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"q4","x":80,"y":171,"width":500,"height":30,"backgroundColor":"#5c3d1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"q4_l","x":90,"y":178,"width":480,"height":18,"text":"\"Expanded와 Flexible 중 뭘 써야 하지?\"","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"q4","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"q5","x":80,"y":208,"width":500,"height":30,"backgroundColor":"#5c3d1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"q5_l","x":90,"y":215,"width":480,"height":18,"text":"\"SizedBox와 Container 중 언제 뭘 쓰지?\"","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"q5","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"a1","x":330,"y":245,"width":0,"height":20,"strokeColor":"#a0a0a0","strokeWidth":2,"roughness":1,"opacity":60,"points":[[0,0],[0,20]],"lastCommittedPoint":[0,20],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"ans","x":140,"y":270,"width":380,"height":35,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"ans_l","x":150,"y":277,"width":360,"height":22,"text":"→ 모두 Constraints 흐름을 모르기 때문","fontSize":15,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"ans","textAlign":"center","verticalAlign":"middle","opacity":100}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

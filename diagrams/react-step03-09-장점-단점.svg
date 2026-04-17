@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="268" viewBox="-10 -20 576 257">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="576" height="257" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">장점  단점</text>
+  <rect x="20" y="45" width="516" height="162" rx="24.3" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="278" y="84" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</text>
+  <text x="278" y="102.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 유연한 기술 선택  · 선택 피로 (Choice Fatigue)</text>
+  <text x="278" y="120.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 가볍고 빠른 시작  · &quot;Best Practice&quot;를 스스로 찾아야 함</text>
+  <text x="278" y="138.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 점진적 도입 가능 (기존 프로젝트에)  · 도구 간 호환성 문제 가능</text>
+  <text x="278" y="156.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 큰 생태계 = 많은 선택지  · 생태계 변화 속도가 빠름</text>
+  <text x="278" y="175" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 특정 벤더에 종속되지 않음  · 팀마다 다른 구조 → 온보딩 비용</text>
+</svg>

@@ -1,0 +1,413 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_817",
+      "x": 170,
+      "y": 15,
+      "width": 110,
+      "height": 26,
+      "text": "원칙 간 연결 구조",
+      "fontSize": 22,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "r_818",
+      "x": 40,
+      "y": 55,
+      "width": 220,
+      "height": 40,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_819",
+      "x": 40,
+      "y": 55,
+      "width": 220,
+      "height": 40,
+      "text": "선언적 사고",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_818"
+    },
+    {
+      "type": "arrow",
+      "id": "a_820",
+      "x": 260,
+      "y": 75,
+      "width": 100,
+      "height": 0,
+      "strokeColor": "#22c55e",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          100,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        100,
+        0
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "r_821",
+      "x": 380,
+      "y": 55,
+      "width": 230,
+      "height": 40,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_822",
+      "x": 380,
+      "y": 55,
+      "width": 230,
+      "height": 40,
+      "text": "사용자 관점 테스트",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_821"
+    },
+    {
+      "type": "rectangle",
+      "id": "r_823",
+      "x": 40,
+      "y": 110,
+      "width": 220,
+      "height": 40,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_824",
+      "x": 40,
+      "y": 110,
+      "width": 220,
+      "height": 40,
+      "text": "관심사 분리",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_823"
+    },
+    {
+      "type": "arrow",
+      "id": "a_825",
+      "x": 260,
+      "y": 130,
+      "width": 100,
+      "height": 0,
+      "strokeColor": "#22c55e",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          100,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        100,
+        0
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "r_826",
+      "x": 380,
+      "y": 110,
+      "width": 230,
+      "height": 40,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_827",
+      "x": 380,
+      "y": 110,
+      "width": 230,
+      "height": 40,
+      "text": "자동화 가능성 증가",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_826"
+    },
+    {
+      "type": "rectangle",
+      "id": "r_828",
+      "x": 40,
+      "y": 165,
+      "width": 220,
+      "height": 40,
+      "backgroundColor": "#5c3d1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_829",
+      "x": 40,
+      "y": 165,
+      "width": 220,
+      "height": 40,
+      "text": "타입 안전성",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_828"
+    },
+    {
+      "type": "arrow",
+      "id": "a_830",
+      "x": 260,
+      "y": 185,
+      "width": 100,
+      "height": 0,
+      "strokeColor": "#22c55e",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          100,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        100,
+        0
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "r_831",
+      "x": 380,
+      "y": 165,
+      "width": 230,
+      "height": 40,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_832",
+      "x": 380,
+      "y": 165,
+      "width": 230,
+      "height": 40,
+      "text": "리팩토링 안전성",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_831"
+    },
+    {
+      "type": "rectangle",
+      "id": "r_833",
+      "x": 40,
+      "y": 220,
+      "width": 220,
+      "height": 40,
+      "backgroundColor": "#5c1a1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#ef4444",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_834",
+      "x": 40,
+      "y": 220,
+      "width": 220,
+      "height": 40,
+      "text": "측정 우선 최적화",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_833"
+    },
+    {
+      "type": "arrow",
+      "id": "a_835",
+      "x": 260,
+      "y": 240,
+      "width": 100,
+      "height": 0,
+      "strokeColor": "#22c55e",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          100,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        100,
+        0
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "r_836",
+      "x": 380,
+      "y": 220,
+      "width": 230,
+      "height": 40,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_837",
+      "x": 380,
+      "y": 220,
+      "width": 230,
+      "height": 40,
+      "text": "프로덕션 마인드셋",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_836"
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

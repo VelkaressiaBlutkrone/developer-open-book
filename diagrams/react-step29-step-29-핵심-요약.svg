@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="1294" viewBox="-10 -20 477 1029">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="477" height="1029" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Step 29 핵심 요약</text>
+  <rect x="20" y="45" width="417" height="934" rx="62.55" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 29 핵심 요약</text>
+  <text x="40" y="105.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. Core Web Vitals = 사용자 체감 성능의 3대 지표</text>
+  <text x="40" y="133.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ LCP(≤2.5s): 가장 큰 콘텐츠 표시 시간</text>
+  <text x="40" y="159.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ INP(≤200ms): 상호작용 반응 시간</text>
+  <text x="40" y="185.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ CLS(≤0.1): 레이아웃 안정성</text>
+  <text x="40" y="211.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Google 검색 랭킹에 직접 영향</text>
+  <text x="40" y="239.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. 코드 분할 = 가장 효과적인 초기 로딩 최적화</text>
+  <text x="40" y="267.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ React.lazy + Suspense로 라우트 기반 분할</text>
+  <text x="40" y="293.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 초기 번들을 80%+ 줄일 수 있다</text>
+  <text x="40" y="319.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 페이지 전환 시 필요한 청크만 추가 로드</text>
+  <text x="40" y="345.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 호버 시 prefetch로 체감 지연 제거</text>
+  <text x="40" y="373.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. 번들 분석 → 측정 기반 최적화</text>
+  <text x="40" y="401.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ rollup-plugin-visualizer로 시각화</text>
+  <text x="40" y="427.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 큰 라이브러리: 동적 import 또는 가벼운 대안</text>
+  <text x="40" y="453.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Tree Shaking: ES Module + sideEffects 확인</text>
+  <text x="40" y="481.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. 이미지 최적화 = 가장 큰 리소스 최적화</text>
+  <text x="40" y="509.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ WebP/AVIF 포맷, 반응형 srcSet</text>
+  <text x="40" y="535.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ loading=&quot;lazy&quot; (LCP 이미지 제외!)</text>
+  <text x="40" y="561.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ width/height 명시로 CLS 방지</text>
+  <text x="40" y="587.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Next.js &lt;Image&gt;가 대부분 자동 처리</text>
+  <text x="40" y="615.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">5. Virtualization = 대규모 리스트의 유일한 해법</text>
+  <text x="40" y="643.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 보이는 항목만 DOM에 렌더링</text>
+  <text x="40" y="669.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 10,000개 → ~30개 DOM 노드 (99.5% 감소)</text>
+  <text x="40" y="695.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ TanStack Virtual, react-window</text>
+  <text x="40" y="721.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 500개+ 항목에서 고려</text>
+  <text x="40" y="749.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">6. Lighthouse로 측정 → 개선 → 재측정 사이클</text>
+  <text x="40" y="777.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Opportunities: 구체적 개선 제안</text>
+  <text x="40" y="803.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Diagnostics: 성능 병목 정보</text>
+  <text x="40" y="829.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ &quot;충분히 빠르면&quot; 더 최적화하지 않는다</text>
+  <text x="40" y="857.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">7. 최적화 우선순위</text>
+  <text x="40" y="885.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ P1: 코드 분할, 이미지 최적화, Tree Shaking (효과 큼)</text>
+  <text x="40" y="911.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ P2: 측정 기반 병목 해결</text>
+  <text x="40" y="937.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ P3: 상황별 (가상화, 메모이제이션)</text>
+  <text x="40" y="963.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ P4: 아키텍처 (SSR/SSG, CDN)</text>
+</svg>

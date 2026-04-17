@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="610" height="719" viewBox="-10 -20 610 719">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="610" height="719" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">Step 1 (환경 설치)</text>
+  <rect x="20" y="45" width="550" height="624" rx="82.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="295" y="123.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ Step 2 (JS 복습) → Step 3 (생태계) → Step 4 (JSX)</text>
+  <text x="295" y="142.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="295" y="160.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Step 5 (Props) → Step 6 (useState) → Step 7 (Reconciliation)</text>
+  <text x="295" y="178.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼  ▼</text>
+  <text x="295" y="196.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Step 11 (useEffect)  Step 9 (리스트)</text>
+  <text x="295" y="214.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼  ▼</text>
+  <text x="295" y="233.10000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Step 8 (Form)  Step 12 (useRef) → Step 13 (useReducer)</text>
+  <text x="295" y="251.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="295" y="269.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Step 14 (메모이제이션) → Step 16 (Custom Hook)</text>
+  <text x="295" y="287.70000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="295" y="305.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Step 15 (신규 Hooks) → Step 10 (내부 구조)</text>
+  <text x="295" y="324.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="295" y="342.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Step 18 (Router) → Step 19 (렌더링 전략)</text>
+  <text x="295" y="360.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼  ▼</text>
+  <text x="295" y="378.70000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Step 22 (패칭)  Step 20 (RSC) → Step 21 (Next.js)</text>
+  <text x="295" y="396.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="295" y="415.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Step 23 (TanStack Query) → Step 24 (상태 경계)</text>
+  <text x="295" y="433.30000000000007" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="295" y="451.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Step 25 (Context) → Step 26 (전역 상태) → Step 27 (아키텍처)</text>
+  <text x="295" y="469.70000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="295" y="487.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Step 28 (폴더 구조) → Step 29 (컴포넌트 패턴) → Step 30 (Suspense)</text>
+  <text x="295" y="506.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="295" y="524.3000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Step 31~35 (타입/폼/스타일/애니메이션)</text>
+  <text x="295" y="542.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="295" y="560.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Step 36~38 (테스트/접근성/성능)</text>
+  <text x="295" y="578.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="295" y="597.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Step 39~42 (빌드/배포/CI·CD/보안)</text>
+</svg>

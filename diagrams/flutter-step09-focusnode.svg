@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="306" viewBox="70 -20 520 265">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="70" y="-20" width="520" height="265" rx="12" fill="#141414"/>
+  <text x="180" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">FocusNode의 역할</text>
+  <rect x="100" y="55" width="460" height="160" rx="24" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="250" y="78.2" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="18" opacity="1">FocusNode</text>
+  <text x="130" y="107.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">• 특정 위젯이 현재 포커스를 가지고 있는지 표시</text>
+  <text x="130" y="127.19999999999999" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">• 프로그래밍 방식으로 포커스 이동 및 키보드 제어</text>
+  <text x="130" y="146.79999999999998" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">• 포커스 변경 이벤트 구독 가능</text>
+  <text x="130" y="166.39999999999998" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">• dispose() 필수 (리소스 누수 방지)</text>
+</svg>

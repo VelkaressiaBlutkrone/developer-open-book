@@ -1,0 +1,18 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":140,"y":10,"text":"Flutter 레이아웃 3원칙","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":320,"height":30,"opacity":100},
+    {"type":"rectangle","id":"p1","x":80,"y":60,"width":520,"height":60,"backgroundColor":"#1e3a5f","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"p1_l","x":90,"y":68,"width":500,"height":45,"text":"① Constraints go down\n부모가 자식에게 \"너는 이 범위 안에서만 그려야 해\"라고 제약을 내려보낸다","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"p1","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"a1","x":340,"y":120,"width":0,"height":15,"strokeColor":"#a0a0a0","strokeWidth":2,"roughness":1,"opacity":60,"points":[[0,0],[0,15]],"lastCommittedPoint":[0,15],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"p2","x":80,"y":140,"width":520,"height":60,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"p2_l","x":90,"y":148,"width":500,"height":45,"text":"② Sizes go up\n자식이 제약 범위 안에서 자신의 크기를 결정하고 부모에게 보고한다","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"p2","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"a2","x":340,"y":200,"width":0,"height":15,"strokeColor":"#a0a0a0","strokeWidth":2,"roughness":1,"opacity":60,"points":[[0,0],[0,15]],"lastCommittedPoint":[0,15],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"p3","x":80,"y":220,"width":520,"height":60,"backgroundColor":"#2d1b69","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"p3_l","x":90,"y":228,"width":500,"height":45,"text":"③ Parent sets position\n부모가 자식을 어디에 배치할지 결정한다 (자식은 자신의 위치를 모른다)","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"p3","textAlign":"center","verticalAlign":"middle","opacity":100}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

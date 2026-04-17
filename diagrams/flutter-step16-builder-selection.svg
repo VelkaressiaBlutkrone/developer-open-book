@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="410" viewBox="20 -20 490.20000000000005 334.6">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="490.20000000000005" height="334.6" rx="12" fill="#141414"/>
+  <text x="50" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">어떤 것을 선택해야 하는가?</text>
+  <rect x="50" y="60" width="200" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="150" y="89.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">FutureBuilder</text>
+  <text x="280" y="71.7" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="13" opacity="1">단순 화면, 상태관리 솔루션 불필요</text>
+  <text x="280" y="89.9" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="13" opacity="1">데이터를 &quot;그 화면에서만&quot; 사용</text>
+  <text x="280" y="108.1" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="13" opacity="1">→ 간단한 프로필 화면, 상세 화면</text>
+  <rect x="50" y="145" width="200" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="150" y="174.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">StreamBuilder</text>
+  <text x="280" y="156.7" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">실시간 데이터 구독</text>
+  <text x="280" y="174.89999999999998" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">→ 채팅, 타이머, IoT 센서, WebSocket</text>
+  <rect x="50" y="230" width="200" height="50" rx="7.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="150" y="259.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Provider/Riverpod</text>
+  <text x="280" y="241.7" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="13" opacity="1">여러 화면에서 데이터 공유 필요</text>
+  <text x="280" y="259.9" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="13" opacity="1">캐싱·재시도·전역 로딩 상태 필요</text>
+  <text x="280" y="278.09999999999997" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="13" opacity="1">→ 쇼핑몰 상품 목록, 알림 등</text>
+</svg>

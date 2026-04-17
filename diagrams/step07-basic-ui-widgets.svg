@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="269" viewBox="0 -20 1000 298.8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="0" y="-20" width="1000" height="298.8" rx="12" fill="#141414"/>
+  <text x="200" y="35.2" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="28" opacity="1">기본 UI 위젯</text>
+  <rect x="270" y="70" width="200" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="370" y="99.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">기본 UI 위젯</text>
+  <path d="M310,120 L80,160" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <path d="M340,120 L240,160" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <path d="M370,120 L390,160" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <path d="M400,120 L530,160" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <path d="M430,120 L680,160" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <path d="M450,120 L810,160" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <rect x="30" y="165" width="140" height="45" rx="6.75" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="100" y="191.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Container</text>
+  <text x="30" y="227.9" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="11" opacity="1">BoxDecoration</text>
+  <text x="30" y="243.3" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="11" opacity="1">color, border, shadow</text>
+  <rect x="190" y="165" width="140" height="45" rx="6.75" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="260" y="191.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Text</text>
+  <text x="195" y="227.9" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="11" opacity="1">TextStyle</text>
+  <rect x="350" y="165" width="140" height="45" rx="6.75" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="420" y="191.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Image</text>
+  <text x="355" y="227.9" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="11" opacity="1">BoxFit</text>
+  <rect x="510" y="165" width="140" height="45" rx="6.75" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="580" y="191.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Icon</text>
+  <rect x="670" y="165" width="140" height="45" rx="6.75" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="740" y="191.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Padding</text>
+  <text x="675" y="227.9" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="11" opacity="1">EdgeInsets</text>
+  <rect x="830" y="165" width="140" height="45" rx="6.75" fill="#555555" stroke="#a0a0a0" stroke-width="2" opacity="1"/>
+  <text x="900" y="191.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Align</text>
+</svg>

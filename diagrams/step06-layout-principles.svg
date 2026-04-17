@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="343" viewBox="0 -15 840 343.2">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="0" y="-15" width="840" height="343.2" rx="12" fill="#141414"/>
+  <text x="200" y="40.2" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="28" opacity="1">Flutter Layout 시스템</text>
+  <rect x="250" y="75" width="220" height="55" rx="8.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="360" y="107.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20">Layout 시스템</text>
+  <path d="M290,130 L100,180" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M320,130 L280,180" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M400,130 L440,180" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M430,130 L620,180" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <rect x="30" y="180" width="180" height="50" rx="7.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="120" y="209.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">3원칙</text>
+  <text x="30" y="251.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">Constraints down</text>
+  <text x="30" y="271.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">Sizes up</text>
+  <text x="30" y="291.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">Parent sets position</text>
+  <rect x="230" y="180" width="180" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="320" y="209.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">BoxConstraints</text>
+  <text x="235" y="251.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">tight (고정 크기)</text>
+  <text x="235" y="271.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">loose (최대 제한)</text>
+  <text x="235" y="291.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">unbounded (무제한)</text>
+  <rect x="430" y="180" width="180" height="50" rx="7.5" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="520" y="209.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">Flex 레이아웃</text>
+  <text x="435" y="251.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">Row / Column</text>
+  <text x="435" y="271.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">Expanded</text>
+  <text x="435" y="291.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">Flexible</text>
+  <rect x="630" y="180" width="180" height="50" rx="7.5" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="720" y="209.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">정렬·배치</text>
+  <text x="635" y="251.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">MainAxisAlignment</text>
+  <text x="635" y="271.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">CrossAxisAlignment</text>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":150,"y":10,"text":"BuildContext의 활용","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":280,"height":30,"opacity":100},
+    {"type":"rectangle","id":"t1","x":80,"y":60,"width":220,"height":40,"backgroundColor":"#1e3a5f","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"t1_l","x":90,"y":68,"width":200,"height":25,"text":"Theme.of(context)","fontSize":16,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"t1","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"a1","x":300,"y":80,"width":30,"height":0,"strokeColor":"#4a9eed","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[30,0]],"lastCommittedPoint":[30,0],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"text","id":"d1","x":340,"y":70,"text":"트리를 위로 탐색 → 가장 가까운 Theme 반환","fontSize":13,"strokeColor":"#a0a0a0","fontFamily":2,"width":350,"height":20,"opacity":80},
+    {"type":"rectangle","id":"t2","x":80,"y":120,"width":220,"height":40,"backgroundColor":"#2d1b69","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"t2_l","x":90,"y":128,"width":200,"height":25,"text":"Navigator.of(context)","fontSize":16,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"t2","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"a2","x":300,"y":140,"width":30,"height":0,"strokeColor":"#8b5cf6","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[30,0]],"lastCommittedPoint":[30,0],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"text","id":"d2","x":340,"y":130,"text":"트리를 위로 탐색 → 가장 가까운 Navigator 반환","fontSize":13,"strokeColor":"#a0a0a0","fontFamily":2,"width":380,"height":20,"opacity":80},
+    {"type":"rectangle","id":"t3","x":80,"y":180,"width":220,"height":40,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"t3_l","x":90,"y":188,"width":200,"height":25,"text":"MediaQuery.of(context)","fontSize":15,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"t3","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"a3","x":300,"y":200,"width":30,"height":0,"strokeColor":"#22c55e","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[30,0]],"lastCommittedPoint":[30,0],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"text","id":"d3","x":340,"y":190,"text":"가장 가까운 MediaQuery → 화면 정보 반환","fontSize":13,"strokeColor":"#a0a0a0","fontFamily":2,"width":360,"height":20,"opacity":80}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="375" viewBox="50 -20 520 325">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="50" y="-20" width="520" height="325" rx="12" fill="#141414"/>
+  <text x="150" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">Element의 핵심 책임</text>
+  <rect x="80" y="60" width="460" height="35" rx="5.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="310" y="81" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">1. Widget 참조 유지 — 현재 연결된 Widget을 기억</text>
+  <rect x="80" y="105" width="460" height="35" rx="5.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="310" y="126" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">2. 자식 Element 관리 — 생성·업데이트·삭제</text>
+  <rect x="80" y="150" width="460" height="35" rx="5.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="310" y="171" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">3. RenderObject 참조 — 연결된 RenderObject 보유</text>
+  <rect x="80" y="195" width="460" height="35" rx="5.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="310" y="216" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">4. BuildContext 제공 — BuildContext == Element</text>
+  <rect x="80" y="240" width="460" height="35" rx="5.25" fill="#1a4d4d" stroke="#06b6d4" stroke-width="1" opacity="1"/>
+  <text x="310" y="261" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">5. 생명주기 관리 — mount → active → inactive → unmount</text>
+</svg>

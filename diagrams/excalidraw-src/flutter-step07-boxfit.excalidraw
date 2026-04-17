@@ -1,0 +1,32 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":150,"y":10,"text":"BoxFit 옵션 비교","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":250,"height":30,"opacity":100},
+    {"type":"text","id":"subtitle","x":80,"y":48,"text":"원본 이미지: 가로형 (3:2) / Container: 정사각형 (1:1)","fontSize":13,"strokeColor":"#a0a0a0","fontFamily":2,"width":400,"height":18,"opacity":70},
+    {"type":"rectangle","id":"f1","x":80,"y":75,"width":220,"height":35,"backgroundColor":"#1e3a5f","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"f1_l","x":90,"y":83,"width":200,"height":20,"text":"BoxFit.cover","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"f1","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"f1_d","x":310,"y":83,"text":"꽉 채움, 일부 잘릴 수 있음 ← 카드 배경","fontSize":13,"strokeColor":"#a0a0a0","fontFamily":2,"width":380,"height":18,"opacity":80},
+    {"type":"rectangle","id":"f2","x":80,"y":120,"width":220,"height":35,"backgroundColor":"#2d1b69","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"f2_l","x":90,"y":128,"width":200,"height":20,"text":"BoxFit.contain","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"f2","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"f2_d","x":310,"y":128,"text":"전체 표시, 여백 발생 ← 로고, 아이콘","fontSize":13,"strokeColor":"#a0a0a0","fontFamily":2,"width":350,"height":18,"opacity":80},
+    {"type":"rectangle","id":"f3","x":80,"y":165,"width":220,"height":35,"backgroundColor":"#5c1a1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#ef4444","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"f3_l","x":90,"y":173,"width":200,"height":20,"text":"BoxFit.fill","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"f3","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"f3_d","x":310,"y":173,"text":"꽉 채움, 비율 무시 (왜곡)","fontSize":13,"strokeColor":"#a0a0a0","fontFamily":2,"width":250,"height":18,"opacity":80},
+    {"type":"rectangle","id":"f4","x":80,"y":210,"width":220,"height":35,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"f4_l","x":90,"y":218,"width":200,"height":20,"text":"BoxFit.fitWidth","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"f4","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"f4_d","x":310,"y":218,"text":"너비 맞춤, 높이 비율 유지","fontSize":13,"strokeColor":"#a0a0a0","fontFamily":2,"width":250,"height":18,"opacity":80},
+    {"type":"rectangle","id":"f5","x":80,"y":255,"width":220,"height":35,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"f5_l","x":90,"y":263,"width":200,"height":20,"text":"BoxFit.fitHeight","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"f5","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"f5_d","x":310,"y":263,"text":"높이 맞춤, 너비 비율 유지","fontSize":13,"strokeColor":"#a0a0a0","fontFamily":2,"width":250,"height":18,"opacity":80},
+    {"type":"rectangle","id":"f6","x":80,"y":300,"width":220,"height":35,"backgroundColor":"#5c3d1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"f6_l","x":90,"y":308,"width":200,"height":20,"text":"BoxFit.none","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"f6","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"f6_d","x":310,"y":308,"text":"원본 크기 그대로","fontSize":13,"strokeColor":"#a0a0a0","fontFamily":2,"width":180,"height":18,"opacity":80},
+    {"type":"rectangle","id":"f7","x":80,"y":345,"width":220,"height":35,"backgroundColor":"#1a4d4d","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#06b6d4","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"f7_l","x":90,"y":353,"width":200,"height":20,"text":"BoxFit.scaleDown","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"f7","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"f7_d","x":310,"y":353,"text":"contain과 동일, 확대 안 함","fontSize":13,"strokeColor":"#a0a0a0","fontFamily":2,"width":250,"height":18,"opacity":80}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

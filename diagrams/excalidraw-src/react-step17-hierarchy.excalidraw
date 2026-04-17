@@ -1,0 +1,345 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t",
+      "x": 80,
+      "y": 10,
+      "text": "에러 처리의 계층 구조",
+      "fontSize": 22,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 158.39999999999998,
+      "height": 28,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "l0",
+      "x": 50,
+      "y": 55,
+      "width": 480,
+      "height": 50,
+      "backgroundColor": "#5c1a1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#ef4444",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "l0a",
+      "x": 60,
+      "y": 60,
+      "text": "최상위",
+      "fontSize": 14,
+      "strokeColor": "#ef4444",
+      "fontFamily": 2,
+      "width": 25.200000000000003,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "l0b",
+      "x": 140,
+      "y": 60,
+      "text": "전역 Error Boundary",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 142.8,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "l0c",
+      "x": 80,
+      "y": 83,
+      "text": "앱 전체의 최후 방어선",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 86.39999999999999,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "line",
+      "id": "ll0",
+      "x": 80,
+      "y": 105,
+      "width": 0,
+      "height": 15,
+      "strokeColor": "#ef4444",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 60,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        15
+      ],
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "l1",
+      "x": 70,
+      "y": 120,
+      "width": 460,
+      "height": 50,
+      "backgroundColor": "#5c3d1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "l1a",
+      "x": 80,
+      "y": 125,
+      "text": "페이지",
+      "fontSize": 14,
+      "strokeColor": "#f59e0b",
+      "fontFamily": 2,
+      "width": 25.200000000000003,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "l1b",
+      "x": 160,
+      "y": 125,
+      "text": "라우트별 Error Boundary",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 159.6,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "l1c",
+      "x": 100,
+      "y": 148,
+      "text": "특정 페이지 에러 격리",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 86.39999999999999,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "line",
+      "id": "ll1",
+      "x": 100,
+      "y": 170,
+      "width": 0,
+      "height": 15,
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 60,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        15
+      ],
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "l2",
+      "x": 90,
+      "y": 185,
+      "width": 440,
+      "height": 50,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "l2a",
+      "x": 100,
+      "y": 190,
+      "text": "섹션",
+      "fontSize": 14,
+      "strokeColor": "#06b6d4",
+      "fontFamily": 2,
+      "width": 16.8,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "l2b",
+      "x": 180,
+      "y": 190,
+      "text": "기능별 Error Boundary",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 151.20000000000002,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "l2c",
+      "x": 120,
+      "y": 213,
+      "text": "위젯/패널 에러 격리",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 79.19999999999999,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "line",
+      "id": "ll2",
+      "x": 120,
+      "y": 235,
+      "width": 0,
+      "height": 15,
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 60,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        15
+      ],
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "l3",
+      "x": 110,
+      "y": 250,
+      "width": 420,
+      "height": 50,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "l3a",
+      "x": 120,
+      "y": 255,
+      "text": "컴포넌트",
+      "fontSize": 14,
+      "strokeColor": "#22c55e",
+      "fontFamily": 2,
+      "width": 33.6,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "l3b",
+      "x": 200,
+      "y": 255,
+      "text": "try/catch + State",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 142.8,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "l3c",
+      "x": 140,
+      "y": 278,
+      "text": "이벤트 핸들러, 비동기 에러",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 107.99999999999999,
+      "height": 18,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

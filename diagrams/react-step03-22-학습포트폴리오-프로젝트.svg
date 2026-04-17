@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="982" viewBox="-10 -20 431.5 706">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="431.5" height="706" rx="12" fill="#141414"/>
+  <rect x="20" y="10" width="371.5" height="646" rx="55.725" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="205.75" y="90.80000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">🔰 학습·포트폴리오 프로젝트</text>
+  <text x="205.75" y="109.00000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">━━━━━━━━━━━━━━━━━━━━━━━━━━</text>
+  <text x="205.75" y="127.20000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">빌드:  Vite</text>
+  <text x="205.75" y="145.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">라우팅:  React Router</text>
+  <text x="205.75" y="163.60000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">상태:  useState + Context</text>
+  <text x="205.75" y="181.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">스타일:  Tailwind CSS</text>
+  <text x="205.75" y="200" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">패칭:  TanStack Query</text>
+  <text x="205.75" y="218.20000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 이 로드맵의 기본 경로</text>
+  <text x="205.75" y="236.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">🏢 실무 SPA (대시보드, 관리자 페이지)</text>
+  <text x="205.75" y="254.60000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">━━━━━━━━━━━━━━━━━━━━━━━━━━</text>
+  <text x="205.75" y="272.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">빌드:  Vite</text>
+  <text x="205.75" y="291" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">라우팅:  React Router 또는 TanStack Router</text>
+  <text x="205.75" y="309.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">상태:  Zustand + TanStack Query</text>
+  <text x="205.75" y="327.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">스타일:  Tailwind CSS</text>
+  <text x="205.75" y="345.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">폼:  React Hook Form + Zod</text>
+  <text x="205.75" y="363.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">타입:  TypeScript</text>
+  <text x="205.75" y="382" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">테스트:  Vitest + RTL</text>
+  <text x="205.75" y="400.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">🌐 공개 웹사이트 (SEO 중요, 마케팅 페이지)</text>
+  <text x="205.75" y="418.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">━━━━━━━━━━━━━━━━━━━━━━━━━━</text>
+  <text x="205.75" y="436.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">프레임워크: Next.js App Router</text>
+  <text x="205.75" y="454.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">상태:  Zustand + TanStack Query</text>
+  <text x="205.75" y="473" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">스타일:  Tailwind CSS</text>
+  <text x="205.75" y="491.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">배포:  Vercel</text>
+  <text x="205.75" y="509.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ SSR/SSG가 필요하면 메타 프레임워크 선택</text>
+  <text x="205.75" y="527.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">📱 모바일 앱</text>
+  <text x="205.75" y="545.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">━━━━━━━━━━━━━━━━━━━━━━━━━━</text>
+  <text x="205.75" y="564" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">React Native + Expo</text>
+  <text x="205.75" y="582.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 이 로드맵의 범위 밖이지만, React 코어 지식이 동일하게 적용됨</text>
+</svg>

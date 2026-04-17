@@ -1,0 +1,26 @@
+{
+  "character": {
+    "id": "ffda2587-6c9a-49e4-bec6-eb022c0bebf7",
+    "name": "Visitor",
+    "prompt": "medieval fantasy wandering visitor NPC, young woman with green cloak and hood, adventurer carrying a satchel, curious expression",
+    "size": {
+      "width": 48,
+      "height": 48
+    },
+    "template_id": "mannequin",
+    "directions": 4,
+    "view": "high top-down",
+    "created_at": "2026-04-16T05:19:18.306605+00:00"
+  },
+  "frames": {
+    "rotations": {
+      "south": "rotations/south.png",
+      "west": "rotations/west.png",
+      "east": "rotations/east.png",
+      "north": "rotations/north.png"
+    },
+    "animations": {}
+  },
+  "export_version": "2.0",
+  "export_date": "2026-04-16T05:20:14.009233"
+}

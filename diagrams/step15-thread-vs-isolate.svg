@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="346" viewBox="-20 -20 750 346.2">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-20" y="-20" width="750" height="346.2" rx="12" fill="#141414"/>
+  <text x="120" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">Java/Python 스레드 vs Dart Isolate</text>
+  <text x="280" y="69.4" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16" opacity="1">Java / Python</text>
+  <rect x="60" y="85" width="150" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="135" y="113.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">Thread A</text>
+  <defs><marker id="arrow-t_a1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M210,110 L270,110" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-t_a1)"/>
+  <rect x="270" y="85" width="160" height="50" rx="7.5" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="350" y="113.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">공유 메모리</text>
+  <defs><marker id="arrow-t_a2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M430,110 L490,110" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-t_a2)"/>
+  <rect x="490" y="85" width="150" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="565" y="113.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">Thread B</text>
+  <text x="290" y="153.7" fill="#ef4444" font-family="Nunito, sans-serif" font-size="13" opacity="1">Lock 필요</text>
+  <path d="M30,175 L680,175" fill="none" stroke="#555555" stroke-width="1" opacity="0.6"/>
+  <text x="310" y="204.4" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16" opacity="1">Dart</text>
+  <rect x="40" y="220" width="180" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="130" y="248.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Isolate A (힙 A)</text>
+  <defs><marker id="arrow-i_a1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M220,245 L290,245" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-i_a1)"/>
+  <rect x="290" y="220" width="130" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="355" y="248.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">메시지 큐</text>
+  <defs><marker id="arrow-i_a2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M420,245 L490,245" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-i_a2)"/>
+  <rect x="490" y="220" width="180" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="580" y="248.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Isolate B (힙 B)</text>
+  <text x="300" y="289.7" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">공유 없음</text>
+</svg>

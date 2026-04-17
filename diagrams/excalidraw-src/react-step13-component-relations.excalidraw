@@ -1,0 +1,428 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t",
+      "x": 80,
+      "y": 10,
+      "text": "useReducer 구성 요소 관계",
+      "fontSize": 22,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 250.79999999999998,
+      "height": 28,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "sig",
+      "x": 50,
+      "y": 50,
+      "width": 460,
+      "height": 35,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "sigt",
+      "x": 60,
+      "y": 57,
+      "text": "useReducer(reducer, initialState, init?)",
+      "fontSize": 14,
+      "strokeColor": "#06b6d4",
+      "fontFamily": 2,
+      "width": 336,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "line",
+      "id": "a1",
+      "x": 280,
+      "y": 85,
+      "width": 0,
+      "height": 20,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          20
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        20
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "st",
+      "x": 50,
+      "y": 115,
+      "width": 130,
+      "height": 35,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "stt",
+      "x": 50,
+      "y": 122,
+      "text": "[state]",
+      "fontSize": 14,
+      "strokeColor": "#22c55e",
+      "fontFamily": 2,
+      "width": 110,
+      "height": 20,
+      "opacity": 100,
+      "containerId": "st",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "text",
+      "id": "jsx",
+      "x": 55,
+      "y": 158,
+      "text": "→ JSX 렌더링",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 64.8,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "rd",
+      "x": 230,
+      "y": 115,
+      "width": 280,
+      "height": 35,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "rdt",
+      "x": 230,
+      "y": 122,
+      "text": "reducer(currentState, action)",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 260,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "rd",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "line",
+      "id": "a2",
+      "x": 230,
+      "y": 132,
+      "width": 50,
+      "height": 0,
+      "strokeColor": "#22c55e",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -50,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        -50,
+        0
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "act",
+      "x": 310,
+      "y": 170,
+      "width": 200,
+      "height": 35,
+      "backgroundColor": "#5c3d1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "actt",
+      "x": 310,
+      "y": 177,
+      "text": "{ type, payload? }",
+      "fontSize": 13,
+      "strokeColor": "#f59e0b",
+      "fontFamily": 2,
+      "width": 180,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "act",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "line",
+      "id": "a3",
+      "x": 410,
+      "y": 170,
+      "width": 0,
+      "height": 20,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          -20
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        -20
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "dp",
+      "x": 310,
+      "y": 225,
+      "width": 200,
+      "height": 35,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "dpt",
+      "x": 310,
+      "y": 232,
+      "text": "dispatch(action) 호출",
+      "fontSize": 13,
+      "strokeColor": "#8b5cf6",
+      "fontFamily": 2,
+      "width": 180,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "dp",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "line",
+      "id": "a4",
+      "x": 410,
+      "y": 225,
+      "width": 0,
+      "height": 15,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          -15
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        -15
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "eh",
+      "x": 330,
+      "y": 280,
+      "width": 160,
+      "height": 35,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "eht",
+      "x": 330,
+      "y": 287,
+      "text": "이벤트 핸들러",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 140,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "eh",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "text",
+      "id": "ehd",
+      "x": 330,
+      "y": 318,
+      "text": "(사용자 상호작용)",
+      "fontSize": 11,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 66,
+      "height": 17,
+      "opacity": 100
+    },
+    {
+      "type": "line",
+      "id": "a5",
+      "x": 410,
+      "y": 280,
+      "width": 0,
+      "height": 15,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          -15
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        -15
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "kf",
+      "x": 50,
+      "y": 350,
+      "width": 460,
+      "height": 30,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "kft",
+      "x": 55,
+      "y": 356,
+      "text": "핵심: 사용자 → dispatch(action) → reducer → newState → 재렌더링",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 421.2,
+      "height": 19,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

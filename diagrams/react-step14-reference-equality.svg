@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="613" viewBox="20 -20 460 470">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="460" height="470" rx="12" fill="#141414"/>
+  <text x="80" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">참조 동일성 (Reference Equality)</text>
+  <text x="60" y="68.5" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15" opacity="1">원시값: 값으로 비교</text>
+  <rect x="50" y="80" width="280" height="75" rx="11.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="60" y="99.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">42 === 42           → true</text>
+  <text x="60" y="119.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">'hello' === 'hello' → true</text>
+  <text x="60" y="138.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">같은 값이면 동일</text>
+  <text x="60" y="188.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">객체/배열/함수: 참조로 비교</text>
+  <rect x="50" y="200" width="340" height="95" rx="14.25" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="60" y="219.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">{} === {}               → false</text>
+  <text x="60" y="239.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">[] === []               → false</text>
+  <text x="60" y="259.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">(() =&gt; {}) === (() =&gt; {}) → false</text>
+  <text x="60" y="278.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">다른 메모리 주소 = 다른 참조</text>
+  <text x="60" y="333.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">React에서의 영향</text>
+  <rect x="50" y="345" width="400" height="75" rx="11.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="60" y="364.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">매 렌더링마다 config, handleClick, ids 새로 생성</text>
+  <text x="60" y="384.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">React.memo가 있어도 &quot;Props 변했다!&quot; 판단</text>
+  <text x="60" y="404.7" fill="#ef4444" font-family="Nunito, sans-serif" font-size="13" opacity="1">→ React.memo 무용지물</text>
+</svg>

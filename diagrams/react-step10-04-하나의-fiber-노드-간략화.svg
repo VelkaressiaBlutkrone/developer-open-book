@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="650" viewBox="-10 -20 542 587">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="542" height="587" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">하나의 Fiber 노드 (간략화)</text>
+  <rect x="20" y="45" width="482" height="492" rx="72.3" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="261" y="112.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">{</text>
+  <text x="261" y="130.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">//  정체성</text>
+  <text x="261" y="148.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">type: Counter,  // 컴포넌트 함수 또는 HTML 태그명</text>
+  <text x="261" y="167.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">key: null,  // React Element의 key</text>
+  <text x="261" y="185.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">//  트리 관계 (연결 리스트)</text>
+  <text x="261" y="203.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">return: parentFiber,  // 부모 Fiber를 가리킨다</text>
+  <text x="261" y="221.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">child: firstChildFiber,  // 첫 번째 자식 Fiber</text>
+  <text x="261" y="239.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">sibling: nextSiblingFiber,  // 다음 형제 Fiber</text>
+  <text x="261" y="258.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">//  상태와 효과</text>
+  <text x="261" y="276.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">memoizedState: {  // Hook의 State가 저장되는 곳!</text>
+  <text x="261" y="294.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">queue: [...],</text>
+  <text x="261" y="312.70000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">next: nextHook  // useState, useEffect 등이 연결 리스트로 연결</text>
+  <text x="261" y="330.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">},</text>
+  <text x="261" y="349.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">updateQueue: [...],  // 대기 중인 State 업데이트</text>
+  <text x="261" y="367.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">effectTag: 'UPDATE',  // Commit Phase에서 수행할 작업 종류</text>
+  <text x="261" y="385.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">//  Double Buffering</text>
+  <text x="261" y="403.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">alternate: workInProgressFiber,  // 반대쪽 트리의 대응 노드</text>
+  <text x="261" y="421.90000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">//  Props</text>
+  <text x="261" y="440.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">pendingProps: { ... },  // 새로 전달된 Props</text>
+  <text x="261" y="458.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">memoizedProps: { ... },  // 이전 렌더링의 Props</text>
+  <text x="261" y="476.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">}</text>
+</svg>

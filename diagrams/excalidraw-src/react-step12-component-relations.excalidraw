@@ -1,0 +1,271 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t",
+      "x": 80,
+      "y": 10,
+      "text": "useRef 구성 요소 관계",
+      "fontSize": 22,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 198,
+      "height": 28,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "uf",
+      "x": 50,
+      "y": 55,
+      "width": 500,
+      "height": 130,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "u1",
+      "x": 60,
+      "y": 65,
+      "text": "useRef(initialValue)",
+      "fontSize": 15,
+      "strokeColor": "#06b6d4",
+      "fontFamily": 2,
+      "width": 180,
+      "height": 21,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "u2",
+      "x": 80,
+      "y": 90,
+      "text": "{ current: initialValue }  ← Fiber 노드에 저장",
+      "fontSize": 13,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 319.8,
+      "height": 19,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "dr",
+      "x": 80,
+      "y": 115,
+      "width": 200,
+      "height": 55,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "dr1",
+      "x": 90,
+      "y": 120,
+      "text": "DOM 참조 용도",
+      "fontSize": 14,
+      "strokeColor": "#22c55e",
+      "fontFamily": 2,
+      "width": 75.60000000000001,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "dr2",
+      "x": 90,
+      "y": 140,
+      "text": "<div ref={myRef} />",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 136.79999999999998,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "dr3",
+      "x": 90,
+      "y": 155,
+      "text": "Commit Phase에서 할당",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 122.39999999999999,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "vr",
+      "x": 310,
+      "y": 115,
+      "width": 220,
+      "height": 55,
+      "backgroundColor": "#5c3d1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "vr1",
+      "x": 320,
+      "y": 120,
+      "text": "값 저장 용도",
+      "fontSize": 14,
+      "strokeColor": "#f59e0b",
+      "fontFamily": 2,
+      "width": 58.800000000000004,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "vr2",
+      "x": 320,
+      "y": 140,
+      "text": "ref.current = newValue",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 158.39999999999998,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "vr3",
+      "x": 320,
+      "y": 155,
+      "text": "타이머 ID / 이전 값 / 인스턴스",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 144,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "vs",
+      "x": 60,
+      "y": 200,
+      "text": "useState vs useRef",
+      "fontSize": 16,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 172.79999999999998,
+      "height": 22,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "st",
+      "x": 50,
+      "y": 230,
+      "width": 240,
+      "height": 28,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "stt",
+      "x": 50,
+      "y": 235,
+      "text": "setState → 재렌더링 ★",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 220,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "st",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "rectangle",
+      "id": "rf",
+      "x": 310,
+      "y": 230,
+      "width": 240,
+      "height": 28,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "rft",
+      "x": 310,
+      "y": 235,
+      "text": "ref.current = x → 재렌더링 없음",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 220,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "rf",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

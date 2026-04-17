@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="581" viewBox="20 -20 530 513">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="530" height="513" rx="12" fill="#141414"/>
+  <text x="100" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Step 21 — 다루는 범위</text>
+  <rect x="50" y="50" width="470" height="243" rx="36.449999999999996" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="60" y="72.4" fill="#22c55e" font-family="Nunito, sans-serif" font-size="16" opacity="1">다루는 것</text>
+  <text x="65" y="96.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· App Router의 파일 시스템 라우팅 규약</text>
+  <text x="65" y="118.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 특수 파일: page, layout, loading, error, not-found</text>
+  <text x="65" y="140.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 동적 라우트와 Route Groups</text>
+  <text x="65" y="162.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Server Component가 기본인 환경에서의 데이터 패칭</text>
+  <text x="65" y="184.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Next.js 캐싱 계층 구조</text>
+  <text x="65" y="206.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 정적 렌더링 vs 동적 렌더링의 자동 판단</text>
+  <text x="65" y="228.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Server Actions 실전 패턴</text>
+  <text x="65" y="250.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Parallel Routes, Intercepting Routes 개요</text>
+  <text x="65" y="272.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Vite+React Router vs Next.js 선택 기준</text>
+  <rect x="50" y="308" width="470" height="155" rx="23.25" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="60" y="330.4" fill="#ef4444" font-family="Nunito, sans-serif" font-size="16" opacity="1">다루지 않는 것</text>
+  <text x="65" y="354.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Next.js 설치/설정 절차 (공식 문서 참조)</text>
+  <text x="65" y="376.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Pages Router (레거시)</text>
+  <text x="65" y="398.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Middleware 상세</text>
+  <text x="65" y="420.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Edge Runtime 상세</text>
+  <text x="65" y="442.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Vercel 배포 상세 (Step 40)</text>
+</svg>

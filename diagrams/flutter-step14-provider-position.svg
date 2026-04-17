@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="289" viewBox="50 -20 560 270">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="50" y="-20" width="560" height="270" rx="12" fill="#141414"/>
+  <text x="80" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Flutter 상태관리 생태계에서 Provider의 위치</text>
+  <rect x="100" y="55" width="480" height="45" rx="6.75" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="340" y="81" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Flutter 내장: InheritedWidget ← 저수준, 직접 사용 불편</text>
+  <defs><marker id="arrow-a1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M340,100 L340,115" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a1)"/>
+  <rect x="100" y="115" width="480" height="45" rx="6.75" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="340" y="141" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Provider 패키지: InheritedWidget 래핑 → 편리한 API 제공</text>
+  <defs><marker id="arrow-a2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M340,160 L340,175" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a2)"/>
+  <rect x="100" y="175" width="480" height="45" rx="6.75" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="340" y="201" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Riverpod 패키지: Provider 한계 개선 (Step 15)</text>
+</svg>

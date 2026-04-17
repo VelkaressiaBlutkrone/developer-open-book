@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="520" viewBox="-10 -20 499.5 433">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="499.5" height="433" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">Step 08 핵심 개념 관계도</text>
+  <rect x="20" y="45" width="439.5" height="338" rx="50.699999999999996" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="239.75" y="99.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">폼 요소 (input, select, textarea, checkbox, radio)</text>
+  <text x="239.75" y="117.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Controlled: React State가 값을 제어</text>
+  <text x="239.75" y="135.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· value={state} + onChange={handler}</text>
+  <text x="239.75" y="153.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· State = 단일 진실 공급원</text>
+  <text x="239.75" y="172" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 실시간 검증, 입력 변환 가능</text>
+  <text x="239.75" y="190.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Uncontrolled: DOM이 값을 관리</text>
+  <text x="239.75" y="208.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· defaultValue + useRef</text>
+  <text x="239.75" y="226.60000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 제출 시점에 ref.current.value로 읽기</text>
+  <text x="239.75" y="244.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 파일 입력 등 특수한 경우에 사용</text>
+  <text x="239.75" y="263" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">React Synthetic Event</text>
+  <text x="239.75" y="281.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 브라우저 네이티브 이벤트를 래핑한 크로스 브라우저 객체</text>
+  <text x="239.75" y="299.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Event Delegation: root에 한 번만 등록</text>
+  <text x="239.75" y="317.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Event Pooling 제거됨 (React 17+)</text>
+  <text x="239.75" y="335.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">폼 제출: e.preventDefault() + 비동기 처리</text>
+</svg>

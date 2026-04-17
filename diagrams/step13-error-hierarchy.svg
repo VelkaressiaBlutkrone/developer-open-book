@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="855" height="331" viewBox="-45 -20 855 331">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-45" y="-20" width="855" height="331" rx="12" fill="#141414"/>
+  <text x="200" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">Dart 오류 계층 구조</text>
+  <rect x="300" y="55" width="150" height="50" rx="7.5" fill="#555555" stroke="#a0a0a0" stroke-width="2" opacity="1"/>
+  <text x="375" y="84.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Object</text>
+  <path d="M375,105 L375,130" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M175,130 L575,130" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M175,130 L175,155" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M575,130 L575,155" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <rect x="110" y="155" width="130" height="50" rx="7.5" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="175" y="184.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Error</text>
+  <path d="M175,205 L175,225" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M40,225 L350,225" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M40,225 L40,245" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M135,225 L135,245" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M240,225 L240,245" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M350,225 L350,245" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <rect x="-15" y="245" width="130" height="36" rx="5.3999999999999995" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="50" y="266" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">AssertionError</text>
+  <rect x="80" y="245" width="120" height="36" rx="5.3999999999999995" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="140" y="266" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">RangeError</text>
+  <rect x="190" y="245" width="110" height="36" rx="5.3999999999999995" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="245" y="266" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">StateError</text>
+  <rect x="295" y="245" width="110" height="36" rx="5.3999999999999995" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="350" y="266" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">TypeError</text>
+  <rect x="500" y="155" width="150" height="50" rx="7.5" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="575" y="184.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Exception</text>
+  <path d="M575,205 L575,225" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M440,225 L750,225" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M440,225 L440,245" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M575,225 L575,245" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <path d="M700,225 L700,245" fill="none" stroke="#555555" stroke-width="2" opacity="1"/>
+  <rect x="380" y="245" width="140" height="36" rx="5.3999999999999995" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="450" y="266" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">FormatException</text>
+  <rect x="515" y="245" width="120" height="36" rx="5.3999999999999995" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="575" y="266" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">IOException</text>
+  <rect x="635" y="245" width="145" height="36" rx="5.3999999999999995" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="707.5" y="266" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">TimeoutException</text>
+</svg>

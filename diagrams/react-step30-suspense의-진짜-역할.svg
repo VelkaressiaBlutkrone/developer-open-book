@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="505" viewBox="-10 -15 548 461">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="548" height="461" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Suspense의 진짜 역할</text>
+  <rect x="20" y="50" width="488" height="366" rx="54.9" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">표면적: &quot;로딩 중일 때 fallback을 보여주는 컴포넌트&quot;</text>
+  <text x="40" y="109.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">본질적: &quot;비동기 작업의 완료를 선언적으로 기다리는 메커니즘&quot; ★</text>
+  <text x="40" y="135.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Suspense가 기다릴 수 있는 것:</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· React.lazy → 코드 청크 로딩 (Step 29)</text>
+  <text x="40" y="187.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· use(Promise) → 데이터 패칭 (React 19)</text>
+  <text x="40" y="213.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Server Component 렌더링 → Streaming SSR (Step 19)</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 향후: 이미지 로딩, 스크립트 로딩 등 확장 예정</text>
+  <text x="40" y="265.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">핵심: Suspense는 &quot;무엇을 기다리는가&quot;에 관심이 없다.</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&quot;기다리는 동안 무엇을 보여줄 것인가&quot;만 선언한다.</text>
+  <text x="40" y="317.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ 관심사 분리의 극치</text>
+</svg>

@@ -1,0 +1,33 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":150,"y":10,"text":"flutter doctor 출력 예시","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":340,"height":30,"opacity":100},
+    {"type":"rectangle","id":"row1","x":80,"y":60,"width":500,"height":32,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"row1_label","x":100,"y":67,"width":460,"height":18,"text":"[✓] Flutter (Channel stable, 3.x.x)","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"row1","textAlign":"left","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"row2","x":80,"y":97,"width":500,"height":32,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"row2_label","x":100,"y":104,"width":460,"height":18,"text":"[✓] Android toolchain (Android SDK version 34.x.x)","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"row2","textAlign":"left","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"row3","x":80,"y":134,"width":500,"height":32,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"row3_label","x":100,"y":141,"width":460,"height":18,"text":"[✓] Xcode - develop for iOS and macOS (Xcode 15.x)","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"row3","textAlign":"left","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"row4","x":80,"y":171,"width":500,"height":32,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"row4_label","x":100,"y":178,"width":460,"height":18,"text":"[✓] Chrome - develop for the web","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"row4","textAlign":"left","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"row5","x":80,"y":208,"width":500,"height":32,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"row5_label","x":100,"y":215,"width":460,"height":18,"text":"[✓] Android Studio (version 2023.x)","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"row5","textAlign":"left","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"row6","x":80,"y":245,"width":500,"height":32,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"row6_label","x":100,"y":252,"width":460,"height":18,"text":"[✓] VS Code (version 1.x.x)","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"row6","textAlign":"left","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"row7","x":80,"y":282,"width":500,"height":32,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"row7_label","x":100,"y":289,"width":460,"height":18,"text":"[✓] Connected device (2 available)","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"row7","textAlign":"left","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"row8","x":80,"y":319,"width":500,"height":32,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"row8_label","x":100,"y":326,"width":460,"height":18,"text":"[✓] Network resources","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"row8","textAlign":"left","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"legend_title","x":80,"y":375,"text":"출력 기호 의미","fontSize":16,"strokeColor":"#e5e5e5","fontFamily":2,"width":140,"height":22,"opacity":100},
+    {"type":"rectangle","id":"sym1","x":80,"y":405,"width":200,"height":30,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"sym1_label","x":90,"y":412,"width":180,"height":16,"text":"[✓]  정상","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"sym1","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"sym2","x":290,"y":405,"width":200,"height":30,"backgroundColor":"#5c3d1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"sym2_label","x":300,"y":412,"width":180,"height":16,"text":"[!]  경고","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"sym2","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"rectangle","id":"sym3","x":500,"y":405,"width":200,"height":30,"backgroundColor":"#5c1a1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#ef4444","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"sym3_label","x":510,"y":412,"width":180,"height":16,"text":"[✗]  오류","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"sym3","textAlign":"center","verticalAlign":"middle","opacity":100}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

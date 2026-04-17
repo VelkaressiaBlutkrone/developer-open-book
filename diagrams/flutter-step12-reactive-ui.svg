@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="245" viewBox="0 -20 680 245">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="0" y="-20" width="680" height="245" rx="12" fill="#141414"/>
+  <text x="120" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">명령형 UI vs Reactive UI (Flutter)</text>
+  <rect x="30" y="55" width="290" height="140" rx="21" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="90" y="73.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">명령형(Imperative) UI</text>
+  <text x="50" y="100.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">counter++</text>
+  <text x="50" y="117.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">textView.setText(counter)</text>
+  <text x="50" y="134.39999999999998" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">badge.setCount(counter)</text>
+  <text x="50" y="151.2" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1"></text>
+  <text x="50" y="168" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">← 개발자가 직접 UI 변경</text>
+  <text x="50" y="184.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">← 연관 UI도 직접 업데이트</text>
+  <rect x="360" y="55" width="290" height="140" rx="21" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="410" y="73.5" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15" opacity="1">Reactive UI — Flutter</text>
+  <text x="380" y="100.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">setState(() =&gt; counter++)</text>
+  <text x="380" y="117.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1"></text>
+  <text x="380" y="134.39999999999998" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">// Flutter가 관련 위젯을</text>
+  <text x="380" y="151.2" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">// 자동으로 rebuild</text>
+  <text x="380" y="168" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">// build()가 항상 최신 상태</text>
+  <text x="380" y="184.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">// 반영하는 UI를 반환</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="494" viewBox="-10 -20 460 379">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="460" height="379" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">이 패턴의 문제점 (다음 섹션에서 상세히 분석)</text>
+  <rect x="20" y="45" width="400" height="284" rx="42.6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">이 패턴의 문제점 (다음 섹션에서 상세히 분석)</text>
+  <text x="40" y="105.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. 서버 데이터를 로컬 State에 &quot;복사&quot;해야 한다</text>
+  <text x="40" y="133.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 두 곳에 같은 데이터 → 동기화 문제</text>
+  <text x="40" y="159.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· &quot;어느 것이 진실인가?&quot; — 서버? 로컬?</text>
+  <text x="40" y="187.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. Mutation 후 수동으로 로컬 State를 업데이트해야 한다</text>
+  <text x="40" y="215.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 서버 응답과 로컬 업데이트가 일치하는지 보장 어려움</text>
+  <text x="40" y="241.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 다른 사용자의 변경은 반영되지 않음</text>
+  <text x="40" y="269.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. 에러 시 롤백이 어렵다</text>
+  <text x="40" y="297.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 낙관적 업데이트를 직접 구현하면 매우 복잡</text>
+</svg>

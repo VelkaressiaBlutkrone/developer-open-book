@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="297" viewBox="-10 -20 474 235">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="474" height="235" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">App (theme, user)</text>
+  <rect x="20" y="45" width="414" height="140" rx="21" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="227" y="82.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Layout (props: theme, user)  ← 사용하지 않음, 전달만</text>
+  <text x="227" y="100.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Sidebar (props: theme, user)  ← 사용하지 않음, 전달만</text>
+  <text x="227" y="118.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">NavMenu (props: theme, user) ← 사용하지 않음, 전달만</text>
+  <text x="227" y="136.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">NavItem (props: theme)  ← 여기서 사용!</text>
+  <text x="227" y="154.89999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">UserBadge (props: user)  ← 여기서 사용!</text>
+</svg>

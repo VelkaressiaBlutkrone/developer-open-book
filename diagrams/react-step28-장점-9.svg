@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="633" height="539" viewBox="-10 -15 633 539">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="633" height="539" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">장점:</text>
+  <rect x="20" y="50" width="573" height="444" rx="66.6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 관련 코드가 한 곳에 모인다 (높은 응집도) ★</text>
+  <text x="40" y="109.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· &quot;상품&quot; 관련 수정 → features/products/ 폴더만 보면 된다</text>
+  <text x="40" y="135.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 기능의 추가/삭제가 폴더 단위로 가능</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 기능 간 경계가 명확 → 의존성 관리 용이</text>
+  <text x="40" y="187.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Screaming Architecture: &quot;이 앱은 auth, products, cart를 다룬다&quot;</text>
+  <text x="40" y="213.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 팀 분업: 기능별로 담당자 배정 가능</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 대규모 프로젝트에서도 구조가 유지됨</text>
+  <text x="40" y="265.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">단점:</text>
+  <text x="40" y="291.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 초기 설정이 Layer-based보다 복잡</text>
+  <text x="40" y="317.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· &quot;이 코드가 feature인가 shared인가?&quot; 판단이 필요</text>
+  <text x="40" y="343.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 소규모 프로젝트에서는 과도한 구조일 수 있음</text>
+  <text x="40" y="369.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· feature 간 공유 코드의 위치 결정이 어려울 수 있음</text>
+  <text x="40" y="395.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">적합한 규모: 중규모 이상 (파일 30개+)</text>
+</svg>

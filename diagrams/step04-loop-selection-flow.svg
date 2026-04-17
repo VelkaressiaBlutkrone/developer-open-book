@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="575" viewBox="180 -20 595 570">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="180" y="-20" width="595" height="570" rx="12" fill="#141414"/>
+  <text x="215" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">반복문 선택 흐름도</text>
+  <polygon points="370,65 510,110 370,155 230,110" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="370" y="103.60000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">반복 횟수를</text>
+  <text x="370" y="124.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">미리 아는가?</text>
+  <defs><marker id="arrow-y1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M510,110 L590,110" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-y1)"/>
+  <text x="530" y="104.6" fill="#22c55e" font-family="Nunito, sans-serif" font-size="14" opacity="1">YES</text>
+  <rect x="595" y="85" width="150" height="55" rx="8.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="670" y="117.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20">for</text>
+  <defs><marker id="arrow-n1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M370,155 L370,195" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-n1)"/>
+  <text x="378" y="175.6" fill="#ef4444" font-family="Nunito, sans-serif" font-size="14" opacity="1">NO</text>
+  <polygon points="370,200 510,245 370,290 230,245" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="370" y="238.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">컬렉션을</text>
+  <text x="370" y="259.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">순회하는가?</text>
+  <defs><marker id="arrow-y2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M510,245 L590,245" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-y2)"/>
+  <text x="530" y="239.6" fill="#22c55e" font-family="Nunito, sans-serif" font-size="14" opacity="1">YES</text>
+  <rect x="595" y="218" width="150" height="55" rx="8.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="670" y="239.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">for-in /</text>
+  <text x="670" y="259.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">forEach</text>
+  <defs><marker id="arrow-n2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M370,290 L370,330" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-n2)"/>
+  <text x="378" y="310.6" fill="#ef4444" font-family="Nunito, sans-serif" font-size="14" opacity="1">NO</text>
+  <polygon points="370,335 530,380 370,425 210,380" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="370" y="373.59999999999997" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">조건이 먼저?</text>
+  <text x="370" y="394.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">실행이 먼저?</text>
+  <defs><marker id="arrow-cond" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#4a9eed"/></marker></defs>
+  <path d="M530,365 L590,365" fill="none" stroke="#4a9eed" stroke-width="2" opacity="1" marker-end="url(#arrow-cond)"/>
+  <text x="542" y="359.6" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="14" opacity="1">조건</text>
+  <rect x="595" y="340" width="150" height="55" rx="8.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="670" y="372.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20">while</text>
+  <defs><marker id="arrow-exec" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/></marker></defs>
+  <path d="M370,425 L370,460" fill="none" stroke="#f59e0b" stroke-width="2" opacity="1" marker-end="url(#arrow-exec)"/>
+  <text x="378" y="444.6" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="14" opacity="1">실행</text>
+  <rect x="280" y="465" width="180" height="55" rx="8.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="370" y="497.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20">do-while</text>
+</svg>

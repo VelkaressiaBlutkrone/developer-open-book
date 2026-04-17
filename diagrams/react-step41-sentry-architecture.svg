@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="512" viewBox="20 -10 680 512">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-10" width="680" height="512" rx="12" fill="#141414"/>
+  <text x="210" y="39.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Sentry 핵심 기능 구조</text>
+  <rect x="50" y="60" width="620" height="138" rx="20.7" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="360" y="133.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">에러 수집 계층</text>
+  <text x="70" y="112.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 전역 오류 핸들러 (window.onerror)</text>
+  <text x="70" y="134.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Promise rejection 핸들러</text>
+  <text x="70" y="156.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Error Boundary 통합</text>
+  <text x="70" y="178.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 수동 captureException()</text>
+  <rect x="50" y="208" width="620" height="138" rx="20.7" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="360" y="281.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">컨텍스트 강화 계층</text>
+  <text x="70" y="260.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Source Map → 원본 파일/줄 번호</text>
+  <text x="70" y="282.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Breadcrumb → 에러 전 사용자 행동</text>
+  <text x="70" y="304.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· User Context → 영향받은 사용자</text>
+  <text x="70" y="326.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Release Tracking → 배포 버전별 분류</text>
+  <rect x="50" y="356" width="620" height="116" rx="17.4" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="360" y="418.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="17">알림/분류 계층</text>
+  <text x="70" y="408.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Issue Grouping → 동일 에러 묶기</text>
+  <text x="70" y="430.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Alert Rules → 조건별 자동 알림</text>
+  <text x="70" y="452.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Performance → Web Vitals 수집</text>
+</svg>

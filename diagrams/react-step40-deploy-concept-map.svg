@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="468" viewBox="70 -15 510 398">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="70" y="-15" width="510" height="398" rx="12" fill="#141414"/>
+  <text x="170" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">배포 전략 개념 지도</text>
+  <text x="285" y="64.4" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16" opacity="1">코드 변경</text>
+  <defs><marker id="arrow-a_607" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M320,68 L320,83" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a_607)"/>
+  <rect x="150" y="88" width="350" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="325" y="107.39999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">CI (지속적 통합)</text>
+  <text x="325" y="125.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">lint → typecheck → test → e2e</text>
+  <defs><marker id="arrow-a_610" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M320,138 L320,153" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a_610)"/>
+  <rect x="150" y="158" width="350" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="325" y="177.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">CD (지속적 배포)</text>
+  <text x="325" y="195.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">빌드 → 환경 변수 주입 → 배포</text>
+  <defs><marker id="arrow-a_613" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M250,208 L190,238" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a_613)"/>
+  <defs><marker id="arrow-a_614" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M400,208 L460,238" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a_614)"/>
+  <rect x="100" y="243" width="160" height="40" rx="6" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="180" y="266.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Staging 환경</text>
+  <rect x="380" y="243" width="170" height="40" rx="6" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="465" y="266.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Production 환경</text>
+  <defs><marker id="arrow-a_619" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M320,283 L320,298" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a_619)"/>
+  <rect x="150" y="303" width="350" height="50" rx="7.5" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="325" y="322.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">배포 후 안전망</text>
+  <text x="325" y="340.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">롤백 + Feature Flag + 모니터링</text>
+</svg>

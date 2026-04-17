@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="586" viewBox="-10 -15 560 547">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="560" height="547" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">다루는 것</text>
+  <rect x="20" y="55" width="500" height="268" rx="40.199999999999996" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="0.4"/>
+  <text x="35" y="81.2" fill="#22c55e" font-family="Nunito, sans-serif" font-size="18" opacity="1">다루는 것</text>
+  <text x="45" y="107.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 3계층 API 아키텍처 설계</text>
+  <text x="45" y="133.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · HTTP 클라이언트 계층 (Axios 인스턴스, 인터셉터)</text>
+  <text x="45" y="159.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 서비스 계층 (도메인별 API 함수)</text>
+  <text x="45" y="185.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Hook 계층 (TanStack Query Custom Hook)</text>
+  <text x="45" y="211.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 에러 분류와 계층적 처리 전략</text>
+  <text x="45" y="237.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 인증 토큰 관리와 자동 갱신</text>
+  <text x="45" y="263.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 로딩/에러 UI의 일관된 패턴</text>
+  <text x="45" y="289.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Phase 3 전체 통합 복습</text>
+  <rect x="20" y="338" width="500" height="164" rx="24.599999999999998" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="0.4"/>
+  <text x="35" y="364.2" fill="#ef4444" font-family="Nunito, sans-serif" font-size="18" opacity="1">다루지 않는 것</text>
+  <text x="45" y="390.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · OAuth 구현 상세</text>
+  <text x="45" y="416.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · 백엔드 API 개발</text>
+  <text x="45" y="442.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · Sentry 등 에러 모니터링 도구 설정 (Step 42)</text>
+  <text x="45" y="468.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">  · MSW(Mock Service Worker) 상세 (Step 37)</text>
+</svg>

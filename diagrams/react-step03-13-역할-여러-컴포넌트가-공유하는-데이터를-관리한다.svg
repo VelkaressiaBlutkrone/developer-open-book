@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="883" viewBox="-10 -20 360 530">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="360" height="530" rx="12" fill="#141414"/>
+  <rect x="20" y="10" width="300" height="470" rx="45" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="170" y="75.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">역할: 여러 컴포넌트가 공유하는 데이터를 관리한다</text>
+  <text x="170" y="93.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Context API (React 내장)</text>
+  <text x="170" y="112" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">기본적인 데이터 공유 메커니즘</text>
+  <text x="170" y="130.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">테마, 인증, 언어 설정 등에 적합</text>
+  <text x="170" y="148.39999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">대규모 상태에는 리렌더링 성능 문제</text>
+  <text x="170" y="166.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">이 로드맵: Step 25</text>
+  <text x="170" y="184.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Zustand</text>
+  <text x="170" y="203" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">가볍고 직관적인 전역 상태 관리</text>
+  <text x="170" y="221.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">보일러플레이트 최소화</text>
+  <text x="170" y="239.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">현재 가장 인기 있는 선택지 중 하나</text>
+  <text x="170" y="257.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">이 로드맵: Step 26</text>
+  <text x="170" y="275.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Redux Toolkit (RTK)</text>
+  <text x="170" y="294" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Redux의 공식 도구 세트</text>
+  <text x="170" y="312.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">대규모 앱, 복잡한 상태 흐름에 적합</text>
+  <text x="170" y="330.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">학습 곡선이 높지만 생태계가 큼</text>
+  <text x="170" y="348.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">이 로드맵: Step 26</text>
+  <text x="170" y="366.79999999999995" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Jotai</text>
+  <text x="170" y="385" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Atomic 상태 관리 (Bottom-up)</text>
+  <text x="170" y="403.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Recoil의 영향을 받은 경량 라이브러리</text>
+  <text x="170" y="421.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">이 로드맵: Step 26</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="301" viewBox="20 -20 760 301">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="760" height="301" rx="12" fill="#141414"/>
+  <text x="50" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">GetIt 등록 메서드 비교</text>
+  <rect x="50" y="55" width="700" height="40" rx="6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="400" y="78.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">메서드                       인스턴스 생성           용도</text>
+  <rect x="50" y="105" width="700" height="42" rx="6.3" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="400" y="129.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">registerSingleton&lt;T&gt;()         즉시 생성 (1개)           앱 시작 시 필요</text>
+  <rect x="50" y="157" width="700" height="42" rx="6.3" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="400" y="181.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">registerLazySingleton&lt;T&gt;()     첫 사용 시 (1개)          필요할 때 초기화</text>
+  <rect x="50" y="209" width="700" height="42" rx="6.3" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="400" y="233.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">registerFactory&lt;T&gt;()           매번 새로 생성             매번 새 인스턴스</text>
+</svg>

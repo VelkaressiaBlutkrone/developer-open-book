@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="514" viewBox="-10 -20 640 514">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="640" height="514" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">과제:</text>
+  <rect x="20" y="50" width="280" height="414" rx="42" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.4"/>
+  <text x="35" y="77.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">과제:</text>
+  <text x="35" y="103.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">· Step 25 실습 2의 장바구니 Context를 Zustand로 변환</text>
+  <text x="35" y="129.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 변환 전후 비교:</text>
+  <text x="35" y="155.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">- 코드 줄 수 (Provider, Hook, store 포함)</text>
+  <text x="35" y="181.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">- 리렌더링 횟수 (console.log로 측정)</text>
+  <text x="35" y="207.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">- Provider 배치 여부</text>
+  <text x="35" y="233.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">- 보일러플레이트 양</text>
+  <text x="35" y="259.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">기록표:</text>
+  <text x="35" y="285.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">| 항목</text>
+  <text x="35" y="311.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">|-------------------|---------|---------|</text>
+  <text x="35" y="337.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">| 코드 줄 수</text>
+  <text x="35" y="363.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">| Provider 필요</text>
+  <text x="35" y="389.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">| 리렌더링 (추가 시) | ?개</text>
+  <text x="35" y="415.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">| React 외부 접근</text>
+  <rect x="320" y="50" width="280" height="180" rx="27" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="0.4"/>
+  <text x="335" y="77.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">| Context | Zustand |</text>
+  <text x="335" y="103.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">| ?</text>
+  <text x="335" y="129.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">| ?</text>
+  <text x="335" y="155.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">| ?개</text>
+  <text x="335" y="181.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14" opacity="1">| ?</text>
+</svg>

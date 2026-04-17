@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="511" viewBox="-10 -20 457 389">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="457" height="389" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">개발 타임  개발자가 코드를 작성하고 로컬에서 테스트</text>
+  <rect x="20" y="45" width="397" height="294" rx="44.1" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="218.5" y="95.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">(Development)  · VS Code에서 코드 편집</text>
+  <text x="218.5" y="113.60000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Vite 개발 서버가 실시간 변환·제공</text>
+  <text x="218.5" y="131.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· HMR로 즉시 결과 확인</text>
+  <text x="218.5" y="150" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">빌드 타임  소스 코드를 배포 가능한 형태로 변환</text>
+  <text x="218.5" y="168.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">(Build)  · JSX → JavaScript 변환 (Transpile)</text>
+  <text x="218.5" y="186.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 여러 파일 → 소수 파일로 합침 (Bundle)</text>
+  <text x="218.5" y="204.60000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 코드 압축·최적화 (Minify)</text>
+  <text x="218.5" y="222.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Tree Shaking (미사용 코드 제거)</text>
+  <text x="218.5" y="241" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">런타임  사용자의 브라우저에서 코드가 실행</text>
+  <text x="218.5" y="259.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">(Runtime)  · 번들된 JS 파일 다운로드</text>
+  <text x="218.5" y="277.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· React가 DOM을 생성·업데이트</text>
+  <text x="218.5" y="295.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 사용자와 상호작용</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="380" viewBox="50 -20 560 355">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="50" y="-20" width="560" height="355" rx="12" fill="#141414"/>
+  <text x="120" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">Layout을 모르면 겪는 문제들</text>
+  <rect x="80" y="60" width="500" height="30" rx="4.5" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="330" y="78.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">&quot;왜 Column 안의 ListView가 오류를 낸다?&quot;</text>
+  <rect x="80" y="97" width="500" height="30" rx="4.5" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="330" y="115.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">&quot;왜 Container에 height를 줬는데 반응이 없다?&quot;</text>
+  <rect x="80" y="134" width="500" height="30" rx="4.5" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="330" y="152.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">&quot;왜 Row 안에서 Text가 넘쳐 overflow가 난다?&quot;</text>
+  <rect x="80" y="171" width="500" height="30" rx="4.5" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="330" y="189.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">&quot;Expanded와 Flexible 중 뭘 써야 하지?&quot;</text>
+  <rect x="80" y="208" width="500" height="30" rx="4.5" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="330" y="226.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">&quot;SizedBox와 Container 중 언제 뭘 쓰지?&quot;</text>
+  <rect x="140" y="270" width="380" height="35" rx="5.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="330" y="291.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">→ 모두 Constraints 흐름을 모르기 때문</text>
+</svg>

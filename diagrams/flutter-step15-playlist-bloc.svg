@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="265" viewBox="0 -20 720 265">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="0" y="-20" width="720" height="265" rx="12" fill="#141414"/>
+  <text x="120" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">플레이리스트 Bloc 설계</text>
+  <rect x="30" y="55" width="200" height="160" rx="24" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="90" y="74.4" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="16" opacity="1">이벤트</text>
+  <text x="50" y="95.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">LoadPlaylistEvent</text>
+  <text x="50" y="112.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">AddTrackEvent</text>
+  <text x="50" y="129.39999999999998" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">RemoveTrackEvent</text>
+  <text x="50" y="146.2" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">ReorderTracksEvent</text>
+  <text x="50" y="163" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">ShuffleEvent</text>
+  <rect x="260" y="55" width="200" height="160" rx="24" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="330" y="74.4" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="16" opacity="1">상태</text>
+  <text x="280" y="95.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">PlaylistInitial</text>
+  <text x="280" y="112.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">PlaylistLoading</text>
+  <text x="280" y="129.39999999999998" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">PlaylistLoaded</text>
+  <text x="280" y="146.2" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">  (tracks, isShuffled)</text>
+  <text x="280" y="163" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">PlaylistError</text>
+  <rect x="490" y="55" width="200" height="160" rx="24" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="560" y="74.4" fill="#22c55e" font-family="Nunito, sans-serif" font-size="16" opacity="1">흐름</text>
+  <text x="510" y="95.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">화면 진입</text>
+  <text x="510" y="112.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">→ add(LoadPlaylist)</text>
+  <text x="510" y="129.39999999999998" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">→ API 호출</text>
+  <text x="510" y="146.2" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">→ emit(Loaded)</text>
+  <text x="510" y="163" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">→ BlocBuilder</text>
+  <text x="510" y="179.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">→ 트랙 목록 표시</text>
+  <defs><marker id="arrow-a1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M230,135 L260,135" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a1)"/>
+  <defs><marker id="arrow-a2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M460,135 L490,135" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a2)"/>
+</svg>

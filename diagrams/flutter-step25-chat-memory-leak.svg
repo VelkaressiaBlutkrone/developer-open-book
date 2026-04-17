@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="341" viewBox="20 -20 750 341">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="750" height="341" rx="12" fill="#141414"/>
+  <text x="50" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">채팅 화면 메모리 누수 사례</text>
+  <text x="50" y="67.6" fill="#ef4444" font-family="Nunito, sans-serif" font-size="14" opacity="1">증상: 채팅 화면을 반복적으로 열고 닫으면 메모리가 계속 증가</text>
+  <rect x="50" y="95" width="300" height="40" rx="6" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="200" y="118.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">StreamSubscription 미해제</text>
+  <defs><marker id="arrow-el562" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M350,115 L380,115" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-el562)"/>
+  <rect x="390" y="95" width="350" height="40" rx="6" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="565" y="118.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">dispose()에서 cancel() 호출</text>
+  <rect x="50" y="147" width="300" height="40" rx="6" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="200" y="170.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">AnimationController 미해제</text>
+  <defs><marker id="arrow-el567" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/></marker></defs>
+  <path d="M350,167 L380,167" fill="none" stroke="#f59e0b" stroke-width="2" opacity="1" marker-end="url(#arrow-el567)"/>
+  <rect x="390" y="147" width="350" height="40" rx="6" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="565" y="170.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">dispose()에서 dispose() 호출</text>
+  <rect x="50" y="199" width="300" height="40" rx="6" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="200" y="222.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Timer 미해제</text>
+  <defs><marker id="arrow-el572" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M350,219 L380,219" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-el572)"/>
+  <rect x="390" y="199" width="350" height="40" rx="6" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="565" y="222.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">dispose()에서 cancel() 호출</text>
+  <rect x="50" y="251" width="300" height="40" rx="6" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="200" y="274.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">클로저의 강한 참조</text>
+  <defs><marker id="arrow-el577" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#8b5cf6"/></marker></defs>
+  <path d="M350,271 L380,271" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="1" marker-end="url(#arrow-el577)"/>
+  <rect x="390" y="251" width="350" height="40" rx="6" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="565" y="274.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">WeakReference 또는 mounted 체크</text>
+</svg>

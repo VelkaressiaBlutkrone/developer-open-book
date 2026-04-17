@@ -1,0 +1,188 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_324",
+      "x": 200,
+      "y": 15,
+      "width": 88,
+      "height": 26,
+      "text": "테스트 피라미드",
+      "fontSize": 22,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "r_325",
+      "x": 230,
+      "y": 60,
+      "width": 200,
+      "height": 55,
+      "backgroundColor": "#5c1a1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#ef4444",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_326",
+      "x": 230,
+      "y": 60,
+      "width": 200,
+      "height": 55,
+      "text": "E2E 테스트\n(5%)",
+      "fontSize": 15,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_325"
+    },
+    {
+      "type": "rectangle",
+      "id": "r_327",
+      "x": 180,
+      "y": 130,
+      "width": 300,
+      "height": 55,
+      "backgroundColor": "#5c3d1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_328",
+      "x": 180,
+      "y": 130,
+      "width": 300,
+      "height": 55,
+      "text": "통합 테스트\n(25%)",
+      "fontSize": 15,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_327"
+    },
+    {
+      "type": "rectangle",
+      "id": "r_329",
+      "x": 130,
+      "y": 200,
+      "width": 400,
+      "height": 55,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_330",
+      "x": 130,
+      "y": 200,
+      "width": 400,
+      "height": 55,
+      "text": "단위/컴포넌트 테스트\n(70%)",
+      "fontSize": 15,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_329"
+    },
+    {
+      "type": "text",
+      "id": "t_331",
+      "x": 450,
+      "y": 70,
+      "width": 91,
+      "height": 17,
+      "text": "느림, 비쌈, 높은 신뢰도",
+      "fontSize": 13,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_332",
+      "x": 500,
+      "y": 142,
+      "width": 13,
+      "height": 17,
+      "text": "중간",
+      "fontSize": 13,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_333",
+      "x": 550,
+      "y": 210,
+      "width": 65,
+      "height": 17,
+      "text": "빠름, 저렴, 많이",
+      "fontSize": 13,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_334",
+      "x": 130,
+      "y": 275,
+      "width": 247.5,
+      "height": 19,
+      "text": "권장: 단위+통합 70~80% ★  |  E2E 20~30%",
+      "fontSize": 15,
+      "strokeColor": "#f59e0b",
+      "fontFamily": 2,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":120,"y":10,"text":"가변 Widget vs 불변 Widget","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":380,"height":30,"opacity":100},
+    {"type":"text","id":"sub1","x":80,"y":55,"text":"가변 Widget을 허용한다면?","fontSize":16,"strokeColor":"#ef4444","fontFamily":2,"width":260,"height":22,"opacity":100},
+    {"type":"rectangle","id":"m1","x":80,"y":85,"width":280,"height":35,"backgroundColor":"#5c1a1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#ef4444","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"m1_l","x":90,"y":92,"width":260,"height":20,"text":"Widget의 색상을 변경","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"m1","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"a1","x":220,"y":120,"width":0,"height":15,"strokeColor":"#a0a0a0","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[0,15]],"lastCommittedPoint":[0,15],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"m2","x":80,"y":140,"width":280,"height":45,"backgroundColor":"#5c1a1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#ef4444","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"m2_l","x":90,"y":147,"width":260,"height":30,"text":"\"이 Widget이 변경됐나?\n언제? 어떻게?\"","fontSize":13,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"m2","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"a2","x":220,"y":185,"width":0,"height":15,"strokeColor":"#a0a0a0","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[0,15]],"lastCommittedPoint":[0,15],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"m3","x":80,"y":205,"width":280,"height":35,"backgroundColor":"#5c1a1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#ef4444","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"m3_l","x":90,"y":212,"width":260,"height":20,"text":"복잡한 추적 로직 → 성능 저하","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"m3","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"text","id":"sub2","x":420,"y":55,"text":"불변 Widget이라면?","fontSize":16,"strokeColor":"#22c55e","fontFamily":2,"width":220,"height":22,"opacity":100},
+    {"type":"rectangle","id":"i1","x":420,"y":85,"width":280,"height":35,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"i1_l","x":430,"y":92,"width":260,"height":20,"text":"새 Widget 객체를 생성해 반환","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"i1","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"a3","x":560,"y":120,"width":0,"height":15,"strokeColor":"#a0a0a0","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[0,15]],"lastCommittedPoint":[0,15],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"i2","x":420,"y":140,"width":280,"height":45,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":1,"roughness":1,"opacity":100},
+    {"type":"text","id":"i2_l","x":430,"y":147,"width":260,"height":30,"text":"새 Widget과 기존 Element를 비교","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"i2","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"a4","x":560,"y":185,"width":0,"height":15,"strokeColor":"#a0a0a0","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[0,15]],"lastCommittedPoint":[0,15],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"i3","x":420,"y":205,"width":280,"height":35,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"i3_l","x":430,"y":212,"width":260,"height":20,"text":"runtimeType+Key 비교 → 단순·빠름","fontSize":13,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"i3","textAlign":"center","verticalAlign":"middle","opacity":100}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

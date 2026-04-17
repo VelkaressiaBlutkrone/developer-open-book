@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="667" height="695" viewBox="-10 -15 667 695">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="667" height="695" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">이미지는 웹 페이지에서 가장 큰 리소스 (평균 전체 크기의 50%+)</text>
+  <rect x="20" y="50" width="607" height="600" rx="90" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">전략 1: 적절한 포맷 사용</text>
+  <text x="40" y="109.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· WebP: JPEG/PNG 대비 25~35% 작음. 모던 브라우저 전부 지원</text>
+  <text x="40" y="135.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· AVIF: WebP보다 더 작지만 지원 범위가 좁음</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· SVG: 아이콘, 로고 등 벡터 그래픽</text>
+  <text x="40" y="187.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· &lt;picture&gt; 태그로 포맷 폴백 제공</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">전략 2: 반응형 이미지</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· srcSet으로 디바이스 해상도에 맞는 크기 제공</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 모바일에 4K 이미지를 보내지 않는다</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">전략 3: 지연 로딩 (Lazy Loading)</text>
+  <text x="40" y="317.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 뷰포트에 보이지 않는 이미지는 나중에 로드</text>
+  <text x="40" y="343.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· &lt;img loading=&quot;lazy&quot; /&gt; — 네이티브 지원</text>
+  <text x="40" y="369.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Intersection Observer를 활용한 커스텀 구현</text>
+  <text x="40" y="395.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">전략 4: 크기 명시로 CLS 방지</text>
+  <text x="40" y="421.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· width, height 또는 aspect-ratio를 항상 지정</text>
+  <text x="40" y="447.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 이미지 로드 전에 공간이 확보되어 레이아웃 이동 없음</text>
+  <text x="40" y="473.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">전략 5: LCP 이미지 우선 로드</text>
+  <text x="40" y="499.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 가장 큰 콘텐츠가 이미지라면 → fetchpriority=&quot;high&quot;</text>
+  <text x="40" y="525.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· &lt;img fetchpriority=&quot;high&quot; src=&quot;hero.webp&quot; /&gt;</text>
+  <text x="40" y="551.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· preload 링크: &lt;link rel=&quot;preload&quot; as=&quot;image&quot; href=&quot;hero.webp&quot;&gt;</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="684" height="799" viewBox="-10 -15 684 799">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="684" height="799" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">전략 1: 무거운 라이브러리를 동적 import</text>
+  <rect x="20" y="50" width="624" height="704" rx="93.6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">// ❌ 정적 import — 항상 메인 번들에 포함</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">import { Chart } from 'chart.js';</text>
+  <text x="40" y="135.5" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15" opacity="1">// ✅ 동적 import — 차트를 사용하는 페이지에서만 로드</text>
+  <text x="40" y="161.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">const ChartComponent = lazy(() =&gt; import('./components/Chart'));</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">전략 2: 가벼운 대안 라이브러리 사용</text>
+  <text x="40" y="213.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· moment.js (300KB) → date-fns (tree-shakable) 또는 dayjs (2KB)</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· lodash (70KB) → lodash-es (tree-shakable) 또는 개별 import</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· axios (13KB) → fetch API (0KB, 내장)</text>
+  <text x="40" y="291.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">// ❌ lodash 전체 import</text>
+  <text x="40" y="317.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">import _ from 'lodash';   // 70KB 전부 번들에!</text>
+  <text x="40" y="343.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">_.debounce(fn, 300);</text>
+  <text x="40" y="369.5" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15" opacity="1">// ✅ 개별 import (tree-shakable)</text>
+  <text x="40" y="395.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">import debounce from 'lodash/debounce';   // debounce만 번들에</text>
+  <text x="40" y="421.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">debounce(fn, 300);</text>
+  <text x="40" y="447.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">전략 3: Tree Shaking 확인</text>
+  <text x="40" y="473.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· ES Module(import/export)을 사용해야 Tree Shaking 가능</text>
+  <text x="40" y="499.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· CommonJS(require/module.exports)는 Tree Shaking 불가</text>
+  <text x="40" y="525.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· package.json의 &quot;sideEffects&quot;: false 확인</text>
+  <text x="40" y="551.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 번들 분석으로 미사용 코드가 제거되었는지 확인</text>
+  <text x="40" y="577.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">전략 4: 이미지/폰트를 번들 밖으로 분리</text>
+  <text x="40" y="603.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 이미지를 JS 번들에 포함하지 않는다 (import img X)</text>
+  <text x="40" y="629.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· CDN에서 이미지를 제공한다</text>
+  <text x="40" y="655.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 폰트를 로컬에 포함하되 display: swap으로 FOIT 방지</text>
+</svg>

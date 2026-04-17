@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="390" viewBox="0 -20 800 390">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="0" y="-20" width="800" height="390" rx="12" fill="#141414"/>
+  <text x="250" y="35.2" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="28" opacity="1">사용자 입력 처리</text>
+  <rect x="300" y="70" width="200" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="400" y="99.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">사용자 입력</text>
+  <defs><marker id="arrow-a1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M350,120 L150,170" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a1)"/>
+  <defs><marker id="arrow-a2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M370,120 L340,170" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a2)"/>
+  <defs><marker id="arrow-a3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M430,120 L510,170" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a3)"/>
+  <defs><marker id="arrow-a4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M450,120 L670,170" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a4)"/>
+  <rect x="50" y="170" width="200" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="150" y="199.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">터치 제스처</text>
+  <rect x="270" y="170" width="200" height="50" rx="7.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="370" y="199.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">제스처 종류</text>
+  <rect x="490" y="170" width="200" height="50" rx="7.5" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="590" y="199.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Keyboard</text>
+  <rect x="570" y="170" width="200" height="50" rx="7.5" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="670" y="199.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Accessibility</text>
+  <rect x="30" y="250" width="120" height="40" rx="6" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="90" y="273.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">GestureDetector</text>
+  <rect x="160" y="250" width="100" height="40" rx="6" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="210" y="273.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">InkWell</text>
+  <rect x="270" y="250" width="60" height="40" rx="6" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="300" y="273.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Tap</text>
+  <rect x="340" y="250" width="60" height="40" rx="6" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="370" y="273.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Drag</text>
+  <rect x="270" y="300" width="60" height="40" rx="6" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="300" y="323.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Scale</text>
+  <rect x="340" y="300" width="70" height="40" rx="6" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="375" y="323.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Rotate</text>
+  <rect x="480" y="250" width="80" height="40" rx="6" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="520" y="273.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Focus</text>
+  <rect x="480" y="300" width="100" height="40" rx="6" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="530" y="323.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">FocusNode</text>
+  <rect x="620" y="250" width="100" height="40" rx="6" fill="#1a4d4d" stroke="#06b6d4" stroke-width="1" opacity="1"/>
+  <text x="670" y="273.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Semantics</text>
+</svg>

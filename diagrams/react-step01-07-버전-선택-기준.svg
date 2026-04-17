@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="475" viewBox="-10 -20 380.5 301">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="380.5" height="301" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">버전 선택 기준</text>
+  <rect x="20" y="45" width="320.5" height="206" rx="30.9" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="180.25" y="87.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">LTS (짝수 번호: 18.x, 20.x, 22.x)</text>
+  <text x="180.25" y="106" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">30개월간 보안 패치 지원</text>
+  <text x="180.25" y="124.19999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">프로덕션 환경에 권장</text>
+  <text x="180.25" y="142.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">안정성 우선</text>
+  <text x="180.25" y="160.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Current (홀수 번호: 19.x, 21.x, 23.x)</text>
+  <text x="180.25" y="178.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">최신 기능 포함</text>
+  <text x="180.25" y="197" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">6개월간만 지원</text>
+  <text x="180.25" y="215.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">실험·학습용</text>
+</svg>

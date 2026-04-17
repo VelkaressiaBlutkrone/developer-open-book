@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="275" viewBox="0 -20 700 275">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="0" y="-20" width="700" height="275" rx="12" fill="#141414"/>
+  <text x="120" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">기본 ThemeData vs AdaptiveTheme</text>
+  <rect x="30" y="55" width="300" height="170" rx="25.5" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="100" y="73.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">기본 ThemeData의 한계</text>
+  <text x="50" y="100.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">ThemeMode.system</text>
+  <text x="50" y="117.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">  → 시스템 설정만 따름</text>
+  <text x="50" y="134.39999999999998" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1"></text>
+  <text x="50" y="151.2" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">ThemeMode.light</text>
+  <text x="50" y="168" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">  → 고정 (런타임 변경 불가)</text>
+  <text x="50" y="184.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1"></text>
+  <text x="50" y="201.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">앱 재시작 후 선택 초기화</text>
+  <text x="50" y="218.39999999999998" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">  → SharedPreferences 직접 구현 필요</text>
+  <rect x="370" y="55" width="300" height="170" rx="25.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="440" y="73.5" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15" opacity="1">AdaptiveTheme 장점</text>
+  <text x="390" y="100.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">setLight()   → 라이트 전환</text>
+  <text x="390" y="117.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">setDark()    → 다크 전환</text>
+  <text x="390" y="134.39999999999998" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">setSystem()  → 시스템 연동</text>
+  <text x="390" y="151.2" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1"></text>
+  <text x="390" y="168" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">선택한 테마 자동 저장</text>
+  <text x="390" y="184.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">(SharedPreferences 불필요)</text>
+  <text x="390" y="201.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1"></text>
+  <text x="390" y="218.39999999999998" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">앱 재시작 후 이전 선택 복원</text>
+  <defs><marker id="arrow-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#e5e5e5"/></marker></defs>
+  <path d="M330,140 L370,140" fill="none" stroke="#e5e5e5" stroke-width="2" opacity="1" marker-end="url(#arrow-arrow)"/>
+</svg>

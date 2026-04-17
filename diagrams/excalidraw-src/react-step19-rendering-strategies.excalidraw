@@ -1,0 +1,654 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t",
+      "x": 60,
+      "y": 10,
+      "text": "HTML 생성 위치 x 시점 — 렌더링 전략",
+      "fontSize": 22,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 316.79999999999995,
+      "height": 28,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "h1",
+      "x": 50,
+      "y": 55,
+      "width": 130,
+      "height": 30,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "h1t",
+      "x": 50,
+      "y": 61,
+      "text": "",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 110,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "h1",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "rectangle",
+      "id": "h2",
+      "x": 180,
+      "y": 55,
+      "width": 140,
+      "height": 30,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "h2t",
+      "x": 180,
+      "y": 61,
+      "text": "빌드 시점",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 120,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "h2",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "rectangle",
+      "id": "h3",
+      "x": 320,
+      "y": 55,
+      "width": 200,
+      "height": 30,
+      "backgroundColor": "#5c3d1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "h3t",
+      "x": 320,
+      "y": 61,
+      "text": "요청 시점",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 180,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "h3",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "rectangle",
+      "id": "r1a",
+      "x": 50,
+      "y": 90,
+      "width": 130,
+      "height": 35,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r1at",
+      "x": 50,
+      "y": 97,
+      "text": "서버에서 생성",
+      "fontSize": 13,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 110,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "r1a",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "rectangle",
+      "id": "r1b",
+      "x": 180,
+      "y": 90,
+      "width": 140,
+      "height": 35,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r1bt",
+      "x": 180,
+      "y": 97,
+      "text": "SSG (Static)",
+      "fontSize": 13,
+      "strokeColor": "#22c55e",
+      "fontFamily": 2,
+      "width": 120,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "r1b",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "rectangle",
+      "id": "r1c",
+      "x": 320,
+      "y": 90,
+      "width": 200,
+      "height": 35,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r1ct",
+      "x": 320,
+      "y": 97,
+      "text": "SSR / Streaming SSR",
+      "fontSize": 13,
+      "strokeColor": "#8b5cf6",
+      "fontFamily": 2,
+      "width": 180,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "r1c",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "rectangle",
+      "id": "r2a",
+      "x": 50,
+      "y": 130,
+      "width": 130,
+      "height": 35,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r2at",
+      "x": 50,
+      "y": 137,
+      "text": "클라이언트 생성",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 110,
+      "height": 18,
+      "opacity": 100,
+      "containerId": "r2a",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "rectangle",
+      "id": "r2b",
+      "x": 180,
+      "y": 130,
+      "width": 140,
+      "height": 35,
+      "backgroundColor": "#2a2a3a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r2bt",
+      "x": 180,
+      "y": 137,
+      "text": "—",
+      "fontSize": 13,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 120,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "r2b",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "rectangle",
+      "id": "r2c",
+      "x": 320,
+      "y": 130,
+      "width": 200,
+      "height": 35,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "r2ct",
+      "x": 320,
+      "y": 137,
+      "text": "CSR (Client)",
+      "fontSize": 13,
+      "strokeColor": "#06b6d4",
+      "fontFamily": 2,
+      "width": 180,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "r2c",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "text",
+      "id": "n1",
+      "x": 55,
+      "y": 180,
+      "text": "ISR = SSG + 주기적 재생성 (하이브리드)",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 194.39999999999998,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "n2",
+      "x": 55,
+      "y": 198,
+      "text": "Streaming SSR = SSR + 점진적 전송",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 201.59999999999997,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "ev",
+      "x": 55,
+      "y": 228,
+      "text": "전략 간 진화:",
+      "fontSize": 15,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 72,
+      "height": 21,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "e1",
+      "x": 50,
+      "y": 252,
+      "width": 120,
+      "height": 28,
+      "backgroundColor": "#5c3d1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "e1t",
+      "x": 50,
+      "y": 258,
+      "text": "전통적 SSR",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 100,
+      "height": 18,
+      "opacity": 100,
+      "containerId": "e1",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "line",
+      "id": "ea1",
+      "x": 170,
+      "y": 266,
+      "width": 20,
+      "height": 0,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          20,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        20,
+        0
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "e2",
+      "x": 195,
+      "y": 252,
+      "width": 80,
+      "height": 28,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "e2t",
+      "x": 195,
+      "y": 258,
+      "text": "CSR",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 60,
+      "height": 18,
+      "opacity": 100,
+      "containerId": "e2",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "line",
+      "id": "ea2",
+      "x": 275,
+      "y": 266,
+      "width": 20,
+      "height": 0,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          20,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        20,
+        0
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "e3",
+      "x": 300,
+      "y": 252,
+      "width": 110,
+      "height": 28,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "e3t",
+      "x": 300,
+      "y": 258,
+      "text": "현대 SSR",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 90,
+      "height": 18,
+      "opacity": 100,
+      "containerId": "e3",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "line",
+      "id": "ea3",
+      "x": 410,
+      "y": 266,
+      "width": 20,
+      "height": 0,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          20,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        20,
+        0
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "e4",
+      "x": 435,
+      "y": 252,
+      "width": 100,
+      "height": 28,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "e4t",
+      "x": 435,
+      "y": 258,
+      "text": "Streaming",
+      "fontSize": 12,
+      "strokeColor": "#22c55e",
+      "fontFamily": 2,
+      "width": 80,
+      "height": 18,
+      "opacity": 100,
+      "containerId": "e4",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "text",
+      "id": "pf",
+      "x": 55,
+      "y": 300,
+      "text": "성능 지표 우선순위:",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 92.4,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "pf1",
+      "x": 60,
+      "y": 322,
+      "text": "TTFB :  SSG > Streaming > CSR > SSR",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 251.99999999999997,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "pf2",
+      "x": 60,
+      "y": 340,
+      "text": "FCP  :  SSG > SSR > Streaming > CSR",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 251.99999999999997,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "pf3",
+      "x": 60,
+      "y": 358,
+      "text": "SEO  :  SSG = SSR > ISR > CSR",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 208.79999999999998,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "pf4",
+      "x": 60,
+      "y": 376,
+      "text": "비용  :  SSG/CSR(CDN) > ISR > SSR",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 223.2,
+      "height": 18,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

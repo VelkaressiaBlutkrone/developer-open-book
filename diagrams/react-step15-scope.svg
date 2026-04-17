@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="531" viewBox="20 -20 530 469">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="530" height="469" rx="12" fill="#141414"/>
+  <text x="100" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Step 15 — 다루는 범위</text>
+  <rect x="50" y="50" width="470" height="221" rx="33.15" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="60" y="72.4" fill="#22c55e" font-family="Nunito, sans-serif" font-size="16" opacity="1">다루는 것</text>
+  <text x="65" y="96.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· useTransition: 전환 업데이트 표시와 isPending</text>
+  <text x="65" y="118.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· useDeferredValue: 값 지연과 시각적 피드백</text>
+  <text x="65" y="140.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· useTransition vs useDeferredValue 비교</text>
+  <text x="65" y="162.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· useId: SSR 호환 고유 ID 생성</text>
+  <text x="65" y="184.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· use(): Promise와 Context 읽기 (React 19)</text>
+  <text x="65" y="206.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· useActionState: 폼 Action 상태 관리 (React 19)</text>
+  <text x="65" y="228.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· useOptimistic: 낙관적 UI 업데이트 (React 19)</text>
+  <text x="65" y="250.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· useFormStatus: 폼 제출 상태 접근 (React 19)</text>
+  <rect x="50" y="286" width="470" height="133" rx="19.95" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="60" y="308.4" fill="#ef4444" font-family="Nunito, sans-serif" font-size="16" opacity="1">다루지 않는 것</text>
+  <text x="65" y="332.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Suspense for Data Fetching 상세 (Step 30)</text>
+  <text x="65" y="354.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Server Actions 상세 (Step 21)</text>
+  <text x="65" y="376.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· React Hook Form (Step 33)</text>
+  <text x="65" y="398.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· TanStack Query (Step 23)</text>
+</svg>

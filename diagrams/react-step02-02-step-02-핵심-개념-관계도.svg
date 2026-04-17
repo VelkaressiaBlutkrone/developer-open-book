@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="614" viewBox="-10 -20 423 433">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="423" height="433" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">Step 02 핵심 개념 관계도</text>
+  <rect x="20" y="45" width="363" height="338" rx="50.699999999999996" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="201.5" y="99.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">변수 선언 (const/let)</text>
+  <text x="201.5" y="117.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">화살표 함수  this 바인딩  이벤트 핸들러</text>
+  <text x="201.5" y="135.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Destructuring  객체 분해  Props 수신</text>
+  <text x="201.5" y="153.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">배열 분해  useState 반환값</text>
+  <text x="201.5" y="172" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Spread/Rest  펼치기  Immutable 업데이트</text>
+  <text x="201.5" y="190.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">모으기  나머지 Props 수집</text>
+  <text x="201.5" y="208.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">배열 고차 함수  map  리스트 렌더링</text>
+  <text x="201.5" y="226.60000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">filter  조건부 필터링</text>
+  <text x="201.5" y="244.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">reduce  데이터 집계</text>
+  <text x="201.5" y="263" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Optional Chaining / Nullish Coalescing</text>
+  <text x="201.5" y="281.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">API 응답 데이터의 안전한 접근</text>
+  <text x="201.5" y="299.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">ES Module  import/export  컴포넌트 분리</text>
+  <text x="201.5" y="317.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Promise / async·await  비동기 데이터 패칭</text>
+  <text x="201.5" y="335.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Closure  Hook의 동작 원리  Stale Closure</text>
+</svg>

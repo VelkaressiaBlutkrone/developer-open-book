@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="870" height="170" viewBox="0 -20 870 170">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="0" y="-20" width="870" height="170" rx="12" fill="#141414"/>
+  <text x="50" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">Flutter 앱 배포 파이프라인</text>
+  <rect x="30" y="70" width="130" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="95" y="98.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">코드 완성</text>
+  <defs><marker id="arrow-el743" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#4a9eed"/></marker></defs>
+  <path d="M160,95 L200,95" fill="none" stroke="#4a9eed" stroke-width="2" opacity="1" marker-end="url(#arrow-el743)"/>
+  <rect x="200" y="70" width="130" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="265" y="98.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">빌드 설정</text>
+  <defs><marker id="arrow-el746" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M330,95 L370,95" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-el746)"/>
+  <rect x="370" y="70" width="130" height="50" rx="7.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="435" y="98.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">앱 서명</text>
+  <defs><marker id="arrow-el749" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#8b5cf6"/></marker></defs>
+  <path d="M500,95 L540,95" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="1" marker-end="url(#arrow-el749)"/>
+  <rect x="540" y="70" width="130" height="50" rx="7.5" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="605" y="98.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">스토어 등록</text>
+  <defs><marker id="arrow-el752" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/></marker></defs>
+  <path d="M670,95 L710,95" fill="none" stroke="#f59e0b" stroke-width="2" opacity="1" marker-end="url(#arrow-el752)"/>
+  <rect x="710" y="70" width="130" height="50" rx="7.5" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="775" y="98.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">출시</text>
+</svg>

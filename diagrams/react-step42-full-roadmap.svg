@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="730" height="366" viewBox="-10 -20 730 366">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="730" height="366" rx="12" fill="#141414"/>
+  <text x="100" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">React 완성 로드맵 v2.0 — 전체 개념 지도</text>
+  <rect x="20" y="50" width="160" height="50" rx="7.5" fill="#555555" stroke="#a0a0a0" stroke-width="2" opacity="1"/>
+  <text x="100" y="78.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Phase 0: 기반</text>
+  <text x="30" y="115.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">개발 환경</text>
+  <text x="30" y="133.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">JS 핵심</text>
+  <text x="30" y="151.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">React 생태계</text>
+  <rect x="190" y="50" width="160" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="270" y="78.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Phase 1: 핵심 원리</text>
+  <text x="200" y="115.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">JSX+Props</text>
+  <text x="200" y="133.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">useState</text>
+  <text x="200" y="151.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">Reconciliation</text>
+  <rect x="360" y="50" width="160" height="50" rx="7.5" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="440" y="78.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Phase 2: Hook 심화</text>
+  <text x="370" y="115.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">useEffect</text>
+  <text x="370" y="133.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">useRef/Reducer</text>
+  <text x="370" y="151.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">Custom Hook</text>
+  <rect x="530" y="50" width="160" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="610" y="78.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Phase 3: 라우팅·데이터</text>
+  <text x="540" y="115.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">React Router</text>
+  <text x="540" y="133.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">RSC/Next.js</text>
+  <text x="540" y="151.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">TanStack Query</text>
+  <rect x="20" y="175" width="160" height="50" rx="7.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="100" y="203.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Phase 4: 상태·설계</text>
+  <text x="30" y="240.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">Context/Zustand</text>
+  <text x="30" y="258.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">컴포넌트 패턴</text>
+  <text x="30" y="276.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">성능 최적화</text>
+  <rect x="190" y="175" width="160" height="50" rx="7.5" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="270" y="203.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Phase 5: 타입·폼·스타일</text>
+  <text x="200" y="240.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">TypeScript</text>
+  <text x="200" y="258.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">RHF+Zod</text>
+  <text x="200" y="276.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">Tailwind/a11y</text>
+  <rect x="360" y="175" width="160" height="50" rx="7.5" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="440" y="203.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Phase 6: 테스트·품질</text>
+  <text x="370" y="240.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">RTL</text>
+  <text x="370" y="258.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">Playwright</text>
+  <text x="370" y="276.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">ESLint/Prettier</text>
+  <rect x="530" y="175" width="160" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="610" y="203.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">Phase 7: 빌드·배포</text>
+  <text x="540" y="240.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">Vite</text>
+  <text x="540" y="258.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">CI/CD</text>
+  <text x="540" y="276.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">Sentry</text>
+  <text x="100" y="308.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">&quot;React 내부 원리 이해&quot; → &quot;실무 기술 스택 적용&quot; → &quot;프로덕션 운영&quot;</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="668" viewBox="-10 -20 389 433">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="389" height="433" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">프로젝트: 온라인 도서 관리 시스템</text>
+  <rect x="20" y="45" width="329" height="338" rx="49.35" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="184.5" y="99.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 사용자가 읽은 책, 읽고 싶은 책을 관리</text>
+  <text x="184.5" y="117.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 로그인 필수</text>
+  <text x="184.5" y="135.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 외부 API에서 도서 정보를 검색</text>
+  <text x="184.5" y="153.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 독서 통계 대시보드 (차트)</text>
+  <text x="184.5" y="172" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· SEO 불필요</text>
+  <text x="184.5" y="190.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 팀 규모: 2~3명</text>
+  <text x="184.5" y="208.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 기간: 2개월</text>
+  <text x="184.5" y="226.60000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">작성할 것:</text>
+  <text x="184.5" y="244.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">1. 빌드 도구 선택과 이유</text>
+  <text x="184.5" y="263" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">2. 라우팅 라이브러리 선택과 이유</text>
+  <text x="184.5" y="281.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">3. 상태 관리 전략 (서버 상태 vs 클라이언트 상태 구분)</text>
+  <text x="184.5" y="299.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">4. 데이터 패칭 도구 선택과 이유</text>
+  <text x="184.5" y="317.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">5. 스타일링 방식 선택과 이유</text>
+  <text x="184.5" y="335.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">6. 메타 프레임워크 사용 여부와 이유</text>
+</svg>

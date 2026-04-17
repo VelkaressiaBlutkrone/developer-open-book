@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="218" viewBox="0 -20 820 218.2">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="0" y="-20" width="820" height="218.2" rx="12" fill="#141414"/>
+  <text x="200" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">생성자 패턴 종류</text>
+  <rect x="30" y="60" width="170" height="80" rx="12" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="115" y="104" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">기본 생성자</text>
+  <text x="35" y="161.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">초기화 + 유효성 검사</text>
+  <rect x="220" y="60" width="180" height="80" rx="12" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="310" y="104" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">Named 생성자</text>
+  <text x="220" y="161.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">의미 있는 이름으로 생성</text>
+  <rect x="420" y="60" width="170" height="80" rx="12" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="505" y="104" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">const 생성자</text>
+  <text x="420" y="161.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">컴파일 타임 상수 객체</text>
+  <rect x="610" y="60" width="180" height="80" rx="12" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="700" y="104" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">factory 생성자</text>
+  <text x="610" y="161.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">캐싱, 서브클래스 반환</text>
+</svg>

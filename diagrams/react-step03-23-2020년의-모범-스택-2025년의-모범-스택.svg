@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="537" viewBox="-10 -20 508 455">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="508" height="455" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">2020년의 &quot;모범&quot; 스택  2025년의 &quot;모범&quot; 스택</text>
+  <rect x="20" y="45" width="448" height="360" rx="54" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="244" y="101.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</text>
+  <text x="244" y="119.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">CRA (Create React App)  →  Vite</text>
+  <text x="244" y="137.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">class 컴포넌트  →  함수 컴포넌트 + Hooks</text>
+  <text x="244" y="155.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Redux + Redux Saga  →  Zustand 또는 Jotai</text>
+  <text x="244" y="173.89999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">REST + useEffect  →  TanStack Query</text>
+  <text x="244" y="192.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">styled-components  →  Tailwind CSS</text>
+  <text x="244" y="210.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Jest + Enzyme  →  Vitest + RTL</text>
+  <text x="244" y="228.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Webpack  →  Vite (Rollup/esbuild)</text>
+  <text x="244" y="246.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">JavaScript  →  TypeScript</text>
+  <text x="244" y="264.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">변하지 않은 것:</text>
+  <text x="244" y="283.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· React의 컴포넌트 모델</text>
+  <text x="244" y="301.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Props, State, 단방향 데이터 흐름</text>
+  <text x="244" y="319.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Reconciliation 원리</text>
+  <text x="244" y="337.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 선언적 UI 철학</text>
+  <text x="244" y="355.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">→ 원리를 이해하면 도구가 바뀌어도 적응할 수 있다</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="320" viewBox="10 -20 660 320">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="10" y="-20" width="660" height="320" rx="12" fill="#141414"/>
+  <text x="150" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Provider의 한계</text>
+  <rect x="40" y="55" width="600" height="35" rx="5.25" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="340" y="76" text-anchor="middle" fill="#ef4444" font-family="Nunito, sans-serif" font-size="14">① 같은 타입의 Provider 두 개 동시 제공 어려움</text>
+  <rect x="40" y="100" width="600" height="35" rx="5.25" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="340" y="121" text-anchor="middle" fill="#ef4444" font-family="Nunito, sans-serif" font-size="14">② context 의존성 → 위젯 트리 밖에서 상태 접근 번거로움</text>
+  <rect x="40" y="145" width="600" height="35" rx="5.25" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="340" y="166" text-anchor="middle" fill="#ef4444" font-family="Nunito, sans-serif" font-size="14">③ 컴파일 타임 안전성 부족 → 잘못된 타입 접근 시 런타임 오류</text>
+  <rect x="40" y="190" width="600" height="35" rx="5.25" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="340" y="211" text-anchor="middle" fill="#ef4444" font-family="Nunito, sans-serif" font-size="14">④ 상태 초기화 시점 제어 어려움</text>
+  <rect x="40" y="235" width="600" height="35" rx="5.25" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="340" y="256" text-anchor="middle" fill="#ef4444" font-family="Nunito, sans-serif" font-size="14">⑤ 로직과 UI의 분리 한계</text>
+</svg>

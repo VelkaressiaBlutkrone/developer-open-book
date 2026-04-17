@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="467" viewBox="-10 -20 499.5 389">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="499.5" height="389" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">역할: URL에 따라 어떤 화면(컴포넌트)을 보여줄지 결정한다</text>
+  <rect x="20" y="45" width="439.5" height="294" rx="44.1" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="239.75" y="95.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">React Router (v6+)</text>
+  <text x="239.75" y="113.60000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">가장 오래되고 널리 사용되는 라우팅 라이브러리</text>
+  <text x="239.75" y="131.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Nested Routes, Layout Route, Data Router</text>
+  <text x="239.75" y="150" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">이 로드맵: Step 18</text>
+  <text x="239.75" y="168.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">TanStack Router</text>
+  <text x="239.75" y="186.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Type-safe 라우팅 (TypeScript 통합)</text>
+  <text x="239.75" y="204.60000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">파일 기반 라우팅, 검색 파라미터 관리</text>
+  <text x="239.75" y="222.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">최근 주목받는 대안</text>
+  <text x="239.75" y="241" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Next.js App Router</text>
+  <text x="239.75" y="259.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">파일 시스템 기반 라우팅 (폴더 = 라우트)</text>
+  <text x="239.75" y="277.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Server Components, Streaming, Server Actions 통합</text>
+  <text x="239.75" y="295.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">이 로드맵: Step 21</text>
+</svg>

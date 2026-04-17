@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="428" viewBox="20 -10 720 428">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-10" width="720" height="428" rx="12" fill="#141414"/>
+  <text x="100" y="45.2" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="28" opacity="1">의존성 방향 규칙</text>
+  <rect x="50" y="120" width="160" height="60" rx="9" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="130" y="154.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Presentation</text>
+  <rect x="300" y="120" width="160" height="60" rx="9" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="380" y="154.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Application</text>
+  <rect x="550" y="120" width="160" height="60" rx="9" fill="#1a4d2e" stroke="#22c55e" stroke-width="4" opacity="1"/>
+  <text x="630" y="154.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Domain</text>
+  <rect x="300" y="260" width="160" height="60" rx="9" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="380" y="294.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Data</text>
+  <defs><marker id="arrow-arrow1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#4a9eed"/></marker></defs>
+  <path d="M210,150 L290,150" fill="none" stroke="#4a9eed" stroke-width="2" opacity="1" marker-end="url(#arrow-arrow1)"/>
+  <defs><marker id="arrow-arrow2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#8b5cf6"/></marker></defs>
+  <path d="M460,150 L540,150" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="1" marker-end="url(#arrow-arrow2)"/>
+  <defs><marker id="arrow-arrow3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/></marker></defs>
+  <path d="M460,280 L580,170" fill="none" stroke="#f59e0b" stroke-width="2" opacity="1" marker-end="url(#arrow-arrow3)"/>
+  <text x="150" y="378" fill="#22c55e" font-family="Nunito, sans-serif" font-size="20" opacity="1">Domain은 아무것도 의존하지 않는다</text>
+</svg>

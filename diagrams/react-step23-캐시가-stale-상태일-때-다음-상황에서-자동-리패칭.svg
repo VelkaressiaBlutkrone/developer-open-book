@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="630" viewBox="-10 -20 460 483">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="460" height="483" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">캐시가 stale 상태일 때, 다음 상황에서 자동 리패칭:</text>
+  <rect x="20" y="45" width="400" height="388" rx="58.199999999999996" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">캐시가 stale 상태일 때, 다음 상황에서 자동 리패칭:</text>
+  <text x="40" y="105.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. refetchOnMount (기본: true)</text>
+  <text x="40" y="133.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 이 queryKey를 사용하는 새 컴포넌트가 마운트될 때</text>
+  <text x="40" y="161.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. refetchOnWindowFocus (기본: true)</text>
+  <text x="40" y="189.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 사용자가 다른 탭에서 돌아올 때</text>
+  <text x="40" y="215.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· &quot;다른 탭에서 데이터가 바뀌었을 수 있으니 확인&quot;</text>
+  <text x="40" y="243.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. refetchOnReconnect (기본: true)</text>
+  <text x="40" y="271.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 네트워크가 오프라인→온라인으로 복구될 때</text>
+  <text x="40" y="299.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. refetchInterval</text>
+  <text x="40" y="327.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 설정한 간격마다 주기적으로 리패칭 (폴링)</text>
+  <text x="40" y="353.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">· 실시간에 가까운 데이터가 필요할 때</text>
+  <text x="40" y="380.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">핵심: staleTime &gt; 0이면 위 트리거가 발생해도</text>
+  <text x="40" y="406.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">데이터가 아직 fresh이면 리패칭하지 않는다</text>
+</svg>

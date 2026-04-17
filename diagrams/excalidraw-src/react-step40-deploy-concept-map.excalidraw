@@ -1,0 +1,355 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_605",
+      "x": 170,
+      "y": 15,
+      "width": 121,
+      "height": 26,
+      "text": "배포 전략 개념 지도",
+      "fontSize": 22,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_606",
+      "x": 285,
+      "y": 50,
+      "width": 40,
+      "height": 20,
+      "text": "코드 변경",
+      "fontSize": 16,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "a_607",
+      "x": 320,
+      "y": 68,
+      "width": 0,
+      "height": 15,
+      "strokeColor": "#555555",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        15
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "r_608",
+      "x": 150,
+      "y": 88,
+      "width": 350,
+      "height": 50,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_609",
+      "x": 150,
+      "y": 88,
+      "width": 350,
+      "height": 50,
+      "text": "CI (지속적 통합)\nlint → typecheck → test → e2e",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_608"
+    },
+    {
+      "type": "arrow",
+      "id": "a_610",
+      "x": 320,
+      "y": 138,
+      "width": 0,
+      "height": 15,
+      "strokeColor": "#555555",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        15
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "r_611",
+      "x": 150,
+      "y": 158,
+      "width": 350,
+      "height": 50,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_612",
+      "x": 150,
+      "y": 158,
+      "width": 350,
+      "height": 50,
+      "text": "CD (지속적 배포)\n빌드 → 환경 변수 주입 → 배포",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_611"
+    },
+    {
+      "type": "arrow",
+      "id": "a_613",
+      "x": 250,
+      "y": 208,
+      "width": -60,
+      "height": 30,
+      "strokeColor": "#555555",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -60,
+          30
+        ]
+      ],
+      "lastCommittedPoint": [
+        -60,
+        30
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "arrow",
+      "id": "a_614",
+      "x": 400,
+      "y": 208,
+      "width": 60,
+      "height": 30,
+      "strokeColor": "#555555",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          60,
+          30
+        ]
+      ],
+      "lastCommittedPoint": [
+        60,
+        30
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "r_615",
+      "x": 100,
+      "y": 243,
+      "width": 160,
+      "height": 40,
+      "backgroundColor": "#5c3d1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_616",
+      "x": 100,
+      "y": 243,
+      "width": 160,
+      "height": 40,
+      "text": "Staging 환경",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_615"
+    },
+    {
+      "type": "rectangle",
+      "id": "r_617",
+      "x": 380,
+      "y": 243,
+      "width": 170,
+      "height": 40,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_618",
+      "x": 380,
+      "y": 243,
+      "width": 170,
+      "height": 40,
+      "text": "Production 환경",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_617"
+    },
+    {
+      "type": "arrow",
+      "id": "a_619",
+      "x": 320,
+      "y": 283,
+      "width": 0,
+      "height": 15,
+      "strokeColor": "#555555",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "lastCommittedPoint": [
+        0,
+        15
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "r_620",
+      "x": 150,
+      "y": 303,
+      "width": 350,
+      "height": 50,
+      "backgroundColor": "#5c1a1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#ef4444",
+      "strokeWidth": 2,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t_621",
+      "x": 150,
+      "y": 303,
+      "width": 350,
+      "height": 50,
+      "text": "배포 후 안전망\n롤백 + Feature Flag + 모니터링",
+      "fontSize": 14,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "opacity": 100,
+      "containerId": "r_620"
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

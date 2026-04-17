@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="605" viewBox="-10 -20 516.5 521">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="516.5" height="521" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">Step 06 핵심 개념 관계도</text>
+  <rect x="20" y="45" width="456.5" height="426" rx="63.9" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="248.25" y="106.80000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">useState(initialValue)</text>
+  <text x="248.25" y="125.00000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">[currentValue, setter] 반환</text>
+  <text x="248.25" y="143.20000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">setter 호출 (setState)</text>
+  <text x="248.25" y="161.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="248.25" y="179.60000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">업데이트 큐에 등록</text>
+  <text x="248.25" y="197.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Batching: 여러 setter를 모아서</text>
+  <text x="248.25" y="216" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="248.25" y="234.20000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">한 번의 재렌더링 트리거</text>
+  <text x="248.25" y="252.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="248.25" y="270.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">컴포넌트 함수 재실행 (렌더링)</text>
+  <text x="248.25" y="288.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 새로운 State 값 = 스냅샷</text>
+  <text x="248.25" y="307" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 이 렌더링 내에서 State는 고정</text>
+  <text x="248.25" y="325.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 클로저가 이 스냅샷을 캡처</text>
+  <text x="248.25" y="343.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">주의점:</text>
+  <text x="248.25" y="361.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· setState(count + 1) × 3 = 1 증가 (스냅샷 값 사용)</text>
+  <text x="248.25" y="379.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· setState(p =&gt; p + 1) × 3 = 3 증가 (이전 큐 결과 사용)</text>
+  <text x="248.25" y="398" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· setTimeout 내 State = 호출 시점의 스냅샷 (Stale Closure)</text>
+  <text x="248.25" y="416.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">bailout: Object.is(prev, next) === true면 렌더링 생략</text>
+</svg>

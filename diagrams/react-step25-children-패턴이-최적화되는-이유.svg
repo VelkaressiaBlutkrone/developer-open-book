@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="633" height="487" viewBox="-10 -15 633 487">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="633" height="487" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">children 패턴이 최적화되는 이유</text>
+  <rect x="20" y="50" width="573" height="392" rx="58.8" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">ThemeProvider가 리렌더링될 때:</text>
+  <text x="40" y="109.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· &lt;ThemeContext.Provider value={...}&gt; → 새 value (리렌더링 트리거)</text>
+  <text x="40" y="135.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· {children} → 이전 렌더링과 동일한 참조! (App에서 생성)</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· React: &quot;children이 변하지 않았으므로 자식 트리 리렌더링 건너뜀&quot;</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">만약 children이 아니라 직접 자식을 작성했다면:</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&lt;ThemeContext.Provider value={...}&gt;</text>
+  <text x="40" y="239.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&lt;Header /&gt;  ← ThemeProvider가 리렌더링될 때마다 새 Element 생성!</text>
+  <text x="40" y="265.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&lt;Main /&gt;    ← 리렌더링!</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&lt;/ThemeContext.Provider&gt;</text>
+  <text x="40" y="317.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">핵심: children Props로 전달하면 Provider의 리렌더링이</text>
+  <text x="40" y="343.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">자식 트리의 불필요한 리렌더링으로 전파되지 않는다</text>
+</svg>

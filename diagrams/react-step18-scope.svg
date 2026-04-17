@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="556" viewBox="20 -20 530 491">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="530" height="491" rx="12" fill="#141414"/>
+  <text x="100" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Step 18 — 다루는 범위</text>
+  <rect x="50" y="50" width="470" height="243" rx="36.449999999999996" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="60" y="72.4" fill="#22c55e" font-family="Nunito, sans-serif" font-size="16" opacity="1">다루는 것</text>
+  <text x="65" y="96.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 클라이언트 사이드 라우팅의 동작 원리 (History API)</text>
+  <text x="65" y="118.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· React Router v6+의 핵심 컴포넌트와 Hook</text>
+  <text x="65" y="140.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Nested Routes와 Layout Route</text>
+  <text x="65" y="162.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 동적 라우트 파라미터 (useParams)</text>
+  <text x="65" y="184.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 프로그래밍 방식 네비게이션 (useNavigate)</text>
+  <text x="65" y="206.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 검색 파라미터 (useSearchParams)</text>
+  <text x="65" y="228.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 보호된 라우트 (Protected Route) 패턴</text>
+  <text x="65" y="250.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Data Router (loader / action) 개요</text>
+  <text x="65" y="272.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 라우트 구조 설계 전략</text>
+  <rect x="50" y="308" width="470" height="133" rx="19.95" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="60" y="330.4" fill="#ef4444" font-family="Nunito, sans-serif" font-size="16" opacity="1">다루지 않는 것</text>
+  <text x="65" y="354.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· Next.js App Router (Step 21)</text>
+  <text x="65" y="376.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· SSR/SSG 라우팅 (Step 19~20)</text>
+  <text x="65" y="398.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· TanStack Router</text>
+  <text x="65" y="420.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 라우트 기반 코드 분할 상세 (Step 30)</text>
+</svg>

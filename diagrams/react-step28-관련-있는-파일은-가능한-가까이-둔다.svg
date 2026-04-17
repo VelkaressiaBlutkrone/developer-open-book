@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="824" viewBox="-10 -15 582 799">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="582" height="799" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">&quot;관련 있는 파일은 가능한 가까이 둔다&quot;</text>
+  <rect x="20" y="50" width="522" height="704" rx="78.3" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">❌ 떨어진 배치:</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">src/components/ProductCard.jsx</text>
+  <text x="40" y="135.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">src/styles/ProductCard.css</text>
+  <text x="40" y="161.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">src/tests/ProductCard.test.jsx</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">src/types/ProductCard.types.ts</text>
+  <text x="40" y="213.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ 4개 폴더를 돌아다녀야 한다</text>
+  <text x="40" y="239.5" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15" opacity="1">✅ Co-location:</text>
+  <text x="40" y="265.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">src/features/products/components/</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── ProductCard.jsx</text>
+  <text x="40" y="317.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── ProductCard.css       ← 또는 ProductCard.module.css</text>
+  <text x="40" y="343.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── ProductCard.test.jsx</text>
+  <text x="40" y="369.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── ProductCard.types.ts  ← (TypeScript 사용 시)</text>
+  <text x="40" y="395.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ 한 폴더 안에서 모든 것을 관리</text>
+  <text x="40" y="421.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">또는 더 간결하게:</text>
+  <text x="40" y="447.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">src/features/products/components/ProductCard/</text>
+  <text x="40" y="473.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── index.jsx             ← 메인 컴포넌트</text>
+  <text x="40" y="499.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── ProductCard.module.css</text>
+  <text x="40" y="525.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── ProductCard.test.jsx</text>
+  <text x="40" y="551.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">── useProductCardLogic.js ← 컴포넌트 전용 Hook</text>
+  <text x="40" y="577.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">원칙:</text>
+  <text x="40" y="603.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 삭제할 때 폴더째 삭제하면 관련 파일이 모두 제거됨</text>
+  <text x="40" y="629.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 한 파일을 수정할 때 같은 폴더의 다른 파일도 함께 수정될 가능성이 높음</text>
+  <text x="40" y="655.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· &quot;함께 변하는 것은 함께 둔다&quot;</text>
+</svg>

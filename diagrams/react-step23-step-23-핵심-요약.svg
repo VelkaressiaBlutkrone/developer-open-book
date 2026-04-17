@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="1158" viewBox="-10 -20 519.5 1003">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="519.5" height="1003" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Step 23 핵심 요약</text>
+  <rect x="20" y="45" width="459.5" height="908" rx="68.925" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">Step 23 핵심 요약</text>
+  <text x="40" y="105.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. TanStack Query = Server State 전용 관리 도구</text>
+  <text x="40" y="133.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Client State(useState)와 Server State를 분리</text>
+  <text x="40" y="159.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 캐싱, 리패칭, 동기화를 자동으로 처리</text>
+  <text x="40" y="185.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ Step 22의 수동 패칭 7가지 한계를 모두 해결</text>
+  <text x="40" y="213.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. useQuery = 선언적 데이터 조회</text>
+  <text x="40" y="241.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ queryKey + queryFn만 제공하면 자동 관리</text>
+  <text x="40" y="267.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ isLoading(첫 로딩) vs isFetching(백그라운드 갱신)</text>
+  <text x="40" y="293.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ enabled, select, placeholderData 등 옵션</text>
+  <text x="40" y="321.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. queryKey = 캐시의 주소이자 핵심 설계 요소</text>
+  <text x="40" y="349.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 배열 형태, 계층적 설계</text>
+  <text x="40" y="375.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ queryFn에서 사용하는 모든 변수를 포함</text>
+  <text x="40" y="401.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ invalidateQueries가 접두사 매칭으로 동작</text>
+  <text x="40" y="427.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ queryKey Factory로 중앙 관리</text>
+  <text x="40" y="455.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. staleTime = &quot;이 데이터가 신선한 시간&quot;</text>
+  <text x="40" y="483.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 0(기본): 항상 리패칭, Infinity: 수동 갱신만</text>
+  <text x="40" y="509.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 데이터 변경 빈도에 맞게 설정</text>
+  <text x="40" y="535.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ gcTime: 비활성 캐시의 유지 시간 (기본 5분)</text>
+  <text x="40" y="563.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">5. useMutation = 데이터 변경 + 캐시 무효화</text>
+  <text x="40" y="591.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ mutationFn + onSuccess(invalidateQueries)</text>
+  <text x="40" y="617.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ isPending으로 로딩 상태, onError로 에러 처리</text>
+  <text x="40" y="643.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ onMutate → onSuccess/onError → onSettled 생명주기</text>
+  <text x="40" y="671.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">6. Optimistic Update = 서버 응답 전 UI 미리 변경</text>
+  <text x="40" y="699.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ onMutate: cancelQueries + 캐시 백업 + 낙관적 변경</text>
+  <text x="40" y="725.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ onError: 백업으로 롤백</text>
+  <text x="40" y="751.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ onSettled: invalidateQueries로 서버 데이터 동기화</text>
+  <text x="40" y="779.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">7. Infinite Query = 무한 스크롤/페이지네이션</text>
+  <text x="40" y="807.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ useInfiniteQuery + getNextPageParam</text>
+  <text x="40" y="833.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ data.pages 배열로 모든 페이지 데이터 관리</text>
+  <text x="40" y="861.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">8. Prefetching = 사용자가 접근 전에 미리 로드</text>
+  <text x="40" y="889.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ prefetchQuery: 호버 시 미리 패칭</text>
+  <text x="40" y="915.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ ensureQueryData: 캐시 있으면 즉시, 없으면 패칭</text>
+  <text x="40" y="941.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ 체감 속도를 극적으로 향상</text>
+</svg>

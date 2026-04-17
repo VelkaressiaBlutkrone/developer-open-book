@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="170 -20 360 480">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="170" y="-20" width="360" height="480" rx="12" fill="#141414"/>
+  <text x="200" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">Mixin 선형화 실행 순서</text>
+  <rect x="200" y="60" width="300" height="50" rx="7.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="350" y="89.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">M2 전</text>
+  <rect x="200" y="140" width="300" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="350" y="169.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">M1 전</text>
+  <rect x="200" y="220" width="300" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="350" y="249.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">Base</text>
+  <rect x="200" y="300" width="300" height="50" rx="7.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="350" y="329.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">M1 후</text>
+  <rect x="200" y="380" width="300" height="50" rx="7.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="0.3"/>
+  <text x="350" y="409.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">M2 후</text>
+</svg>

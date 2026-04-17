@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="785" viewBox="-10 -15 590.5 773">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="590.5" height="773" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">React의 패러다임 전환 역사</text>
+  <rect x="20" y="50" width="530.5" height="678" rx="79.575" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">렌더링:</text>
+  <text x="40" y="109.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">명령적: el.textContent = content;</text>
+  <text x="40" y="135.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">선언적: return &lt;div&gt;{content}&lt;/div&gt;;   ← React가 DOM을 관리</text>
+  <text x="40" y="161.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">상태 업데이트:</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">명령적: element.textContent = newValue;</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">선언적: setState(newValue);            ← React가 UI를 동기화</text>
+  <text x="40" y="239.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">라우팅:</text>
+  <text x="40" y="265.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">명령적: window.location = '/page';</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">선언적: &lt;Route path=&quot;/page&quot; element={&lt;Page /&gt;} /&gt;;</text>
+  <text x="40" y="317.5" fill="#ef4444" font-family="Nunito, sans-serif" font-size="15" opacity="1">에러 처리:</text>
+  <text x="40" y="343.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">명령적: if (error) return &lt;ErrorUI /&gt;;</text>
+  <text x="40" y="369.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">선언적: &lt;ErrorBoundary fallback={&lt;ErrorUI /&gt;}&gt;;</text>
+  <text x="40" y="395.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">로딩 처리 (가장 최근의 전환):</text>
+  <text x="40" y="421.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">명령적: if (isLoading) return &lt;Spinner /&gt;;    ← Step 22</text>
+  <text x="40" y="447.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">선언적: &lt;Suspense fallback={&lt;Spinner /&gt;}&gt;;    ← 이 Step ★</text>
+  <text x="40" y="473.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">이 모든 전환의 공통점:</text>
+  <text x="40" y="499.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· &quot;어떻게(How)&quot;를 React에 위임한다</text>
+  <text x="40" y="525.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 개발자는 &quot;무엇을(What)&quot; 선언한다</text>
+  <text x="40" y="551.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 관심사가 분리된다</text>
+  <text x="40" y="577.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 코드가 간결해진다</text>
+  <text x="40" y="603.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Suspense는 이 여정의 마지막 퍼즐 조각이다:</text>
+  <text x="40" y="629.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">&quot;데이터 로딩&quot;이라는 가장 흔한 비동기 작업을 선언적으로 처리</text>
+</svg>

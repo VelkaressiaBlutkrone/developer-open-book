@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="375" viewBox="-10 -20 516.5 323">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="516.5" height="323" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">✅ 안전 (복사)  ❌ 위험 (원본 변경)</text>
+  <rect x="20" y="45" width="456.5" height="228" rx="34.199999999999996" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="248.25" y="89.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">.map()  .push()  → [...arr, new]</text>
+  <text x="248.25" y="107.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">.filter()  .pop()  → .slice(0, -1)</text>
+  <text x="248.25" y="126.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">.slice()  .shift()  → .slice(1)</text>
+  <text x="248.25" y="144.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">.concat()  .unshift()  → [new, ...arr]</text>
+  <text x="248.25" y="162.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">[...spread]  .splice()  → .slice + 조합</text>
+  <text x="248.25" y="180.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">.toSorted() ★  .sort()  → [...arr].sort()</text>
+  <text x="248.25" y="198.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">.toReversed() ★  .reverse()  → [...arr].reverse()</text>
+  <text x="248.25" y="217.10000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">.toSpliced() ★  arr[i] = x  → .map()으로 교체</text>
+  <text x="248.25" y="235.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">★ ES2023 — 원본을 변경하지 않는 새 버전</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="896.5" height="591" viewBox="-10 -15 896.5 591">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="896.5" height="591" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">시나리오: 실시간 주식 대시보드</text>
+  <rect x="20" y="50" width="836.5" height="496" rx="74.39999999999999" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">10개 주식 종목이 각각 초당 1회 업데이트된다</text>
+  <text x="40" y="109.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ 전체 State가 초당 10회 변경</text>
+  <text x="40" y="135.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Context로 구현하면:</text>
+  <text x="40" y="161.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">StockContext.Provider value={stocks}</text>
+  <text x="40" y="187.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ stocks가 초당 10회 변경</text>
+  <text x="40" y="213.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ 가격만 보는 컴포넌트, 차트만 보는 컴포넌트 등</text>
+  <text x="40" y="239.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">모든 소비자가 초당 10회 리렌더링!</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ 성능 재앙</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Zustand로 구현하면:</text>
+  <text x="40" y="317.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">const useStockStore = create((set) =&gt; ({ stocks: [] }))</text>
+  <text x="40" y="343.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">const applePrice = useStockStore(state =&gt; state.stocks.find(s =&gt; s.id === 'AAPL')?.price)</text>
+  <text x="40" y="369.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ AAPL 가격이 변할 때만 이 컴포넌트가 리렌더링</text>
+  <text x="40" y="395.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ 다른 종목 변경에 무반응</text>
+  <text x="40" y="421.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">→ selector 기반 부분 구독으로 성능 보장</text>
+  <text x="40" y="447.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">결론: 자주 변하는 + 부분 구독이 필요한 상태 → Zustand (Step 26)</text>
+</svg>

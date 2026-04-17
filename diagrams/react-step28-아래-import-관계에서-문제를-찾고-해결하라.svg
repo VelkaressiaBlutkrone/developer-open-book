@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740.5" height="561" viewBox="-10 -20 740.5 561">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="740.5" height="561" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">아래 import 관계에서 문제를 찾고 해결하라:</text>
+  <rect x="20" y="45" width="680.5" height="466" rx="69.89999999999999" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">아래 import 관계에서 문제를 찾고 해결하라:</text>
+  <text x="40" y="105.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. features/cart/CartSummary.jsx</text>
+  <text x="40" y="133.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ import { ProductCard } from '@features/products/components/ProductCard'</text>
+  <text x="40" y="160.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">문제? 해결?</text>
+  <text x="40" y="187.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. shared/hooks/useAuth.js</text>
+  <text x="40" y="215.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ import { authStore } from '@features/auth/stores/authStore'</text>
+  <text x="40" y="242.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">문제? 해결?</text>
+  <text x="40" y="269.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. features/products/ProductCard.jsx</text>
+  <text x="40" y="297.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ import { Button } from '@shared/components'</text>
+  <text x="40" y="324.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">문제? 해결?</text>
+  <text x="40" y="351.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. features/orders/OrderPage.jsx</text>
+  <text x="40" y="379.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ import { CartSummary } from '@features/cart'</text>
+  <text x="40" y="406.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">문제? 해결?</text>
+  <text x="40" y="433.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">5. shared/utils/formatPrice.js</text>
+  <text x="40" y="461.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="14" opacity="1">→ import { CURRENCY_SYMBOLS } from '@features/settings/constants'</text>
+  <text x="40" y="488.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">문제? 해결?</text>
+</svg>

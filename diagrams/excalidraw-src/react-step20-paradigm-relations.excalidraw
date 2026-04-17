@@ -1,0 +1,252 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t",
+      "x": 60,
+      "y": 10,
+      "text": "렌더링 패러다임 관계도",
+      "fontSize": 22,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 158.39999999999998,
+      "height": 28,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "csr",
+      "x": 50,
+      "y": 55,
+      "width": 480,
+      "height": 35,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "csrt",
+      "x": 60,
+      "y": 62,
+      "text": "CSR: 클라이언트에서 모든 것을 처리 — 모든 코드 → 번들 → 브라우저",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 295.2,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "ssr",
+      "x": 50,
+      "y": 100,
+      "width": 480,
+      "height": 35,
+      "backgroundColor": "#5c3d1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "ssrt",
+      "x": 60,
+      "y": 107,
+      "text": "SSR: 서버에서 HTML 생성 → 클라이언트 Hydration — 동일 코드 양쪽 실행",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 352.79999999999995,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "rsc",
+      "x": 50,
+      "y": 145,
+      "width": 480,
+      "height": 45,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "rsct",
+      "x": 60,
+      "y": 150,
+      "text": "RSC: 컴포넌트를 서버/클라이언트로 명시적 분리",
+      "fontSize": 12,
+      "strokeColor": "#22c55e",
+      "fontFamily": 2,
+      "width": 194.39999999999998,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "rsc2",
+      "x": 70,
+      "y": 168,
+      "text": "SC → 서버에서만, 번들 미포함 / CC → 기존 React와 동일",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 273.59999999999997,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "cmb",
+      "x": 50,
+      "y": 205,
+      "width": 480,
+      "height": 55,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "cmbt",
+      "x": 60,
+      "y": 210,
+      "text": "RSC + SSR (실제 사용 조합):",
+      "fontSize": 13,
+      "strokeColor": "#8b5cf6",
+      "fontFamily": 2,
+      "width": 163.79999999999998,
+      "height": 19,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "cmb1",
+      "x": 70,
+      "y": 230,
+      "text": "SC → RSC Payload + CC → SSR HTML → Hydration",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 316.79999999999995,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "cmb2",
+      "x": 70,
+      "y": 248,
+      "text": "→ 최적의 초기 HTML + 최소 번들 동시 달성",
+      "fontSize": 12,
+      "strokeColor": "#22c55e",
+      "fontFamily": 2,
+      "width": 194.39999999999998,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "sum",
+      "x": 50,
+      "y": 275,
+      "width": 480,
+      "height": 60,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "sum1",
+      "x": 65,
+      "y": 280,
+      "text": "CSR: 브라우저에서 전부",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 100.79999999999998,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "sum2",
+      "x": 65,
+      "y": 297,
+      "text": "SSR: 서버에서 HTML, 브라우저에서 Hydration(전부)",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 259.2,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "sum3",
+      "x": 65,
+      "y": 314,
+      "text": "RSC: 서버에서 Server 부분, 브라우저에서 Client만 → 명시적 분리가 핵심",
+      "fontSize": 12,
+      "strokeColor": "#4a9eed",
+      "fontFamily": 2,
+      "width": 345.59999999999997,
+      "height": 18,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

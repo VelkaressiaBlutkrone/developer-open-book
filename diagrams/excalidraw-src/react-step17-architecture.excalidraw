@@ -1,0 +1,408 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t",
+      "x": 60,
+      "y": 10,
+      "text": "React 에러 처리 아키텍처",
+      "fontSize": 22,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 211.2,
+      "height": 28,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "e1",
+      "x": 50,
+      "y": 55,
+      "width": 470,
+      "height": 55,
+      "backgroundColor": "#1a4d2e",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#22c55e",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "e1t",
+      "x": 60,
+      "y": 60,
+      "text": "렌더링 중 에러 (컴포넌트 함수 본문)",
+      "fontSize": 14,
+      "strokeColor": "#22c55e",
+      "fontFamily": 2,
+      "width": 176.4,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "e1d",
+      "x": 70,
+      "y": 82,
+      "text": "→ Error Boundary (getDerivedStateFromError)",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 309.59999999999997,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "e2",
+      "x": 50,
+      "y": 120,
+      "width": 470,
+      "height": 55,
+      "backgroundColor": "#5c3d1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "e2t",
+      "x": 60,
+      "y": 125,
+      "text": "이벤트 핸들러 에러 (onClick, onChange 등)",
+      "fontSize": 14,
+      "strokeColor": "#f59e0b",
+      "fontFamily": 2,
+      "width": 268.8,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "e2d",
+      "x": 70,
+      "y": 147,
+      "text": "→ try/catch + State / showBoundary()",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 259.2,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "e3",
+      "x": 50,
+      "y": 185,
+      "width": 470,
+      "height": 55,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "e3t",
+      "x": 60,
+      "y": 190,
+      "text": "비동기 에러 (fetch, setTimeout, Promise)",
+      "fontSize": 14,
+      "strokeColor": "#06b6d4",
+      "fontFamily": 2,
+      "width": 294,
+      "height": 20,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "e3d",
+      "x": 70,
+      "y": 212,
+      "text": "→ try/catch + State (기존) / use() + Error Boundary (React 19)",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 431.99999999999994,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "dl",
+      "x": 60,
+      "y": 260,
+      "text": "계층적 방어선:",
+      "fontSize": 15,
+      "strokeColor": "#8b5cf6",
+      "fontFamily": 2,
+      "width": 72,
+      "height": 21,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "l0",
+      "x": 50,
+      "y": 290,
+      "width": 110,
+      "height": 30,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "l0t",
+      "x": 50,
+      "y": 296,
+      "text": "전역",
+      "fontSize": 13,
+      "strokeColor": "#8b5cf6",
+      "fontFamily": 2,
+      "width": 90,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "l0",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "line",
+      "id": "la0",
+      "x": 160,
+      "y": 305,
+      "width": 10,
+      "height": 0,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        10,
+        0
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "l1",
+      "x": 170,
+      "y": 290,
+      "width": 110,
+      "height": 30,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "l1t",
+      "x": 170,
+      "y": 296,
+      "text": "라우트",
+      "fontSize": 13,
+      "strokeColor": "#8b5cf6",
+      "fontFamily": 2,
+      "width": 90,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "l1",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "line",
+      "id": "la1",
+      "x": 280,
+      "y": 305,
+      "width": 10,
+      "height": 0,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        10,
+        0
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "l2",
+      "x": 290,
+      "y": 290,
+      "width": 110,
+      "height": 30,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "l2t",
+      "x": 290,
+      "y": 296,
+      "text": "기능",
+      "fontSize": 13,
+      "strokeColor": "#8b5cf6",
+      "fontFamily": 2,
+      "width": 90,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "l2",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "line",
+      "id": "la2",
+      "x": 400,
+      "y": 305,
+      "width": 10,
+      "height": 0,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        10,
+        0
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "rectangle",
+      "id": "l3",
+      "x": 410,
+      "y": 290,
+      "width": 110,
+      "height": 30,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "l3t",
+      "x": 410,
+      "y": 296,
+      "text": "컴포넌트",
+      "fontSize": 13,
+      "strokeColor": "#8b5cf6",
+      "fontFamily": 2,
+      "width": 90,
+      "height": 19,
+      "opacity": 100,
+      "containerId": "l3",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "text",
+      "id": "gd",
+      "x": 60,
+      "y": 330,
+      "text": "(폭발 반경 최소화 = Graceful Degradation)",
+      "fontSize": 12,
+      "strokeColor": "#a0a0a0",
+      "fontFamily": 2,
+      "width": 244.79999999999998,
+      "height": 18,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

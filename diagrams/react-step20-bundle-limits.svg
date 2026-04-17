@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="365" viewBox="20 -20 510 310">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="510" height="310" rx="12" fill="#141414"/>
+  <text x="60" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">기존 모델의 구조적 한계</text>
+  <rect x="50" y="50" width="450" height="140" rx="21" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="60" y="69.4" fill="#ef4444" font-family="Nunito, sans-serif" font-size="16" opacity="1">클라이언트 JS 번들</text>
+  <text x="70" y="91.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 모든 페이지 컴포넌트 코드</text>
+  <text x="70" y="111.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">· 데이터 표시만 하는 컴포넌트 (상호작용 없어도!)</text>
+  <text x="70" y="130.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">· marked (200KB+), highlight.js (400KB+), date-fns (72KB+)</text>
+  <text x="70" y="151.7" fill="#ef4444" font-family="Nunito, sans-serif" font-size="13" opacity="1">→ 상호작용이 전혀 없는 콘텐츠도 전부 포함</text>
+  <text x="70" y="175.8" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="12" opacity="1">→ 번들 클수록 다운로드·파싱·실행 시간 모두 증가</text>
+  <rect x="50" y="210" width="450" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="60" y="227.6" fill="#22c55e" font-family="Nunito, sans-serif" font-size="14" opacity="1">RSC의 해답:</text>
+  <text x="60" y="248.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13" opacity="1">서버에서만 실행 → 번들에 미포함 → 0 KB 전달</text>
+</svg>

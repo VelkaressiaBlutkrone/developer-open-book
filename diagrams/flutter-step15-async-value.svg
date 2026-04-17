@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="292" viewBox="20 -20 640 292.2">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="640" height="292.2" rx="12" fill="#141414"/>
+  <text x="150" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">AsyncValue&lt;T&gt; 3가지 상태</text>
+  <rect x="220" y="55" width="220" height="40" rx="6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="330" y="79" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">AsyncValue&lt;T&gt;</text>
+  <path d="M260,95 L140,115" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <path d="M330,95 L330,115" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <path d="M400,95 L520,115" fill="none" stroke="#555555" stroke-width="1" opacity="1"/>
+  <rect x="50" y="115" width="180" height="40" rx="6" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="140" y="129.79999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">AsyncLoading</text>
+  <text x="140" y="146.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">→ 로딩 중</text>
+  <rect x="250" y="115" width="180" height="40" rx="6" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="340" y="129.79999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">AsyncData&lt;T&gt;</text>
+  <text x="340" y="146.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">→ 데이터 있음</text>
+  <rect x="450" y="115" width="180" height="40" rx="6" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="540" y="129.79999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">AsyncError</text>
+  <text x="540" y="146.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">→ 오류 발생</text>
+  <text x="80" y="185.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">.when() 패턴으로 3가지 모두 처리:</text>
+  <text x="80" y="202.60000000000002" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">productsAsync.when(</text>
+  <text x="80" y="219.4" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">  loading: () → LoadingWidget, error: (e) → ErrorWidget, data: (d) → DataWidget</text>
+  <text x="80" y="236.20000000000002" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">)</text>
+</svg>

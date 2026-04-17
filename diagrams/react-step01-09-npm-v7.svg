@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="783" viewBox="-10 -20 567.5 741">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="567.5" height="741" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">npm (v7+)</text>
+  <rect x="20" y="45" width="507.5" height="646" rx="76.125" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="273.75" y="125.80000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">node_modules/</text>
+  <text x="273.75" y="144" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">react/</text>
+  <text x="273.75" y="162.20000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">react-dom/</text>
+  <text x="273.75" y="180.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">vite/</text>
+  <text x="273.75" y="198.60000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">node_modules/</text>
+  <text x="273.75" y="216.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">esbuild/</text>
+  <text x="273.75" y="235" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 평탄화(hoisting) 전략 사용</text>
+  <text x="273.75" y="253.20000000000002" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 같은 패키지가 프로젝트마다 중복 저장됨</text>
+  <text x="273.75" y="271.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Lock 파일: package-lock.json</text>
+  <text x="273.75" y="289.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">pnpm</text>
+  <text x="273.75" y="307.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">~/.pnpm-store/  ← 글로벌 공유 저장소 (Content-Addressable)</text>
+  <text x="273.75" y="326" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">react@19.0.0/</text>
+  <text x="273.75" y="344.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">node_modules/</text>
+  <text x="273.75" y="362.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">.pnpm/  ← 하드 링크로 글로벌 저장소 참조</text>
+  <text x="273.75" y="380.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">react@19.0.0/</text>
+  <text x="273.75" y="398.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">react → .pnpm/react@19.0.0/node_modules/react  (심볼릭 링크)</text>
+  <text x="273.75" y="417" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 패키지를 글로벌 저장소에 한 번만 저장하고 하드 링크로 참조</text>
+  <text x="273.75" y="435.20000000000005" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 디스크 절약, 설치 속도 향상</text>
+  <text x="273.75" y="453.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Phantom Dependency 방지 (선언하지 않은 패키지 접근 차단)</text>
+  <text x="273.75" y="471.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Lock 파일: pnpm-lock.yaml</text>
+  <text x="273.75" y="489.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">yarn (v4 Berry)</text>
+  <text x="273.75" y="508" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">.yarn/cache/</text>
+  <text x="273.75" y="526.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">react-npm-19.0.0-xxxxx.zip</text>
+  <text x="273.75" y="544.4000000000001" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">vite-npm-6.0.0-xxxxx.zip</text>
+  <text x="273.75" y="562.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Plug'n'Play (PnP) 모드: node_modules 폴더 없이 동작</text>
+  <text x="273.75" y="580.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· .pnp.cjs 파일이 패키지 위치를 직접 매핑</text>
+  <text x="273.75" y="599" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Zero-Install: 캐시를 git에 커밋하여 설치 없이 실행 가능</text>
+  <text x="273.75" y="617.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· Lock 파일: yarn.lock</text>
+</svg>

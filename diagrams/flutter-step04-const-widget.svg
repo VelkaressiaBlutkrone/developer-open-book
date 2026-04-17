@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="710" height="225" viewBox="50 -20 710 225">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="50" y="-20" width="710" height="225" rx="12" fill="#141414"/>
+  <text x="120" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">const Widget 동작 비교</text>
+  <text x="80" y="69.4" fill="#22c55e" font-family="Nunito, sans-serif" font-size="16" opacity="1">const Text('Flutter')</text>
+  <rect x="80" y="85" width="300" height="35" rx="5.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="230" y="106" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Widget == 이전 Widget? → 동일 객체</text>
+  <rect x="80" y="140" width="300" height="35" rx="5.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="230" y="160.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12">Element·RenderObject 재사용, 비교 연산 없음</text>
+  <text x="430" y="69.4" fill="#ef4444" font-family="Nunito, sans-serif" font-size="16" opacity="1">Text('Flutter') (const 없음)</text>
+  <rect x="430" y="85" width="300" height="35" rx="5.25" fill="#5c1a1a" stroke="#ef4444" stroke-width="1" opacity="1"/>
+  <text x="580" y="105.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">새 객체 생성 → 이전 Widget과 내용 비교</text>
+  <rect x="430" y="140" width="300" height="35" rx="5.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="580" y="160.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">같다 해도 비교 연산 비용 발생</text>
+</svg>

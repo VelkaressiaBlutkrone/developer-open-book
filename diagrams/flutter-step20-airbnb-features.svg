@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="976" viewBox="20 -20 380 618">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="380" height="618" rx="12" fill="#141414"/>
+  <text x="50" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">Airbnb 클론 Feature 분해</text>
+  <text x="50" y="69.4" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="16" opacity="1">features/</text>
+  <rect x="70" y="85" width="300" height="35" rx="5.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="220" y="105.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">auth/  로그인·회원가입·소셜 로그인</text>
+  <rect x="70" y="127" width="300" height="35" rx="5.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="220" y="147.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">search/  날짜·인원·지역 검색</text>
+  <rect x="70" y="169" width="300" height="35" rx="5.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="220" y="189.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">listing/  숙소 목록·상세·사진</text>
+  <rect x="70" y="211" width="300" height="35" rx="5.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="220" y="231.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">booking/  예약·결제·확인</text>
+  <rect x="70" y="253" width="300" height="35" rx="5.25" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="220" y="273.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">host/  호스트 관리·등록</text>
+  <rect x="70" y="295" width="300" height="35" rx="5.25" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="220" y="315.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">message/  메시지·알림</text>
+  <rect x="70" y="337" width="300" height="35" rx="5.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="220" y="357.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">profile/  프로필·리뷰·설정</text>
+  <text x="50" y="403.4" fill="#06b6d4" font-family="Nunito, sans-serif" font-size="16" opacity="1">core/</text>
+  <rect x="70" y="419" width="300" height="32" rx="4.8" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="220" y="438.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">network/  Dio + Auth Interceptor</text>
+  <rect x="70" y="458" width="300" height="32" rx="4.8" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="220" y="477.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">maps/  Google Maps 설정</text>
+  <rect x="70" y="497" width="300" height="32" rx="4.8" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="220" y="516.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">payment/  결제 SDK</text>
+  <rect x="70" y="536" width="300" height="32" rx="4.8" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="220" y="555.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">analytics/  Firebase Analytics</text>
+</svg>

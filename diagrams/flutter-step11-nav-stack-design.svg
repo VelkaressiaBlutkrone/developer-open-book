@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="316" viewBox="10 -20 680 316">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="10" y="-20" width="680" height="316" rx="12" fill="#141414"/>
+  <text x="120" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">쇼핑 앱 내비게이션 스택 설계</text>
+  <rect x="40" y="60" width="120" height="35" rx="5.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="100" y="80.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">스플래시</text>
+  <defs><marker id="arrow-a1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M160,77 L200,77" fill="none" stroke="#555555" stroke-width="1" opacity="1" marker-end="url(#arrow-a1)"/>
+  <rect x="200" y="60" width="120" height="35" rx="5.25" fill="#2d1b69" stroke="#8b5cf6" stroke-width="1" opacity="1"/>
+  <text x="260" y="80.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">로그인</text>
+  <defs><marker id="arrow-a2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M320,77 L360,77" fill="none" stroke="#555555" stroke-width="1" opacity="1" marker-end="url(#arrow-a2)"/>
+  <text x="325" y="64" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="10" opacity="1">rep</text>
+  <rect x="360" y="60" width="120" height="35" rx="5.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="420" y="81" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">홈</text>
+  <defs><marker id="arrow-a3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M420,95 L420,115" fill="none" stroke="#555555" stroke-width="1" opacity="1" marker-end="url(#arrow-a3)"/>
+  <rect x="360" y="115" width="120" height="35" rx="5.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="1" opacity="1"/>
+  <text x="420" y="135.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">상품 상세</text>
+  <defs><marker id="arrow-a4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M420,150 L420,165" fill="none" stroke="#555555" stroke-width="1" opacity="1" marker-end="url(#arrow-a4)"/>
+  <rect x="360" y="165" width="120" height="35" rx="5.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="420" y="185.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">장바구니</text>
+  <defs><marker id="arrow-a5" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M420,200 L420,215" fill="none" stroke="#555555" stroke-width="1" opacity="1" marker-end="url(#arrow-a5)"/>
+  <rect x="360" y="215" width="120" height="35" rx="5.25" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="420" y="235.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">결제</text>
+  <defs><marker id="arrow-a6" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M480,232 L540,232" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-a6)"/>
+  <rect x="540" y="215" width="120" height="35" rx="5.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="600" y="235.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">결제 완료</text>
+  <text x="490" y="261" fill="#ef4444" font-family="Nunito, sans-serif" font-size="10" opacity="1">pushAndRemoveUntil → 스택 정리</text>
+  <text x="40" y="130.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">뒤로가기 흐름:</text>
+  <text x="40" y="147.60000000000002" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">결제 → 장바구니 → 상품 상세 → 홈</text>
+  <text x="40" y="164.4" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">(결제 완료 후에는 뒤로가기 없음)</text>
+</svg>

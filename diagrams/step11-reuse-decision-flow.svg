@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="579" viewBox="120 -20 570 550">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="120" y="-20" width="570" height="550" rx="12" fill="#141414"/>
+  <text x="150" y="31.6" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="24" opacity="1">코드 재사용 선택 흐름도</text>
+  <rect x="180" y="60" width="260" height="50" rx="7.5" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="310" y="89" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">코드를 재사용하고 싶다</text>
+  <defs><marker id="arrow-a1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#555555"/></marker></defs>
+  <path d="M310,110 L310,140" fill="none" stroke="#555555" stroke-width="2" opacity="1" marker-end="url(#arrow-a1)"/>
+  <polygon points="310,140 450,190 310,240 170,190" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="310" y="184.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">IS-A 관계이며</text>
+  <text x="310" y="202.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">계층 구조가 명확?</text>
+  <defs><marker id="arrow-a2y" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M450,190 L510,190" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-a2y)"/>
+  <text x="460" y="185.8" fill="#22c55e" font-family="Nunito, sans-serif" font-size="12" opacity="1">YES</text>
+  <rect x="510" y="170" width="150" height="44" rx="6.6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="585" y="196.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">extends</text>
+  <defs><marker id="arrow-a2n" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M310,240 L310,270" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-a2n)"/>
+  <text x="318" y="255.8" fill="#ef4444" font-family="Nunito, sans-serif" font-size="12" opacity="1">NO</text>
+  <polygon points="310,270 470,320 310,370 150,320" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="310" y="314.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">여러 클래스에 공통</text>
+  <text x="310" y="332.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">기능을 수평 주입?</text>
+  <defs><marker id="arrow-a3y" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M470,320 L510,320" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-a3y)"/>
+  <text x="475" y="315.8" fill="#22c55e" font-family="Nunito, sans-serif" font-size="12" opacity="1">YES</text>
+  <rect x="510" y="298" width="150" height="44" rx="6.6" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="585" y="324.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">mixin (with)</text>
+  <defs><marker id="arrow-a3n" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M310,370 L310,400" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-a3n)"/>
+  <text x="318" y="385.8" fill="#ef4444" font-family="Nunito, sans-serif" font-size="12" opacity="1">NO</text>
+  <polygon points="310,400 470,450 310,500 150,450" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="310" y="444.40000000000003" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">구현 없이 API</text>
+  <text x="310" y="462.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">계약만 강제?</text>
+  <defs><marker id="arrow-a4y" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M470,450 L510,450" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-a4y)"/>
+  <text x="475" y="445.8" fill="#22c55e" font-family="Nunito, sans-serif" font-size="12" opacity="1">YES</text>
+  <rect x="510" y="428" width="150" height="44" rx="6.6" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="585" y="454.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">implements</text>
+</svg>

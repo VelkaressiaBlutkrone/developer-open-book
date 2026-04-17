@@ -1,0 +1,2658 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "x": 30,
+      "y": 10,
+      "width": 48.400000000000006,
+      "height": 30.799999999999997,
+      "text": "src/",
+      "fontSize": 22,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "h_0",
+      "x": 20,
+      "y": 50,
+      "width": 642,
+      "height": 42,
+      "backgroundColor": "#2d1b69",
+      "fillStyle": "solid",
+      "strokeColor": "#8b5cf6",
+      "strokeWidth": 1.5,
+      "roughness": 1,
+      "opacity": 100,
+      "roundness": {
+        "type": 3
+      }
+    },
+    {
+      "type": "text",
+      "id": "h_0_label",
+      "x": 0,
+      "y": 0,
+      "width": 10,
+      "height": 10,
+      "text": "src/",
+      "fontSize": 15,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100,
+      "containerId": "h_0",
+      "textAlign": "center",
+      "verticalAlign": "middle"
+    },
+    {
+      "type": "arrow",
+      "id": "sep_1",
+      "x": 20,
+      "y": 96,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r1_c0",
+      "x": 30,
+      "y": 107,
+      "width": 354.20000000000005,
+      "height": 19.599999999999998,
+      "text": "├── features/                    ← 비즈니스 기능별 모듈",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_2",
+      "x": 20,
+      "y": 138,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r2_c0",
+      "x": 30,
+      "y": 149,
+      "width": 277.20000000000005,
+      "height": 19.599999999999998,
+      "text": "├── auth/                    ← 인증 기능",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_3",
+      "x": 20,
+      "y": 180,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r3_c0",
+      "x": 30,
+      "y": 191,
+      "width": 115.50000000000001,
+      "height": 19.599999999999998,
+      "text": "├── components/",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_4",
+      "x": 20,
+      "y": 222,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r4_c0",
+      "x": 30,
+      "y": 233,
+      "width": 130.9,
+      "height": 19.599999999999998,
+      "text": "├── LoginForm.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_5",
+      "x": 20,
+      "y": 264,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r5_c0",
+      "x": 30,
+      "y": 275,
+      "width": 154.00000000000003,
+      "height": 19.599999999999998,
+      "text": "├── RegisterForm.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_6",
+      "x": 20,
+      "y": 306,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r6_c0",
+      "x": 30,
+      "y": 317,
+      "width": 130.9,
+      "height": 19.599999999999998,
+      "text": "└── AuthGuard.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_7",
+      "x": 20,
+      "y": 348,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r7_c0",
+      "x": 30,
+      "y": 359,
+      "width": 77.00000000000001,
+      "height": 19.599999999999998,
+      "text": "├── hooks/",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_8",
+      "x": 20,
+      "y": 390,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r8_c0",
+      "x": 30,
+      "y": 401,
+      "width": 107.80000000000001,
+      "height": 19.599999999999998,
+      "text": "└── useAuth.js",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_9",
+      "x": 20,
+      "y": 432,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r9_c0",
+      "x": 30,
+      "y": 443,
+      "width": 100.10000000000001,
+      "height": 19.599999999999998,
+      "text": "├── services/",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_10",
+      "x": 20,
+      "y": 474,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r10_c0",
+      "x": 30,
+      "y": 485,
+      "width": 138.60000000000002,
+      "height": 19.599999999999998,
+      "text": "└── authService.js",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_11",
+      "x": 20,
+      "y": 516,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r11_c0",
+      "x": 30,
+      "y": 527,
+      "width": 84.70000000000002,
+      "height": 19.599999999999998,
+      "text": "├── stores/",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_12",
+      "x": 20,
+      "y": 558,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r12_c0",
+      "x": 30,
+      "y": 569,
+      "width": 123.20000000000002,
+      "height": 19.599999999999998,
+      "text": "└── authStore.js",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_13",
+      "x": 20,
+      "y": 600,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r13_c0",
+      "x": 30,
+      "y": 611,
+      "width": 323.40000000000003,
+      "height": 19.599999999999998,
+      "text": "├── types.js             ← 이 feature 전용 타입",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_14",
+      "x": 20,
+      "y": 642,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r14_c0",
+      "x": 30,
+      "y": 653,
+      "width": 323.40000000000003,
+      "height": 19.599999999999998,
+      "text": "├── constants.js         ← 이 feature 전용 상수",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_15",
+      "x": 20,
+      "y": 684,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r15_c0",
+      "x": 30,
+      "y": 695,
+      "width": 408.1000000000001,
+      "height": 19.599999999999998,
+      "text": "└── index.js             ← Barrel Export (Public API)",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_16",
+      "x": 20,
+      "y": 726,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r16_c0",
+      "x": 30,
+      "y": 737,
+      "width": 277.20000000000005,
+      "height": 19.599999999999998,
+      "text": "├── products/                ← 상품 기능",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_17",
+      "x": 20,
+      "y": 768,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r17_c0",
+      "x": 30,
+      "y": 779,
+      "width": 115.50000000000001,
+      "height": 19.599999999999998,
+      "text": "├── components/",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_18",
+      "x": 20,
+      "y": 810,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r18_c0",
+      "x": 30,
+      "y": 821,
+      "width": 146.3,
+      "height": 19.599999999999998,
+      "text": "├── ProductCard.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_19",
+      "x": 20,
+      "y": 852,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r19_c0",
+      "x": 30,
+      "y": 863,
+      "width": 146.3,
+      "height": 19.599999999999998,
+      "text": "├── ProductGrid.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_20",
+      "x": 20,
+      "y": 894,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r20_c0",
+      "x": 30,
+      "y": 905,
+      "width": 161.70000000000002,
+      "height": 19.599999999999998,
+      "text": "├── ProductDetail.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_21",
+      "x": 20,
+      "y": 936,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r21_c0",
+      "x": 30,
+      "y": 947,
+      "width": 161.70000000000002,
+      "height": 19.599999999999998,
+      "text": "└── ProductFilter.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_22",
+      "x": 20,
+      "y": 978,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r22_c0",
+      "x": 30,
+      "y": 989,
+      "width": 77.00000000000001,
+      "height": 19.599999999999998,
+      "text": "├── hooks/",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_23",
+      "x": 20,
+      "y": 1020,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r23_c0",
+      "x": 30,
+      "y": 1031,
+      "width": 138.60000000000002,
+      "height": 19.599999999999998,
+      "text": "├── useProducts.js",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_24",
+      "x": 20,
+      "y": 1062,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r24_c0",
+      "x": 30,
+      "y": 1073,
+      "width": 177.10000000000002,
+      "height": 19.599999999999998,
+      "text": "└── useProductFilter.js",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_25",
+      "x": 20,
+      "y": 1104,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r25_c0",
+      "x": 30,
+      "y": 1115,
+      "width": 100.10000000000001,
+      "height": 19.599999999999998,
+      "text": "├── services/",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_26",
+      "x": 20,
+      "y": 1146,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r26_c0",
+      "x": 30,
+      "y": 1157,
+      "width": 161.70000000000002,
+      "height": 19.599999999999998,
+      "text": "└── productService.js",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_27",
+      "x": 20,
+      "y": 1188,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r27_c0",
+      "x": 30,
+      "y": 1199,
+      "width": 92.4,
+      "height": 19.599999999999998,
+      "text": "└── index.js",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_28",
+      "x": 20,
+      "y": 1230,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r28_c0",
+      "x": 30,
+      "y": 1241,
+      "width": 292.6,
+      "height": 19.599999999999998,
+      "text": "├── cart/                    ← 장바구니 기능",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_29",
+      "x": 20,
+      "y": 1272,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r29_c0",
+      "x": 30,
+      "y": 1283,
+      "width": 115.50000000000001,
+      "height": 19.599999999999998,
+      "text": "├── components/",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_30",
+      "x": 20,
+      "y": 1314,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r30_c0",
+      "x": 30,
+      "y": 1325,
+      "width": 77.00000000000001,
+      "height": 19.599999999999998,
+      "text": "├── hooks/",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_31",
+      "x": 20,
+      "y": 1356,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r31_c0",
+      "x": 30,
+      "y": 1367,
+      "width": 84.70000000000002,
+      "height": 19.599999999999998,
+      "text": "├── stores/",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_32",
+      "x": 20,
+      "y": 1398,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r32_c0",
+      "x": 30,
+      "y": 1409,
+      "width": 92.4,
+      "height": 19.599999999999998,
+      "text": "└── index.js",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_33",
+      "x": 20,
+      "y": 1440,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r33_c0",
+      "x": 30,
+      "y": 1451,
+      "width": 277.20000000000005,
+      "height": 19.599999999999998,
+      "text": "└── orders/                  ← 주문 기능",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_34",
+      "x": 20,
+      "y": 1482,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r34_c0",
+      "x": 30,
+      "y": 1493,
+      "width": 115.50000000000001,
+      "height": 19.599999999999998,
+      "text": "├── components/",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_35",
+      "x": 20,
+      "y": 1524,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r35_c0",
+      "x": 30,
+      "y": 1535,
+      "width": 77.00000000000001,
+      "height": 19.599999999999998,
+      "text": "├── hooks/",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_36",
+      "x": 20,
+      "y": 1566,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r36_c0",
+      "x": 30,
+      "y": 1577,
+      "width": 100.10000000000001,
+      "height": 19.599999999999998,
+      "text": "├── services/",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_37",
+      "x": 20,
+      "y": 1608,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r37_c0",
+      "x": 30,
+      "y": 1619,
+      "width": 92.4,
+      "height": 19.599999999999998,
+      "text": "└── index.js",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_38",
+      "x": 20,
+      "y": 1650,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r38_c0",
+      "x": 30,
+      "y": 1661,
+      "width": 446.6000000000001,
+      "height": 19.599999999999998,
+      "text": "├── shared/                      ← 공통 모듈 (여러 feature에서 사용)",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_39",
+      "x": 20,
+      "y": 1692,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r39_c0",
+      "x": 30,
+      "y": 1703,
+      "width": 523.6,
+      "height": 19.599999999999998,
+      "text": "├── components/              ← 공통 UI (Button, Input, Modal, Spinner)",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_40",
+      "x": 20,
+      "y": 1734,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r40_c0",
+      "x": 30,
+      "y": 1745,
+      "width": 107.80000000000001,
+      "height": 19.599999999999998,
+      "text": "├── Button.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_41",
+      "x": 20,
+      "y": 1776,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r41_c0",
+      "x": 30,
+      "y": 1787,
+      "width": 100.10000000000001,
+      "height": 19.599999999999998,
+      "text": "├── Input.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_42",
+      "x": 20,
+      "y": 1818,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r42_c0",
+      "x": 30,
+      "y": 1829,
+      "width": 100.10000000000001,
+      "height": 19.599999999999998,
+      "text": "├── Modal.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_43",
+      "x": 20,
+      "y": 1860,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r43_c0",
+      "x": 30,
+      "y": 1871,
+      "width": 92.4,
+      "height": 19.599999999999998,
+      "text": "└── index.js",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_44",
+      "x": 20,
+      "y": 1902,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r44_c0",
+      "x": 30,
+      "y": 1913,
+      "width": 515.9000000000001,
+      "height": 19.599999999999998,
+      "text": "├── hooks/                   ← 공통 Hook (useDebounce, useMediaQuery)",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_45",
+      "x": 20,
+      "y": 1944,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r45_c0",
+      "x": 30,
+      "y": 1955,
+      "width": 469.70000000000005,
+      "height": 19.599999999999998,
+      "text": "├── utils/                   ← 유틸리티 (formatPrice, formatDate)",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_46",
+      "x": 20,
+      "y": 1986,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r46_c0",
+      "x": 30,
+      "y": 1997,
+      "width": 492.80000000000007,
+      "height": 19.599999999999998,
+      "text": "├── lib/                     ← 라이브러리 설정 (apiClient, queryClient)",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_47",
+      "x": 20,
+      "y": 2028,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r47_c0",
+      "x": 30,
+      "y": 2039,
+      "width": 277.20000000000005,
+      "height": 19.599999999999998,
+      "text": "├── types/                   ← 공통 타입",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_48",
+      "x": 20,
+      "y": 2070,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r48_c0",
+      "x": 30,
+      "y": 2081,
+      "width": 277.20000000000005,
+      "height": 19.599999999999998,
+      "text": "└── constants/               ← 공통 상수",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_49",
+      "x": 20,
+      "y": 2112,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r49_c0",
+      "x": 30,
+      "y": 2123,
+      "width": 377.30000000000007,
+      "height": 19.599999999999998,
+      "text": "├── pages/                       ← 페이지 (라우트) 컴포넌트",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_50",
+      "x": 20,
+      "y": 2154,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r50_c0",
+      "x": 30,
+      "y": 2165,
+      "width": 123.20000000000002,
+      "height": 19.599999999999998,
+      "text": "├── HomePage.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_51",
+      "x": 20,
+      "y": 2196,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r51_c0",
+      "x": 30,
+      "y": 2207,
+      "width": 154.00000000000003,
+      "height": 19.599999999999998,
+      "text": "├── ProductsPage.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_52",
+      "x": 20,
+      "y": 2238,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r52_c0",
+      "x": 30,
+      "y": 2249,
+      "width": 192.50000000000003,
+      "height": 19.599999999999998,
+      "text": "├── ProductDetailPage.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_53",
+      "x": 20,
+      "y": 2280,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r53_c0",
+      "x": 30,
+      "y": 2291,
+      "width": 123.20000000000002,
+      "height": 19.599999999999998,
+      "text": "├── CartPage.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_54",
+      "x": 20,
+      "y": 2322,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r54_c0",
+      "x": 30,
+      "y": 2333,
+      "width": 138.60000000000002,
+      "height": 19.599999999999998,
+      "text": "└── OrdersPage.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_55",
+      "x": 20,
+      "y": 2364,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r55_c0",
+      "x": 30,
+      "y": 2375,
+      "width": 338.80000000000007,
+      "height": 19.599999999999998,
+      "text": "├── layouts/                     ← 레이아웃 컴포넌트",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_56",
+      "x": 20,
+      "y": 2406,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r56_c0",
+      "x": 30,
+      "y": 2417,
+      "width": 138.60000000000002,
+      "height": 19.599999999999998,
+      "text": "├── RootLayout.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_57",
+      "x": 20,
+      "y": 2448,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r57_c0",
+      "x": 30,
+      "y": 2459,
+      "width": 177.10000000000002,
+      "height": 19.599999999999998,
+      "text": "├── DashboardLayout.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_58",
+      "x": 20,
+      "y": 2490,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r58_c0",
+      "x": 30,
+      "y": 2501,
+      "width": 138.60000000000002,
+      "height": 19.599999999999998,
+      "text": "└── AuthLayout.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_59",
+      "x": 20,
+      "y": 2532,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r59_c0",
+      "x": 30,
+      "y": 2543,
+      "width": 84.70000000000002,
+      "height": 19.599999999999998,
+      "text": "├── App.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    },
+    {
+      "type": "arrow",
+      "id": "sep_60",
+      "x": 20,
+      "y": 2574,
+      "width": 642,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          642,
+          0
+        ]
+      ],
+      "strokeColor": "#555555",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100,
+      "fillStyle": "solid",
+      "backgroundColor": "transparent",
+      "endArrowhead": null,
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "r60_c0",
+      "x": 30,
+      "y": 2585,
+      "width": 92.4,
+      "height": 19.599999999999998,
+      "text": "└── main.jsx",
+      "fontSize": 14,
+      "fontFamily": 2,
+      "strokeColor": "#e5e5e5",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 0,
+      "roughness": 0,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}

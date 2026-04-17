@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="641.5" height="591" viewBox="-10 -15 641.5 591">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="641.5" height="591" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">실제 라이브러리들이 사용하는 패턴</text>
+  <rect x="20" y="50" width="581.5" height="496" rx="74.39999999999999" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Compound Component:</text>
+  <text x="40" y="109.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Radix UI: Dialog.Root &gt; Dialog.Trigger &gt; Dialog.Content</text>
+  <text x="40" y="135.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Headless UI: Listbox, Menu, Popover</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Chakra UI: Tabs, Accordion, Menu</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Headless (Hook 기반):</text>
+  <text x="40" y="213.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· TanStack Table: useReactTable() → 테이블 로직만</text>
+  <text x="40" y="239.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Downshift: useCombobox(), useSelect()</text>
+  <text x="40" y="265.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· React Aria: useButton(), useTextField(), useDialog()</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">Props 기반 (간단한 컴포넌트):</text>
+  <text x="40" y="317.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Material UI: &lt;Button variant=&quot;contained&quot; color=&quot;primary&quot;&gt;</text>
+  <text x="40" y="343.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Ant Design: &lt;Button type=&quot;primary&quot; size=&quot;large&quot;&gt;</text>
+  <text x="40" y="369.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">대부분의 성숙한 UI 라이브러리는 여러 패턴을 혼합하여 사용:</text>
+  <text x="40" y="395.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 간단한 컴포넌트 → Props 기반</text>
+  <text x="40" y="421.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 복합 UI → Compound Component</text>
+  <text x="40" y="447.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 최대 유연성 → Headless Hook</text>
+</svg>

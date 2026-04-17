@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="838" viewBox="-10 -20 389 543">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="389" height="543" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">Step 04 핵심 개념 관계도</text>
+  <rect x="20" y="45" width="329" height="448" rx="49.35" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="184.5" y="108.69999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">개발자 작성</text>
+  <text x="184.5" y="126.89999999999999" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">JSX 코드 (.jsx / .tsx)</text>
+  <text x="184.5" y="145.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">Babel / SWC (트랜스파일)</text>
+  <text x="184.5" y="163.29999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="184.5" y="181.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">React.createElement() / jsx()</text>
+  <text x="184.5" y="199.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">함수 호출 결과</text>
+  <text x="184.5" y="217.89999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="184.5" y="236.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">React Element (Plain Object, 불변)</text>
+  <text x="184.5" y="254.29999999999998" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">type이 함수?  → 해당 함수 호출 (재귀)</text>
+  <text x="184.5" y="272.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">type이 문자열?  → 해석 완료</text>
+  <text x="184.5" y="290.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="184.5" y="308.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">최종 Element 트리 (Virtual DOM)</text>
+  <text x="184.5" y="327.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">ReactDOM (Commit Phase)</text>
+  <text x="184.5" y="345.29999999999995" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">▼</text>
+  <text x="184.5" y="363.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">실제 DOM  → 브라우저 Paint  → 사용자가 화면을 봄</text>
+  <text x="184.5" y="381.7" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">핵심 원칙:</text>
+  <text x="184.5" y="399.9" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 렌더링 = 함수 실행 (DOM 조작이 아님)</text>
+  <text x="184.5" y="418.1" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· 컴포넌트 = 순수 함수 (같은 입력 → 같은 출력)</text>
+  <text x="184.5" y="436.3" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">· UI = f(state) (선언적 UI의 핵심 공식)</text>
+</svg>

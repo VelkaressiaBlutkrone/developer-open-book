@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="444" viewBox="20 -20 540 400">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-20" width="540" height="400" rx="12" fill="#141414"/>
+  <text x="80" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">React 에러의 3가지 영역</text>
+  <rect x="50" y="50" width="480" height="100" rx="15" fill="#1a4d2e" stroke="#22c55e" stroke-width="1" opacity="1"/>
+  <text x="60" y="71.5" fill="#22c55e" font-family="Nunito, sans-serif" font-size="15" opacity="1">1. 렌더링 에러 (Render Phase)</text>
+  <text x="75" y="90.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">· 컴포넌트 함수 실행 중 throw</text>
+  <text x="75" y="110.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">· null.property 접근, 타입 에러 등</text>
+  <text x="75" y="134.7" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13" opacity="1">→ Error Boundary가 잡는다 ★</text>
+  <rect x="50" y="160" width="480" height="80" rx="12" fill="#5c3d1a" stroke="#f59e0b" stroke-width="1" opacity="1"/>
+  <text x="60" y="181.5" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="15" opacity="1">2. 이벤트 핸들러 에러</text>
+  <text x="75" y="200.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">· onClick, onChange 등 핸들러 안에서 throw</text>
+  <text x="75" y="224.7" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="13" opacity="1">→ Error Boundary가 잡지 못한다! → try/catch</text>
+  <rect x="50" y="250" width="480" height="100" rx="15" fill="#1a4d4d" stroke="#06b6d4" stroke-width="1" opacity="1"/>
+  <text x="60" y="271.5" fill="#06b6d4" font-family="Nunito, sans-serif" font-size="15" opacity="1">3. 비동기 에러</text>
+  <text x="75" y="290.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">· useEffect 안의 fetch 실패</text>
+  <text x="75" y="310.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="12" opacity="1">· setTimeout/Promise 안의 에러</text>
+  <text x="75" y="334.7" fill="#06b6d4" font-family="Nunito, sans-serif" font-size="13" opacity="1">→ try/catch + State / React 19: use() + EB</text>
+</svg>

@@ -1,0 +1,24 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {"type":"rectangle","id":"darkbg","x":-4000,"y":-3000,"width":10000,"height":7500,"backgroundColor":"#1e1e2e","fillStyle":"solid","strokeColor":"transparent","strokeWidth":0,"roughness":1,"opacity":100},
+    {"type":"text","id":"title","x":150,"y":10,"text":"Dart 이벤트 루프 구조","fontSize":24,"strokeColor":"#e5e5e5","fontFamily":2,"width":320,"height":30,"opacity":100},
+    {"type":"rectangle","id":"box_top","x":120,"y":60,"width":400,"height":40,"backgroundColor":"#1a4d4d","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#06b6d4","strokeWidth":1,"roughness":1,"opacity":80},
+    {"type":"text","id":"box_top_label","x":140,"y":68,"width":360,"height":25,"text":"[코드 실행] → [이벤트 큐 대기] → [이벤트 처리] → [반복]","fontSize":13,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"box_top","textAlign":"center","verticalAlign":"middle","opacity":80},
+    {"type":"rectangle","id":"step1","x":180,"y":120,"width":280,"height":45,"backgroundColor":"#1e3a5f","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#4a9eed","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"step1_label","x":200,"y":133,"width":240,"height":20,"text":"동기 코드 먼저 실행","fontSize":16,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"step1","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"arrow1","x":320,"y":165,"width":0,"height":25,"strokeColor":"#a0a0a0","strokeWidth":2,"roughness":1,"opacity":80,"points":[[0,0],[0,25]],"lastCommittedPoint":[0,25],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"step2","x":180,"y":200,"width":280,"height":55,"backgroundColor":"#2d1b69","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#8b5cf6","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"step2_label","x":200,"y":210,"width":240,"height":35,"text":"MicroTask 큐 처리\n(Future.microtask, scheduleMicrotask)","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"step2","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"arrow2","x":320,"y":255,"width":0,"height":25,"strokeColor":"#a0a0a0","strokeWidth":2,"roughness":1,"opacity":80,"points":[[0,0],[0,25]],"lastCommittedPoint":[0,25],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"step3","x":180,"y":290,"width":280,"height":55,"backgroundColor":"#1a4d2e","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#22c55e","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"step3_label","x":200,"y":300,"width":240,"height":35,"text":"Event 큐 처리\n(타이머, I/O, 사용자 입력)","fontSize":14,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"step3","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"arrow3","x":320,"y":345,"width":0,"height":25,"strokeColor":"#a0a0a0","strokeWidth":2,"roughness":1,"opacity":80,"points":[[0,0],[0,25]],"lastCommittedPoint":[0,25],"endArrowhead":"arrow","startArrowhead":null},
+    {"type":"rectangle","id":"step4","x":180,"y":380,"width":280,"height":45,"backgroundColor":"#5c3d1a","fillStyle":"solid","roundness":{"type":3},"strokeColor":"#f59e0b","strokeWidth":2,"roughness":1,"opacity":100},
+    {"type":"text","id":"step4_label","x":200,"y":393,"width":240,"height":20,"text":"반복","fontSize":16,"strokeColor":"#e5e5e5","fontFamily":2,"containerId":"step4","textAlign":"center","verticalAlign":"middle","opacity":100},
+    {"type":"line","id":"loop_arrow","x":460,"y":400,"width":40,"height":-240,"strokeColor":"#f59e0b","strokeWidth":1,"roughness":1,"opacity":60,"points":[[0,0],[40,0],[40,-240],[-100,-240]],"lastCommittedPoint":[-100,-240],"endArrowhead":"arrow","startArrowhead":null}
+  ],
+  "appState": {"viewBackgroundColor":"#1e1e2e"}
+}

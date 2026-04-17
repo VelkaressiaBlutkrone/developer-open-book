@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="317" viewBox="-10 -20 570.5 301">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="570.5" height="301" rx="12" fill="#141414"/>
+  <text x="30" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">이 설계의 이점</text>
+  <rect x="20" y="45" width="510.5" height="206" rx="30.9" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="78.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">이 설계의 이점</text>
+  <text x="40" y="105.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">1. category='electronics', sort='price' 조합의 캐시가 따로 저장</text>
+  <text x="40" y="135.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">2. 사용자가 다른 카테고리로 갔다가 돌아오면 즉시 표시 (캐시!)</text>
+  <text x="40" y="165.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">3. 새 필터로 전환 시 이전 데이터를 유지하며 새 데이터 로드 (깜빡임 없음)</text>
+  <text x="40" y="195.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">4. isFetching으로 &quot;업데이트 중&quot; 피드백 (반투명 처리)</text>
+  <text x="40" y="225.4" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="16" opacity="1">5. 뒤로 가기 → 이전 필터의 queryKey → 캐시에서 즉시 복원</text>
+</svg>

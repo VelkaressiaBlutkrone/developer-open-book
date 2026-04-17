@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="365" viewBox="0 -20 700 365">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="0" y="-20" width="700" height="365" rx="12" fill="#141414"/>
+  <text x="120" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Local State vs Global State</text>
+  <rect x="30" y="55" width="300" height="210" rx="31.5" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="120" y="75.3" fill="#4a9eed" font-family="Nunito, sans-serif" font-size="17" opacity="1">Local State</text>
+  <text x="50" y="100.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">• 단일 위젯과 직접 자식만 사용</text>
+  <text x="50" y="117.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">• 위젯 제거 시 상태도 사라짐</text>
+  <text x="50" y="134.39999999999998" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">• setState()로 관리</text>
+  <text x="50" y="164.9" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="11" opacity="1">예시:</text>
+  <text x="50" y="180.3" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="11" opacity="1">  폼 입력 필드의 현재 값</text>
+  <text x="50" y="195.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="11" opacity="1">  버튼 로딩 상태</text>
+  <text x="50" y="211.1" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="11" opacity="1">  탭 선택 인덱스</text>
+  <text x="50" y="226.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="11" opacity="1">  애니메이션 진행 상태</text>
+  <text x="50" y="241.9" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="11" opacity="1">  비밀번호 토글</text>
+  <rect x="370" y="55" width="300" height="210" rx="31.5" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="450" y="75.3" fill="#8b5cf6" font-family="Nunito, sans-serif" font-size="17" opacity="1">Global State</text>
+  <text x="390" y="100.8" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">• 여러 화면·위젯이 동시에 사용</text>
+  <text x="390" y="117.6" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">• 앱 실행 동안 지속</text>
+  <text x="390" y="134.39999999999998" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="12" opacity="1">• 상태관리 솔루션 필요</text>
+  <text x="390" y="164.9" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="11" opacity="1">예시:</text>
+  <text x="390" y="180.3" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="11" opacity="1">  로그인한 사용자 정보</text>
+  <text x="390" y="195.7" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="11" opacity="1">  장바구니 목록</text>
+  <text x="390" y="211.1" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="11" opacity="1">  다크모드 설정</text>
+  <text x="390" y="226.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="11" opacity="1">  알림 개수</text>
+  <text x="390" y="241.9" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="11" opacity="1">  언어/지역 설정</text>
+  <rect x="150" y="280" width="400" height="35" rx="5.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="350" y="300.75" text-anchor="middle" fill="#22c55e" font-family="Nunito, sans-serif" font-size="13">&quot;다른 화면도 알아야 하는가?&quot; YES→Global  NO→Local</text>
+</svg>

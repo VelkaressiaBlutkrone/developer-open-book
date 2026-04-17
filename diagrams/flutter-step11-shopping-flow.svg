@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="470" viewBox="70 -20 482.4 378.2">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="70" y="-20" width="482.4" height="378.2" rx="12" fill="#141414"/>
+  <text x="130" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">앱 화면 흐름 예시 (쇼핑 앱)</text>
+  <rect x="240" y="55" width="180" height="40" rx="6" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="330" y="78.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">홈 화면</text>
+  <defs><marker id="arrow-a1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#4a9eed"/></marker></defs>
+  <path d="M330,95 L330,120" fill="none" stroke="#4a9eed" stroke-width="2" opacity="1" marker-end="url(#arrow-a1)"/>
+  <text x="340" y="109.9" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="11" opacity="1">상품 탭</text>
+  <rect x="240" y="120" width="180" height="40" rx="6" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="330" y="143.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">상품 상세 화면</text>
+  <defs><marker id="arrow-a2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#8b5cf6"/></marker></defs>
+  <path d="M330,160 L330,185" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="1" marker-end="url(#arrow-a2)"/>
+  <text x="340" y="174.9" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="11" opacity="1">구매하기 탭</text>
+  <rect x="240" y="185" width="180" height="40" rx="6" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="330" y="208.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">결제 화면</text>
+  <defs><marker id="arrow-a3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/></marker></defs>
+  <path d="M330,225 L330,250" fill="none" stroke="#f59e0b" stroke-width="2" opacity="1" marker-end="url(#arrow-a3)"/>
+  <text x="340" y="239.9" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="11" opacity="1">결제 완료</text>
+  <rect x="240" y="250" width="180" height="40" rx="6" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="330" y="273.75" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15">완료 화면</text>
+  <text x="430" y="265.8" fill="#22c55e" font-family="Nunito, sans-serif" font-size="12" opacity="1">홈으로 → 스택 전부 제거</text>
+  <text x="100" y="321.7" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="13" opacity="1">+ 어느 화면에서나 뒤로가기 → 이전 화면으로 복귀</text>
+</svg>

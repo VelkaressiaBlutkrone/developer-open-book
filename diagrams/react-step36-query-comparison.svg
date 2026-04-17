@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="275" viewBox="20 -10 700 275">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="20" y="-10" width="700" height="275" rx="12" fill="#141414"/>
+  <text x="270" y="38" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">getBy vs queryBy vs findBy</text>
+  <rect x="50" y="55" width="160" height="36" rx="5.3999999999999995" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="130" y="76.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14"></text>
+  <rect x="210" y="55" width="160" height="36" rx="5.3999999999999995" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="290" y="76.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">getBy</text>
+  <rect x="370" y="55" width="160" height="36" rx="5.3999999999999995" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="450" y="76.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">queryBy</text>
+  <rect x="530" y="55" width="160" height="36" rx="5.3999999999999995" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="610" y="76.5" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">findBy</text>
+  <rect x="50" y="91" width="160" height="36" rx="5.3999999999999995" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="130" y="112.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">요소 없으면</text>
+  <rect x="210" y="91" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="290" y="112.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">에러 throw ★</text>
+  <rect x="370" y="91" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="450" y="112.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">null 반환</text>
+  <rect x="530" y="91" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="610" y="112.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">에러 throw</text>
+  <rect x="50" y="127" width="160" height="36" rx="5.3999999999999995" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="130" y="148.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">용도</text>
+  <rect x="210" y="127" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="290" y="148.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">반드시 존재</text>
+  <rect x="370" y="127" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="450" y="148.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">없음 확인</text>
+  <rect x="530" y="127" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="610" y="148.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">비동기 대기</text>
+  <rect x="50" y="163" width="160" height="36" rx="5.3999999999999995" fill="#5c3d1a" stroke="#f59e0b" stroke-width="2" opacity="1"/>
+  <text x="130" y="184.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">비동기</text>
+  <rect x="210" y="163" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="290" y="184.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">X</text>
+  <rect x="370" y="163" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="450" y="184.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">X</text>
+  <rect x="530" y="163" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="610" y="184.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">O (await)</text>
+  <rect x="50" y="199" width="160" height="36" rx="5.3999999999999995" fill="#1a4d4d" stroke="#06b6d4" stroke-width="2" opacity="1"/>
+  <text x="130" y="220.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">예시</text>
+  <rect x="210" y="199" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="290" y="220.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">getByRole</text>
+  <rect x="370" y="199" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="450" y="220.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">queryByText</text>
+  <rect x="530" y="199" width="160" height="36" rx="5.3999999999999995" fill="#2a2a3e" stroke="#444466" stroke-width="2" opacity="1"/>
+  <text x="610" y="220.25" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="13">findByText</text>
+</svg>

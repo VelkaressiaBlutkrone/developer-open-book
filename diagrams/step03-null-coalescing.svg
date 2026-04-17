@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="635" height="425" viewBox="100 -20 635 425">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="100" y="-20" width="635" height="425" rx="12" fill="#141414"/>
+  <text x="130" y="29.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">Null 병합 연산자 (??) 동작</text>
+  <rect x="200" y="70" width="220" height="55" rx="8.25" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="310" y="102" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">expr1 ?? expr2</text>
+  <defs><marker id="arrow-a41" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#e5e5e5"/></marker></defs>
+  <path d="M310,125 L310,165" fill="none" stroke="#e5e5e5" stroke-width="2" opacity="1" marker-end="url(#arrow-a41)"/>
+  <polygon points="320,170 420,220 320,270 220,220" fill="#2d1b69" stroke="#8b5cf6" stroke-width="2" opacity="1"/>
+  <text x="320" y="213.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">expr1이</text>
+  <text x="320" y="234.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="16">null?</text>
+  <defs><marker id="arrow-aYes" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/></marker></defs>
+  <path d="M420,220 L520,220" fill="none" stroke="#ef4444" stroke-width="2" opacity="1" marker-end="url(#arrow-aYes)"/>
+  <text x="450" y="214.6" fill="#ef4444" font-family="Nunito, sans-serif" font-size="14" opacity="1">YES</text>
+  <rect x="525" y="195" width="180" height="55" rx="8.25" fill="#5c1a1a" stroke="#ef4444" stroke-width="2" opacity="1"/>
+  <text x="615" y="227" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">expr2 반환</text>
+  <defs><marker id="arrow-aNo" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/></marker></defs>
+  <path d="M320,270 L320,315" fill="none" stroke="#22c55e" stroke-width="2" opacity="1" marker-end="url(#arrow-aNo)"/>
+  <text x="330" y="297.6" fill="#22c55e" font-family="Nunito, sans-serif" font-size="14" opacity="1">NO</text>
+  <rect x="220" y="320" width="200" height="55" rx="8.25" fill="#1a4d2e" stroke="#22c55e" stroke-width="2" opacity="1"/>
+  <text x="320" y="352" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="18">expr1 반환</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="726.5" height="487" viewBox="-10 -15 726.5 487">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-15" width="726.5" height="487" rx="12" fill="#141414"/>
+  <text x="30" y="34.8" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="22" opacity="1">과제:</text>
+  <rect x="20" y="50" width="666.5" height="392" rx="58.8" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="0.3"/>
+  <text x="40" y="83.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· Step 22의 수동 패칭 코드(UserProfile)를 Suspense 패턴으로 변환</text>
+  <text x="40" y="109.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· AsyncBoundary 재사용 컴포넌트 구현</text>
+  <text x="40" y="135.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· useSuspenseQuery(TanStack Query)로도 같은 기능 구현</text>
+  <text x="40" y="161.5" fill="#a0a0a0" font-family="Nunito, sans-serif" font-size="15" opacity="1">· 두 방식의 코드량과 복잡도 비교</text>
+  <text x="40" y="187.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">비교할 것:</text>
+  <text x="40" y="213.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">| 항목        | 명령적 (Step 22) | use() + Suspense | useSuspenseQuery |</text>
+  <text x="40" y="239.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">|------------|-----------------|------------------|-----------------|</text>
+  <text x="40" y="265.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">| State 변수  | ?개             | ?개              | ?개             |</text>
+  <text x="40" y="291.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">| useEffect  | ?개             | ?개              | ?개             |</text>
+  <text x="40" y="317.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">| 조건부 렌더링| ?개             | ?개              | ?개             |</text>
+  <text x="40" y="343.5" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="15" opacity="1">| 코드 줄 수  | ?줄             | ?줄              | ?줄             |</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="350" viewBox="-10 -20 440 257">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&amp;display=swap');
+  </style>
+  <rect x="-10" y="-20" width="440" height="257" rx="12" fill="#141414"/>
+  <text x="20" y="28" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="20" opacity="1">nvm의 동작 원리</text>
+  <rect x="20" y="45" width="380" height="162" rx="24.3" fill="#1e3a5f" stroke="#4a9eed" stroke-width="2" opacity="1"/>
+  <text x="210" y="84" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">~/.nvm/versions/node/</text>
+  <text x="210" y="102.2" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">v18.20.4/  ← 프로젝트 A가 사용</text>
+  <text x="210" y="120.4" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">v20.18.0/  ← 프로젝트 B가 사용</text>
+  <text x="210" y="138.6" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">v22.11.0/  ← 프로젝트 C가 사용</text>
+  <text x="210" y="156.8" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">nvm use 20  →  현재 셸의 PATH를 v20.18.0으로 전환</text>
+  <text x="210" y="175" text-anchor="middle" fill="#e5e5e5" font-family="Nunito, sans-serif" font-size="14">nvm use 22  →  현재 셸의 PATH를 v22.11.0으로 전환</text>
+</svg>

@@ -1,0 +1,343 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-diagram-skill",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "darkbg",
+      "x": -4000,
+      "y": -3000,
+      "width": 10000,
+      "height": 7500,
+      "backgroundColor": "#1e1e2e",
+      "fillStyle": "solid",
+      "strokeColor": "transparent",
+      "strokeWidth": 0,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "t",
+      "x": 60,
+      "y": 10,
+      "text": "CSR 동작 과정",
+      "fontSize": 22,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 118.8,
+      "height": 28,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "sv",
+      "x": 50,
+      "y": 50,
+      "width": 180,
+      "height": 250,
+      "backgroundColor": "#1e3a5f",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#4a9eed",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "svt",
+      "x": 80,
+      "y": 55,
+      "text": "서버",
+      "fontSize": 16,
+      "strokeColor": "#4a9eed",
+      "fontFamily": 2,
+      "width": 19.2,
+      "height": 22,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "br",
+      "x": 310,
+      "y": 50,
+      "width": 230,
+      "height": 250,
+      "backgroundColor": "#1a4d4d",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#06b6d4",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "brt",
+      "x": 360,
+      "y": 55,
+      "text": "브라우저",
+      "fontSize": 16,
+      "strokeColor": "#06b6d4",
+      "fontFamily": 2,
+      "width": 38.4,
+      "height": 22,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "s1",
+      "x": 60,
+      "y": 80,
+      "text": "1. 빈 HTML + JS",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 100.79999999999998,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "line",
+      "id": "a1",
+      "x": 230,
+      "y": 88,
+      "width": 80,
+      "height": 0,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          80,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        80,
+        0
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "s2",
+      "x": 320,
+      "y": 80,
+      "text": "2. HTML 수신 (빈 div)",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 129.6,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "s3",
+      "x": 320,
+      "y": 110,
+      "text": "3. JS 번들 다운로드",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 93.6,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "s4",
+      "x": 60,
+      "y": 140,
+      "text": "JS 번들 전송",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 57.599999999999994,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "line",
+      "id": "a2",
+      "x": 230,
+      "y": 148,
+      "width": 80,
+      "height": 0,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          80,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        80,
+        0
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "s5",
+      "x": 320,
+      "y": 140,
+      "text": "4. JS 실행, React DOM 생성",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 158.39999999999998,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "s6",
+      "x": 320,
+      "y": 170,
+      "text": "5. API 요청",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 64.8,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "line",
+      "id": "a3",
+      "x": 310,
+      "y": 178,
+      "width": 80,
+      "height": 0,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -80,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        -80,
+        0
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "s7",
+      "x": 60,
+      "y": 200,
+      "text": "API 응답",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 43.199999999999996,
+      "height": 18,
+      "opacity": 100
+    },
+    {
+      "type": "line",
+      "id": "a4",
+      "x": 230,
+      "y": 208,
+      "width": 80,
+      "height": 0,
+      "strokeColor": "#a0a0a0",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 80,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          80,
+          0
+        ]
+      ],
+      "lastCommittedPoint": [
+        80,
+        0
+      ],
+      "endArrowhead": "arrow",
+      "startArrowhead": null
+    },
+    {
+      "type": "text",
+      "id": "s8",
+      "x": 320,
+      "y": 200,
+      "text": "6. 화면 완성!",
+      "fontSize": 13,
+      "strokeColor": "#22c55e",
+      "fontFamily": 2,
+      "width": 70.2,
+      "height": 19,
+      "opacity": 100
+    },
+    {
+      "type": "rectangle",
+      "id": "tl",
+      "x": 50,
+      "y": 315,
+      "width": 490,
+      "height": 40,
+      "backgroundColor": "#5c3d1a",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "strokeColor": "#f59e0b",
+      "strokeWidth": 1,
+      "roughness": 1,
+      "opacity": 100
+    },
+    {
+      "type": "text",
+      "id": "tl1",
+      "x": 60,
+      "y": 322,
+      "text": "요청→TTFB(빠름)→FCP(느림! JS후)→API패칭→LCP(더 느림)→TTI",
+      "fontSize": 12,
+      "strokeColor": "#e5e5e5",
+      "fontFamily": 2,
+      "width": 316.79999999999995,
+      "height": 18,
+      "opacity": 100
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#1e1e2e"
+  }
+}
