@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useProgress } from '../store/ProgressContext'
 import { getCompletedCount, getTotalBooks, getCompletionPercent } from '../store/progress'
 import { BADGES, getBadgeById } from '../store/badges'
@@ -22,6 +22,17 @@ export function ProgressIndicator() {
   const availableQuests = getAvailableQuests(state)
   const activeCount = activeQuests.length
 
+  // Streak pulse animation
+  const [streakPulse, setStreakPulse] = useState(false)
+  const prevStreak = useRef(streak)
+  useEffect(() => {
+    if (streak > prevStreak.current) {
+      setStreakPulse(true)
+      setTimeout(() => setStreakPulse(false), 500)
+    }
+    prevStreak.current = streak
+  }, [streak])
+
   return (
     <div className="progress-indicator">
       <button
@@ -34,7 +45,7 @@ export function ProgressIndicator() {
           📖 {completed}/{total}
         </span>
         {streak > 0 && (
-          <span className="progress-indicator-streak" title={`${streak}일 연속 읽기`}>
+          <span className={`progress-indicator-streak ${streakPulse ? 'streak-pulse' : ''}`} title={`${streak}일 연속 읽기`}>
             🔥 {streak}
           </span>
         )}

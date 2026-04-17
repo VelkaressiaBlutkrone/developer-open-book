@@ -33,6 +33,15 @@ export interface DialogueNode {
   action?: DialogueAction
 }
 
+export type TimeOfDay = 'morning' | 'afternoon' | 'night'
+
+export interface NPCSchedule {
+  period: TimeOfDay
+  position: { top: string; left?: string; right?: string; marginLeft?: number; marginRight?: number }
+  direction: 'south' | 'north' | 'east' | 'west'
+  absent?: boolean
+}
+
 export interface NPC {
   id: string
   name: string
@@ -42,6 +51,7 @@ export interface NPC {
   sprite: { south: string; north: string; east: string; west: string }
   defaultDirection: 'south' | 'north' | 'east' | 'west'
   dialogueTree: DialogueNode[]
+  schedule?: NPCSchedule[]
 }
 
 // ── Sprite base path ──
@@ -65,6 +75,11 @@ export const NPCS: NPC[] = [
     },
     defaultDirection: 'south',
     dialogueTree: librarianDialogue,
+    schedule: [
+      { period: 'morning', position: { top: '26%', left: '50%', marginLeft: 40 }, direction: 'south' },
+      { period: 'afternoon', position: { top: '26%', right: '14%' }, direction: 'west' },
+      { period: 'night', position: { top: '40%', left: '50%', marginLeft: -60 }, direction: 'south' },
+    ],
   },
   {
     id: 'scholar',
@@ -80,6 +95,11 @@ export const NPCS: NPC[] = [
     },
     defaultDirection: 'east',
     dialogueTree: scholarDialogue,
+    schedule: [
+      { period: 'morning', position: { top: '26%', left: '12%' }, direction: 'east' },
+      { period: 'afternoon', position: { top: '56%', left: '26%', marginLeft: -110 }, direction: 'east' },
+      { period: 'night', absent: true, position: { top: '56%', left: '26%', marginLeft: -110 }, direction: 'east' },
+    ],
   },
   {
     id: 'visitor',
@@ -95,6 +115,11 @@ export const NPCS: NPC[] = [
     },
     defaultDirection: 'west',
     dialogueTree: visitorDialogue,
+    schedule: [
+      { period: 'morning', position: { top: '40%', left: '50%', marginLeft: -100 }, direction: 'south' },
+      { period: 'afternoon', position: { top: '56%', right: '26%', marginRight: -110 }, direction: 'west' },
+      { period: 'night', position: { top: '56%', right: '26%', marginRight: -110 }, direction: 'west' },
+    ],
   },
   {
     id: 'researcher',
@@ -114,6 +139,23 @@ export const NPCS: NPC[] = [
 ]
 
 // ── Helpers ──
+
+export function getTimeOfDay(): TimeOfDay {
+  const hour = new Date().getHours()
+  if (hour >= 6 && hour < 12) return 'morning'
+  if (hour >= 12 && hour < 18) return 'afternoon'
+  return 'night'
+}
+
+export function getNPCPosition(npc: NPC, time: TimeOfDay): {
+  position: NPC['position']; direction: NPC['defaultDirection']
+} | null {
+  const entry = npc.schedule?.find(s => s.period === time)
+  if (entry?.absent) return null
+  return entry
+    ? { position: entry.position, direction: entry.direction }
+    : { position: npc.position, direction: npc.defaultDirection }
+}
 
 export function getNPCById(id: string): NPC | undefined {
   return NPCS.find(n => n.id === id)

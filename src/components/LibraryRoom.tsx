@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import { type RouteConfig, routes } from '../routes';
 import { BookReader } from './BookReader';
 import { ProgressIndicator } from './ProgressIndicator';
@@ -9,7 +9,10 @@ import { SHELVES as SHELF_REGISTRY } from '../data/shelves';
 import { getNPCsByRoom, findDialogueNode, getNPCMarkerType, type NPC, type DialogueNode } from '../data/npcs';
 import { getQuestById } from '../data/quests';
 import { WorldMap } from './WorldMap';
+import { SoundToggle } from './SoundToggle';
+import { DustCanvas, type DustCanvasRef } from './DustCanvas';
 import { useProgress } from '../store/ProgressContext';
+import { useSound } from '../audio/SoundContext';
 
 const B = import.meta.env.BASE_URL + 'sprites/';
 
@@ -62,8 +65,11 @@ export function LibraryRoom() {
   const [dialogueNode, setDialogueNode] = useState<DialogueNode | null>(null);
   const [showWorldMap, setShowWorldMap] = useState(false);
   const [currentRoom, setCurrentRoom] = useState('main');
+  const [showFlash, setShowFlash] = useState(false);
+  const dustRef = useRef<DustCanvasRef>(null);
 
   const { state, activateQuest, completeQuest, unlockRoom, setTitle } = useProgress();
+  const { play } = useSound();
   const roomNPCs = getNPCsByRoom('main');
 
   const handleBookClick = useCallback((route: RouteConfig) => {
@@ -74,10 +80,11 @@ export function LibraryRoom() {
   const handleNPCClick = useCallback((npc: NPC) => {
     const node = findDialogueNode(npc, state);
     if (node) {
+      play('npcTalk');
       setActiveNPC(npc);
       setDialogueNode(node);
     }
-  }, [state]);
+  }, [state, play]);
 
   const handleDialogueSelect = useCallback((nextId: string) => {
     if (!activeNPC) return;
@@ -88,9 +95,14 @@ export function LibraryRoom() {
         switch (node.action.type) {
           case 'give_quest':
             activateQuest(node.action.payload);
+            play('questAccept');
             break;
           case 'complete_quest': {
             completeQuest(node.action.payload);
+            play('questComplete');
+            dustRef.current?.celebrate(window.innerWidth / 2, window.innerHeight / 3);
+            setShowFlash(true);
+            setTimeout(() => setShowFlash(false), 300);
             const quest = getQuestById(node.action.payload);
             if (quest) {
               for (const reward of quest.rewards) {
@@ -306,6 +318,8 @@ export function LibraryRoom() {
         style={{ top: '68%', right: '3%', zIndex: 6 }} />
       <div className="lr-glow" style={{ top: '66%', right: '1%', width: '8%', height: '8%' }} />
 
+      <DustCanvas ref={dustRef} />
+      {showFlash && <div className="lr-flash" />}
       <div className="lr-vignette" />
 
       <div className="lr-title">
@@ -315,6 +329,7 @@ export function LibraryRoom() {
 
       {/* Progress indicator — top right corner */}
       <div className="lr-progress">
+        <SoundToggle />
         <ProgressIndicator />
       </div>
 

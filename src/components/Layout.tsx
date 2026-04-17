@@ -7,6 +7,7 @@ import { ScrollProgress } from './ScrollProgress';
 import { BackToTop } from './BackToTop';
 import { ProgressIndicator } from './ProgressIndicator';
 import { PixelDiorama } from './PixelDiorama';
+import { SoundToggle } from './SoundToggle';
 import { routes } from '../routes';
 import { getShelfLabel } from '../data/shelves';
 
@@ -55,6 +56,7 @@ export function Layout({ children }: Props) {
         <div className="header-right">
           <ProgressIndicator />
           <SearchBar />
+          <SoundToggle />
           <ThemeToggle />
         </div>
       </header>

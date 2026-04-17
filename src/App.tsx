@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { ProgressProvider } from './store/ProgressContext';
+import { SoundProvider } from './audio/SoundContext';
 import { routes } from './routes';
 
 const NotFound = lazy(() => import('./pages/NotFound'));
@@ -10,6 +11,7 @@ export default function App() {
   return (
     <HashRouter>
       <ProgressProvider>
+        <SoundProvider>
         <Layout>
           <Suspense fallback={<div className="loading">Loading...</div>}>
             <Routes>
@@ -20,6 +22,7 @@ export default function App() {
             </Routes>
           </Suspense>
         </Layout>
+        </SoundProvider>
       </ProgressProvider>
     </HashRouter>
   );
