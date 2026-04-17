@@ -56,7 +56,7 @@ export interface NPC {
 
 // ── Sprite base path ──
 
-const S = 'sprites/'
+const S = ''
 
 // ── NPC Definitions ──
 
