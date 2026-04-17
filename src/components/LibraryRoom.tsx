@@ -8,6 +8,7 @@ import { SPINE_COLORS, seedFromId } from '../data/books';
 import { SHELVES as SHELF_REGISTRY } from '../data/shelves';
 import { getNPCsByRoom, findDialogueNode, getNPCMarkerType, type NPC, type DialogueNode } from '../data/npcs';
 import { getQuestById } from '../data/quests';
+import { WorldMap } from './WorldMap';
 import { useProgress } from '../store/ProgressContext';
 
 const B = import.meta.env.BASE_URL + 'sprites/';
@@ -59,6 +60,8 @@ export function LibraryRoom() {
   const [readingBook, setReadingBook] = useState<RouteConfig | null>(null);
   const [activeNPC, setActiveNPC] = useState<NPC | null>(null);
   const [dialogueNode, setDialogueNode] = useState<DialogueNode | null>(null);
+  const [showWorldMap, setShowWorldMap] = useState(false);
+  const [currentRoom, setCurrentRoom] = useState('main');
 
   const { state, activateQuest, completeQuest, unlockRoom, setTitle } = useProgress();
   const roomNPCs = getNPCsByRoom('main');
@@ -155,8 +158,9 @@ export function LibraryRoom() {
       <div className="lr-carpet" />
 
       {/* ── Wall decorations ── */}
-      <img src={B + 'wallmap.png'} alt="" className="lr-sprite" width={120} height={120}
-        style={{ top: '0%', left: '50%', marginLeft: -60, zIndex: 6 }} />
+      <img src={B + 'wallmap.png'} alt="도서관 지도" className="lr-sprite lr-wallmap-clickable" width={120} height={120}
+        style={{ top: '0%', left: '50%', marginLeft: -60, zIndex: 6, cursor: 'pointer', pointerEvents: 'auto' }}
+        onClick={() => setShowWorldMap(true)} title="도서관 지도 열기" />
       <img src={B + 'lamp.png'} alt="" className="lr-sprite" width={80} height={120}
         style={{ top: '0%', left: '33%', zIndex: 6 }} />
       <img src={B + 'lamp.png'} alt="" className="lr-sprite" width={80} height={120}
@@ -320,6 +324,15 @@ export function LibraryRoom() {
           books={routes.filter(openShelf.filter)}
           onClose={() => setOpenShelf(null)}
           onBookClick={handleBookClick}
+        />
+      )}
+
+      {showWorldMap && (
+        <WorldMap
+          currentRoom={currentRoom}
+          unlockedRooms={state.unlockedRooms}
+          onSelectRoom={(roomId) => { setCurrentRoom(roomId); setShowWorldMap(false); }}
+          onClose={() => setShowWorldMap(false)}
         />
       )}
 

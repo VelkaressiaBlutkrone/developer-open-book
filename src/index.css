@@ -1697,7 +1697,135 @@ body::after {
 @keyframes marker-bounce {
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50% { transform: translateX(-50%) translateY(-6px); }
-  z-index: 20;
+}
+
+/* ══════════════════════════════════════════
+   WORLD MAP
+   ══════════════════════════════════════════ */
+.world-map-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10,7,4,0.85);
+  backdrop-filter: blur(6px);
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.world-map {
+  background: linear-gradient(180deg, #1a1208 0%, #0f0b07 100%);
+  border: 1px solid rgba(184,134,11,0.25);
+  border-radius: 12px;
+  width: 600px;
+  max-width: 90vw;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+}
+
+.world-map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(184,134,11,0.15);
+}
+
+.world-map-header h2 {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 1.1rem;
+  color: #d4a017;
+  letter-spacing: 0.06em;
+}
+
+.world-map-close {
+  background: none;
+  border: none;
+  color: rgba(184,134,11,0.5);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.world-map-close:hover { color: #d4a017; }
+
+.world-map-grid {
+  position: relative;
+  height: 360px;
+  padding: 20px;
+}
+
+.world-map-room {
+  position: absolute;
+  width: 26%;
+  padding: 16px 12px;
+  background: rgba(184,134,11,0.08);
+  border: 1px solid rgba(184,134,11,0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.world-map-room.unlocked:hover {
+  background: rgba(184,134,11,0.15);
+  border-color: #d4a017;
+  box-shadow: 0 0 20px rgba(184,134,11,0.15);
+}
+
+.world-map-room.locked {
+  opacity: 0.4;
+  cursor: not-allowed;
+  filter: grayscale(0.5);
+}
+
+.world-map-room.current {
+  border-color: #d4a017;
+  box-shadow: 0 0 12px rgba(184,134,11,0.2);
+}
+
+.world-map-lock {
+  font-size: 1.2rem;
+}
+
+.world-map-marker {
+  width: 8px;
+  height: 8px;
+  background: #d4a017;
+  border-radius: 50%;
+  animation: marker-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes marker-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.world-map-room-name {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 0.9rem;
+  color: #d4a017;
+  letter-spacing: 0.04em;
+}
+
+.world-map-room-info {
+  font-size: 0.7rem;
+  color: rgba(184,134,11,0.5);
+}
+
+.world-map-path {
+  position: absolute;
+  background: rgba(184,134,11,0.15);
+  border-radius: 2px;
+}
+
+.world-map-path-h { height: 3px; }
+.world-map-path-v { width: 3px;
   letter-spacing: 0.1em;
   margin-top: 4px;
 }
