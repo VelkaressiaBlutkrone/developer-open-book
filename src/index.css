@@ -2666,6 +2666,93 @@ body::after {
   animation: fadeInUp 0.25s var(--easing);
 }
 
+/* Tabs */
+.progress-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 8px;
+}
+
+.progress-tab {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+
+.progress-tab:hover {
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+}
+
+.progress-tab.active {
+  color: var(--accent);
+  background: var(--accent-bg);
+  font-weight: 600;
+}
+
+/* Quest list */
+.progress-quest-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.progress-quest {
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+}
+
+.progress-quest.completable {
+  border-left: 3px solid #f5c542;
+}
+
+.progress-quest.completed {
+  opacity: 0.6;
+  padding: 4px 10px;
+}
+
+.progress-quest.available {
+  border-left: 3px solid var(--text-muted);
+}
+
+.progress-quest-header {
+  margin-bottom: 2px;
+}
+
+.progress-quest-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.progress-quest-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.progress-quest-hint {
+  font-size: 0.72rem;
+  color: #f5c542;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.progress-quest-empty {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
 .progress-panel-title {
   font-family: 'Playfair Display', 'Georgia', serif;
   font-size: 1rem;
